@@ -1,0 +1,22 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Abstract blue technology background",
+      "imageUrl": "https://picsum.photos/seed/optichero/1200/800",
+      "imageHint": "blue technology"
+    },
+    {
+      "id": "feature-compress",
+      "description": "Image compression visual",
+      "imageUrl": "https://picsum.photos/seed/compress/400/300",
+      "imageHint": "data compression"
+    },
+    {
+      "id": "feature-resize",
+      "description": "Image resizing visual",
+      "imageUrl": "https://picsum.photos/seed/resize/400/300",
+      "imageHint": "image scale"
+    }
+  ]
+}
