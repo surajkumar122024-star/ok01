@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'OpticShift Pro | Modern Image Tools',
   description: 'Professional, browser-side image compression, resizing, and format conversion. Fast, secure, and 100% private.',
   keywords: 'image compressor, image resizer, jpg to png, png to jpg, photo editor, browser image tools',
+verification: {
+  google: 'GGvF0UPj84iXp1cP1DJ_wHErlNISZjBJvqL34DwgOOY',
+},
   openGraph: {
     title: 'OpticShift Pro',
     description: 'Professional browser-side image tools.',
