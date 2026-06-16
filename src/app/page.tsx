@@ -146,7 +146,7 @@ export default function Home() {
             <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-3xl rounded-full" />
             <div className="glass rounded-3xl p-4 shadow-2xl relative">
               <img 
-                src="https://picsum.photos/seed/toolpreview/800/600" 
+               src="/hero-image.png"
                 alt="Tool Preview" 
                 className="rounded-2xl shadow-sm w-full h-auto"
                 data-ai-hint="software dashboard"
