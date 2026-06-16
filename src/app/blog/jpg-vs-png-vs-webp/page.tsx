@@ -96,11 +96,11 @@ export default function BlogPost() {
           Try OpticShift Pro — free, private, and no login required!
         </p>
 
-        
+        <a
           href="/tools"
           className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
-          Convert Images Free
+          Convert Images Free &rarr;
         </a>
 
       </div>
