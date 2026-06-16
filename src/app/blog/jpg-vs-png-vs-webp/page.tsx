@@ -100,7 +100,7 @@ export default function BlogPost() {
           href="/tools"
           className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
-          Convert Images Free →
+          Convert Images Free
         </a>
 
       </div>
