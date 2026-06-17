@@ -48,13 +48,6 @@ const tools = [
   icon: FileText,
   color: "bg-red-500"
 }
-  {
-  name: "PDF to Image",
-  slug: "pdf-to-image",
-  description: "Convert PDF pages into high-quality PNG images instantly.",
-  icon: FileText,
-  color: "bg-purple-500"
-}
 ];
 
 export default function ToolsPage() {
