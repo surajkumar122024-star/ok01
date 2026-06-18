@@ -59,6 +59,13 @@ const tools = [
     icon: ImageIcon,
     color: "bg-sky-500"
   }
+  {
+  name: "Image to PDF",
+  slug: "image-to-pdf",
+  description: "Convert multiple images to a single PDF file instantly.",
+  icon: FileText,
+  color: "bg-red-500"
+}
 ];
 
 export default function Home() {
