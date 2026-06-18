@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 type Tool = {
   name: string;
@@ -57,7 +58,10 @@ const CAT_LABELS: Record<string, string> = {
 function ToolCard({ tool, onClick }: { tool: Tool; onClick?: (t: Tool) => void }) {
   return (
     <div
-      onClick={() => onClick?.(tool)}
+      onClick={() => {
+  const slug = tool.name.toLowerCase().replace(/ /g, "-");
+  router.push(`/tools/${slug}`);
+}}
       onKeyDown={(e) => e.key === "Enter" && onClick?.(tool)}
       role="button"
       tabIndex={0}
@@ -116,7 +120,7 @@ function ToolCard({ tool, onClick }: { tool: Tool; onClick?: (t: Tool) => void }
 export default function ToolsSection({ onToolClick }: { onToolClick?: (tool: Tool) => void }) {
   const [activeCategory, setActiveCategory] = useState("all");
   const [query, setQuery] = useState("");
-
+const router = useRouter();
   const filtered = TOOLS.filter((t) => {
     const matchCat = activeCategory === "all" || t.cat === activeCategory;
     const q = query.toLowerCase();
