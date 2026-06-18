@@ -11,7 +11,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
-import ToolsSection from '@/components/ToolsSection';
+
 const features = [
   {
     title: "100% Private",
@@ -186,7 +186,7 @@ export default function Home() {
           </Button>
         </div>
       </section>
-      <ToolsSection />
-    </div>
+    
+   </div>
   );
 }
