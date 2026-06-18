@@ -65,7 +65,7 @@ const tools = [
   description: "Convert multiple images to a single PDF file instantly.",
   icon: FileText,
   color: "bg-red-500"
-}
+},
 ];
 
 export default function Home() {
