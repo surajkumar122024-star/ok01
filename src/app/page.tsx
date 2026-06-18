@@ -58,7 +58,7 @@ const tools = [
     description: "Fast conversion from PNG to high-quality JPG.",
     icon: ImageIcon,
     color: "bg-sky-500"
-  }
+  },
   {
   name: "Image to PDF",
   slug: "image-to-pdf",
