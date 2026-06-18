@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: '  Online Free Image Tools OpticShift Pro',
+  title: '  Online Free Image | Tools OpticShift Pro',
   description: 'Professional, browser-side image compression, resizing, and format conversion. Fast, secure, and 100% private.',
   keywords: 'image compressor, image resizer, jpg to png, png to jpg, photo editor, browser image tools',
 verification: {
