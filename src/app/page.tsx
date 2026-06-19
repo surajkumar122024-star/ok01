@@ -8,8 +8,8 @@ import {
   Image as ImageIcon, 
   Maximize, 
   RotateCcw,
-  CheckCircle2
-  FileImage
+  CheckCircle2,
+  FileImage,
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
