@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-
+import { FileText } from "lucide-react";
 export default function PdfToImagePage() {
   const [images, setImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
