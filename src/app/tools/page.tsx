@@ -5,7 +5,7 @@ import {
   Maximize, 
   Image as ImageIcon,
   Zap,
-FileText,
+FileImage,
   LayoutGrid
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -45,7 +45,7 @@ const tools = [
   name: "Image to PDF",
   slug: "image-to-pdf",
   description: "Convert multiple images to a single PDF file instantly in your browser.",
-  icon: FileText,
+  icon: FileImage,
   color: "bg-red-500"
 }
 ];
