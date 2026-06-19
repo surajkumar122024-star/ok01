@@ -9,6 +9,7 @@ import {
   Maximize, 
   RotateCcw,
   CheckCircle2
+  FileImage
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
@@ -63,7 +64,7 @@ const tools = [
   name: "Image to PDF",
   slug: "image-to-pdf",
   description: "Convert multiple images to a single PDF file instantly.",
-  icon: FileText,
+  icon: FileImage,
   color: "bg-red-500"
 },
 ];
