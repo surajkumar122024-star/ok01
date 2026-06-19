@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://opticshift.pro/sitemap.xml
+Sitemap: https://ok01.vercel.app/sitemap.xml
