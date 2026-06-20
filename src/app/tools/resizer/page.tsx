@@ -21,13 +21,16 @@ export default function ResizerPage() {
 
   useEffect(() => {
     if (selectedFile) {
+      const url = URL.createObjectURL(selectedFile);
       const img = new Image();
       img.onload = () => {
         setWidth(img.width);
         setHeight(img.height);
         setAspectRatio(img.width / img.height);
+        URL.revokeObjectURL(url);
       };
-      img.src = URL.createObjectURL(selectedFile);
+      img.onerror = () => URL.revokeObjectURL(url);
+      img.src = url;
     } else {
       setProcessedBlob(null);
     }
@@ -81,15 +84,15 @@ export default function ResizerPage() {
   };
 
   return (
-    <ImageToolLayout 
-      title="Image Resizer" 
+    <ImageToolLayout
+      title="Image Resizer"
       description="Change the dimensions of your images quickly. Maintain aspect ratio or set custom sizes."
     >
       <div className="space-y-8">
-        <ImageDropzone 
-          selectedImage={selectedFile} 
-          onImageSelect={setSelectedFile} 
-          onClear={() => setSelectedFile(null)} 
+        <ImageDropzone
+          selectedImage={selectedFile}
+          onImageSelect={setSelectedFile}
+          onClear={() => setSelectedFile(null)}
         />
 
         {selectedFile && (
@@ -97,23 +100,23 @@ export default function ResizerPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-muted/30 p-6 rounded-xl border">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Width (px)</label>
-                <Input 
-                  type="number" 
-                  value={width} 
-                  onChange={(e) => handleWidthChange(e.target.value)} 
+                <Input
+                  type="number"
+                  value={width}
+                  onChange={(e) => handleWidthChange(e.target.value)}
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium">Height (px)</label>
                 <div className="flex items-center gap-2">
-                  <Input 
-                    type="number" 
-                    value={height} 
-                    onChange={(e) => handleHeightChange(e.target.value)} 
+                  <Input
+                    type="number"
+                    value={height}
+                    onChange={(e) => handleHeightChange(e.target.value)}
                   />
-                  <Button 
-                    variant="ghost" 
-                    size="icon" 
+                  <Button
+                    variant="ghost"
+                    size="icon"
                     onClick={() => setLockAspectRatio(!lockAspectRatio)}
                     className={lockAspectRatio ? "text-primary" : "text-muted-foreground"}
                     title={lockAspectRatio ? "Unlock aspect ratio" : "Lock aspect ratio"}
@@ -125,7 +128,7 @@ export default function ResizerPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 variant="outline"
                 className="flex-1"
                 onClick={handleResize}
@@ -137,9 +140,9 @@ export default function ResizerPage() {
                   "Preview Resize"
                 )}
               </Button>
-              <Button 
-                className="flex-1 shadow-lg shadow-primary/20" 
-                onClick={handleDownload} 
+              <Button
+                className="flex-1 shadow-lg shadow-primary/20"
+                onClick={handleDownload}
                 disabled={!processedBlob || isProcessing}
               >
                 <Download className="mr-2 h-4 w-4" />
