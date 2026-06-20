@@ -75,6 +75,13 @@ const tools = [
   icon: FileImage,
   color: "bg-emerald-500"
 },
+  {
+  name: "PDF to Image",
+  slug: "pdf-to-image",
+  description: "Convert each PDF page to high-quality PNG images instantly.",
+  icon: FileImage,
+  color: "bg-orange-500"
+},
 ];
 
 export default function Home() {
