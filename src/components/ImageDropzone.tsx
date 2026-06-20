@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
-import { Upload, X, ImageIcon, FileWarning } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Upload, X, ImageIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 
@@ -14,7 +14,18 @@ interface ImageDropzoneProps {
 
 export const ImageDropzone = ({ onImageSelect, selectedImage, onClear, accept = "image/png, image/jpeg, image/jpg" }: ImageDropzoneProps) => {
   const [isDragging, setIsDragging] = useState(false);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (selectedImage) {
+      const url = URL.createObjectURL(selectedImage);
+      setPreviewUrl(url);
+      return () => URL.revokeObjectURL(url);
+    } else {
+      setPreviewUrl(null);
+    }
+  }, [selectedImage]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -89,12 +100,13 @@ export const ImageDropzone = ({ onImageSelect, selectedImage, onClear, accept = 
             </Button>
           </div>
           <div className="aspect-video w-full flex items-center justify-center bg-checkered p-8">
-             <img 
-               src={URL.createObjectURL(selectedImage)} 
-               alt="Preview" 
-               className="max-w-full max-h-full object-contain rounded-md shadow-lg"
-               onLoad={(e) => URL.revokeObjectURL((e.target as HTMLImageElement).src)}
-             />
+            {previewUrl && (
+              <img
+                src={previewUrl}
+                alt="Preview"
+                className="max-w-full max-h-full object-contain rounded-md shadow-lg"
+              />
+            )}
           </div>
         </div>
       )}
