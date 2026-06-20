@@ -175,7 +175,7 @@ export default function Home() {
             Unlike other online tools, we value your privacy. Your sensitive images never leave your machine. No uploads means no data breaches.
           </p>
           <div className="flex flex-wrap justify-center gap-6 pt-4">
-            {['No Tracking', 'No Ads (In Tools)', 'No Servers', 'GDPR Compliant'].map((item) => (
+            {['No Tracking', 'Browser-Based', 'No Servers', 'GDPR Compliant'].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm font-medium bg-white/10 px-4 py-2 rounded-full border border-white/20">
                 <CheckCircle2 size={16} />
                 {item}
