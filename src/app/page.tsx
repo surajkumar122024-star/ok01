@@ -68,6 +68,13 @@ const tools = [
   icon: FileImage,
   color: "bg-red-500"
 },
+  {
+  name: "WebP Converter",
+  slug: "webp-converter",
+  description: "Convert JPG & PNG to WebP for faster web performance.",
+  icon: FileImage,
+  color: "bg-emerald-500"
+},
 ];
 
 export default function Home() {
