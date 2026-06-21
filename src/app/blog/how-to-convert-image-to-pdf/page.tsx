@@ -82,7 +82,7 @@ export default function BlogPost() {
         </p>
 
         
-          href="/tools/image-to-pdf"
+         <a href="/tools/image-to-pdf"
           className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
           Try Image to PDF Converter Free →
