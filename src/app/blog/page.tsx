@@ -2,6 +2,18 @@ import Link from 'next/link';
 
 const blogs = [
   {
+    slug: 'how-to-convert-png-to-jpg',
+    title: 'How to Convert PNG to JPG Online — Free & Instant',
+    description: 'Reduce PNG file size by up to 80% by converting to JPG format instantly in your browser.',
+    date: 'June 20, 2026',
+  },
+  {
+    slug: 'how-to-convert-jpg-to-png',
+    title: 'How to Convert JPG to PNG Online — Free & Instant',
+    description: 'Convert JPG images to lossless PNG format with transparency support, instantly in your browser.',
+    date: 'June 20, 2026',
+  },
+  {
     slug: 'how-to-convert-pdf-to-image',
     title: 'How to Convert PDF to Image Online — Free & No Upload',
     description: 'Extract every PDF page as a high-quality PNG image instantly in your browser.',
