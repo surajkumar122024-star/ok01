@@ -2,6 +2,18 @@ import Link from 'next/link';
 
 const blogs = [
   {
+    slug: 'how-to-convert-pdf-to-image',
+    title: 'How to Convert PDF to Image Online — Free & No Upload',
+    description: 'Extract every PDF page as a high-quality PNG image instantly in your browser.',
+    date: 'June 20, 2026',
+  },
+  {
+    slug: 'how-to-convert-image-to-pdf',
+    title: 'How to Convert Images to PDF Online — Free & Private',
+    description: 'Combine multiple JPG or PNG images into a single PDF file without any upload.',
+    date: 'June 20, 2026',
+  },
+  {
     slug: 'how-to-compress-images',
     title: 'How to Compress Images Without Losing Quality',
     description: 'Learn how to reduce image file size while maintaining visual quality using browser-based tools.',
