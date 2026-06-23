@@ -6,16 +6,20 @@ import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: ' Online Free Image |Tools OpticShift Pro',
-  description: 'Professional, browser-side image compression, resizing, and format conversion. Fast, secure, and 100% private.',
-  keywords: 'image compressor, image resizer, jpg to png, png to jpg, photo editor, browser image tools',
-verification: {
-  google: 'GGvF0UPj84iXp1cP1DJ_wHErlNISZjBJvqL34DwgOOY',
-},
+  title: {
+    default: 'OpticShift Pro — Free Online Image Tools',
+    template: '%s | OpticShift Pro',
+  },
+  description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
+  keywords: 'image compressor, image resizer, jpg to png, png to jpg, pdf to image, webp converter, free image tools',
+  verification: {
+    google: 'GGvF0UPj84iXp1cP1DJ_wHErlNISZjBJvqL34DwgOOY',
+  },
   openGraph: {
-    title: 'OpticShift Pro',
-    description: 'Professional browser-side image tools.',
+    title: 'OpticShift Pro — Free Online Image Tools',
+    description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
     type: 'website',
+    url: 'https://ok01.vercel.app',
   },
 };
 
