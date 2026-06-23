@@ -36,7 +36,7 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
       // Draw image to canvas
       ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
       
-      const format = options.format || (file.type as 'image/jpeg' | 'image/png') || 'image/jpeg';
+      const format = options.format || 'image/jpeg';
       const quality = options.quality !== undefined ? options.quality : 0.8;
 
       canvas.toBlob(
