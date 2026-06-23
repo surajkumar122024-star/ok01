@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'JPG vs PNG vs WebP — Which Format Should You Use?',
+  description: 'Compare JPG, PNG and WebP image formats. Learn which to use for photos, logos, and web images to get the best quality and file size.',
+};
 export default function BlogPost() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
