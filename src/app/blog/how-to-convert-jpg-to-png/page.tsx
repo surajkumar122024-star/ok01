@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'How to Convert JPG to PNG Free Online',
+  description: 'Convert JPG images to PNG format instantly. Keep transparency and quality — free, no upload, works in your browser.',
+};
 export default function BlogPost() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
