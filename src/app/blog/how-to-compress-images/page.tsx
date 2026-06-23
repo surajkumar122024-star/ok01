@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'How to Compress Images Without Losing Quality',
+  description: 'Learn how to compress images for free without losing quality. Best tips for JPG, PNG and WebP compression for faster websites.',
+};
 export default function BlogPost() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
