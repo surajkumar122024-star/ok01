@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'How to Resize Images for Social Media (2026 Size Guide)',
+  description: 'The complete guide to image sizes for Instagram, Facebook, Twitter, LinkedIn and more. Resize images free in your browser.',
+};
 export default function BlogPost() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
