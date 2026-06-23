@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'How to Convert PDF to Image (JPG, PNG, WebP) Free',
+  description: 'Convert PDF pages to JPG, PNG or WebP images instantly. No upload needed, 100% private and free — works in any browser.',
+};
 export default function BlogPost() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
