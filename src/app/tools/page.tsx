@@ -97,6 +97,13 @@ const tools = [
   icon: FileImage,
   color: "bg-yellow-500"
 },
+  {
+  name: "Color Picker",
+  slug: "color-picker",
+  description: "Pick colors from any image. Get HEX, RGB & HSL values.",
+  icon: FileImage,
+  color: "bg-rose-500"
+},
 ];
 
 export default function ToolsPage() {
