@@ -104,6 +104,13 @@ const tools = [
   icon: FileImage,
   color: "bg-rose-500"
 },
+  {
+  name: "YouTube Thumbnail Converter",
+  slug: "youtube-thumbnail-converter",
+  description: "Convert and center-crop any image into a perfect 16:9 ratio (1280x720) for YouTube.",
+  icon: FileImage,
+  color: "bg-red-500"
+},
 ];
 
 export default function ToolsPage() {
