@@ -118,6 +118,17 @@ const tools = [
     icon: FileArchive,
     color: "bg-red-600"
   },
+  import CaseConverterClient from "./CaseConverterClient";
+
+export const metadata = {
+  title: "Case Converter - UPPER, lower, Title Case Tool",
+  description:
+    "Convert text to UPPERCASE, lowercase and Title Case instantly for free. Fast browser-based case converter tool.",
+};
+
+export default function Page() {
+  return <CaseConverterClient />;
+}
 ];
 
 export default function ToolsPage() {
