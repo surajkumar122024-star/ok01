@@ -69,6 +69,13 @@ const tools = [
   icon: FileImage,
   color: "bg-violet-500"
 },
+  {
+  name: "Image Watermark",
+  slug: "image-watermark",
+  description: "Add text or logo watermarks to images, free & private.",
+  icon: FileImage,
+  color: "bg-pink-500"
+},
 ];
 
 export default function ToolsPage() {
