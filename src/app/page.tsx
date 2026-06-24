@@ -82,6 +82,13 @@ const tools = [
   icon: FileImage,
   color: "bg-orange-500"
 },
+  {
+  name: "Image Cropper",
+  slug: "image-cropper",
+  description: "Crop images with precision, free & private.",
+  icon: FileImage,
+  color: "bg-violet-500"
+},
 ];
 
 export default function Home() {
