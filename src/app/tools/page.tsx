@@ -90,6 +90,13 @@ const tools = [
   icon: RotateCcw,
   color: "bg-teal-500"
 },
+  {
+  name: "HEIC to JPG",
+  slug: "heic-to-jpg",
+  description: "Convert iPhone HEIC photos to JPG instantly.",
+  icon: FileImage,
+  color: "bg-yellow-500"
+},
 ];
 
 export default function ToolsPage() {
