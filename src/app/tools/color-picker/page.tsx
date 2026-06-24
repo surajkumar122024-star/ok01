@@ -1,4 +1,4 @@
-aimport type { Metadata } from 'next';
+import type { Metadata } from 'next';
 import ColorPickerClient from './ColorPickerClient';
 
 export const metadata: Metadata = {
