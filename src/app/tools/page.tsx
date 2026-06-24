@@ -76,6 +76,13 @@ const tools = [
   icon: FileImage,
   color: "bg-pink-500"
 },
+  {
+  name: "SVG to PNG",
+  slug: "svg-to-png",
+  description: "Convert SVG files to high-quality PNG instantly.",
+  icon: FileImage,
+  color: "bg-blue-400"
+},
 ];
 
 export default function ToolsPage() {
