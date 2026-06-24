@@ -111,6 +111,13 @@ const tools = [
   icon: FileImage,
   color: "bg-red-500"
 },
+  {
+    name: "PDF Compressor",
+    slug: "pdf-compressor",
+    description: "Compress and reduce the file size of your PDF documents locally and securely.",
+    icon: FileArchive,
+    color: "bg-red-600"
+  },
 ];
 
 export default function ToolsPage() {
