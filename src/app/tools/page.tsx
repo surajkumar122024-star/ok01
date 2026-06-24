@@ -83,6 +83,13 @@ const tools = [
   icon: FileImage,
   color: "bg-blue-400"
 },
+  {
+  name: "Image Rotate & Flip",
+  slug: "image-rotate",
+  description: "Rotate or flip images instantly, free & private.",
+  icon: RotateCcw,
+  color: "bg-teal-500"
+},
 ];
 
 export default function ToolsPage() {
