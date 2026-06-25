@@ -160,6 +160,13 @@ const tools = [
   icon: FileImage,
   color: "bg-amber-600"
 },
+{
+  name: "URL Encoder/Decoder",
+  slug: "url-encoder",
+  description: "Encode or decode URLs instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-cyan-600"
+},
 ];
 
 export default function ToolsPage() {
