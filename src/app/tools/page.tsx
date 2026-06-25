@@ -167,6 +167,13 @@ const tools = [
   icon: FileImage,
   color: "bg-cyan-600"
 },
+ {
+  name: "JSON Formatter",
+  slug: "json-formatter",
+  description: "Format, validate & minify JSON instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-yellow-500"
+}, 
 ];
 
 export default function ToolsPage() {
