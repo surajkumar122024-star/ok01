@@ -74,11 +74,10 @@ export default function ImageSizeCheckerClient() {
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Image Size Checker</h1>
           <p className="text-muted-foreground">
-            Check image dimensions, file size, aspect ratio & social media fit instantly.
+            Check image dimensions, file size, aspect ratio and social media fit instantly.
           </p>
         </div>
 
-        {/* Drop Zone */}
         <div
           onDrop={(e) => {
             e.preventDefault()
@@ -103,47 +102,6 @@ export default function ImageSizeCheckerClient() {
           <div className="text-5xl mb-4">🖼️</div>
           <p className="font-semibold text-lg">Drop images here or click to upload</p>
           <p className="text-muted-foreground text-sm mt-1">
-            Supports JPG, PNG, WebP, GIF, SVG — multiple files allowed
+            Supports JPG, PNG, WebP, GIF — multiple files allowed
           </p>
         </div>
-
-        {/* Results */}
-        {images.length > 0 && (
-          <div className="space-y-6">
-            {images.map((img, i) => (
-              <div key={i} className="glass rounded-3xl border p-6 space-y-6">
-
-                {/* Header */}
-                <div className="flex items-start gap-4">
-                  <img
-                    src={img.url}
-                    alt={img.name}
-                    className="w-20 h-20 object-cover rounded-2xl border"
-                  />
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-lg truncate">{img.name}</p>
-                    <p className="text-muted-foreground text-sm">{img.type}</p>
-                  </div>
-                  <button
-                    onClick={() => remove(i)}
-                    className="text-muted-foreground hover:text-red-500 transition text-xl"
-                  >
-                    ✕
-                  </button>
-                </div>
-
-                {/* Stats Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {[
-                    { label: 'Width', value: `${img.width}px`, color: 'text-blue-500' },
-                    { label: 'Height', value: `${img.height}px`, color: 'text-green-500' },
-                    { label: 'File Size', value: formatSize(img.size), color: 'text-orange-500' },
-                    { label: 'Aspect Ratio', value: img.aspectRatio, color: 'text-purple-500' },
-                    { label: 'Megapixels', value: getMegapixels(img.width, img.height), color: 'text-pink-500' },
-                    { label: 'Resolution', value: `${img.width}×${img.height}`, color: 'text-cyan-500' },
-                  ].map((stat) => (
-                    <div key={stat.label} className="bg-muted/30 p-4 rounded-2xl text-center">
-                      <div className={`text-xl font-bold ${stat.color}`}>{stat.value}</div>
-                      <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-                    </div>
-                  ))}
