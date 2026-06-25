@@ -117,7 +117,14 @@ const tools = [
   description: "Count words, characters, sentences & reading time instantly. Free & private.",
   icon: FileImage,
   color: "bg-slate-500"
-}, 
+},
+  {
+  name: "PDF Compressor",
+  slug: "pdf-compressor",
+  description: "Reduce PDF file size instantly. Free & 100% private.",
+  icon: FileImage,
+  color: "bg-red-600"
+},
 ];
 
 export default function ToolsPage() {
