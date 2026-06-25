@@ -146,6 +146,13 @@ const tools = [
   icon: FileImage,
   color: "bg-teal-600"
 },
+  {
+  name: "Character Counter",
+  slug: "character-counter",
+  description: "Count characters, words & check Twitter, Instagram, LinkedIn limits.",
+  icon: FileImage,
+  color: "bg-blue-600"
+},
 ];
 
 export default function ToolsPage() {
