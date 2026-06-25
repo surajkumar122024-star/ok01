@@ -173,7 +173,14 @@ const tools = [
   description: "Format, validate & minify JSON instantly. Free & private.",
   icon: FileImage,
   color: "bg-yellow-500"
-}, 
+},
+  {
+  name: "PDF Split",
+  slug: "pdf-split",
+  description: "Extract specific pages from any PDF instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-yellow-600"
+},
 ];
 
 export default function ToolsPage() {
