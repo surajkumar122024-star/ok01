@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { 
@@ -231,7 +230,10 @@ export default function Home() {
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto glass rounded-3xl p-12 text-center space-y-6 border shadow-2xl">
           <h2 className="text-4xl font-bold">Ready to optimize your workflow?</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">Join thousands of users who process images daily with OpticShift Pro. Fast, free, and forever secure.</p>
+          {/* ✅ FIXED: Removed unverified "thousands of users" claim — replaced with honest, feature-focused copy */}
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Fast, free, and forever secure — OpticShift Pro keeps your images private while delivering professional results.
+          </p>
           <Button size="lg" className="h-14 px-10 rounded-xl" asChild>
             <Link href="/tools">Explore All Tools</Link>
           </Button>
