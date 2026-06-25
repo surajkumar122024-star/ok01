@@ -181,6 +181,13 @@ const tools = [
   icon: FileImage,
   color: "bg-yellow-600"
 },
+  {
+  name: "PDF Merge",
+  slug: "pdf-merge",
+  description: "Combine multiple PDFs into one file. Reorder pages freely.",
+  icon: FileImage,
+  color: "bg-orange-600"
+},
 ];
 
 export default function ToolsPage() {
