@@ -188,6 +188,13 @@ const tools = [
   icon: FileImage,
   color: "bg-orange-600"
 },
+{
+  name: "Image Size Checker",
+  slug: "image-size-checker",
+  description: "Check image dimensions, file size, aspect ratio & social media fit.",
+  icon: FileImage,
+  color: "bg-rose-500"
+},
 ];
 
 export default function ToolsPage() {
