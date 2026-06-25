@@ -118,6 +118,13 @@ const tools = [
   icon: FileImage,
   color: "bg-slate-500"
 },
+  {
+  name: "Case Converter",
+  slug: "case-converter",
+  description: "Convert text to UPPER, lower, Title, camelCase, snake_case & more.",
+  icon: FileImage,
+  color: "bg-indigo-500"
+},
 ];
 
 export default function ToolsPage() {
