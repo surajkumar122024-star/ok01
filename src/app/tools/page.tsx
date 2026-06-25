@@ -111,6 +111,13 @@ const tools = [
   icon: FileImage,
   color: "bg-red-500"
 },
+ {
+  name: "Word Counter",
+  slug: "word-counter",
+  description: "Count words, characters, sentences & reading time instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-slate-500"
+}, 
 ];
 
 export default function ToolsPage() {
