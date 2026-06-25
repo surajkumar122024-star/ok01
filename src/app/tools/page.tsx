@@ -125,6 +125,13 @@ const tools = [
   icon: FileImage,
   color: "bg-indigo-500"
 },
+  {
+  name: "Slug Generator",
+  slug: "slug-generator",
+  description: "Convert any text into a clean URL-friendly slug instantly.",
+  icon: FileImage,
+  color: "bg-green-600"
+},
 ];
 
 export default function ToolsPage() {
