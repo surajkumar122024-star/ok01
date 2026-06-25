@@ -153,6 +153,13 @@ const tools = [
   icon: FileImage,
   color: "bg-blue-600"
 },
+{
+  name: "Base64 Encoder/Decoder",
+  slug: "base64",
+  description: "Encode or decode Base64 strings instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-amber-600"
+},
 ];
 
 export default function ToolsPage() {
