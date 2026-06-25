@@ -132,6 +132,13 @@ const tools = [
   icon: FileImage,
   color: "bg-green-600"
 },
+{
+  name: "Password Generator",
+  slug: "password-generator",
+  description: "Generate strong, secure passwords instantly. Nothing stored.",
+  icon: FileImage,
+  color: "bg-purple-600"
+},
 ];
 
 export default function ToolsPage() {
