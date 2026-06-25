@@ -105,3 +105,107 @@ export default function ImageSizeCheckerClient() {
             Supports JPG, PNG, WebP, GIF — multiple files allowed
           </p>
         </div>
+
+        {images.length > 0 && (
+          <div className="space-y-6">
+            {images.map((img, i) => (
+              <div key={i} className="glass rounded-3xl border p-6 space-y-6">
+                <div className="flex items-start gap-4">
+                  <img
+                    src={img.url}
+                    alt={img.name}
+                    className="w-20 h-20 object-cover rounded-2xl border"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-lg truncate">{img.name}</p>
+                    <p className="text-muted-foreground text-sm">{img.type}</p>
+                  </div>
+                  <button
+                    onClick={() => remove(i)}
+                    className="text-muted-foreground hover:text-red-500 transition text-xl"
+                  >
+                    ✕
+                  </button>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {[
+                    { label: 'Width', value: `${img.width}px`, color: 'text-blue-500' },
+                    { label: 'Height', value: `${img.height}px`, color: 'text-green-500' },
+                    { label: 'File Size', value: formatSize(img.size), color: 'text-orange-500' },
+                    { label: 'Aspect Ratio', value: img.aspectRatio, color: 'text-purple-500' },
+                    { label: 'Megapixels', value: getMegapixels(img.width, img.height), color: 'text-pink-500' },
+                    { label: 'Resolution', value: `${img.width}×${img.height}`, color: 'text-cyan-500' },
+                  ].map((stat) => (
+                    <div key={stat.label} className="bg-muted/30 p-4 rounded-2xl text-center">
+                      <div className={`text-xl font-bold ${stat.color}`}>{stat.value}</div>
+                      <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="space-y-2">
+                  <p className="text-sm font-semibold text-muted-foreground">Social Media Compatibility</p>
+                  <div className="flex flex-wrap gap-2">
+                    {getSocialFit(img.width, img.height).map((fit, j) => (
+                      <span
+                        key={j}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-medium ${
+                          fit.startsWith('✅')
+                            ? 'bg-green-500/10 text-green-600'
+                            : 'bg-yellow-500/10 text-yellow-600'
+                        }`}
+                      >
+                        {fit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <button
+              onClick={() => setImages([])}
+              className="w-full py-3 rounded-2xl border text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition"
+            >
+              Clear All
+            </button>
+          </div>
+        )}
+
+        <div className="glass rounded-3xl border p-6 space-y-4">
+          <p className="text-sm font-semibold text-muted-foreground">Standard Image Sizes Reference</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-2 text-muted-foreground font-medium">Platform</th>
+                  <th className="text-left py-2 text-muted-foreground font-medium">Size</th>
+                  <th className="text-left py-2 text-muted-foreground font-medium">Ratio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { platform: 'Facebook Cover', size: '1640×856', ratio: '1.91:1' },
+                  { platform: 'Instagram Square', size: '1080×1080', ratio: '1:1' },
+                  { platform: 'Instagram Story', size: '1080×1920', ratio: '9:16' },
+                  { platform: 'YouTube Thumbnail', size: '1280×720', ratio: '16:9' },
+                  { platform: 'Twitter Header', size: '1500×500', ratio: '3:1' },
+                  { platform: 'LinkedIn Banner', size: '1584×396', ratio: '4:1' },
+                  { platform: 'WhatsApp DP', size: '500×500', ratio: '1:1' },
+                ].map(({ platform, size, ratio }) => (
+                  <tr key={platform} className="border-b border-border/50 hover:bg-muted/20 transition">
+                    <td className="py-2 font-medium">{platform}</td>
+                    <td className="py-2 text-primary font-mono">{size}</td>
+                    <td className="py-2 text-muted-foreground">{ratio}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
+}
