@@ -139,6 +139,13 @@ const tools = [
   icon: FileImage,
   color: "bg-purple-600"
 },
+  {
+  name: "Text Repeater",
+  slug: "text-repeater",
+  description: "Repeat any text any number of times with custom separators.",
+  icon: FileImage,
+  color: "bg-teal-600"
+},
 ];
 
 export default function ToolsPage() {
