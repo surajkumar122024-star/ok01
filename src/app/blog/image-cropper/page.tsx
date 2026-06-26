@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'How to Crop Images Online for Free — No Software Needed | OpticShift Pro',
@@ -147,15 +148,104 @@ export default function ImageCropperArticle() {
             With OpticShift Pro's free Image Cropper tool, you can crop any image instantly, for free, with complete privacy. No software installation required, no account needed, and no image size limits. Try it today and see how easy it is to get perfectly cropped images for any purpose.
           </p>
 
-          {/* CTA */}
+          {/* ── NEW SECTION 1: Best JPG Quality Settings ── */}
+          <h2 className="text-2xl font-bold mt-8">Best JPG Quality Settings</h2>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border border-border rounded-lg">
+              <thead>
+                <tr className="border-b">
+                  <th className="p-3 text-left">Use Case</th>
+                  <th className="p-3 text-left">Recommended Quality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b">
+                  <td className="p-3">Website Images</td>
+                  <td className="p-3">75–85%</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="p-3">Social Media</td>
+                  <td className="p-3">80–90%</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="p-3">Photography</td>
+                  <td className="p-3">90–100%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* ── NEW SECTION 2: Common Cropping Mistakes ── */}
+          <h2 className="text-2xl font-bold mt-8">Common Image Cropping Mistakes</h2>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Cropping too close to the subject.</li>
+            <li>Ignoring aspect ratios.</li>
+            <li>Upscaling heavily cropped images.</li>
+            <li>Removing important visual elements.</li>
+            <li>Using the wrong format after cropping.</li>
+          </ul>
+
+          {/* ── NEW SECTION 3: FAQs ── */}
+          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+
+          <h3 className="font-semibold mt-6">Is it safe to crop images online?</h3>
+          <p>
+            Yes. OpticShift Pro processes images directly in your browser, so your files are never uploaded to any server.
+          </p>
+
+          <h3 className="font-semibold mt-6">Does cropping reduce image quality?</h3>
+          <p>
+            No. Cropping removes unwanted areas but does not reduce quality unless you enlarge the cropped image significantly.
+          </p>
+
+          <h3 className="font-semibold mt-6">Can I crop PNG, JPG and WebP images?</h3>
+          <p>
+            Yes. The tool supports all major image formats.
+          </p>
+
+          {/* ── NEW SECTION 4: About the Author ── */}
+          <div className="mt-10 p-6 border rounded-xl">
+            <h2 className="text-2xl font-bold mb-3">About the Author</h2>
+            <p>
+              <strong>OpticShift Pro Editorial Team</strong> creates practical guides on image
+              optimization, PDF tools, and file conversion to help users work faster while
+              protecting their privacy.
+            </p>
+          </div>
+
+          {/* ── NEW SECTION 5: Related Guides ── */}
+          <div className="mt-10">
+            <h2 className="text-2xl font-bold mb-4">Related Guides</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <Link href="/blog/how-to-compress-images-without-losing-quality">
+                  How to Compress Images Without Losing Quality
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/how-to-convert-png-to-jpg">
+                  PNG to JPG Conversion Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog/webp-vs-jpg">
+                  WebP vs JPG Comparison
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* ── CTA (Fixed route + next/link) ── */}
           <div className="mt-10 p-6 bg-primary/10 rounded-2xl text-center space-y-3">
             <p className="font-bold text-lg">Ready to crop your images?</p>
-            <a
-              href="/tools/image-cropper"
+            <Link
+              href="/image-cropper"
               className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition"
             >
-              Try Image Cropper Free &rarr;
-            </a>
+              Try Image Cropper Free →
+            </Link>
           </div>
 
         </div>
