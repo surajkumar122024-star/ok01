@@ -91,7 +91,7 @@ export default function BlogPost() {
         <a href="/tools/jpg-to-png"
           className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
-          Try JPG to PNG Converter Free →
+          Try JPG to PNG Converter Free &rarr;
         </a>
 
       </div>
