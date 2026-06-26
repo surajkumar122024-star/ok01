@@ -88,7 +88,7 @@ export default function BlogPost() {
           href="/tools/pdf-to-image"
           className="inline-block mt-4 px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:opacity-90 transition"
         >
-          Try PDF to Image Converter Free →
+          Try PDF to Image Converter Free &rarr;
         </a>
 
       </div>
