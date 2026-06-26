@@ -43,14 +43,6 @@ const blogs = [
     description: 'The ultimate cheat sheet for image dimensions on Instagram, Twitter, YouTube and more.',
     date: 'June 14, 2026',
   },
-  {
-  slug: "webp-converter",
-  title: "Complete Guide to WebP Converter",
-  description: "...",
-  date: "2026-06-26",
-  category: "Image Tools",
-  readTime: "8 min"
-},
 ];
 
 export default function BlogPage() {
