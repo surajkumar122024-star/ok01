@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'How to Compress Images Without Losing Quality (Free & Online) — OpticShift Pro',
@@ -138,12 +139,12 @@ export default function ImageCompressorArticle() {
           {/* CTA */}
           <div className="mt-10 p-6 bg-primary/10 rounded-2xl text-center space-y-3">
             <p className="font-bold text-lg">Ready to compress your images?</p>
-            
-              href="/tools/compressor"
+            <Link
+              href="/image-compressor"
               className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition"
             >
-              Try Image Compressor Free &rarr;
-            </a>
+              Try Image Compressor Free →
+            </Link>
           </div>
 
         </div>
