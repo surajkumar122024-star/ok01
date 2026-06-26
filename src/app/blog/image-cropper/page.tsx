@@ -150,11 +150,11 @@ export default function ImageCropperArticle() {
           {/* CTA */}
           <div className="mt-10 p-6 bg-primary/10 rounded-2xl text-center space-y-3">
             <p className="font-bold text-lg">Ready to crop your images?</p>
-            
+            <a
               href="/tools/image-cropper"
               className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition"
             >
-              Try Image Cropper Free →
+              Try Image Cropper Free &rarr;
             </a>
           </div>
 
