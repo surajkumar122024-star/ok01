@@ -142,7 +142,7 @@ export default function ImageCompressorArticle() {
               href="/tools/compressor"
               className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:opacity-90 transition"
             >
-              Try Image Compressor Free →
+              Try Image Compressor Free &rarr;
             </a>
           </div>
 
