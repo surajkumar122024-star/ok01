@@ -45,7 +45,7 @@ const blogs = [
   },
   {
   slug: 'add-watermark-to-image-online',
-  title: 'How to Add a Watermark to an Image Online',
+  title: 'Add a Watermark to Image Online',
   description: 'Learn how to add text or logo watermarks to your images online. Protect your photos, artwork, and branding with this simple step-by-step guide.',
   date: 'June 27, 2026',
 },
