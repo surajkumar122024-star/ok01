@@ -43,12 +43,6 @@ const blogs = [
     description: 'The ultimate cheat sheet for image dimensions on Instagram, Twitter, YouTube and more.',
     date: 'June 14, 2026',
   },
-  {
-  slug: 'add-watermark-to-image-online',
-  title: 'Add a Watermark to Image Online',
-  description: 'Learn how to add text or logo watermarks to your images online. Protect your photos, artwork, and branding with this simple step-by-step guide.',
-  date: 'June 27, 2026',
-},
 ];
 
 export default function BlogPage() {
