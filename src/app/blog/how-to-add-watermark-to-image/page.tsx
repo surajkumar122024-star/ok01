@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Add a Watermark to an Image Online — Free & Instant | OpticShift Pro",
+  title: "Add-watermark-to-image-online Online — Free & Instant | OpticShift Pro",
   description:
     "Learn how to add a text or logo watermark to any image online for free. No uploads, no software — works instantly in your browser with OpticShift Pro.",
   keywords: [
