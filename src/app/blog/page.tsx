@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 const blogs = [
+  // ── Existing articles ──
   {
     slug: 'how-to-convert-png-to-jpg',
     title: 'How to Convert PNG to JPG Online — Free & Instant',
@@ -42,6 +43,134 @@ const blogs = [
     title: 'Perfect Image Sizes for Every Social Media Platform',
     description: 'The ultimate cheat sheet for image dimensions on Instagram, Twitter, YouTube and more.',
     date: 'June 14, 2026',
+  },
+  {
+    slug: 'add-watermark-to-image-online',
+    title: 'Add a Watermark to Image Online',
+    description: 'Learn how to add text or logo watermarks to your images online. Protect your photos, artwork, and branding with this simple step-by-step guide.',
+    date: 'June 27, 2026',
+  },
+
+  // ── New articles ──
+  {
+    slug: 'how-to-use-base64-encoder-decoder',
+    title: 'How to Use Base64 Encoder Decoder: The Complete 2026 Guide',
+    description: 'Learn how to encode and decode text, files, and images to and from Base64 — free, fast, and secure.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'case-converter-guide',
+    title: 'Case Converter Guide: Convert Text to Upper, Lower, Title & Sentence Case',
+    description: 'Instantly change text to uppercase, lowercase, title case, sentence case, and more — free and fast.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'character-counter-for-writing-and-seo',
+    title: 'Character Counter for Writing and SEO: The Complete Guide',
+    description: 'Track text length for SEO meta tags, social media posts, and writing limits in real time.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'color-picker-guide-for-designers',
+    title: 'Color Picker Guide for Designers: Find, Copy & Use Any Color',
+    description: 'Find HEX, RGB, and HSL codes for any color instantly — a complete guide for designers and developers.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'how-to-convert-heic-to-jpg',
+    title: 'How to Convert HEIC to JPG: Complete 2026 Guide',
+    description: 'Fix iPhone photo compatibility issues by converting HEIC photos to JPG online for free.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'image-cropper-complete-guide',
+    title: 'Image Cropper Complete Guide: Crop Photos Online in Seconds',
+    description: 'Crop images online for free — perfect for social media, profile photos, and design projects.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'how-to-rotate-images-online',
+    title: 'How to Rotate Images Online: Complete 2026 Guide',
+    description: 'Fix sideways or upside-down photos in seconds, no software needed.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'image-size-checker-guide',
+    title: 'Image Size Checker Guide: Check Dimensions & File Size Instantly',
+    description: 'Check image dimensions, resolution, and file size online for free — great for web optimization.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'json-formatter-guide',
+    title: 'JSON Formatter Guide: Beautify, Validate & Debug JSON Online',
+    description: 'Format, validate, and beautify JSON online for free — a must-have for developers.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'strong-password-generator-guide',
+    title: 'Strong Password Generator Guide: Create Secure Passwords Instantly',
+    description: 'Generate strong, secure passwords online for free with our complete security guide.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'how-to-merge-pdf-files',
+    title: 'How to Merge PDF Files: Complete 2026 Guide',
+    description: 'Combine multiple PDF files into one document online for free in just a few clicks.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'how-to-split-pdf-pages',
+    title: 'How to Split PDF Pages: Complete 2026 Guide',
+    description: 'Split a PDF into separate pages or files online for free, instantly.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'image-resizer-complete-guide',
+    title: 'Image Resizer Complete Guide: Resize Photos Online Without Losing Quality',
+    description: 'Resize images online for free without losing quality — for social media, websites, and print.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'slug-generator-for-seo',
+    title: 'Slug Generator for SEO: Create Perfect URL Slugs Instantly',
+    description: 'Generate clean, SEO-friendly URL slugs online for free for blogs, products, and web pages.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'how-to-convert-svg-to-png',
+    title: 'How to Convert SVG to PNG: Complete 2026 Guide',
+    description: 'Convert SVG files to PNG online for free — a guide for designers and developers.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'text-repeater-tool-guide',
+    title: 'Text Repeater Tool Guide: Repeat Any Text Instantly',
+    description: 'Duplicate words, phrases, or sentences multiple times instantly for testing, design, and fun.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'url-encoder-decoder-guide',
+    title: 'URL Encoder Decoder Guide: Encode & Decode URLs Instantly',
+    description: 'Encode and decode URLs online for free — a complete guide to percent-encoding for developers.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'webp-converter-complete-guide',
+    title: 'WebP Converter Complete Guide: Convert Images for Faster Websites',
+    description: 'Convert images to WebP format online for free for smaller file sizes and better SEO.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'word-counter-for-writers',
+    title: 'Word Counter for Writers: Track Word Count & Writing Goals',
+    description: 'Track word count, reading time, and writing goals — free for writers, students, and creators.',
+    date: 'July 1, 2026',
+  },
+  {
+    slug: 'youtube-thumbnail-downloader-guide',
+    title: 'YouTube Thumbnail Downloader Guide: Save Thumbnails in HD',
+    description: 'Download YouTube video thumbnails in HD online for free — for creators, marketers, and designers.',
+    date: 'July 1, 2026',
   },
 ];
 
