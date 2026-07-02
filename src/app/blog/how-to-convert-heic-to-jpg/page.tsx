@@ -101,7 +101,7 @@ export default function HowToConvertHeicToJpgArticle() {
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Convert photos to JPG right after transferring them from your iPhone if you know you'll be sharing them outside Apple devices.</li>
-          <li>Check your iPhone's camera settings — under Settings > Camera > Formats, you can switch to "Most Compatible" mode to save future photos directly in JPG instead of HEIC.</li>
+          <li>Check your iPhone's camera settings — under Settings &gt; Camera &gt; Formats, you can switch to "Most Compatible" mode to save future photos directly in JPG instead of HEIC.</li>
           <li>For batch conversions, organize your HEIC files into a single folder first to make uploading and downloading more efficient.</li>
           <li>Always preview converted images before deleting the original HEIC files, to confirm quality meets your expectations.</li>
           <li>If image quality is critical (such as for professional printing), check whether your converter allows you to adjust the JPG quality/compression level.</li>
@@ -126,7 +126,7 @@ export default function HowToConvertHeicToJpgArticle() {
           <h3 className="text-lg font-semibold mt-4">Why does my iPhone save photos as HEIC instead of JPG?</h3>
           <p>Apple uses HEIC by default because it offers better compression, meaning smaller file sizes without a significant loss in image quality compared to JPG.</p>
           <h3 className="text-lg font-semibold mt-4">Can I change my iPhone settings to avoid HEIC files in the future?</h3>
-          <p>Yes, go to Settings > Camera > Formats and select "Most Compatible" to have your iPhone save photos directly in JPG format going forward.</p>
+          <p>Yes, go to Settings &gt; Camera &gt; Formats and select "Most Compatible" to have your iPhone save photos directly in JPG format going forward.</p>
           <h3 className="text-lg font-semibold mt-4">Does this tool work for converting HEIC videos as well?</h3>
           <p>This tool is specifically designed for image conversion; video formats like HEVC require a separate conversion process.</p>
 
