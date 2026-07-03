@@ -45,7 +45,7 @@ const blogs = [
     date: 'June 14, 2026',
   },
   {
-    slug: 'add-watermark-to-image-online',
+    slug: 'how-to-add-watermark-to-image',
     title: 'Add a Watermark to Image Online',
     description: 'Learn how to add text or logo watermarks to your images online. Protect your photos, artwork, and branding with this simple step-by-step guide.',
     date: 'June 27, 2026',
