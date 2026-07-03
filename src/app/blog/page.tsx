@@ -1,4 +1,16 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog — Free Guides for Image, PDF & Text Tools',
+  description: 'Step-by-step guides and tutorials for compressing, converting, and editing images and PDFs, plus tips on text and developer tools — all free and browser-based.',
+  openGraph: {
+    title: 'Blog — OpticShift Pro',
+    description: 'Step-by-step guides and tutorials for image, PDF, text, and developer tools — all free and browser-based.',
+    type: 'website',
+    url: 'https://ok01.vercel.app/blog',
+  },
+};
 
 const blogs = [
   // ── Existing articles ──
