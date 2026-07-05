@@ -223,6 +223,13 @@ const tools = [
   icon: FileImage,
   color: "bg-amber-600"
 },
+  {
+  name: "Exam Photo Resizer",
+  slug: "exam-photo",
+  description: "Resize photo to 200x230px for exam application forms. Free & private.",
+  icon: FileImage,
+  color: "bg-indigo-600"
+},
 ];
 
 export default function ToolsPage() {
