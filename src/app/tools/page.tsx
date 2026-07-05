@@ -216,6 +216,13 @@ const tools = [
   icon: FileImage,
   color: "bg-teal-600"
 },
+  {
+  name: "PAN Card Photo Maker",
+  slug: "pan-photo",
+  description: "Create a 2.5cm x 3.5cm PAN card photo instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-amber-600"
+},
 ];
 
 export default function ToolsPage() {
