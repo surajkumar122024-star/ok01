@@ -84,7 +84,7 @@ export const Navbar = () => {
               </Link>
 
               {toolsOpen && (
-                <div className="fixed left-1/2 -translate-x-1/2 top-16 mt-2 w-[min(1100px,92vw)] glass border rounded-2xl shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="fixed left-1/2 -translate-x-1/2 top-16 mt-2 w-[min(1300px,94vw)] glass border rounded-2xl shadow-xl animate-in fade-in slide-in-from-top-2 duration-200">
                   <ToolsMegaMenu onNavigate={() => setToolsOpen(false)} />
                 </div>
               )}
