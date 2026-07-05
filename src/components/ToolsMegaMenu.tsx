@@ -7,7 +7,7 @@ import {
   RefreshCw, FileImage, FileText, Layers, Scissors,
   Type, Hash, ArrowUpDown, Repeat, Link2,
   Binary, Braces, Link as LinkIcon,
-  KeyRound, Youtube,
+  KeyRound, Youtube, Fingerprint,
 } from "lucide-react";
 
 interface ToolItem {
@@ -76,6 +76,12 @@ export const toolCategories: ToolCategory[] = [
     items: [
       { name: "Password Generator", href: "/tools/password-generator", icon: KeyRound },
       { name: "YouTube Thumbnail", href: "/tools/youtube-thumbnail-converter", icon: Youtube },
+    ],
+  },
+  {
+    title: "Document Photos",
+    items: [
+      { name: "Passport Photo", href: "/tools/passport-photo", icon: Fingerprint },
     ],
   },
 ];
