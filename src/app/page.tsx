@@ -12,6 +12,7 @@ import {
   FileImage,
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
+import { FaqSection } from '@/components/FaqSection';
 
 const features = [
   {
@@ -170,6 +171,13 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
+              <Link href="/tools">
+                View All 26 Tools <ArrowRight className="ml-2" size={18} />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -226,11 +234,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FaqSection />
+
       {/* Call to Action */}
       <section className="py-24 px-4">
         <div className="max-w-5xl mx-auto glass rounded-3xl p-12 text-center space-y-6 border shadow-2xl">
           <h2 className="text-4xl font-bold">Ready to optimize your workflow?</h2>
-          {/* ✅ FIXED: Removed unverified "thousands of users" claim — replaced with honest, feature-focused copy */}
           <p className="text-muted-foreground max-w-xl mx-auto">
             Fast, free, and forever secure — OpticShift Pro keeps your images private while delivering professional results.
           </p>
