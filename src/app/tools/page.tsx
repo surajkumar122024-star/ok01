@@ -202,6 +202,13 @@ const tools = [
   icon: FileImage,
   color: "bg-fuchsia-500"
 },
+  {
+  name: "Visa Photo Maker",
+  slug: "visa-photo",
+  description: "Create a 2x2 inch (51x51mm) visa photo instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-cyan-600"
+},
 ];
 
 export default function ToolsPage() {
