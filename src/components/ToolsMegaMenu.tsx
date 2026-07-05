@@ -82,18 +82,13 @@ export const toolCategories: ToolCategory[] = [
     title: "Document Photos",
     items: [
       { name: "Passport Photo", href: "/tools/passport-photo", icon: Fingerprint },
-      { name: "Visa Photo", href: "/tools/visa-photo", icon: Fingerprint },
-      { name: "Aadhaar Photo", href: "/tools/aadhaar-photo", icon: Fingerprint },
-      { name: "PAN Photo", href: "/tools/pan-photo", icon: Fingerprint },
-      { name: "Exam Photo", href: "/tools/exam-photo", icon: Fingerprint },
-      { name: "Signature Resizer", href: "/tools/signature-resizer", icon: Fingerprint },
     ],
   },
 ];
 
 export function ToolsMegaMenu({ onNavigate }: { onNavigate?: () => void }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 p-6 w-full">
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 p-6 w-full">
       {toolCategories.map((cat) => (
         <div key={cat.title} className="flex flex-col gap-1">
           <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">
@@ -106,7 +101,7 @@ export function ToolsMegaMenu({ onNavigate }: { onNavigate?: () => void }) {
                 key={tool.href}
                 href={tool.href}
                 onClick={onNavigate}
-                className="flex items-center gap-2.5 px-2 py-2 rounded-lg text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                className="flex items-center gap-2.5 px-2 py-2 rounded-lg text-sm font-semibold text-foreground/90 hover:bg-primary/10 hover:text-primary transition-colors"
               >
                 <Icon size={16} className="flex-shrink-0 text-primary" />
                 <span className="leading-tight">{tool.name}</span>
