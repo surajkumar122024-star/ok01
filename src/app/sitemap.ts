@@ -29,6 +29,13 @@ const tools = [
   'url-encoder',
   'word-counter',
   'youtube-thumbnail-converter',
+  // Document Photo Tools
+  'passport-photo',
+  'visa-photo',
+  'aadhaar-photo',
+  'pan-photo',
+  'exam-photo',
+  'signature-resizer',
 ]
 
 const blogPosts = [
