@@ -230,6 +230,13 @@ const tools = [
   icon: FileImage,
   color: "bg-indigo-600"
 },
+  {
+  name: "Signature Resizer",
+  slug: "signature-resizer",
+  description: "Resize signature to 140x60px for exam and application forms. Free & private.",
+  icon: FileImage,
+  color: "bg-slate-600"
+},
 ];
 
 export default function ToolsPage() {
