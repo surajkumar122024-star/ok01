@@ -209,6 +209,13 @@ const tools = [
   icon: FileImage,
   color: "bg-cyan-600"
 },
+  {
+  name: "Aadhaar Photo Maker",
+  slug: "aadhaar-photo",
+  description: "Create a 3.5cm x 4.5cm Aadhaar enrollment photo instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-teal-600"
+},
 ];
 
 export default function ToolsPage() {
