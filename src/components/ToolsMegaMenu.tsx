@@ -86,6 +86,7 @@ export const toolCategories: ToolCategory[] = [
       { name: "Aadhaar Photo", href: "/tools/aadhaar-photo", icon: Fingerprint },
       { name: "PAN Photo", href: "/tools/pan-photo", icon: Fingerprint },
       { name: "Exam Photo", href: "/tools/exam-photo", icon: Fingerprint },
+      { name: "Signature Resizer", href: "/tools/signature-resizer", icon: Fingerprint },
     ],
   },
 ];
