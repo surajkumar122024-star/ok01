@@ -195,6 +195,13 @@ const tools = [
   icon: FileImage,
   color: "bg-rose-500"
 },
+  {
+  name: "Passport Photo Maker",
+  slug: "passport-photo",
+  description: "Create a passport-size (35×45mm) photo instantly. Free & private.",
+  icon: FileImage,
+  color: "bg-fuchsia-500"
+},
 ];
 
 export default function ToolsPage() {
