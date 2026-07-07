@@ -50,13 +50,17 @@ export default function ResizerClient() {
 
   const handleResize = async () => {
     if (!selectedFile) return;
+    if (!width || !height || width <= 0 || height <= 0) {
+      toast({ title: "Error", description: "Please enter a valid width and height before resizing.", variant: "destructive" });
+      return;
+    }
     setIsProcessing(true);
     try {
       const blob = await processImage(selectedFile, { width, height });
       setProcessedBlob(blob);
       toast({ title: "Success", description: "Image resized successfully." });
-    } catch (err) {
-      toast({ title: "Error", description: "Failed to resize image.", variant: "destructive" });
+    } catch (err: any) {
+      toast({ title: "Error", description: err?.message || "Failed to resize image.", variant: "destructive" });
     } finally {
       setIsProcessing(false);
     }
