@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { 
   ArrowRight, 
   RotateCcw, 
@@ -11,8 +12,19 @@ FileImage,
 import { Button } from '@/components/ui/button';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
+export const metadata: Metadata = {
+  title: 'All Tools — 32 Free Image, PDF, Text & Document Tools',
+  description: 'Browse all 32 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  openGraph: {
+    title: 'All Tools — OpticShift Pro',
+    description: 'Browse all 32 free browser-based tools for images, PDFs, text, and documents.',
+    type: 'website',
+    url: 'https://ok01.vercel.app/tools',
+  },
+};
+
 const tools = [
-  {
+{
     name: "Image Compressor",
     slug: "compressor",
     description: "Reduce file size while keeping high quality. Supports JPEG and PNG.",
