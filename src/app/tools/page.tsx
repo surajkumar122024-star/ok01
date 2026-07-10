@@ -249,6 +249,13 @@ const tools = [
   icon: FileImage,
   color: "bg-slate-600"
 },
+  {
+    name: "Unit Converter",
+    slug: "unit-converter",
+    description: "Convert length, weight, temperature, area, volume, speed and more instantly. Free & private.",
+    icon: Ruler,
+    color: "bg-cyan-600"
+  },
 ];
 
 export default function ToolsPage() {
