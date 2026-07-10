@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, MessageSquare, MapPin, Send } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, Send, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -43,6 +43,22 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-bold">Social</h3>
                 <p className="text-muted-foreground">@opticshift on Twitter/X</p>
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary shrink-0">
+                <Youtube size={24} />
+              </div>
+              <div>
+                <h3 className="font-bold">YouTube</h3>
+                <a
+                  href="https://youtube.com/@mitb67"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  @mitb67
+                </a>
               </div>
             </div>
             <div className="flex gap-4">
