@@ -15,6 +15,10 @@ export interface DocumentPhotoConfig {
   minSizeKB?: number;
   bgHint?: string;
   fileNamePrefix: string;
+  /** Unique paragraph explaining this specific document's use case. */
+  aboutText?: string;
+  /** Unique FAQs for this specific document photo tool. */
+  faqs?: { q: string; a: string }[];
 }
 
 export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
@@ -28,6 +32,8 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
     minSizeKB,
     bgHint,
     fileNamePrefix,
+    aboutText,
+    faqs,
   } = config;
 
   const targetW = Math.round((widthMM / 25.4) * dpi);
@@ -218,7 +224,35 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
   };
 
   return (
-    <ImageToolLayout title={toolTitle} description={toolDescription}>
+    <ImageToolLayout
+      title={toolTitle}
+      description={toolDescription}
+      content={
+        (aboutText || (faqs && faqs.length > 0)) && (
+          <div className="space-y-8">
+            {aboutText && (
+              <div className="glass rounded-xl p-8 space-y-4">
+                <h2 className="text-xl font-semibold">Why this size matters</h2>
+                <p className="text-muted-foreground leading-relaxed">{aboutText}</p>
+              </div>
+            )}
+            {faqs && faqs.length > 0 && (
+              <div className="glass rounded-xl p-8 space-y-4">
+                <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+                <div className="space-y-4">
+                  {faqs.map((f) => (
+                    <div key={f.q}>
+                      <p className="font-medium">{f.q}</p>
+                      <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        )
+      }
+    >
       <div className="space-y-6">
         {/* Spec Summary */}
         <div className="flex flex-wrap gap-3">
