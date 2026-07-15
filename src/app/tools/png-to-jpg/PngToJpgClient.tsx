@@ -59,6 +59,48 @@ export default function PngToJpgClient() {
     <ImageToolLayout
       title="PNG to JPG Converter"
       description="Convert PNG images to JPG format instantly. Reduce file size significantly. 100% browser-based."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Why PNG files often need to become JPG</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Screenshots and graphics saved as PNG can be several times larger than a JPG of the same
+              photo, which slows down page loads and eats into email attachment limits. This converter
+              flattens any transparency onto a white background (since JPG doesn't support transparent
+              pixels) and re-encodes the image at 92% quality — a level where compression artifacts are
+              rarely noticeable but the file size drops noticeably.
+            </p>
+          </div>
+
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">What happens to transparent areas in my PNG?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Since JPG has no transparency channel, any transparent or semi-transparent pixels are
+                  filled with white before conversion.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Why choose JPG over PNG for photos?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  JPG's lossy compression is tuned for photographic detail and typically produces much
+                  smaller files than PNG for the same photo, making it better suited for web pages,
+                  emails, and messaging apps.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Is this a good idea for logos or text-heavy images?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Not usually — PNG is better for logos, icons, and screenshots with sharp text or flat
+                  colors, since JPG compression can introduce blurring around hard edges.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-8">
         <ImageDropzone

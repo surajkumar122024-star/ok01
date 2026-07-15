@@ -80,6 +80,56 @@ export default function ResizerClient() {
     <ImageToolLayout
       title="Image Resizer"
       description="Change the dimensions of your images quickly. Maintain aspect ratio or set custom sizes."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Resize images without stretching or distortion</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Uploading a photo to a website, contest, or social platform often fails silently because
+              the file is larger than the platform's pixel limit. This resizer reads your image's exact
+              width and height, then lets you type a new size while the aspect-ratio lock keeps the
+              proportions correct — so a resized photo never comes out squashed or stretched. Unlock the
+              ratio if you deliberately need a non-proportional size, like a banner or thumbnail crop.
+            </p>
+          </div>
+
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Typical resize targets</h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
+              <li className="bg-muted/50 rounded-lg p-3"><span className="font-medium text-foreground">1080 × 1080px</span> — Instagram square post</li>
+              <li className="bg-muted/50 rounded-lg p-3"><span className="font-medium text-foreground">1200 × 630px</span> — Website link preview / Open Graph image</li>
+              <li className="bg-muted/50 rounded-lg p-3"><span className="font-medium text-foreground">1920 × 1080px</span> — Desktop wallpaper or presentation slide</li>
+              <li className="bg-muted/50 rounded-lg p-3"><span className="font-medium text-foreground">800 × 800px</span> — E-commerce product listing</li>
+            </ul>
+          </div>
+
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Will resizing reduce my image quality?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Reducing size (downscaling) rarely causes visible quality loss. Enlarging a small image
+                  significantly can make it look soft or blurry, since no new detail is created.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">What happens if I turn off the aspect ratio lock?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  You can set width and height independently, but the image may look stretched or
+                  squeezed if the new ratio is very different from the original.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Does this tool upload my photo anywhere?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  No — resizing happens locally in your browser, so the original file never leaves your device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-8">
         <ImageDropzone

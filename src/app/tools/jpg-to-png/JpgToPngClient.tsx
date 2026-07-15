@@ -57,6 +57,49 @@ export default function JpgToPngClient() {
     <ImageToolLayout
       title="JPG to PNG Converter"
       description="Convert JPG images to lossless PNG format instantly. 100% browser-based, no upload."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">When you actually need PNG instead of JPG</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              JPG compresses photos well but discards fine detail every time the file is re-saved, and
+              it can't handle transparent backgrounds. Converting to PNG is useful before editing an
+              image multiple times (PNG doesn't lose quality on re-save), before placing a logo or
+              graphic over a colored background, or when a design tool specifically requires a PNG
+              upload. The conversion below simply repaints your JPG pixel-for-pixel into the PNG format
+              without any recompression artifacts.
+            </p>
+          </div>
+
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Will converting JPG to PNG add transparency?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  No — a JPG has no transparency data to begin with, so the PNG output will still have
+                  a solid background. To remove a background you'd need a dedicated background-removal step.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Why is my PNG file bigger than the original JPG?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  PNG uses lossless compression, which typically produces larger files than JPG's lossy
+                  compression, especially for photos with lots of color detail. This is expected and
+                  not a bug.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Is any image quality lost in this conversion?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  No additional quality is lost during the JPG-to-PNG conversion itself — the tool
+                  copies the existing pixel data into the new format as-is.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-8">
         <ImageDropzone

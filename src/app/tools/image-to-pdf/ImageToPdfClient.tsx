@@ -66,6 +66,46 @@ export default function ImageToPdfClient() {
     <ImageToolLayout
       title="Image to PDF"
       description="Convert your images to PDF. 100% free, no upload, works in browser."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Turn scattered photos into one PDF document</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Job applications, visa submissions, and school forms frequently ask for scanned documents
+              or photos combined into a single PDF rather than several loose image files. This tool
+              lets you add multiple images, arrange them in the order you want, and generates one PDF
+              with each image placed on its own page — no design software or scanner app required.
+            </p>
+          </div>
+
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Can I combine JPG and PNG images in the same PDF?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes, you can mix image formats freely — each image is placed on its own PDF page
+                  regardless of its original file type.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Is there a limit on how many images I can add?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  There's no hard-coded limit, but very large batches of high-resolution images may take
+                  longer to process since everything runs in your browser rather than on a server.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Will the images be compressed in the PDF?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Images are placed at a size that fits the PDF page while preserving their original
+                  aspect ratio, without deliberately re-compressing them beyond what PDF embedding requires.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-6">
         {images.length === 0 ? (
