@@ -6,7 +6,8 @@ import {
   Maximize, 
   Image as ImageIcon,
   Zap,
-FileImage,
+  FileImage,
+  Ruler,
   LayoutGrid
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
