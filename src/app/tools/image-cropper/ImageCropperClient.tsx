@@ -213,6 +213,39 @@ export default function ImageCropperClient() {
     <ImageToolLayout
       title="Image Cropper"
       description="Crop images instantly in your browser. No upload, 100% private."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Cut out exactly the part of the photo you need</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Cropping removes distracting background, focuses attention on a subject, or reshapes a
+              photo to fit a specific frame — a square for a profile picture, a wide banner for a
+              website header, or a tight crop for a document photo. Drag the corner handles over your
+              image to select the exact area you want to keep, preview it live, and download just that
+              region as a new image.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Does cropping reduce image resolution?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Cropping only removes pixels outside your selection; the remaining area keeps its
+                  original resolution, so quality within the crop is unchanged.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Can I crop to an exact aspect ratio like 1:1 or 16:9?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes — drag the crop box to the proportions you need; watching the live dimensions as
+                  you adjust makes it easy to land on a common ratio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-6">
         {!imageSrc ? (

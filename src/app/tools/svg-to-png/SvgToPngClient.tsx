@@ -104,6 +104,38 @@ export default function SvgToPngClient() {
     <ImageToolLayout
       title="SVG to PNG"
       description="Convert SVG files to PNG instantly. No upload, 100% private."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Why SVG files sometimes need to become PNG</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              SVG is a vector format that scales perfectly at any size, which makes it great for icons
+              and logos on the web — but many apps, presentation tools, and older platforms only accept
+              raster formats like PNG. This converter renders your SVG at a fixed pixel size and
+              exports it as a PNG, keeping transparency intact so it still drops cleanly onto any
+              background.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Will the PNG look blurry compared to the SVG?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Unlike SVG, PNG is resolution-fixed, so exporting at a larger pixel size keeps edges
+                  sharp; exporting small and then enlarging later can look blurry.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Is transparency preserved?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes, any transparent areas in the SVG remain transparent in the exported PNG.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <canvas ref={canvasRef} className="hidden" />
 

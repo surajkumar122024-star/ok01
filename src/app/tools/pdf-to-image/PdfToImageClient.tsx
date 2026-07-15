@@ -69,6 +69,38 @@ export default function PdfToImageClient() {
     <ImageToolLayout
       title="PDF to Image"
       description="Convert each page of your PDF into high-quality PNG images. 100% browser-based, no uploads."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Turn PDF pages into images you can edit or share</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              PDFs aren't editable in image editors and can't always be embedded directly in slides or
+              social posts. This tool renders every page of your PDF as a separate high-resolution PNG
+              image, so you can drop a specific page into a presentation, paste it into a chat, or open
+              it in a photo editor — without needing separate PDF-to-image conversion software.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Will each PDF page become one image?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes, every page in the PDF is rendered as its own separate PNG image, matching the
+                  page's original layout and content.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Does this work with scanned PDFs?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Yes — since the tool renders the visual page rather than extracting text, scanned
+                  documents convert the same way as text-based PDFs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-8">
         {images.length === 0 && !loading && (

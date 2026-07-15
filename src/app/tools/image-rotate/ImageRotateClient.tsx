@@ -111,6 +111,39 @@ export default function ImageRotateClient() {
     <ImageToolLayout
       title="Image Rotate & Flip"
       description="Rotate or flip images instantly. No upload, 100% private."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Fix sideways or mirrored photos</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Photos taken with a phone held sideways, or scanned documents fed into a scanner upside
+              down, often end up rotated the wrong way once uploaded elsewhere. This tool rotates images
+              in 90-degree steps or flips them horizontally/vertically, correcting orientation issues
+              in a couple of clicks instead of reopening a full photo editor.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">What's the difference between rotate and flip?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Rotating turns the whole image around a center point (like a clock hand), while
+                  flipping mirrors the image horizontally or vertically without changing its orientation angle.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Will this fix a photo that looks rotated only in some apps?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  That's usually caused by EXIF orientation metadata being read differently by different
+                  apps; rotating and re-saving here bakes the correct orientation directly into the
+                  pixels, which fixes the inconsistency everywhere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-6">
         {!imageSrc ? (

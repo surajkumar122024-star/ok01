@@ -142,6 +142,39 @@ export default function ImageWatermarkClient() {
     <ImageToolLayout
       title="Image Watermark"
       description="Add text or logo watermarks instantly. No upload, 100% private."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Protect your photos before sharing them online</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Photographers, designers, and small businesses often add a visible watermark — a name,
+              logo, or website URL overlaid on the image — before posting previews online, to discourage
+              unauthorized reuse and to reinforce branding. This tool lets you position text or a logo
+              image anywhere on the photo, adjust its opacity, and download the watermarked result
+              without touching the original file.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">Does the watermark permanently change my original photo?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  No — the watermark is applied to a copy and downloaded separately; your original
+                  uploaded file is never modified or stored anywhere.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">How opaque should a watermark be?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Around 40-60% opacity is a common balance — visible enough to deter copying, but not
+                  so strong that it distracts from the photo itself.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <canvas ref={canvasRef} className="hidden" />
 

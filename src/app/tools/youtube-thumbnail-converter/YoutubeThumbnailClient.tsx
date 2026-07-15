@@ -79,6 +79,38 @@ export default function YoutubeThumbnailClient() {
     <ImageToolLayout
       title="YouTube Thumbnail Converter"
       description="Convert any image to the perfect 1280×720 (16:9) YouTube thumbnail ratio."
+      content={
+        <div className="space-y-8">
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Why exact thumbnail dimensions matter</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              YouTube recommends thumbnails at 1280×720 pixels with a 16:9 aspect ratio and a minimum
+              width of 640 pixels. Uploading an image with the wrong ratio means YouTube crops it
+              automatically, which can cut off faces, text, or key details you wanted visible in the
+              thumbnail. This tool crops and resizes any photo or graphic to the exact 16:9 frame so
+              what you see in the preview is what viewers will see on YouTube.
+            </p>
+          </div>
+          <div className="glass rounded-xl p-8 space-y-4">
+            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">What's the maximum file size YouTube allows for thumbnails?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  YouTube's official limit is 2MB per thumbnail image, in JPG, GIF, or PNG format.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium">Can I add text after resizing?</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  This tool focuses on getting the crop and ratio correct; for adding bold thumbnail
+                  text or overlays, use a design tool after downloading the resized image.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     >
       <div className="space-y-6">
         {!imageSrc ? (
