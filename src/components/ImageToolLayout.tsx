@@ -8,9 +8,16 @@ interface ImageToolLayoutProps {
   title: string;
   description: string;
   children: React.ReactNode;
+  /**
+   * Tool-specific content (how-to-use, FAQ, benefits, etc.) rendered below the
+   * tool card. Pass unique content per tool page — do NOT reuse the same
+   * text across tools, since duplicate boilerplate across pages is what
+   * triggers Google's "Low value content" flag.
+   */
+  content?: React.ReactNode;
 }
 
-export const ImageToolLayout = ({ title, description, children }: ImageToolLayoutProps) => {
+export const ImageToolLayout = ({ title, description, children, content }: ImageToolLayoutProps) => {
   return (
     <div className="min-h-screen pt-24 pb-12 px-4">
       <div className="max-w-5xl mx-auto space-y-8">
@@ -26,13 +33,8 @@ export const ImageToolLayout = ({ title, description, children }: ImageToolLayou
             </Card>
             
             <AdPlaceholder className="mt-8" />
-            
-            <div className="glass rounded-xl p-8 space-y-4">
-              <h2 className="text-xl font-semibold">How it works</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our tools process your images directly in your browser. When you select an image, it is never uploaded to a server. Instead, we use HTML5 Canvas and advanced JavaScript APIs to perform processing locally on your computer or mobile device. This ensures maximum privacy and high-speed execution.
-              </p>
-            </div>
+
+            {content}
           </div>
           
           <div className="hidden lg:block lg:col-span-3">
