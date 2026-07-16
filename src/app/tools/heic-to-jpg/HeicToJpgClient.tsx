@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import { ImageToolLayout } from "@/components/ImageToolLayout";
 import { Button } from "@/components/ui/button";
 import { Download, Loader2, RefreshCw, Smartphone, X, AlertTriangle } from "lucide-react";
+import { ToolContentSection } from "@/components/ToolContentSection";
+import { toolContent } from "@/data/toolContent";
 
 interface ConvertedFile {
   name: string;
@@ -89,39 +91,7 @@ export default function HeicToJpgClient() {
     <ImageToolLayout
       title="HEIC to JPG"
       description="Convert iPhone HEIC photos to JPG instantly. No upload, 100% private."
-      content={
-        <div className="space-y-8">
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Why iPhone photos won't open on some devices</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              iPhones save photos in HEIC format by default, which compresses better than JPG but isn't
-              universally supported — many Windows PCs, older Android phones, and web upload forms
-              can't display or accept .heic files directly. Converting to JPG fixes compatibility
-              instantly, whether you're emailing a photo to someone on Windows or uploading it to a
-              website that rejects the format.
-            </p>
-          </div>
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
-            <div className="space-y-4">
-              <div>
-                <p className="font-medium">Can I avoid this issue by changing my iPhone's camera settings?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Yes — under Settings → Camera → Formats, choosing "Most Compatible" saves new photos
-                  directly as JPG, but this tool is still useful for HEIC photos you already have.
-                </p>
-              </div>
-              <div>
-                <p className="font-medium">Does converting to JPG reduce photo quality?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  There is a small quality trade-off since JPG uses different compression than HEIC, but
-                  at normal viewing sizes the difference is rarely noticeable.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
+      content={<ToolContentSection data={toolContent["heic-to-jpg"]} />}
     >
       <div className="space-y-6">
         {/* Drop Zone */}

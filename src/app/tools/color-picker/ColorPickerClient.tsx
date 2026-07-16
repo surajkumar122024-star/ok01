@@ -4,6 +4,8 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { ImageToolLayout } from "@/components/ImageToolLayout";
 import { Button } from "@/components/ui/button";
 import { Palette, X, Check } from "lucide-react";
+import { ToolContentSection } from "@/components/ToolContentSection";
+import { toolContent } from "@/data/toolContent";
 
 interface PickedColor {
   hex: string;
@@ -125,39 +127,7 @@ export default function ColorPickerClient() {
     <ImageToolLayout
       title="Image Color Picker"
       description="Hover to preview, click to pick. Get HEX, RGB & HSL instantly."
-      content={
-        <div className="space-y-8">
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Match colors from any photo exactly</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Designers and developers often need to pull an exact color from a reference image — a
-              brand logo, a product photo, a screenshot of a design mockup — rather than guess at a
-              close match. This picker samples the precise pixel value under your cursor and outputs it
-              in HEX, RGB, and HSL simultaneously, since different tools (CSS, design software, print
-              software) each expect a different color format.
-            </p>
-          </div>
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
-            <div className="space-y-4">
-              <div>
-                <p className="font-medium">Why does the same color look slightly different on another screen?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Monitor calibration varies between devices, so the HEX/RGB values are accurate to the
-                  image file, but the visual appearance can shift slightly depending on the display.
-                </p>
-              </div>
-              <div>
-                <p className="font-medium">Which format should I use for CSS?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  HEX (e.g. #3B82F6) is the most common in CSS and design tools, while HSL is often
-                  easier to work with when you need to adjust lightness or saturation programmatically.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
+      content={<ToolContentSection data={toolContent["color-picker"]} />}
     >
       <div className="space-y-8">
         {!imageSrc ? (

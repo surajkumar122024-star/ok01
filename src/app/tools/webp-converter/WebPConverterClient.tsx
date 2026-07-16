@@ -6,6 +6,8 @@ import { ImageDropzone } from '@/components/ImageDropzone';
 import { Button } from '@/components/ui/button';
 import { Download, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { ToolContentSection } from "@/components/ToolContentSection";
+import { toolContent } from "@/data/toolContent";
 
 export default function WebPConverterClient() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -57,39 +59,7 @@ export default function WebPConverterClient() {
     <ImageToolLayout
       title="WebP Converter"
       description="Convert JPG & PNG images to WebP format. Smaller file sizes with better quality."
-      content={
-        <div className="space-y-8">
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Why websites are switching to WebP</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              WebP is a modern image format built by Google that typically produces 25–35% smaller
-              files than JPG or PNG at similar visual quality, which is one of the reasons Google
-              PageSpeed Insights and Core Web Vitals reports often flag JPG/PNG images with a
-              "serve images in next-gen formats" suggestion. Converting your images to WebP before
-              uploading them to a website can noticeably improve page load speed, especially on mobile.
-            </p>
-          </div>
-          <div className="glass rounded-xl p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Frequently asked questions</h2>
-            <div className="space-y-4">
-              <div>
-                <p className="font-medium">Do all browsers support WebP?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Yes, all major modern browsers (Chrome, Firefox, Safari, Edge) support WebP, so it's
-                  safe to use on most public-facing websites today.
-                </p>
-              </div>
-              <div>
-                <p className="font-medium">Does WebP support transparency like PNG?</p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Yes, WebP supports transparency (alpha channel), so images with transparent
-                  backgrounds convert without losing that transparency.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      }
+      content={<ToolContentSection data={toolContent["webp-converter"]} />}
     >
       <div className="space-y-8">
         <ImageDropzone
