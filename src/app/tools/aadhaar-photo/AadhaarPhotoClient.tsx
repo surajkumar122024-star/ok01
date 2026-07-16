@@ -13,6 +13,7 @@ export default function AadhaarPhotoClient() {
       maxSizeKB={100}
       bgHint="Use a recent, clear frontal photo with a plain background for Aadhaar enrollment or update forms."
       fileNamePrefix="aadhaar_photo"
+      contentSlug="aadhaar-photo"
       aboutText="UIDAI's Aadhaar enrollment and correction forms specify a 3.5cm × 4.5cm colour photograph with a plain light background and a clear, forward-facing view of the applicant's face. Photo studios often charge for a single print in this exact size, but you can crop your own photo to the correct proportions here and download a print-ready file in seconds."
       faqs={[
         { q: 'Can I use this photo for both new enrollment and Aadhaar update?', a: 'Yes, the same 3.5×4.5cm specification applies to both new Aadhaar enrollment and to update/correction forms submitted at an Aadhaar Seva Kendra.' },

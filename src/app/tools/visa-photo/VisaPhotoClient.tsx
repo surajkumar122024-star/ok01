@@ -13,6 +13,7 @@ export default function VisaPhotoClient() {
       maxSizeKB={240}
       bgHint="Most visa applications require a plain white background, neutral expression, and no glasses or headwear (unless for religious reasons)."
       fileNamePrefix="visa_photo"
+      contentSlug="visa-photo"
       aboutText="The 2×2 inch (51mm × 51mm) square photo format is best known as the US visa and passport photo standard, but several other countries' visa applications use the same square ratio. The requirement is stricter than most ID photos: full face forward, both ears typically visible, and a plain white or off-white background with no shadows."
       faqs={[
         { q: 'Does this match the US visa photo requirement exactly?', a: 'The 2×2 inch square crop matches the US Department of State format; head size and background rules should still be checked against the current official guidance before submitting.' },

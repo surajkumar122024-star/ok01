@@ -14,6 +14,7 @@ export default function ExamPhotoClient() {
       minSizeKB={20}
       bgHint="Exam photo requirements vary by exam (SSC, Railway, Banking, UPSC, etc.). This tool uses a common 200×230px, 20–50KB standard — always double-check your specific exam's official notification before submitting."
       fileNamePrefix="exam_photo"
+      contentSlug="exam-photo"
       aboutText="Competitive exam application portals — SSC, IBPS, Railways, and many state-level boards — commonly ask for a photo around 200×230 pixels with a file size between 20KB and 50KB, small enough to keep upload forms fast. Because exact pixel dimensions and size limits vary by exam, treat the numbers here as a solid starting point and cross-check them against your specific exam notification before uploading."
       faqs={[
         { q: 'Why do exam forms have such strict file size limits?', a: 'Government exam portals are built to handle thousands of simultaneous applicants, so small, compressed photo files (typically 20-50KB) keep the upload servers from getting overloaded.' },

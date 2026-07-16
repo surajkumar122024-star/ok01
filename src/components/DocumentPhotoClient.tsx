@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { ImageToolLayout } from "@/components/ImageToolLayout";
+import { ToolContentSection } from "@/components/ToolContentSection";
+import { toolContent } from "@/data/toolContent";
 import { Button } from "@/components/ui/button";
 import { Download, RefreshCw, Image as ImageIcon, Crop } from "lucide-react";
 
@@ -19,6 +21,8 @@ export interface DocumentPhotoConfig {
   aboutText?: string;
   /** Unique FAQs for this specific document photo tool. */
   faqs?: { q: string; a: string }[];
+  /** Slug key into toolContent data for the full rich content section (overview, steps, use cases, tips, FAQs, related tools). Takes priority over aboutText/faqs when provided. */
+  contentSlug?: string;
 }
 
 export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
@@ -34,6 +38,7 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
     fileNamePrefix,
     aboutText,
     faqs,
+    contentSlug,
   } = config;
 
   const targetW = Math.round((widthMM / 25.4) * dpi);
@@ -228,28 +233,32 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
       title={toolTitle}
       description={toolDescription}
       content={
-        (aboutText || (faqs && faqs.length > 0)) && (
-          <div className="space-y-8">
-            {aboutText && (
-              <div className="glass rounded-xl p-8 space-y-4">
-                <h2 className="text-xl font-semibold">Why this size matters</h2>
-                <p className="text-muted-foreground leading-relaxed">{aboutText}</p>
-              </div>
-            )}
-            {faqs && faqs.length > 0 && (
-              <div className="glass rounded-xl p-8 space-y-4">
-                <h2 className="text-xl font-semibold">Frequently asked questions</h2>
-                <div className="space-y-4">
-                  {faqs.map((f) => (
-                    <div key={f.q}>
-                      <p className="font-medium">{f.q}</p>
-                      <p className="text-muted-foreground leading-relaxed">{f.a}</p>
-                    </div>
-                  ))}
+        contentSlug && toolContent[contentSlug] ? (
+          <ToolContentSection data={toolContent[contentSlug]} />
+        ) : (
+          (aboutText || (faqs && faqs.length > 0)) && (
+            <div className="space-y-8">
+              {aboutText && (
+                <div className="glass rounded-xl p-8 space-y-4">
+                  <h2 className="text-xl font-semibold">Why this size matters</h2>
+                  <p className="text-muted-foreground leading-relaxed">{aboutText}</p>
                 </div>
-              </div>
-            )}
-          </div>
+              )}
+              {faqs && faqs.length > 0 && (
+                <div className="glass rounded-xl p-8 space-y-4">
+                  <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+                  <div className="space-y-4">
+                    {faqs.map((f) => (
+                      <div key={f.q}>
+                        <p className="font-medium">{f.q}</p>
+                        <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )
         )
       }
     >

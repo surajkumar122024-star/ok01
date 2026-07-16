@@ -14,6 +14,7 @@ export default function SignatureResizerClient() {
       minSizeKB={10}
       bgHint="Sign with black or dark blue ink on plain white paper, then photograph or scan it in good lighting. Signature size requirements vary by form — check your specific application's instructions."
       fileNamePrefix="signature"
+      contentSlug="signature-resizer"
       aboutText="Online forms — bank KYC, exam applications, government portals — often ask for a scanned signature under a strict file size limit, typically 10-20KB, uploaded at a small fixed pixel size. A signature photographed on a phone is usually many times too large and needs cropping plus compression before it will pass an upload check."
       faqs={[
         { q: 'What ink color works best for scanning?', a: 'Black or dark blue ink on plain white paper gives the cleanest contrast, which helps the signature stay legible even after compression to a small file size.' },

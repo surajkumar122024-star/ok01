@@ -989,4 +989,233 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Slug Generator", slug: "slug-generator" },
     ],
   },
+
+  "aadhaar-photo": {
+    overview: [
+      "UIDAI's Aadhaar enrollment and correction forms specify a 3.5cm × 4.5cm colour photograph with a plain light background and a clear, forward-facing view of the applicant's face. Photo studios routinely charge for a single print in this exact size, even though the underlying task is a straightforward crop and resize once you know the target dimensions.",
+      "This tool lets you crop your own photo to the correct 3.5:4.5 proportions directly in your browser, preview the result against the official size, and download a print-ready file within a minute — no studio visit and no waiting for a print counter.",
+      "Because Aadhaar enrollment centres can be strict about photo quality and background, understanding what the guidelines actually require — beyond just the pixel dimensions — makes it far more likely your photo is accepted on the first attempt.",
+    ],
+    steps: [
+      { title: "Upload a recent photo", description: "Choose a clear, well-lit frontal photo with a plain background." },
+      { title: "Adjust the crop box", description: "Position and resize the crop to fill the 3.5×4.5cm frame correctly." },
+      { title: "Check the preview", description: "Confirm your face is centered and clearly visible within the frame." },
+      { title: "Generate and download", description: "Download the correctly sized photo, ready for enrollment or update forms." },
+    ],
+    useCases: [
+      { title: "New Aadhaar enrollment", description: "Prepare the required photo for a first-time Aadhaar enrollment application at a Seva Kendra." },
+      { title: "Aadhaar update or correction", description: "Generate a fresh photo when updating Aadhaar details that require a new photograph." },
+      { title: "Printing at home or a local shop", description: "Download a print-ready file to take to any photo printing counter instead of a specialized studio." },
+      { title: "Digital form uploads", description: "Some Aadhaar-related portals accept a digital photo upload matching the same size specification." },
+    ],
+    tips: [
+      "Use a plain white or light-coloured wall as your background — patterns, shadows, or other people in frame can lead to rejection.",
+      "Face the camera directly with a neutral expression; avoid tilting your head or wearing sunglasses.",
+      "Take the photo in natural daylight or bright indoor lighting to avoid harsh shadows across the face.",
+      "Print on standard photo paper rather than plain printer paper for the most durable, form-ready result.",
+    ],
+    faqs: [
+      { q: "Can I use this photo for both new enrollment and Aadhaar update?", a: "Yes, the same 3.5×4.5cm specification applies to both new Aadhaar enrollment and update/correction forms submitted at a Seva Kendra." },
+      { q: "What background works best?", a: "A plain white or light-coloured wall works best; avoid patterns, shadows, or other people in the frame." },
+      { q: "Can I print this at home?", a: "Yes — download the photo and print it at any photo printing shop or a home printer capable of passport-size photo paper." },
+      { q: "Does the photo need to be recent?", a: "Yes, enrollment centres generally expect a photo that reflects your current appearance." },
+      { q: "Is my photo uploaded anywhere while I use this tool?", a: "No, cropping and resizing happen entirely in your browser; nothing is uploaded to a server." },
+    ],
+    relatedTools: [
+      { name: "PAN Card Photo Maker", slug: "pan-photo" },
+      { name: "Passport Size Photo Maker", slug: "passport-photo" },
+      { name: "Image Cropper", slug: "image-cropper" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
+
+  "pan-photo": {
+    overview: [
+      "The Income Tax Department's PAN application — Form 49A for Indian citizens, Form 49AA for foreign entities — asks for a 2.5cm × 3.5cm photograph attached to the physical form, or uploaded in the same proportions for e-KYC based online applications through NSDL or UTIITSL portals.",
+      "Getting the crop ratio exactly right the first time matters more than it might seem: a photo that's noticeably off-spec is one of the more common reasons a PAN application gets flagged for correction, adding days or weeks to an otherwise routine process.",
+      "This tool crops your photo precisely to the 2.5:3.5 ratio, shows a live preview so you can confirm framing before finalizing, and produces a file sized correctly for either the physical form or the online upload flow.",
+    ],
+    steps: [
+      { title: "Upload a recent colour photo", description: "Choose a clear photo taken against a plain white background." },
+      { title: "Position the crop frame", description: "Adjust the crop to the 2.5×3.5cm proportions PAN forms require." },
+      { title: "Preview the result", description: "Check that your face is well-centered within the frame." },
+      { title: "Download the photo", description: "Save the correctly sized file for your physical or online application." },
+    ],
+    useCases: [
+      { title: "New PAN card application", description: "Prepare a compliant photo for Form 49A or 49AA when applying for a PAN for the first time." },
+      { title: "PAN correction requests", description: "Generate a fresh photo when submitting a PAN detail correction or reprint request." },
+      { title: "NSDL/UTIITSL online uploads", description: "Produce a properly sized digital photo for portals that accept online e-KYC-based applications." },
+      { title: "Business or minor PAN applications", description: "The same size specification applies across most PAN application categories." },
+    ],
+    tips: [
+      "Use a plain white background specifically — PAN applications are typically stricter about background colour than other document photos.",
+      "Avoid tinted glasses; plain glasses are usually acceptable but check current NSDL/UTIITSL guidance if unsure.",
+      "Keep a neutral, closed-mouth expression facing the camera directly.",
+      "Double-check the printed or uploaded photo against the exact 2.5×3.5cm requirement before submitting your form.",
+    ],
+    faqs: [
+      { q: "Does this work for both new PAN and correction applications?", a: "Yes, the 2.5×3.5cm size applies to Form 49A/49AA for new PAN cards as well as correction or update requests." },
+      { q: "Is a colour photo required?", a: "Yes, PAN applications require a recent colour photograph; black-and-white photos are typically rejected." },
+      { q: "Can I wear glasses in the photo?", a: "Plain glasses without tinted lenses are usually accepted, but check the latest NSDL/UTIITSL guidelines since requirements can be updated." },
+      { q: "How is this different from a passport photo?", a: "PAN photos use a smaller 2.5×3.5cm size compared to the 3.5×4.5cm passport standard, so the two aren't interchangeable." },
+    ],
+    relatedTools: [
+      { name: "Aadhaar Card Photo Maker", slug: "aadhaar-photo" },
+      { name: "Passport Size Photo Maker", slug: "passport-photo" },
+      { name: "Signature Resizer", slug: "signature-resizer" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
+
+  "passport-photo": {
+    overview: [
+      "Indian passport applications through Passport Seva require a 35mm × 45mm photograph with the face covering roughly 70-80% of the frame, taken against a plain light background. Many other countries use this same 35×45mm standard for passports and long-stay visas, which makes this crop useful well beyond a single application.",
+      "Passport photo rules tend to be among the strictest of any document photo category — expression, background, and even glasses are frequently specified in detail — so getting the framing right in advance meaningfully reduces the chance of a submission being sent back.",
+      "This tool crops your photo to the correct 35:45 proportions with a live preview showing how much of the frame your face occupies, helping you match the required framing before you ever visit a passport office.",
+    ],
+    steps: [
+      { title: "Upload a recent photo", description: "Choose a plain-background photo taken directly facing the camera." },
+      { title: "Frame your face correctly", description: "Adjust the crop so your face fills roughly 70-80% of the frame." },
+      { title: "Review against the spec", description: "Compare the preview to official passport photo guidelines." },
+      { title: "Download the finished photo", description: "Save the 35×45mm file ready for your application." },
+    ],
+    useCases: [
+      { title: "New passport applications", description: "Prepare a compliant photo for a first-time Passport Seva application." },
+      { title: "Passport renewal", description: "Generate an updated photo reflecting your current appearance for a renewal application." },
+      { title: "International visa applications", description: "Several countries accept the same 35×45mm format for visa photo requirements." },
+      { title: "Tatkal or expedited applications", description: "Having a correctly sized photo ready in advance avoids delays during time-sensitive applications." },
+    ],
+    tips: [
+      "Most passport authorities ask for a neutral expression with both eyes open and mouth closed, rather than a smile.",
+      "Many current guidelines discourage glasses entirely to avoid glare; check your local passport office's exact rule.",
+      "Take the photo within the last six months so it closely resembles your current appearance.",
+      "Avoid headwear unless worn for religious reasons that are consistently present in daily life.",
+    ],
+    faqs: [
+      { q: "Can I smile in a passport photo?", a: "Most passport authorities, including Passport Seva, ask for a neutral expression with both eyes open and mouth closed." },
+      { q: "What if I wear glasses daily?", a: "Many passport guidelines now discourage glasses in the photo entirely to avoid glare; check your local passport office's current rule." },
+      { q: "How recent should the photo be?", a: "Passport photos should typically be taken within the last 6 months and closely resemble your current appearance." },
+      { q: "Does this size work for other countries too?", a: "The 35×45mm format is used by several countries beyond India for passports and some visa categories, though it's worth confirming the specific destination's requirement." },
+    ],
+    relatedTools: [
+      { name: "Visa Photo Maker", slug: "visa-photo" },
+      { name: "Aadhaar Card Photo Maker", slug: "aadhaar-photo" },
+      { name: "Image Cropper", slug: "image-cropper" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
+
+  "visa-photo": {
+    overview: [
+      "The 2×2 inch (51mm × 51mm) square photo format is best known as the US visa and passport photo standard, though several other countries' visa applications share this same square ratio. The requirement is notably stricter than most ID photos: full face forward, both ears typically visible, and a plain white or off-white background completely free of shadows.",
+      "Because visa photo rejections can delay an already time-sensitive application process, getting the framing and background right on the first attempt is worth the extra care — re-submitting a rejected photo often means restarting part of the application timeline.",
+      "This tool crops your photo to the exact 2×2 inch square, helping you match the strict framing requirement before you submit it through an online visa application system or attach it to a physical form.",
+    ],
+    steps: [
+      { title: "Upload a photo with a plain background", description: "Use a recent photo taken against a white or off-white backdrop." },
+      { title: "Crop to the square frame", description: "Adjust the crop so your face is centered within the 2×2 inch square." },
+      { title: "Check the framing", description: "Confirm your head size and position match typical visa photo guidance." },
+      { title: "Download the square photo", description: "Save the finished file for your visa application." },
+    ],
+    useCases: [
+      { title: "US visa applications", description: "Prepare a photo matching the US Department of State's 2×2 inch square format." },
+      { title: "US passport applications", description: "The same square format applies to US passport photo submissions." },
+      { title: "Other square-format visa applications", description: "Some other countries' visa processes also use a 2×2 inch or similar square photo requirement." },
+      { title: "Online visa photo uploads", description: "Digital visa application systems that specify exact pixel dimensions for a square photo." },
+    ],
+    tips: [
+      "Confirm head size and background rules against the current official guidance for your specific visa category before submitting.",
+      "Photos taken on a phone work fine as long as lighting is even and the background is plain.",
+      "Avoid shadows on the background by standing a few feet away from the wall rather than directly against it.",
+      "If your visa country isn't the US, double-check whether a different photo size (like 35×45mm) is required instead.",
+    ],
+    faqs: [
+      { q: "Does this match the US visa photo requirement exactly?", a: "The 2×2 inch square crop matches the US Department of State format; head size and background rules should still be checked against current official guidance." },
+      { q: "Can I use a photo taken on my phone?", a: "Yes, as long as the lighting is even, the background is plain, and the resolution is high enough that the cropped square photo doesn't look blurry." },
+      { q: "What if my visa country isn't the US?", a: "Some countries use different visa photo dimensions, like 35×45mm, so check your destination country's embassy website before using this square format." },
+      { q: "Should ears be visible in the photo?", a: "Many square-format visa guidelines expect a full-face frontal view; check the specific requirement, since some allow hair covering the ears while others don't." },
+    ],
+    relatedTools: [
+      { name: "Passport Size Photo Maker", slug: "passport-photo" },
+      { name: "Aadhaar Card Photo Maker", slug: "aadhaar-photo" },
+      { name: "Image Cropper", slug: "image-cropper" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
+
+  "exam-photo": {
+    overview: [
+      "Competitive exam application portals — SSC, IBPS, Indian Railways, and many state-level boards — commonly ask for a photo around 200×230 pixels with a file size between 20KB and 50KB, small enough to keep upload servers responsive when handling thousands of simultaneous applicants during peak registration windows.",
+      "Because exact pixel dimensions and file size limits vary meaningfully between exams, the numbers used here should be treated as a solid, commonly-used starting point rather than a universal rule — always cross-check the specific exam's official notification PDF before finalizing your upload.",
+      "This tool crops and compresses your photo toward that common specification, showing both the pixel dimensions and resulting file size so you can confirm it fits comfortably within whatever limit your specific exam notification states.",
+    ],
+    steps: [
+      { title: "Upload a recent photo", description: "Choose a clear, recent photo suitable for identity verification at the exam center." },
+      { title: "Crop to the required frame", description: "Adjust the crop toward the common 200×230px specification." },
+      { title: "Check the file size", description: "Confirm the result falls within your exam's stated KB range." },
+      { title: "Download and verify", description: "Save the file and cross-check dimensions against your exam's official notification." },
+    ],
+    useCases: [
+      { title: "SSC exam applications", description: "Prepare a photo matching the commonly used size specification for SSC recruitment exams." },
+      { title: "Banking and IBPS applications", description: "Generate a compliant photo for banking sector recruitment exam portals." },
+      { title: "Railway recruitment forms", description: "Meet the small file size requirements typical of Indian Railways application systems." },
+      { title: "State-level competitive exams", description: "Many state boards use similar small pixel and file size specifications for photo uploads." },
+    ],
+    tips: [
+      "Always verify the exact pixel size and KB range against your specific exam's official notification PDF before uploading.",
+      "Use a recent photo — most exam boards require one taken within the last few months for identity verification purposes.",
+      "If your exam's limit is smaller than 20KB, compress further after cropping using an image compressor.",
+      "Keep a plain background for the clearest identity verification at the exam center.",
+    ],
+    faqs: [
+      { q: "Why do exam forms have such strict file size limits?", a: "Government exam portals handle thousands of simultaneous applicants, so small, compressed photo files keep upload servers from getting overloaded." },
+      { q: "What if my exam asks for a different pixel size?", a: "Use this tool to get close to the right proportions, then check the specific exam's notification for exact dimensions and file size limits." },
+      { q: "Should the photo be recent?", a: "Yes — most exam boards require a photo taken within the last few months so it matches your appearance for identity verification." },
+      { q: "Can I reuse the same photo across multiple exams?", a: "Only if the size and recency requirements match; many exams share similar specs, but it's worth verifying each notification individually." },
+    ],
+    relatedTools: [
+      { name: "Signature Resizer", slug: "signature-resizer" },
+      { name: "Aadhaar Card Photo Maker", slug: "aadhaar-photo" },
+      { name: "Image Compressor", slug: "compressor" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
+
+  "signature-resizer": {
+    overview: [
+      "Online forms — bank KYC processes, exam applications, government portals — frequently ask for a scanned signature under a strict file size limit, typically 10-20KB, uploaded at a small fixed pixel size. A signature photographed on a phone is usually many times too large in both dimensions and file size, and needs cropping plus compression before it will pass an upload check.",
+      "This tool crops your signature image tightly to the required frame and compresses it down toward the target file size, so what you upload matches what the form actually expects rather than triggering a vague 'file too large' or 'invalid dimensions' error.",
+      "Getting a clean signature scan starts before you even open this tool: the ink color, paper background, and lighting when the signature was captured all affect how well it compresses while staying legible.",
+    ],
+    steps: [
+      { title: "Photograph or scan your signature", description: "Sign in dark ink on plain white paper and capture it in good lighting." },
+      { title: "Upload the image", description: "Select or drag the photo of your signature into the tool." },
+      { title: "Crop tightly around the signature", description: "Remove excess white space so the signature fills the frame." },
+      { title: "Download the resized file", description: "Save the compressed, correctly sized signature for your form." },
+    ],
+    useCases: [
+      { title: "Bank KYC and account opening", description: "Upload a correctly sized signature for online bank account or KYC verification forms." },
+      { title: "Exam and government applications", description: "Meet the strict small file size requirements common in competitive exam application portals." },
+      { title: "Document e-signing preparation", description: "Prepare a clean signature image for pasting into digital documents or contracts." },
+      { title: "Re-uploading after a rejected submission", description: "Fix a signature that was previously rejected for being too large or the wrong dimensions." },
+    ],
+    tips: [
+      "Sign with black or dark blue ink on plain white paper for the cleanest contrast after compression.",
+      "Photograph the signature in even lighting to avoid shadows that reduce legibility once compressed.",
+      "Crop as tightly as possible around just the signature to maximize how much detail survives compression at a small file size.",
+      "If your form's limit is unusually small, try a slightly bolder pen to keep the signature legible after heavy compression.",
+    ],
+    faqs: [
+      { q: "What ink color works best for scanning?", a: "Black or dark blue ink on plain white paper gives the cleanest contrast, which helps the signature stay legible after compression." },
+      { q: "Why does my form reject the signature file?", a: "Most rejections happen because the file exceeds the maximum size limit or doesn't match the required pixel dimensions — cropping tightly and downloading here usually resolves both." },
+      { q: "Can I use a stylus-drawn signature instead of a scanned one?", a: "Yes, a digitally drawn signature works the same way — upload the image and crop and resize it just like a scanned one." },
+      { q: "Is there a standard signature size across all forms?", a: "No, requirements vary by form; always check the specific size and KB limit stated in your application's instructions." },
+    ],
+    relatedTools: [
+      { name: "Exam Photo Resizer", slug: "exam-photo" },
+      { name: "PAN Card Photo Maker", slug: "pan-photo" },
+      { name: "Image Compressor", slug: "compressor" },
+      { name: "Image Size Checker", slug: "image-size-checker" },
+    ],
+  },
 };
