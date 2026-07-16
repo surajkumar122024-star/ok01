@@ -180,6 +180,33 @@ export default function JsonFormatterClient() {
           </div>
         </div>
 
+        <div className="glass rounded-xl p-6 space-y-4 mt-6">
+          <h2 className="text-lg font-semibold">Reading minified API responses</h2>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            APIs and browser dev tools often return JSON as one long unformatted line, which is
+            efficient for transfer but nearly impossible to read by eye. This formatter re-indents the
+            structure with proper nesting and line breaks, and flags syntax errors like a missing comma
+            or unclosed bracket, so debugging a broken payload takes seconds instead of manual scanning.
+          </p>
+        </div>
+
+        <div className="space-y-3 mt-4">
+          <details className="glass rounded-xl p-4">
+            <summary className="cursor-pointer font-medium text-sm">Why does it say my JSON is invalid?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              Common causes are trailing commas, single quotes instead of double quotes, or unescaped
+              characters inside a string — valid JSON requires double-quoted keys and values.
+            </p>
+          </details>
+          <details className="glass rounded-xl p-4">
+            <summary className="cursor-pointer font-medium text-sm">Is my JSON data sent anywhere?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              No, formatting and validation happen entirely in your browser using JavaScript — nothing
+              is uploaded to a server.
+            </p>
+          </details>
+        </div>
+
       </div>
     </div>
   )

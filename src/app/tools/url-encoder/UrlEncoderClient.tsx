@@ -190,6 +190,33 @@ export default function UrlEncoderClient() {
           </div>
         </div>
 
+        <div className="glass rounded-xl p-6 space-y-4 mt-6">
+          <h2 className="text-lg font-semibold">Why URLs break with spaces and special characters</h2>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            URLs can only safely contain a limited set of characters — spaces, ampersands, question
+            marks, and non-English letters all need to be percent-encoded (like %20 for a space) before
+            they can be passed as a query parameter or link. Skipping this step is a common reason a
+            link breaks, or an API request silently drops part of the data after a special character.
+          </p>
+        </div>
+
+        <div className="space-y-3 mt-4">
+          <details className="glass rounded-xl p-4">
+            <summary className="cursor-pointer font-medium text-sm">When do I need to encode a URL?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              Encode any value you're inserting into a query string or URL path that might contain
+              spaces, symbols, or non-ASCII characters — for example, search terms or user-submitted text.
+            </p>
+          </details>
+          <details className="glass rounded-xl p-4">
+            <summary className="cursor-pointer font-medium text-sm">Why does %20 sometimes appear as a plus sign (+)?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              Both represent a space, but in different encoding contexts — %20 is standard URL encoding,
+              while + is used specifically for form data encoded as application/x-www-form-urlencoded.
+            </p>
+          </details>
+        </div>
+
       </div>
     </div>
   )

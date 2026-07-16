@@ -37,6 +37,33 @@ export default function WordCounterClient() {
           <div className="text-sm text-gray-600">Paragraphs</div>
         </div>
       </div>
+
+      <div className="glass rounded-xl p-6 space-y-4 mt-6 max-w-3xl mx-auto">
+        <h2 className="text-lg font-semibold">Why word count matters beyond just essays</h2>
+        <p className="text-muted-foreground leading-relaxed text-sm">
+          Word and character counts aren't just for school essays — meta descriptions, tweet drafts,
+          resume bullet points, and press releases often have unofficial or official length
+          expectations. Watching the live count while you write helps you catch when a paragraph has
+          run long, or confirm a piece hits a required minimum word count before submitting it.
+        </p>
+      </div>
+
+      <div className="space-y-3 mt-4 max-w-3xl mx-auto">
+        <details className="glass rounded-xl p-4">
+          <summary className="cursor-pointer font-medium text-sm">How is a "word" counted here?</summary>
+          <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+            Words are counted as sequences of characters separated by spaces or line breaks, matching
+            how most word processors count them.
+          </p>
+        </details>
+        <details className="glass rounded-xl p-4">
+          <summary className="cursor-pointer font-medium text-sm">Does this tool save or store what I type?</summary>
+          <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+            No, all counting happens locally in your browser as you type — nothing is sent to a server
+            or saved anywhere.
+          </p>
+        </details>
+      </div>
     </div>
   )
 }
