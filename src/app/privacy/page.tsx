@@ -50,10 +50,11 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-gray-900">4. Google AdSense and Advertising</h2>
         <p className="leading-relaxed mb-3">
-          We may use <strong>Google AdSense</strong> in the future to display advertisements on this
-          website. If enabled, Google may use cookies and similar technologies to serve personalized
-          or non-personalized ads based on your browsing activity. We will update this Privacy Policy
-          when Google AdSense is activated.
+          This website uses <strong>Google AdSense</strong> to display advertisements. Google, as a
+          third-party vendor, uses cookies and similar technologies to serve ads based on your prior
+          visits to this and other websites. Google's use of advertising cookies enables it and its
+          partners to serve personalized or non-personalized ads to you based on your visit to this
+          site and/or other sites on the Internet.
         </p>
         <p className="leading-relaxed">
           For more information on how Google uses data from sites that use its services, please visit{" "}
