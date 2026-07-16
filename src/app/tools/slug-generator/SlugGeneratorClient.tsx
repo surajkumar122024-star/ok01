@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function SlugGeneratorClient() {
   const [text, setText] = useState('')
@@ -143,33 +145,7 @@ export default function SlugGeneratorClient() {
           </div>
         </div>
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Why URL slugs matter for SEO</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            A blog post titled "10 Best Places to Visit in 2026!" turns into an ugly URL if pasted
-            as-is — spaces, punctuation, and capital letters all cause problems for web servers and
-            search engines. A clean slug like "10-best-places-to-visit-2026" is lowercase, hyphenated,
-            and free of special characters, which both looks more trustworthy to visitors and is easier
-            for Google to index correctly.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Should I use hyphens or underscores in a slug?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Hyphens are generally recommended over underscores, since Google treats hyphens as word
-              separators but can read underscore-joined words as a single term.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">How long should a slug be?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Shorter, descriptive slugs (roughly 3-6 words) tend to be easier to read and share than
-              long ones that mirror the entire page title word for word.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["slug-generator"]} />
 
       </div>
     </div>

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 const conversions = [
   { label: 'UPPER CASE', fn: (t: string) => t.toUpperCase() },
@@ -77,34 +79,7 @@ export default function CaseConverterClient() {
           })}
         </div>
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Where case conversion actually gets used</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Switching between uppercase, lowercase, and title case comes up in more places than most
-            people expect — reformatting a pasted headline for a slide, converting a variable name from
-            "my variable" style to camelCase for code, or fixing text that was accidentally typed with
-            caps lock on. Rather than retyping, pasting it here and picking the right case saves the
-            manual correction.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">What's the difference between Title Case and Sentence case?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Title Case capitalizes the first letter of most words (common in headlines), while
-              Sentence case only capitalizes the first word and proper nouns, matching normal writing style.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Does this work with non-English text?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Basic case conversion works with any Latin-alphabet text; languages using different
-              scripts (like Devanagari or Chinese) don't have an uppercase/lowercase distinction, so
-              case conversion won't apply to them.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["case-converter"]} />
 
       </div>
     </div>

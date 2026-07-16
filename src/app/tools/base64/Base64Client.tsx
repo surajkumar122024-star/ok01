@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function Base64Client() {
   const [input, setInput] = useState('')
@@ -155,33 +157,7 @@ export default function Base64Client() {
           </div>
         </div>
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">What Base64 encoding actually does</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Base64 converts binary or text data into a set of 64 printable characters (A-Z, a-z, 0-9,
-            +, /), which is why it's commonly used to embed images inside CSS/HTML, pass data safely
-            through URLs and JSON, or attach files in email systems that only handle plain text. It's
-            not encryption — anyone can decode Base64 back to the original text, so it should never be
-            used to hide sensitive information.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Is Base64 the same as encryption?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              No — Base64 is an encoding scheme, not encryption. It has no secret key, and anyone can
-              decode it instantly, so it should not be relied on to protect sensitive data.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Why is the encoded text longer than the original?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Base64 encoding increases size by roughly 33%, since every 3 bytes of original data
-              becomes 4 characters of encoded output.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["base64"]} />
 
       </div>
     </div>

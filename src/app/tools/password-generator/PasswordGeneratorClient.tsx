@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function PasswordGeneratorClient() {
   const [length, setLength] = useState(16)
@@ -169,33 +171,7 @@ export default function PasswordGeneratorClient() {
           </div>
         </div>
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">What makes a password actually strong</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Password strength comes mainly from length and randomness, not complexity tricks like
-            swapping "a" for "@". A random 16-character password mixing uppercase, lowercase, numbers,
-            and symbols is far harder to crack than a long memorable phrase with predictable
-            substitutions. This generator produces genuinely random passwords using your browser's
-            crypto-secure random number source, and nothing is transmitted or logged anywhere.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Is it safe to generate passwords in a browser tool?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Yes — the password is generated locally in your browser and never leaves your device or
-              gets sent to any server, so there's no transmission risk.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">How long should my password be?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Most security guidance now recommends at least 12-16 characters for important accounts,
-              combined with a password manager so you don't need to remember each one.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["password-generator"]} />
 
       </div>
     </div>

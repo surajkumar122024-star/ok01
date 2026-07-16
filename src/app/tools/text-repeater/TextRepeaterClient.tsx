@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function TextRepeaterClient() {
   const [text, setText] = useState('')
@@ -127,32 +129,7 @@ export default function TextRepeaterClient() {
           </div>
         )}
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Common uses for repeated text</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Repeating a line or phrase by hand is tedious and error-prone past a handful of copies —
-            useful for generating placeholder/test data, creating a spammy-looking sample for testing a
-            filter, filling table rows during development, or making a simple pattern of repeated
-            characters. Type the text once, set how many times to repeat it, and copy the whole block instantly.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Is there a limit to how many times I can repeat text?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              There's no hard-coded cap, but extremely large repeat counts (tens of thousands) may slow
-              down your browser tab since it's all processed client-side.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Can I add a separator between repeats?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Yes, use the separator option to insert a line break, comma, or custom character between
-              each repeated copy of your text.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["text-repeater"]} />
 
       </div>
     </div>

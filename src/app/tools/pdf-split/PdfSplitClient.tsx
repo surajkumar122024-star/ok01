@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function PdfSplitClient() {
   const [file, setFile] = useState<File | null>(null)
@@ -127,32 +129,7 @@ export default function PdfSplitClient() {
           </button>
         )}
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Pulling specific pages out of a large PDF</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Sometimes you only need page 3 of a 40-page report, or want to separate a multi-page scanned
-            document into individual files. This tool shows every page as a thumbnail so you can select
-            exactly which ones to extract, then downloads just those pages as a new, smaller PDF —
-            without needing the full original file to be shared or re-uploaded elsewhere.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Does splitting affect the original PDF?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              No, your original file stays unchanged; the extracted pages are downloaded as a separate
-              new PDF.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Can I select non-consecutive pages?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Yes, you can pick any combination of pages (like 1, 3, and 7) rather than only a
-              continuous range.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["pdf-split"]} />
 
       </div>
     </div>

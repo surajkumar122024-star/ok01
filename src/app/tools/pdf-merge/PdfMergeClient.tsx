@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function PdfMergeClient() {
   const [files, setFiles] = useState<File[]>([])
@@ -126,32 +128,7 @@ export default function PdfMergeClient() {
           <p className="text-center text-muted-foreground text-sm">Add at least one more PDF to merge</p>
         )}
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Combining scattered PDFs into one file</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Job applications and government submissions often ask for a single PDF containing multiple
-            documents — a resume plus certificates, or several scanned ID pages — rather than separate
-            attachments. This tool stacks your selected PDFs in order into one combined file, which you
-            can reorder before merging so the pages come out in the sequence you need.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Can I change the order of the PDFs before merging?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Yes, arrange the files in the order you want them to appear before clicking merge — the
-              final PDF follows that exact sequence.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Is there a limit on how many PDFs I can merge?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              There's no fixed limit, though merging many large PDFs at once may take longer since
-              processing happens entirely in your browser.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["pdf-merge"]} />
 
       </div>
     </div>

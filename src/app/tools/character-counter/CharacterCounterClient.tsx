@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 export default function CharacterCounterClient() {
   const [text, setText] = useState('')
@@ -127,32 +129,7 @@ export default function CharacterCounterClient() {
           </div>
         )}
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Why character limits matter</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Twitter/X posts cap out at 280 characters, meta descriptions get truncated by Google around
-            155-160 characters, and SMS messages split into multiple parts past 160 characters. This
-            counter updates live as you type or paste, so you can trim text down to fit a specific
-            platform's limit before publishing, rather than finding out it got cut off after the fact.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Do spaces count as characters?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Yes, spaces are included in the total character count, matching how most platforms
-              (Twitter/X, SMS, meta descriptions) count length.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">What's a safe meta description length for SEO?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Aiming for roughly 150-160 characters keeps most meta descriptions from being truncated in
-              Google search results, though the exact cutoff varies by device and search query.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["character-counter"]} />
 
       </div>
     </div>

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { ToolContentSection } from "@/components/ToolContentSection"
+import { toolContent } from "@/data/toolContent"
 
 interface ImageInfo {
   name: string
@@ -205,33 +207,7 @@ export default function ImageSizeCheckerClient() {
           </div>
         </div>
 
-        <div className="glass rounded-xl p-6 space-y-4 mt-6">
-          <h2 className="text-lg font-semibold">Why checking image dimensions before uploading saves time</h2>
-          <p className="text-muted-foreground leading-relaxed text-sm">
-            Many upload forms — passport photos, job application portals, website image fields — reject
-            files outside a specific pixel size or file size range without a clear error message,
-            leaving you guessing what went wrong. This tool reads a photo's exact width, height, file
-            size, and format instantly, so you know before uploading whether it meets the requirement.
-          </p>
-        </div>
-
-        <div className="space-y-3 mt-4">
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">Does this tool upload my image to check it?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              No, the dimensions and file details are read locally in your browser using the file's
-              metadata — nothing is sent to a server.
-            </p>
-          </details>
-          <details className="glass rounded-xl p-4">
-            <summary className="cursor-pointer font-medium text-sm">What's the difference between file size and pixel dimensions?</summary>
-            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              File size (KB/MB) is how much storage the file takes up, while pixel dimensions
-              (width × height) describe the image's resolution — two images with the same dimensions
-              can still have very different file sizes depending on compression.
-            </p>
-          </details>
-        </div>
+        <ToolContentSection data={toolContent["image-size-checker"]} />
 
       </div>
     </div>
