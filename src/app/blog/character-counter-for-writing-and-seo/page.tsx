@@ -36,20 +36,68 @@ export default function CharacterCounterForWritingAndSeoArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a character counter?</a></li>
+            <li><a href="#limits-table" className="hover:text-primary">Real character limits across platforms</a></li>
+            <li><a href="#why-limits" className="hover:text-primary">Why these specific limits exist</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Whether you're writing a meta description, crafting a tweet, or filling out a form with a
+            strict character limit, knowing exactly how many characters you've used matters. Go over
+            the limit, and your text might get cut off or rejected outright; stay well under it, and
+            you might be leaving valuable space unused that could have carried more useful information.
+          </p>
 
-          <p>Whether you're writing a meta description, crafting a tweet, or filling out a form with a strict character limit, knowing exactly how many characters you've used matters. Go over the limit, and your text might get cut off or rejected. Under-optimize it, and you might be leaving valuable space unused.</p>
-          <p>A <strong>character counter</strong> is a simple but essential tool that tells you precisely how many characters — and often words and sentences — are in your text, in real time. In this guide, we'll explain why character count matters for SEO and writing, and walk you through exactly how to use our free online Character Counter tool.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is a Character Counter?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Character Counter?</h2>
 
           <p>A character counter is a text analysis tool that counts the total number of characters in a piece of text, including letters, numbers, punctuation, and sometimes spaces. Many character counters also provide additional metrics like word count, sentence count, and paragraph count, giving you a complete picture of your text's structure at a glance.</p>
           <p>This tool is especially valuable in contexts where platforms enforce strict character limits — such as meta descriptions in search results, tweet lengths, SMS messages, or form fields with maximum input restrictions.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="limits-table" className="text-2xl font-bold mt-8">Real Character Limits Across Platforms</h2>
+          <p>
+            Here are the actual limits you're most likely to be writing against, so you don't have to
+            hunt them down separately:
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 text-sm">
+            <p><strong>SEO meta title:</strong> ~60 characters before Google truncates it in search results</p>
+            <p><strong>SEO meta description:</strong> ~155-160 characters before truncation</p>
+            <p><strong>X (Twitter) post:</strong> 280 characters</p>
+            <p><strong>SMS message:</strong> 160 characters per segment (longer messages split into multiple segments)</p>
+            <p><strong>LinkedIn post (before "see more"):</strong> ~210 characters on most feed views</p>
+            <p><strong>Google Ads headline:</strong> 30 characters per headline field</p>
+            <p><strong>Instagram caption (before "more"):</strong> ~125 characters</p>
+          </div>
+
+          <h2 id="why-limits" className="text-2xl font-bold mt-8">Why These Specific Limits Exist</h2>
+          <p>
+            These numbers aren't arbitrary. Google's meta description truncation is a practical display
+            constraint — it's simply how much text fits on a typical search result line before an
+            ellipsis cuts it off. SMS's 160-character segment traces back to old telecom protocol
+            limits from decades ago that are technically still in effect today. Twitter/X's 280
+            characters (doubled from an original 140 in 2017) was chosen to keep posts skimmable in a
+            fast-scrolling feed while giving room for more complete thoughts than the original limit
+            allowed.
+          </p>
+          <p>
+            Knowing the reasoning sometimes changes how you write toward a limit — since Google's
+            truncation only cuts off the end of a sentence, front-loading your most important
+            information early in a meta description still gets it seen, even if the very end gets
+            clipped.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Character Counter Tool</h3>
           <p>Go to the Character Counter page, where you'll see a clean text input box ready for your content.</p>
@@ -85,7 +133,7 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <p><strong>4. Improves Writing Discipline</strong> Watching your character count in real time encourages more concise, impactful writing — a valuable skill for headlines, ads, and short-form content.</p>
           <p><strong>5. Saves Time During Editing</strong> Instead of manually counting or estimating, you get an instant, accurate count that updates as you revise your text.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Writing SEO meta titles and descriptions</strong> that fit within search engine display limits.</li>
@@ -97,7 +145,7 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <li><strong>Academic and professional writing</strong> where character or word limits apply to abstracts or summaries.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Keep SEO meta titles under approximately 60 characters and meta descriptions under 155-160 characters to avoid truncation in search results.</li>
@@ -108,7 +156,7 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <li>Revise your text in small passes, checking the live count after each edit, rather than writing the entire piece and counting at the end.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a character counter used for?</h3>
           <p>A character counter measures the total number of characters in a piece of text, helping you stay within limits for SEO, social media, forms, and other platforms.</p>
           <h3 className="text-lg font-semibold mt-4">Does the character count include spaces?</h3>
@@ -127,6 +175,10 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <p>Yes, our Character Counter is completely free with no sign-up or subscription required.</p>
           <h3 className="text-lg font-semibold mt-4">Does the tool save or store my text?</h3>
           <p>No, your text is processed instantly in your browser for counting purposes and isn't stored or shared.</p>
+          <h3 className="text-lg font-semibold mt-4">Why did Twitter/X change from 140 to 280 characters?</h3>
+          <p>The change in 2017 was made to give users more room for complete thoughts while still keeping posts skimmable in a fast-scrolling feed, based on data showing very few tweets actually needed the extra space.</p>
+          <h3 className="text-lg font-semibold mt-4">Should I use characters with or without spaces for a strict limit?</h3>
+          <p>Always check which specific metric the platform enforces — most modern web platforms count characters including spaces, but some older SMS and legacy systems count differently, so verify if you're right at the edge of a limit.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use the Character Counter on my phone?</h3>
           <p>Yes, the tool is fully responsive and works smoothly on smartphones, tablets, and desktops alike.</p>
 
