@@ -36,20 +36,58 @@ export default function CaseConverterGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a case converter?</a></li>
+            <li><a href="#example" className="hover:text-primary">A real example, side by side</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to convert text case, step by step</a></li>
+            <li><a href="#coding-conventions" className="hover:text-primary">Case conventions in programming</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Formatting text correctly is a small detail that makes a big difference — whether you're
+            writing a headline, cleaning up a messy spreadsheet, fixing text that came through in all
+            caps from a PDF, or naming a variable in code. Manually retyping text just to fix its
+            capitalization is tedious and introduces typos. An online case converter fixes this
+            instantly, transforming the same words into whichever capitalization style you need
+            without touching the underlying text itself.
+          </p>
 
-          <p>Formatting text correctly is a small detail that makes a big difference — whether you're writing a headline, cleaning up a messy spreadsheet, or preparing content for a website. Manually retyping text just to fix its capitalization is tedious and error-prone. That's where an online <strong>case converter</strong> comes in.</p>
-          <p>A case converter tool instantly transforms your text between different capitalization styles — UPPERCASE, lowercase, Title Case, Sentence case, and more — with a single click. In this guide, we'll show you exactly how to use our free Case Converter tool, explore its features, and share practical tips to help you format text like a professional editor.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is a Case Converter?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Case Converter?</h2>
 
           <p>A case converter is a text utility that changes the capitalization pattern of any given text without altering its actual words. For example, typing "hello world" and converting it to Title Case instantly gives you "Hello World," while converting it to UPPERCASE gives you "HELLO WORLD."</p>
           <p>This might sound like a minor convenience, but for writers, students, developers, and marketers, it saves significant time and eliminates the frustration of manually retyping or reformatting large blocks of text.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="example" className="text-2xl font-bold mt-8">A Real Example, Side by Side</h2>
+          <p>
+            To see exactly what changes and what doesn't, here's the same source sentence run through
+            every case option:
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p><span className="text-muted-foreground">Original:</span> the quick BROWN fox jumps over 3 lazy dogs</p>
+            <p><span className="text-muted-foreground">UPPERCASE:</span> THE QUICK BROWN FOX JUMPS OVER 3 LAZY DOGS</p>
+            <p><span className="text-muted-foreground">lowercase:</span> the quick brown fox jumps over 3 lazy dogs</p>
+            <p><span className="text-muted-foreground">Title Case:</span> The Quick Brown Fox Jumps Over 3 Lazy Dogs</p>
+            <p><span className="text-muted-foreground">Sentence case:</span> The quick brown fox jumps over 3 lazy dogs</p>
+            <p><span className="text-muted-foreground">camelCase:</span> theQuickBrownFoxJumpsOver3LazyDogs</p>
+          </div>
+          <p>
+            Notice that punctuation, word order, and numbers never change — only the letters'
+            capitalization (and, for camelCase, the removal of spaces) is affected. This is exactly
+            why a case converter is safe to use on finished text: it can't introduce a typo or alter
+            meaning, unlike manual retyping.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Case Converter Tool</h3>
           <p>Navigate to the Case Converter page. You'll find a large text box ready for input, along with buttons for each case type.</p>
@@ -93,7 +131,26 @@ export default function CaseConverterGuideArticle() {
           <p><strong>4. Reduces Human Error</strong> Manual retyping often introduces typos. A dedicated converter guarantees the words stay exactly the same — only the casing changes.</p>
           <p><strong>5. Boosts Productivity for Writers and Students</strong> Whether formatting an essay title or fixing capitalization in a long report, this tool removes a tedious manual step from your workflow.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="coding-conventions" className="text-2xl font-bold mt-8">Case Conventions in Programming</h2>
+          <p>
+            Different programming languages and contexts have settled on different case conventions,
+            and using the wrong one for a given codebase is a common source of inconsistent, harder-to-read
+            code. Here's a quick reference:
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p><strong>camelCase</strong> — myVariableName — standard for JavaScript, TypeScript, and Java variables</p>
+            <p><strong>PascalCase</strong> — MyClassName — used for class and component names in most languages</p>
+            <p><strong>snake_case</strong> — my_variable_name — Python's community convention (PEP 8)</p>
+            <p><strong>kebab-case</strong> — my-file-name — common for URLs, file names, and CSS classes</p>
+            <p><strong>UPPER_SNAKE_CASE</strong> — MY_CONSTANT — the traditional convention for constants across many languages</p>
+          </div>
+          <p>
+            If you're contributing to an existing codebase, matching its established convention
+            matters more than personal preference — mixed conventions within one project make code
+            noticeably harder to scan and review.
+          </p>
+
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Formatting blog post titles</strong> into proper Title Case for consistency and SEO best practices.</li>
@@ -105,7 +162,7 @@ export default function CaseConverterGuideArticle() {
           <li><strong>Email subject lines</strong>, where proper capitalization improves readability and professionalism.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use <strong>Title Case</strong> for headlines, blog titles, and article headers to follow standard publishing conventions.</li>
@@ -116,7 +173,7 @@ export default function CaseConverterGuideArticle() {
           <li>Combine this tool with a word counter to check text length after cleaning up formatting for platforms with character limits.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a case converter used for?</h3>
           <p>A case converter changes the capitalization style of text — such as converting it to uppercase, lowercase, or title case — without altering the actual words.</p>
           <h3 className="text-lg font-semibold mt-4">Does the tool change the meaning of my text?</h3>
@@ -135,7 +192,11 @@ export default function CaseConverterGuideArticle() {
           <p>Yes, it's completely free with no sign-up or subscription required.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool for SEO purposes?</h3>
           <p>Yes, converting titles and headings into proper Title Case is a common SEO and content formatting best practice.</p>
-          <h3 className="text-lg font-semibold mt-4">Does this tool work on mobile devices?</h3>
+          <h3 className="text-lg font-semibold mt-4">Does this tool support snake_case conversion?</h3>
+          <p>Yes, alongside UPPERCASE, lowercase, Title Case, Sentence case, and camelCase, snake_case conversion is available specifically for code-focused naming needs.</p>
+          <h3 className="text-lg font-semibold mt-4">Why do mixed case conventions in one codebase cause problems?</h3>
+          <p>Inconsistent naming (some variables in camelCase, others in snake_case) makes code harder to scan and increases the chance of typo-related bugs when referencing a variable by the wrong convention.</p>
+          <h3 className="text-lg font-semibold mt-4">Does the Case Converter tool work on mobile devices?</h3>
           <p>Yes, the Case Converter is fully responsive and works smoothly on smartphones and tablets.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
