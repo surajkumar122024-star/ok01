@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Add-watermark-to-image-online Online",
+  title: "How to Add a Watermark to an Image Online (2026 Guide) — OpticShift Pro",
   description:
     "Learn how to add a text or logo watermark to any image online for free. No uploads, no software — works instantly in your browser with OpticShift Pro.",
   keywords: [
@@ -60,6 +60,8 @@ export default function BlogPostWatermark() {
           <li><a href="#what-is-watermark" className="hover:underline">What is a watermark?</a></li>
           <li><a href="#why-watermark" className="hover:underline">Why should you watermark your images?</a></li>
           <li><a href="#types" className="hover:underline">Types of watermarks</a></li>
+          <li><a href="#text-vs-logo" className="hover:underline">Text watermark vs. logo watermark: which should you use?</a></li>
+          <li><a href="#placement" className="hover:underline">Where to place a watermark (and why it matters)</a></li>
           <li><a href="#how-to" className="hover:underline">How to add a watermark online (step-by-step)</a></li>
           <li><a href="#tips" className="hover:underline">Tips for effective watermarking</a></li>
           <li><a href="#faq" className="hover:underline">FAQ</a></li>
@@ -135,6 +137,51 @@ export default function BlogPostWatermark() {
         </div>
       </section>
 
+      {/* New Section: Text vs Logo */}
+      <section id="text-vs-logo" className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Text Watermark vs. Logo Watermark: Which Should You Use?</h2>
+        <p className="leading-relaxed text-gray-700 mb-4">
+          This choice comes down to what you're actually optimizing for. A text watermark — your
+          name or website URL — takes seconds to set up, is always legible regardless of the image's
+          colors (as long as you pick good contrast), and works well for individual creators who
+          don't yet have a polished logo. A logo watermark takes more upfront preparation (you need a
+          transparent PNG logo ready to go), but it reinforces visual brand recognition far more
+          effectively over time — viewers start to recognize a logo mark at a glance long before
+          they'd consciously read and remember a text URL.
+        </p>
+        <p className="leading-relaxed text-gray-700">
+          A practical middle ground many businesses use: a small, subtle logo watermark for public
+          social posts (branding-focused), and a bolder, centrally placed text watermark reading
+          &quot;PREVIEW — NOT FOR USE&quot; on client preview images before a purchase or contract is
+          finalized (protection-focused). The right choice isn't universal — it depends on whether
+          this specific image needs branding or theft deterrence more.
+        </p>
+      </section>
+
+      {/* New Section: Placement */}
+      <section id="placement" className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Where to Place a Watermark (and Why It Matters)</h2>
+        <p className="leading-relaxed text-gray-700 mb-4">
+          Watermark placement is a genuine trade-off between protection and visual appeal, and
+          getting it wrong undermines whichever goal you were actually going for. A watermark tucked
+          neatly in a bottom corner looks clean and professional, but it's also the single easiest
+          part of an image to crop out entirely — someone determined to reuse your photo without
+          credit can remove a corner watermark with one crop.
+        </p>
+        <p className="leading-relaxed text-gray-700 mb-4">
+          A watermark placed diagonally across the center, or repeated in a tiled pattern across the
+          whole frame, is dramatically harder to remove without visibly damaging the image — but it's
+          also more visually intrusive, which matters if the image needs to remain genuinely
+          presentable (a portfolio piece) rather than just protected (a low-res client preview).
+        </p>
+        <p className="leading-relaxed text-gray-700">
+          A useful rule of thumb: the more valuable and reuse-prone an image is likely to be — a
+          professional photo shoot, a stock-style graphic — the more aggressive and central the
+          watermark placement should be. For casual social posts where branding matters more than
+          theft prevention, a subtle corner mark is usually the better trade-off.
+        </p>
+      </section>
+
       {/* Section 4 */}
       <section id="how-to" className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Add a Watermark Online (Step-by-Step)</h2>
@@ -161,6 +208,14 @@ export default function BlogPostWatermark() {
             </div>
           ))}
         </div>
+        <p className="leading-relaxed text-gray-700 mt-6">
+          <strong>Tip:</strong> If your image needs cropping or resizing too, do that first with the{' '}
+          <Link href="/tools/image-cropper" className="text-blue-600 underline">Image Cropper</Link>{' '}
+          or{' '}
+          <Link href="/tools/resizer" className="text-blue-600 underline">Image Resizer</Link>{' '}
+          before adding your watermark — watermarking first and then cropping risks accidentally
+          cutting your watermark out of the frame.
+        </p>
         <div className="mt-6">
           <Link
             href="/tools/image-watermark"
@@ -207,6 +262,18 @@ export default function BlogPostWatermark() {
             {
               q: "Can I watermark multiple images at once?",
               a: "Currently the tool processes one image at a time. Batch watermarking is on our roadmap for a future update.",
+            },
+            {
+              q: "Should I compress my image before or after watermarking?",
+              a: "Watermark first, then compress. Compressing an already-watermarked image is fine, but compressing first and watermarking after risks the watermark text looking crisp against a slightly softer background, which can look inconsistent. Use the Image Compressor as your final step.",
+            },
+            {
+              q: "What's the difference between a watermark and a copyright notice in the file metadata?",
+              a: "A visible watermark is baked into the image pixels themselves and is seen by anyone viewing the picture. Metadata copyright notices (EXIF/IPTC data) are invisible and only show up if someone specifically inspects the file's properties — useful as a backup, but not a visible deterrent on their own.",
+            },
+            {
+              q: "Will a watermark hurt my image's SEO or social media engagement?",
+              a: "A small, tasteful watermark generally has no meaningful negative effect. A watermark that's too large or intrusive can reduce engagement simply because it makes the image less pleasant to look at — keep opacity and size moderate for public-facing content.",
             },
           ].map(({ q, a }) => (
             <details key={q} className="border border-gray-200 rounded-xl overflow-hidden group">
