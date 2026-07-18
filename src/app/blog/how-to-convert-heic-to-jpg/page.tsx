@@ -36,20 +36,52 @@ export default function HowToConvertHeicToJpgArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is-heic" className="hover:text-primary">What is HEIC and why does it cause problems?</a></li>
+            <li><a href="#why-smaller" className="hover:text-primary">Why HEIC files are smaller than JPG</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to convert HEIC to JPG, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            If you own an iPhone, you've likely run into this: you try to share a photo, and it either
+            won't open, shows as a strange file icon, or looks distorted on a non-Apple device. This
+            happens because iPhones save photos in the HEIC format by default — a format that isn't
+            universally supported outside Apple's ecosystem.
+          </p>
 
-          <p>If you own an iPhone, you've likely encountered a frustrating issue: you try to share a photo, and it either won't open, shows as a strange file type, or looks distorted on a non-Apple device. This happens because iPhones save photos in the HEIC format by default — a format that isn't universally supported outside Apple's ecosystem.</p>
-          <p>The good news is that converting HEIC to JPG is quick and completely free with the right tool. In this guide, we'll explain what HEIC is, why compatibility issues happen, and walk you through exactly how to convert your HEIC photos to the widely supported JPG format using our online converter.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is HEIC and Why Does It Cause Problems?</h2>
+          <h2 id="what-is-heic" className="text-2xl font-bold mt-8">What Is HEIC and Why Does It Cause Problems?</h2>
 
           <p>HEIC (High Efficiency Image Container) is Apple's default photo format since iOS 11, designed to store high-quality images using less storage space than traditional JPG files. While this is great for saving space on your iPhone, HEIC isn't universally supported across all devices, operating systems, browsers, and platforms — especially older Windows computers, some Android devices, and certain websites or applications.</p>
           <p>As a result, when you try to upload, email, or share a HEIC photo outside the Apple ecosystem, it may appear as a broken file, fail to open, or simply not display at all. Converting to JPG solves this problem instantly, since JPG is the most universally recognized image format in the world.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="why-smaller" className="text-2xl font-bold mt-8">Why HEIC Files Are Smaller Than JPG</h2>
+          <p>
+            HEIC's efficiency comes from using a fundamentally different, more modern compression
+            standard called HEIF, derived from video encoding technology rather than the older
+            algorithm JPG has used since the early 1990s. In practice, this lets Apple store roughly
+            the same visual quality in about half the file size of an equivalent JPG — which is
+            genuinely useful for on-device storage on a phone with limited space, but becomes a
+            liability the moment that file needs to travel outside Apple's ecosystem.
+          </p>
+          <p>
+            It's worth knowing this conversion is effectively one-way in practice: once you convert a
+            HEIC photo to JPG, you'd need the original HEIC file again to get back that smaller storage
+            footprint. A sensible approach is keeping your original HEIC library on your iPhone (or in
+            iCloud) and only exporting JPG copies for the specific situations — emailing, uploading,
+            printing — that actually need them.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the HEIC to JPG Converter</h3>
           <p>Go to the HEIC to JPG Converter tool page, where you'll see an upload area ready to accept your files.</p>
@@ -85,7 +117,7 @@ export default function HowToConvertHeicToJpgArticle() {
           <p><strong>4. Simplifies Editing</strong> Most photo editing software and websites offer full support for JPG, while HEIC support can be inconsistent or require additional plugins.</p>
           <p><strong>5. Reduces Technical Frustration</strong> Instead of troubleshooting why a photo won't open, converting to JPG solves the compatibility issue proactively before it becomes a problem.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Uploading iPhone photos to websites</strong> that don't support HEIC format.</li>
@@ -97,7 +129,7 @@ export default function HowToConvertHeicToJpgArticle() {
           <li><strong>Editing photos in software that doesn't support HEIC</strong> natively.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Convert photos to JPG right after transferring them from your iPhone if you know you'll be sharing them outside Apple devices.</li>
@@ -108,7 +140,7 @@ export default function HowToConvertHeicToJpgArticle() {
           <li>Keep a backup of original HEIC files when possible, since they retain slightly more image data due to Apple's efficient compression method.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a HEIC file?</h3>
           <p>HEIC is Apple's default photo format used on iPhones since iOS 11, designed to store high-quality images in a smaller file size compared to JPG.</p>
           <h3 className="text-lg font-semibold mt-4">Why won't my HEIC photos open on my Windows computer?</h3>
@@ -129,6 +161,10 @@ export default function HowToConvertHeicToJpgArticle() {
           <p>Yes, go to Settings &gt; Camera &gt; Formats and select "Most Compatible" to have your iPhone save photos directly in JPG format going forward.</p>
           <h3 className="text-lg font-semibold mt-4">Does this tool work for converting HEIC videos as well?</h3>
           <p>This tool is specifically designed for image conversion; video formats like HEVC require a separate conversion process.</p>
+          <h3 className="text-lg font-semibold mt-4">Why is HEIC roughly half the file size of JPG?</h3>
+          <p>HEIC uses HEIF, a more modern compression standard derived from video encoding technology, which achieves better efficiency than JPG's much older compression algorithm at similar visual quality.</p>
+          <h3 className="text-lg font-semibold mt-4">Should I delete my original HEIC files after converting?</h3>
+          <p>It's generally better to keep your original HEIC library for its smaller storage footprint and only export JPG copies for the specific situations that need them, since converting back from JPG to HEIC isn't a practical option.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
