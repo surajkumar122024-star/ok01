@@ -36,20 +36,55 @@ export default function ColorPickerGuideForDesignersArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a color picker?</a></li>
+            <li><a href="#formats" className="hover:text-primary">HEX vs RGB vs HSL: one color, three codes</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#accessibility" className="hover:text-primary">Color contrast and accessibility</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Every great design starts with the right colors. But finding the exact shade you have in
+            mind — and translating it into a usable code like HEX, RGB, or HSL — can be surprisingly
+            tricky without the right tool, especially when you need that exact same color to look
+            consistent across a website, a slide deck, and a printed brochure.
+          </p>
 
-          <p>Every great design starts with the right colors. But finding the exact shade you have in mind — and translating it into a usable code like HEX, RGB, or HSL — can be surprisingly tricky without the right tool. That's where an online <strong>color picker</strong> becomes indispensable.</p>
-          <p>A color picker lets you select, generate, or extract colors and instantly get their corresponding codes in multiple formats, ready to use in your design software, website CSS, or graphic projects. In this guide, we'll walk through how our free Color Picker tool works, why it matters for designers and developers, and how to get the most out of it.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is a Color Picker?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Color Picker?</h2>
 
           <p>A color picker is a tool that allows you to select a color visually — either from a color spectrum, an uploaded image, or a predefined palette — and instantly retrieve its exact code in formats like HEX (#FFFFFF), RGB (255, 255, 255), or HSL (0, 0%, 100%). These codes can then be copied directly into your design tools, CSS stylesheets, or graphic design software.</p>
           <p>Instead of guessing color values or manually adjusting sliders until something looks "close enough," a color picker gives you precision — ensuring the color you use is exactly the one you intended.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="formats" className="text-2xl font-bold mt-8">HEX vs RGB vs HSL: One Color, Three Codes</h2>
+          <p>
+            These three formats always describe the exact same color — they're just organized
+            differently for different purposes. Here's one specific blue shown all three ways:
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p><strong>HEX:</strong> #3B82F6</p>
+            <p><strong>RGB:</strong> rgb(59, 130, 246)</p>
+            <p><strong>HSL:</strong> hsl(217, 91%, 60%)</p>
+          </div>
+          <p>
+            HEX packs red, green, and blue into a compact six-digit code and is the default in most
+            CSS and design tools. RGB spells the same three channel values out as separate numbers,
+            which some code prefers for readability or calculation. HSL organizes the same color by
+            hue, saturation, and lightness instead — notice how easy it would be to make this exact
+            blue lighter by simply raising the last number (60%) to, say, 75%, something that's far
+            less intuitive to do by adjusting HEX or RGB values directly.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Color Picker Tool</h3>
           <p>Navigate to the Color Picker page, where you'll see a color spectrum or palette along with input fields for HEX, RGB, and HSL values.</p>
@@ -85,7 +120,24 @@ export default function ColorPickerGuideForDesignersArticle() {
           <p><strong>4. Helps With Brand Color Matching</strong> Extracting colors directly from a logo or existing image ensures your new designs match your brand's exact palette.</p>
           <p><strong>5. Accessible to Everyone</strong> Whether you're a professional designer or a beginner working on a personal project, the tool requires no special skills or software.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="accessibility" className="text-2xl font-bold mt-8">Color Contrast and Accessibility</h2>
+          <p>
+            Picking the right color code is only half the job — making sure text stays readable
+            against its background matters just as much, especially for accessibility compliance. The
+            Web Content Accessibility Guidelines (WCAG) specify a minimum contrast ratio of{' '}
+            <strong>4.5:1</strong> for normal body text and <strong>3:1</strong> for large text (18pt
+            or larger, or 14pt bold), measured between the exact HEX values of your text and
+            background colors.
+          </p>
+          <p>
+            A common mistake is choosing colors that look fine to a designer with excellent eyesight
+            on a bright monitor, but fail this ratio for users with low vision or anyone viewing the
+            page on a dim screen outdoors. Once you've picked your colors here, running the exact HEX
+            pair through a free WCAG contrast checker before finalizing a design catches this early,
+            rather than after a site is live.
+          </p>
+
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Building website color schemes</strong> by generating HEX codes for CSS stylesheets.</li>
@@ -97,7 +149,7 @@ export default function ColorPickerGuideForDesignersArticle() {
           <li><strong>Personal creative projects</strong>, such as digital art, home design mood boards, or social media graphics.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use <strong>HEX codes</strong> for web development and CSS, since they're the most widely supported format across browsers and platforms.</li>
@@ -108,7 +160,7 @@ export default function ColorPickerGuideForDesignersArticle() {
           <li>Save your frequently used brand colors in a separate document or style guide so you don't have to re-extract them every time.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a color picker used for?</h3>
           <p>A color picker allows you to select or extract colors and instantly retrieve their codes in formats like HEX, RGB, and HSL for use in design and development projects.</p>
           <h3 className="text-lg font-semibold mt-4">What's the difference between HEX, RGB, and HSL?</h3>
@@ -128,7 +180,11 @@ export default function ColorPickerGuideForDesignersArticle() {
           <h3 className="text-lg font-semibold mt-4">Is there a limit to how many colors I can pick?</h3>
           <p>No, you can use the Color Picker tool as many times as you need, completely free of charge.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool for accessibility testing?</h3>
-          <p>While the Color Picker itself focuses on identifying color codes, choosing colors with strong contrast using this tool supports better accessibility in your designs.</p>
+          <p>While the Color Picker itself focuses on identifying color codes, choosing colors with strong contrast using this tool supports better accessibility in your designs. Pair it with a dedicated WCAG contrast checker to verify your specific text/background pair meets the 4.5:1 or 3:1 ratio.</p>
+          <h3 className="text-lg font-semibold mt-4">What contrast ratio do I need for accessible text?</h3>
+          <p>WCAG guidelines require at least 4.5:1 for normal body text and 3:1 for large text (18pt+, or 14pt bold) to be considered accessible.</p>
+          <h3 className="text-lg font-semibold mt-4">Why does HSL make it easier to create color variations?</h3>
+          <p>Because HSL separates lightness and saturation from hue, you can create a lighter or darker version of the same color by adjusting just one number, rather than recalculating all three RGB channel values.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
