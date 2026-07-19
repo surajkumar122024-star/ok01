@@ -15,7 +15,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Security Tools</span>
           </div>
@@ -28,7 +28,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>📅 July 2026</span>
             <span>•</span>
-            <span>⏱ 7 min read</span>
+            <span>⏱ 8 min read</span>
             <span>•</span>
             <span>🏷 Security Tools</span>
           </div>
@@ -36,20 +36,42 @@ export default function StrongPasswordGeneratorGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a strong password generator?</a></li>
+            <li><a href="#math" className="hover:text-primary">The math behind password strength</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of using a password generator</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
-
           <p>Weak passwords remain one of the leading causes of account breaches and data theft. Despite years of warnings, many people still rely on predictable passwords like "123456," their pet's name, or a birthday — all of which can be cracked by attackers within seconds using automated tools.</p>
-          <p>A <strong>strong password generator</strong> solves this problem instantly by creating random, complex passwords that are virtually impossible to guess or crack through brute force. In this guide, we'll explain why password strength matters, how our free Password Generator tool works, and how to manage your passwords securely going forward.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is a Strong Password Generator?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Strong Password Generator?</h2>
 
           <p>A strong password generator is a tool that creates random, complex passwords by combining uppercase and lowercase letters, numbers, and special symbols in unpredictable sequences. Unlike passwords created by humans — which often follow predictable patterns based on memorable words or personal information — randomly generated passwords have no discernible pattern, making them far more resistant to hacking attempts like brute-force attacks or dictionary attacks.</p>
           <p>Using a generator removes the guesswork and human bias from password creation, ensuring every password meets modern security standards without requiring you to come up with something complex on your own.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="math" className="text-2xl font-bold mt-8">The Math Behind Password Strength</h2>
+          <p>
+            It's worth understanding briefly why length matters more than most complexity rules
+            suggest. Each additional character in a password multiplies the number of possible
+            combinations an attacker would need to try — an 8-character password using only lowercase
+            letters has about 209 billion possible combinations, while a 12-character password with
+            the same character set has over 90 quintillion. Adding a symbol requirement to that same
+            8-character password barely closes the gap. This is exactly why security guidance has
+            shifted toward "longer is better" rather than "more symbol types is better" in recent years.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Password Generator Tool</h3>
           <p>Go to the Password Generator tool page, where you'll see customizable options for creating your password.</p>
@@ -77,7 +99,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Password Generator</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Password Generator</h2>
 
           <p><strong>1. Creates Truly Random, Unpredictable Passwords</strong> Human-created passwords often follow subconscious patterns; a generator eliminates this weakness entirely by producing genuinely random combinations.</p>
           <p><strong>2. Saves Time</strong> Instead of brainstorming a complex password and second-guessing its strength, you get a secure result instantly.</p>
@@ -85,7 +107,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <p><strong>4. Encourages Better Password Habits</strong> Using a generator for every account naturally leads to unique passwords across your accounts — a critical security practice most people neglect.</p>
           <p><strong>5. Removes Guesswork</strong> You don't need to be a security expert to create a strong password; the tool handles the complexity for you automatically.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Creating passwords for new online accounts</strong>, such as email, banking, or social media.</li>
@@ -97,7 +119,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <li><strong>Meeting specific password policy requirements</strong> for corporate or institutional systems.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use a password length of at least 12-16 characters for strong protection against modern brute-force attacks.</li>
@@ -108,7 +130,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <li>Avoid using easily guessable personal information (birthdays, names, addresses) even when creating your master password for a password manager.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What makes a password "strong"?</h3>
           <p>A strong password is typically long (12+ characters), includes a mix of uppercase and lowercase letters, numbers, and symbols, and has no predictable pattern or personal information.</p>
           <h3 className="text-lg font-semibold mt-4">Is it safe to use an online password generator?</h3>
