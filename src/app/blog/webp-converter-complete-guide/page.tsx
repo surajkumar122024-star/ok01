@@ -15,7 +15,7 @@ export default function WebpConverterCompleteGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Image Tools</span>
           </div>
@@ -36,32 +36,40 @@ export default function WebpConverterCompleteGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is WebP and why was it created?</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of converting to WebP</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
-
           <p>If you've been paying attention to web performance best practices, you've probably heard of WebP — a modern image format developed by Google that delivers significantly smaller file sizes than traditional JPG or PNG, without a noticeable drop in visual quality. Since page speed directly affects both user experience and SEO rankings, converting your images to WebP is one of the easiest wins for a faster website.</p>
-          <p>In this guide, we'll explain what makes WebP different, why it matters for your website's performance, and walk through exactly how to use our free online WebP Converter tool.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is WebP and Why Was It Created?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is WebP and Why Was It Created?</h2>
 
           <p>WebP is a modern image format developed by Google, designed specifically to reduce file size while maintaining high visual quality — making it ideal for the web, where faster loading times directly impact user experience and search rankings. WebP supports both lossy and lossless compression, as well as transparency (like PNG) and animation (like GIF), making it a versatile all-in-one replacement for older image formats.</p>
           <p>Compared to traditional JPG and PNG files, WebP images are typically 25-35% smaller at a similar visual quality, which adds up to meaningful performance improvements across an entire website full of images.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the WebP Converter Tool</h3>
           <p>Go to the WebP Converter tool page, where you'll see an upload area ready for your image.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your Image</h3>
           <p>Click to browse your files or drag and drop the JPG, PNG, or other image file you want to convert.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 3: Adjust Quality Settings (If Available)</h3>
-          <p>Some converters let you fine-tune the compression level, balancing file size reduction against visual quality based on your specific needs.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 4: Convert the Image</h3>
+          <h3 className="text-xl font-semibold mt-6">Step 3: Convert the Image</h3>
           <p>Click the <strong>Convert</strong> button, and the tool processes your file into WebP format within seconds.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 5: Compare File Sizes</h3>
+          <h3 className="text-xl font-semibold mt-6">Step 4: Compare File Sizes</h3>
           <p>Check the before-and-after file size comparison to see how much space you've saved with the WebP conversion.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 6: Download Your WebP File</h3>
+          <h3 className="text-xl font-semibold mt-6">Step 5: Download Your WebP File</h3>
           <p>Click the <strong>Download</strong> button to save your newly converted WebP image, ready to upload to your website.</p>
 
           <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
@@ -69,7 +77,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Fast, one-click conversion</strong> from JPG, PNG, or other formats to WebP.</li>
           <li><strong>Significant file size reduction</strong> while maintaining strong visual quality.</li>
-          <li><strong>Batch conversion support</strong> (if available), for converting multiple images at once.</li>
+          <li><strong>Consistent 90% quality encoding</strong>, chosen because compression artifacts are rarely visible at that level while file size still drops significantly.</li>
           <li><strong>Transparency support</strong>, preserving transparent backgrounds during conversion.</li>
           <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Free with no watermarks</strong> added to your converted images.</li>
@@ -77,7 +85,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Converting Images to WebP</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Converting Images to WebP</h2>
 
           <p><strong>1. Faster Website Loading Times</strong> Smaller image file sizes mean your web pages load faster, directly improving user experience and reducing bounce rates.</p>
           <p><strong>2. Improved SEO Rankings</strong> Search engines, including Google, factor page speed into their ranking algorithms, making WebP conversion a practical SEO improvement.</p>
@@ -85,7 +93,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <p><strong>4. Maintains Visual Quality</strong> Despite the significant size reduction, WebP images typically look just as sharp and clear as their JPG or PNG counterparts.</p>
           <p><strong>5. Versatile Format Support</strong> WebP supports transparency and animation in a single format, reducing the need to juggle multiple image types for different use cases.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Optimizing website images</strong> to improve page load speed and overall site performance.</li>
@@ -97,7 +105,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <li><strong>Building faster-loading blog posts</strong> with optimized featured images and inline graphics.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Always test your WebP images across different browsers, though modern browser support for WebP is now extremely widespread.</li>
@@ -108,7 +116,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <li>For images with fine details or text, compare the converted WebP file closely against the original to ensure quality remains sharp at your chosen compression level.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is WebP and why should I use it?</h3>
           <p>WebP is a modern image format that offers significantly smaller file sizes than JPG or PNG while maintaining similar visual quality, making it ideal for improving website performance.</p>
           <h3 className="text-lg font-semibold mt-4">Do all browsers support WebP images?</h3>
@@ -123,8 +131,8 @@ export default function WebpConverterCompleteGuideArticle() {
           <p>Yes, WebP supports animation, often at a significantly smaller file size compared to traditional animated GIFs.</p>
           <h3 className="text-lg font-semibold mt-4">How much smaller are WebP files compared to JPG or PNG?</h3>
           <p>WebP images are typically 25-35% smaller than comparable JPG or PNG files at similar visual quality, though exact savings vary by image.</p>
-          <h3 className="text-lg font-semibold mt-4">Can I convert multiple images to WebP at once?</h3>
-          <p>Depending on the specific tool, batch conversion may be supported, allowing you to convert several images simultaneously.</p>
+          <h3 className="text-lg font-semibold mt-4">Can I adjust the WebP quality level?</h3>
+          <p>This tool uses a fixed 90% quality setting for consistent, reliable results — a level where compression artifacts are rarely visible while file size still drops meaningfully.</p>
           <h3 className="text-lg font-semibold mt-4">Does using WebP actually improve my website's SEO?</h3>
           <p>Yes, since page speed is a ranking factor for search engines, and WebP images load faster due to their smaller file size, this can contribute positively to SEO performance.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool on my phone?</h3>
