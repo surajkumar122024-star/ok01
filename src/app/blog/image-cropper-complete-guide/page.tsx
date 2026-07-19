@@ -15,7 +15,7 @@ export default function ImageCropperCompleteGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Image Tools</span>
           </div>
@@ -36,20 +36,48 @@ export default function ImageCropperCompleteGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is an image cropper?</a></li>
+            <li><a href="#composition" className="hover:text-primary">Composition basics: the rule of thirds</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to crop an image, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Not every photo you take or download is framed exactly the way you need it. Maybe there's
+            unwanted background in a profile picture, or you need a specific aspect ratio for a social
+            media post. That's where an image cropper becomes an essential everyday tool.
+          </p>
 
-          <p>Not every photo you take or download is framed exactly the way you need it. Maybe there's unwanted background in a profile picture, or you need a specific aspect ratio for a social media post. That's where an <strong>image cropper</strong> becomes an essential everyday tool.</p>
-          <p>Cropping lets you remove unwanted parts of an image and focus on exactly what matters — without needing complex photo editing software. In this guide, we'll walk through how to use our free online Image Cropper tool, explore its key features, and share practical tips for getting perfectly cropped images every time.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is an Image Cropper?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is an Image Cropper?</h2>
 
           <p>An image cropper is a tool that allows you to trim away unwanted areas of a photo, keeping only the portion you want to display. Instead of resizing or distorting the entire image, cropping selectively removes the edges, letting you change the composition, focus, or aspect ratio without affecting image quality in the retained area.</p>
           <p>Whether you're preparing a square profile picture, a widescreen banner, or simply removing a distracting background element, cropping gives you precise control over your image's final look.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="composition" className="text-2xl font-bold mt-8">Composition Basics: The Rule of Thirds</h2>
+          <p>
+            A quick composition principle worth knowing before you start dragging a crop box: the{' '}
+            <strong>rule of thirds</strong> suggests dividing an image into a 3×3 grid and placing your
+            subject along one of the grid lines or intersection points, rather than dead-center. This
+            simple shift tends to produce more visually interesting, professional-looking results than
+            a perfectly centered composition, especially for portraits, product shots, and landscape photos.
+          </p>
+          <p>
+            In practice, this means when you're positioning your crop box, try aligning a face, a key
+            product detail, or a horizon line with one of the imaginary grid lines about a third of the
+            way into the frame — rather than automatically centering everything.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Cropper Tool</h3>
           <p>Go to the Image Cropper tool page, where you'll find an upload area ready for your photo.</p>
@@ -85,7 +113,7 @@ export default function ImageCropperCompleteGuideArticle() {
           <p><strong>4. Maintains Image Quality</strong> Cropping doesn't compress or distort the retained portion of your image, so quality within the selected area stays intact.</p>
           <p><strong>5. No Design Experience Needed</strong> The intuitive drag-and-resize interface makes cropping accessible to everyone, regardless of technical skill.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Creating profile pictures</strong> with a perfect square (1:1) crop for social media platforms.</li>
@@ -97,7 +125,7 @@ export default function ImageCropperCompleteGuideArticle() {
           <li><strong>Creating thumbnail images</strong> for videos, articles, or online courses.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use a <strong>1:1 aspect ratio</strong> for most social media profile pictures, since platforms like Instagram, Facebook, and LinkedIn display profile photos as squares or circles.</li>
@@ -108,7 +136,7 @@ export default function ImageCropperCompleteGuideArticle() {
           <li>Combine cropping with resizing (using a dedicated resize tool) to ensure your final image meets both the aspect ratio and file size requirements of your target platform.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image cropper used for?</h3>
           <p>An image cropper allows you to remove unwanted parts of a photo, keeping only the selected portion, to improve composition or fit specific size requirements.</p>
           <h3 className="text-lg font-semibold mt-4">Does cropping reduce image quality?</h3>
