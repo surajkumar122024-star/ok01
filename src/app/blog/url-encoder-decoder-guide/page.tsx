@@ -15,7 +15,7 @@ export default function UrlEncoderDecoderGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Developer Tools</span>
           </div>
@@ -36,20 +36,48 @@ export default function UrlEncoderDecoderGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is URL encoding?</a></li>
+            <li><a href="#table" className="hover:text-primary">Common characters and their encoded form</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of using this tool</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
-
           <p>Have you ever seen a URL full of strange characters like <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>%20</code> or <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>%3D</code> and wondered what they mean? These are examples of URL encoding — a system that converts special characters into a format that can be safely transmitted across the internet. Without it, spaces, symbols, and non-ASCII characters could break URLs or cause unpredictable behavior.</p>
-          <p>A <strong>URL encoder decoder</strong> tool lets you instantly convert readable text into properly encoded URLs, or decode an encoded URL back into its original, human-readable form. In this guide, we'll explain how URL encoding works, why it matters, and how to use our free online URL Encoder Decoder tool.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is URL Encoding?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is URL Encoding?</h2>
 
           <p>URL encoding, also known as percent-encoding, is a method of converting characters into a format that can be safely transmitted over the internet as part of a URL. Certain characters — like spaces, ampersands (&amp;), question marks (?), and non-English characters — have special meanings within URL syntax or aren't universally supported, so they need to be represented differently.</p>
-          <p>For example, a space becomes <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>%20</code>, and an ampersand becomes <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>%26</code>. Decoding reverses this process, converting the percent-encoded characters back into their original, readable form. This system ensures that URLs remain functional and unambiguous, regardless of what characters or data they contain.</p>
+          <p>Decoding reverses this process, converting the percent-encoded characters back into their original, readable form. This system ensures that URLs remain functional and unambiguous, regardless of what characters or data they contain.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="table" className="text-2xl font-bold mt-8">Common Characters and Their Encoded Form</h2>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p>Space → %20</p>
+            <p>&amp; (ampersand) → %26</p>
+            <p>? (question mark) → %3F</p>
+            <p># (hash) → %23</p>
+            <p>= (equals) → %3D</p>
+            <p>/ (forward slash) → %2F</p>
+            <p>@ (at sign) → %40</p>
+          </div>
+          <p>
+            Each of these reserved characters already has a specific structural meaning within a URL —
+            & separates query parameters, ? starts the query string, # marks a page fragment — so
+            encoding a literal instance of one within a value prevents it from being misread as that
+            structural marker.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the URL Encoder Decoder Tool</h3>
           <p>Go to the URL Encoder Decoder tool page, where you'll see two clearly labeled modes: <strong>Encode</strong> and <strong>Decode</strong>.</p>
@@ -77,7 +105,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online URL Encoder Decoder</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online URL Encoder Decoder</h2>
 
           <p><strong>1. Prevents Broken Links</strong> Properly encoded URLs ensure special characters don't break links or cause unexpected behavior when shared or clicked.</p>
           <p><strong>2. Simplifies API Development</strong> Developers frequently need to encode query parameters when building API requests — this tool handles it instantly and accurately.</p>
@@ -85,7 +113,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <p><strong>4. Saves Development Time</strong> Instead of manually referencing encoding tables or writing custom code, you get accurate results in seconds.</p>
           <p><strong>5. Ensures Cross-Browser Compatibility</strong> Properly encoded URLs work consistently across different browsers and systems, avoiding compatibility issues caused by unencoded special characters.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Encoding query parameters</strong> for API requests that include spaces or special characters.</li>
@@ -97,7 +125,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <li><strong>Testing and validating URLs</strong> during web development and quality assurance processes.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Always encode user-generated input before appending it to a URL, especially if it might contain spaces, symbols, or special characters.</li>
@@ -108,7 +136,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <li>Use this tool alongside a JSON formatter when working with APIs that combine URL parameters and JSON request bodies.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is URL encoding used for?</h3>
           <p>URL encoding converts special characters, spaces, and symbols into a safe format that can be transmitted correctly across the internet as part of a URL.</p>
           <h3 className="text-lg font-semibold mt-4">Why do spaces become "%20" in URLs?</h3>
