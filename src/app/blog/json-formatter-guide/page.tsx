@@ -15,7 +15,7 @@ export default function JsonFormatterGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Developer Tools</span>
           </div>
@@ -36,20 +36,54 @@ export default function JsonFormatterGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is JSON and why formatting matters</a></li>
+            <li><a href="#strict-rules" className="hover:text-primary">JSON's strict syntax rules, explained</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            If you work with APIs, web development, or any modern software system, you've almost
+            certainly encountered JSON (JavaScript Object Notation). It's the standard format for
+            exchanging data between servers and applications — but raw JSON, especially minified or
+            deeply nested data, can be nearly impossible to read at a glance.
+          </p>
 
-          <p>If you work with APIs, web development, or any modern software system, you've almost certainly encountered JSON (JavaScript Object Notation). It's the standard format for exchanging data between servers and applications — but raw JSON, especially minified or nested data, can be nearly impossible to read at a glance.</p>
-          <p>That's where a <strong>JSON formatter</strong> becomes an essential part of a developer's toolkit. It takes messy, compressed, or poorly structured JSON and transforms it into a clean, readable, properly indented format — while also checking for syntax errors along the way. In this guide, we'll walk through exactly how to use our free online JSON Formatter tool.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is JSON and Why Formatting Matters</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is JSON and Why Formatting Matters</h2>
 
           <p>JSON is a lightweight, text-based data format used to structure and exchange information between systems — commonly seen in API responses, configuration files, and application data storage. It's built from simple key-value pairs, arrays, and nested objects, which makes it flexible but also easy to misread when it's not properly formatted.</p>
           <p>When JSON is minified (compressed into a single line to save space) or comes from an API response without indentation, it becomes extremely difficult to visually parse, debug, or edit manually. A JSON formatter fixes this by adding proper indentation, line breaks, and color-coded syntax, making the data structure immediately clear.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="strict-rules" className="text-2xl font-bold mt-8">JSON's Strict Syntax Rules, Explained</h2>
+          <p>
+            JSON looks almost identical to a JavaScript object, which is exactly why it trips people
+            up — JSON is actually much stricter. Here are the specific rules that cause most validation
+            errors:
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 text-sm font-mono">
+            <p className="text-red-500">❌ {`{name: "Alex"}`} — keys must be double-quoted</p>
+            <p className="text-green-600">✅ {`{"name": "Alex"}`}</p>
+            <p className="text-red-500">❌ {`{'name': 'Alex'}`} — single quotes aren't valid JSON</p>
+            <p className="text-green-600">✅ {`{"name": "Alex"}`}</p>
+            <p className="text-red-500">❌ {`{"a": 1, "b": 2,}`} — trailing commas aren't allowed</p>
+            <p className="text-green-600">✅ {`{"a": 1, "b": 2}`}</p>
+          </div>
+          <p>
+            These rules exist to make JSON unambiguous for machines to parse quickly and consistently
+            — a small trade-off in flexibility for reliability across every system that reads it.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the JSON Formatter Tool</h3>
           <p>Navigate to the JSON Formatter tool page, where you'll see a text input area ready for your JSON data.</p>
@@ -71,7 +105,7 @@ export default function JsonFormatterGuideArticle() {
           <li><strong>Real-time syntax validation</strong>, flagging errors as you format.</li>
           <li><strong>Error location highlighting</strong>, showing exactly where issues occur.</li>
           <li><strong>Minify option</strong>, letting you compress JSON back into a single line when needed.</li>
-          <li><strong>Collapsible tree view</strong> (in many formatters) for easily navigating deeply nested objects.</li>
+          <li><strong>Adjustable indentation</strong> — choose between 2, 4, or 8 spaces to match your project's style guide.</li>
           <li><strong>Copy-to-clipboard functionality</strong> for quick integration into your workflow.</li>
           <li><strong>No installation required</strong> — works entirely in your browser.</li>
           <li><strong>Free and unlimited use</strong> with no sign-up needed.</li>
@@ -85,7 +119,7 @@ export default function JsonFormatterGuideArticle() {
           <p><strong>4. Saves Development Time</strong> Manually indenting or troubleshooting JSON by hand is slow and error-prone; a formatter handles it instantly and accurately.</p>
           <p><strong>5. Works Across Any Project</strong> Since JSON is used everywhere from web APIs to mobile apps to configuration files, this tool is useful across virtually every kind of software project.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Debugging API responses</strong> that come back minified or poorly structured.</li>
@@ -97,7 +131,7 @@ export default function JsonFormatterGuideArticle() {
           <li><strong>Comparing two JSON objects</strong> by formatting both consistently before reviewing differences.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Always validate JSON data received from external APIs before using it in your application, since malformed data can cause unexpected errors.</li>
@@ -108,7 +142,7 @@ export default function JsonFormatterGuideArticle() {
           <li>Use consistent formatting practices across your team to make JSON files easier to read and review during collaborative development.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a JSON formatter used for?</h3>
           <p>A JSON formatter takes raw or minified JSON data and restructures it with proper indentation and line breaks, making it easier to read, debug, and validate.</p>
           <h3 className="text-lg font-semibold mt-4">Does the tool check for JSON syntax errors?</h3>
