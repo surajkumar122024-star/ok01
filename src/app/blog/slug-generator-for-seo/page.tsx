@@ -15,7 +15,7 @@ export default function SlugGeneratorForSeoArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>SEO Tools</span>
           </div>
@@ -36,20 +36,44 @@ export default function SlugGeneratorForSeoArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a URL slug?</a></li>
+            <li><a href="#example" className="hover:text-primary">A real before/after example</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of using a slug generator</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
-
           <p>The URL of your webpage is more than just an address — it's one of the first things both search engines and users see. A clean, readable URL like <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>/blog/how-to-bake-bread</code> communicates far more than a messy one like <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>/blog/post?id=48291&amp;cat=3</code>. Yet manually creating well-formatted, SEO-friendly URLs for every piece of content can be tedious and easy to get wrong.</p>
-          <p>A <strong>slug generator</strong> solves this instantly, converting any title or phrase into a clean, properly formatted URL slug — ready to use on your website, blog, or e-commerce platform. In this guide, we'll explain what makes a good slug, how our free Slug Generator tool works, and how to use it to improve your site's SEO.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is a URL Slug?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a URL Slug?</h2>
 
           <p>A URL slug is the part of a web address that comes after the domain name and identifies a specific page in a readable, human-friendly way. For example, in the URL <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>www.example.com/blog/best-coffee-shops-in-tokyo</code>, the slug is <code className='px-1.5 py-0.5 bg-muted rounded text-sm'>best-coffee-shops-in-tokyo</code>.</p>
           <p>Good slugs are typically lowercase, use hyphens instead of spaces, avoid special characters, and clearly reflect the page's content — making them easier for both users and search engines to understand at a glance.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="example" className="text-2xl font-bold mt-8">A Real Before/After Example</h2>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p className="text-red-500">❌ Before: "10 Best Places to Visit in 2026!! (Updated Guide)"</p>
+            <p className="text-muted-foreground">→ /blog/10-best-places-to-visit-in-2026-updated-guide</p>
+            <p className="text-green-600">✅ After (trimmed): 10-best-places-to-visit-2026</p>
+          </div>
+          <p>
+            Notice the cleaned-up version drops the redundant "Updated Guide" and exclamation points —
+            the generator handles the mechanical formatting (lowercase, hyphens, special character
+            removal) automatically, but a quick manual trim afterward often produces an even tighter,
+            more scannable final slug.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Slug Generator Tool</h3>
           <p>Go to the Slug Generator tool page, where you'll find a text input box ready for your title or phrase.</p>
@@ -77,7 +101,7 @@ export default function SlugGeneratorForSeoArticle() {
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Slug Generator</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Slug Generator</h2>
 
           <p><strong>1. Improves SEO Performance</strong> Clean, keyword-relevant slugs help search engines better understand your page's content, which can positively influence rankings.</p>
           <p><strong>2. Enhances User Experience</strong> Readable URLs help visitors understand what a page is about before they even click, building trust and improving click-through rates.</p>
@@ -85,7 +109,7 @@ export default function SlugGeneratorForSeoArticle() {
           <p><strong>4. Reduces Errors</strong> Manual slug creation can introduce inconsistencies, like accidental capital letters or stray symbols; a generator ensures consistent formatting every time.</p>
           <p><strong>5. Supports Better Site Organization</strong> Consistently formatted slugs make your website's URL structure more organized and professional, both for visitors and internal navigation.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Creating blog post URLs</strong> that are clean, readable, and optimized for search engines.</li>
@@ -97,7 +121,7 @@ export default function SlugGeneratorForSeoArticle() {
           <li><strong>Preparing URLs for landing pages</strong> used in marketing campaigns.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Keep your slugs short and focused — ideally under 5-6 words — while still clearly representing the page's main topic.</li>
@@ -108,7 +132,7 @@ export default function SlugGeneratorForSeoArticle() {
           <li>Avoid including dates, numbers, or category names in your slug unless they're essential to the content, since it makes future updates and evergreen content management easier.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a URL slug?</h3>
           <p>A URL slug is the readable part of a web address that identifies a specific page, typically formatted in lowercase with hyphens separating words.</p>
           <h3 className="text-lg font-semibold mt-4">Why are slugs important for SEO?</h3>
