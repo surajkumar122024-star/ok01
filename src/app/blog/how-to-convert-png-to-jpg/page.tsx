@@ -36,19 +36,35 @@ export default function PngToJpgArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#difference" className="hover:text-primary">PNG vs JPG — what's the difference?</a></li>
+            <li><a href="#why" className="hover:text-primary">Why convert PNG to JPG?</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to convert, step by step</a></li>
+            <li><a href="#when-not" className="hover:text-primary">When should you NOT convert?</a></li>
+            <li><a href="#savings" className="hover:text-primary">How much file size can you save?</a></li>
+            <li><a href="#quality-ref" className="hover:text-primary">JPG quality reference by use case</a></li>
+            <li><a href="#privacy" className="hover:text-primary">Is this safe to do online?</a></li>
+            <li><a href="#mistakes" className="hover:text-primary">Common conversion mistakes</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            PNG files are great for sharp graphics, logos, and images that require transparency — but they can be massive in size. If you need to share photos on social media, upload product images to an e-commerce store, or reduce storage usage, converting PNG to JPG is the fastest and most effective solution. In this guide, we show you exactly how to convert PNG to JPG online for free, without installing any software.
+            PNG files are great for sharp graphics, logos, and images that require transparency — but they can be massive in size. If you need to share photos on social media, upload product images to an e-commerce store, or reduce storage usage, converting PNG to JPG is the fastest and most effective solution.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is the Difference Between PNG and JPG?</h2>
+          <h2 id="difference" className="text-2xl font-bold mt-8">What Is the Difference Between PNG and JPG?</h2>
           <p>
             PNG (Portable Network Graphics) and JPG (Joint Photographic Experts Group) are the two most commonly used image formats on the web. PNG uses lossless compression, which means no image data is lost during compression — but the resulting file sizes are much larger. JPG uses lossy compression, which removes some image data to achieve dramatically smaller file sizes. For photographs and images without transparency, JPG is almost always the better choice because it offers an excellent balance between quality and file size.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8">Why Convert PNG to JPG?</h2>
+          <h2 id="why" className="text-2xl font-bold mt-8">Why Convert PNG to JPG?</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Smaller file sizes:</strong> JPG files are typically 50 to 80 percent smaller than equivalent PNG files, making them much easier to share, upload, and store.</li>
             <li><strong>Faster website loading:</strong> Smaller images load faster, which improves your website's performance and Google PageSpeed score.</li>
@@ -57,22 +73,27 @@ export default function PngToJpgArticle() {
             <li><strong>Storage savings:</strong> Converting a folder full of PNG screenshots or photos to JPG can save gigabytes of storage space.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">How to Convert PNG to JPG Online for Free</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Convert PNG to JPG Online for Free</h2>
           <p>
             OpticShift Pro makes PNG to JPG conversion incredibly simple. Here is how to do it:
           </p>
           <ol className="list-decimal pl-6 space-y-2">
             <li>Open the <strong>PNG to JPG</strong> converter tool on OpticShift Pro.</li>
             <li>Upload your PNG image by clicking the upload area or dragging and dropping the file.</li>
-            <li>The tool will instantly convert your PNG to a high-quality JPG file.</li>
-            <li>Preview the result and adjust quality settings if needed.</li>
+            <li>The tool automatically converts your PNG to a JPG at 92% quality — a level chosen because it's high enough that compression artifacts are rarely visible, while still delivering a meaningfully smaller file.</li>
             <li>Click Download to save your converted JPG file.</li>
           </ol>
+          <p>
+            If you need a smaller file than the default 92% quality produces, run the downloaded JPG
+            through the{' '}
+            <Link href="/tools/compressor" className="text-primary underline underline-offset-2">Image Compressor</Link>{' '}
+            afterward, which does offer an adjustable quality slider for exactly that purpose.
+          </p>
           <p>
             The entire conversion happens locally in your browser. Your images are never sent to any server, ensuring complete privacy and security.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8">When Should You NOT Convert PNG to JPG?</h2>
+          <h2 id="when-not" className="text-2xl font-bold mt-8">When Should You NOT Convert PNG to JPG?</h2>
           <p>
             While JPG is great for photographs, there are situations where you should keep your image in PNG format:
           </p>
@@ -83,7 +104,7 @@ export default function PngToJpgArticle() {
             <li><strong>Images that will be re-edited:</strong> If you plan to edit the image again, keep it in PNG to avoid quality loss from repeated JPG compression.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">How Much File Size Can You Save?</h2>
+          <h2 id="savings" className="text-2xl font-bold mt-8">How Much File Size Can You Save?</h2>
           <p>
             The file size reduction when converting from PNG to JPG depends on the image content, but here are typical results:
           </p>
@@ -93,7 +114,15 @@ export default function PngToJpgArticle() {
             <li>Large PNG graphics can see reductions of 60 to 80 percent</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Best JPG Quality Settings</h2>
+          <h2 id="quality-ref" className="text-2xl font-bold mt-8">JPG Quality Reference by Use Case</h2>
+          <p>
+            OpticShift Pro's PNG to JPG converter uses a fixed 92% quality by default — a level that
+            works well for nearly every situation without requiring a decision. If you specifically
+            need a different quality level for a particular use case, here's a reference for what to
+            target using the{' '}
+            <Link href="/tools/compressor" className="text-primary underline underline-offset-2">Image Compressor</Link>{' '}
+            as a follow-up step:
+          </p>
 
           <div className="overflow-x-auto">
             <table className="w-full border border-border rounded-lg">
@@ -124,12 +153,12 @@ export default function PngToJpgArticle() {
             </table>
           </div>
 
-          <h2 className="text-2xl font-bold mt-8">Is PNG to JPG Conversion Safe Online?</h2>
+          <h2 id="privacy" className="text-2xl font-bold mt-8">Is PNG to JPG Conversion Safe Online?</h2>
           <p>
             Privacy is a valid concern when using online converters. Many tools upload your files to remote servers where they may be stored or processed by third parties. OpticShift Pro is different — all conversion happens entirely inside your browser using JavaScript. Your images never leave your device, which means your personal and professional images remain 100% private.
           </p>
 
-          <h2 className="text-2xl font-bold mt-8">Common PNG to JPG Conversion Mistakes</h2>
+          <h2 id="mistakes" className="text-2xl font-bold mt-8">Common PNG to JPG Conversion Mistakes</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Converting logos or icons with transparency — the transparent areas become solid white or black.</li>
             <li>Setting quality too low — below 70% can cause visible artifacts, especially around edges.</li>
@@ -138,7 +167,7 @@ export default function PngToJpgArticle() {
             <li>Forgetting to keep the original PNG as a backup before converting.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
 
           <h3 className="font-semibold mt-6">Does converting PNG to JPG reduce quality?</h3>
           <p>
@@ -158,6 +187,16 @@ export default function PngToJpgArticle() {
           <h3 className="font-semibold mt-6">Is the converter free to use?</h3>
           <p>
             Yes, the PNG to JPG converter on OpticShift Pro is completely free with no file size limits and no account required.
+          </p>
+
+          <h3 className="font-semibold mt-6">Can I get a different quality level than 92%?</h3>
+          <p>
+            This converter uses a fixed 92% quality for consistent, reliable results. If you need a smaller file at a lower quality, run the downloaded JPG through the Image Compressor tool, which has an adjustable quality slider.
+          </p>
+
+          <h3 className="font-semibold mt-6">Will my file name change after conversion?</h3>
+          <p>
+            The converted file keeps the same base name as your original PNG, with the extension changed to .jpg.
           </p>
 
           {/* About the Author */}
