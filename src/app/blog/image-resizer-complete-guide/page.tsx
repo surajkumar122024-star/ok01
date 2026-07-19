@@ -15,7 +15,7 @@ export default function ImageResizerCompleteGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Image Tools</span>
           </div>
@@ -36,27 +36,57 @@ export default function ImageResizerCompleteGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is an image resizer?</a></li>
+            <li><a href="#downscale-upscale" className="hover:text-primary">Downscaling vs. upscaling — why they behave differently</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to resize an image, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Every platform seems to have its own ideal image dimensions — a profile picture that's too
+            large for one site, a product photo that's too small for another, or a banner that needs an
+            exact pixel width to display correctly. Manually resizing images in complex software can be
+            time-consuming, especially if you're not a design professional.
+          </p>
 
-          <p>Every platform seems to have its own ideal image dimensions — a profile picture that's too large for one site, a product photo that's too small for another, or a banner that needs an exact pixel width to display correctly. Manually resizing images in complex software can be time-consuming, especially if you're not a design professional.</p>
-          <p>An online <strong>image resizer</strong> solves this instantly, letting you adjust an image's dimensions precisely while maintaining its visual quality. In this guide, we'll walk through exactly how to use our free Image Resizer tool, along with tips for choosing the right dimensions for any platform or purpose.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is an Image Resizer?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is an Image Resizer?</h2>
 
           <p>An image resizer is a tool that changes an image's width and height, either to specific pixel dimensions or by a percentage scale, while working to preserve as much visual quality as possible. Unlike cropping, which removes parts of an image, resizing scales the entire image up or down, keeping the full composition intact but adjusting its overall size.</p>
           <p>This is essential for meeting the specific dimension requirements of different platforms — websites, social media, email, printing services — each of which often has unique size guidelines for optimal display.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="downscale-upscale" className="text-2xl font-bold mt-8">Downscaling vs. Upscaling — Why They Behave Differently</h2>
+          <p>
+            Making an image smaller and making it bigger aren't mirror-image operations, even though
+            they use the same width/height input. Shrinking a 4000-pixel-wide photo down to 800 pixels
+            simply removes information the smaller size doesn't need — the algorithm has more source
+            detail than it needs to work with, so the result stays sharp.
+          </p>
+          <p>
+            Enlarging an 800-pixel photo up to 4000 pixels is a fundamentally harder problem: the
+            algorithm has to invent pixel values that were never actually captured by the camera, since
+            that detail simply doesn't exist in the original file. This is why heavily enlarged images
+            consistently look soft or blurry no matter which resizing tool is used — it's a mathematical
+            limitation, not a quality issue specific to any one tool.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Resizer Tool</h3>
           <p>Go to the Image Resizer tool page, where you'll find an upload area ready for your photo.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your Image</h3>
           <p>Click to browse your files or drag and drop the image you want to resize.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Enter Your Desired Dimensions</h3>
-          <p>Input your target width and height in pixels, or use a percentage scale if you want to proportionally shrink or enlarge the image.</p>
+          <p>Input your target width and height in pixels directly — the tool detects your image's original dimensions automatically when you upload it.</p>
           <h3 className="text-xl font-semibold mt-6">Step 4: Maintain Aspect Ratio (Recommended)</h3>
           <p>Enable the "lock aspect ratio" option if available, to prevent your image from appearing stretched or distorted when resized.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Resize the Image</h3>
@@ -68,9 +98,8 @@ export default function ImageResizerCompleteGuideArticle() {
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Precise pixel dimension input</strong> for exact size control.</li>
-          <li><strong>Percentage-based scaling</strong> for quick proportional resizing.</li>
           <li><strong>Aspect ratio lock</strong> to prevent image distortion.</li>
-          <li><strong>Preset size options</strong> for common platforms like social media profile pictures or banners.</li>
+          <li><strong>Automatic dimension detection</strong>, showing your image's original width and height the moment you upload it.</li>
           <li><strong>High-quality resizing algorithm</strong> that minimizes quality loss.</li>
           <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added.</li>
@@ -85,7 +114,7 @@ export default function ImageResizerCompleteGuideArticle() {
           <p><strong>4. Saves Time Compared to Manual Editing</strong> Instead of opening complex photo editing software, you can resize an image accurately in just a few clicks.</p>
           <p><strong>5. Improves User Experience</strong> Correctly sized images load faster and display properly across devices, contributing to a smoother overall experience for website visitors.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Resizing profile pictures</strong> to meet the exact specifications of social media platforms.</li>
@@ -97,7 +126,7 @@ export default function ImageResizerCompleteGuideArticle() {
           <li><strong>Creating thumbnail images</strong> for videos, blog posts, or online course content.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Always enable the "lock aspect ratio" option when resizing to avoid stretching or distorting your image.</li>
@@ -108,7 +137,7 @@ export default function ImageResizerCompleteGuideArticle() {
           <li>Keep your original, unresized image as a backup in case you need different dimensions for another platform later.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image resizer used for?</h3>
           <p>An image resizer changes an image's width and height to specific dimensions or a percentage scale, helping it meet the requirements of different platforms and use cases.</p>
           <h3 className="text-lg font-semibold mt-4">Does resizing an image reduce its quality?</h3>
@@ -118,7 +147,7 @@ export default function ImageResizerCompleteGuideArticle() {
           <h3 className="text-lg font-semibold mt-4">Is this Image Resizer tool free to use?</h3>
           <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">What image formats does the resizer support?</h3>
-          <p>The tool typically supports common formats like JPG, PNG, and WebP for both upload and download.</p>
+          <p>You can upload JPG, PNG, or WebP images, but the resized output is generated as a JPG regardless of the input format. If your original PNG had transparency, keep that in mind since JPG doesn't support transparent backgrounds.</p>
           <h3 className="text-lg font-semibold mt-4">Can I resize multiple images at once?</h3>
           <p>Most resizing tools are optimized for adjusting one image at a time to ensure precise, individual control over each photo's final dimensions.</p>
           <h3 className="text-lg font-semibold mt-4">What happens if I don't lock the aspect ratio?</h3>
