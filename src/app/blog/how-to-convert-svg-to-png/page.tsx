@@ -36,27 +36,58 @@ export default function HowToConvertSvgToPngArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#difference" className="hover:text-primary">What's the difference between SVG and PNG?</a></li>
+            <li><a href="#choosing-size" className="hover:text-primary">Choosing the right output size</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to convert, step by step</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            SVG (Scalable Vector Graphics) is a fantastic format for logos, icons, and illustrations
+            because it scales infinitely without losing quality. But not every platform, tool, or use
+            case supports SVG files — many social media platforms, older software programs, and
+            general image viewers require raster formats like PNG instead.
+          </p>
 
-          <p>SVG (Scalable Vector Graphics) is a fantastic format for logos, icons, and illustrations because it scales infinitely without losing quality. But not every platform, tool, or use case supports SVG files — many social media platforms, older software programs, and general image viewers require raster formats like PNG instead.</p>
-          <p>Converting SVG to PNG bridges this gap, letting you use your vector graphics anywhere a standard image format is required. In this guide, we'll explain the key differences between these formats and walk through exactly how to use our free online SVG to PNG Converter.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What's the Difference Between SVG and PNG?</h2>
+          <h2 id="difference" className="text-2xl font-bold mt-8">What's the Difference Between SVG and PNG?</h2>
 
           <p>SVG is a vector image format, meaning it's built from mathematical paths and shapes rather than individual pixels. This allows SVG images to scale to any size — from a tiny icon to a massive billboard — without losing sharpness or clarity. SVGs are commonly used for logos, icons, and illustrations, especially in web design.</p>
           <p>PNG, on the other hand, is a raster (pixel-based) format. It's made up of a fixed grid of pixels, which means it has a set resolution and can lose quality if scaled up significantly. However, PNG is far more universally supported across platforms, applications, and devices, making it the go-to choice when broad compatibility matters more than infinite scalability.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="choosing-size" className="text-2xl font-bold mt-8">Choosing the Right Output Size</h2>
+          <p>
+            Since a PNG's quality is fixed at export time — unlike the SVG it came from — picking the
+            right dimensions upfront matters more than it seems. A useful habit: think about the
+            <em> largest</em> size you might eventually need this graphic at, and export at that size
+            or slightly larger, rather than the smallest size that looks fine today. You can always
+            scale a PNG down cleanly later; scaling one up after the fact makes it look soft, since no
+            new detail can be invented.
+          </p>
+          <div className="glass rounded-xl border p-6 space-y-2 text-sm">
+            <p><strong>Favicon:</strong> 32×32 or 64×64 pixels</p>
+            <p><strong>App icon:</strong> 512×512 or 1024×1024 pixels</p>
+            <p><strong>Website logo (header):</strong> 300-600 pixels wide, depending on display size</p>
+            <p><strong>Print materials:</strong> export significantly larger than the on-screen size to preserve sharpness</p>
+          </div>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the SVG to PNG Converter</h3>
           <p>Go to the SVG to PNG Converter tool page, where you'll see an upload area ready for your file.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your SVG File</h3>
           <p>Click to browse your files or drag and drop your SVG graphic directly into the tool.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 3: Set Your Desired Output Size (If Available)</h3>
-          <p>Since SVGs are infinitely scalable, choose the pixel dimensions you want for your PNG output — larger sizes work well for print or high-resolution displays, while smaller sizes suit web icons.</p>
+          <h3 className="text-xl font-semibold mt-6">Step 3: Set Your Desired Output Size</h3>
+          <p>Since SVGs are infinitely scalable, enter the exact width and height you want for your PNG output — you can scale up to 8x the original size. Larger dimensions work well for print or high-resolution displays, while smaller sizes suit web icons.</p>
           <h3 className="text-xl font-semibold mt-6">Step 4: Convert the File</h3>
           <p>Click the <strong>Convert</strong> button, and the tool processes your SVG into a PNG file within seconds.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Preview the Converted Image</h3>
@@ -73,7 +104,7 @@ export default function HowToConvertSvgToPngArticle() {
           <li><strong>High-quality rendering</strong>, ensuring sharp, clean results at your chosen resolution.</li>
           <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Free with no watermarks</strong> added to your converted images.</li>
-          <li><strong>Batch conversion support</strong> (if available), for converting multiple SVGs at once.</li>
+          <li><strong>Scale up to 8x</strong> the original SVG dimensions, with full control over custom width and height.</li>
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
@@ -85,7 +116,7 @@ export default function HowToConvertSvgToPngArticle() {
           <p><strong>4. Preserves Transparency</strong> Unlike JPG, PNG supports transparent backgrounds, making it a great choice for logos and icons that need to sit cleanly over different background colors.</p>
           <p><strong>5. Provides a Fixed, Predictable File</strong> Since PNG has a set resolution, you always know exactly how your image will look and display, without any dependency on rendering software for vector graphics.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Sharing logos on social media platforms</strong> that don't support direct SVG uploads.</li>
@@ -97,7 +128,7 @@ export default function HowToConvertSvgToPngArticle() {
           <li><strong>Uploading images to platforms</strong> with strict file format requirements limited to JPG or PNG.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Choose a higher output resolution when converting SVGs intended for print or large displays, since PNG quality depends on the pixel dimensions you select at conversion time.</li>
@@ -108,7 +139,7 @@ export default function HowToConvertSvgToPngArticle() {
           <li>Use PNG (not JPG) when transparency is important, since JPG doesn't support transparent backgrounds.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What's the main difference between SVG and PNG?</h3>
           <p>SVG is a vector format that scales infinitely without losing quality, while PNG is a raster format with a fixed resolution, offering broader compatibility across platforms.</p>
           <h3 className="text-lg font-semibold mt-4">Why would I need to convert SVG to PNG?</h3>
@@ -122,7 +153,7 @@ export default function HowToConvertSvgToPngArticle() {
           <h3 className="text-lg font-semibold mt-4">Can I choose the exact size of my PNG output?</h3>
           <p>Yes, since SVGs are infinitely scalable, our tool lets you specify your desired pixel dimensions before converting to PNG.</p>
           <h3 className="text-lg font-semibold mt-4">Can I convert multiple SVG files at once?</h3>
-          <p>Depending on the specific tool, batch conversion may be supported, allowing you to convert several SVG files simultaneously.</p>
+          <p>This tool converts one SVG at a time, which keeps the size preview and output accurate for each individual file — for several files, repeat the process for each one.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool on my phone?</h3>
           <p>Yes, the SVG to PNG Converter is fully responsive and works smoothly on smartphones and tablets.</p>
           <h3 className="text-lg font-semibold mt-4">Will my SVG's colors and details convert accurately?</h3>
