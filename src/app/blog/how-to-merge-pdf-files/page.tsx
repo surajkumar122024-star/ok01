@@ -36,20 +36,44 @@ export default function HowToMergePdfFilesArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What does it mean to merge PDF files?</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to merge, step by step</a></li>
+            <li><a href="#organizing" className="hover:text-primary">Organizing files before you start</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            Whether you're combining multiple reports into a single document, assembling a portfolio,
+            or putting together scanned pages into one file, merging PDFs is one of the most common
+            document tasks people face. Doing this manually — or hunting for the right setting in
+            complex desktop software — can be more frustrating than the task itself warrants.
+          </p>
 
-          <p>Whether you're combining multiple reports into a single document, assembling a portfolio, or putting together scanned pages into one file, merging PDFs is one of the most common document tasks people face. Doing this manually — or trying to find the right settings in complex software — can be more frustrating than it needs to be.</p>
-          <p>An online <strong>PDF merge</strong> tool solves this instantly, letting you combine multiple PDF files into a single, organized document in just a few clicks. In this guide, we'll walk through exactly how to use our free PDF Merge tool, along with tips to make your combined documents as clean and professional as possible.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Does It Mean to Merge PDF Files?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Does It Mean to Merge PDF Files?</h2>
 
           <p>Merging PDF files means combining two or more separate PDF documents into a single, unified file, while preserving the formatting, images, and layout of each original page. Instead of sending someone five separate attachments, you can send one clean, organized document containing all the same content in a logical order.</p>
           <p>This is especially useful for professional documents like reports, contracts, portfolios, and academic submissions, where a single cohesive file is far more practical than multiple disconnected attachments.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="organizing" className="text-2xl font-bold mt-8">Organizing Files Before You Start</h2>
+          <p>
+            A small habit saves real time here: rename your source files with a number prefix matching
+            your intended final order — <code>01-cover.pdf</code>, <code>02-resume.pdf</code>,{' '}
+            <code>03-references.pdf</code> — before uploading. Arranging files by memory or original,
+            unrelated filenames is where most merge mistakes happen, especially with five or more
+            documents where it's easy to lose track of the intended sequence partway through.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Merge Tool</h3>
           <p>Go to the PDF Merge tool page, where you'll see an upload area ready to accept multiple files.</p>
@@ -85,7 +109,7 @@ export default function HowToMergePdfFilesArticle() {
           <p><strong>4. Preserves Original Quality</strong> Unlike some conversion processes, merging PDFs doesn't compress or degrade the quality of the original pages.</p>
           <p><strong>5. Works Without Specialized Software</strong> You don't need Adobe Acrobat or any other paid software — the entire process happens online, for free.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Combining multiple scanned pages</strong> into a single, organized document.</li>
@@ -97,7 +121,7 @@ export default function HowToMergePdfFilesArticle() {
           <li><strong>Building a design or photography portfolio</strong> by merging individual project PDFs into one presentation-ready file.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Arrange your files in the correct order before uploading, or use the tool's reordering feature immediately after upload to avoid confusion later.</li>
@@ -108,7 +132,7 @@ export default function HowToMergePdfFilesArticle() {
           <li>Keep your original individual PDF files as backups in case you need to make adjustments or re-merge with different files later.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What does it mean to merge PDF files?</h3>
           <p>Merging PDF files means combining two or more separate PDF documents into a single, unified file while preserving the original formatting and content of each page.</p>
           <h3 className="text-lg font-semibold mt-4">How many PDF files can I merge at once?</h3>
@@ -120,7 +144,7 @@ export default function HowToMergePdfFilesArticle() {
           <h3 className="text-lg font-semibold mt-4">Is this PDF Merge tool free to use?</h3>
           <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">Are password-protected PDFs supported for merging?</h3>
-          <p>Password-protected files may need to be unlocked first before merging, depending on the specific tool's capabilities.</p>
+          <p>Password-protected PDFs generally need to be unlocked first before their content can be read and merged, since the encryption prevents the tool from accessing the page data directly.</p>
           <h3 className="text-lg font-semibold mt-4">Can I merge PDFs on my phone?</h3>
           <p>Yes, the tool is fully responsive and works smoothly on smartphones and tablets through your mobile browser.</p>
           <h3 className="text-lg font-semibold mt-4">Is my document safe when I use an online PDF merge tool?</h3>
@@ -138,9 +162,9 @@ export default function HowToMergePdfFilesArticle() {
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><Link href="/tools/pdf-split" className="text-primary hover:underline">PDF Split</Link> — separate a single PDF into multiple individual files.</li>
-            <li><Link href="/tools/json-formatter" className="text-primary hover:underline">JSON Formatter</Link> — format and validate data for your documentation projects.</li>
-            <li><Link href="/tools/word-counter" className="text-primary hover:underline">Word Counter</Link> — check text length before finalizing your combined document.</li>
-            <li><Link href="/tools/slug-generator" className="text-primary hover:underline">Slug Generator</Link> — create clean URLs for sharing your documents online.</li>
+            <li><Link href="/tools/image-to-pdf" className="text-primary hover:underline">Image to PDF</Link> — convert photos or scans into PDF pages before merging.</li>
+            <li><Link href="/tools/pdf-to-image" className="text-primary hover:underline">PDF to Image</Link> — extract a page from your merged document as an image.</li>
+            <li><Link href="/tools/compressor" className="text-primary hover:underline">Image Compressor</Link> — shrink source images before converting them to PDF pages.</li>
           </ul>
 
           {/* CTA */}
