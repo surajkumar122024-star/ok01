@@ -36,20 +36,53 @@ export default function HowToRotateImagesOnlineArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#why" className="hover:text-primary">What is image rotation and why does it happen?</a></li>
+            <li><a href="#exif" className="hover:text-primary">The EXIF metadata problem, explained</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to rotate an image, step by step</a></li>
+            <li><a href="#rotate-vs-flip" className="hover:text-primary">Rotate vs. flip — when to use each</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
+          <p>
+            We've all been there — you take a photo, upload it somewhere, and it appears sideways or
+            upside down. Or maybe you scanned a document and it came out rotated 90 degrees the wrong
+            way. Fixing this in complex photo editing software feels like overkill for such a simple
+            problem.
+          </p>
 
-          <p>We've all been there — you take a photo, upload it somewhere, and it appears sideways or upside down. Or maybe you scanned a document and it came out rotated 90 degrees the wrong way. Fixing this manually in complex photo editing software can feel like overkill for such a simple problem.</p>
-          <p>That's exactly why an online <strong>image rotate</strong> tool exists — to fix orientation issues in seconds, without downloading any software. In this guide, we'll walk through how to use our free Image Rotate tool, why orientation issues happen, and how to get your photos looking exactly right every time.</p>
-
-          <h2 className="text-2xl font-bold mt-8">What Is Image Rotation and Why Does It Happen?</h2>
+          <h2 id="why" className="text-2xl font-bold mt-8">What Is Image Rotation and Why Does It Happen?</h2>
 
           <p>Image rotation adjusts the orientation of a photo, turning it clockwise or counterclockwise until it displays correctly. Orientation issues commonly occur due to how a camera or phone was held when the photo was taken, combined with how different devices and platforms interpret embedded orientation metadata (EXIF data).</p>
           <p>Sometimes a photo looks correct on your phone but appears sideways once uploaded to a website or shared through email — this mismatch happens because not all platforms read that orientation metadata the same way. A rotate tool fixes this permanently by physically adjusting the image itself, ensuring it displays correctly everywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="exif" className="text-2xl font-bold mt-8">The EXIF Metadata Problem, Explained</h2>
+          <p>
+            Here's what's actually happening technically: many cameras and phones save a photo in its
+            raw sensor orientation, then separately record a small piece of metadata (called EXIF
+            orientation data) telling any app that opens it "rotate this by X degrees when displaying."
+            The problem is that not every app, website, or platform reads that flag the same way — some
+            respect it perfectly, some ignore it, and some apply it inconsistently depending on how the
+            image was uploaded or re-saved along the way.
+          </p>
+          <p>
+            This is exactly why a photo can look perfectly upright in your phone's gallery app but
+            appear sideways the moment you upload it somewhere else. Rotating and re-downloading a
+            photo through a tool like this one sidesteps the whole problem — instead of relying on a
+            metadata flag that might get ignored, the pixels themselves get physically repositioned,
+            so the image displays correctly everywhere, permanently.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Rotate Tool</h3>
           <p>Navigate to the Image Rotate tool page, where you'll see an upload area ready for your photo.</p>
@@ -57,11 +90,9 @@ export default function HowToRotateImagesOnlineArticle() {
           <p>Click to browse your files or drag and drop the image you want to rotate.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Choose Your Rotation Direction</h3>
           <p>Use the provided controls to rotate the image 90 degrees clockwise, 90 degrees counterclockwise, or flip it entirely (180 degrees) as needed.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 4: Fine-Tune if Needed</h3>
-          <p>Some tools also allow for small-angle adjustments (a few degrees at a time) to straighten a slightly tilted photo, in addition to standard 90-degree rotations.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 5: Preview Your Result</h3>
+          <h3 className="text-xl font-semibold mt-6">Step 4: Preview Your Result</h3>
           <p>Check the preview to confirm the image is now correctly oriented before finalizing.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 6: Download the Rotated Image</h3>
+          <h3 className="text-xl font-semibold mt-6">Step 5: Download the Rotated Image</h3>
           <p>Click the <strong>Download</strong> button to save your corrected image, ready to use or share anywhere.</p>
 
           <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
@@ -69,7 +100,6 @@ export default function HowToRotateImagesOnlineArticle() {
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>One-click 90-degree rotation</strong> in either direction for quick fixes.</li>
           <li><strong>180-degree flip option</strong> for upside-down images.</li>
-          <li><strong>Fine-angle adjustment</strong> for straightening slightly tilted photos, if supported.</li>
           <li><strong>Real-time preview</strong> so you can confirm the correct orientation before downloading.</li>
           <li><strong>No software installation required</strong> — works directly in your browser.</li>
           <li><strong>Preserves image quality</strong> with no unwanted compression during rotation.</li>
@@ -85,7 +115,18 @@ export default function HowToRotateImagesOnlineArticle() {
           <p><strong>4. Saves Time</strong> What might take several steps in traditional photo editing software takes just seconds with a dedicated rotate tool.</p>
           <p><strong>5. Improves Professional Presentation</strong> Correctly oriented images look more polished and professional, whether used in documents, websites, or social media.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="rotate-vs-flip" className="text-2xl font-bold mt-8">Rotate vs. Flip — When to Use Each</h2>
+          <p>
+            These two operations get confused often, but they solve different problems. <strong>Rotating</strong>{' '}
+            turns the whole image around its center point — think of it like turning a physical photo
+            print in your hands, useful for a sideways or upside-down photo. <strong>Flipping</strong>{' '}
+            mirrors the image horizontally or vertically instead — useful for a photo that appears
+            reversed, such as one taken with a front-facing selfie camera, or preparing a design for a
+            transfer-print process that requires a mirrored image. Rotating never fixes a mirrored
+            photo, and flipping never fixes a sideways one — picking the right operation matters.
+          </p>
+
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Fixing sideways phone photos</strong> before uploading them to a website or social media.</li>
@@ -97,24 +138,24 @@ export default function HowToRotateImagesOnlineArticle() {
           <li><strong>Correcting camera or scanner output</strong> that doesn't match the intended viewing direction.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>If a photo appears correctly oriented on your phone but sideways elsewhere, rotate and re-save it using this tool to fix the issue permanently across all platforms.</li>
-          <li>Use small-angle adjustments (if available) to straighten horizon lines in landscape photos for a more professional appearance.</li>
+          <li>This tool handles 90/180-degree rotation and horizontal/vertical flipping — for straightening a slightly tilted horizon line at a custom angle, a dedicated photo editor is the right tool for that specific adjustment.</li>
           <li>Always preview your rotated image before downloading to make sure the orientation is fully correct, especially for images with text or specific directional elements.</li>
           <li>When rotating scanned documents, check that any text is fully upright and readable in the final result.</li>
           <li>Combine rotation with cropping if your rotated image has uneven edges or empty space that needs to be trimmed.</li>
           <li>Keep a backup of your original image file in case you need to make additional adjustments later.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Why does my photo appear sideways after uploading it online?</h3>
           <p>This typically happens because of a mismatch in how orientation metadata (EXIF data) is interpreted by different devices and platforms, even though the photo looked correct on your original device.</p>
           <h3 className="text-lg font-semibold mt-4">Does rotating an image reduce its quality?</h3>
           <p>No, rotating an image in 90-degree increments doesn't reduce quality, since no pixel data is lost — only the orientation is adjusted.</p>
           <h3 className="text-lg font-semibold mt-4">Can I rotate an image by a custom angle, not just 90 degrees?</h3>
-          <p>Many rotate tools, including ours, support fine-angle adjustments for straightening slightly tilted photos, in addition to standard 90-degree rotations.</p>
+          <p>This tool focuses on quick 90-degree and 180-degree rotations plus horizontal/vertical flipping — for straightening a photo at an arbitrary custom angle (like fixing a slightly tilted horizon), a full photo editor is better suited to that specific task.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Image Rotate tool free to use?</h3>
           <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">What image formats can I rotate with this tool?</h3>
