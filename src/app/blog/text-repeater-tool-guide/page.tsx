@@ -15,7 +15,7 @@ export default function TextRepeaterToolGuideArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Text Tools</span>
           </div>
@@ -36,6 +36,20 @@ export default function TextRepeaterToolGuideArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a text repeater?</a></li>
+            <li><a href="#example" className="hover:text-primary">A real example</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of using a text repeater</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
@@ -44,12 +58,24 @@ export default function TextRepeaterToolGuideArticle() {
           <p>Sometimes you need the same word, phrase, or line of text repeated many times over — whether you're testing how a design element handles long content, creating a stylized social media post, or generating placeholder data for a project. Manually copying and pasting text dozens or hundreds of times is slow and impractical.</p>
           <p>A <strong>text repeater</strong> solves this instantly, letting you generate any amount of repeated text in seconds with just a few clicks. In this guide, we'll walk through exactly how to use our free online Text Repeater tool and explore the many practical (and creative) ways it can save you time.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is a Text Repeater?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Text Repeater?</h2>
 
           <p>A text repeater is a simple utility that takes any word, phrase, or sentence you provide and duplicates it a specified number of times, generating the repeated output instantly. Instead of manually copying and pasting text over and over, you simply enter your content once, specify how many repetitions you want, and the tool generates the complete result automatically.</p>
           <p>This might sound like a small convenience, but it turns out to be surprisingly useful across testing, content creation, social media, and even casual creative projects.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="example" className="text-2xl font-bold mt-8">A Real Example</h2>
+          <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
+            <p><span className="text-muted-foreground">Input:</span> "Loading..."  |  Count: 5  |  Separator: newline</p>
+            <p className="text-green-600 mt-2">Output:</p>
+            <p>Loading...<br />Loading...<br />Loading...<br />Loading...<br />Loading...</p>
+          </div>
+          <p>
+            This exact pattern is genuinely useful for quickly testing how a UI list or loading-state
+            component handles multiple identical entries, without hand-typing or copy-pasting the same
+            line five separate times.
+          </p>
+
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Text Repeater Tool</h3>
           <p>Go to the Text Repeater tool page, where you'll see a text input box and a field for specifying repetition count.</p>
@@ -57,8 +83,8 @@ export default function TextRepeaterToolGuideArticle() {
           <p>Type or paste the word, phrase, or sentence you want to repeat into the input box.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Set the Number of Repetitions</h3>
           <p>Enter how many times you want the text repeated — this could be anywhere from a few repetitions to hundreds, depending on your needs.</p>
-          <h3 className="text-xl font-semibold mt-6">Step 4: Choose a Separator (If Available)</h3>
-          <p>Many text repeaters let you choose how repeated instances are separated — with a space, a line break, a comma, or another custom character.</p>
+          <h3 className="text-xl font-semibold mt-6">Step 4: Choose a Separator</h3>
+          <p>Select how repeated instances should be separated — newline, space, comma, dash, or none — to match the exact format you need.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Generate the Repeated Text</h3>
           <p>Click the <strong>Generate</strong> button, and the tool instantly produces your repeated text output.</p>
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy Your Result</h3>
@@ -77,7 +103,7 @@ export default function TextRepeaterToolGuideArticle() {
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Text Repeater</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Text Repeater</h2>
 
           <p><strong>1. Saves Time on Repetitive Tasks</strong> Instead of manually copying and pasting text multiple times, you get your complete repeated output in seconds.</p>
           <p><strong>2. Useful for Testing and Development</strong> Developers and designers often need placeholder or stress-test content to see how a system handles long or repeated text — this tool generates it instantly.</p>
@@ -85,7 +111,7 @@ export default function TextRepeaterToolGuideArticle() {
           <p><strong>4. Reduces Manual Errors</strong> Copying and pasting text repeatedly by hand increases the risk of typos or missed instances; a generator ensures consistent, accurate repetition every time.</p>
           <p><strong>5. Flexible for Any Use Case</strong> Whether you need a word repeated three times or three hundred times, the tool scales effortlessly to your specific requirement.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Testing website or app layouts</strong> with long blocks of repeated placeholder text to check for overflow or formatting issues.</li>
@@ -97,7 +123,7 @@ export default function TextRepeaterToolGuideArticle() {
           <li><strong>Creating ASCII art or text-based patterns</strong> that rely on repeated characters or phrases.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use line breaks as a separator when you want each repetition to appear on its own line, which is useful for lists or stacked text designs.</li>
@@ -108,7 +134,7 @@ export default function TextRepeaterToolGuideArticle() {
           <li>Always proofread your original text before repeating it, since any typo will be duplicated across every repetition.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a text repeater used for?</h3>
           <p>A text repeater duplicates any word, phrase, or sentence a specified number of times, saving you from manually copying and pasting text repeatedly.</p>
           <h3 className="text-lg font-semibold mt-4">Can I choose how many times my text repeats?</h3>
