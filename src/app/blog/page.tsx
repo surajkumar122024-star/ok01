@@ -208,6 +208,12 @@ const blogs = [
     description: 'The exact Passport Seva photo specification, face-framing requirements, and how to prepare a compliant photo yourself.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'visa-photo-size-guide',
+    title: 'US Visa Photo Size Guide (2×2 inch)',
+    description: 'The exact US visa and passport photo specification, why it\'s stricter than most ID photos, and how to get it right.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
