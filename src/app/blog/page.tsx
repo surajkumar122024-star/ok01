@@ -196,6 +196,12 @@ const blogs = [
     description: 'The exact Aadhaar enrollment and update photo specification, common rejection reasons, and how to crop your own photo correctly.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'pan-card-photo-size-guide',
+    title: 'PAN Card Photo Size Guide (2.5×3.5cm)',
+    description: 'The exact PAN application photo specification for Form 49A/49AA, common mistakes, and how to crop your photo correctly.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
