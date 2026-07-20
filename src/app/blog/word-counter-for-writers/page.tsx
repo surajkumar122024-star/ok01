@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Word Counter for Writers: Track Word Count & Writing Goals (2026) — OpticShift Pro',
-  description: 'Learn how to use an online word counter to track word count, reading time, and writing goals. Free guide for writers, students, and content creators.',
+  description: 'Learn how to use an online word counter to track word count, character count, sentences, paragraphs, and writing goals. Free guide for writers, students, and content creators.',
   keywords: 'word counter, free online tool, word counter guide',
 }
 
@@ -15,7 +15,7 @@ export default function WordCounterForWritersArticle() {
         {/* Header */}
         <div className="space-y-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Blog</span>
+            <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
             <span>Text Tools</span>
           </div>
@@ -23,7 +23,7 @@ export default function WordCounterForWritersArticle() {
             Word Counter for Writers: Track Word Count & Writing Goals (2026)
           </h1>
           <p className="text-muted-foreground text-lg">
-            Learn how to use an online word counter to track word count, reading time, and writing goals. Free guide for writers, students, and content creators.
+            Learn how to use an online word counter to track word count, character count, sentences, paragraphs, and writing goals. Free guide for writers, students, and content creators.
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>📅 July 2026</span>
@@ -36,27 +36,37 @@ export default function WordCounterForWritersArticle() {
 
         <hr className="border-border" />
 
+        {/* Table of Contents */}
+        <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
+          <p className="font-semibold mb-2">In this guide</p>
+          <ul className="space-y-1 list-disc list-inside text-muted-foreground">
+            <li><a href="#what-is" className="hover:text-primary">What is a word counter?</a></li>
+            <li><a href="#how-to" className="hover:text-primary">How to use the tool, step by step</a></li>
+            <li><a href="#benefits" className="hover:text-primary">Benefits of using a word counter</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
+            <li><a href="#tips" className="hover:text-primary">Tips and best practices</a></li>
+            <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
+          </ul>
+        </nav>
+
         {/* Content */}
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
-          <h2 className="text-2xl font-bold mt-8">Introduction</h2>
-
           <p>Whether you're writing an essay with a strict word count requirement, drafting a blog post targeting a specific length for SEO, or working toward a daily writing goal for a novel, knowing exactly how many words you've written matters. Manually counting words is impractical, and relying on inconsistent estimates can leave you over or under your target.</p>
-          <p>A <strong>word counter</strong> solves this instantly, giving you real-time word counts along with other useful writing metrics. In this guide, we'll explain why word count matters across different types of writing and walk through exactly how to use our free online Word Counter tool.</p>
 
-          <h2 className="text-2xl font-bold mt-8">What Is a Word Counter?</h2>
+          <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Word Counter?</h2>
 
-          <p>A word counter is a writing tool that instantly counts the number of words in a piece of text, often alongside additional metrics like character count, sentence count, paragraph count, and estimated reading time. Instead of manually counting or relying on rough estimates, this tool gives you an accurate, real-time count as you write or paste your content.</p>
+          <p>A word counter is a writing tool that instantly counts the number of words in a piece of text, often alongside additional metrics like character count, sentence count, and paragraph count. Instead of manually counting or relying on rough estimates, this tool gives you an accurate, real-time count as you write or paste your content.</p>
           <p>This is essential for any writing task with specific length requirements — academic essays, blog posts, professional documents, or even personal writing goals like National Novel Writing Month challenges.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Word Counter Tool</h3>
           <p>Go to the Word Counter tool page, where you'll find a large text input box ready for your content.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Type or Paste Your Text</h3>
           <p>Enter your text directly, or copy and paste it from a document, email, or content management system.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: View the Live Word Count</h3>
-          <p>As you type or paste, the tool instantly displays your total word count, along with additional metrics like character count and estimated reading time.</p>
+          <p>As you type or paste, the tool instantly displays your total word count, along with character count, sentence count, and paragraph count.</p>
           <h3 className="text-xl font-semibold mt-6">Step 4: Check Against Your Target</h3>
           <p>Compare your word count to your specific goal — whether that's a minimum word count for an assignment, an ideal length for SEO content, or a personal writing target.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Edit and Adjust</h3>
@@ -70,22 +80,21 @@ export default function WordCounterForWritersArticle() {
           <li><strong>Real-time word counting</strong> as you type, with no need to click a separate "count" button.</li>
           <li><strong>Character count</strong> included alongside word totals, both with and without spaces.</li>
           <li><strong>Sentence and paragraph counts</strong> for a more complete picture of your text's structure.</li>
-          <li><strong>Estimated reading time</strong>, helpful for gauging how long your content will take readers to consume.</li>
           <li><strong>No sign-up or installation required</strong> — completely free to use instantly.</li>
           <li><strong>Clean, distraction-free design</strong> that keeps your focus on writing.</li>
           <li><strong>Works across devices</strong>, including mobile phones and tablets.</li>
           <li><strong>Fast performance</strong> even with longer documents or articles.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Word Counter</h2>
+          <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Word Counter</h2>
 
           <p><strong>1. Meets Academic and Professional Requirements</strong> Essays, reports, and assignments often have strict minimum or maximum word counts, and this tool helps you stay precisely within those bounds.</p>
           <p><strong>2. Supports SEO Content Strategy</strong> Longer-form content often performs better in search rankings, and a word counter helps you hit target lengths recommended for competitive SEO topics.</p>
           <p><strong>3. Improves Writing Discipline</strong> Tracking your word count in real time can help you stay focused and measure daily writing progress, especially for larger projects like books or long reports.</p>
-          <p><strong>4. Estimates Reading Time</strong> Knowing how long your content will take to read helps you set realistic expectations for your audience, particularly for blog posts and articles.</p>
+          <p><strong>4. Tracks Sentence and Paragraph Structure</strong> Beyond raw word count, seeing sentence and paragraph counts helps you spot when a piece has run into overly long, hard-to-read blocks of text.</p>
           <p><strong>5. Saves Time During Editing</strong> Instead of manually counting or estimating, you get instant, accurate metrics that update automatically as you revise your text.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Common Use Cases</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Writing academic essays and papers</strong> that need to meet specific minimum or maximum word count requirements.</li>
@@ -93,28 +102,28 @@ export default function WordCounterForWritersArticle() {
           <li><strong>Tracking progress on creative writing projects</strong>, such as novels, short stories, or personal writing challenges.</li>
           <li><strong>Preparing professional documents</strong> like reports, proposals, or cover letters with length guidelines.</li>
           <li><strong>Checking social media captions</strong> against character and word count best practices for engagement.</li>
-          <li><strong>Estimating reading time for articles</strong>, helping set accurate expectations for readers.</li>
+          <li><strong>Checking paragraph structure</strong>, spotting text that has run into overly dense, hard-to-scan blocks.</li>
           <li><strong>Editing and tightening content</strong> by tracking word count reduction as you cut unnecessary text.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
+          <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li>For SEO blog posts, research the typical word count of top-ranking articles for your target keyword, and aim to meet or exceed that length with genuinely valuable content.</li>
           <li>When writing academic essays, always check your specific assignment's word count requirements, since some professors count words differently (including or excluding titles, headers, or citations).</li>
-          <li>Use estimated reading time as a guide when structuring long-form content, breaking it into digestible sections if the reading time feels excessive for your audience.</li>
+          <li>Watch paragraph count, not just word count — a very low paragraph count relative to total words often signals text that would benefit from being broken into shorter, more scannable sections.</li>
           <li>Track your daily word count during larger writing projects, like a novel or thesis, to maintain consistent progress toward your overall goal.</li>
           <li>Don't sacrifice content quality just to hit a word count target — a concise, well-written piece is often more effective than an artificially padded one.</li>
           <li>Combine the word counter with a character counter when writing content for platforms with both word and character-based limits.</li>
           </ul>
 
-          <h2 className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
+          <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a word counter used for?</h3>
           <p>A word counter measures the total number of words in a piece of text, helping you meet specific writing requirements for essays, articles, or other content.</p>
           <h3 className="text-lg font-semibold mt-4">Does the word counter also count characters?</h3>
           <p>Yes, most word counters, including ours, display character count alongside word count, giving you a more complete picture of your text's length.</p>
-          <h3 className="text-lg font-semibold mt-4">How is estimated reading time calculated?</h3>
-          <p>Reading time is typically estimated based on an average reading speed (often around 200-250 words per minute), applied to your total word count.</p>
+          <h3 className="text-lg font-semibold mt-4">Does the tool count sentences and paragraphs too?</h3>
+          <p>Yes, alongside word and character count, the tool tracks sentence count (based on punctuation) and paragraph count (based on blank-line breaks) for a fuller picture of your text's structure.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Word Counter tool free to use?</h3>
           <p>Yes, it's completely free with no sign-up or installation required.</p>
           <h3 className="text-lg font-semibold mt-4">Can I count words in a very long document?</h3>
