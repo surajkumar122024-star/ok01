@@ -214,6 +214,12 @@ const blogs = [
     description: 'The exact US visa and passport photo specification, why it\'s stricter than most ID photos, and how to get it right.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'exam-photo-size-guide',
+    title: 'Exam Application Photo Size Guide (200×230px)',
+    description: 'The common photo and file size specification for SSC, IBPS, Railways, and other competitive exam applications.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
