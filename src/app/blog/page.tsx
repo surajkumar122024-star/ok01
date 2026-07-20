@@ -220,6 +220,12 @@ const blogs = [
     description: 'The common photo and file size specification for SSC, IBPS, Railways, and other competitive exam applications.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'signature-resizer-guide',
+    title: 'Signature Resizer Guide: Prepare a Scanned Signature for Any Form',
+    description: 'The common 140×60px signature scan specification for bank KYC, exam applications, and government forms.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
