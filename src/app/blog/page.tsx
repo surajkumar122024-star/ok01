@@ -190,6 +190,12 @@ const blogs = [
     description: 'Convert between metric and imperial units accurately — length, weight, temperature, area, volume, speed, data, and time.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'aadhaar-card-photo-size-guide',
+    title: 'Aadhaar Card Photo Size Guide (3.5×4.5cm)',
+    description: 'The exact Aadhaar enrollment and update photo specification, common rejection reasons, and how to crop your own photo correctly.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
