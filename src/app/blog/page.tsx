@@ -202,6 +202,12 @@ const blogs = [
     description: 'The exact PAN application photo specification for Form 49A/49AA, common mistakes, and how to crop your photo correctly.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'passport-photo-size-guide',
+    title: 'Passport Photo Size Guide (35×45mm)',
+    description: 'The exact Passport Seva photo specification, face-framing requirements, and how to prepare a compliant photo yourself.',
+    date: 'July 20, 2026',
+  },
 ];
 
 export default function BlogPage() {
