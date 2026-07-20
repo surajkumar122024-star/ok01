@@ -175,14 +175,20 @@ const blogs = [
   {
     slug: 'word-counter-for-writers',
     title: 'Word Counter for Writers: Track Word Count & Writing Goals',
-    description: 'Track word count, reading time, and writing goals — free for writers, students, and creators.',
+    description: 'Track word count, character count, sentences, and paragraphs — free for writers, students, and creators.',
     date: 'July 1, 2026',
   },
   {
     slug: 'youtube-thumbnail-downloader-guide',
-    title: 'YouTube Thumbnail Downloader Guide: Save Thumbnails in HD',
-    description: 'Download YouTube video thumbnails in HD online for free — for creators, marketers, and designers.',
+    title: 'How to Create the Perfect YouTube Thumbnail Size (1280×720)',
+    description: 'Turn any photo into a correctly sized YouTube thumbnail and avoid YouTube\'s automatic cropping cutting off your best content.',
     date: 'July 1, 2026',
+  },
+  {
+    slug: 'unit-converter-guide',
+    title: 'Unit Converter Guide: Convert Length, Weight, Temperature & More',
+    description: 'Convert between metric and imperial units accurately — length, weight, temperature, area, volume, speed, data, and time.',
+    date: 'July 20, 2026',
   },
 ];
 
