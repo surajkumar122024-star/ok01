@@ -396,293 +396,246 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold tracking-tight">
-              Why OpticShift Pro Works <br /> Differently From Other Tool Sites
-            </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Most free online converters route your file through a server before sending back a
-              result — which means your file is copied, temporarily stored, and processed
-              somewhere you can't see. OpticShift Pro takes a different approach: every tool runs
-              entirely on JavaScript already loaded in your browser, using APIs like Canvas and
-              FileReader that ship with every modern browser. Nothing is transmitted anywhere.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-6">
-              {features.map((feature, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="flex-shrink-0 w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center text-primary">
-                    <feature.icon size={20} />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold mb-1">{feature.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-3xl rounded-full" />
-            <div className="glass rounded-3xl p-4 shadow-2xl relative">
-              <img
-                src="/hero-image.png"
-                alt="OpticShift Pro tool interface preview"
-                className="rounded-2xl shadow-sm w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ============================================================ */}
+      {/* BOTTOM SECTION — REDESIGNED (Why Choose → Final CTA)          */}
+      {/* ============================================================ */}
 
-      {/* How It Works */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">How It Works</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Every tool follows the same simple flow, regardless of what you're converting.
+      {/* 1. Why Choose OpticShift Pro — 6 premium feature cards */}
+      <section className="py-24 px-4 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10" />
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+              Why OpticShift Pro
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Built Differently From Other Tool Sites
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Every design decision here traces back to one idea: your files are yours, and a tool
+              shouldn't need to see them to be useful.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {howItWorks.map((item) => (
-              <div key={item.step} className="glass rounded-2xl border p-6 relative">
-                <span className="text-5xl font-extrabold text-primary/10 absolute top-4 right-5">
-                  {item.step}
-                </span>
-                <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4 relative">
-                  <item.icon size={20} />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: ShieldCheck,
+                title: 'Privacy by Design',
+                description:
+                  'Every file is processed locally in your browser using the Canvas and File APIs. Nothing is uploaded, so there is nothing to intercept or leak.',
+              },
+              {
+                icon: Zap,
+                title: 'Instant Results',
+                description:
+                  'Skipping the upload step entirely means results appear the moment you click — even on a slow mobile connection.',
+              },
+              {
+                icon: Gauge,
+                title: 'No Paywalls',
+                description:
+                  'Every tool is free, with no account, no watermark, and no artificial file-size limit hiding behind a subscription.',
+              },
+              {
+                icon: Smartphone,
+                title: 'Works Everywhere',
+                description:
+                  'Fully responsive across desktop, tablet, and mobile, so the same workflow holds up wherever you are.',
+              },
+              {
+                icon: Lock,
+                title: 'No Account Needed',
+                description:
+                  'Open a tool and use it immediately. No sign-up form, no email capture, no friction between you and your result.',
+              },
+              {
+                icon: ServerOff,
+                title: 'Zero Server Storage',
+                description:
+                  'There is no database of uploaded files sitting on a server, because there is no upload step to begin with.',
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="group relative p-8 rounded-3xl border bg-card/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30"
+              >
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="relative">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <item.icon size={22} />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
-                <h3 className="font-bold mb-2 relative">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed relative">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Blog Posts */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">From the Blog</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              Practical guides on formats, compression, and getting the most out of each tool.
+      {/* 2. How It Works — 3 steps */}
+      <section className="py-24 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+              Simple by Design
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">How It Works</h2>
+            <p className="text-muted-foreground text-lg">
+              Three steps, no exceptions — every tool on the site follows the same flow.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredPosts.map((post) => (
-              <Link key={post.slug} href={`/blog/${post.slug}`}>
-                <div className="group h-full p-6 glass rounded-2xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1 flex flex-col">
-                  <BookOpen size={20} className="text-primary mb-4" />
-                  <h3 className="font-bold mb-2 leading-snug">{post.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">{post.excerpt}</p>
-                  <div className="text-primary text-sm font-semibold inline-flex items-center gap-1 mt-4 group-hover:gap-2 transition-all">
-                    Read guide <ArrowRight size={14} />
-                  </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            <div className="hidden md:block absolute top-9 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+            {[
+              {
+                icon: MousePointerClick,
+                step: '01',
+                title: 'Choose a Tool',
+                description: 'Pick from 33+ tools organized by category — image, PDF, or text.',
+              },
+              {
+                icon: Zap,
+                step: '02',
+                title: 'Process Instantly',
+                description: 'Your file is handled locally in your browser the moment you upload it.',
+              },
+              {
+                icon: Download,
+                step: '03',
+                title: 'Download Result',
+                description: 'Get your finished file immediately — no waiting, no watermark.',
+              },
+            ].map((item, idx) => (
+              <div key={idx} className="relative flex flex-col items-center text-center space-y-4">
+                <div className="relative z-10 w-[72px] h-[72px] rounded-2xl bg-background border-2 border-primary/20 flex items-center justify-center text-primary shadow-lg shadow-primary/5">
+                  <item.icon size={28} />
                 </div>
-              </Link>
+                <span className="text-xs font-bold text-primary/50 tracking-widest">STEP {item.step}</span>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed max-w-[240px]">{item.description}</p>
+              </div>
             ))}
           </div>
-          <div className="text-center">
+        </div>
+      </section>
+
+      {/* 3. Featured Blog Posts */}
+      <section className="py-24 px-4">
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+            <div className="space-y-4 max-w-xl">
+              <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+                From the Blog
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Guides &amp; Tutorials</h2>
+              <p className="text-muted-foreground text-lg">
+                Practical, in-depth guides on formats, compression, and getting the most out of each tool.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all whitespace-nowrap"
+            >
+              View all articles <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredPosts.map((post) => (
+              <div
+                key={post.slug}
+                className="group h-full flex flex-col rounded-3xl border bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30"
+              >
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-5">
+                    <BookOpen size={18} />
+                  </div>
+                  <h3 className="font-bold mb-2 leading-snug flex-shrink-0">{post.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{post.excerpt}</p>
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all"
+                  >
+                    Read More <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center sm:hidden">
             <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
               <Link href="/blog">
-                Read All Guides <ArrowRight className="ml-2" size={18} />
+                View All Articles <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Long Educational Content */}
-      <section className="py-20 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto space-y-14">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">A Practical Guide to File Tools</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Understanding what these tools actually do — and why processing happens in your
-              browser instead of on a server — helps you pick the right tool for the job.
-            </p>
+      {/* 4. Trusted By */}
+      <section className="py-24 px-4 bg-muted/30">
+        <div className="max-w-6xl mx-auto space-y-16">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+              Trusted By
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              People Who Rely on These Tools Every Week
+            </h2>
           </div>
 
-          <div className="space-y-10 text-muted-foreground leading-relaxed">
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">Understanding Image Compression</h3>
-              <p>
-                Image compression reduces a photo's file size by removing redundant or less
-                noticeable data. Lossy compression, used by formats like JPG and WebP, discards
-                some detail permanently in exchange for a much smaller file — usually without any
-                visible difference at normal viewing sizes. Lossless compression, used by PNG,
-                preserves every original pixel but produces larger files as a result. Our{' '}
-                <Link href="/tools/compressor" className="text-primary underline underline-offset-2">
-                  Image Compressor
-                </Link>{' '}
-                uses adjustable lossy compression so you can find the exact balance between file
-                size and visual quality for your specific use case, whether that's a website
-                thumbnail or a print-ready photo.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">Why Image Format Conversion Matters</h3>
-              <p>
-                Not every format works everywhere. HEIC, the default format on modern iPhones,
-                isn't recognized by many Windows applications and older Android devices. SVG,
-                great for scalable logos, can't be pasted directly into most photo editors. WebP
-                loads faster on websites but isn't accepted by every upload form. Converting
-                between formats — through tools like{' '}
-                <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">
-                  JPG to PNG
-                </Link>
-                ,{' '}
-                <Link href="/tools/heic-to-jpg" className="text-primary underline underline-offset-2">
-                  HEIC to JPG
-                </Link>
-                , or{' '}
-                <Link href="/tools/webp-converter" className="text-primary underline underline-offset-2">
-                  WebP Converter
-                </Link>{' '}
-                — is less about preference and more about compatibility: making sure the file
-                actually opens where you're sending it.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">PDF Utilities for Everyday Documents</h3>
-              <p>
-                PDFs remain the standard format for anything that needs to look the same on every
-                device — contracts, applications, reports. But a single PDF workflow rarely covers
-                every situation: sometimes you need to combine several scanned pages into one file
-                with{' '}
-                <Link href="/tools/pdf-merge" className="text-primary underline underline-offset-2">
-                  PDF Merge
-                </Link>
-                , pull out just a few pages with{' '}
-                <Link href="/tools/pdf-split" className="text-primary underline underline-offset-2">
-                  PDF Split
-                </Link>
-                , or turn image files into a submittable PDF with{' '}
-                <Link href="/tools/image-to-pdf" className="text-primary underline underline-offset-2">
-                  Image to PDF
-                </Link>
-                . Doing this in a browser avoids installing desktop PDF software just for a
-                one-time task.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">
-                Browser-Based Processing and File Security
-              </h3>
-              <p>
-                The core design decision behind OpticShift Pro is that processing happens entirely
-                client-side — inside your browser, using your device's own processing power.
-                Traditional online tools upload your file to a remote server, process it there,
-                and send back the result; during that round trip, your file exists on infrastructure
-                you have no visibility into. Browser-based tools skip that step entirely. Your photo
-                of a bank statement, your child's document scan, or your unpublished design file
-                stays on your device the entire time — it's simply read into memory, transformed
-                using standard web APIs, and offered back to you as a download. There is no
-                database entry, no temporary storage bucket, and nothing to accidentally leave
-                exposed on a misconfigured server.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">
-                Online Productivity Without the Overhead
-              </h3>
-              <p>
-                A lot of everyday tasks don't need a full desktop application — they need a quick,
-                reliable tool that's available the moment you think of it. Checking a word count
-                before submitting an assignment, formatting a JSON response while debugging an API,
-                or generating a strong password for a new account are all two-minute tasks that
-                shouldn't require downloading software. Keeping these tools free, fast, and
-                install-free is a deliberate choice to reduce friction for exactly that kind of
-                everyday work.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <h3 className="text-xl font-bold text-foreground">Best Practices When Working With Files Online</h3>
-              <ul className="list-disc list-outside pl-5 space-y-2">
-                <li>
-                  Prefer tools that clearly state they process files locally, especially for
-                  personal documents like ID scans or financial statements.
-                </li>
-                <li>
-                  Compress images before uploading them to websites or forms — large files slow
-                  down page loads and can hit upload size limits.
-                </li>
-                <li>
-                  Double-check exact pixel dimensions and file size limits before submitting
-                  document photos, since requirements vary between forms and countries.
-                </li>
-                <li>
-                  Keep a backup of the original file before converting or compressing, in case you
-                  need the unmodified version later.
-                </li>
-                <li>
-                  Use a password manager alongside a generator like our{' '}
-                  <Link href="/tools/password-generator" className="text-primary underline underline-offset-2">
-                    Password Generator
-                  </Link>{' '}
-                  so unique, strong passwords stay practical across every account.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who Uses Our Tools */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">Who Uses OpticShift Pro</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              The same set of tools ends up solving very different problems depending on who's using them.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {audiences.map((a) => (
-              <div key={a.title} className="glass rounded-2xl border p-6">
-                <div className="w-11 h-11 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
-                  <a.icon size={20} />
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+            {[
+              { icon: GraduationCap, label: 'Students' },
+              { icon: Paintbrush, label: 'Designers' },
+              { icon: Code2, label: 'Developers' },
+              { icon: Briefcase, label: 'Businesses' },
+              { icon: Star, label: 'Content Creators' },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center justify-center gap-3 p-6 rounded-2xl border bg-card/50 backdrop-blur-sm text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-lg"
+              >
+                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+                  <item.icon size={20} />
                 </div>
-                <h3 className="font-bold mb-2">{a.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{a.description}</p>
+                <span className="text-sm font-semibold">{item.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Privacy & Security / Trust Section */}
-      <section className="py-20 bg-primary text-primary-foreground overflow-hidden relative">
+      {/* 5. Privacy & Security */}
+      <section className="py-24 px-4 bg-primary text-primary-foreground overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full -ml-48 -mb-48 blur-3xl" />
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-8 relative">
-          <h2 className="text-3xl md:text-4xl font-bold">Privacy Is the Architecture, Not a Promise</h2>
-          <p className="text-xl text-primary-foreground/80 leading-relaxed">
-            We don't ask you to trust a privacy policy about what happens to your uploaded file —
-            because there is no upload. Every tool is built so that your file physically cannot
-            leave your device during processing. That's a structural guarantee, not a setting you
-            have to enable.
+        <div className="max-w-4xl mx-auto text-center space-y-8 relative">
+          <span className="inline-block text-xs font-semibold tracking-widest text-primary-foreground/70 uppercase">
+            Privacy &amp; Security
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Privacy Is the Architecture, Not a Promise
+          </h2>
+          <p className="text-xl text-primary-foreground/80 leading-relaxed max-w-2xl mx-auto">
+            We don&apos;t ask you to trust a privacy policy about what happens to your uploaded
+            file — because there is no upload. Every tool is built so your file physically cannot
+            leave your device while it&apos;s being processed.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 pt-4">
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             {[
               { icon: ServerOff, label: 'No File Uploads' },
               { icon: Lock, label: 'Browser-Based Processing' },
               { icon: ShieldCheck, label: 'No Tracking Cookies for Tools' },
               { icon: CheckCircle2, label: 'No Account Required' },
-            ].map((item) => (
+            ].map((item, idx) => (
               <div
-                key={item.label}
-                className="flex items-center gap-2 text-sm font-medium bg-white/10 px-4 py-2 rounded-full border border-white/20"
+                key={idx}
+                className="flex items-center gap-2 text-sm font-medium bg-white/10 backdrop-blur-sm px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/15 transition-colors"
               >
                 <item.icon size={16} />
                 {item.label}
@@ -692,55 +645,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold">What People Say</h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              A few notes from people who use these tools regularly.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="glass rounded-2xl border p-6 flex flex-col gap-4">
-                <div className="flex gap-1 text-primary">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground text-sm leading-relaxed flex-1">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div>
-                  <p className="font-semibold text-sm">{t.name}</p>
-                  <p className="text-muted-foreground text-xs">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Ad Space */}
-      <div className="max-w-7xl mx-auto px-4 w-full mb-4">
+      <div className="max-w-7xl mx-auto px-4 w-full py-12">
         <AdPlaceholder />
       </div>
 
       {/* FAQ Section */}
       <FaqSection />
 
-      {/* Call to Action */}
+      {/* 6. Final Call-To-Action */}
       <section className="py-24 px-4">
-        <div className="max-w-5xl mx-auto glass rounded-3xl p-12 text-center space-y-6 border shadow-2xl">
-          <h2 className="text-4xl font-bold">Ready to Optimize Your Workflow?</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Fast, free, and forever private — OpticShift Pro keeps your files on your device while
-            delivering professional results.
-          </p>
-          <Button size="lg" className="h-14 px-10 rounded-xl" asChild>
-            <Link href="/tools">Explore All Tools</Link>
-          </Button>
+        <div className="max-w-5xl mx-auto relative overflow-hidden rounded-[2.5rem] border shadow-2xl">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl -z-10" />
+          <div className="relative glass p-12 md:p-20 text-center space-y-8">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+              Ready to Optimize <br className="hidden sm:block" /> Your Workflow?
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
+              Fast, free, and forever private — OpticShift Pro keeps your files on your device
+              while delivering professional results, every time.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+              <Button size="lg" className="h-14 px-10 rounded-xl text-lg shadow-xl shadow-primary/25" asChild>
+                <Link href="/tools">
+                  Explore All 33+ Tools <ArrowRight className="ml-2" size={18} />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="h-14 px-10 rounded-xl text-lg glass" asChild>
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>

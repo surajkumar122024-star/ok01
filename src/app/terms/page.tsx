@@ -20,7 +20,7 @@ export default function TermsPage() {
           <li>Attempt to decompile or reverse engineer any software contained on the website.</li>
         </ul>
 
-        <h2>3. Disclaimer</h2>
+        <h2 id="disclaimer">3. Disclaimer</h2>
         <p>
           The materials on OpticShift Pro are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
         </p>
