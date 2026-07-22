@@ -576,6 +576,146 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Long Educational Content */}
+      <section className="py-24 px-4">
+        <div className="max-w-4xl mx-auto space-y-16">
+          <div className="text-center space-y-4 max-w-2xl mx-auto">
+            <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+              Deep Dive
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">A Practical Guide to File Tools</h2>
+            <p className="text-muted-foreground text-lg">
+              Understanding what these tools actually do — and why processing happens in your
+              browser instead of on a server — helps you pick the right tool for the job.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">Understanding Image Compression</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Image compression reduces a photo's file size by removing redundant or less
+                noticeable data. Lossy compression, used by formats like JPG and WebP, discards
+                some detail permanently in exchange for a much smaller file — usually without any
+                visible difference at normal viewing sizes. Lossless compression, used by PNG,
+                preserves every original pixel but produces larger files as a result. Our{' '}
+                <Link href="/tools/compressor" className="text-primary underline underline-offset-2">
+                  Image Compressor
+                </Link>{' '}
+                uses adjustable lossy compression so you can find the exact balance between file
+                size and visual quality for your specific use case, whether that's a website
+                thumbnail or a print-ready photo.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">Why Image Format Conversion Matters</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Not every format works everywhere. HEIC, the default format on modern iPhones,
+                isn't recognized by many Windows applications and older Android devices. SVG,
+                great for scalable logos, can't be pasted directly into most photo editors. WebP
+                loads faster on websites but isn't accepted by every upload form. Converting
+                between formats — through tools like{' '}
+                <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">
+                  JPG to PNG
+                </Link>
+                ,{' '}
+                <Link href="/tools/heic-to-jpg" className="text-primary underline underline-offset-2">
+                  HEIC to JPG
+                </Link>
+                , or{' '}
+                <Link href="/tools/webp-converter" className="text-primary underline underline-offset-2">
+                  WebP Converter
+                </Link>{' '}
+                — is less about preference and more about compatibility: making sure the file
+                actually opens where you're sending it.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">PDF Utilities for Everyday Documents</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                PDFs remain the standard format for anything that needs to look the same on every
+                device — contracts, applications, reports. But a single PDF workflow rarely covers
+                every situation: sometimes you need to combine several scanned pages into one file
+                with{' '}
+                <Link href="/tools/pdf-merge" className="text-primary underline underline-offset-2">
+                  PDF Merge
+                </Link>
+                , pull out just a few pages with{' '}
+                <Link href="/tools/pdf-split" className="text-primary underline underline-offset-2">
+                  PDF Split
+                </Link>
+                , or turn image files into a submittable PDF with{' '}
+                <Link href="/tools/image-to-pdf" className="text-primary underline underline-offset-2">
+                  Image to PDF
+                </Link>
+                . Doing this in a browser avoids installing desktop PDF software just for a
+                one-time task.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">Browser-Based Processing and File Security</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                The core design decision behind OpticShift Pro is that processing happens entirely
+                client-side — inside your browser, using your device's own processing power.
+                Traditional online tools upload your file to a remote server, process it there,
+                and send back the result; during that round trip, your file exists on infrastructure
+                you have no visibility into. Browser-based tools skip that step entirely. Your photo
+                of a bank statement, your child's document scan, or your unpublished design file
+                stays on your device the entire time — it's simply read into memory, transformed
+                using standard web APIs, and offered back to you as a download. There is no
+                database entry, no temporary storage bucket, and nothing to accidentally leave
+                exposed on a misconfigured server.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">Online Productivity Without the Overhead</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                A lot of everyday tasks don't need a full desktop application — they need a quick,
+                reliable tool that's available the moment you think of it. Checking a word count
+                before submitting an assignment, formatting a JSON response while debugging an API,
+                or generating a strong password for a new account are all two-minute tasks that
+                shouldn't require downloading software. Keeping these tools free, fast, and
+                install-free is a deliberate choice to reduce friction for exactly that kind of
+                everyday work.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
+              <h3 className="text-xl font-bold">Best Practices When Working With Files Online</h3>
+              <ul className="list-disc list-outside pl-5 space-y-2 text-muted-foreground leading-relaxed">
+                <li>
+                  Prefer tools that clearly state they process files locally, especially for
+                  personal documents like ID scans or financial statements.
+                </li>
+                <li>
+                  Compress images before uploading them to websites or forms — large files slow
+                  down page loads and can hit upload size limits.
+                </li>
+                <li>
+                  Double-check exact pixel dimensions and file size limits before submitting
+                  document photos, since requirements vary between forms and countries.
+                </li>
+                <li>
+                  Keep a backup of the original file before converting or compressing, in case you
+                  need the unmodified version later.
+                </li>
+                <li>
+                  Use a password manager alongside a generator like our{' '}
+                  <Link href="/tools/password-generator" className="text-primary underline underline-offset-2">
+                    Password Generator
+                  </Link>{' '}
+                  so unique, strong passwords stay practical across every account.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Trusted By */}
       <section className="py-24 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto space-y-16">
