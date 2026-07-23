@@ -36,6 +36,7 @@ const tools = [
   'pan-photo',
   'exam-photo',
   'signature-resizer',
+  'unit-converter',
 ]
 
 const blogPosts = [
@@ -69,6 +70,14 @@ const blogPosts = [
   'webp-converter-complete-guide',
   'word-counter-for-writers',
   'youtube-thumbnail-downloader-guide',
+  // Newly added guides
+  'unit-converter-guide',
+  'aadhaar-card-photo-size-guide',
+  'pan-card-photo-size-guide',
+  'passport-photo-size-guide',
+  'visa-photo-size-guide',
+  'exam-photo-size-guide',
+  'signature-resizer-guide',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -82,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE_URL}/disclaimer`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ]
 
   const toolPages: MetadataRoute.Sitemap = tools.map((slug) => ({
