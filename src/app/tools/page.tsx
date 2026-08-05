@@ -14,11 +14,11 @@ import { Button } from '@/components/ui/button';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 32 Free Image, PDF, Text & Document Tools',
-  description: 'Browse all 32 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 34 Free Image, PDF, Text & Document Tools',
+  description: 'Browse all 34 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 32 free browser-based tools for images, PDFs, text, and documents.',
+    description: 'Browse all 34 free browser-based tools for images, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -256,6 +256,13 @@ const tools = [
     description: "Convert length, weight, temperature, area, volume, speed and more instantly. Free & private.",
     icon: Ruler,
     color: "bg-cyan-600"
+  },
+  {
+    name: "Image Collage Maker",
+    slug: "image-collage",
+    description: "Combine multiple photos into one grid collage. Bulk upload, custom layout. Free & private.",
+    icon: LayoutGrid,
+    color: "bg-fuchsia-600"
   },
 ];
 

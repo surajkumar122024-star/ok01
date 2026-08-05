@@ -389,7 +389,7 @@ export default function Home() {
           <div className="text-center">
             <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
               <Link href="/tools">
-                View All 33 Tools <ArrowRight className="ml-2" size={18} />
+                View All 34 Tools <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>

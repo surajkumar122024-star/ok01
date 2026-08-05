@@ -1512,4 +1512,43 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Size Checker", slug: "image-size-checker" },
     ],
   },
+
+  "image-collage": {
+    overview: [
+      "A collage turns a handful of separate photos into one shareable image — a memory grid from a trip, a before/after comparison, a set of product angles, or a simple grid of favorite screenshots. Doing this manually in a design tool means fiddling with alignment, sizing, and spacing by hand for every single photo.",
+      "This tool automates that layout math. Upload several images at once, and it arranges them into an evenly spaced grid, automatically cropping each photo to fill its cell cleanly (rather than stretching or leaving awkward gaps) — the same 'object-fit: cover' technique used across most modern photo grid layouts.",
+      "Because everything runs locally in your browser using the Canvas API, your photos are combined and rendered without ever being uploaded anywhere, and the finished collage downloads as a single PNG file ready to share.",
+    ],
+    steps: [
+      { title: "Upload your photos", description: "Select or drag two or more images into the tool at once." },
+      { title: "Arrange the order", description: "Use the arrow buttons on each thumbnail to reorder photos before generating." },
+      { title: "Choose columns, spacing, and background", description: "Pick a column count (or leave it on Auto), a spacing size, and a background color." },
+      { title: "Generate and download", description: "Click Generate Collage, preview the result, then download it as a single PNG image." },
+    ],
+    useCases: [
+      { title: "Travel and event photo grids", description: "Combine several trip or event photos into one shareable grid for social media instead of posting each one separately." },
+      { title: "Before/after comparisons", description: "Place a before and after photo side by side in a simple two-image grid for a clear visual comparison." },
+      { title: "Product photo sheets", description: "Combine multiple angles of a product into one grid image for a listing or catalog." },
+      { title: "Screenshot compilations", description: "Combine several related screenshots into a single reference image instead of sending them separately." },
+    ],
+    tips: [
+      "Use square-ish source photos when possible — the tool crops each image to fill its grid cell, so very wide or very tall photos lose more of their edges.",
+      "A 2-column layout works well for 2-4 photos; 3 or 4 columns suit larger batches better without cells becoming too small to see clearly.",
+      "Choose a background color that complements your photos if you're using any spacing between cells — white or black are the safest defaults.",
+      "Reorder images before generating, since regenerating with a different order means running the layout again.",
+    ],
+    faqs: [
+      { q: "How many images can I combine into one collage?", a: "There's no hard-coded limit, but very large batches (15+) produce a lot of small grid cells and take longer to render since everything processes in your browser." },
+      { q: "Will my images get stretched or distorted?", a: "No, each image is cropped to fill its grid cell while preserving its original proportions, similar to how Instagram grid thumbnails display — nothing is stretched." },
+      { q: "Can I control which image goes in which position?", a: "Yes, use the left/right arrow buttons on each thumbnail to reorder images before generating; the grid fills left-to-right, top-to-bottom in that order." },
+      { q: "Is my photo uploaded to a server to create the collage?", a: "No, the entire collage is assembled locally in your browser using the Canvas API — your photos are never transmitted anywhere." },
+      { q: "What file format is the collage downloaded as?", a: "The finished collage downloads as a single PNG file, which keeps grid lines and any text-free photo content sharp." },
+    ],
+    relatedTools: [
+      { name: "Image Resizer", slug: "resizer" },
+      { name: "Image Cropper", slug: "image-cropper" },
+      { name: "Image Compressor", slug: "compressor" },
+      { name: "Image to PDF", slug: "image-to-pdf" },
+    ],
+  },
 };

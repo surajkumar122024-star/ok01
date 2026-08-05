@@ -37,6 +37,7 @@ const tools = [
   'exam-photo',
   'signature-resizer',
   'unit-converter',
+  'image-collage',
 ]
 
 const blogPosts = [
