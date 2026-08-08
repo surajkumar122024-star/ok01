@@ -49,6 +49,7 @@ const categories = [
     icon: ImageIcon,
     href: '/tools',
     count: '11 tools',
+    gradient: 'from-violet-600 to-purple-700',
   },
   {
     name: 'Format Converters',
@@ -56,6 +57,7 @@ const categories = [
     icon: Layers,
     href: '/tools',
     count: '6 tools',
+    gradient: 'from-fuchsia-600 to-pink-600',
   },
   {
     name: 'PDF Utilities',
@@ -63,6 +65,7 @@ const categories = [
     icon: FileText,
     href: '/tools',
     count: '4 tools',
+    gradient: 'from-cyan-600 to-teal-600',
   },
   {
     name: 'Document Photos',
@@ -70,6 +73,7 @@ const categories = [
     icon: FileImage,
     href: '/tools',
     count: '6 tools',
+    gradient: 'from-blue-600 to-indigo-600',
   },
   {
     name: 'Text & Developer Tools',
@@ -77,6 +81,7 @@ const categories = [
     icon: Code2,
     href: '/tools',
     count: '8+ tools',
+    gradient: 'from-sky-500 to-blue-600',
   },
   {
     name: 'Unit Converter',
@@ -84,6 +89,7 @@ const categories = [
     icon: Maximize,
     href: '/tools/unit-converter',
     count: '8 categories',
+    gradient: 'from-orange-500 to-amber-600',
   },
 ];
 
@@ -333,6 +339,9 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-4">
+            <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
+              Premium UI
+            </span>
             <h2 className="text-3xl md:text-4xl font-bold">Browse by Category</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
               Six categories covering everything from quick image edits to developer utilities.
@@ -341,17 +350,22 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((cat) => (
               <Link key={cat.name} href={cat.href}>
-                <div className="group h-full p-6 glass rounded-2xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-5 group-hover:scale-110 transition-transform">
+                <div
+                  className={`shine-card group h-full p-6 bg-gradient-to-br ${cat.gradient} text-white`}
+                >
+                  <div className="w-12 h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
                     <cat.icon size={22} />
                   </div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-lg font-bold">{cat.name}</h3>
-                    <span className="text-xs font-medium text-muted-foreground bg-muted px-2 py-1 rounded-full">
+                    <span className="text-xs font-medium bg-white/15 backdrop-blur-sm px-2 py-1 rounded-full">
                       {cat.count}
                     </span>
                   </div>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{cat.description}</p>
+                  <p className="text-white/80 text-sm leading-relaxed mb-4">{cat.description}</p>
+                  <span className="inline-flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all">
+                    Explore <ArrowRight size={14} />
+                  </span>
                 </div>
               </Link>
             ))}
