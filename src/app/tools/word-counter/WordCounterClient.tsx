@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { ToolContentSection } from "@/components/ToolContentSection"
 import { toolContent } from "@/data/toolContent"
+import { ToolPageGlow } from "@/components/ToolPageGlow"
 
 export default function WordCounterClient() {
   const [text, setText] = useState('')
@@ -15,6 +16,7 @@ export default function WordCounterClient() {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-4">
+      <ToolPageGlow />
       <div className="max-w-3xl mx-auto space-y-8">
 
         <div className="text-center space-y-4">

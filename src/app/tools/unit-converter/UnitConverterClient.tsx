@@ -1,6 +1,7 @@
 'use client'
 import { useState, useMemo } from 'react'
 import { ArrowLeftRight } from 'lucide-react'
+import { ToolPageGlow } from "@/components/ToolPageGlow"
 
 type UnitDef = { label: string; toBase: (v: number) => number; fromBase: (v: number) => number }
 type Category = { label: string; icon: string; units: Record<string, UnitDef> }
@@ -135,6 +136,7 @@ export default function UnitConverterClient() {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-4">
+      <ToolPageGlow />
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Unit Converter</h1>

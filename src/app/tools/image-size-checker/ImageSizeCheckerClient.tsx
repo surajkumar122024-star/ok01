@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { ToolContentSection } from "@/components/ToolContentSection"
 import { toolContent } from "@/data/toolContent"
+import { ToolPageGlow } from "@/components/ToolPageGlow"
 
 interface ImageInfo {
   name: string
@@ -71,6 +72,7 @@ export default function ImageSizeCheckerClient() {
 
   return (
     <div className="min-h-screen pt-32 pb-20 px-4">
+      <ToolPageGlow />
       <div className="max-w-4xl mx-auto space-y-8">
 
         <div className="text-center space-y-4">
