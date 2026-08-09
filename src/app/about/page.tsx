@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About OpticShift Pro — Privacy-First Browser-Based Tools',
   description:
-    'OpticShift Pro is an independently built suite of 33+ free image, PDF, and text tools that run entirely in your browser. Learn why founder Suraj Kumar built it and how the privacy-first architecture works.',
+    'OpticShift Pro is an independently built suite of 34+ free image, PDF, and text tools that run entirely in your browser. Learn why founder Suraj Kumar built it and how the privacy-first architecture works.',
 };
 
 export default function AboutPage() {
@@ -38,7 +38,7 @@ export default function AboutPage() {
           So I built OpticShift Pro around a different approach: every tool runs directly in your
           browser using standard web APIs, so your file is processed on your own device and never
           uploaded anywhere. What started as a handful of image tools has grown into a suite of{' '}
-          <strong>33+ free tools</strong> covering images, PDFs, and text utilities.
+          <strong>34+ free tools</strong> covering images, PDFs, and text utilities.
         </p>
       </section>
 
@@ -138,7 +138,7 @@ export default function AboutPage() {
       <section className="text-center py-10 px-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
         <h2 className="text-2xl font-bold mb-3 text-gray-900">Ready to get started?</h2>
         <p className="text-gray-600 mb-6">
-          Try any of our 33+ free tools — no account needed, no files uploaded.
+          Try any of our 34+ free tools — no account needed, no files uploaded.
         </p>
         <Link
           href="/tools"
