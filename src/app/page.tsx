@@ -730,15 +730,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Trusted By */}
+      {/* 4. Who It's For */}
       <section className="py-24 px-4 bg-muted/30">
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
-              Trusted By
+              Who It's For
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              People Who Rely on These Tools Every Week
+              Students, Designers, Developers, Businesses &amp; Content Creators
             </h2>
           </div>
 
