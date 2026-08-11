@@ -40,7 +40,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-body antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary">
+      <body className="font-body antialiased premium-dark-bg text-gray-100 selection:bg-primary/20 selection:text-primary">
         <Navbar />
         <main>{children}</main>
         <Footer />

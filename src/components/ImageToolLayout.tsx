@@ -19,7 +19,7 @@ interface ImageToolLayoutProps {
 
 export const ImageToolLayout = ({ title, description, children, content }: ImageToolLayoutProps) => {
   return (
-    <div className="relative min-h-screen pt-24 pb-12 px-4 overflow-hidden">
+    <div className="relative min-h-screen bg-background text-foreground pt-24 pb-12 px-4 overflow-hidden">
       {/* Decorative gradient blobs for visual depth */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-br from-primary/15 via-secondary/10 to-transparent blur-3xl -z-10" />
       <div className="pointer-events-none absolute top-40 -left-40 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl -z-10" />

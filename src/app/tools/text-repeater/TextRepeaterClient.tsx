@@ -30,7 +30,7 @@ export default function TextRepeaterClient() {
   }
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-4">
+    <div className="min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
       <ToolPageGlow />
       <div className="max-w-2xl mx-auto space-y-8">
 
