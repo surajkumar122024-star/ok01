@@ -67,7 +67,7 @@ export default function PdfMergeClient() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
+    <div className="force-light min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
       <ToolPageGlow />
       <div className="max-w-2xl mx-auto space-y-8">
 

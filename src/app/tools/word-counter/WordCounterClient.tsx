@@ -15,7 +15,7 @@ export default function WordCounterClient() {
   const paragraphs = text.split(/\n\n+/).filter(p => p.trim()).length
 
   return (
-    <div className="min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
+    <div className="force-light min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
       <ToolPageGlow />
       <div className="max-w-3xl mx-auto space-y-8">
 

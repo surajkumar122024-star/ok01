@@ -116,12 +116,44 @@
 }
 
 /* Premium black gradient — applied to the site body. Tool pages explicitly
-   opt out with their own light bg-background wrapper, so this never affects
-   the tool UI itself. */
+   opt out with the .force-light class below, so this never affects the
+   tool UI's colors or contrast. */
 .premium-dark-bg {
   background: radial-gradient(ellipse 1200px 800px at 50% -10%, rgba(59, 130, 246, 0.18), transparent 60%),
     radial-gradient(ellipse 900px 700px at 100% 20%, rgba(168, 85, 247, 0.12), transparent 55%),
     radial-gradient(ellipse 900px 700px at 0% 60%, rgba(59, 130, 246, 0.1), transparent 55%),
-    linear-gradient(180deg, #05060a 0%, #0a0b12 50%, #05060a 100%);
+    linear-gradient(180deg, #05060a 0%, #0a0c14 50%, #05060a 100%);
   background-attachment: fixed;
+}
+
+/* Forces the light theme's exact CSS variables within this subtree, so
+   tool pages keep their original light appearance and full contrast even
+   though the rest of the site (an ancestor .dark on <html>) is dark. */
+.force-light {
+  --background: 210 31% 96%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 218 100% 56%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 189 82% 44%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 210 40% 90%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 189 82% 44%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 218 100% 56%;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.force-light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -40,7 +40,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="font-body antialiased premium-dark-bg text-gray-100 selection:bg-primary/20 selection:text-primary">
+      <body className="font-body antialiased premium-dark-bg text-foreground selection:bg-primary/20 selection:text-primary">
         <Navbar />
         <main>{children}</main>
         <Footer />
