@@ -1,11 +1,11 @@
 export default function PrivacyPage() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16 text-gray-800">
-      <h1 className="text-4xl font-bold mb-2 text-gray-900">Privacy Policy</h1>
-      <p className="text-sm text-gray-500 mb-10">Last Updated: June 27, 2026</p>
+    <main className="max-w-3xl mx-auto px-6 py-16 text-muted-foreground">
+      <h1 className="text-4xl font-bold mb-2 text-foreground">Privacy Policy</h1>
+      <p className="text-sm text-muted-foreground mb-10">Last Updated: June 27, 2026</p>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">1. Introduction</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">1. Introduction</h2>
         <p className="leading-relaxed">
           Welcome to <strong>OpticShift Pro</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting
           your privacy. This Privacy Policy explains how we collect, use, and safeguard information
@@ -15,7 +15,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">2. Information We Do NOT Collect</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">2. Information We DO NOT Collect</h2>
         <p className="leading-relaxed mb-3">
           OpticShift Pro is built on a privacy-first architecture. All image processing happens
           entirely within your web browser using HTML5 Canvas and JavaScript APIs.
@@ -29,7 +29,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">3. Information We May Collect Automatically</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">3. Information We May Collect Automatically</h2>
         <p className="leading-relaxed mb-3">
           Like most websites, we may automatically receive and log standard technical information when
           you visit our site. This may include:
@@ -48,21 +48,21 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">4. Google AdSense and Advertising</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">4. Google AdSense and Advertising</h2>
         <p className="leading-relaxed mb-3">
           This website uses <strong>Google AdSense</strong> to display advertisements. Google, as a
           third-party vendor, uses cookies and similar technologies to serve ads based on your prior
-          visits to this and other websites. Google's use of advertising cookies enables it and its
-          partners to serve personalized or non-personalized ads to you based on your visit to this
-          site and/or other sites on the Internet.
+          visits to this and other websites. Google&apos;s use of advertising cookies enables it and its
+          partners to serve personalized ads based on your visit to this
+          site and/or other sites on the internet.
         </p>
         <p className="leading-relaxed">
-          For more information on how Google uses data from sites that use its services, please visit{" "}
-          <a
+          For more information on how Google uses data from sites that use its services, please visit{' '}
+          
             href="https://policies.google.com/technologies/partner-sites"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline hover:text-blue-800"
+            className="text-primary underline hover:text-primary/80"
           >
             Google&apos;s Privacy &amp; Terms
           </a>
@@ -71,7 +71,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">5. Cookies</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">5. Cookies</h2>
         <p className="leading-relaxed mb-3">
           Cookies are small text files stored on your device. Our website itself does not use cookies
           for core functionality. However, third-party services we use — such as Google AdSense and
@@ -84,8 +84,8 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">6. Analytics</h2>
-        <p className="leading-relaxed">
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">6. Analytics</h2>
+        <p className="leading-relaxed mb-3">
           We may use privacy-respecting analytics services (such as Google Analytics) to understand
           how visitors use our website. These services collect anonymized data about page views,
           session durations, and traffic sources. No personally identifiable information is shared
@@ -94,7 +94,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">7. Children&apos;s Privacy</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">7. Children&apos;s Privacy</h2>
         <p className="leading-relaxed">
           Our website is not directed at children under the age of 13. We do not knowingly collect
           any personal information from children. If you believe a child has provided us with personal
@@ -103,26 +103,26 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">8. Third-Party Links</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">8. Third-Party Links</h2>
         <p className="leading-relaxed">
           Our website may contain links to external websites. We are not responsible for the privacy
-          practices or content of those third-party sites. We encourage you to review the privacy
+          practices or content of these third-party sites. We encourage you to review the privacy
           policies of any external sites you visit.
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">9. Data Security</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">9. Data Security</h2>
         <p className="leading-relaxed">
           Because we do not collect or store your image data, there is no image data at risk.
-          For any standard website data (such as analytics), we use industry-standard practices to
-          maintain security. However, no method of transmission over the internet is 100% secure,
+          For any standard website data (such as analytics), we use industry-standard practices
+          to reasonably secure information. However, no method of transmission over the internet is 100% secure
           and we cannot guarantee absolute security.
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">10. Your Rights (GDPR &amp; CCPA)</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">10. Your Rights (GDPR &amp; CCPA)</h2>
         <p className="leading-relaxed mb-3">
           Depending on your location, you may have certain rights regarding your personal data, including:
         </p>
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">11. Changes to This Policy</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">11. Changes to This Policy</h2>
         <p className="leading-relaxed">
           We may update this Privacy Policy from time to time. Any changes will be posted on this page
           with an updated &quot;Last Updated&quot; date. We encourage you to review this policy periodically.
@@ -149,14 +149,14 @@ export default function PrivacyPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-3 text-gray-900">12. Contact Us</h2>
+        <h2 className="text-2xl font-semibold mb-3 text-foreground">12. Contact Us</h2>
         <p className="leading-relaxed">
           If you have any questions about this Privacy Policy or our privacy practices, please contact us:
         </p>
-        <div className="mt-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
-          <p className="font-medium">OpticShift Pro</p>
-          <p>Email: <a href="mailto:support@opticshift.pro" className="text-blue-600 underline hover:text-blue-800">support@opticshift.pro</a></p>
-          <p>Website: <a href="https://ok01.vercel.app" className="text-blue-600 underline hover:text-blue-800">ok01.vercel.app</a></p>
+        <div className="mt-3 p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
+          <p className="font-medium text-foreground">OpticShift Pro</p>
+          <p>Email: <a href="mailto:support@opticshift.pro" className="text-primary underline hover:text-primary/80">support@opticshift.pro</a></p>
+          <p>Website: <a href="https://ok01.vercel.app" className="text-primary underline hover:text-primary/80">ok01.vercel.app</a></p>
         </div>
       </section>
     </main>
