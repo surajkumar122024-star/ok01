@@ -56,19 +56,14 @@ export default function PrivacyPage() {
           partners to serve personalized ads based on your visit to this
           site and/or other sites on the internet.
         </p>
-        <p className="leading-relaxed">
-          For more information on how Google uses data from sites that use its services, please visit{' '}
-          
-            href="https://policies.google.com/technologies/partner-sites"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline hover:text-primary/80"
-          >
-            Google&apos;s Privacy &amp; Terms
-          </a>
-          .
-        </p>
-      </section>
+       
+          <p className="leading-relaxed">
+  For more information on how Google uses data from sites that use its services, please visit{' '}
+  <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+    Google&apos;s Privacy &amp; Terms
+       </a>.
+       </p>
+       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">5. Cookies</h2>
