@@ -76,6 +76,7 @@ export const toolCategories: ToolCategory[] = [
     items: [
       { name: "Password Generator", href: "/tools/password-generator", icon: KeyRound },
       { name: "YouTube Thumbnail", href: "/tools/youtube-thumbnail-converter", icon: Youtube },
+      { name: "Image Collage Maker", href: "/tools/Image Collage Maker", icon: KeyRound },
     ],
   },
   {
