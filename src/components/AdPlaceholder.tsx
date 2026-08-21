@@ -21,7 +21,7 @@ export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlacehold
   }, []);
 
   return (
-    <div className={`${className ?? ''} ${minHeightMap[variant]} flex items-center justify-center overflow-hidden`}>
+    <div className={`${className ?? ''} ${minHeightMap[variant]} w-full flex items-center justify-center overflow-hidden`}>
       <ins
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', height: '100%' }}
