@@ -26,7 +26,7 @@ export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlacehold
         className="adsbygoogle"
         style={{ display: 'block', width: '100%', height: '100%' }}
         data-ad-client="ca-pub-6461565201811259"
-        data-ad-slot="XXXXXXXXXX"
+        data-ad-slot="4220072297"
         data-ad-format="auto"
         data-full-width-responsive="true"
       />
