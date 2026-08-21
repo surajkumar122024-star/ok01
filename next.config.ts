@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
               "font-src 'self' fonts.gstatic.com",
               "img-src 'self' data: blob: *.google.com *.googlesyndication.com *.doubleclick.net *.gstatic.com images.unsplash.com picsum.photos placehold.co",
               "connect-src 'self' *.google.com *.googlesyndication.com *.google-analytics.com *.doubleclick.net *.adtrafficquality.google *.googletagmanager.com",
-              "frame-src 'self' *.google.com *.googlesyndication.com *.doubleclick.net",
+              "frame-src 'self' *.google.com *.googlesyndication.com *.doubleclick.net *.adtrafficquality.google",
             ].join('; '),
           },
           {
