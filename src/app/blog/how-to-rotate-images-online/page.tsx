@@ -54,7 +54,7 @@ export default function HowToRotateImagesOnlineArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            We've all been there — you take a photo, upload it somewhere, and it appears sideways or
+            We&apos;ve all been there — you take a photo, upload it somewhere, and it appears sideways or
             upside down. Or maybe you scanned a document and it came out rotated 90 degrees the wrong
             way. Fixing this in complex photo editing software feels like overkill for such a simple
             problem.
@@ -67,15 +67,15 @@ export default function HowToRotateImagesOnlineArticle() {
 
           <h2 id="exif" className="text-2xl font-bold mt-8">The EXIF Metadata Problem, Explained</h2>
           <p>
-            Here's what's actually happening technically: many cameras and phones save a photo in its
+            Here&apos;s what&apos;s actually happening technically: many cameras and phones save a photo in its
             raw sensor orientation, then separately record a small piece of metadata (called EXIF
-            orientation data) telling any app that opens it "rotate this by X degrees when displaying."
+            orientation data) telling any app that opens it &quot;rotate this by X degrees when displaying.&quot;
             The problem is that not every app, website, or platform reads that flag the same way — some
             respect it perfectly, some ignore it, and some apply it inconsistently depending on how the
             image was uploaded or re-saved along the way.
           </p>
           <p>
-            This is exactly why a photo can look perfectly upright in your phone's gallery app but
+            This is exactly why a photo can look perfectly upright in your phone&apos;s gallery app but
             appear sideways the moment you upload it somewhere else. Rotating and re-downloading a
             photo through a tool like this one sidesteps the whole problem — instead of relying on a
             metadata flag that might get ignored, the pixels themselves get physically repositioned,
@@ -85,7 +85,7 @@ export default function HowToRotateImagesOnlineArticle() {
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Rotate Tool</h3>
-          <p>Navigate to the Image Rotate tool page, where you'll see an upload area ready for your photo.</p>
+          <p>Navigate to the Image Rotate tool page, where you&apos;ll see an upload area ready for your photo.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your Image</h3>
           <p>Click to browse your files or drag and drop the image you want to rotate.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Choose Your Rotation Direction</h3>
@@ -135,7 +135,7 @@ export default function HowToRotateImagesOnlineArticle() {
           <li><strong>Preparing images for print</strong> that need to be in the correct orientation before sending to a printer.</li>
           <li><strong>Fixing orientation issues in product photos</strong> for e-commerce listings.</li>
           <li><strong>Adjusting images for presentations</strong> where correct orientation matters for clarity.</li>
-          <li><strong>Correcting camera or scanner output</strong> that doesn't match the intended viewing direction.</li>
+          <li><strong>Correcting camera or scanner output</strong> that doesn&apos;t match the intended viewing direction.</li>
           </ul>
 
           <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
@@ -153,27 +153,27 @@ export default function HowToRotateImagesOnlineArticle() {
           <h3 className="text-lg font-semibold mt-4">Why does my photo appear sideways after uploading it online?</h3>
           <p>This typically happens because of a mismatch in how orientation metadata (EXIF data) is interpreted by different devices and platforms, even though the photo looked correct on your original device.</p>
           <h3 className="text-lg font-semibold mt-4">Does rotating an image reduce its quality?</h3>
-          <p>No, rotating an image in 90-degree increments doesn't reduce quality, since no pixel data is lost — only the orientation is adjusted.</p>
+          <p>No, rotating an image in 90-degree increments doesn&apos;t reduce quality, since no pixel data is lost — only the orientation is adjusted.</p>
           <h3 className="text-lg font-semibold mt-4">Can I rotate an image by a custom angle, not just 90 degrees?</h3>
           <p>This tool focuses on quick 90-degree and 180-degree rotations plus horizontal/vertical flipping — for straightening a photo at an arbitrary custom angle (like fixing a slightly tilted horizon), a full photo editor is better suited to that specific task.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Image Rotate tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
+          <p>Yes, it&apos;s completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">What image formats can I rotate with this tool?</h3>
           <p>The tool typically supports common formats like JPG, PNG, and WebP.</p>
           <h3 className="text-lg font-semibold mt-4">Can I rotate multiple images at once?</h3>
-          <p>Most rotate tools are optimized for adjusting one image at a time to ensure precise, individual control over each photo's orientation.</p>
+          <p>Most rotate tools are optimized for adjusting one image at a time to ensure precise, individual control over each photo&apos;s orientation.</p>
           <h3 className="text-lg font-semibold mt-4">Will rotating my image change its file size?</h3>
           <p>File size may change slightly depending on the format and any re-encoding involved, but the difference is typically minimal.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool on my phone?</h3>
           <p>Yes, the Image Rotate tool is fully responsive and works smoothly on smartphones and tablets.</p>
           <h3 className="text-lg font-semibold mt-4">Do I need any special software to rotate images?</h3>
           <p>No, everything happens directly in your browser — no downloads or installations required.</p>
-          <h3 className="text-lg font-semibold mt-4">What's the difference between rotating and flipping an image?</h3>
+          <h3 className="text-lg font-semibold mt-4">What&apos;s the difference between rotating and flipping an image?</h3>
           <p>Rotating turns the image around a central point (like 90 or 180 degrees), while flipping creates a mirror image either horizontally or vertically.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
-          <p>A sideways or upside-down photo can undermine an otherwise great image, but fixing it doesn't need to be complicated. Our free online Image Rotate tool lets you correct orientation issues in seconds, ensuring your photos display properly everywhere they're shared.</p>
+          <p>A sideways or upside-down photo can undermine an otherwise great image, but fixing it doesn&apos;t need to be complicated. Our free online Image Rotate tool lets you correct orientation issues in seconds, ensuring your photos display properly everywhere they&apos;re shared.</p>
           <p>Try it now, and explore our other image editing tools to keep your entire photo workflow fast, simple, and professional.</p>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>
@@ -181,7 +181,7 @@ export default function HowToRotateImagesOnlineArticle() {
             <li><Link href="/tools/image-cropper" className="text-primary hover:underline">Image Cropper</Link> — crop your rotated images to the perfect composition.</li>
             <li><Link href="/tools/resizer" className="text-primary hover:underline">Image Resizer</Link> — resize images after rotating for specific platform requirements.</li>
             <li><Link href="/tools/heic-to-jpg" className="text-primary hover:underline">HEIC to JPG Converter</Link> — convert iPhone photos before rotating and sharing them.</li>
-            <li><Link href="/tools/image-size-checker" className="text-primary hover:underline">Image Size Checker</Link> — check your final image's dimensions and file size.</li>
+            <li><Link href="/tools/image-size-checker" className="text-primary hover:underline">Image Size Checker</Link> — check your final image&apos;s dimensions and file size.</li>
           </ul>
 
           {/* CTA */}

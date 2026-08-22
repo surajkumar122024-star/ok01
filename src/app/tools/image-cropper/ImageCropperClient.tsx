@@ -38,8 +38,8 @@ export default function ImageCropperClient() {
       if (!container) return;
       const maxW = container.clientWidth || 700;
       const maxH = 480;
-      let w = img.naturalWidth;
-      let h = img.naturalHeight;
+      const w = img.naturalWidth;
+      const h = img.naturalHeight;
       const s = Math.min(1, maxW / w, maxH / h);
       setScale(s);
       const dw = Math.round(w * s);
@@ -64,10 +64,10 @@ export default function ImageCropperClient() {
     img.src = imageSrc;
   }, [imageSrc]);
 
-  const getPos = (e: any) => {
+  const getPos = (e: React.MouseEvent | React.TouchEvent) => {
     const rect = overlayRef.current!.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
     return { x: clientX - rect.left, y: clientY - rect.top };
   };
 
@@ -84,7 +84,7 @@ export default function ImageCropperClient() {
 
   const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v));
 
-  const onPointerDown = useCallback((e: any) => {
+  const onPointerDown = useCallback((e: React.MouseEvent | React.TouchEvent) => {
     if (!imageSrc) return;
     e.preventDefault();
     const pos = getPos(e);
@@ -95,7 +95,7 @@ export default function ImageCropperClient() {
     setStartBox({ ...cropBox });
   }, [imageSrc, cropBox]);
 
-  const onPointerMove = useCallback((e: any) => {
+  const onPointerMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
     if (!dragging || !startBox) return;
     e.preventDefault();
     const pos = getPos(e);
@@ -206,7 +206,7 @@ export default function ImageCropperClient() {
     }
     setAspectLock(true);
     setAspectRatio(ratio);
-    const { x, y, w } = cropBox;
+    const { y, w } = cropBox;
     const newH = Math.round(w / ratio);
     setCropBox((b) => ({ ...b, h: Math.min(newH, imageSize.h - y) }));
   };

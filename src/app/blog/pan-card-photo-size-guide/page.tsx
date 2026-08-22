@@ -44,7 +44,7 @@ export default function PanPhotoArticle() {
             <li><a href="#nsdl-utiitsl" className="hover:text-primary">NSDL vs UTIITSL — does the portal matter?</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to prepare your photo, step by step</a></li>
             <li><a href="#mistakes" className="hover:text-primary">Common mistakes that delay applications</a></li>
-            <li><a href="#use-cases" className="hover:text-primary">When you'll need this photo</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">When you&apos;ll need this photo</a></li>
             <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
           </ul>
         </nav>
@@ -74,8 +74,8 @@ export default function PanPhotoArticle() {
             or UTIITSL — and both generally follow the same core 2.5×3.5cm photo specification for
             physical form submissions. For online e-KYC-based applications specifically, upload
             requirements can occasionally differ slightly in file format or size limits between the
-            two portals, so it's worth double-checking the current guidance on whichever specific
-            portal you're applying through before submitting.
+            two portals, so it&apos;s worth double-checking the current guidance on whichever specific
+            portal you&apos;re applying through before submitting.
           </p>
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">How to Prepare Your Photo, Step by Step</h2>
@@ -92,18 +92,18 @@ export default function PanPhotoArticle() {
             <li><strong>Using a non-white background</strong> — PAN applications are typically stricter about background color than some other document photos.</li>
             <li><strong>Submitting a black-and-white photo</strong> — a recent color photograph is required.</li>
             <li><strong>Tinted glasses</strong> — plain glasses without tinted lenses are usually accepted, but check the latest guidance if unsure.</li>
-            <li><strong>Reusing a passport-size photo without checking dimensions</strong> — PAN's 2.5×3.5cm is smaller than the 3.5×4.5cm passport standard, so the two aren't directly interchangeable without re-cropping.</li>
+            <li><strong>Reusing a passport-size photo without checking dimensions</strong> — PAN&apos;s 2.5×3.5cm is smaller than the 3.5×4.5cm passport standard, so the two aren&apos;t directly interchangeable without re-cropping.</li>
           </ul>
 
           <p>
-            It's worth taking a bit more care with this photo than you might for a more temporary
+            It&apos;s worth taking a bit more care with this photo than you might for a more temporary
             document, since a PAN card typically stays valid and in use for years, serving as identity
             verification across bank account opening, large financial transactions, and annual tax
-            filing. A clear, well-lit photo you're comfortable seeing on an identity document for the
+            filing. A clear, well-lit photo you&apos;re comfortable seeing on an identity document for the
             long term is worth the extra few minutes compared to a rushed, poorly lit one.
           </p>
 
-          <h2 id="use-cases" className="text-2xl font-bold mt-8">When You'll Need This Photo</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">When You&apos;ll Need This Photo</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>New PAN card application via Form 49A or 49AA.</li>
             <li>PAN correction or update requests following a name change or other detail update.</li>

@@ -56,25 +56,25 @@ export default function PdfToImageArticle() {
           <p>
             Need to pull a page out of a PDF as an actual image? Whether you want to share a single
             page on social media, embed a slide into a blog post, or edit specific content in a photo
-            editor, converting a PDF page to an image is the practical fix — and it doesn't require
+            editor, converting a PDF page to an image is the practical fix — and it doesn&apos;t require
             Adobe Acrobat or a paid subscription to do it.
           </p>
 
           <h2 id="why" className="text-2xl font-bold mt-8">Why Convert PDF Pages to Images?</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Share an individual PDF page on social media or a messaging app that doesn't support PDF previews.</li>
+            <li>Share an individual PDF page on social media or a messaging app that doesn&apos;t support PDF previews.</li>
             <li>Embed a specific PDF slide or page directly into a website or blog post.</li>
             <li>Preview or reference document content without needing a PDF reader installed.</li>
             <li>Bring PDF content into an image editor for annotation or further editing.</li>
-            <li>Create a permanent, unchangeable visual snapshot of a document's exact current state.</li>
+            <li>Create a permanent, unchangeable visual snapshot of a document&apos;s exact current state.</li>
           </ul>
 
           <h2 id="why-png" className="text-2xl font-bold mt-8">Why This Tool Outputs PNG</h2>
           <p>
-            OpticShift Pro's PDF to Image tool exports every page as a <strong>PNG</strong>, and that's
+            OpticShift Pro&apos;s PDF to Image tool exports every page as a <strong>PNG</strong>, and that&apos;s
             a deliberate choice rather than a limitation. PDF pages frequently contain sharp text, thin
-            lines, and clean vector graphics — exactly the kind of content that PNG's lossless
-            compression preserves perfectly, while JPG's lossy compression can introduce visible
+            lines, and clean vector graphics — exactly the kind of content that PNG&apos;s lossless
+            compression preserves perfectly, while JPG&apos;s lossy compression can introduce visible
             blurring or artifacts around fine text edges. If you specifically need a smaller JPG
             afterward, you can run the exported PNG through the{' '}
             <Link href="/tools/png-to-jpg" className="text-primary underline underline-offset-2">PNG to JPG</Link>{' '}
@@ -104,19 +104,19 @@ export default function PdfToImageArticle() {
           </p>
           <div className="glass rounded-xl border p-6 space-y-2 text-sm">
             <p><strong>Screen viewing / chat sharing:</strong> standard resolution is usually sufficient</p>
-            <p><strong>Embedding in a web page:</strong> match roughly to the display size you'll actually use</p>
+            <p><strong>Embedding in a web page:</strong> match roughly to the display size you&apos;ll actually use</p>
             <p><strong>Printing at document size:</strong> higher resolution preserves crisp text</p>
             <p><strong>Zooming in to read fine print:</strong> higher resolution avoids blurry, pixelated text</p>
           </div>
           <p>
             If a PDF page contains both dense text and an embedded photo, exporting at a higher
-            resolution keeps the text legible without needing to zoom in — worth doing if you're
+            resolution keeps the text legible without needing to zoom in — worth doing if you&apos;re
             planning to read the exported image closely rather than just glance at it.
           </p>
 
           <h2 id="other-methods" className="text-2xl font-bold mt-8">Other Ways to Convert (and Their Trade-Offs)</h2>
           <p>
-            A browser-based tool like this one is the fastest, free, no-install option, but it's worth
+            A browser-based tool like this one is the fastest, free, no-install option, but it&apos;s worth
             knowing the alternatives and where they fall short in comparison:
           </p>
           <ul className="list-disc pl-6 space-y-2">
@@ -133,7 +133,7 @@ export default function PdfToImageArticle() {
           <ul className="list-disc pl-6 space-y-2">
             <li>Sharing a single contract page or diagram without sending the whole document.</li>
             <li>Embedding a report chart or slide directly into a blog post or presentation.</li>
-            <li>Creating a visual archive of a document's exact state, including any filled-in form fields.</li>
+            <li>Creating a visual archive of a document&apos;s exact state, including any filled-in form fields.</li>
             <li>Extracting scanned document pages for further editing in a photo tool.</li>
             <li>Quickly previewing PDF content on a device without a PDF reader app installed.</li>
           </ul>
@@ -150,7 +150,7 @@ export default function PdfToImageArticle() {
             </div>
             <div>
               <p className="font-semibold">Will each PDF page become one image?</p>
-              <p className="text-muted-foreground">Yes, every page in the PDF is rendered as its own separate PNG image, matching the page's original layout.</p>
+              <p className="text-muted-foreground">Yes, every page in the PDF is rendered as its own separate PNG image, matching the page&apos;s original layout.</p>
             </div>
             <div>
               <p className="font-semibold">Does this work with scanned PDFs?</p>
@@ -158,7 +158,7 @@ export default function PdfToImageArticle() {
             </div>
             <div>
               <p className="font-semibold">Is there a limit to how many pages I can convert?</p>
-              <p className="text-muted-foreground">There's no fixed limit, though very long documents take longer to render since processing happens entirely in your browser.</p>
+              <p className="text-muted-foreground">There&apos;s no fixed limit, though very long documents take longer to render since processing happens entirely in your browser.</p>
             </div>
             <div>
               <p className="font-semibold">Is my PDF uploaded to a server?</p>
@@ -166,7 +166,7 @@ export default function PdfToImageArticle() {
             </div>
             <div>
               <p className="font-semibold">Why does PNG make more sense than JPG for PDF pages?</p>
-              <p className="text-muted-foreground">Most PDF pages contain sharp text and vector graphics, which PNG's lossless compression preserves cleanly; JPG's lossy compression can introduce visible blurring around fine text edges.</p>
+              <p className="text-muted-foreground">Most PDF pages contain sharp text and vector graphics, which PNG&apos;s lossless compression preserves cleanly; JPG&apos;s lossy compression can introduce visible blurring around fine text edges.</p>
             </div>
             <div>
               <p className="font-semibold">Can I convert a password-protected PDF?</p>
@@ -176,7 +176,7 @@ export default function PdfToImageArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
           <p>
-            Converting a PDF page to an image doesn't need to involve a paid subscription or a lossy
+            Converting a PDF page to an image doesn&apos;t need to involve a paid subscription or a lossy
             screenshot. Exporting directly to PNG keeps text and detail sharp, and if you need a
             smaller file afterward, converting to JPG is one quick extra step rather than a trade-off
             you have to accept upfront.

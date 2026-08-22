@@ -68,7 +68,7 @@ export default function SignatureResizerArticle() {
           </div>
           <p>
             As with exam photos, exact requirements vary by form — treat these numbers as a reliable
-            starting point and confirm against your specific form's instructions if it states a
+            starting point and confirm against your specific form&apos;s instructions if it states a
             different size.
           </p>
 
@@ -88,14 +88,14 @@ export default function SignatureResizerArticle() {
             <li>Sign on plain white paper with dark ink, then photograph or scan it in good lighting.</li>
             <li>Open the <Link href="/tools/signature-resizer" className="text-primary underline underline-offset-2">Signature Resizer</Link> tool and upload the image.</li>
             <li>Crop tightly around just the signature, removing excess white space.</li>
-            <li>Confirm the output fits within your form's stated pixel and file size limits.</li>
+            <li>Confirm the output fits within your form&apos;s stated pixel and file size limits.</li>
             <li>Download the finished file, ready to upload.</li>
           </ol>
 
           <h2 id="why-rejected" className="text-2xl font-bold mt-8">Why Signature Uploads Get Rejected</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>File too large</strong> — a straight phone photo is often 100x or more above a 10-20KB limit.</li>
-            <li><strong>Wrong pixel dimensions</strong> — many forms expect an exact width and height, not just "small enough."</li>
+            <li><strong>Wrong pixel dimensions</strong> — many forms expect an exact width and height, not just &quot;small enough.&quot;</li>
             <li><strong>Too much white space around the signature</strong> — cropping loosely wastes the limited pixel area on blank paper instead of the signature itself.</li>
             <li><strong>Light or faded ink</strong> — a pale signature can become illegible after the heavy compression needed to hit a small file size.</li>
           </ul>
@@ -116,7 +116,7 @@ export default function SignatureResizerArticle() {
             </div>
             <div>
               <p className="font-semibold">Why does my form reject the signature file?</p>
-              <p className="text-muted-foreground">Most rejections happen because the file exceeds the maximum size limit or doesn't match the required pixel dimensions — cropping tightly and downloading here usually resolves both.</p>
+              <p className="text-muted-foreground">Most rejections happen because the file exceeds the maximum size limit or doesn&apos;t match the required pixel dimensions — cropping tightly and downloading here usually resolves both.</p>
             </div>
             <div>
               <p className="font-semibold">Can I use a stylus-drawn signature instead of a scanned one?</p>
@@ -124,7 +124,7 @@ export default function SignatureResizerArticle() {
             </div>
             <div>
               <p className="font-semibold">Is there a standard signature size across all forms?</p>
-              <p className="text-muted-foreground">No, requirements vary by form; always check the specific size and KB limit stated in your application's instructions.</p>
+              <p className="text-muted-foreground">No, requirements vary by form; always check the specific size and KB limit stated in your application&apos;s instructions.</p>
             </div>
             <div>
               <p className="font-semibold">Is my image uploaded anywhere while using this tool?</p>
@@ -136,14 +136,14 @@ export default function SignatureResizerArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I resize the same signature for multiple forms with different size limits?</p>
-              <p className="text-muted-foreground">Yes, keep one clean master scan and re-crop or re-compress it separately for each form's specific pixel and file size requirement rather than photographing your signature fresh each time.</p>
+              <p className="text-muted-foreground">Yes, keep one clean master scan and re-crop or re-compress it separately for each form&apos;s specific pixel and file size requirement rather than photographing your signature fresh each time.</p>
             </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><Link href="/tools/exam-photo" className="text-primary hover:underline">Exam Photo Resizer</Link> — the matching photo specification most exam forms also require.</li>
-            <li><Link href="/tools/compressor" className="text-primary hover:underline">Image Compressor</Link> — further reduce file size if your form's limit is unusually small.</li>
+            <li><Link href="/tools/compressor" className="text-primary hover:underline">Image Compressor</Link> — further reduce file size if your form&apos;s limit is unusually small.</li>
             <li><Link href="/tools/pan-photo" className="text-primary hover:underline">PAN Card Photo Maker</Link> — another common document photo requirement.</li>
           </ul>
 

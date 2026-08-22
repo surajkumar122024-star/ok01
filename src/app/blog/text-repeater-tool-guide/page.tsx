@@ -55,8 +55,8 @@ export default function TextRepeaterToolGuideArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Introduction</h2>
 
-          <p>Sometimes you need the same word, phrase, or line of text repeated many times over — whether you're testing how a design element handles long content, creating a stylized social media post, or generating placeholder data for a project. Manually copying and pasting text dozens or hundreds of times is slow and impractical.</p>
-          <p>A <strong>text repeater</strong> solves this instantly, letting you generate any amount of repeated text in seconds with just a few clicks. In this guide, we'll walk through exactly how to use our free online Text Repeater tool and explore the many practical (and creative) ways it can save you time.</p>
+          <p>Sometimes you need the same word, phrase, or line of text repeated many times over — whether you&apos;re testing how a design element handles long content, creating a stylized social media post, or generating placeholder data for a project. Manually copying and pasting text dozens or hundreds of times is slow and impractical.</p>
+          <p>A <strong>text repeater</strong> solves this instantly, letting you generate any amount of repeated text in seconds with just a few clicks. In this guide, we&apos;ll walk through exactly how to use our free online Text Repeater tool and explore the many practical (and creative) ways it can save you time.</p>
 
           <h2 id="what-is" className="text-2xl font-bold mt-8">What Is a Text Repeater?</h2>
 
@@ -65,7 +65,7 @@ export default function TextRepeaterToolGuideArticle() {
 
           <h2 id="example" className="text-2xl font-bold mt-8">A Real Example</h2>
           <div className="glass rounded-xl border p-6 space-y-2 font-mono text-sm">
-            <p><span className="text-muted-foreground">Input:</span> "Loading..."  |  Count: 5  |  Separator: newline</p>
+            <p><span className="text-muted-foreground">Input:</span> &quot;Loading...&quot;  |  Count: 5  |  Separator: newline</p>
             <p className="text-green-600 mt-2">Output:</p>
             <p>Loading...<br />Loading...<br />Loading...<br />Loading...<br />Loading...</p>
           </div>
@@ -78,7 +78,7 @@ export default function TextRepeaterToolGuideArticle() {
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Text Repeater Tool</h3>
-          <p>Go to the Text Repeater tool page, where you'll see a text input box and a field for specifying repetition count.</p>
+          <p>Go to the Text Repeater tool page, where you&apos;ll see a text input box and a field for specifying repetition count.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Enter Your Text</h3>
           <p>Type or paste the word, phrase, or sentence you want to repeat into the input box.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Set the Number of Repetitions</h3>
@@ -142,19 +142,19 @@ export default function TextRepeaterToolGuideArticle() {
           <h3 className="text-lg font-semibold mt-4">Can I add spaces or line breaks between each repetition?</h3>
           <p>Yes, most text repeaters, including ours, offer separator options like spaces, line breaks, or custom characters between repeated instances.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Text Repeater tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up or installation required.</p>
+          <p>Yes, it&apos;s completely free with no sign-up or installation required.</p>
           <h3 className="text-lg font-semibold mt-4">Is there a limit to how much text I can repeat?</h3>
           <p>The tool comfortably handles typical use cases, from short phrases repeated many times to longer text blocks repeated a smaller number of times.</p>
           <h3 className="text-lg font-semibold mt-4">Can I repeat an entire sentence or paragraph, not just a single word?</h3>
-          <p>Yes, the tool works with any length of text, whether it's a single word, a phrase, or a full sentence.</p>
+          <p>Yes, the tool works with any length of text, whether it&apos;s a single word, a phrase, or a full sentence.</p>
           <h3 className="text-lg font-semibold mt-4">Why would developers use a text repeater?</h3>
           <p>Developers often use repeated text to test how website or app layouts handle long or overflowing content during the design and testing process.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool on my phone?</h3>
           <p>Yes, the Text Repeater is fully responsive and works smoothly on smartphones and tablets.</p>
           <h3 className="text-lg font-semibold mt-4">Does the tool save or store my text?</h3>
-          <p>No, your text is processed instantly in your browser and isn't stored or shared elsewhere.</p>
+          <p>No, your text is processed instantly in your browser and isn&apos;t stored or shared elsewhere.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use repeated text for social media captions?</h3>
-          <p>Yes, many people use repeated words or phrases creatively in social media captions and posts, though it's best to keep it tasteful and platform-appropriate.</p>
+          <p>Yes, many people use repeated words or phrases creatively in social media captions and posts, though it&apos;s best to keep it tasteful and platform-appropriate.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 

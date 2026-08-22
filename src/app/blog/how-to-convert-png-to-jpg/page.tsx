@@ -40,7 +40,7 @@ export default function PngToJpgArticle() {
         <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
           <p className="font-semibold mb-2">In this guide</p>
           <ul className="space-y-1 list-disc list-inside text-muted-foreground">
-            <li><a href="#difference" className="hover:text-primary">PNG vs JPG — what's the difference?</a></li>
+            <li><a href="#difference" className="hover:text-primary">PNG vs JPG — what&apos;s the difference?</a></li>
             <li><a href="#why" className="hover:text-primary">Why convert PNG to JPG?</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to convert, step by step</a></li>
             <li><a href="#when-not" className="hover:text-primary">When should you NOT convert?</a></li>
@@ -67,7 +67,7 @@ export default function PngToJpgArticle() {
           <h2 id="why" className="text-2xl font-bold mt-8">Why Convert PNG to JPG?</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Smaller file sizes:</strong> JPG files are typically 50 to 80 percent smaller than equivalent PNG files, making them much easier to share, upload, and store.</li>
-            <li><strong>Faster website loading:</strong> Smaller images load faster, which improves your website's performance and Google PageSpeed score.</li>
+            <li><strong>Faster website loading:</strong> Smaller images load faster, which improves your website&apos;s performance and Google PageSpeed score.</li>
             <li><strong>Social media compatibility:</strong> Most social media platforms prefer JPG for photo uploads and may automatically convert your PNG files anyway, often reducing quality in the process.</li>
             <li><strong>Email attachments:</strong> JPG files are much easier to attach to emails because of their smaller size.</li>
             <li><strong>Storage savings:</strong> Converting a folder full of PNG screenshots or photos to JPG can save gigabytes of storage space.</li>
@@ -80,7 +80,7 @@ export default function PngToJpgArticle() {
           <ol className="list-decimal pl-6 space-y-2">
             <li>Open the <strong>PNG to JPG</strong> converter tool on OpticShift Pro.</li>
             <li>Upload your PNG image by clicking the upload area or dragging and dropping the file.</li>
-            <li>The tool automatically converts your PNG to a JPG at 92% quality — a level chosen because it's high enough that compression artifacts are rarely visible, while still delivering a meaningfully smaller file.</li>
+            <li>The tool automatically converts your PNG to a JPG at 92% quality — a level chosen because it&apos;s high enough that compression artifacts are rarely visible, while still delivering a meaningfully smaller file.</li>
             <li>Click Download to save your converted JPG file.</li>
           </ol>
           <p>
@@ -116,9 +116,9 @@ export default function PngToJpgArticle() {
 
           <h2 id="quality-ref" className="text-2xl font-bold mt-8">JPG Quality Reference by Use Case</h2>
           <p>
-            OpticShift Pro's PNG to JPG converter uses a fixed 92% quality by default — a level that
+            OpticShift Pro&apos;s PNG to JPG converter uses a fixed 92% quality by default — a level that
             works well for nearly every situation without requiring a decision. If you specifically
-            need a different quality level for a particular use case, here's a reference for what to
+            need a different quality level for a particular use case, here&apos;s a reference for what to
             target using the{' '}
             <Link href="/tools/compressor" className="text-primary underline underline-offset-2">Image Compressor</Link>{' '}
             as a follow-up step:

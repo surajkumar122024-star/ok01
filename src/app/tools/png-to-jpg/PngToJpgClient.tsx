@@ -40,7 +40,7 @@ export default function PngToJpgClient() {
       };
       img.onerror = () => { setIsProcessing(false); URL.revokeObjectURL(url); };
       img.src = url;
-    } catch (err) {
+    } catch {
       toast({ title: "Error", description: "Failed to convert image.", variant: "destructive" });
       setIsProcessing(false);
     }

@@ -53,7 +53,7 @@ export default function HowToMergePdfFilesArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Whether you're combining multiple reports into a single document, assembling a portfolio,
+            Whether you&apos;re combining multiple reports into a single document, assembling a portfolio,
             or putting together scanned pages into one file, merging PDFs is one of the most common
             document tasks people face. Doing this manually — or hunting for the right setting in
             complex desktop software — can be more frustrating than the task itself warrants.
@@ -70,13 +70,13 @@ export default function HowToMergePdfFilesArticle() {
             your intended final order — <code>01-cover.pdf</code>, <code>02-resume.pdf</code>,{' '}
             <code>03-references.pdf</code> — before uploading. Arranging files by memory or original,
             unrelated filenames is where most merge mistakes happen, especially with five or more
-            documents where it's easy to lose track of the intended sequence partway through.
+            documents where it&apos;s easy to lose track of the intended sequence partway through.
           </p>
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Merge Tool</h3>
-          <p>Go to the PDF Merge tool page, where you'll see an upload area ready to accept multiple files.</p>
+          <p>Go to the PDF Merge tool page, where you&apos;ll see an upload area ready to accept multiple files.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your PDF Files</h3>
           <p>Click to browse your files or drag and drop all the PDFs you want to combine into the tool at once.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Arrange the File Order</h3>
@@ -97,7 +97,7 @@ export default function HowToMergePdfFilesArticle() {
           <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Maintains original formatting and quality</strong> across all merged pages.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added to your document.</li>
-          <li><strong>Secure processing</strong> designed to protect your document's privacy.</li>
+          <li><strong>Secure processing</strong> designed to protect your document&apos;s privacy.</li>
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
@@ -106,8 +106,8 @@ export default function HowToMergePdfFilesArticle() {
           <p><strong>1. Simplifies Document Sharing</strong> Sending one combined PDF is far more professional and convenient than sending multiple separate attachments.</p>
           <p><strong>2. Saves Time</strong> Instead of manually copying and pasting content or using complex desktop software, merging takes just a few clicks.</p>
           <p><strong>3. Keeps Documents Organized</strong> Combining related files — like invoices, reports, or contracts — into a single document makes them easier to store, reference, and archive.</p>
-          <p><strong>4. Preserves Original Quality</strong> Unlike some conversion processes, merging PDFs doesn't compress or degrade the quality of the original pages.</p>
-          <p><strong>5. Works Without Specialized Software</strong> You don't need Adobe Acrobat or any other paid software — the entire process happens online, for free.</p>
+          <p><strong>4. Preserves Original Quality</strong> Unlike some conversion processes, merging PDFs doesn&apos;t compress or degrade the quality of the original pages.</p>
+          <p><strong>5. Works Without Specialized Software</strong> You don&apos;t need Adobe Acrobat or any other paid software — the entire process happens online, for free.</p>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
@@ -124,8 +124,8 @@ export default function HowToMergePdfFilesArticle() {
           <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
-          <li>Arrange your files in the correct order before uploading, or use the tool's reordering feature immediately after upload to avoid confusion later.</li>
-          <li>Give merged files clear, descriptive names (like "Q1_Financial_Report_Combined.pdf") to make them easy to identify later.</li>
+          <li>Arrange your files in the correct order before uploading, or use the tool&apos;s reordering feature immediately after upload to avoid confusion later.</li>
+          <li>Give merged files clear, descriptive names (like &quot;Q1_Financial_Report_Combined.pdf&quot;) to make them easy to identify later.</li>
           <li>Double-check the final merged document for correct page order and completeness before sending it to others, especially for important business or legal documents.</li>
           <li>If your source documents include different page sizes or orientations, preview the merged file to ensure the layout still looks clean and professional.</li>
           <li>For large merges involving many files, consider merging in smaller batches first, then combining those batches into a final document for easier organization.</li>
@@ -142,21 +142,21 @@ export default function HowToMergePdfFilesArticle() {
           <h3 className="text-lg font-semibold mt-4">Can I change the order of pages after merging?</h3>
           <p>Most tools allow you to reorder files before merging; if you need to reorder specific pages after merging, you may need a separate PDF page organizer tool.</p>
           <h3 className="text-lg font-semibold mt-4">Is this PDF Merge tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
+          <p>Yes, it&apos;s completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">Are password-protected PDFs supported for merging?</h3>
           <p>Password-protected PDFs generally need to be unlocked first before their content can be read and merged, since the encryption prevents the tool from accessing the page data directly.</p>
           <h3 className="text-lg font-semibold mt-4">Can I merge PDFs on my phone?</h3>
           <p>Yes, the tool is fully responsive and works smoothly on smartphones and tablets through your mobile browser.</p>
           <h3 className="text-lg font-semibold mt-4">Is my document safe when I use an online PDF merge tool?</h3>
           <p>Reputable tools like ours are designed with privacy and security in mind, processing your documents only for the purpose of merging.</p>
-          <h3 className="text-lg font-semibold mt-4">What's the maximum file size I can merge?</h3>
-          <p>This depends on the specific tool's capacity, but most everyday documents like reports, resumes, and scanned pages are well within typical limits.</p>
+          <h3 className="text-lg font-semibold mt-4">What&apos;s the maximum file size I can merge?</h3>
+          <p>This depends on the specific tool&apos;s capacity, but most everyday documents like reports, resumes, and scanned pages are well within typical limits.</p>
           <h3 className="text-lg font-semibold mt-4">Can I merge different file types, like Word documents and PDFs, together?</h3>
           <p>This tool is specifically designed for merging PDF files; combining other file types typically requires converting them to PDF format first.</p>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
-          <p>Merging PDF files doesn't need to involve expensive software or complicated processes. Our free online PDF Merge tool lets you combine multiple documents into one clean, organized file in just a few clicks — perfect for reports, portfolios, applications, and any project that calls for a single, professional document.</p>
+          <p>Merging PDF files doesn&apos;t need to involve expensive software or complicated processes. Our free online PDF Merge tool lets you combine multiple documents into one clean, organized file in just a few clicks — perfect for reports, portfolios, applications, and any project that calls for a single, professional document.</p>
           <p>Try it now, and explore our other PDF tools to handle your entire document workflow in one place.</p>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>

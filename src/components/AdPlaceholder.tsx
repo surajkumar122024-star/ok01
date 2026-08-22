@@ -16,8 +16,11 @@ const minHeightMap = {
 export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlaceholderProps) => {
   useEffect(() => {
     try {
-      ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
-    } catch (e) {}
+      const w = window as typeof window & { adsbygoogle?: unknown[] };
+      (w.adsbygoogle = w.adsbygoogle || []).push({});
+    } catch {
+      // AdSense script may not be loaded yet (e.g. blocked by an ad blocker); safe to ignore.
+    }
   }, []);
 
   return (

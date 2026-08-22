@@ -24,8 +24,9 @@ export default function JsonFormatterClient() {
       } else {
         setOutput(JSON.stringify(parsed))
       }
-    } catch (e: any) {
-      setError(`❌ Invalid JSON: ${e.message}`)
+    } catch (e: unknown) {
+      const message = e instanceof Error ? e.message : 'Unknown error'
+      setError(`❌ Invalid JSON: ${message}`)
     }
   }
 

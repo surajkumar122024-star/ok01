@@ -132,7 +132,7 @@ export const Footer = () => {
             &copy; {new Date().getFullYear()} OpticShift Pro. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground text-center sm:text-right">
-            Built for people who'd rather their files stay on their own device.
+            Built for people who&apos;d rather their files stay on their own device.
           </p>
         </div>
       </div>

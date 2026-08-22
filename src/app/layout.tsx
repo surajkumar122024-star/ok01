@@ -7,6 +7,7 @@ import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ok01.vercel.app'),
   title: {
     default: 'OpticShift Pro — Free Online Image Tools',
     template: '%s | OpticShift Pro',

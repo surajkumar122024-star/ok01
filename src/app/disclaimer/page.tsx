@@ -32,8 +32,8 @@ export default function DisclaimerPage() {
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Disclaimer</h1>
           <p className="text-muted-foreground">
-            Important context on what OpticShift Pro's tools do, what they don't guarantee, and
-            what you're responsible for checking yourself.
+            Important context on what OpticShift Pro&apos;s tools do, what they don&apos;t guarantee, and
+            what you&apos;re responsible for checking yourself.
           </p>
           <p className="text-sm text-muted-foreground italic">Last Updated: July 2026</p>
         </div>
@@ -114,7 +114,7 @@ export default function DisclaimerPage() {
                 No files are uploaded to our servers at any point during tool usage
               </strong>
               . Your images, PDFs, and text never leave your device — they are read into your
-              browser's memory, transformed, and offered back to you as a download, without ever
+              browser&apos;s memory, transformed, and offered back to you as a download, without ever
               being transmitted anywhere.
             </p>
             <p className="leading-relaxed text-muted-foreground">
@@ -122,7 +122,7 @@ export default function DisclaimerPage() {
               in some edge cases the correctness of a result can be affected by your browser
               version, available device memory, or an unstable page (such as closing a tab mid-way
               through processing). We are not able to see, recover, or assist with a file if it
-              only ever existed in your browser's memory and was lost before you downloaded it.
+              only ever existed in your browser&apos;s memory and was lost before you downloaded it.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               This architecture is a deliberate design choice, not an incidental detail — it means
@@ -195,7 +195,7 @@ export default function DisclaimerPage() {
               We recommend always navigating to official government or institutional websites
               directly (rather than through a third-party link) when submitting sensitive
               information or an official application. If you notice an outdated or broken external
-              link on our site, we'd appreciate you letting us know through our{' '}
+              link on our site, we&apos;d appreciate you letting us know through our{' '}
               <Link href="/contact" className="text-primary underline underline-offset-2">
                 Contact page
               </Link>
@@ -210,7 +210,7 @@ export default function DisclaimerPage() {
               and its partners, and their content is not selected or controlled by us. We are not
               responsible for the products, services, or claims made in any third-party
               advertisement shown on this site, and clicking an ad takes you to a page governed by
-              that advertiser's own terms, not ours.
+              that advertiser&apos;s own terms, not ours.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               Further detail on how advertising cookies are used is available in our{' '}

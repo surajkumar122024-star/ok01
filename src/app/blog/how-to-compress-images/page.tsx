@@ -41,7 +41,7 @@ export default function ImageCompressorArticle() {
           <p className="font-semibold mb-2">In this guide</p>
           <ul className="space-y-1 list-disc list-inside text-muted-foreground">
             <li><a href="#what-is-compression" className="hover:text-primary">What image compression actually does</a></li>
-            <li><a href="#lossy-vs-lossless" className="hover:text-primary">Lossy vs. lossless: what's the real difference</a></li>
+            <li><a href="#lossy-vs-lossless" className="hover:text-primary">Lossy vs. lossless: what&apos;s the real difference</a></li>
             <li><a href="#real-example" className="hover:text-primary">A real before/after example</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to compress an image step by step</a></li>
             <li><a href="#format-choice" className="hover:text-primary">JPG vs PNG vs WebP for compression</a></li>
@@ -58,9 +58,9 @@ export default function ImageCompressorArticle() {
           <p>
             A photo straight off a modern phone camera routinely lands somewhere between 3MB and 8MB.
             Most websites, forms, and email systems were never built around files that large — and the
-            gap between "what your camera produces" and "what the internet actually needs" is exactly
-            the problem image compression solves. This guide goes past the basic "click compress"
-            instructions and actually explains what's happening to your photo, so you can make better
+            gap between &quot;what your camera produces&quot; and &quot;what the internet actually needs&quot; is exactly
+            the problem image compression solves. This guide goes past the basic &quot;click compress&quot;
+            instructions and actually explains what&apos;s happening to your photo, so you can make better
             decisions about quality settings instead of guessing.
           </p>
 
@@ -82,11 +82,11 @@ export default function ImageCompressorArticle() {
             compressed images tend to show artifacts around edges and text first.
           </p>
 
-          <h2 id="lossy-vs-lossless" className="text-2xl font-bold mt-8">Lossy vs. Lossless: What's the Real Difference</h2>
+          <h2 id="lossy-vs-lossless" className="text-2xl font-bold mt-8">Lossy vs. Lossless: What&apos;s the Real Difference</h2>
           <p>
             <strong>Lossy compression</strong> (used by JPG and, to an adjustable degree, WebP)
             permanently discards some image data to achieve a much smaller file. The key word is
-            "permanently" — once discarded, that specific detail cannot be recovered, even by
+            &quot;permanently&quot; — once discarded, that specific detail cannot be recovered, even by
             re-opening and re-saving at 100% quality. This is why professional photographers keep an
             uncompressed or minimally-compressed master file and only export compressed copies for
             specific uses.
@@ -95,12 +95,12 @@ export default function ImageCompressorArticle() {
             <strong>Lossless compression</strong> (used by PNG) finds more efficient ways to encode the
             exact same pixel data without throwing anything away. The trade-off is that lossless
             compression can only shrink a file so much — a detailed photograph saved as PNG will always
-            be considerably larger than the same photo saved as JPG, because PNG isn't allowed to
+            be considerably larger than the same photo saved as JPG, because PNG isn&apos;t allowed to
             simplify anything to save space.
           </p>
           <p>
             In practice, most people compressing a photo for the web want lossy compression at a
-            quality level where the loss isn't visually noticeable — which is exactly what a good{' '}
+            quality level where the loss isn&apos;t visually noticeable — which is exactly what a good{' '}
             <Link href="/tools/compressor" className="text-primary underline underline-offset-2">
               Image Compressor
             </Link>{' '}
@@ -114,7 +114,7 @@ export default function ImageCompressorArticle() {
             compression at 80% quality typically brings it down to somewhere between 600KB and 900KB —
             roughly an 80% reduction — with no difference visible to the naked eye at normal screen
             sizes. Pushing the same photo down to 50% quality might get it under 300KB, but at that
-            point you'll usually start to notice slightly softer detail in busy areas like foliage or
+            point you&apos;ll usually start to notice slightly softer detail in busy areas like foliage or
             fabric texture if you zoom in.
           </p>
           <p>
@@ -130,11 +130,11 @@ export default function ImageCompressorArticle() {
             <li>Upload your JPG or PNG by clicking the upload area or dragging the file in.</li>
             <li>Drag the quality slider — start around 75-80% and adjust from there.</li>
             <li>Compare the Original Size and Compressed Size cards to see the exact reduction.</li>
-            <li>Download the compressed file once you're happy with the size-to-quality balance.</li>
+            <li>Download the compressed file once you&apos;re happy with the size-to-quality balance.</li>
           </ol>
           <p>
             The entire process runs inside your browser using the Canvas API — your photo is never
-            uploaded to a server at any point, which matters if you're compressing anything personal or
+            uploaded to a server at any point, which matters if you&apos;re compressing anything personal or
             client-confidential.
           </p>
 
@@ -147,7 +147,7 @@ export default function ImageCompressorArticle() {
             </li>
           </ul>
           <p>
-            If you're not sure which format you're currently dealing with, or need to switch between
+            If you&apos;re not sure which format you&apos;re currently dealing with, or need to switch between
             them, the{' '}
             <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">JPG to PNG</Link>{' '}
             and{' '}
@@ -157,9 +157,9 @@ export default function ImageCompressorArticle() {
 
           <h2 id="mistakes" className="text-2xl font-bold mt-8">Common Compression Mistakes</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Compressing the same file repeatedly.</strong> Each compression pass on an already-compressed JPG discards more data on top of what's already gone. Always compress from your original source.</li>
-            <li><strong>Compressing before resizing.</strong> Resize to your actual display dimensions first — compressing an oversized image wastes quality budget on pixels you're about to throw away anyway. The <Link href="/tools/resizer" className="text-primary underline underline-offset-2">Image Resizer</Link> handles this step.</li>
-            <li><strong>Using PNG for photos out of habit.</strong> PNG's lossless nature means a photo saved as PNG is often 4-10x larger than the same photo saved as a well-compressed JPG, for no visual benefit on most photographic content.</li>
+            <li><strong>Compressing the same file repeatedly.</strong> Each compression pass on an already-compressed JPG discards more data on top of what&apos;s already gone. Always compress from your original source.</li>
+            <li><strong>Compressing before resizing.</strong> Resize to your actual display dimensions first — compressing an oversized image wastes quality budget on pixels you&apos;re about to throw away anyway. The <Link href="/tools/resizer" className="text-primary underline underline-offset-2">Image Resizer</Link> handles this step.</li>
+            <li><strong>Using PNG for photos out of habit.</strong> PNG&apos;s lossless nature means a photo saved as PNG is often 4-10x larger than the same photo saved as a well-compressed JPG, for no visual benefit on most photographic content.</li>
             <li><strong>Not checking at real display size.</strong> Judging compression quality at 400% zoom overstates visible artifacts; check at the size the image will actually be viewed.</li>
           </ul>
 
@@ -181,21 +181,21 @@ export default function ImageCompressorArticle() {
           <p>
             Most free online compressors upload your image to a remote server, compress it there, and
             send back the result — which means your photo, even briefly, exists on infrastructure you
-            can't see. OpticShift Pro's Image Compressor works differently: everything happens using
+            can&apos;t see. OpticShift Pro&apos;s Image Compressor works differently: everything happens using
             JavaScript already running in your browser. Your image is read into memory, re-encoded
-            locally, and offered back as a download — it's never transmitted anywhere, which matters
+            locally, and offered back as a download — it&apos;s never transmitted anywhere, which matters
             for anything from a personal photo to a confidential business document scan.
           </p>
 
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
-              <p className="font-semibold">What's the best quality setting for most photos?</p>
+              <p className="font-semibold">What&apos;s the best quality setting for most photos?</p>
               <p className="text-muted-foreground">Somewhere between 70-85% quality gives the best balance for most photographic content — noticeable file size reduction with no visible quality loss at normal viewing sizes.</p>
             </div>
             <div>
               <p className="font-semibold">Can I compress a PNG the same way as a JPG?</p>
-              <p className="text-muted-foreground">Yes, both formats are supported, though PNG files with large flat-color areas (like screenshots) compress less dramatically than photographic JPGs, since PNG's algorithm works differently.</p>
+              <p className="text-muted-foreground">Yes, both formats are supported, though PNG files with large flat-color areas (like screenshots) compress less dramatically than photographic JPGs, since PNG&apos;s algorithm works differently.</p>
             </div>
             <div>
               <p className="font-semibold">Will compression make text in my image blurry?</p>
@@ -207,13 +207,13 @@ export default function ImageCompressorArticle() {
             </div>
             <div>
               <p className="font-semibold">Is there a limit to how many images I can compress?</p>
-              <p className="text-muted-foreground">No — since everything runs locally in your browser with no server upload involved, there's no daily limit, account requirement, or watermark.</p>
+              <p className="text-muted-foreground">No — since everything runs locally in your browser with no server upload involved, there&apos;s no daily limit, account requirement, or watermark.</p>
             </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
           <p>
-            Image compression isn't just a technical checkbox before publishing a photo — understanding
+            Image compression isn&apos;t just a technical checkbox before publishing a photo — understanding
             roughly how it works, what quality setting to reach for, and which format actually fits
             your content lets you consistently get smaller files without the guesswork or occasional
             quality surprises. Start around 75-80% quality on your next photo, compare the before and

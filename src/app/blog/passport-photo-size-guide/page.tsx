@@ -23,7 +23,7 @@ export default function PassportPhotoArticle() {
             Passport Photo Size Guide (35×45mm)
           </h1>
           <p className="text-muted-foreground text-lg">
-            The exact Passport Seva specification, why face-framing matters more than you'd think, and how to prepare a compliant photo yourself.
+            The exact Passport Seva specification, why face-framing matters more than you&apos;d think, and how to prepare a compliant photo yourself.
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>📅 July 2026</span>
@@ -92,7 +92,7 @@ export default function PassportPhotoArticle() {
             Several other countries use the same 35×45mm standard for passports and some long-stay
             visa categories, which makes this crop useful beyond just Indian passport applications.
             That said, requirements genuinely do vary by country — some, like the US, use a different
-            2×2 inch square format instead — so always confirm your specific destination country's
+            2×2 inch square format instead — so always confirm your specific destination country&apos;s
             current requirement before submitting rather than assuming this size applies universally.
           </p>
 
@@ -106,11 +106,11 @@ export default function PassportPhotoArticle() {
           </ul>
 
           <p>
-            Most Indian passport applications today are submitted through Passport Seva's online
+            Most Indian passport applications today are submitted through Passport Seva&apos;s online
             portal, which typically accepts a digital photo upload matching this specification rather
-            than requiring a physical print for the initial application — though it's worth checking
+            than requiring a physical print for the initial application — though it&apos;s worth checking
             current requirements, since some appointment types or corrections may still expect physical
-            copies. Preparing a correctly cropped digital file in advance means you're ready either way.
+            copies. Preparing a correctly cropped digital file in advance means you&apos;re ready either way.
           </p>
 
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
@@ -121,7 +121,7 @@ export default function PassportPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">What if I wear glasses daily?</p>
-              <p className="text-muted-foreground">Many passport guidelines now discourage glasses in the photo entirely to avoid glare; check your local passport office's current rule.</p>
+              <p className="text-muted-foreground">Many passport guidelines now discourage glasses in the photo entirely to avoid glare; check your local passport office&apos;s current rule.</p>
             </div>
             <div>
               <p className="font-semibold">How recent should the photo be?</p>
@@ -129,7 +129,7 @@ export default function PassportPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Does this size work for other countries too?</p>
-              <p className="text-muted-foreground">The 35×45mm format is used by several countries beyond India for passports and some visa categories, though it's worth confirming the specific destination's requirement.</p>
+              <p className="text-muted-foreground">The 35×45mm format is used by several countries beyond India for passports and some visa categories, though it&apos;s worth confirming the specific destination&apos;s requirement.</p>
             </div>
             <div>
               <p className="font-semibold">Is my photo uploaded anywhere while using this tool?</p>
@@ -137,11 +137,11 @@ export default function PassportPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Do I need a printed photo or can I upload it digitally?</p>
-              <p className="text-muted-foreground">Most current Passport Seva applications accept a digital photo upload matching this specification, though it's worth checking the specific requirements for your appointment type.</p>
+              <p className="text-muted-foreground">Most current Passport Seva applications accept a digital photo upload matching this specification, though it&apos;s worth checking the specific requirements for your appointment type.</p>
             </div>
             <div>
               <p className="font-semibold">Can I use the same photo for a Tatkal (expedited) application?</p>
-              <p className="text-muted-foreground">Yes, the same 35×45mm specification applies regardless of whether you're applying through the standard or Tatkal expedited process.</p>
+              <p className="text-muted-foreground">Yes, the same 35×45mm specification applies regardless of whether you&apos;re applying through the standard or Tatkal expedited process.</p>
             </div>
           </div>
 

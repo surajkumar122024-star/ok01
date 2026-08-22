@@ -61,32 +61,32 @@ export default function ImageSizeCheckerGuideArticle() {
 
           <h2 id="what-is" className="text-2xl font-bold mt-8">What Is an Image Size Checker?</h2>
 
-          <p>An image size checker is a tool that instantly displays key technical details about an image file, including its width and height in pixels, aspect ratio, file size (in KB or MB), and file format. Instead of relying on your device's file properties menu — which can be inconsistent across operating systems — this tool gives you a quick, standardized report in one place, and can check several images at once.</p>
+          <p>An image size checker is a tool that instantly displays key technical details about an image file, including its width and height in pixels, aspect ratio, file size (in KB or MB), and file format. Instead of relying on your device&apos;s file properties menu — which can be inconsistent across operating systems — this tool gives you a quick, standardized report in one place, and can check several images at once.</p>
           <p>This is especially useful when you need to confirm an image meets specific requirements before uploading it to a website, submitting it for print, or using it in a design project with strict specifications.</p>
 
           <h2 id="social-fit" className="text-2xl font-bold mt-8">The Social Media Fit Checker, Explained</h2>
           <p>
             One feature worth calling out specifically: alongside the raw dimensions, this tool
             automatically checks your image against common minimum sizes for major platforms and
-            flags which ones it's actually big enough for — Facebook/LinkedIn link previews (1200×630),
+            flags which ones it&apos;s actually big enough for — Facebook/LinkedIn link previews (1200×630),
             YouTube thumbnails (1280×720), Instagram Square posts (1080×1080), Instagram Stories
-            (1080×1920), and Twitter headers (1500×500). If an image doesn't meet the minimum for any
-            of these, it's flagged as too small, so you know immediately rather than finding out after
+            (1080×1920), and Twitter headers (1500×500). If an image doesn&apos;t meet the minimum for any
+            of these, it&apos;s flagged as too small, so you know immediately rather than finding out after
             a blurry upload.
           </p>
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Size Checker Tool</h3>
-          <p>Go to the Image Size Checker tool page, where you'll find an upload area ready for your image.</p>
+          <p>Go to the Image Size Checker tool page, where you&apos;ll find an upload area ready for your image.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your Image</h3>
           <p>Click to browse your files or drag and drop the image you want to check.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: View the Instant Report</h3>
-          <p>The tool immediately displays the image's width and height in pixels, file size, format, and often resolution details.</p>
+          <p>The tool immediately displays the image&apos;s width and height in pixels, file size, format, and often resolution details.</p>
           <h3 className="text-xl font-semibold mt-6">Step 4: Compare Against Requirements</h3>
-          <p>Check the displayed information against the specific requirements you're working with — for example, a maximum file size for a website upload or specific pixel dimensions for a print project.</p>
+          <p>Check the displayed information against the specific requirements you&apos;re working with — for example, a maximum file size for a website upload or specific pixel dimensions for a print project.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Adjust if Needed</h3>
-          <p>If the image doesn't meet your requirements, use a companion tool like an image resizer or compressor to make the necessary adjustments.</p>
+          <p>If the image doesn&apos;t meet your requirements, use a companion tool like an image resizer or compressor to make the necessary adjustments.</p>
           <h3 className="text-xl font-semibold mt-6">Step 6: Re-Check Your Adjusted Image</h3>
           <p>After resizing or compressing, run the image back through the size checker to confirm it now meets your target specifications.</p>
 
@@ -108,7 +108,7 @@ export default function ImageSizeCheckerGuideArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Image Size Checker</h2>
 
-          <p><strong>1. Prevents Failed Uploads</strong> Knowing an image's exact file size before uploading helps you avoid errors caused by exceeding a platform's maximum file size limit.</p>
+          <p><strong>1. Prevents Failed Uploads</strong> Knowing an image&apos;s exact file size before uploading helps you avoid errors caused by exceeding a platform&apos;s maximum file size limit.</p>
           <p><strong>2. Ensures Correct Display Dimensions</strong> Checking pixel dimensions in advance helps prevent images from appearing stretched, cropped, or improperly scaled once uploaded.</p>
           <p><strong>3. Saves Time During Web Development</strong> Developers and designers can quickly verify image specifications without opening separate software or checking file properties manually.</p>
           <p><strong>4. Supports Print-Ready Preparation</strong> For print projects, checking resolution and dimensions in advance helps avoid low-quality or blurry printed results.</p>
@@ -130,32 +130,32 @@ export default function ImageSizeCheckerGuideArticle() {
 
           <ul className="list-disc pl-6 space-y-2">
           <li>For web use, aim to keep image file sizes under a few hundred KB where possible, since large images slow down page load times and hurt SEO performance.</li>
-          <li>Check pixel dimensions against your platform's specific requirements — for example, many social media platforms have unique optimal sizes for cover photos, posts, and profile pictures.</li>
+          <li>Check pixel dimensions against your platform&apos;s specific requirements — for example, many social media platforms have unique optimal sizes for cover photos, posts, and profile pictures.</li>
           <li>For print projects, ensure your image resolution is at least 300 DPI at the intended print size to avoid blurry results.</li>
           <li>Regularly audit older images on your website using a size checker to identify opportunities for compression and faster load times.</li>
           <li>When receiving images from clients or contributors, check their size and format before publishing to maintain consistent site quality.</li>
-          <li>Pair this tool with an image resizer or compressor to quickly fix any images that don't meet your target specifications.</li>
+          <li>Pair this tool with an image resizer or compressor to quickly fix any images that don&apos;t meet your target specifications.</li>
           </ul>
 
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image size checker used for?</h3>
-          <p>An image size checker instantly shows you an image's pixel dimensions, file size, and format, helping you confirm it meets specific platform or project requirements.</p>
+          <p>An image size checker instantly shows you an image&apos;s pixel dimensions, file size, and format, helping you confirm it meets specific platform or project requirements.</p>
           <h3 className="text-lg font-semibold mt-4">Why does image file size matter for websites?</h3>
           <p>Large image files slow down page loading times, which can hurt user experience and search engine rankings, making file size an important factor in web optimization.</p>
-          <h3 className="text-lg font-semibold mt-4">What's the difference between pixel dimensions and file size?</h3>
-          <p>Pixel dimensions refer to an image's width and height in pixels (its resolution), while file size refers to how much storage space the file takes up, measured in KB or MB.</p>
+          <h3 className="text-lg font-semibold mt-4">What&apos;s the difference between pixel dimensions and file size?</h3>
+          <p>Pixel dimensions refer to an image&apos;s width and height in pixels (its resolution), while file size refers to how much storage space the file takes up, measured in KB or MB.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Image Size Checker tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up or installation required.</p>
+          <p>Yes, it&apos;s completely free with no sign-up or installation required.</p>
           <h3 className="text-lg font-semibold mt-4">Can I check multiple images at once?</h3>
           <p>Yes — you can upload several images together, and the tool displays a separate report card for each one, making it efficient for auditing a whole batch at once.</p>
           <h3 className="text-lg font-semibold mt-4">What image formats does the tool support?</h3>
           <p>JPG, PNG, WebP, and GIF are all supported for checking.</p>
-          <h3 className="text-lg font-semibold mt-4">Does checking an image's size change or affect the original file?</h3>
-          <p>No, the tool only reads and displays information about your image — it doesn't modify the original file in any way.</p>
+          <h3 className="text-lg font-semibold mt-4">Does checking an image&apos;s size change or affect the original file?</h3>
+          <p>No, the tool only reads and displays information about your image — it doesn&apos;t modify the original file in any way.</p>
           <h3 className="text-lg font-semibold mt-4">What resolution do I need for high-quality printing?</h3>
           <p>Generally, images intended for print should have enough pixel dimensions to reach roughly 300 pixels per inch at your intended print size — this tool reports exact pixel width and height, which you can divide by your target print size in inches to calculate the effective print resolution.</p>
           <h3 className="text-lg font-semibold mt-4">Does this tool tell me if my image is big enough for social media?</h3>
-          <p>Yes — the tool automatically checks your image's dimensions against common platform minimums (Facebook/LinkedIn link previews, YouTube thumbnails, Instagram Square and Story, Twitter headers) and flags which ones it's large enough for.</p>
+          <p>Yes — the tool automatically checks your image&apos;s dimensions against common platform minimums (Facebook/LinkedIn link previews, YouTube thumbnails, Instagram Square and Story, Twitter headers) and flags which ones it&apos;s large enough for.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool to check screenshots?</h3>
           <p>Yes, the tool works with any standard image file, including screenshots, photos, and graphics.</p>
           <h3 className="text-lg font-semibold mt-4">Does this tool work on mobile devices?</h3>
@@ -163,7 +163,7 @@ export default function ImageSizeCheckerGuideArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
-          <p>Knowing an image's exact dimensions and file size before you use it can save you from failed uploads, distorted layouts, and slow-loading websites. Our free online Image Size Checker gives you that information instantly, helping you confirm your images are ready for whatever platform or project you're working on.</p>
+          <p>Knowing an image&apos;s exact dimensions and file size before you use it can save you from failed uploads, distorted layouts, and slow-loading websites. Our free online Image Size Checker gives you that information instantly, helping you confirm your images are ready for whatever platform or project you&apos;re working on.</p>
           <p>Try it now, and pair it with our other image tools to keep your entire workflow fast, accurate, and professional.</p>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>

@@ -33,7 +33,7 @@ export default function WordCounterClient() {
           />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           <div className="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-xl text-center">
             <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{words}</div>
             <div className="text-sm text-muted-foreground">Words</div>
@@ -41,6 +41,10 @@ export default function WordCounterClient() {
           <div className="bg-green-50 dark:bg-green-950/30 p-4 rounded-xl text-center">
             <div className="text-2xl font-bold text-green-600 dark:text-green-400">{chars}</div>
             <div className="text-sm text-muted-foreground">Characters</div>
+          </div>
+          <div className="bg-teal-50 dark:bg-teal-950/30 p-4 rounded-xl text-center">
+            <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">{charsNoSpace}</div>
+            <div className="text-sm text-muted-foreground">No Spaces</div>
           </div>
           <div className="bg-purple-50 dark:bg-purple-950/30 p-4 rounded-xl text-center">
             <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{sentences}</div>

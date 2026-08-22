@@ -23,7 +23,7 @@ export default function ContactPage() {
         <div className="space-y-8">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Get in Touch</h1>
-            <p className="text-xl text-muted-foreground">Have a question or feedback? We'd love to hear from you.</p>
+            <p className="text-xl text-muted-foreground">Have a question or feedback? We&apos;d love to hear from you.</p>
           </div>
 
           <div className="space-y-6">

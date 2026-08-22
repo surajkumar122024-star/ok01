@@ -58,18 +58,18 @@ export default function ResizeForSocialMediaArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Using the wrong image size on social media doesn't just look slightly off — it usually
+            Using the wrong image size on social media doesn&apos;t just look slightly off — it usually
             means the platform crops your photo automatically, and that automatic crop has no idea
-            what's actually important in the frame. Here's the complete, current dimension reference
+            what&apos;s actually important in the frame. Here&apos;s the complete, current dimension reference
             for every major platform, plus why getting this right matters more than it seems.
           </p>
 
           <h2 id="why-matters" className="text-2xl font-bold mt-8">Why Exact Dimensions Matter</h2>
           <p>
             Every platform displays images at a specific ratio across feeds, profiles, and previews.
-            Upload something outside that ratio, and the platform doesn't reject it — it silently
+            Upload something outside that ratio, and the platform doesn&apos;t reject it — it silently
             crops or letterboxes it to fit, often cutting off a face, a key piece of text, or a
-            product you wanted visible. Matching the platform's actual dimensions upfront means what
+            product you wanted visible. Matching the platform&apos;s actual dimensions upfront means what
             you see when you upload is exactly what your audience sees.
           </p>
 
@@ -115,7 +115,7 @@ export default function ResizeForSocialMediaArticle() {
             <Link href="/tools/youtube-thumbnail-converter" className="text-primary underline underline-offset-2">
               YouTube Thumbnail Converter
             </Link>{' '}
-            to crop precisely to 1280×720 rather than letting YouTube's automatic crop decide what stays visible.
+            to crop precisely to 1280×720 rather than letting YouTube&apos;s automatic crop decide what stays visible.
           </p>
 
           <h2 id="tiktok-pinterest" className="text-2xl font-bold mt-8">TikTok &amp; Pinterest</h2>
@@ -135,7 +135,7 @@ export default function ResizeForSocialMediaArticle() {
             <li>Download your correctly sized image, ready to upload.</li>
           </ol>
           <p>
-            If your original photo's proportions don't match your target platform at all — a square
+            If your original photo&apos;s proportions don&apos;t match your target platform at all — a square
             photo that needs to become a 9:16 Story, for example — crop first with the{' '}
             <Link href="/tools/image-cropper" className="text-primary underline underline-offset-2">Image Cropper</Link>{' '}
             to choose what stays in frame, then resize to the exact pixel target.
@@ -157,8 +157,8 @@ export default function ResizeForSocialMediaArticle() {
           <h2 id="mistakes" className="text-2xl font-bold mt-8">Common Mistakes to Avoid</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Uploading a portrait photo for a landscape slot</strong> — a tall photo squeezed into a wide banner (like a Facebook cover or LinkedIn banner) often crops out the top and bottom of your subject entirely.</li>
-            <li><strong>Ignoring "safe zones" on Stories and Reels</strong> — profile icons, captions, and interactive stickers overlay the top and bottom of vertical video content, so keep key visual elements centered rather than near the edges.</li>
-            <li><strong>Reusing one image size everywhere</strong> — a square Instagram post stretched to fit a Twitter header looks distorted; resize (or better, crop) separately for each platform's actual ratio.</li>
+            <li><strong>Ignoring &quot;safe zones&quot; on Stories and Reels</strong> — profile icons, captions, and interactive stickers overlay the top and bottom of vertical video content, so keep key visual elements centered rather than near the edges.</li>
+            <li><strong>Reusing one image size everywhere</strong> — a square Instagram post stretched to fit a Twitter header looks distorted; resize (or better, crop) separately for each platform&apos;s actual ratio.</li>
             <li><strong>Forgetting profile photos display as circles</strong> on most platforms — important details near the corners of a square profile photo get visually clipped by the circular mask.</li>
             <li><strong>Not checking file size limits</strong> — some platforms reject images above a certain size even if the pixel dimensions are correct; compress first if needed.</li>
           </ul>
@@ -167,11 +167,11 @@ export default function ResizeForSocialMediaArticle() {
           <div className="space-y-4">
             <div>
               <p className="font-semibold">Do these exact dimensions change often?</p>
-              <p className="text-muted-foreground">Platforms do update their recommended sizes occasionally, though the core dimensions here have been stable for a while — it's worth a quick check on the platform's official help pages before a major campaign.</p>
+              <p className="text-muted-foreground">Platforms do update their recommended sizes occasionally, though the core dimensions here have been stable for a while — it&apos;s worth a quick check on the platform&apos;s official help pages before a major campaign.</p>
             </div>
             <div>
               <p className="font-semibold">What happens if I upload the wrong size?</p>
-              <p className="text-muted-foreground">Most platforms don't reject a mismatched image — they crop or letterbox it automatically, which can unpredictably cut off important content near the edges.</p>
+              <p className="text-muted-foreground">Most platforms don&apos;t reject a mismatched image — they crop or letterbox it automatically, which can unpredictably cut off important content near the edges.</p>
             </div>
             <div>
               <p className="font-semibold">Should I always match the exact pixel dimensions, or just the ratio?</p>
@@ -183,21 +183,21 @@ export default function ResizeForSocialMediaArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I use the same image across multiple platforms?</p>
-              <p className="text-muted-foreground">You can, but since each platform uses different ratios, you'll typically get better results resizing (or cropping) a version specifically for each platform rather than reusing one size everywhere.</p>
+              <p className="text-muted-foreground">You can, but since each platform uses different ratios, you&apos;ll typically get better results resizing (or cropping) a version specifically for each platform rather than reusing one size everywhere.</p>
             </div>
             <div>
               <p className="font-semibold">Why does my profile photo look cropped weirdly?</p>
               <p className="text-muted-foreground">Most platforms display profile photos inside a circular mask, even though you upload a square image — keep important details centered rather than near the corners, which get visually clipped.</p>
             </div>
             <div>
-              <p className="font-semibold">What's a "safe zone" for Stories and Reels?</p>
+              <p className="font-semibold">What&apos;s a &quot;safe zone&quot; for Stories and Reels?</p>
               <p className="text-muted-foreground">The top and bottom portions of vertical video content are typically covered by profile icons, captions, and interactive stickers, so keeping key visual elements centered avoids them being obscured.</p>
             </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
           <p>
-            Matching a platform's exact dimensions takes a couple of minutes and consistently pays off
+            Matching a platform&apos;s exact dimensions takes a couple of minutes and consistently pays off
             in how professional your content looks — no unexpected crops, no stretched logos, no
             important details lost at the edges. Keep this guide bookmarked, and resize each image for
             its specific destination before you post.

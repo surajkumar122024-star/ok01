@@ -53,15 +53,15 @@ export default function ImageCropperCompleteGuideArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Not every photo you take or download is framed exactly the way you need it. Maybe there's
+            Not every photo you take or download is framed exactly the way you need it. Maybe there&apos;s
             unwanted background in a profile picture, or you need a specific aspect ratio for a social
-            media post. That's where an image cropper becomes an essential everyday tool.
+            media post. That&apos;s where an image cropper becomes an essential everyday tool.
           </p>
 
           <h2 id="what-is" className="text-2xl font-bold mt-8">What Is an Image Cropper?</h2>
 
           <p>An image cropper is a tool that allows you to trim away unwanted areas of a photo, keeping only the portion you want to display. Instead of resizing or distorting the entire image, cropping selectively removes the edges, letting you change the composition, focus, or aspect ratio without affecting image quality in the retained area.</p>
-          <p>Whether you're preparing a square profile picture, a widescreen banner, or simply removing a distracting background element, cropping gives you precise control over your image's final look.</p>
+          <p>Whether you&apos;re preparing a square profile picture, a widescreen banner, or simply removing a distracting background element, cropping gives you precise control over your image&apos;s final look.</p>
 
           <h2 id="composition" className="text-2xl font-bold mt-8">Composition Basics: The Rule of Thirds</h2>
           <p>
@@ -72,7 +72,7 @@ export default function ImageCropperCompleteGuideArticle() {
             a perfectly centered composition, especially for portraits, product shots, and landscape photos.
           </p>
           <p>
-            In practice, this means when you're positioning your crop box, try aligning a face, a key
+            In practice, this means when you&apos;re positioning your crop box, try aligning a face, a key
             product detail, or a horizon line with one of the imaginary grid lines about a third of the
             way into the frame — rather than automatically centering everything.
           </p>
@@ -80,7 +80,7 @@ export default function ImageCropperCompleteGuideArticle() {
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Cropper Tool</h3>
-          <p>Go to the Image Cropper tool page, where you'll find an upload area ready for your photo.</p>
+          <p>Go to the Image Cropper tool page, where you&apos;ll find an upload area ready for your photo.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your Image</h3>
           <p>Click to browse your files or drag and drop your image directly into the tool.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Select Your Crop Area</h3>
@@ -110,7 +110,7 @@ export default function ImageCropperCompleteGuideArticle() {
           <p><strong>1. Improves Visual Composition</strong> Removing distracting or unnecessary background elements helps your subject stand out and improves overall photo quality.</p>
           <p><strong>2. Meets Platform-Specific Requirements</strong> Different platforms — like Instagram, LinkedIn, or YouTube — require specific aspect ratios, and cropping ensures your images fit perfectly without awkward stretching.</p>
           <p><strong>3. Saves Time Compared to Traditional Editing Software</strong> Instead of opening a complex photo editor, you can crop an image in seconds directly in your browser.</p>
-          <p><strong>4. Maintains Image Quality</strong> Cropping doesn't compress or distort the retained portion of your image, so quality within the selected area stays intact.</p>
+          <p><strong>4. Maintains Image Quality</strong> Cropping doesn&apos;t compress or distort the retained portion of your image, so quality within the selected area stays intact.</p>
           <p><strong>5. No Design Experience Needed</strong> The intuitive drag-and-resize interface makes cropping accessible to everyone, regardless of technical skill.</p>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
@@ -129,7 +129,7 @@ export default function ImageCropperCompleteGuideArticle() {
 
           <ul className="list-disc pl-6 space-y-2">
           <li>Use a <strong>1:1 aspect ratio</strong> for most social media profile pictures, since platforms like Instagram, Facebook, and LinkedIn display profile photos as squares or circles.</li>
-          <li>For <strong>YouTube thumbnails</strong>, crop images to a 16:9 aspect ratio to match the platform's video display format.</li>
+          <li>For <strong>YouTube thumbnails</strong>, crop images to a 16:9 aspect ratio to match the platform&apos;s video display format.</li>
           <li>When cropping product photos for e-commerce, keep the product centered and leave a small amount of padding around the edges for a professional look.</li>
           <li>Always crop from a high-resolution original image rather than a heavily compressed one, to avoid pixelation in your final cropped result.</li>
           <li>If your subject is off-center in the original photo, use cropping strategically to reposition and improve the overall composition.</li>
@@ -140,17 +140,17 @@ export default function ImageCropperCompleteGuideArticle() {
           <h3 className="text-lg font-semibold mt-4">What is an image cropper used for?</h3>
           <p>An image cropper allows you to remove unwanted parts of a photo, keeping only the selected portion, to improve composition or fit specific size requirements.</p>
           <h3 className="text-lg font-semibold mt-4">Does cropping reduce image quality?</h3>
-          <p>No, cropping doesn't compress or distort the remaining portion of the image — it simply removes the areas outside your selection while preserving quality within the crop.</p>
+          <p>No, cropping doesn&apos;t compress or distort the remaining portion of the image — it simply removes the areas outside your selection while preserving quality within the crop.</p>
           <h3 className="text-lg font-semibold mt-4">Can I crop an image to a specific aspect ratio like 1:1 or 16:9?</h3>
           <p>Yes, our Image Cropper offers preset aspect ratio options for common use cases, alongside freeform cropping for full customization.</p>
           <h3 className="text-lg font-semibold mt-4">Is this Image Cropper tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
+          <p>Yes, it&apos;s completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">What image formats does the cropper support?</h3>
           <p>The tool typically supports common formats like JPG, PNG, and WebP for both upload and download.</p>
           <h3 className="text-lg font-semibold mt-4">Can I crop multiple images at once?</h3>
           <p>Most cropping tools, including ours, are optimized for cropping one image at a time to allow precise, individual adjustments.</p>
-          <h3 className="text-lg font-semibold mt-4">Will cropping change my image's file size?</h3>
-          <p>Cropping typically reduces file size slightly since you're removing part of the image data, though the exact change depends on the original file format and compression.</p>
+          <h3 className="text-lg font-semibold mt-4">Will cropping change my image&apos;s file size?</h3>
+          <p>Cropping typically reduces file size slightly since you&apos;re removing part of the image data, though the exact change depends on the original file format and compression.</p>
           <h3 className="text-lg font-semibold mt-4">Can I use this tool on my phone?</h3>
           <p>Yes, the Image Cropper is fully responsive and works smoothly on smartphones and tablets.</p>
           <h3 className="text-lg font-semibold mt-4">Do I need photo editing experience to use this tool?</h3>
@@ -160,7 +160,7 @@ export default function ImageCropperCompleteGuideArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
 
-          <p>A well-composed image often comes down to what you choose to leave out, and cropping gives you full control over that decision. Our free online Image Cropper makes it easy to remove distractions, fit platform-specific requirements, and improve your photo's overall composition — all without downloading any software.</p>
+          <p>A well-composed image often comes down to what you choose to leave out, and cropping gives you full control over that decision. Our free online Image Cropper makes it easy to remove distractions, fit platform-specific requirements, and improve your photo&apos;s overall composition — all without downloading any software.</p>
           <p>Try it now, and explore our other image tools to complete your entire photo editing workflow in one place.</p>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>

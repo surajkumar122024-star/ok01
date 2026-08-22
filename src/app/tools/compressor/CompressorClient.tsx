@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { Download, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { RelatedTools } from '@/components/RelatedTools';
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
 
@@ -25,7 +24,7 @@ export default function CompressorClient() {
     try {
       const blob = await processImage(selectedFile, { quality: quality / 100 });
       setProcessedBlob(blob);
-    } catch (err) {
+    } catch {
       toast({
         title: "Error",
         description: "Failed to compress image.",

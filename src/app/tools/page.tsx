@@ -10,7 +10,6 @@ import {
   Ruler,
   LayoutGrid
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
@@ -304,7 +303,7 @@ export default function ToolsPage() {
               <Zap size={28} />
             </div>
             <h3 className="text-xl font-bold mb-2">More coming soon</h3>
-            <p className="text-muted-foreground text-sm">We're constantly working on new professional tools.</p>
+            <p className="text-muted-foreground text-sm">We&apos;re constantly working on new professional tools.</p>
           </div>
         </div>
 

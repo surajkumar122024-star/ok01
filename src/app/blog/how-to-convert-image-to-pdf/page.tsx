@@ -44,7 +44,7 @@ export default function ImageToPdfArticle() {
             <li><a href="#how-to" className="hover:text-primary">How to convert, step by step</a></li>
             <li><a href="#formats" className="hover:text-primary">Best image formats for PDF conversion</a></li>
             <li><a href="#page-behavior" className="hover:text-primary">How mixed orientations behave in the PDF</a></li>
-            <li><a href="#scanning-tips" className="hover:text-primary">Getting clean results from a phone "scan"</a></li>
+            <li><a href="#scanning-tips" className="hover:text-primary">Getting clean results from a phone &quot;scan&quot;</a></li>
             <li><a href="#privacy" className="hover:text-primary">Is it safe to convert images to PDF online?</a></li>
             <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
             <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
@@ -55,9 +55,9 @@ export default function ImageToPdfArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Need to combine multiple images into a single PDF file? Whether you're scanning documents
+            Need to combine multiple images into a single PDF file? Whether you&apos;re scanning documents
             with your phone camera, compiling a photo portfolio, or submitting an assignment, this
-            comes up constantly — and it doesn't require a scanner, a dedicated app, or uploading your
+            comes up constantly — and it doesn&apos;t require a scanner, a dedicated app, or uploading your
             photos to a random website. It runs entirely in your browser.
           </p>
 
@@ -99,7 +99,7 @@ export default function ImageToPdfArticle() {
           <p>
             Mixing formats in the same batch is fine — you might combine a few JPG photos with a PNG
             screenshot in one PDF, and each page converts correctly regardless of its original format.
-            If you need to switch a source image's format first, the{' '}
+            If you need to switch a source image&apos;s format first, the{' '}
             <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">JPG to PNG</Link>{' '}
             and{' '}
             <Link href="/tools/webp-converter" className="text-primary underline underline-offset-2">WebP Converter</Link>{' '}
@@ -108,9 +108,9 @@ export default function ImageToPdfArticle() {
 
           <h2 id="page-behavior" className="text-2xl font-bold mt-8">How Mixed Orientations Behave in the PDF</h2>
           <p>
-            If you're combining a batch of photos where some are portrait and some are landscape,
+            If you&apos;re combining a batch of photos where some are portrait and some are landscape,
             expect the resulting PDF pages to vary in shape to match — this is normal and matches how
-            most PDF viewers and printers handle mixed-orientation documents. If you'd prefer every
+            most PDF viewers and printers handle mixed-orientation documents. If you&apos;d prefer every
             page to look uniform, rotate any sideways photos first using the{' '}
             <Link href="/tools/image-rotate" className="text-primary underline underline-offset-2">Image Rotate &amp; Flip</Link>{' '}
             tool before uploading them here.
@@ -119,13 +119,13 @@ export default function ImageToPdfArticle() {
           <h2 id="privacy" className="text-2xl font-bold mt-8">Is It Safe to Convert Images to PDF Online?</h2>
           <p>
             With most online tools, your images are uploaded to a remote server for processing — which
-            means your private photos exist, even briefly, on infrastructure you can't see. OpticShift
+            means your private photos exist, even briefly, on infrastructure you can&apos;t see. OpticShift
             Pro works differently: the entire PDF is assembled locally using a JavaScript library
             running in your browser. Your images never leave your device at any point, which matters
-            if you're converting anything from a scanned ID to a confidential business document.
+            if you&apos;re converting anything from a scanned ID to a confidential business document.
           </p>
 
-          <h2 id="scanning-tips" className="text-2xl font-bold mt-8">Getting Clean Results When "Scanning" With Your Phone Camera</h2>
+          <h2 id="scanning-tips" className="text-2xl font-bold mt-8">Getting Clean Results When &quot;Scanning&quot; With Your Phone Camera</h2>
           <p>
             Most people building a PDF from images today are actually photographing paper documents
             with a phone rather than using a dedicated scanner, and the quality of that source photo
@@ -138,7 +138,7 @@ export default function ImageToPdfArticle() {
           <p>
             If a photographed page comes out sideways, straighten it with the{' '}
             <Link href="/tools/image-rotate" className="text-primary underline underline-offset-2">Image Rotate &amp; Flip</Link>{' '}
-            tool before adding it to your PDF batch — it's much faster to fix orientation per-photo
+            tool before adding it to your PDF batch — it&apos;s much faster to fix orientation per-photo
             beforehand than to regenerate the whole document afterward.
           </p>
 
@@ -160,7 +160,7 @@ export default function ImageToPdfArticle() {
             </div>
             <div>
               <p className="font-semibold">Is there a limit on how many images I can add?</p>
-              <p className="text-muted-foreground">There's no hard-coded limit, though very large batches of high-resolution images take longer to process since everything runs in your browser.</p>
+              <p className="text-muted-foreground">There&apos;s no hard-coded limit, though very large batches of high-resolution images take longer to process since everything runs in your browser.</p>
             </div>
             <div>
               <p className="font-semibold">Will my images be compressed in the PDF?</p>
@@ -180,11 +180,11 @@ export default function ImageToPdfArticle() {
             </div>
             <div>
               <p className="font-semibold">My photographed document looks slanted — will that carry into the PDF?</p>
-              <p className="text-muted-foreground">Yes, this tool doesn't auto-straighten a photo, so shooting straight-on with good lighting before uploading gives the cleanest results, especially for text-heavy scanned pages.</p>
+              <p className="text-muted-foreground">Yes, this tool doesn&apos;t auto-straighten a photo, so shooting straight-on with good lighting before uploading gives the cleanest results, especially for text-heavy scanned pages.</p>
             </div>
             <div>
               <p className="font-semibold">Can I add a cover page or blank page?</p>
-              <p className="text-muted-foreground">This tool converts your uploaded images directly into pages; adding a separate blank cover page isn't currently supported.</p>
+              <p className="text-muted-foreground">This tool converts your uploaded images directly into pages; adding a separate blank cover page isn&apos;t currently supported.</p>
             </div>
           </div>
 
@@ -192,7 +192,7 @@ export default function ImageToPdfArticle() {
           <p>
             Turning a handful of scattered photos into one clean, properly ordered PDF is a five-step
             process that takes less time than opening a separate PDF editor would. Since everything
-            runs locally in your browser, it's just as suited to a confidential document scan as it is
+            runs locally in your browser, it&apos;s just as suited to a confidential document scan as it is
             to a quick portfolio compilation.
           </p>
 
