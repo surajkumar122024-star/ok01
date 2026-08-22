@@ -158,8 +158,9 @@ export default function HeicToJpgClient() {
             </div>
             {outputFormat === "image/jpeg" && (
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-muted-foreground">Quality: {quality}%</label>
+                <label htmlFor="heic-quality" className="text-xs font-semibold text-muted-foreground">Quality: {quality}%</label>
                 <input
+                  id="heic-quality"
                   type="range"
                   min="10"
                   max="100"

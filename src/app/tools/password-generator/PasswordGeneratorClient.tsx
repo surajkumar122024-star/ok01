@@ -64,6 +64,8 @@ export default function PasswordGeneratorClient() {
       <span className="text-sm font-medium">{label}</span>
       <button
         onClick={() => onChange(!value)}
+        aria-label={label}
+        aria-pressed={value}
         className={`w-12 h-6 rounded-full transition-colors relative ${value ? 'bg-primary' : 'bg-muted'}`}
       >
         <span className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${value ? 'left-7' : 'left-1'}`} />
@@ -122,6 +124,7 @@ export default function PasswordGeneratorClient() {
             value={length}
             onChange={(e) => setLength(Number(e.target.value))}
             className="w-full accent-primary"
+            aria-label="Password length"
           />
           <div className="flex justify-between text-xs text-muted-foreground">
             <span>4</span>

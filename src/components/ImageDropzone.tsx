@@ -95,7 +95,7 @@ export const ImageDropzone = ({ onImageSelect, selectedImage, onClear, accept = 
                 <span className="text-xs text-muted-foreground">{(selectedImage.size / 1024 / 1024).toFixed(2)} MB</span>
               </div>
             </div>
-            <Button variant="ghost" size="icon" onClick={onClear} className="h-8 w-8 hover:bg-destructive hover:text-destructive-foreground">
+            <Button variant="ghost" size="icon" onClick={onClear} aria-label="Remove image" className="h-8 w-8 hover:bg-destructive hover:text-destructive-foreground">
               <X size={16} />
             </Button>
           </div>

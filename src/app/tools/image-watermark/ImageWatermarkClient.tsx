@@ -213,8 +213,8 @@ export default function ImageWatermarkClient() {
                   />
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-muted-foreground">Font Size: {fontSize}px</label>
-                  <input type="range" min="12" max="120" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="accent-primary" />
+                  <label htmlFor="watermark-font-size" className="text-xs font-semibold text-muted-foreground">Font Size: {fontSize}px</label>
+                  <input id="watermark-font-size" type="range" min="12" max="120" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="accent-primary" />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-muted-foreground">Text Color</label>
@@ -247,8 +247,8 @@ export default function ImageWatermarkClient() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-muted-foreground">Logo Size: {logoSize}px</label>
-                  <input type="range" min="20" max="400" value={logoSize} onChange={(e) => setLogoSize(Number(e.target.value))} className="accent-primary" />
+                  <label htmlFor="watermark-logo-size" className="text-xs font-semibold text-muted-foreground">Logo Size: {logoSize}px</label>
+                  <input id="watermark-logo-size" type="range" min="20" max="400" value={logoSize} onChange={(e) => setLogoSize(Number(e.target.value))} className="accent-primary" />
                 </div>
               </div>
             )}
@@ -266,12 +266,12 @@ export default function ImageWatermarkClient() {
                 </select>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-muted-foreground">Opacity: {opacity}%</label>
-                <input type="range" min="5" max="100" value={opacity} onChange={(e) => setOpacity(Number(e.target.value))} className="accent-primary mt-2" />
+                <label htmlFor="watermark-opacity" className="text-xs font-semibold text-muted-foreground">Opacity: {opacity}%</label>
+                <input id="watermark-opacity" type="range" min="5" max="100" value={opacity} onChange={(e) => setOpacity(Number(e.target.value))} className="accent-primary mt-2" />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-muted-foreground">Padding: {padding}px</label>
-                <input type="range" min="0" max="100" value={padding} onChange={(e) => setPadding(Number(e.target.value))} className="accent-primary mt-2" />
+                <label htmlFor="watermark-padding" className="text-xs font-semibold text-muted-foreground">Padding: {padding}px</label>
+                <input id="watermark-padding" type="range" min="0" max="100" value={padding} onChange={(e) => setPadding(Number(e.target.value))} className="accent-primary mt-2" />
               </div>
             </div>
 

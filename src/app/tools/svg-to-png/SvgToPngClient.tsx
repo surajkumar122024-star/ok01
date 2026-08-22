@@ -159,8 +159,9 @@ export default function SvgToPngClient() {
               <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">Output Settings</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold text-muted-foreground">Scale: {scale}x</label>
+                  <label htmlFor="svg-scale" className="text-xs font-semibold text-muted-foreground">Scale: {scale}x</label>
                   <input
+                    id="svg-scale"
                     type="range"
                     min="1"
                     max="8"

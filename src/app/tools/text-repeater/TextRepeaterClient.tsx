@@ -62,6 +62,7 @@ export default function TextRepeaterClient() {
             </div>
             <input
               type="range"
+              aria-label="Repeat count"
               min={1}
               max={100}
               value={count}
