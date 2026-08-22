@@ -1,6 +1,7 @@
 'use client'
 import { useState, useMemo } from 'react'
-import { ArrowLeftRight } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowLeftRight, ArrowRight } from 'lucide-react'
 import { ToolPageGlow } from "@/components/ToolPageGlow"
 
 type UnitDef = { label: string; toBase: (v: number) => number; fromBase: (v: number) => number }
@@ -226,6 +227,44 @@ export default function UnitConverterClient() {
             speed, data storage, and time) with the common units people actually search for, so you
             rarely need to open a second tab to double-check a formula.
           </p>
+          <p className="text-muted-foreground leading-relaxed text-sm">
+            Every conversion is calculated using a fixed, verified base-unit factor rather than a
+            rough approximation — meters for length, kilograms for weight, liters for volume, and so
+            on — so switching between any two units in the same category (say, miles to centimeters)
+            stays accurate no matter how unusual the pairing is.
+          </p>
+        </div>
+
+        <div className="glass rounded-2xl border p-6 md:p-8 space-y-4">
+          <h2 className="text-lg font-semibold">How to use the converter</h2>
+          <ol className="space-y-3 text-sm text-muted-foreground list-decimal list-inside">
+            <li><span className="text-foreground font-medium">Pick a category</span> — choose length, weight, temperature, area, volume, speed, data storage, or time from the buttons above.</li>
+            <li><span className="text-foreground font-medium">Set your starting unit</span> — select the unit your value is currently in from the &quot;From&quot; dropdown.</li>
+            <li><span className="text-foreground font-medium">Enter a value</span> — type the number you want to convert.</li>
+            <li><span className="text-foreground font-medium">Choose the target unit</span> — pick what you want to convert to in the &quot;To&quot; dropdown; the result updates instantly as you type.</li>
+          </ol>
+        </div>
+
+        <div className="glass rounded-2xl border p-6 md:p-8 space-y-3">
+          <h2 className="text-lg font-semibold">Where this comes in handy</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <p className="font-medium text-foreground">Cooking &amp; recipes</p>
+              <p className="text-muted-foreground">Convert cups, ounces, and grams between US and metric recipe formats without guessing at rough equivalents.</p>
+            </div>
+            <div>
+              <p className="font-medium text-foreground">Travel &amp; navigation</p>
+              <p className="text-muted-foreground">Switch between miles and kilometers, or Fahrenheit and Celsius, when checking distances and weather abroad.</p>
+            </div>
+            <div>
+              <p className="font-medium text-foreground">Fitness tracking</p>
+              <p className="text-muted-foreground">Convert pace and distance between km/h, mph, and m/s, or body weight between kg and lb for logs and goals.</p>
+            </div>
+            <div>
+              <p className="font-medium text-foreground">Tech &amp; storage planning</p>
+              <p className="text-muted-foreground">Check how many MB fit in a GB or TB when comparing storage plans, file sizes, or download limits.</p>
+            </div>
+          </div>
         </div>
 
         <div className="glass rounded-2xl border p-6 md:p-8 space-y-3">
@@ -277,6 +316,44 @@ export default function UnitConverterClient() {
               connection.
             </p>
           </details>
+          <details className="glass rounded-xl border p-4">
+            <summary className="cursor-pointer font-medium text-sm">Why does temperature conversion behave differently from the others?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              Unlike length or weight, temperature scales don&apos;t share a common zero point, so
+              converting between Celsius, Fahrenheit, and Kelvin uses a formula (like multiplying and
+              adding an offset) rather than a simple multiplication factor — the tool handles this
+              automatically either way.
+            </p>
+          </details>
+          <details className="glass rounded-xl border p-4">
+            <summary className="cursor-pointer font-medium text-sm">Can I convert between two non-metric units, like miles to feet?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              Yes — every unit is converted through a common base unit internally, so any two units
+              within the same category convert correctly, whether both, one, or neither is metric.
+            </p>
+          </details>
+          <details className="glass rounded-xl border p-4">
+            <summary className="cursor-pointer font-medium text-sm">Is my data stored or sent anywhere when I use this tool?</summary>
+            <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
+              No — the values you type never leave your device. Everything is calculated in your
+              browser&apos;s memory and is cleared the moment you close or refresh the page.
+            </p>
+          </details>
+        </div>
+
+        <div className="glass rounded-xl p-6 md:p-8 space-y-4">
+          <h2 className="text-lg font-semibold">Related tools</h2>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/tools/image-size-checker" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
+              Image Size Checker <ArrowRight size={14} />
+            </Link>
+            <Link href="/tools/compressor" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
+              Image Compressor <ArrowRight size={14} />
+            </Link>
+            <Link href="/tools/word-counter" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
+              Word Counter <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
