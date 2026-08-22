@@ -43,7 +43,7 @@ export default function VisaPhotoArticle() {
             <li><a href="#spec" className="hover:text-primary">The official visa photo specification</a></li>
             <li><a href="#why-strict" className="hover:text-primary">Why visa photo rules are so strict</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to prepare your photo, step by step</a></li>
-            <li><a href="#other-countries" className="hover:text-primary">What if my visa isn't for the US?</a></li>
+            <li><a href="#other-countries" className="hover:text-primary">What if my visa isn&apos;t for the US?</a></li>
             <li><a href="#mistakes" className="hover:text-primary">Common mistakes that cause rejections</a></li>
             <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
           </ul>
@@ -53,9 +53,9 @@ export default function VisaPhotoArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Since visa applications are usually tied to a specific travel date that can't easily move,
+            Since visa applications are usually tied to a specific travel date that can&apos;t easily move,
             a rejected photo is one of the more costly document mistakes to make — it can delay
-            processing at exactly the point where time matters most. Here's the exact specification
+            processing at exactly the point where time matters most. Here&apos;s the exact specification
             and how to get it right on the first submission.
           </p>
 
@@ -73,7 +73,7 @@ export default function VisaPhotoArticle() {
             Visa photo requirements are noticeably stricter than most other document photos — full
             face forward, ears typically visible, no shadows at all on the background — because visa
             processing relies heavily on precise facial matching against other identity documents.
-            Even small issues that a casual observer wouldn't notice, like a slight shadow along one
+            Even small issues that a casual observer wouldn&apos;t notice, like a slight shadow along one
             side of the background or hair partially covering an ear, can be enough for an application
             to be flagged during review.
           </p>
@@ -87,22 +87,22 @@ export default function VisaPhotoArticle() {
             <li>Download the finished photo, ready for your visa application.</li>
           </ol>
 
-          <h2 id="other-countries" className="text-2xl font-bold mt-8">What If My Visa Isn't for the US?</h2>
+          <h2 id="other-countries" className="text-2xl font-bold mt-8">What If My Visa Isn&apos;t for the US?</h2>
           <p>
             The 2×2 inch square format is specifically the US Department of State standard, and while
-            a few other countries' visa processes loosely follow a similar square ratio, treating it as
+            a few other countries&apos; visa processes loosely follow a similar square ratio, treating it as
             a universal requirement is a common and avoidable mistake. Always verify your specific
-            destination country's current visa photo requirement before submitting — some use the
+            destination country&apos;s current visa photo requirement before submitting — some use the
             35×45mm format instead, which is a different shape entirely, not just a different size of
             the same square.
           </p>
 
           <h2 id="mistakes" className="text-2xl font-bold mt-8">Common Mistakes That Cause Rejections</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Shadows on the background</strong> — standing too close to the wall creates a visible shadow that most casual photos don't avoid by default.</li>
+            <li><strong>Shadows on the background</strong> — standing too close to the wall creates a visible shadow that most casual photos don&apos;t avoid by default.</li>
             <li><strong>Hair covering the ears</strong> — many visa photo standards expect both ears visible; adjust hairstyle or angle if needed.</li>
-            <li><strong>Assuming the format is universal</strong> — always check your specific destination country's requirement rather than assuming 2×2 inch applies everywhere.</li>
-            <li><strong>Low resolution or blurry source photo</strong> — a phone photo works fine as long as lighting is even and the image isn't blurry once cropped to the square frame.</li>
+            <li><strong>Assuming the format is universal</strong> — always check your specific destination country&apos;s requirement rather than assuming 2×2 inch applies everywhere.</li>
+            <li><strong>Low resolution or blurry source photo</strong> — a phone photo works fine as long as lighting is even and the image isn&apos;t blurry once cropped to the square frame.</li>
           </ul>
 
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
@@ -113,15 +113,15 @@ export default function VisaPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I use a photo taken on my phone?</p>
-              <p className="text-muted-foreground">Yes, as long as the lighting is even, the background is plain, and the phone camera resolution is high enough that the cropped square photo doesn't look blurry.</p>
+              <p className="text-muted-foreground">Yes, as long as the lighting is even, the background is plain, and the phone camera resolution is high enough that the cropped square photo doesn&apos;t look blurry.</p>
             </div>
             <div>
-              <p className="font-semibold">What if my visa country isn't the US?</p>
-              <p className="text-muted-foreground">Some countries use different visa photo dimensions, like 35×45mm, so double-check your destination country's embassy website before using this square format.</p>
+              <p className="font-semibold">What if my visa country isn&apos;t the US?</p>
+              <p className="text-muted-foreground">Some countries use different visa photo dimensions, like 35×45mm, so double-check your destination country&apos;s embassy website before using this square format.</p>
             </div>
             <div>
               <p className="font-semibold">Should ears be visible in the photo?</p>
-              <p className="text-muted-foreground">Many square-format visa guidelines expect a full-face frontal view with ears visible; check the specific requirement, since some allow hair covering the ears while others don't.</p>
+              <p className="text-muted-foreground">Many square-format visa guidelines expect a full-face frontal view with ears visible; check the specific requirement, since some allow hair covering the ears while others don&apos;t.</p>
             </div>
             <div>
               <p className="font-semibold">Is my photo uploaded anywhere while using this tool?</p>
@@ -141,7 +141,7 @@ export default function VisaPhotoArticle() {
           <ul className="list-disc pl-6 space-y-2">
             <li><Link href="/tools/passport-photo" className="text-primary hover:underline">Passport Size Photo Maker</Link> — the 35×45mm format used by India and several other countries.</li>
             <li><Link href="/tools/image-cropper" className="text-primary hover:underline">Image Cropper</Link> — freeform cropping for any other proportions you need.</li>
-            <li><Link href="/tools/image-size-checker" className="text-primary hover:underline">Image Size Checker</Link> — verify your photo's exact pixel dimensions before submitting.</li>
+            <li><Link href="/tools/image-size-checker" className="text-primary hover:underline">Image Size Checker</Link> — verify your photo&apos;s exact pixel dimensions before submitting.</li>
           </ul>
 
           {/* CTA */}

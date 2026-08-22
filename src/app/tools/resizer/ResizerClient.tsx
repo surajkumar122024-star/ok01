@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Download, Loader2, Link as LinkIcon, Unlink } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { RelatedTools } from '@/components/RelatedTools';
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
 
@@ -62,8 +61,9 @@ export default function ResizerClient() {
       const blob = await processImage(selectedFile, { width, height });
       setProcessedBlob(blob);
       toast({ title: "Success", description: "Image resized successfully." });
-    } catch (err: any) {
-      toast({ title: "Error", description: err?.message || "Failed to resize image.", variant: "destructive" });
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : "Failed to resize image.";
+      toast({ title: "Error", description: message, variant: "destructive" });
     } finally {
       setIsProcessing(false);
     }

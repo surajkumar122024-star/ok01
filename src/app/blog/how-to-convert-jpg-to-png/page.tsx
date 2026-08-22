@@ -23,7 +23,7 @@ export default function JpgToPngArticle() {
             How to Convert JPG to PNG Online — Free & Instant
           </h1>
           <p className="text-muted-foreground text-lg">
-            When PNG actually matters, what conversion does and doesn't change, and how to convert instantly without installing anything.
+            When PNG actually matters, what conversion does and doesn&apos;t change, and how to convert instantly without installing anything.
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <span>📅 Updated July 2026</span>
@@ -40,10 +40,10 @@ export default function JpgToPngArticle() {
         <nav className="glass rounded-xl border p-6 space-y-2 text-sm">
           <p className="font-semibold mb-2">In this guide</p>
           <ul className="space-y-1 list-disc list-inside text-muted-foreground">
-            <li><a href="#difference" className="hover:text-primary">JPG vs PNG — what's actually different</a></li>
+            <li><a href="#difference" className="hover:text-primary">JPG vs PNG — what&apos;s actually different</a></li>
             <li><a href="#why" className="hover:text-primary">When converting to PNG is worth it</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to convert, step by step</a></li>
-            <li><a href="#how-lossless-works" className="hover:text-primary">How PNG's lossless compression actually works</a></li>
+            <li><a href="#how-lossless-works" className="hover:text-primary">How PNG&apos;s lossless compression actually works</a></li>
             <li><a href="#quality" className="hover:text-primary">Will quality be lost when converting?</a></li>
             <li><a href="#transparency-myth" className="hover:text-primary">A common myth: does conversion add transparency?</a></li>
             <li><a href="#use-cases" className="hover:text-primary">Common use cases</a></li>
@@ -61,7 +61,7 @@ export default function JpgToPngArticle() {
             install, no file upload to any server.
           </p>
 
-          <h2 id="difference" className="text-2xl font-bold mt-8">JPG vs PNG — What's Actually Different</h2>
+          <h2 id="difference" className="text-2xl font-bold mt-8">JPG vs PNG — What&apos;s Actually Different</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>JPG</strong> uses lossy compression, producing smaller files by permanently discarding some image detail — ideal for photos where the loss is imperceptible.</li>
             <li><strong>PNG</strong> uses lossless compression, preserving every pixel exactly — larger files, but no data is ever thrown away.</li>
@@ -73,12 +73,12 @@ export default function JpgToPngArticle() {
           <p>
             Converting is genuinely useful in a few specific situations: when a design tool or upload
             form explicitly requires PNG input, when you plan to edit and re-save the image multiple
-            times (PNG doesn't accumulate compression artifacts the way repeatedly re-saved JPGs do),
-            or when you're archiving a master copy and want to guarantee no further quality loss going
+            times (PNG doesn&apos;t accumulate compression artifacts the way repeatedly re-saved JPGs do),
+            or when you&apos;re archiving a master copy and want to guarantee no further quality loss going
             forward.
           </p>
           <p>
-            It's less useful as a default habit — if an image will only ever be viewed as a regular
+            It&apos;s less useful as a default habit — if an image will only ever be viewed as a regular
             photo, converting to PNG mainly just makes the file larger with no real visual benefit.
           </p>
 
@@ -86,11 +86,11 @@ export default function JpgToPngArticle() {
           <ol className="list-decimal pl-6 space-y-2">
             <li>Open the <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">JPG to PNG Converter</Link>. No login required.</li>
             <li>Click the upload area or drag and drop your JPG or JPEG file.</li>
-            <li>Conversion happens automatically the moment you upload — no extra button click needed, using the browser's built-in Canvas API.</li>
+            <li>Conversion happens automatically the moment you upload — no extra button click needed, using the browser&apos;s built-in Canvas API.</li>
             <li>Click Download to save your converted PNG, ready to use immediately with a .png extension.</li>
           </ol>
 
-          <h2 id="how-lossless-works" className="text-2xl font-bold mt-8">How PNG's Lossless Compression Actually Works</h2>
+          <h2 id="how-lossless-works" className="text-2xl font-bold mt-8">How PNG&apos;s Lossless Compression Actually Works</h2>
           <p>
             PNG achieves lossless compression using a technique that finds repeating patterns and
             predictable pixel sequences and encodes them more efficiently, without ever discarding the
@@ -109,20 +109,20 @@ export default function JpgToPngArticle() {
           <h2 id="quality" className="text-2xl font-bold mt-8">Will Quality Be Lost When Converting?</h2>
           <p>
             No additional quality is lost during the JPG-to-PNG conversion step itself — the existing
-            pixel data is copied faithfully into the new lossless format. What's important to
+            pixel data is copied faithfully into the new lossless format. What&apos;s important to
             understand, though, is that any quality already lost when the original JPG was first
-            compressed cannot be recovered by converting. PNG preserves whatever it's given exactly;
-            it can't restore detail the JPG format discarded earlier.
+            compressed cannot be recovered by converting. PNG preserves whatever it&apos;s given exactly;
+            it can&apos;t restore detail the JPG format discarded earlier.
           </p>
 
           <h2 id="transparency-myth" className="text-2xl font-bold mt-8">A Common Myth: Does Conversion Add Transparency?</h2>
           <p>
-            This is worth addressing directly, since it's a genuinely common misunderstanding: converting
+            This is worth addressing directly, since it&apos;s a genuinely common misunderstanding: converting
             a JPG to PNG does <strong>not</strong> add a transparent background. JPG files have no
             transparency data to begin with, so the resulting PNG keeps whatever solid background the
-            original photo had — the file format changes, but the pixels themselves don't gain new
+            original photo had — the file format changes, but the pixels themselves don&apos;t gain new
             information that was never there. If you specifically need to remove a background and make
-            it transparent, that's a separate editing step, not something format conversion alone
+            it transparent, that&apos;s a separate editing step, not something format conversion alone
             achieves.
           </p>
 
@@ -143,7 +143,7 @@ export default function JpgToPngArticle() {
             </div>
             <div>
               <p className="font-semibold">Why is my PNG file bigger than the original JPG?</p>
-              <p className="text-muted-foreground">PNG's lossless compression typically produces larger files than JPG's lossy compression, especially for photos with lots of color detail. This is expected, not an error.</p>
+              <p className="text-muted-foreground">PNG&apos;s lossless compression typically produces larger files than JPG&apos;s lossy compression, especially for photos with lots of color detail. This is expected, not an error.</p>
             </div>
             <div>
               <p className="font-semibold">Is any quality lost in this conversion?</p>
@@ -163,7 +163,7 @@ export default function JpgToPngArticle() {
             </div>
             <div>
               <p className="font-semibold">Why does PNG compress logos better than photos?</p>
-              <p className="text-muted-foreground">PNG's lossless algorithm finds and compresses repeating patterns, which works well on flat-color graphics like logos but far less effectively on photos with constant subtle color variation.</p>
+              <p className="text-muted-foreground">PNG&apos;s lossless algorithm finds and compresses repeating patterns, which works well on flat-color graphics like logos but far less effectively on photos with constant subtle color variation.</p>
             </div>
             <div>
               <p className="font-semibold">Should I use PNG for all my website images?</p>
@@ -174,9 +174,9 @@ export default function JpgToPngArticle() {
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
           <p>
             JPG to PNG conversion is a simple, useful step for specific situations — lossless editing,
-            format requirements, or archival copies — but it's not a magic fix for transparency or
+            format requirements, or archival copies — but it&apos;s not a magic fix for transparency or
             recovering quality already lost in the original photo. Understanding what it actually does
-            (and doesn't do) means you'll reach for it exactly when it helps.
+            (and doesn&apos;t do) means you&apos;ll reach for it exactly when it helps.
           </p>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>

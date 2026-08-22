@@ -14,7 +14,6 @@ import {
   Layers,
   FileText,
   Code2,
-  Upload,
   MousePointerClick,
   Download,
   GraduationCap,
@@ -152,60 +151,6 @@ const tools = [
   },
 ];
 
-const features = [
-  {
-    title: '100% Private by Design',
-    description:
-      'Your images and documents never leave your device. All processing happens inside your browser using the Canvas and File APIs, so there is nothing to intercept on a server.',
-    icon: ShieldCheck,
-  },
-  {
-    title: 'No Upload Wait Time',
-    description:
-      'Because nothing travels to a remote server, results appear the moment you click convert — even on a slow mobile connection.',
-    icon: Zap,
-  },
-  {
-    title: 'Works on Any Device',
-    description:
-      'Every tool is fully responsive and tested across phones, tablets, and desktops, so the same workflow works whether you are at a desk or on the go.',
-    icon: Smartphone,
-  },
-  {
-    title: 'No Account, No Paywall',
-    description:
-      'There is no sign-up form, no email capture, and no premium tier hiding basic features. Every tool is free to use as many times as you need.',
-    icon: Gauge,
-  },
-];
-
-const howItWorks = [
-  {
-    step: '01',
-    title: 'Choose a tool',
-    description: 'Pick from the tools menu or browse by category — image, PDF, or text.',
-    icon: MousePointerClick,
-  },
-  {
-    step: '02',
-    title: 'Add your file or text',
-    description: 'Drag and drop a file, paste text, or select an image directly from your device.',
-    icon: Upload,
-  },
-  {
-    step: '03',
-    title: 'Adjust the settings',
-    description: 'Fine-tune quality, dimensions, or format using the on-screen controls.',
-    icon: Maximize,
-  },
-  {
-    step: '04',
-    title: 'Download instantly',
-    description: 'Your result is generated locally and ready to download in seconds.',
-    icon: Download,
-  },
-];
-
 const featuredPosts = [
   {
     title: 'How to Compress Images Without Losing Quality',
@@ -226,60 +171,6 @@ const featuredPosts = [
     title: 'How to Resize Images for Social Media',
     slug: 'resize-images-for-social-media',
     excerpt: 'Exact pixel dimensions for Instagram, Facebook, LinkedIn, and more.',
-  },
-];
-
-const audiences = [
-  {
-    title: 'Students',
-    icon: GraduationCap,
-    description:
-      'Resize a photo for an exam application, shrink a scanned assignment under an upload limit, or merge multiple lecture-note scans into one PDF before submitting — all without installing anything on a shared computer.',
-  },
-  {
-    title: 'Teachers & Educators',
-    icon: BookOpen,
-    description:
-      'Compress classroom photos before sharing them in a newsletter, convert worksheets between formats, or split a large PDF textbook chapter into individual handouts for students.',
-  },
-  {
-    title: 'Designers',
-    icon: Paintbrush,
-    description:
-      'Pick an exact color from a reference image, convert between SVG and PNG for different platforms, and export web-optimized WebP versions of assets without opening a full design suite.',
-  },
-  {
-    title: 'Developers',
-    icon: Code2,
-    description:
-      'Format messy JSON responses, encode or decode Base64 strings, generate URL-safe slugs, and check image dimensions before committing assets to a repository.',
-  },
-  {
-    title: 'Businesses & Freelancers',
-    icon: Briefcase,
-    description:
-      'Prepare product photos for an online store, merge client documents into a single PDF proposal, and generate strong passwords for shared accounts — all free, with no team seat limits.',
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      'I needed a passport-size photo at 11pm before an application deadline and did not want to pay a photo studio. This had the exact dimensions ready in under a minute.',
-    name: 'Ananya R.',
-    role: 'Graduate student',
-  },
-  {
-    quote:
-      'The fact that nothing gets uploaded matters to me — I handle client screenshots that I am not comfortable sending to a random server just to resize them.',
-    name: 'Marcus T.',
-    role: 'Freelance designer',
-  },
-  {
-    quote:
-      'Our team uses the PDF merge tool almost weekly to combine scanned invoices. It is faster than anything we had installed before.',
-    name: 'Priya K.',
-    role: 'Small business owner',
   },
 ];
 
@@ -427,7 +318,7 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground text-lg">
               Every design decision here traces back to one idea: your files are yours, and a tool
-              shouldn't need to see them to be useful.
+              shouldn&apos;t need to see them to be useful.
             </p>
           </div>
 
@@ -608,7 +499,7 @@ export default function Home() {
             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
               <h3 className="text-xl font-bold">Understanding Image Compression</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Image compression reduces a photo's file size by removing redundant or less
+                Image compression reduces a photo&apos;s file size by removing redundant or less
                 noticeable data. Lossy compression, used by formats like JPG and WebP, discards
                 some detail permanently in exchange for a much smaller file — usually without any
                 visible difference at normal viewing sizes. Lossless compression, used by PNG,
@@ -617,7 +508,7 @@ export default function Home() {
                   Image Compressor
                 </Link>{' '}
                 uses adjustable lossy compression so you can find the exact balance between file
-                size and visual quality for your specific use case, whether that's a website
+                size and visual quality for your specific use case, whether that&apos;s a website
                 thumbnail or a print-ready photo.
               </p>
             </div>
@@ -626,9 +517,9 @@ export default function Home() {
               <h3 className="text-xl font-bold">Why Image Format Conversion Matters</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Not every format works everywhere. HEIC, the default format on modern iPhones,
-                isn't recognized by many Windows applications and older Android devices. SVG,
-                great for scalable logos, can't be pasted directly into most photo editors. WebP
-                loads faster on websites but isn't accepted by every upload form. Converting
+                isn&apos;t recognized by many Windows applications and older Android devices. SVG,
+                great for scalable logos, can&apos;t be pasted directly into most photo editors. WebP
+                loads faster on websites but isn&apos;t accepted by every upload form. Converting
                 between formats — through tools like{' '}
                 <Link href="/tools/jpg-to-png" className="text-primary underline underline-offset-2">
                   JPG to PNG
@@ -642,7 +533,7 @@ export default function Home() {
                   WebP Converter
                 </Link>{' '}
                 — is less about preference and more about compatibility: making sure the file
-                actually opens where you're sending it.
+                actually opens where you&apos;re sending it.
               </p>
             </div>
 
@@ -673,12 +564,12 @@ export default function Home() {
               <h3 className="text-xl font-bold">Browser-Based Processing and File Security</h3>
               <p className="text-muted-foreground leading-relaxed">
                 The core design decision behind OpticShift Pro is that processing happens entirely
-                client-side — inside your browser, using your device's own processing power.
+                client-side — inside your browser, using your device&apos;s own processing power.
                 Traditional online tools upload your file to a remote server, process it there,
                 and send back the result; during that round trip, your file exists on infrastructure
                 you have no visibility into. Browser-based tools skip that step entirely. Your photo
-                of a bank statement, your child's document scan, or your unpublished design file
-                stays on your device the entire time — it's simply read into memory, transformed
+                of a bank statement, your child&apos;s document scan, or your unpublished design file
+                stays on your device the entire time — it&apos;s simply read into memory, transformed
                 using standard web APIs, and offered back to you as a download. There is no
                 database entry, no temporary storage bucket, and nothing to accidentally leave
                 exposed on a misconfigured server.
@@ -688,11 +579,11 @@ export default function Home() {
             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
               <h3 className="text-xl font-bold">Online Productivity Without the Overhead</h3>
               <p className="text-muted-foreground leading-relaxed">
-                A lot of everyday tasks don't need a full desktop application — they need a quick,
-                reliable tool that's available the moment you think of it. Checking a word count
+                A lot of everyday tasks don&apos;t need a full desktop application — they need a quick,
+                reliable tool that&apos;s available the moment you think of it. Checking a word count
                 before submitting an assignment, formatting a JSON response while debugging an API,
                 or generating a strong password for a new account are all two-minute tasks that
-                shouldn't require downloading software. Keeping these tools free, fast, and
+                shouldn&apos;t require downloading software. Keeping these tools free, fast, and
                 install-free is a deliberate choice to reduce friction for exactly that kind of
                 everyday work.
               </p>
@@ -735,7 +626,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
-              Who It's For
+              Who It&apos;s For
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Students, Designers, Developers, Businesses &amp; Content Creators

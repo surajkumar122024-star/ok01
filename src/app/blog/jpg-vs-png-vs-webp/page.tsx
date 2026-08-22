@@ -55,8 +55,8 @@ export default function JpgVsPngVsWebpArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Choosing the right image format has a real, measurable effect on your website's speed,
-            your image's visual quality, and whether features like transparency even work at all. Most
+            Choosing the right image format has a real, measurable effect on your website&apos;s speed,
+            your image&apos;s visual quality, and whether features like transparency even work at all. Most
             people default to whatever format their phone or screenshot tool happened to save — but
             understanding what these three formats actually do differently takes five minutes and
             pays off every time you publish an image afterward.
@@ -79,7 +79,7 @@ export default function JpgVsPngVsWebpArticle() {
             JPG (or JPEG) uses lossy compression specifically tuned for photographic content — it
             discards color detail the human eye is least likely to notice, which is why it can achieve
             small file sizes for photos without an obvious quality drop. The trade-off: every re-save
-            discards a little more, and JPG has no transparency support at all, so a "cut out"
+            discards a little more, and JPG has no transparency support at all, so a &quot;cut out&quot;
             product photo will always show a solid background color instead of see-through pixels.
           </p>
           <p><strong>Best for:</strong> photographs, social media images, anything where small file size matters more than pixel-perfect editing history.</p>
@@ -88,7 +88,7 @@ export default function JpgVsPngVsWebpArticle() {
           <p>
             PNG takes the opposite approach: lossless compression that preserves every pixel exactly,
             plus full support for transparency. This makes it the right choice for logos, icons, and
-            screenshots with sharp text — anything where a JPG's compression artifacts around hard
+            screenshots with sharp text — anything where a JPG&apos;s compression artifacts around hard
             edges would be visible, or where a transparent background is required. The cost is file
             size: a detailed photo saved as PNG is often several times larger than the same photo as JPG.
           </p>
@@ -96,12 +96,12 @@ export default function JpgVsPngVsWebpArticle() {
 
           <h2 id="webp" className="text-2xl font-bold mt-8">WebP — The Modern Web Format</h2>
           <p>
-            WebP, developed by Google, was built specifically to solve the web's image-weight problem.
+            WebP, developed by Google, was built specifically to solve the web&apos;s image-weight problem.
             It supports both lossy and lossless modes (essentially combining what JPG and PNG each do
             separately), plus transparency, and typically produces files 25-35% smaller than JPG at
             comparable visual quality. All major modern browsers support it, which is why Google
-            PageSpeed Insights frequently flags older JPG/PNG images with a "serve images in next-gen
-            formats" suggestion.
+            PageSpeed Insights frequently flags older JPG/PNG images with a &quot;serve images in next-gen
+            formats&quot; suggestion.
           </p>
           <p><strong>Best for:</strong> any image destined for a website, where load speed and Core Web Vitals scores matter.</p>
 
@@ -117,8 +117,8 @@ export default function JpgVsPngVsWebpArticle() {
             <p><strong>WebP (80% quality):</strong> ~310 KB</p>
           </div>
           <p>
-            That's roughly an 85-90% size reduction from PNG to WebP for the same visual content — a
-            meaningful difference when it's multiplied across every image on a page, especially for
+            That&apos;s roughly an 85-90% size reduction from PNG to WebP for the same visual content — a
+            meaningful difference when it&apos;s multiplied across every image on a page, especially for
             visitors on a slower mobile connection.
           </p>
 
@@ -150,11 +150,11 @@ export default function JpgVsPngVsWebpArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I convert WebP back to JPG or PNG?</p>
-              <p className="text-muted-foreground">Yes, WebP isn't a one-way format — you can convert it to JPG or PNG whenever a specific tool or platform requires one of those formats instead.</p>
+              <p className="text-muted-foreground">Yes, WebP isn&apos;t a one-way format — you can convert it to JPG or PNG whenever a specific tool or platform requires one of those formats instead.</p>
             </div>
             <div>
               <p className="font-semibold">Why does my PNG look so much bigger than my JPG?</p>
-              <p className="text-muted-foreground">PNG's lossless compression can't discard any data, so it can only shrink a detailed photo so much — this is expected behavior, not a bug or a mistake in how the file was saved.</p>
+              <p className="text-muted-foreground">PNG&apos;s lossless compression can&apos;t discard any data, so it can only shrink a detailed photo so much — this is expected behavior, not a bug or a mistake in how the file was saved.</p>
             </div>
             <div>
               <p className="font-semibold">Does WebP support animation like GIF?</p>
@@ -172,7 +172,7 @@ export default function JpgVsPngVsWebpArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Conclusion</h2>
           <p>
-            None of these three formats is universally "best" — each was built to solve a different
+            None of these three formats is universally &quot;best&quot; — each was built to solve a different
             problem. JPG optimizes for small photo files, PNG guarantees lossless quality and
             transparency, and WebP tries to give you both advantages at once for modern web use. Once
             you know what your image actually needs, picking the right format takes seconds.

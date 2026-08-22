@@ -86,7 +86,7 @@ export default function ExamPhotoArticle() {
             <li>Take a recent, clear photo against a plain background suitable for identity verification.</li>
             <li>Open the <Link href="/tools/exam-photo" className="text-primary underline underline-offset-2">Exam Photo Resizer</Link> tool and upload your photo.</li>
             <li>Crop toward the 200×230 pixel proportions.</li>
-            <li>Check the resulting file size falls within your exam's stated KB range.</li>
+            <li>Check the resulting file size falls within your exam&apos;s stated KB range.</li>
             <li>Download and, if needed, compress further with the{' '}
               <Link href="/tools/compressor" className="text-primary underline underline-offset-2">Image Compressor</Link>{' '}
               to hit an unusually small limit.
@@ -97,9 +97,9 @@ export default function ExamPhotoArticle() {
           <p>
             This is worth repeating clearly: exact pixel dimensions and file size limits genuinely vary
             between exams, sometimes significantly. Before finalizing your photo, open your specific
-            exam's official notification PDF and confirm the exact requirement stated there — using
-            this tool's common specification as your starting crop, then adjusting further only if your
-            exam's notification states something different.
+            exam&apos;s official notification PDF and confirm the exact requirement stated there — using
+            this tool&apos;s common specification as your starting crop, then adjusting further only if your
+            exam&apos;s notification states something different.
           </p>
 
           <h2 id="mistakes" className="text-2xl font-bold mt-8">Common Mistakes to Avoid</h2>
@@ -107,7 +107,7 @@ export default function ExamPhotoArticle() {
             <li><strong>Uploading a full-resolution photo</strong> — most portals reject files well above the stated KB limit outright.</li>
             <li><strong>Assuming every exam uses identical dimensions</strong> — always cross-check the specific notification.</li>
             <li><strong>Using an old photo</strong> — exam centers use this photo for identity verification against your admit card, so recency matters.</li>
-            <li><strong>Waiting until the deadline to discover the requirement</strong> — check the spec early so there's time to prepare, rather than scrambling right before registration closes.</li>
+            <li><strong>Waiting until the deadline to discover the requirement</strong> — check the spec early so there&apos;s time to prepare, rather than scrambling right before registration closes.</li>
           </ul>
 
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
@@ -118,7 +118,7 @@ export default function ExamPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">What if my exam asks for a different pixel size?</p>
-              <p className="text-muted-foreground">Use this tool to get close to the right proportions, then check the specific exam's notification PDF for exact width, height, and file size limits.</p>
+              <p className="text-muted-foreground">Use this tool to get close to the right proportions, then check the specific exam&apos;s notification PDF for exact width, height, and file size limits.</p>
             </div>
             <div>
               <p className="font-semibold">Should the photo be recent?</p>
@@ -134,18 +134,18 @@ export default function ExamPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I use the same photo for multiple exam applications?</p>
-              <p className="text-muted-foreground">Only if the size and recency requirements match; many exams share similar specs, but it's worth verifying each notification individually before reusing a photo.</p>
+              <p className="text-muted-foreground">Only if the size and recency requirements match; many exams share similar specs, but it&apos;s worth verifying each notification individually before reusing a photo.</p>
             </div>
             <div>
               <p className="font-semibold">What format should the photo be in?</p>
-              <p className="text-muted-foreground">Most exam portals accept JPG specifically; check your exam's notification, since a few portals may accept PNG as well.</p>
+              <p className="text-muted-foreground">Most exam portals accept JPG specifically; check your exam&apos;s notification, since a few portals may accept PNG as well.</p>
             </div>
           </div>
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><Link href="/tools/signature-resizer" className="text-primary hover:underline">Signature Resizer</Link> — most exam applications also require a small resized signature scan.</li>
-            <li><Link href="/tools/compressor" className="text-primary hover:underline">Image Compressor</Link> — reduce file size further if your exam's limit is unusually small.</li>
+            <li><Link href="/tools/compressor" className="text-primary hover:underline">Image Compressor</Link> — reduce file size further if your exam&apos;s limit is unusually small.</li>
             <li><Link href="/tools/image-size-checker" className="text-primary hover:underline">Image Size Checker</Link> — verify exact dimensions and file size before uploading.</li>
           </ul>
 

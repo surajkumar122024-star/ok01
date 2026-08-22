@@ -53,7 +53,7 @@ export default function HowToSplitPdfPagesArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Sometimes you don't need an entire PDF document — just a few specific pages. Maybe you
+            Sometimes you don&apos;t need an entire PDF document — just a few specific pages. Maybe you
             need to extract a single chapter from a larger report, pull one page from a signed
             contract, or grab a specific section from a scanned document. Doing this manually is
             tedious without the right tool.
@@ -67,13 +67,13 @@ export default function HowToSplitPdfPagesArticle() {
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Split Tool</h3>
-          <p>Navigate to the PDF Split tool page, where you'll see an upload area ready for your document.</p>
+          <p>Navigate to the PDF Split tool page, where you&apos;ll see an upload area ready for your document.</p>
           <h3 className="text-xl font-semibold mt-6">Step 2: Upload Your PDF File</h3>
           <p>Click to browse your files or drag and drop the PDF document you want to split.</p>
           <h3 className="text-xl font-semibold mt-6">Step 3: Review the Page Thumbnails</h3>
           <p>Every page renders as a visual thumbnail, so you can scan through and identify exactly which ones you need without guessing from page numbers alone.</p>
           <h3 className="text-xl font-semibold mt-6">Step 4: Select the Pages You Want</h3>
-          <p>Click to select any combination of pages — they don't need to be consecutive. Selecting pages 1, 4, and 9 works just as well as selecting a continuous range.</p>
+          <p>Click to select any combination of pages — they don&apos;t need to be consecutive. Selecting pages 1, 4, and 9 works just as well as selecting a continuous range.</p>
           <h3 className="text-xl font-semibold mt-6">Step 5: Extract and Download</h3>
           <p>Click <strong>Extract Page(s)</strong>, and the tool generates a single new PDF containing exactly the pages you selected, in their original order, ready to download.</p>
 
@@ -86,7 +86,7 @@ export default function HowToSplitPdfPagesArticle() {
           <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Maintains original formatting and quality</strong> across all split pages.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added.</li>
-          <li><strong>Secure processing</strong> designed to protect your document's privacy.</li>
+          <li><strong>Secure processing</strong> designed to protect your document&apos;s privacy.</li>
           <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
@@ -95,12 +95,12 @@ export default function HowToSplitPdfPagesArticle() {
           <p><strong>1. Extracts Exactly What You Need</strong> Instead of sharing an entire lengthy document, you can isolate just the relevant pages, saving time for both you and the recipient.</p>
           <p><strong>2. Simplifies Document Organization</strong> Splitting large documents into smaller, logically separated files makes them easier to store, label, and reference later.</p>
           <p><strong>3. Saves Time</strong> What might take several manual steps in traditional PDF software takes just a few clicks with a dedicated online splitter.</p>
-          <p><strong>4. Preserves Original Quality</strong> Splitting doesn't compress or degrade the quality of your document — each resulting page or file retains its original formatting.</p>
-          <p><strong>5. Works Without Specialized Software</strong> There's no need for expensive PDF editing software — the entire process happens directly in your browser, completely free.</p>
+          <p><strong>4. Preserves Original Quality</strong> Splitting doesn&apos;t compress or degrade the quality of your document — each resulting page or file retains its original formatting.</p>
+          <p><strong>5. Works Without Specialized Software</strong> There&apos;s no need for expensive PDF editing software — the entire process happens directly in your browser, completely free.</p>
 
           <h2 id="pdf-vs-image" className="text-2xl font-bold mt-8">Splitting to PDF vs. Converting to Image</h2>
           <p>
-            It's worth knowing there are two different tools for two different needs here. Splitting
+            It&apos;s worth knowing there are two different tools for two different needs here. Splitting
             keeps your extracted pages as a true PDF, with any selectable text and document structure
             intact — the right choice when you need to preserve the document itself. If you actually
             want a picture of a page (to paste into a chat, embed in a slide, or drop into a photo
@@ -124,9 +124,9 @@ export default function HowToSplitPdfPagesArticle() {
           <h2 id="tips" className="text-2xl font-bold mt-8">Tips &amp; Best Practices</h2>
 
           <ul className="list-disc pl-6 space-y-2">
-          <li>Before splitting, review the original document's page numbers carefully to ensure you extract exactly the range you intend.</li>
-          <li>Use descriptive file names for each split document (like "Invoice_Jan_2026.pdf") to keep your files organized and easy to find later.</li>
-          <li>If you're splitting a document into many individual files, download the ZIP folder option to keep everything organized in one download rather than saving files one by one.</li>
+          <li>Before splitting, review the original document&apos;s page numbers carefully to ensure you extract exactly the range you intend.</li>
+          <li>Use descriptive file names for each split document (like &quot;Invoice_Jan_2026.pdf&quot;) to keep your files organized and easy to find later.</li>
+          <li>If you&apos;re splitting a document into many individual files, download the ZIP folder option to keep everything organized in one download rather than saving files one by one.</li>
           <li>Double-check split files for completeness and correct page order before sharing them with others, especially for important business or legal documents.</li>
           <li>Keep your original unsplit PDF as a backup in case you need to re-split with different page ranges later.</li>
           <li>If you need to both split and reorganize pages, consider merging the specific split files back together afterward using a PDF merge tool.</li>
@@ -140,9 +140,9 @@ export default function HowToSplitPdfPagesArticle() {
           <h3 className="text-lg font-semibold mt-4">Will splitting a PDF affect its quality?</h3>
           <p>No, splitting preserves the original formatting, quality, and layout of each resulting page or document without any compression or degradation.</p>
           <h3 className="text-lg font-semibold mt-4">Can I select non-consecutive pages, not just a range?</h3>
-          <p>Yes, you can select any combination of pages — like 1, 4, and 9 — rather than only a continuous range, and they'll all be included in one extracted PDF in their original order.</p>
+          <p>Yes, you can select any combination of pages — like 1, 4, and 9 — rather than only a continuous range, and they&apos;ll all be included in one extracted PDF in their original order.</p>
           <h3 className="text-lg font-semibold mt-4">Is this PDF Split tool free to use?</h3>
-          <p>Yes, it's completely free with no sign-up, watermarks, or hidden charges.</p>
+          <p>Yes, it&apos;s completely free with no sign-up, watermarks, or hidden charges.</p>
           <h3 className="text-lg font-semibold mt-4">Does this create one file or multiple separate files?</h3>
           <p>Your selected pages are combined into a single new PDF, in their original order — if you need genuinely separate individual files per page, repeat the extraction process selecting one page at a time.</p>
           <h3 className="text-lg font-semibold mt-4">Can I split password-protected PDFs?</h3>

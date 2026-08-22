@@ -42,7 +42,7 @@ export default function HeicToJpgClient() {
     setConverting(true);
     setResults([]);
 
-    let heic2any: any;
+    let heic2any: typeof import("heic2any").default;
     try {
       heic2any = (await import("heic2any")).default;
     } catch {
@@ -60,8 +60,9 @@ export default function HeicToJpgClient() {
         const name = file.name.replace(/\.(heic|heif)$/i, `.${ext}`);
         const size = (blob.size / 1024).toFixed(1) + " KB";
         out.push({ name, url, size, status: "done" });
-      } catch (e: any) {
-        out.push({ name: file.name, url: "", size: "", status: "error", error: e?.message || "Conversion failed." });
+      } catch (e: unknown) {
+        const message = e instanceof Error ? e.message : "Conversion failed.";
+        out.push({ name: file.name, url: "", size: "", status: "error", error: message });
       }
     }
     setResults(out);
@@ -149,7 +150,7 @@ export default function HeicToJpgClient() {
               <select
                 className="px-3 py-2 rounded-lg bg-background border text-sm outline-none cursor-pointer"
                 value={outputFormat}
-                onChange={(e) => setOutputFormat(e.target.value as any)}
+                onChange={(e) => setOutputFormat(e.target.value as "image/jpeg" | "image/png")}
               >
                 <option value="image/jpeg">JPG</option>
                 <option value="image/png">PNG</option>

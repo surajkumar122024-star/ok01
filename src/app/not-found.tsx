@@ -13,7 +13,7 @@ export default function NotFound() {
           </div>
         </div>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Oops! The page you're looking for doesn't exist. It might have been moved or the URL is incorrect.
+          Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been moved or the URL is incorrect.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" asChild>

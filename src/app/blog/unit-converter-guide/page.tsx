@@ -55,18 +55,18 @@ export default function UnitConverterArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Only three countries in the world haven't officially adopted the metric system as their
+            Only three countries in the world haven&apos;t officially adopted the metric system as their
             primary measurement standard — which means the rest of us regularly bump into recipes
             written in cups when our scale reads grams, a US shoe size chart listed in inches, or a
-            car's speedometer in km/h when we're used to thinking in mph. Converting between systems
-            shouldn't require memorizing formulas or doing mental math under pressure.
+            car&apos;s speedometer in km/h when we&apos;re used to thinking in mph. Converting between systems
+            shouldn&apos;t require memorizing formulas or doing mental math under pressure.
           </p>
 
           <h2 id="why" className="text-2xl font-bold mt-8">Why Unit Conversion Still Trips People Up</h2>
           <p>
-            The core difficulty isn't the math itself — it's that most people don't do these
-            conversions often enough to memorize the conversion factors, and getting them wrong isn't
-            always obvious. Miscalculating a recipe's grams-to-cups conversion might just mean a
+            The core difficulty isn&apos;t the math itself — it&apos;s that most people don&apos;t do these
+            conversions often enough to memorize the conversion factors, and getting them wrong isn&apos;t
+            always obvious. Miscalculating a recipe&apos;s grams-to-cups conversion might just mean a
             slightly off dessert, but getting a medication dosage, a shipping weight limit, or an
             engineering measurement wrong has real consequences. A calculator built specifically for
             unit conversion removes the guesswork and the risk of a manual math error.
@@ -96,11 +96,11 @@ export default function UnitConverterArticle() {
 
           <h2 id="temperature" className="text-2xl font-bold mt-8">Temperature: The Trickiest Conversion</h2>
           <p>
-            Unlike length or weight, temperature scales don't share a common zero point, which is why
-            you can't just multiply by a fixed ratio — the formulas involve both multiplication and
+            Unlike length or weight, temperature scales don&apos;t share a common zero point, which is why
+            you can&apos;t just multiply by a fixed ratio — the formulas involve both multiplication and
             addition. Celsius to Fahrenheit is °F = (°C × 9/5) + 32, while Fahrenheit to Celsius is
             °C = (°F − 32) × 5/9. Kelvin, used mainly in scientific contexts, simply shifts Celsius by
-            273.15 with no multiplication involved (K = °C + 273.15), since Kelvin's zero point is
+            273.15 with no multiplication involved (K = °C + 273.15), since Kelvin&apos;s zero point is
             absolute zero rather than the freezing point of water.
           </p>
 
@@ -108,7 +108,7 @@ export default function UnitConverterArticle() {
           <ol className="list-decimal pl-6 space-y-2">
             <li>Open the <Link href="/tools/unit-converter" className="text-primary underline underline-offset-2">Unit Converter</Link> tool.</li>
             <li>Select a category — Length, Weight, Temperature, and so on.</li>
-            <li>Choose your starting unit under "From" and your target unit under "To."</li>
+            <li>Choose your starting unit under &quot;From&quot; and your target unit under &quot;To.&quot;</li>
             <li>Type in the value you want to convert — the result updates instantly.</li>
             <li>Use the swap icon to quickly reverse the conversion direction if needed.</li>
           </ol>
@@ -126,7 +126,7 @@ export default function UnitConverterArticle() {
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Converting a recipe between metric and imperial measurements while cooking.</li>
-            <li>Checking a car's fuel efficiency or speed limit when traveling between countries using different systems.</li>
+            <li>Checking a car&apos;s fuel efficiency or speed limit when traveling between countries using different systems.</li>
             <li>Converting body weight or height between kg/cm and lbs/inches for fitness tracking.</li>
             <li>Calculating file storage needs across different data units for a project or device.</li>
             <li>Converting temperature readings for cooking, weather, or scientific contexts.</li>
@@ -137,7 +137,7 @@ export default function UnitConverterArticle() {
           <div className="space-y-4">
             <div>
               <p className="font-semibold">Why do my results have so many decimal places?</p>
-              <p className="text-muted-foreground">Some conversions, like miles to kilometers, don't land on round numbers, so the tool shows up to six decimal places for accuracy. Round the displayed value to whatever precision your use case needs.</p>
+              <p className="text-muted-foreground">Some conversions, like miles to kilometers, don&apos;t land on round numbers, so the tool shows up to six decimal places for accuracy. Round the displayed value to whatever precision your use case needs.</p>
             </div>
             <div>
               <p className="font-semibold">Is this accurate enough for professional or scientific use?</p>
@@ -148,8 +148,8 @@ export default function UnitConverterArticle() {
               <p className="text-muted-foreground">Once the page has loaded, all math runs locally in your browser using JavaScript — no server call is made for the conversion itself.</p>
             </div>
             <div>
-              <p className="font-semibold">Why is there a difference between a "GB" on my hard drive and a "GB" my computer reports?</p>
-              <p className="text-muted-foreground">Storage manufacturers typically use decimal gigabytes (1 GB = 1,000,000,000 bytes), while operating systems often report binary gigabytes (1 GB = 1,073,741,824 bytes) — this discrepancy is why a "1TB" drive shows less than 1TB in your file explorer.</p>
+              <p className="font-semibold">Why is there a difference between a &quot;GB&quot; on my hard drive and a &quot;GB&quot; my computer reports?</p>
+              <p className="text-muted-foreground">Storage manufacturers typically use decimal gigabytes (1 GB = 1,000,000,000 bytes), while operating systems often report binary gigabytes (1 GB = 1,073,741,824 bytes) — this discrepancy is why a &quot;1TB&quot; drive shows less than 1TB in your file explorer.</p>
             </div>
             <div>
               <p className="font-semibold">Is my data sent anywhere when I use this tool?</p>

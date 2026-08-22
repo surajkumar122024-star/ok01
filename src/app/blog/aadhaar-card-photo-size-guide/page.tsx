@@ -44,7 +44,7 @@ export default function AadhaarPhotoArticle() {
             <li><a href="#rejections" className="hover:text-primary">Why photos actually get rejected</a></li>
             <li><a href="#how-to" className="hover:text-primary">How to prepare your photo, step by step</a></li>
             <li><a href="#printing" className="hover:text-primary">Printing your photo correctly</a></li>
-            <li><a href="#use-cases" className="hover:text-primary">When you'll need this photo</a></li>
+            <li><a href="#use-cases" className="hover:text-primary">When you&apos;ll need this photo</a></li>
             <li><a href="#faq" className="hover:text-primary">Frequently asked questions</a></li>
           </ul>
         </nav>
@@ -53,9 +53,9 @@ export default function AadhaarPhotoArticle() {
         <div className="prose prose-neutral dark:prose-invert max-w-none space-y-6 text-base leading-relaxed">
 
           <p>
-            Whether you're enrolling for Aadhaar for the first time or updating existing details at a
-            Seva Kendra, you'll need a photo in a specific size — and getting it wrong is one of the
-            more common reasons an application gets sent back for correction. Here's exactly what's
+            Whether you&apos;re enrolling for Aadhaar for the first time or updating existing details at a
+            Seva Kendra, you&apos;ll need a photo in a specific size — and getting it wrong is one of the
+            more common reasons an application gets sent back for correction. Here&apos;s exactly what&apos;s
             required and how to get it right the first time.
           </p>
 
@@ -68,8 +68,8 @@ export default function AadhaarPhotoArticle() {
             <p><strong>Recency:</strong> A recent photo reflecting current appearance</p>
           </div>
           <p>
-            This same specification applies whether you're completing a new enrollment form or a
-            correction/update request at an Aadhaar Seva Kendra — there's no separate size for each
+            This same specification applies whether you&apos;re completing a new enrollment form or a
+            correction/update request at an Aadhaar Seva Kendra — there&apos;s no separate size for each
             process.
           </p>
 
@@ -99,11 +99,11 @@ export default function AadhaarPhotoArticle() {
 
           <h2 id="printing" className="text-2xl font-bold mt-8">Printing Your Photo Correctly</h2>
           <p>
-            Once you've downloaded the correctly cropped photo, any local photo printing shop can
+            Once you&apos;ve downloaded the correctly cropped photo, any local photo printing shop can
             print it on standard photo paper — just confirm with them that the output size matches
             3.5×4.5cm exactly before they cut it, since some print shops default to a slightly
             different standard size unless you specify. A home printer with photo paper works too, as
-            long as you print at 100% scale rather than "fit to page," which can distort the exact
+            long as you print at 100% scale rather than &quot;fit to page,&quot; which can distort the exact
             dimensions.
           </p>
           <p>
@@ -115,7 +115,7 @@ export default function AadhaarPhotoArticle() {
             recent photo on hand.
           </p>
 
-          <h2 id="use-cases" className="text-2xl font-bold mt-8">When You'll Need This Photo</h2>
+          <h2 id="use-cases" className="text-2xl font-bold mt-8">When You&apos;ll Need This Photo</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>New Aadhaar enrollment for yourself or a family member.</li>
             <li>Aadhaar detail correction or update requests (name, address, date of birth).</li>
@@ -135,7 +135,7 @@ export default function AadhaarPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I wear glasses in the photo?</p>
-              <p className="text-muted-foreground">Plain glasses are generally acceptable as long as there's no glare obscuring your eyes — angling slightly away from a direct light source helps avoid reflection.</p>
+              <p className="text-muted-foreground">Plain glasses are generally acceptable as long as there&apos;s no glare obscuring your eyes — angling slightly away from a direct light source helps avoid reflection.</p>
             </div>
             <div>
               <p className="font-semibold">Does the photo need to be recent?</p>
@@ -147,7 +147,7 @@ export default function AadhaarPhotoArticle() {
             </div>
             <div>
               <p className="font-semibold">Can I use a phone selfie for this?</p>
-              <p className="text-muted-foreground">Yes, as long as it's taken against a plain, light background with even lighting and a direct, neutral-expression view of your face — modern phone cameras are sharp enough for this purpose.</p>
+              <p className="text-muted-foreground">Yes, as long as it&apos;s taken against a plain, light background with even lighting and a direct, neutral-expression view of your face — modern phone cameras are sharp enough for this purpose.</p>
             </div>
             <div>
               <p className="font-semibold">Do I need to print this myself, or can I upload it digitally?</p>

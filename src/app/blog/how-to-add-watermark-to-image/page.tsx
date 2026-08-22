@@ -141,19 +141,19 @@ export default function BlogPostWatermark() {
       <section id="text-vs-logo" className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Text Watermark vs. Logo Watermark: Which Should You Use?</h2>
         <p className="leading-relaxed text-gray-700 mb-4">
-          This choice comes down to what you're actually optimizing for. A text watermark — your
-          name or website URL — takes seconds to set up, is always legible regardless of the image's
+          This choice comes down to what you&apos;re actually optimizing for. A text watermark — your
+          name or website URL — takes seconds to set up, is always legible regardless of the image&apos;s
           colors (as long as you pick good contrast), and works well for individual creators who
-          don't yet have a polished logo. A logo watermark takes more upfront preparation (you need a
+          don&apos;t yet have a polished logo. A logo watermark takes more upfront preparation (you need a
           transparent PNG logo ready to go), but it reinforces visual brand recognition far more
           effectively over time — viewers start to recognize a logo mark at a glance long before
-          they'd consciously read and remember a text URL.
+          they&apos;d consciously read and remember a text URL.
         </p>
         <p className="leading-relaxed text-gray-700">
           A practical middle ground many businesses use: a small, subtle logo watermark for public
           social posts (branding-focused), and a bolder, centrally placed text watermark reading
           &quot;PREVIEW — NOT FOR USE&quot; on client preview images before a purchase or contract is
-          finalized (protection-focused). The right choice isn't universal — it depends on whether
+          finalized (protection-focused). The right choice isn&apos;t universal — it depends on whether
           this specific image needs branding or theft deterrence more.
         </p>
       </section>
@@ -164,13 +164,13 @@ export default function BlogPostWatermark() {
         <p className="leading-relaxed text-gray-700 mb-4">
           Watermark placement is a genuine trade-off between protection and visual appeal, and
           getting it wrong undermines whichever goal you were actually going for. A watermark tucked
-          neatly in a bottom corner looks clean and professional, but it's also the single easiest
+          neatly in a bottom corner looks clean and professional, but it&apos;s also the single easiest
           part of an image to crop out entirely — someone determined to reuse your photo without
           credit can remove a corner watermark with one crop.
         </p>
         <p className="leading-relaxed text-gray-700 mb-4">
           A watermark placed diagonally across the center, or repeated in a tiled pattern across the
-          whole frame, is dramatically harder to remove without visibly damaging the image — but it's
+          whole frame, is dramatically harder to remove without visibly damaging the image — but it&apos;s
           also more visually intrusive, which matters if the image needs to remain genuinely
           presentable (a portfolio piece) rather than just protected (a low-res client preview).
         </p>

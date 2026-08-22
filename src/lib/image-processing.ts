@@ -66,8 +66,9 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
           try {
             const dataUrl = canvas.toDataURL(format, quality);
             resolve(dataURLToBlob(dataUrl));
-          } catch (fallbackErr: any) {
-            reject(new Error(`Could not export the resized image on this device (${fallbackErr?.message || 'unknown error'}).`));
+          } catch (fallbackErr: unknown) {
+            const message = fallbackErr instanceof Error ? fallbackErr.message : 'unknown error';
+            reject(new Error(`Could not export the resized image on this device (${message}).`));
           }
         };
 
@@ -89,8 +90,9 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
           // Very old browsers without toBlob support at all
           fallbackToDataURL();
         }
-      } catch (err: any) {
-        reject(new Error(`Image processing failed: ${err?.message || 'unknown error'}`));
+      } catch (err: unknown) {
+        const message = err instanceof Error ? err.message : 'unknown error';
+        reject(new Error(`Image processing failed: ${message}`));
       }
     };
 

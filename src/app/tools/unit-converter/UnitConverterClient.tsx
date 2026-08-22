@@ -255,7 +255,7 @@ export default function UnitConverterClient() {
           <details className="glass rounded-xl border p-4">
             <summary className="cursor-pointer font-medium text-sm">Why do my results have so many decimal places?</summary>
             <p className="text-muted-foreground text-sm mt-2 leading-relaxed">
-              Some conversions (like miles to kilometers) don't land on round numbers, so the tool
+              Some conversions (like miles to kilometers) don&apos;t land on round numbers, so the tool
               shows up to six decimal places for accuracy. You can round the displayed value to
               whatever precision your use case needs.
             </p>

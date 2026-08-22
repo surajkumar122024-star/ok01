@@ -104,10 +104,10 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
     img.src = imageSrc;
   }, [imageSrc, aspectRatio]);
 
-  const getPos = (e: any) => {
+  const getPos = (e: React.MouseEvent | React.TouchEvent) => {
     const rect = overlayRef.current!.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
     return { x: clientX - rect.left, y: clientY - rect.top };
   };
 
@@ -121,7 +121,7 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
 
   const clamp = (v: number, min: number, max: number) => Math.max(min, Math.min(max, v));
 
-  const onPointerDown = useCallback((e: any) => {
+  const onPointerDown = useCallback((e: React.MouseEvent | React.TouchEvent) => {
     if (!imageSrc) return;
     e.preventDefault();
     const pos = getPos(e);
@@ -132,7 +132,7 @@ export default function DocumentPhotoClient(config: DocumentPhotoConfig) {
     setStartBox({ ...cropBox });
   }, [imageSrc, cropBox]);
 
-  const onPointerMove = useCallback((e: any) => {
+  const onPointerMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
     if (!dragging || !startBox) return;
     e.preventDefault();
     const pos = getPos(e);
