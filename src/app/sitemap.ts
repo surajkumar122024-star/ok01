@@ -79,6 +79,8 @@ const blogPosts = [
   'visa-photo-size-guide',
   'exam-photo-size-guide',
   'signature-resizer-guide',
+  'image-collage-maker-guide',
+  'document-photo-size-guide-india',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

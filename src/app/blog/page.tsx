@@ -226,6 +226,18 @@ const blogs = [
     description: 'The common 140×60px signature scan specification for bank KYC, exam applications, and government forms.',
     date: 'July 20, 2026',
   },
+  {
+    slug: 'image-collage-maker-guide',
+    title: 'How to Make a Photo Collage Online — Free & Instant',
+    description: 'Combine multiple photos into one grid collage online, free and instantly in your browser. No uploads, no software, no watermark.',
+    date: 'August 22, 2026',
+  },
+  {
+    slug: 'document-photo-size-guide-india',
+    title: 'Document Photo Size Guide: Aadhaar, PAN, Passport, Visa & Exam Photos',
+    description: 'Every common Indian document photo specification in one place — Aadhaar, PAN, Passport, Visa, exam applications, and signature scans.',
+    date: 'August 22, 2026',
+  },
 ];
 
 export default function BlogPage() {
