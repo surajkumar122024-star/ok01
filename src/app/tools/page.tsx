@@ -158,6 +158,13 @@ const tools = [
   icon: FileImage,
   color: "bg-indigo-600"
 },
+{
+  name: "Barcode Generator",
+  slug: "barcode-generator",
+  description: "Generate a scannable barcode — CODE128, EAN-13, UPC, and more. Free, instant.",
+  icon: FileImage,
+  color: "bg-slate-600"
+},
   {
   name: "Text Repeater",
   slug: "text-repeater",

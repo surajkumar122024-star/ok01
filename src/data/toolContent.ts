@@ -941,6 +941,48 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "barcode-generator": {
+    overview: [
+      "A barcode encodes a piece of data — usually a number or short code — as a pattern of parallel lines that a scanner or camera can read in a fraction of a second. Unlike a QR code, which stores data in two dimensions and can hold a URL or a paragraph of text, a traditional barcode reads left to right and is built specifically for short, structured values like product codes, shipment IDs, or inventory numbers.",
+      "This generator runs entirely in your browser using an open-source barcode rendering library — nothing you type is sent to a server, and the code is generated the instant you finish typing. Several formats are supported, each suited to a different real-world use: CODE128 for general-purpose alphanumeric codes, EAN-13 and UPC-A for retail product barcodes, CODE39 for logistics and asset tags, ITF-14 for shipping cartons, and MSI for warehouse shelf labels.",
+      "Each format has its own rules about what values it can encode — EAN-13 and UPC only accept a specific number of digits, for instance, while CODE128 accepts nearly any combination of letters, numbers, and symbols. The tool validates your input against the selected format and tells you directly if a value doesn't fit, rather than silently generating an unscannable code.",
+    ],
+    steps: [
+      { title: "Choose a barcode format", description: "Pick the format that matches your use case — CODE128 for general use, EAN-13/UPC for retail products, and so on." },
+      { title: "Enter the value to encode", description: "Type the number or code you want represented as a barcode." },
+      { title: "Check for validation errors", description: "If the value doesn't fit the selected format's rules, the tool tells you directly rather than producing a broken code." },
+      { title: "Download your barcode", description: "Save as PNG for general use, or SVG if you need to print it at a larger size without losing sharpness." },
+    ],
+    useCases: [
+      { title: "Small business inventory labeling", description: "Generate CODE128 or CODE39 barcodes for tracking stock without needing dedicated inventory software." },
+      { title: "Retail product barcodes", description: "Create an EAN-13 or UPC-A barcode for a product listing, matching the standard format retail scanners expect." },
+      { title: "Asset and equipment tagging", description: "Label internal equipment or assets with scannable CODE39 codes for quick lookup." },
+      { title: "Shipping and logistics labels", description: "Generate ITF-14 codes for carton-level shipping labels." },
+      { title: "Testing a barcode scanner or POS system", description: "Quickly produce sample barcodes in various formats to test scanning hardware or software during development." },
+    ],
+    tips: [
+      "EAN-13 and UPC-A require an exact digit count (12-13 and 11-12 respectively) — if your value doesn't fit, the tool will flag it rather than generate an invalid code.",
+      "CODE128 is the safest default when you're not sure which format to use, since it accepts the widest range of characters.",
+      "Keep the barcode reasonably wide when printing small — very narrow bars can become unreadable to some scanners at low print resolution.",
+      "SVG downloads scale to any print size without pixelation, unlike PNG.",
+      "Turn off the text label below the barcode only if your use case doesn't need a human-readable fallback — it's useful for manual entry if a scan ever fails.",
+    ],
+    faqs: [
+      { q: "What's the difference between a barcode and a QR code?", a: "A barcode reads in one direction and typically stores a short numeric or alphanumeric code. A QR code stores data in two dimensions and can hold much more — a full URL or paragraph of text — in the same physical space." },
+      { q: "Why did my value get rejected for EAN-13 or UPC?", a: "Those formats require an exact digit count with a built-in checksum — EAN-13 needs 12-13 digits, UPC-A needs 11-12. A different length or non-numeric input will be flagged as invalid." },
+      { q: "Is my data uploaded anywhere when I generate a barcode?", a: "No, the barcode is rendered entirely in your browser using JavaScript. Nothing you type is sent to a server." },
+      { q: "Which format should I use if I'm not sure?", a: "CODE128 is the most flexible and accepts nearly any combination of letters, numbers, and symbols, making it a safe default outside of retail-specific use cases." },
+      { q: "Can I use a generated barcode for actual retail products?", a: "EAN-13 and UPC-A codes follow the correct standard format, but official retail use typically requires a registered code from GS1 or a similar body — check your specific retail platform's requirements before using a self-generated code commercially." },
+      { q: "Why does my barcode look different in width between formats?", a: "Each format encodes data using a different bar-width pattern, so the same value can render at noticeably different widths depending on which format is selected." },
+    ],
+    relatedTools: [
+      { name: "QR Code Generator", slug: "qr-code-generator" },
+      { name: "Slug Generator", slug: "slug-generator" },
+      { name: "URL Encoder / Decoder", slug: "url-encoder" },
+      { name: "Character Counter", slug: "character-counter" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",

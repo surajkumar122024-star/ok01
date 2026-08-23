@@ -23,6 +23,7 @@ const tools = [
   'json-formatter',
   'password-generator',
   'qr-code-generator',
+  'barcode-generator',
   'pdf-merge',
   'pdf-split',
   'slug-generator',
