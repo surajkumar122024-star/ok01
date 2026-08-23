@@ -244,6 +244,12 @@ const blogs = [
     description: 'Create a QR code for a link, Wi-Fi network, or contact card in seconds — and understand what error correction actually means.',
     date: 'August 23, 2026',
   },
+  {
+    slug: 'barcode-generator-guide',
+    title: 'How to Make a Free Barcode Online — And Which Format to Pick',
+    description: 'Generate a scannable barcode in the right format for retail, inventory, or shipping — free, with no sign-up.',
+    date: 'August 23, 2026',
+  },
 ];
 
 export default function BlogPage() {

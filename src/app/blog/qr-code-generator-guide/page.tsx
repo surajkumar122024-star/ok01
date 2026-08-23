@@ -139,6 +139,7 @@ export default function QrCodeGuideArticle() {
             <li><Link href="/tools/url-encoder" className="text-primary hover:underline">URL Encoder / Decoder</Link> — encode special characters in a URL before putting it into a QR code.</li>
             <li><Link href="/tools/slug-generator" className="text-primary hover:underline">Slug Generator</Link> — create a clean URL slug for a page you plan to link via QR code.</li>
             <li><Link href="/tools/password-generator" className="text-primary hover:underline">Password Generator</Link> — generate a strong Wi-Fi password before encoding it into a Wi-Fi QR code.</li>
+            <li><Link href="/tools/barcode-generator" className="text-primary hover:underline">Barcode Generator</Link> — for retail or inventory codes where scanning hardware expects a traditional barcode format instead.</li>
           </ul>
 
           {/* CTA */}
