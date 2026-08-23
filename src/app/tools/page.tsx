@@ -151,6 +151,13 @@ const tools = [
   icon: FileImage,
   color: "bg-purple-600"
 },
+{
+  name: "QR Code Generator",
+  slug: "qr-code-generator",
+  description: "Create a QR code for a URL, text, Wi-Fi, or contact card. Free, instant.",
+  icon: FileImage,
+  color: "bg-indigo-600"
+},
   {
   name: "Text Repeater",
   slug: "text-repeater",

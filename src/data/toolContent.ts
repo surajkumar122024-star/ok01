@@ -897,6 +897,50 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "qr-code-generator": {
+    overview: [
+      "A QR code is a two-dimensional barcode that stores data — a website link, plain text, Wi-Fi credentials, or a contact card — in a pattern that any modern phone camera can scan and decode in under a second. Unlike a traditional barcode, which only reads left to right, a QR code encodes data in both dimensions, which is what lets it pack in far more information within the same physical space.",
+      "This generator builds the code entirely in your browser using the same open QR encoding standard used everywhere else — there's no server involved in creating it, no account required, and no tracking layer inserted between you and the person who eventually scans it. Once generated, the code is just an image; it doesn't phone home or expire.",
+      "Four common formats are supported: a plain URL for linking to a website or page, free-form text for anything else, a Wi-Fi network profile that lets a phone join automatically without typing a password, and a contact card (vCard) that a phone can save directly into its address book when scanned.",
+      "The 'error correction' setting controls how much of the code's pattern can be damaged, obscured, or covered by a logo while still scanning correctly — higher levels rebuild more of the missing data at scan time, at the cost of a visually denser code. For a code that will be printed small or placed somewhere it might get scuffed, a higher level adds real reliability.",
+    ],
+    steps: [
+      { title: "Choose a code type", description: "Pick URL, Text, Wi-Fi, or Contact depending on what you want the code to do when scanned." },
+      { title: "Fill in the details", description: "Enter your link, message, network credentials, or contact info in the fields shown." },
+      { title: "Set the error correction level", description: "Higher levels stay scannable even if the code gets partly covered or damaged, useful for printed codes." },
+      { title: "Download your code", description: "Save as PNG for general use, or SVG if you need to scale it up for print without losing sharpness." },
+    ],
+    useCases: [
+      { title: "Linking a printed flyer to a website", description: "Add a scannable code to posters, business cards, or packaging that opens a URL instantly." },
+      { title: "Sharing Wi-Fi access without reading out a password", description: "Generate a code guests can scan to join your network automatically, no typing required." },
+      { title: "Digital business cards", description: "Create a contact QR code that saves your name, phone, and email directly into someone's phone when scanned." },
+      { title: "Restaurant and event menus", description: "Point a table tent or poster at a digital menu or event page without printing a long URL." },
+      { title: "Quick device-to-device text transfer", description: "Encode a short message or code as a QR code to transfer it to another device by scanning instead of typing." },
+    ],
+    tips: [
+      "Test any code you plan to print by scanning it on a couple of different phones first — some older camera apps handle certain error-correction levels or code sizes better than others.",
+      "Use High error correction if you plan to add a logo to the center of the code, since that area of the pattern gets covered.",
+      "Keep printed codes at least 2×2cm — very small codes are harder for phone cameras to focus on and decode reliably.",
+      "For a Wi-Fi code, double-check the network name and password before generating — an incorrect password produces a code that looks fine but fails to connect.",
+      "SVG downloads scale to any size without pixelation, which matters more than PNG once a code is being printed larger than a business card.",
+    ],
+    faqs: [
+      { q: "Do QR codes expire?", a: "No — a QR code generated this way is a static image encoding your data directly. It doesn't expire or depend on any server staying online." },
+      { q: "Is my data uploaded anywhere when I generate a code?", a: "No, the code is generated entirely in your browser using JavaScript. Nothing you type is sent to a server." },
+      { q: "What's the difference between PNG and SVG downloads?", a: "PNG is a fixed-resolution image, fine for screens and most printing. SVG is vector-based and stays perfectly sharp at any size, which matters if you're printing the code large." },
+      { q: "Can I put a logo in the middle of my QR code?", a: "Many scanners tolerate a small logo covering the center if you use a higher error correction level (Q or H), since that data can be reconstructed from the surrounding pattern." },
+      { q: "Why did my Wi-Fi QR code fail to connect a phone?", a: "Double-check the exact network name and password were entered correctly — a QR code can't validate credentials, it only encodes whatever text you provide." },
+      { q: "Will a QR code work if it's scanned from a screen instead of printed?", a: "Yes, as long as there's enough contrast and the screen isn't reflecting glare into the camera." },
+      { q: "What's the maximum amount of text I can encode?", a: "QR codes can hold up to a few thousand characters of text, though very long text produces a visually dense code that's harder to scan reliably — shorter payloads like URLs work best." },
+    ],
+    relatedTools: [
+      { name: "URL Encoder / Decoder", slug: "url-encoder" },
+      { name: "Slug Generator", slug: "slug-generator" },
+      { name: "Color Picker", slug: "color-picker" },
+      { name: "Password Generator", slug: "password-generator" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",

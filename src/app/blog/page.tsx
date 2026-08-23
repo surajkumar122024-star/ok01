@@ -238,6 +238,12 @@ const blogs = [
     description: 'Every common Indian document photo specification in one place — Aadhaar, PAN, Passport, Visa, exam applications, and signature scans.',
     date: 'August 22, 2026',
   },
+  {
+    slug: 'qr-code-generator-guide',
+    title: 'How to Make a Free QR Code Online — No Sign-Up, No Expiry',
+    description: 'Create a QR code for a link, Wi-Fi network, or contact card in seconds — and understand what error correction actually means.',
+    date: 'August 23, 2026',
+  },
 ];
 
 export default function BlogPage() {

@@ -22,6 +22,7 @@ const tools = [
   'color-picker',
   'json-formatter',
   'password-generator',
+  'qr-code-generator',
   'pdf-merge',
   'pdf-split',
   'slug-generator',
@@ -81,6 +82,7 @@ const blogPosts = [
   'signature-resizer-guide',
   'image-collage-maker-guide',
   'document-photo-size-guide-india',
+  'qr-code-generator-guide',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
