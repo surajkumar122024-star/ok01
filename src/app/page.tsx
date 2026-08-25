@@ -47,7 +47,6 @@ const categories = [
     description: 'Compress, resize, crop, rotate, watermark, and pick colors from any photo.',
     icon: ImageIcon,
     href: '/tools',
-    count: '11 tools',
     gradient: 'from-violet-600 to-purple-700',
   },
   {
@@ -55,7 +54,6 @@ const categories = [
     description: 'Move between JPG, PNG, WebP, HEIC, and SVG without losing quality.',
     icon: Layers,
     href: '/tools',
-    count: '6 tools',
     gradient: 'from-fuchsia-600 to-pink-600',
   },
   {
@@ -63,7 +61,6 @@ const categories = [
     description: 'Merge, split, and convert PDFs to and from images, all in your browser.',
     icon: FileText,
     href: '/tools',
-    count: '4 tools',
     gradient: 'from-cyan-600 to-teal-600',
   },
   {
@@ -71,7 +68,6 @@ const categories = [
     description: 'Aadhaar, PAN, Passport, Visa, and exam photos sized to official specs.',
     icon: FileImage,
     href: '/tools',
-    count: '6 tools',
     gradient: 'from-blue-600 to-indigo-600',
   },
   {
@@ -79,7 +75,6 @@ const categories = [
     description: 'Word counter, case converter, JSON formatter, Base64, and more.',
     icon: Code2,
     href: '/tools',
-    count: '8+ tools',
     gradient: 'from-sky-500 to-blue-600',
   },
   {
@@ -87,7 +82,6 @@ const categories = [
     description: 'Length, weight, temperature, area, volume, speed, data, and time.',
     icon: Maximize,
     href: '/tools/unit-converter',
-    count: '8 categories',
     gradient: 'from-orange-500 to-amber-600',
   },
 ];
@@ -247,12 +241,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
                     <cat.icon size={22} />
                   </div>
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="text-lg font-bold">{cat.name}</h3>
-                    <span className="text-xs font-medium bg-white/15 backdrop-blur-sm px-2 py-1 rounded-full">
-                      {cat.count}
-                    </span>
-                  </div>
+                  <h3 className="text-lg font-bold mb-2">{cat.name}</h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-4">{cat.description}</p>
                   <span className="inline-flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all">
                     Explore <ArrowRight size={14} />
