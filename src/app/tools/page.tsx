@@ -13,11 +13,11 @@ import {
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 34 Free Image, PDF, Text & Document Tools',
-  description: 'Browse all 34 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 36 Free Image, PDF, Text & Document Tools',
+  description: 'Browse all 36 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 34 free browser-based tools for images, PDFs, text, and documents.',
+    description: 'Browse all 36 free browser-based tools for images, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },

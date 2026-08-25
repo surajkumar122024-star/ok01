@@ -5,7 +5,7 @@ import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
   title: 'About OpticShift Pro – Privacy-First Browser-Based Tools',
-  description: 'OpticShift Pro is an independently built suite of 34+ free image, PDF, and text tools that run entirely in your browser.',
+  description: 'OpticShift Pro is an independently built suite of 36+ free image, PDF, and text tools that run entirely in your browser.',
 };
 
 export default function AboutPage() {
@@ -63,7 +63,7 @@ export default function AboutPage() {
             For a quick screenshot that&apos;s a minor inconvenience. For a scanned ID document, a signed form, or a private photo, it&apos;s a real privacy concern — and it shouldn&apos;t be the trade-off you have to accept just to resize an image.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            So I built OpticShift Pro around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of 34+ free tools covering images, PDFs, and text utilities.
+            So I built OpticShift Pro around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of 36+ free tools covering images, PDFs, and text utilities.
           </p>
         </section>
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="text-center py-10 px-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
           <h2 className="text-2xl font-bold mb-3">Ready to get started?</h2>
-          <p className="text-muted-foreground mb-6">Try any of our 34+ free tools — no account needed, no files uploaded.</p>
+          <p className="text-muted-foreground mb-6">Try any of our 36+ free tools — no account needed, no files uploaded.</p>
           <Link
             href="/tools"
             className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors"
