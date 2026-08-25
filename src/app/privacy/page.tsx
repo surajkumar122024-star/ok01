@@ -150,7 +150,7 @@ export default function PrivacyPage() {
         </p>
         <div className="mt-3 p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
           <p className="font-medium text-foreground">OpticShift Pro</p>
-          <p>Email: <a href="mailto:support@opticshift.pro" className="text-primary underline hover:text-primary/80">support@opticshift.pro</a></p>
+          <p>Email: <a href="mailto:rrok86383@gmail.com" className="text-primary underline hover:text-primary/80">rrok86383@gmail.com</a></p>
           <p>Website: <a href="https://ok01.vercel.app" className="text-primary underline hover:text-primary/80">ok01.vercel.app</a></p>
         </div>
       </section>

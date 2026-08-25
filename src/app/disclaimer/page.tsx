@@ -283,7 +283,7 @@ export default function DisclaimerPage() {
               If you have questions about this Disclaimer, please reach out:
             </p>
             <div className="pt-2">
-              <p className="text-foreground font-medium">Email: support@opticshift.pro</p>
+              <p className="text-foreground font-medium">Email: rrok86383@gmail.com</p>
             </div>
             <p className="leading-relaxed text-muted-foreground pt-2">
               You can also reach us through our{' '}
