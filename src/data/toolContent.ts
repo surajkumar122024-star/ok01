@@ -313,6 +313,7 @@ export const toolContent: Record<string, ToolContentData> = {
       "If you're converting many photos regularly, changing your camera format setting avoids needing this extra step for future photos.",
     ],
     faqs: [
+      { q: "How do I change a HEIC photo to JPG?", a: "Upload the HEIC file to this tool, and it converts and previews the JPG version automatically — no extra steps or software needed to change the format." },
       { q: "Can I avoid this issue by changing my iPhone's camera settings?", a: "Yes — under Settings → Camera → Formats, choosing 'Most Compatible' saves new photos directly as JPG, though this tool is still useful for HEIC photos you already have." },
       { q: "Does converting to JPG reduce photo quality?", a: "There's a small quality trade-off since JPG uses different compression than HEIC, but at normal viewing sizes the difference is rarely noticeable." },
       { q: "Why won't my HEIC file open on my computer?", a: "HEIC support isn't built into every operating system and photo viewer by default, especially on older Windows and Android versions." },

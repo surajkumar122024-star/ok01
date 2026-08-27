@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'How to Convert HEIC to JPG: Complete 2026 Guide — OpticShift Pro',
   description: 'Learn how to convert HEIC photos to JPG online for free. Step-by-step guide to fix iPhone photo compatibility issues on any device or platform.',
-  keywords: 'convert HEIC to JPG, free online tool, convert HEIC to JPG guide',
+  keywords: 'convert HEIC to JPG, how to change HEIC to JPG, converting HEIC to JPG, HEIC to JPG online free, HEIC to JPG converter, iPhone photos won\'t open',
 }
 
 export default function HowToConvertHeicToJpgArticle() {
