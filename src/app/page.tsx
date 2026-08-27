@@ -177,7 +177,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
-            <span>36+ browser-based tools, zero uploads</span>
+            <span>36+ free, fast, online browser-based tools, zero uploads</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
