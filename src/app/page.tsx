@@ -180,9 +180,9 @@ export default function Home() {
             <span>36+ browser-based tools, zero uploads</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
-            Every File Tool You Need, <br />
+            Your File, Fixed <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Running in Your Browser.
+              Before the Page Even Loads.
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -199,6 +199,35 @@ export default function Home() {
             <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-xl glass" asChild>
               <Link href="/about">How it works</Link>
             </Button>
+          </div>
+
+          {/* Signature: live conversion strip — a small honest demo of what actually happens */}
+          <div className="pt-10 flex justify-center" aria-hidden="true">
+            <div className="glass border rounded-2xl px-6 py-5 inline-flex items-center gap-4 sm:gap-6">
+              <div className="convert-cycle flex items-center gap-4 sm:gap-6 min-w-[260px] sm:min-w-[320px]">
+                {[
+                  { from: 'photo.heic', to: 'photo.jpg' },
+                  { from: 'image.png', to: 'image.webp' },
+                  { from: 'scan.pdf', to: 'scan.png' },
+                ].map((pair, i) => (
+                  <div
+                    key={pair.from}
+                    className="convert-item flex items-center gap-3 sm:gap-4"
+                    style={{ animationDelay: `${i * 3.2}s` }}
+                  >
+                    <span className="font-mono text-sm sm:text-base px-3 py-1.5 rounded-lg bg-muted text-muted-foreground border">
+                      {pair.from}
+                    </span>
+                    <span className="convert-arrow text-primary">
+                      <ArrowRight size={20} />
+                    </span>
+                    <span className="font-mono text-sm sm:text-base px-3 py-1.5 rounded-lg bg-primary/10 text-primary border border-primary/20">
+                      {pair.to}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

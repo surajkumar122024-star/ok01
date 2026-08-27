@@ -157,3 +157,55 @@
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+/* Hero signature: cycling file-conversion strip.
+   Only one pair is visible/interactive at a time; each fades in, holds,
+   then fades out while the next one's delay brings it in — a simple
+   sequential loop with no JS. Total cycle = items * 3.2s below. */
+.convert-cycle {
+  position: relative;
+  min-height: 2.5rem;
+}
+
+.convert-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: convert-fade 9.6s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+@keyframes convert-fade {
+  0% { opacity: 0; transform: translateY(4px); }
+  4% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(0); }
+  34% { opacity: 0; transform: translateY(-4px); }
+  100% { opacity: 0; transform: translateY(-4px); }
+}
+
+.convert-arrow {
+  display: inline-flex;
+  animation: convert-nudge 1.6s ease-in-out infinite;
+}
+
+@keyframes convert-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .convert-item {
+    animation: none;
+    position: static;
+    opacity: 1;
+    transform: none;
+  }
+  .convert-cycle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .convert-arrow {
+    animation: none;
+  }
+}
