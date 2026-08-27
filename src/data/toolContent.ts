@@ -285,7 +285,7 @@ export const toolContent: Record<string, ToolContentData> = {
   "heic-to-jpg": {
     overview: [
       "iPhones save photos in HEIC format by default because it compresses more efficiently than JPG while preserving comparable quality. The trade-off is compatibility: many Windows PCs, older Android devices, and countless web upload forms simply don't recognize .heic files, leaving you with a photo that looks like a blank icon everywhere except on Apple devices.",
-      "This converter reads a HEIC file directly in the browser and re-encodes it as a standard JPG, restoring compatibility instantly. It's the fastest fix for the moment you try to email a phone photo to someone on Windows, or upload it to a website that rejects the format outright.",
+      "This converter reads a HEIC file directly in the browser and re-encodes it as a standard JPG, PNG, or a combined PDF — restoring compatibility instantly. It's the fastest fix for the moment you try to email a phone photo to someone on Windows, or upload it to a website that rejects the format outright.",
       "Since decoding happens locally using a HEIC-compatible library loaded into the page, your photo is never transmitted to a server just to be converted — the entire process happens on your own device.",
       "HEIC's efficiency comes from using a more modern video-derived compression standard (HEIF) rather than JPG's older algorithm, letting Apple store the same visual quality in roughly half the file size. That's genuinely useful for on-device storage, but it becomes a liability the moment a file needs to travel outside Apple's ecosystem.",
       "This tool's conversion is a one-way trip in practice: once a HEIC photo is converted to JPG, you'd need the original HEIC file again to get back that smaller storage footprint. It's worth keeping the source HEIC photos in your library and only exporting JPG copies for the specific situations that need them.",
@@ -314,6 +314,7 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
     faqs: [
       { q: "How do I change a HEIC photo to JPG?", a: "Upload the HEIC file to this tool, and it converts and previews the JPG version automatically — no extra steps or software needed to change the format." },
+      { q: "Can I convert multiple HEIC photos into a single PDF?", a: "Yes — choose PDF as the output format, and every uploaded HEIC photo is combined into one downloadable PDF, one photo per page." },
       { q: "Can I avoid this issue by changing my iPhone's camera settings?", a: "Yes — under Settings → Camera → Formats, choosing 'Most Compatible' saves new photos directly as JPG, though this tool is still useful for HEIC photos you already have." },
       { q: "Does converting to JPG reduce photo quality?", a: "There's a small quality trade-off since JPG uses different compression than HEIC, but at normal viewing sizes the difference is rarely noticeable." },
       { q: "Why won't my HEIC file open on my computer?", a: "HEIC support isn't built into every operating system and photo viewer by default, especially on older Windows and Android versions." },

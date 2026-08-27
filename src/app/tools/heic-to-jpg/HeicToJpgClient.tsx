@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { ImageToolLayout } from "@/components/ImageToolLayout";
 import { Button } from "@/components/ui/button";
-import { Download, Loader2, RefreshCw, Smartphone, X, AlertTriangle } from "lucide-react";
+import { Download, Loader2, RefreshCw, Smartphone, X, AlertTriangle, FileText } from "lucide-react";
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
 
@@ -21,7 +21,7 @@ export default function HeicToJpgClient() {
   const [converting, setConverting] = useState(false);
   const [results, setResults] = useState<ConvertedFile[]>([]);
   const [quality, setQuality] = useState(90);
-  const [outputFormat, setOutputFormat] = useState<"image/jpeg" | "image/png">("image/jpeg");
+  const [outputFormat, setOutputFormat] = useState<"image/jpeg" | "image/png" | "application/pdf">("image/jpeg");
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const isHeic = (file: File) =>
@@ -47,6 +47,38 @@ export default function HeicToJpgClient() {
       heic2any = (await import("heic2any")).default;
     } catch {
       setResults(files.map((f) => ({ name: f.name, url: "", size: "", status: "error", error: "Library failed to load. Please refresh and try again." })));
+      setConverting(false);
+      return;
+    }
+
+    if (outputFormat === "application/pdf") {
+      try {
+        const { jsPDF } = await import("jspdf");
+        const pdf = new jsPDF();
+        let pageAdded = false;
+        for (const file of files) {
+          const blob = (await heic2any({ blob: file, toType: "image/jpeg", quality: quality / 100 })) as Blob;
+          const dataUrl: string = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result as string);
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+          });
+          const img = new window.Image();
+          img.src = dataUrl;
+          await new Promise((resolve) => { img.onload = resolve; });
+          if (pageAdded) pdf.addPage();
+          const pdfWidth = pdf.internal.pageSize.getWidth();
+          const pdfHeight = (img.height * pdfWidth) / img.width;
+          pdf.addImage(dataUrl, "JPEG", 0, 0, pdfWidth, pdfHeight);
+          pageAdded = true;
+        }
+        pdf.save("heic-photos.pdf");
+        setResults(files.map((f) => ({ name: f.name.replace(/\.(heic|heif)$/i, ".pdf"), url: "", size: "", status: "done" })));
+      } catch (e: unknown) {
+        const message = e instanceof Error ? e.message : "PDF conversion failed.";
+        setResults(files.map((f) => ({ name: f.name, url: "", size: "", status: "error", error: message })));
+      }
       setConverting(false);
       return;
     }
@@ -154,9 +186,10 @@ export default function HeicToJpgClient() {
               >
                 <option value="image/jpeg">JPG</option>
                 <option value="image/png">PNG</option>
+                <option value="application/pdf">PDF</option>
               </select>
             </div>
-            {outputFormat === "image/jpeg" && (
+            {(outputFormat === "image/jpeg" || outputFormat === "application/pdf") && (
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="heic-quality" className="text-xs font-semibold text-muted-foreground">Quality: {quality}%</label>
                 <input
@@ -178,9 +211,13 @@ export default function HeicToJpgClient() {
           <div className="flex gap-3 flex-wrap">
             <Button onClick={convertAll} disabled={converting} className="shadow-lg shadow-primary/20">
               {converting ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-              {converting ? "Converting..." : `Convert ${files.length} File${files.length > 1 ? "s" : ""}`}
+              {converting
+                ? "Converting..."
+                : outputFormat === "application/pdf"
+                  ? `Convert ${files.length} File${files.length > 1 ? "s" : ""} to PDF`
+                  : `Convert ${files.length} File${files.length > 1 ? "s" : ""}`}
             </Button>
-            {results.some((r) => r.status === "done") && (
+            {outputFormat !== "application/pdf" && results.some((r) => r.status === "done") && (
               <Button variant="secondary" onClick={downloadAll}>
                 <Download className="mr-2 h-4 w-4" />
                 Download All
@@ -205,14 +242,20 @@ export default function HeicToJpgClient() {
                     : "bg-red-50 dark:bg-red-900/10 border-red-200 dark:border-red-800"
                 }`}
               >
-                {r.status === "done" && <img src={r.url} alt={r.name} className="w-11 h-11 rounded-md object-cover bg-muted" />}
+                {r.status === "done" && r.url && <img src={r.url} alt={r.name} className="w-11 h-11 rounded-md object-cover bg-muted" />}
+                {r.status === "done" && !r.url && (
+                  <div className="w-11 h-11 rounded-md bg-primary/10 text-primary flex items-center justify-center flex-shrink-0">
+                    <FileText size={20} />
+                  </div>
+                )}
                 {r.status === "error" && <AlertTriangle className="text-red-500 flex-shrink-0" size={28} />}
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-semibold truncate">{r.name}</p>
-                  {r.status === "done" && <p className="text-xs text-muted-foreground mt-0.5">✅ {r.size}</p>}
+                  {r.status === "done" && r.url && <p className="text-xs text-muted-foreground mt-0.5">✅ {r.size}</p>}
+                  {r.status === "done" && !r.url && <p className="text-xs text-muted-foreground mt-0.5">✅ Included in downloaded PDF</p>}
                   {r.status === "error" && <p className="text-xs text-red-500 mt-0.5">{r.error}</p>}
                 </div>
-                {r.status === "done" && (
+                {r.status === "done" && r.url && (
                   <Button size="sm" variant="outline" asChild>
                     <a href={r.url} download={r.name}>
                       <Download className="mr-1 h-3 w-3" />
