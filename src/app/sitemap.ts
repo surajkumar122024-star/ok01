@@ -85,6 +85,7 @@ const blogPosts = [
   'document-photo-size-guide-india',
   'qr-code-generator-guide',
   'barcode-generator-guide',
+  'how-to-convert-heic-to-pdf',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

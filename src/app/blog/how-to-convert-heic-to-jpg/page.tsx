@@ -173,6 +173,7 @@ export default function HowToConvertHeicToJpgArticle() {
 
           <h2 className="text-2xl font-bold mt-8">Related Tools</h2>
           <ul className="list-disc pl-6 space-y-2">
+            <li><Link href="/blog/how-to-convert-heic-to-pdf" className="text-primary hover:underline">How to Convert HEIC to PDF</Link> — combine several HEIC photos into one PDF instead of separate JPGs.</li>
             <li><Link href="/tools/resizer" className="text-primary hover:underline">Image Resizer</Link> — resize your converted JPG images to the perfect dimensions.</li>
             <li><Link href="/tools/image-cropper" className="text-primary hover:underline">Image Cropper</Link> — crop photos precisely before or after conversion.</li>
             <li><Link href="/tools/webp-converter" className="text-primary hover:underline">WebP Converter</Link> — convert images to the modern WebP format for faster web loading.</li>

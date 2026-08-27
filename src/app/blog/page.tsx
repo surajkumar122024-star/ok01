@@ -250,6 +250,12 @@ const blogs = [
     description: 'Generate a scannable barcode in the right format for retail, inventory, or shipping — free, with no sign-up.',
     date: 'August 23, 2026',
   },
+  {
+    slug: 'how-to-convert-heic-to-pdf',
+    title: 'How to Convert HEIC Photos to PDF — Free & Instant',
+    description: 'Combine multiple iPhone HEIC photos into a single PDF for free, right in your browser. No software, no upload, no sign-up.',
+    date: 'August 27, 2026',
+  },
 ];
 
 export default function BlogPage() {
