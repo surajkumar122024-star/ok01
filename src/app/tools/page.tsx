@@ -170,6 +170,14 @@ const tools = [
   color: "bg-purple-600"
 },
 {
+  name: "Percentage Calculator",
+  slug: "percentage-calculator",
+  category: "text-dev-tools",
+  description: "Calculate percentages, increases, decreases, and discounts instantly.",
+  icon: FileImage,
+  color: "bg-emerald-600"
+},
+{
   name: "QR Code Generator",
   slug: "qr-code-generator",
   category: "text-dev-tools",

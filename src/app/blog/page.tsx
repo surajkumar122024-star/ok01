@@ -256,6 +256,12 @@ const blogs = [
     description: 'Combine multiple iPhone HEIC photos into a single PDF for free, right in your browser. No software, no upload, no sign-up.',
     date: 'August 27, 2026',
   },
+  {
+    slug: 'percentage-calculator-guide',
+    title: 'How to Calculate Percentages — Without Mixing Up the Formula',
+    description: 'Four common percentage questions, the formula behind each one, and a free calculator so you never have to remember which number goes where.',
+    date: 'August 27, 2026',
+  },
 ];
 
 export default function BlogPage() {

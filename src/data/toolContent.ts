@@ -985,6 +985,45 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "percentage-calculator": {
+    overview: [
+      "Percentage calculations come up constantly — figuring out a discount at checkout, calculating a tip, working out what a test score means as a percentage, or comparing how much a number has grown or shrunk over time. This calculator covers the four most common percentage questions people actually search for, so there's no need to remember which way the formula goes for each one.",
+      "The math itself is simple, but it's easy to mix up which number goes where — is it (part ÷ whole) × 100, or (percent ÷ 100) × value? This tool removes that guesswork: pick the question that matches what you're trying to find, fill in the two numbers you know, and the answer updates instantly as you type.",
+      "All four modes calculate entirely in your browser using plain JavaScript arithmetic — there's no server involved, no data stored, and no account needed. It works the same on a phone as it does on a desktop.",
+    ],
+    steps: [
+      { title: "Pick the question that matches your situation", description: "Choose from 'X% of Y', 'X is what % of Y', percentage increase/decrease, or adding/subtracting a percentage." },
+      { title: "Enter the two numbers you know", description: "Type the values into the fields — the result updates live as you type." },
+      { title: "Read the result", description: "The answer is shown immediately, with increase/decrease clearly marked as positive or negative where relevant." },
+    ],
+    useCases: [
+      { title: "Calculating a discount", description: "Find out the final price after a percentage discount, or work out what percent off a sale actually is." },
+      { title: "Comparing exam or test scores", description: "Convert a raw score like '42 out of 50' into a percentage instantly." },
+      { title: "Tracking growth or decline", description: "Work out the percentage increase or decrease between two numbers — useful for budgets, weight changes, or business metrics." },
+      { title: "Adding tax or a tip", description: "Add a percentage on top of a bill or invoice amount to get the final total." },
+      { title: "Understanding a raise or pay cut", description: "Calculate exactly how much a percentage salary change adds up to in real numbers." },
+    ],
+    tips: [
+      "For 'percentage increase or decrease', the result is negative when the number went down — that's expected, not an error.",
+      "To calculate a final price after a discount, use 'Subtract %' in the Add/Subtract mode rather than calculating the discount amount separately.",
+      "Percentage change is calculated relative to the starting ('From') value, so going from 50 to 100 is a 100% increase, not 50%.",
+      "For test scores, use 'X is what % of Y' with your score as X and the total possible marks as Y.",
+    ],
+    faqs: [
+      { q: "How do I calculate a percentage discount?", a: "Use the 'Add / Subtract %' mode, choose Subtract, enter the original price as the value and the discount percentage — the result is the final price after the discount." },
+      { q: "Why is my percentage change showing as negative?", a: "A negative result means the 'To' value is lower than the 'From' value — it's a percentage decrease, which is correct behavior, not an error." },
+      { q: "What's the difference between 'X% of Y' and 'X is what % of Y'?", a: "'X% of Y' finds a value when you already know a percentage (e.g. 15% of 200). 'X is what % of Y' does the reverse — it finds what percentage one number represents of another (e.g. 30 out of 200)." },
+      { q: "Can I use negative numbers?", a: "Yes, the calculator accepts negative values in all four modes and calculates accordingly." },
+      { q: "Is my data stored or sent anywhere?", a: "No — every calculation happens locally in your browser using JavaScript. Nothing you enter is sent to a server or saved." },
+      { q: "Why does going from 50 to 100 show 100% increase, not 50%?", a: "Percentage change is always calculated relative to the starting value. Since 100 is double 50, that's a 100% increase over the original amount — not the difference (50) taken as a flat percentage." },
+    ],
+    relatedTools: [
+      { name: "Unit Converter", slug: "unit-converter" },
+      { name: "Word Counter", slug: "word-counter" },
+      { name: "Character Counter", slug: "character-counter" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",

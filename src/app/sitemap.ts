@@ -22,6 +22,7 @@ const tools = [
   'color-picker',
   'json-formatter',
   'password-generator',
+  'percentage-calculator',
   'qr-code-generator',
   'barcode-generator',
   'pdf-merge',
@@ -86,6 +87,7 @@ const blogPosts = [
   'qr-code-generator-guide',
   'barcode-generator-guide',
   'how-to-convert-heic-to-pdf',
+  'percentage-calculator-guide',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
