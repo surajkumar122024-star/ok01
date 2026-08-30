@@ -178,6 +178,54 @@ const tools = [
   color: "bg-emerald-600"
 },
 {
+  name: "Age Calculator",
+  slug: "age-calculator",
+  category: "text-dev-tools",
+  description: "Calculate exact age in years, months, and days from a date of birth.",
+  icon: FileImage,
+  color: "bg-rose-600"
+},
+{
+  name: "Date Difference Calculator",
+  slug: "date-difference-calculator",
+  category: "text-dev-tools",
+  description: "Find the exact number of days, weeks, months, and years between two dates.",
+  icon: FileImage,
+  color: "bg-pink-600"
+},
+{
+  name: "EMI Calculator",
+  slug: "emi-calculator",
+  category: "text-dev-tools",
+  description: "Calculate monthly EMI for a home, car, or personal loan instantly.",
+  icon: FileImage,
+  color: "bg-amber-700"
+},
+{
+  name: "GST Calculator",
+  slug: "gst-calculator",
+  category: "text-dev-tools",
+  description: "Add or remove GST from any amount, with CGST/SGST breakdown.",
+  icon: FileImage,
+  color: "bg-lime-700"
+},
+{
+  name: "Interest Calculator",
+  slug: "interest-calculator",
+  category: "text-dev-tools",
+  description: "Calculate simple or compound interest on savings or a loan.",
+  icon: FileImage,
+  color: "bg-yellow-700"
+},
+{
+  name: "Invoice Generator",
+  slug: "invoice-generator",
+  category: "text-dev-tools",
+  description: "Create a professional invoice with line items and tax, download as PDF.",
+  icon: FileImage,
+  color: "bg-violet-700"
+},
+{
   name: "QR Code Generator",
   slug: "qr-code-generator",
   category: "text-dev-tools",

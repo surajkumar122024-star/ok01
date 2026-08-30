@@ -1024,6 +1024,229 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "age-calculator": {
+    overview: [
+      "Calculating exact age sounds simple until you try to do it by hand — subtracting years works fine until the months and days don't line up cleanly, especially around birthdays that haven't happened yet in the current year. This calculator handles that borrowing logic automatically, giving an exact breakdown in years, months, and days rather than a rounded estimate.",
+      "Beyond the basic age, the tool also shows the total number of days, weeks, and months lived, along with a countdown to the next birthday — figures that come up for anything from planning a birthday celebration to filling in an age-verification field that wants a specific unit.",
+      "Everything is calculated locally using standard JavaScript date arithmetic. No date of birth is transmitted anywhere or stored — the calculation happens the instant you pick a date and disappears the moment you close the page.",
+    ],
+    steps: [
+      { title: "Enter the date of birth", description: "Pick the date using the date picker or type it directly." },
+      { title: "Optionally set a different 'as of' date", description: "Leave this blank to calculate age as of today, or set a specific date to find age on a future or past date." },
+      { title: "Read the results", description: "See the exact age in years/months/days, plus total days, weeks, months lived, and a countdown to the next birthday." },
+    ],
+    useCases: [
+      { title: "Filling out forms with an exact age requirement", description: "Some applications ask for age in years and months rather than just years — this gives both instantly." },
+      { title: "Planning a birthday or anniversary", description: "See exactly how many days remain until the next birthday." },
+      { title: "Age-based eligibility checks", description: "Calculate someone's exact age as of a specific date, such as a competition cutoff or enrollment deadline." },
+      { title: "Curiosity milestones", description: "Find out how many total days or weeks you've been alive — a common thing people look up around a big birthday." },
+    ],
+    tips: [
+      "Use the 'Calculate Age As Of' field to find out how old someone will be, or was, on a specific date — not just today.",
+      "The total months figure counts every month lived, not just full years times 12, so it accounts for the partial year properly.",
+      "Nothing entered here is saved or sent anywhere — refreshing the page clears it completely.",
+    ],
+    faqs: [
+      { q: "Why does the day count sometimes look larger than expected?", a: "When the day-of-month at the target date is earlier than the day-of-month of the birth date, the calculation borrows days from the previous month, which is standard date-difference math and can make the day figure look larger for a given month." },
+      { q: "Can I calculate someone's age on a future date?", a: "Yes — set the 'Calculate Age As Of' field to any future date to see what their age will be on that date." },
+      { q: "Is my date of birth stored anywhere?", a: "No — the calculation happens entirely in your browser. Nothing is sent to a server or saved." },
+      { q: "Does this account for leap years?", a: "Yes, the calculation uses standard JavaScript date arithmetic, which correctly accounts for leap years when computing days and months." },
+      { q: "Why is 'Total Months' not just years times 12?", a: "Total Months adds the partial year's months to the full years times 12, giving the exact total months lived rather than an approximation." },
+    ],
+    relatedTools: [
+      { name: "Date Difference Calculator", slug: "date-difference-calculator" },
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+      { name: "Unit Converter", slug: "unit-converter" },
+    ],
+  },
+
+  "date-difference-calculator": {
+    overview: [
+      "Finding the exact gap between two dates comes up more often than it seems — how many days until a deadline, how long a project has been running, or how many weeks are left before an event. Counting on a calendar by hand is error-prone, especially across month boundaries with different day counts.",
+      "This calculator handles that arithmetic precisely, showing the difference broken down as years, months, and days, alongside the total number of days, weeks, and months for whichever unit is most useful for the situation.",
+      "An optional toggle lets the end date itself be included in the count — useful for questions like 'how many days is a 3-day event that starts on the 1st and ends on the 3rd' where the answer depends on whether both endpoints are counted.",
+    ],
+    steps: [
+      { title: "Enter the start date", description: "Pick the earlier date, or whichever date you're counting from." },
+      { title: "Enter the end date", description: "Pick the date you're counting to." },
+      { title: "Toggle 'include end date' if needed", description: "Turn this on if the end date itself should count as a day (common for counting inclusive date ranges like event durations)." },
+      { title: "Read the results", description: "See the exact years/months/days breakdown, plus total days, weeks, and months." },
+    ],
+    useCases: [
+      { title: "Counting down to a deadline or event", description: "Find exactly how many days remain until a specific date." },
+      { title: "Measuring how long something has been running", description: "Calculate the exact duration between a start date and today or another end date." },
+      { title: "Calculating an inclusive date range", description: "Use the include-end-date toggle to correctly count multi-day events or booking durations." },
+      { title: "Contract or lease term calculations", description: "Find the exact length of a period defined by a start and end date." },
+    ],
+    tips: [
+      "If you're counting a booking or event duration where both the start and end day should count, turn on 'Include the end date' — otherwise the last day is excluded from the total.",
+      "The years/months/days breakdown accounts for actual calendar month lengths, so it's more precise than dividing total days by 30.",
+      "If the end date is entered before the start date, the tool still calculates correctly by using the absolute difference.",
+    ],
+    faqs: [
+      { q: "Should I include the end date or not?", a: "It depends on what you're counting. For 'how many days until X', leave it off. For counting the total days in a range that includes both endpoints (like a 3-day conference from the 1st to the 3rd), turn it on." },
+      { q: "Is my data stored anywhere?", a: "No — the calculation happens entirely in your browser using JavaScript. Nothing is sent to a server or saved." },
+      { q: "What if I enter the end date before the start date?", a: "The calculator automatically handles this and shows the absolute difference between the two dates, with a note that they were reordered." },
+      { q: "Why doesn't total months equal total days divided by 30?", a: "Months vary in length (28-31 days), so the tool calculates actual calendar months rather than using a flat 30-day approximation, which is more accurate." },
+    ],
+    relatedTools: [
+      { name: "Age Calculator", slug: "age-calculator" },
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+      { name: "Unit Converter", slug: "unit-converter" },
+    ],
+  },
+
+  "emi-calculator": {
+    overview: [
+      "An EMI (Equated Monthly Installment) is the fixed amount paid each month toward a loan, covering both principal and interest, until the loan is fully repaid. Lenders calculate it using a standard reducing-balance formula, which means the interest portion is highest in the early months and gradually decreases as the outstanding principal shrinks, even though the total EMI amount itself stays constant.",
+      "This calculator uses that same formula — EMI = P × r × (1+r)ⁿ ÷ ((1+r)ⁿ − 1), where P is the loan amount, r is the monthly interest rate, and n is the number of months — to show the monthly payment, total interest paid over the loan's life, and the total amount repaid.",
+      "It works for any type of loan that uses standard EMI repayment: home loans, car loans, personal loans, or education loans. All the math runs locally in your browser — the loan amount and rate you enter are never sent anywhere.",
+    ],
+    steps: [
+      { title: "Enter the loan amount", description: "The total principal you're borrowing." },
+      { title: "Enter the annual interest rate", description: "The rate your lender is offering, as a percentage per year." },
+      { title: "Enter the loan tenure in years", description: "How long you'll be repaying the loan." },
+      { title: "Read the results", description: "See the monthly EMI, total interest over the loan term, and the total amount you'll repay." },
+    ],
+    useCases: [
+      { title: "Comparing loan offers from different lenders", description: "Quickly see how a different interest rate or tenure changes the monthly payment." },
+      { title: "Budgeting before taking a home or car loan", description: "Check whether a given EMI fits comfortably into monthly expenses before applying." },
+      { title: "Understanding the total cost of a loan", description: "See exactly how much interest adds up to over the full loan tenure, not just the monthly figure." },
+      { title: "Testing how a shorter tenure changes total interest", description: "Compare total interest paid at different tenures to see the trade-off between a higher EMI and a shorter loan." },
+    ],
+    tips: [
+      "A longer tenure lowers the monthly EMI but significantly increases the total interest paid over the life of the loan — it's worth comparing both figures, not just the EMI.",
+      "This calculator gives an estimate using the standard formula; your actual EMI may differ slightly based on your lender's exact rate type (fixed vs floating), processing fees, and disbursement timing.",
+      "Try a few different interest rates to see how sensitive your EMI is to rate changes, especially for floating-rate loans.",
+    ],
+    faqs: [
+      { q: "What does EMI stand for?", a: "Equated Monthly Installment — the fixed monthly amount paid toward a loan, covering both principal and interest." },
+      { q: "Why does the EMI stay the same but interest decreases each month?", a: "In reducing-balance EMI, interest is calculated on the outstanding principal, which shrinks with each payment — so more of each fixed EMI goes toward principal and less toward interest as the loan progresses." },
+      { q: "Is this calculator accurate for all types of loans?", a: "It works for any loan using standard reducing-balance EMI repayment (home, car, personal, education loans). Some loans use different structures, so always confirm the exact figure with your lender before signing." },
+      { q: "Does this include processing fees or other charges?", a: "No — this calculates the EMI based on principal, rate, and tenure only. Processing fees, insurance, or other charges some lenders add are not included." },
+      { q: "Is my loan information stored anywhere?", a: "No — the calculation happens entirely in your browser. Nothing you enter is sent to a server or saved." },
+      { q: "How does a longer tenure affect total interest?", a: "A longer tenure lowers the monthly EMI but increases the total interest paid over the loan's life, since interest accrues over more months — it's a trade-off between monthly affordability and total cost." },
+    ],
+    relatedTools: [
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+      { name: "Interest Calculator", slug: "interest-calculator" },
+      { name: "GST Calculator", slug: "gst-calculator" },
+    ],
+  },
+
+  "gst-calculator": {
+    overview: [
+      "GST (Goods and Services Tax) calculations come up constantly for anyone running a business, freelancing, or just double-checking a bill — whether that's adding GST to a price before invoicing a client, or working backward from a GST-inclusive price to find the base amount and tax paid.",
+      "This calculator handles both directions: 'Add GST' takes a base amount and shows the GST amount plus the final price, while 'Remove GST' takes a GST-inclusive amount and works backward to show the base price and the tax portion — useful when a receipt only shows the final total.",
+      "For intra-state transactions, GST is typically split equally between CGST (Central GST) and SGST (State GST), which this tool shows automatically. For inter-state transactions, the full amount is instead charged as IGST — a quick note on the results reminds you which applies.",
+    ],
+    steps: [
+      { title: "Choose Add GST or Remove GST", description: "Add GST if you have a base price and want the tax-inclusive total. Remove GST if you have a final price and want to find the base amount." },
+      { title: "Enter the amount", description: "Type in the base amount (Add mode) or the GST-inclusive amount (Remove mode)." },
+      { title: "Select or type the GST rate", description: "Use one of the common rate buttons (5%, 12%, 18%, 28%) or enter a custom rate." },
+      { title: "Read the results", description: "See the final amount, total GST, and the CGST/SGST split." },
+    ],
+    useCases: [
+      { title: "Creating an invoice for a client", description: "Calculate the GST-inclusive total to charge based on your service or product price." },
+      { title: "Checking a bill or receipt", description: "Work backward from a final price to see exactly how much of it was GST." },
+      { title: "Pricing a product for sale", description: "Figure out what base price to set so the final GST-inclusive price hits a specific number." },
+      { title: "Comparing GST rates", description: "See how different GST slabs (5%, 12%, 18%, 28%) affect the final price of the same base amount." },
+    ],
+    tips: [
+      "The CGST/SGST split shown assumes an intra-state sale (buyer and seller in the same state) — for inter-state transactions, the full GST amount is charged as IGST instead, not split.",
+      "When removing GST from a price, remember the base amount isn't simply the final price minus the GST percentage of the final price — the formula divides by (100 + rate), not just subtracts the percentage.",
+      "Double-check which GST slab applies to your specific goods or service, since rates vary by category under GST rules.",
+    ],
+    faqs: [
+      { q: "What's the difference between CGST, SGST, and IGST?", a: "CGST and SGST apply to transactions within the same state and are split equally, each collected by the central and state government respectively. IGST applies to inter-state transactions and is collected as a single combined tax." },
+      { q: "How do I calculate GST backward from a final price?", a: "Use 'Remove GST' mode — enter the GST-inclusive final amount, and the tool calculates the original base price and the GST portion using the formula: base = final × 100 ÷ (100 + rate)." },
+      { q: "Why isn't the base amount just the final price minus the GST percentage?", a: "Because the GST percentage in 'Remove' mode applies to the base amount, not the final amount — dividing by (100 + rate) correctly reverses the calculation, while simply subtracting the percentage from the final price would give a slightly wrong answer." },
+      { q: "Is my data stored anywhere?", a: "No — every calculation happens in your browser. Nothing you enter is sent to a server or saved." },
+      { q: "Does this tool file GST returns or connect to the GST portal?", a: "No — this is a standalone calculator for quick math only. It doesn't file returns or connect to any government system." },
+    ],
+    relatedTools: [
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+      { name: "Invoice Generator", slug: "invoice-generator" },
+      { name: "EMI Calculator", slug: "emi-calculator" },
+    ],
+  },
+
+  "interest-calculator": {
+    overview: [
+      "Interest can be calculated two fundamentally different ways. Simple interest is calculated only on the original principal for the entire duration, growing at a constant rate each year. Compound interest is calculated on the principal plus any interest already earned, which means it compounds — growing faster the longer money is left in place, since each period's interest is added to the base before the next period's interest is calculated.",
+      "This calculator handles both. Simple interest uses the straightforward formula I = P × R × T ÷ 100. Compound interest uses A = P × (1 + r/n)^(n×t), where n is how many times per year the interest compounds — annually, semi-annually, quarterly, or monthly — since the compounding frequency itself changes the final result even at the same stated annual rate.",
+      "Everything calculates instantly in your browser as you type, with no data sent anywhere. It works equally well for estimating how a savings deposit will grow or understanding how a loan's interest accumulates.",
+    ],
+    steps: [
+      { title: "Choose Simple or Compound Interest", description: "Simple interest for a flat, non-compounding calculation. Compound interest for interest that builds on itself over time." },
+      { title: "Enter the principal amount", description: "The starting amount being invested or borrowed." },
+      { title: "Enter the annual interest rate and time period", description: "The rate as a percentage per year, and the duration in years." },
+      { title: "For compound interest, choose a compounding frequency", description: "Annually, semi-annually, quarterly, or monthly — this affects the final amount even at the same stated rate." },
+      { title: "Read the results", description: "See the final amount and the total interest earned or paid." },
+    ],
+    useCases: [
+      { title: "Estimating how a savings deposit will grow", description: "See how much a fixed deposit or recurring savings account could earn over time at a given rate." },
+      { title: "Understanding a loan's interest cost", description: "Get a sense of how much interest accumulates on a simple-interest loan over its term." },
+      { title: "Comparing compounding frequencies", description: "See how monthly compounding produces a different final amount than annual compounding at the same stated rate." },
+      { title: "Financial planning and goal setting", description: "Estimate how long it might take an investment to reach a target amount at a given rate." },
+    ],
+    tips: [
+      "More frequent compounding (monthly vs annually) produces a higher final amount at the same stated annual rate — the difference grows more noticeable over longer time periods.",
+      "Simple interest calculations are common for certain personal loans, while savings accounts and fixed deposits typically use compound interest — check which applies to your specific product.",
+      "For quick comparisons, try the same principal and rate under both modes to see how much of a difference compounding makes over your specific time period.",
+    ],
+    faqs: [
+      { q: "What's the difference between simple and compound interest?", a: "Simple interest is calculated only on the original principal throughout the term. Compound interest is calculated on the principal plus previously earned interest, so it grows faster over time." },
+      { q: "Does compounding frequency really make a difference?", a: "Yes — at the same stated annual rate, monthly compounding produces a higher final amount than annual compounding, because interest is calculated and added to the principal more often." },
+      { q: "Which type of interest applies to my savings account?", a: "Most savings accounts and fixed deposits use compound interest, but the exact terms vary by bank and product — check your specific account's terms to confirm." },
+      { q: "Is my financial data stored anywhere?", a: "No — every calculation happens locally in your browser. Nothing you enter is sent to a server or saved." },
+      { q: "Can I use this for calculating loan interest?", a: "Yes, for loans that use simple or standard compound interest. Loans repaid via EMI use a different reducing-balance formula — use the EMI Calculator for those instead." },
+    ],
+    relatedTools: [
+      { name: "EMI Calculator", slug: "emi-calculator" },
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+      { name: "GST Calculator", slug: "gst-calculator" },
+    ],
+  },
+
+  "invoice-generator": {
+    overview: [
+      "Freelancers and small businesses need to send invoices constantly, but not every job justifies paying for dedicated invoicing software just to produce a simple PDF. This tool covers that gap — enter your details, the client's details, a list of items with quantities and rates, and an optional tax rate, and it generates a clean, professional PDF invoice ready to send.",
+      "Every field updates the running total live as you type, so the subtotal, tax amount, and final total are always visible before you generate the PDF. Line items can be added or removed freely, making it equally suited to a single-item invoice or one with a dozen billed items.",
+      "The PDF is built entirely in your browser and downloads directly to your device — no account, no template gallery to navigate, and no data about your business or client sent to a server.",
+    ],
+    steps: [
+      { title: "Fill in invoice details", description: "Enter the invoice number and date." },
+      { title: "Add your details and your client's details", description: "Fill in the From and Bill To sections with names and contact information." },
+      { title: "Add line items", description: "For each item or service, enter a description, quantity, and rate — add more rows as needed." },
+      { title: "Set a tax rate if applicable", description: "Enter a percentage to apply tax to the subtotal, or leave it at 0 to skip." },
+      { title: "Download the PDF", description: "Click Download to generate and save the finished invoice." },
+    ],
+    useCases: [
+      { title: "Freelance client billing", description: "Send a professional-looking invoice for project work without needing invoicing software." },
+      { title: "Small business sales receipts", description: "Generate an invoice for a one-off sale or service quickly." },
+      { title: "Recurring service billing", description: "Reuse the same format each billing cycle by adjusting the line items and date." },
+      { title: "Quotes and estimates", description: "Use the same layout to draft an estimate before converting it into a final invoice." },
+    ],
+    tips: [
+      "Keep item descriptions concise — very long descriptions wrap onto multiple lines in the PDF, which is fine but takes up more space per row.",
+      "Use the Notes field for payment terms, bank transfer details, or a short thank-you message — it appears at the bottom of the generated PDF.",
+      "Double-check quantities and rates before downloading, since the PDF is generated fresh each time — there's no saved draft to edit afterward.",
+    ],
+    faqs: [
+      { q: "Is my business or client data saved anywhere?", a: "No — everything is generated locally in your browser using JavaScript. Nothing is uploaded to a server or stored once you close the page." },
+      { q: "Can I add more than a couple of line items?", a: "Yes — click 'Add item' as many times as needed; the invoice layout adjusts automatically." },
+      { q: "Does this calculate tax automatically?", a: "Yes — enter a tax percentage and it's applied to the subtotal to calculate the tax amount and final total." },
+      { q: "Can I edit the invoice after downloading the PDF?", a: "Not within the PDF itself — make any changes in the form and re-download to generate an updated version." },
+      { q: "Is there a limit to how many invoices I can create?", a: "No — there's no account or usage limit. Generate as many invoices as you need." },
+    ],
+    relatedTools: [
+      { name: "GST Calculator", slug: "gst-calculator" },
+      { name: "PDF Merge", slug: "pdf-merge" },
+      { name: "Percentage Calculator", slug: "percentage-calculator" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",
