@@ -94,6 +94,9 @@ const blogPosts = [
   'barcode-generator-guide',
   'how-to-convert-heic-to-pdf',
   'percentage-calculator-guide',
+  'money-calculators-emi-gst-interest',
+  'age-and-date-calculators',
+  'free-invoice-for-freelancers',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

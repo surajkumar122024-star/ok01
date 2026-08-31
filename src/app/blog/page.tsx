@@ -262,6 +262,24 @@ const blogs = [
     description: 'Four common percentage questions, the formula behind each one, and a free calculator so you never have to remember which number goes where.',
     date: 'August 27, 2026',
   },
+  {
+    slug: 'money-calculators-emi-gst-interest',
+    title: 'Three Money Questions Everyone Runs Into — Answered',
+    description: 'What will my loan EMI be, how much GST is in this price, what will my savings grow to — answered with real worked numbers and free calculators.',
+    date: 'August 31, 2026',
+  },
+  {
+    slug: 'age-and-date-calculators',
+    title: '"How Old Am I, Exactly?" — And Other Date Math',
+    description: 'How to calculate exact age, and how to count days between two dates correctly — including the one detail most people get wrong.',
+    date: 'August 31, 2026',
+  },
+  {
+    slug: 'free-invoice-for-freelancers',
+    title: 'You Finished the Project. Now You Need an Invoice.',
+    description: 'Most freelance work doesn\'t need dedicated invoicing software — here\'s how to send a professional invoice in a few minutes, free.',
+    date: 'August 31, 2026',
+  },
 ];
 
 export default function BlogPage() {
