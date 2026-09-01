@@ -7,7 +7,8 @@ import {
   RefreshCw, FileImage, FileText, Layers, Scissors,
   Type, Hash, ArrowUpDown, Repeat, Link2,
   Binary, Braces, Link as LinkIcon,
-  KeyRound, Youtube, Fingerprint,
+  KeyRound, Youtube, Fingerprint, Images, QrCode, Barcode,
+  Percent, Cake, CalendarRange, Landmark, Receipt, TrendingUp, FileSpreadsheet, ArrowLeftRight,
 } from "lucide-react";
 
 interface ToolItem {
@@ -32,6 +33,7 @@ export const toolCategories: ToolCategory[] = [
       { name: "Image Watermark", href: "/tools/image-watermark", icon: Droplet },
       { name: "Size Checker", href: "/tools/image-size-checker", icon: Ruler },
       { name: "Color Picker", href: "/tools/color-picker", icon: Palette },
+      { name: "Image Collage", href: "/tools/image-collage", icon: Images },
     ],
   },
   {
@@ -76,7 +78,21 @@ export const toolCategories: ToolCategory[] = [
     items: [
       { name: "Password Generator", href: "/tools/password-generator", icon: KeyRound },
       { name: "YouTube Thumbnail", href: "/tools/youtube-thumbnail-converter", icon: Youtube },
-      { name: "Image Collage Maker", href: "/tools/Image Collage Maker", icon: KeyRound },
+      { name: "QR Code Generator", href: "/tools/qr-code-generator", icon: QrCode },
+      { name: "Barcode Generator", href: "/tools/barcode-generator", icon: Barcode },
+    ],
+  },
+  {
+    title: "Calculators",
+    items: [
+      { name: "Unit Converter", href: "/tools/unit-converter", icon: ArrowLeftRight },
+      { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: Percent },
+      { name: "Age Calculator", href: "/tools/age-calculator", icon: Cake },
+      { name: "Date Difference", href: "/tools/date-difference-calculator", icon: CalendarRange },
+      { name: "EMI Calculator", href: "/tools/emi-calculator", icon: Landmark },
+      { name: "GST Calculator", href: "/tools/gst-calculator", icon: Receipt },
+      { name: "Interest Calculator", href: "/tools/interest-calculator", icon: TrendingUp },
+      { name: "Invoice Generator", href: "/tools/invoice-generator", icon: FileSpreadsheet },
     ],
   },
   {
@@ -94,7 +110,7 @@ export const toolCategories: ToolCategory[] = [
 
 export function ToolsMegaMenu({ onNavigate }: { onNavigate?: () => void }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 p-6 w-full">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-6 w-full">
       {toolCategories.map((cat) => (
         <div key={cat.title} className="flex flex-col gap-1">
           <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-2">
