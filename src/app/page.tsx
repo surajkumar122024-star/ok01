@@ -31,11 +31,11 @@ import { FaqSection } from '@/components/FaqSection';
 export const metadata: Metadata = {
   title: 'OpticShift Pro — Free Browser-Based Image, PDF & Text Tools',
   description:
-    'OpticShift Pro offers 36+ free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.',
+    'OpticShift Pro offers 44+ free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.',
 };
 
 const stats = [
-  { label: 'Free tools', value: '36+' },
+  { label: 'Free tools', value: '44+' },
   { label: 'Files uploaded to servers', value: '0' },
   { label: 'Sign-up required', value: 'None' },
   { label: 'Cost to use', value: '$0' },
@@ -177,7 +177,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
-            <span>36+ free, fast, online browser-based tools, zero uploads</span>
+            <span>44+ free, fast, online browser-based tools, zero uploads</span>
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
@@ -312,7 +312,7 @@ export default function Home() {
           <div className="text-center">
             <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
               <Link href="/tools">
-                View All 36 Tools <ArrowRight className="ml-2" size={18} />
+                View All 44 Tools <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>
@@ -417,7 +417,7 @@ export default function Home() {
                 icon: MousePointerClick,
                 step: '01',
                 title: 'Choose a Tool',
-                description: 'Pick from 36+ tools organized by category — image, PDF, or text.',
+                description: 'Pick from 44+ tools organized by category — image, PDF, or text.',
               },
               {
                 icon: Zap,
@@ -732,7 +732,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button size="lg" className="h-14 px-10 rounded-xl text-lg shadow-xl shadow-primary/25" asChild>
                 <Link href="/tools">
-                  Explore All 36+ Tools <ArrowRight className="ml-2" size={18} />
+                  Explore All 44+ Tools <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="h-14 px-10 rounded-xl text-lg glass" asChild>

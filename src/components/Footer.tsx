@@ -42,7 +42,7 @@ export const Footer = () => {
               <span className="text-lg font-bold">OpticShift Pro</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              36+ free, browser-based image, PDF, and text tools. Every file is processed locally
+              44+ free, browser-based image, PDF, and text tools. Every file is processed locally
               on your device — nothing is ever uploaded to a server.
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground pt-1">
