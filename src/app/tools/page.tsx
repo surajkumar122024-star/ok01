@@ -410,24 +410,25 @@ export default function ToolsPage() {
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight">{group.title}</h2>
               <p className="text-muted-foreground">{group.description}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
               {group.tools.map((tool) => (
                 <Link key={tool.slug} href={`/tools/${tool.slug}`}>
-                  <div className="group glass p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 flex flex-col h-full">
-                    <div className={`w-14 h-14 ${tool.color} rounded-2xl flex items-center justify-center text-white mb-8 group-hover:rotate-12 transition-transform`}>
-                      <tool.icon size={28} />
+                  <div className="group glass p-4 sm:p-8 rounded-2xl sm:rounded-3xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 flex flex-col h-full">
+                    <div className={`w-10 h-10 sm:w-14 sm:h-14 ${tool.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-3 sm:mb-8 group-hover:rotate-12 transition-transform`}>
+                      <tool.icon size={20} className="sm:hidden" />
+                      <tool.icon size={28} className="hidden sm:block" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">{tool.name}</h3>
-                    <p className="text-muted-foreground leading-relaxed flex-grow mb-8">{tool.description}</p>
-                    <div className="inline-flex items-center justify-center h-12 px-6 rounded-xl bg-primary text-primary-foreground font-semibold group-hover:scale-105 transition-all">
-                      Launch Tool <ArrowRight size={18} className="ml-2" />
+                    <h3 className="text-base sm:text-2xl font-bold mb-1.5 sm:mb-4">{tool.name}</h3>
+                    <p className="text-xs sm:text-base text-muted-foreground leading-snug sm:leading-relaxed flex-grow mb-3 sm:mb-8 line-clamp-3 sm:line-clamp-none">{tool.description}</p>
+                    <div className="inline-flex items-center justify-center h-9 sm:h-12 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-primary text-primary-foreground font-semibold text-xs sm:text-base group-hover:scale-105 transition-all">
+                      Launch Tool <ArrowRight size={16} className="ml-1.5 sm:ml-2" />
                     </div>
                   </div>
                 </Link>
               ))}
               {i === grouped.length - 1 && (
-                <div className="p-8 rounded-3xl border border-dashed flex flex-col items-center justify-center text-center opacity-60">
-                  <div className="w-14 h-14 bg-muted rounded-2xl flex items-center justify-center text-muted-foreground mb-4">
+                <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl border border-dashed flex flex-col items-center justify-center text-center opacity-60">
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-muted rounded-xl sm:rounded-2xl flex items-center justify-center text-muted-foreground mb-3 sm:mb-4">
                     <Zap size={28} />
                   </div>
                   <h3 className="text-xl font-bold mb-2">More coming soon</h3>
