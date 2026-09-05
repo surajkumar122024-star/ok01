@@ -11,6 +11,7 @@ const tools = [
   'webp-converter',
   'pdf-to-image',
   'image-cropper',
+  'image-to-text',
   'image-watermark',
   'svg-to-png',
   'image-rotate',

@@ -89,6 +89,14 @@ const tools = [
   icon: FileImage,
   color: "bg-violet-500"
 },
+{
+  name: "Image to Text (OCR)",
+  slug: "image-to-text",
+  category: "image-tools",
+  description: "Extract text from any image or screenshot instantly. 100+ languages.",
+  icon: FileImage,
+  color: "bg-cyan-700"
+},
   {
   name: "Image Watermark",
   slug: "image-watermark",

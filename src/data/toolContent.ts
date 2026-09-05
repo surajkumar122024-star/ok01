@@ -1247,6 +1247,46 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "image-to-text": {
+    overview: [
+      "Optical Character Recognition (OCR) reads the shapes of letters and words in an image and converts them into actual, selectable, editable text — turning a photo of a page, a screenshot of a chat, or a scanned document into text you can copy, search, or edit directly.",
+      "This tool runs OCR entirely inside your browser using a WebAssembly build of the open-source Tesseract engine — the same underlying technology used by many commercial OCR products. Your image is never uploaded to a server; the recognition happens locally on your device, and only a one-time language data file is downloaded to enable that language's recognition.",
+      "Over 100 languages are supported, and results are generally strongest on clear, well-lit, reasonably high-resolution images with standard printed or typed text. Handwriting, very low-resolution photos, or heavily stylized fonts will produce less reliable results, which is a limitation of OCR technology generally, not specific to this tool.",
+    ],
+    steps: [
+      { title: "Upload an image", description: "Drag and drop or select a photo, screenshot, or scanned image containing text." },
+      { title: "Choose the text's language", description: "Select the language that matches the text in your image for the most accurate recognition." },
+      { title: "Click Extract Text", description: "The tool downloads the language model (first time only) and processes the image, showing a progress bar." },
+      { title: "Copy or download the result", description: "Copy the extracted text to your clipboard, or download it as a .txt file." },
+    ],
+    useCases: [
+      { title: "Digitizing a printed document", description: "Turn a photo of a printed page into editable, searchable text without retyping it." },
+      { title: "Extracting text from a screenshot", description: "Pull text out of a chat screenshot, a slide, or a web page image instead of retyping it by hand." },
+      { title: "Copying text from an image someone sent you", description: "Get text out of a photo that was shared as an image rather than as plain text." },
+      { title: "Making old scanned notes searchable", description: "Convert a scanned page of notes into text you can search through or paste elsewhere." },
+    ],
+    tips: [
+      "Choose the correct language before extracting — running English OCR on non-English text (or vice versa) significantly reduces accuracy.",
+      "Crop the image to just the text area beforehand if possible — extra background clutter around the text can reduce accuracy.",
+      "Higher-resolution, well-lit images produce noticeably better results than blurry or low-light photos.",
+      "OCR works best on printed or typed text — handwritten text is recognized far less reliably by any OCR engine, including this one.",
+    ],
+    faqs: [
+      { q: "Is my image uploaded to a server?", a: "No — the OCR recognition runs entirely in your browser using WebAssembly. Only a one-time language data file is downloaded; your image itself is never sent anywhere." },
+      { q: "Why is the extracted text inaccurate for my image?", a: "OCR accuracy depends heavily on image quality — blurry, low-resolution, poorly lit, or handwritten text all reduce accuracy. Try a clearer, higher-resolution image, and confirm you selected the correct language." },
+      { q: "Can this read handwriting?", a: "It can sometimes recognize very neat handwriting, but OCR generally performs much better on printed or typed text than on handwriting, which is a limitation of the underlying technology rather than this specific tool." },
+      { q: "Which languages are supported?", a: "Over 100 languages are supported. Select the matching language from the dropdown before extracting for the most accurate results." },
+      { q: "How long does extraction take?", a: "It depends on image size and your device's processing speed — typically a few seconds for a single page of text, plus a one-time language data download the first time you use a given language." },
+      { q: "Can I extract text from a PDF?", a: "This tool accepts image files directly. For a PDF, first convert a page to an image using the PDF to Image tool, then run that image through this tool." },
+    ],
+    relatedTools: [
+      { name: "PDF to Image", slug: "pdf-to-image" },
+      { name: "Image Cropper", slug: "image-cropper" },
+      { name: "Word Counter", slug: "word-counter" },
+      { name: "Character Counter", slug: "character-counter" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",

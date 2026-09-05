@@ -9,6 +9,7 @@ import {
   Binary, Braces, Link as LinkIcon,
   KeyRound, Youtube, Fingerprint, Images, QrCode, Barcode,
   Percent, Cake, CalendarRange, Landmark, Receipt, TrendingUp, FileSpreadsheet, ArrowLeftRight,
+  ScanText,
 } from "lucide-react";
 
 interface ToolItem {
@@ -29,6 +30,7 @@ export const toolCategories: ToolCategory[] = [
       { name: "Image Compressor", href: "/tools/compressor", icon: Minimize2 },
       { name: "Image Resizer", href: "/tools/resizer", icon: Maximize2 },
       { name: "Image Cropper", href: "/tools/image-cropper", icon: Crop },
+      { name: "Image to Text (OCR)", href: "/tools/image-to-text", icon: ScanText },
       { name: "Rotate & Flip", href: "/tools/image-rotate", icon: RotateCw },
       { name: "Image Watermark", href: "/tools/image-watermark", icon: Droplet },
       { name: "Size Checker", href: "/tools/image-size-checker", icon: Ruler },
