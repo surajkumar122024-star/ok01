@@ -18,6 +18,12 @@ import Image from 'next/image';
 // back to the existing icon-in-colored-box style below.
 const customLogos: Record<string, string> = {
   "pdf-merge": "/tool-logos/pdf-merge.png",
+  "invoice-generator": "/tool-logos/invoice-generator.png",
+  "qr-code-generator": "/tool-logos/qr-code-generator.png",
+  "barcode-generator": "/tool-logos/barcode-generator.png",
+  "text-repeater": "/tool-logos/text-repeater.png",
+  "character-counter": "/tool-logos/character-counter.png",
+  "base64": "/tool-logos/base64.png",
 };
 
 export const metadata: Metadata = {
