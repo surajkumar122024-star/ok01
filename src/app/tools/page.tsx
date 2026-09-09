@@ -24,6 +24,9 @@ const customLogos: Record<string, string> = {
   "text-repeater": "/tool-logos/text-repeater.png",
   "character-counter": "/tool-logos/character-counter.png",
   "base64": "/tool-logos/base64.png",
+  "unit-converter": "/tool-logos/unit-converter.png",
+  "json-formatter": "/tool-logos/json-formatter.png",
+  "url-encoder": "/tool-logos/url-encoder.png",
 };
 
 export const metadata: Metadata = {
