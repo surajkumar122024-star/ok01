@@ -209,3 +209,44 @@
     animation: none;
   }
 }
+
+/* Icon glass-shine sweep: a diagonal highlight that sweeps across
+   each tool icon on hover, layered on top of the icon itself. */
+.icon-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.55) 48%,
+    rgba(255, 255, 255, 0.15) 54%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.group:hover .icon-shine::after {
+  animation: icon-shine-sweep 1.1s ease-in-out;
+}
+
+@keyframes icon-shine-sweep {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .group:hover .icon-shine::after {
+    animation: none;
+  }
+}

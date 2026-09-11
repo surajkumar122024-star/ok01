@@ -474,11 +474,11 @@ export default function ToolsPage() {
                 <Link key={tool.slug} href={`/tools/${tool.slug}`}>
                   <div className="group glass p-4 sm:p-8 rounded-2xl sm:rounded-3xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 flex flex-col h-full">
                     {customLogos[tool.slug] ? (
-                      <div className="w-10 h-10 sm:w-14 sm:h-14 mb-3 sm:mb-8 relative group-hover:scale-105 transition-transform">
+                      <div className="icon-shine rounded-xl sm:rounded-2xl w-10 h-10 sm:w-14 sm:h-14 mb-3 sm:mb-8 relative group-hover:scale-105 transition-transform">
                         <Image src={customLogos[tool.slug]} alt="" fill className="object-contain drop-shadow-md" sizes="56px" />
                       </div>
                     ) : (
-                      <div className={`w-10 h-10 sm:w-14 sm:h-14 ${tool.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-3 sm:mb-8 group-hover:rotate-12 transition-transform`}>
+                      <div className={`icon-shine w-10 h-10 sm:w-14 sm:h-14 ${tool.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-3 sm:mb-8 group-hover:rotate-12 transition-transform`}>
                         <tool.icon size={20} className="sm:hidden" />
                         <tool.icon size={28} className="hidden sm:block" />
                       </div>
