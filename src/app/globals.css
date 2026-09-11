@@ -223,12 +223,12 @@
   inset: 0;
   background: linear-gradient(
     115deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.55) 48%,
-    rgba(255, 255, 255, 0.15) 54%,
-    transparent 70%
+    transparent 15%,
+    rgba(255, 255, 255, 0.95) 48%,
+    rgba(255, 255, 255, 0.4) 56%,
+    transparent 75%
   );
-  transform: translateX(-120%);
+  transform: translateX(-130%);
   pointer-events: none;
 }
 
@@ -236,12 +236,16 @@
   animation: icon-shine-sweep 1.1s ease-in-out;
 }
 
+.group:hover .icon-shine {
+  box-shadow: 0 0 22px 4px rgba(255, 255, 255, 0.45);
+}
+
 @keyframes icon-shine-sweep {
   0% {
-    transform: translateX(-120%);
+    transform: translateX(-130%);
   }
   100% {
-    transform: translateX(120%);
+    transform: translateX(130%);
   }
 }
 
