@@ -7,7 +7,7 @@ const faqs = [
   {
     question: "Is OpticShift Pro really free to use?",
     answer:
-      "Yes. All 26 tools on OpticShift Pro are completely free with no hidden charges, no subscriptions, and no sign-up required. You can use every tool as many times as you need.",
+      "Yes. All 44 tools on OpticShift Pro are completely free with no hidden charges, no subscriptions, and no sign-up required. You can use every tool as many times as you need.",
   },
   {
     question: "Do you upload or store my images and files?",
@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What kind of tools does OpticShift Pro offer?",
     answer:
-      "We offer a growing suite of 26+ tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, image-to-PDF), text tools (word counter, case converter, slug generator), and developer utilities (Base64, JSON formatter, URL encoder).",
+      "We offer a growing suite of 44+ tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, image-to-PDF), document photos (Aadhaar, PAN, Passport, Visa, exam), calculators (EMI, GST, percentage, age, interest), text tools (word counter, case converter, slug generator), and developer utilities (Base64, JSON formatter, URL encoder, QR code, barcode).",
   },
   {
     question: "Do I need to install any software or create an account?",
