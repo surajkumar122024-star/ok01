@@ -11,7 +11,6 @@ import { ToolsMegaMenu, toolCategories } from '@/components/ToolsMegaMenu';
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
   { name: 'Blog', href: '/blog' },
 ];
 
