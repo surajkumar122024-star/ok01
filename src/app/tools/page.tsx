@@ -47,6 +47,7 @@ const customLogos: Record<string, string> = {
   "slug-generator": "/tool-logos/slug-generator.png",
   "password-generator": "/tool-logos/password-generator.png",
   "percentage-calculator": "/tool-logos/percentage-calculator.png",
+  "ai-content-detector": "/tool-logos/ai-content-detector.png",
   "age-calculator": "/tool-logos/age-calculator.png",
   "date-difference-calculator": "/tool-logos/date-difference-calculator.png",
   "emi-calculator": "/tool-logos/emi-calculator.png",
@@ -235,6 +236,14 @@ const tools = [
   description: "Calculate percentages, increases, decreases, and discounts instantly.",
   icon: FileImage,
   color: "bg-emerald-600"
+},
+{
+  name: "AI Content Detector",
+  slug: "ai-content-detector",
+  category: "text-dev-tools",
+  description: "Check text for common signs of AI-generated writing. Free, instant.",
+  icon: FileImage,
+  color: "bg-violet-600"
 },
 {
   name: "Age Calculator",

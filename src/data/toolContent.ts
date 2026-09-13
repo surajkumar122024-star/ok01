@@ -1287,6 +1287,42 @@ export const toolContent: Record<string, ToolContentData> = {
     ],
   },
 
+  "ai-content-detector": {
+    overview: [
+      "AI writing tools have gotten good enough that spotting their output by eye alone isn't always reliable — but certain statistical patterns still show up more often in AI-generated text than in typical human writing: unusually uniform sentence lengths, a cluster of stock transition phrases ('moreover', 'it's important to note', 'in conclusion'), and lower vocabulary variety across a passage.",
+      "This tool measures those three signals directly from the text you paste — sentence-length consistency, how many common AI-associated phrases appear, and how repetitive the vocabulary is — and combines them into a rough overall score. It does not connect to any AI provider's systems or detect a 'fingerprint' left by a specific model; it's pattern-matching against writing style, nothing more.",
+      "Because of that, treat the result as a talking point, not a verdict. Many people naturally write with consistent sentence structure and a predictable vocabulary, especially in formal or technical writing, which can trigger a higher score despite being entirely human-written. Likewise, heavily edited AI text can score low. This is genuinely useful for a quick gut-check, not for accusations.",
+    ],
+    steps: [
+      { title: "Paste the text you want to check", description: "At least 40 words and 3 sentences are needed for a meaningful reading." },
+      { title: "Review the overall signal", description: "See whether the text leans toward typical human-writing patterns or common AI-writing patterns." },
+      { title: "Check the breakdown", description: "Look at sentence uniformity, AI-phrase count, and vocabulary variety individually — a high overall score driven by just one factor is worth treating with extra skepticism." },
+    ],
+    useCases: [
+      { title: "A quick gut-check on a draft", description: "Get a rough read on whether a piece of writing leans toward common AI patterns before deciding whether to dig deeper." },
+      { title: "Reviewing your own AI-assisted writing", description: "Check how strongly a passage you wrote with AI help still reads as AI-typical, before editing it further." },
+      { title: "Spotting common AI phrasing habits", description: "Learn to recognize the stock transition phrases and structural patterns that show up disproportionately in AI-generated text." },
+    ],
+    tips: [
+      "Never treat a single score as proof — use it as a starting point for a closer read, not a final answer.",
+      "Short passages (under ~40 words) don't give the statistics enough to work with, which is why the tool asks for more text first.",
+      "Formal, technical, or academic human writing can score higher than casual writing simply because it naturally uses more consistent sentence structure and domain vocabulary.",
+      "If you're evaluating someone else's work for something high-stakes (academic integrity, hiring, publishing), combine this with other evidence and human judgment rather than relying on any single detector.",
+    ],
+    faqs: [
+      { q: "How accurate is this tool?", a: "It measures real statistical patterns correlated with AI-generated text, but it's a heuristic, not a certified detector — no tool, including commercial ones, can verify authorship with certainty. False positives and false negatives are both common with any AI detector." },
+      { q: "Can this tell me which AI model wrote something?", a: "No — it only measures general writing-style statistics, not model-specific signatures. It can't identify ChatGPT vs. another AI, or distinguish AI text from unusually uniform human writing." },
+      { q: "Why did my own human-written text score high?", a: "Consistent sentence length and a focused vocabulary aren't unique to AI — technical writers, non-native speakers writing carefully, and formal documents often show similar patterns." },
+      { q: "Is my text uploaded anywhere?", a: "No — all analysis happens locally in your browser using JavaScript. Nothing you paste is sent to a server." },
+      { q: "Should I use this to accuse someone of using AI?", a: "No. This tool is meant as a rough, informal indicator. It should never be the sole basis for an academic, legal, or employment decision — combine it with other evidence and direct judgment." },
+    ],
+    relatedTools: [
+      { name: "Word Counter", slug: "word-counter" },
+      { name: "Character Counter", slug: "character-counter" },
+      { name: "Case Converter", slug: "case-converter" },
+    ],
+  },
+
   "slug-generator": {
     overview: [
       "A blog post titled '10 Best Places to Visit in 2026!' turns into a messy, unreliable URL if pasted directly into an address bar — spaces need encoding, punctuation causes ambiguity, and capital letters create inconsistency across servers that treat URLs case-sensitively. A clean slug like 10-best-places-to-visit-2026 avoids all of that.",

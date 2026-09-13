@@ -9,6 +9,7 @@ import {
   Binary, Braces, Link as LinkIcon,
   KeyRound, Youtube, Fingerprint, Images, QrCode, Barcode,
   Percent, Cake, CalendarRange, Landmark, Receipt, TrendingUp, FileSpreadsheet, ArrowLeftRight,
+  ScanSearch,
   ScanText,
 } from "lucide-react";
 
@@ -89,6 +90,7 @@ export const toolCategories: ToolCategory[] = [
     items: [
       { name: "Unit Converter", href: "/tools/unit-converter", icon: ArrowLeftRight },
       { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: Percent },
+      { name: "AI Content Detector", href: "/tools/ai-content-detector", icon: ScanSearch },
       { name: "Age Calculator", href: "/tools/age-calculator", icon: Cake },
       { name: "Date Difference", href: "/tools/date-difference-calculator", icon: CalendarRange },
       { name: "EMI Calculator", href: "/tools/emi-calculator", icon: Landmark },

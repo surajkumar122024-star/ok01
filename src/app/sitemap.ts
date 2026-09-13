@@ -24,6 +24,7 @@ const tools = [
   'json-formatter',
   'password-generator',
   'percentage-calculator',
+  'ai-content-detector',
   'age-calculator',
   'date-difference-calculator',
   'emi-calculator',
