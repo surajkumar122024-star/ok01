@@ -23,11 +23,22 @@ function dataURLToBlob(dataUrl: string): Blob {
 export const processImage = async (file: File, options: ImageProcessingOptions): Promise<Blob> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
-    const objectUrl = URL.createObjectURL(file);
+    const reader = new FileReader();
+
+    // We load the source file via FileReader (data: URL) instead of
+    // URL.createObjectURL (blob: URL). Some mobile browsers/network
+    // configurations (e.g. Data Saver / Lite mode, certain Android
+    // WebViews) fail to reliably load blob: URLs, which silently
+    // breaks image loading. data: URLs are more universally supported.
+    reader.onload = () => {
+      img.src = reader.result as string;
+    };
+    reader.onerror = () => {
+      reject(new Error('Failed to read the selected image file.'));
+    };
+    reader.readAsDataURL(file);
 
     img.onload = () => {
-      URL.revokeObjectURL(objectUrl);
-
       try {
         const naturalWidth = img.naturalWidth || img.width;
         const naturalHeight = img.naturalHeight || img.height;
@@ -97,11 +108,8 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
     };
 
     img.onerror = () => {
-      URL.revokeObjectURL(objectUrl);
       reject(new Error('Failed to load the selected image. The file may be corrupted or in an unsupported format.'));
     };
-
-    img.src = objectUrl;
   });
 };
 

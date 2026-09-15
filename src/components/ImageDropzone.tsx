@@ -19,9 +19,9 @@ export const ImageDropzone = ({ onImageSelect, selectedImage, onClear, accept = 
 
   useEffect(() => {
     if (selectedImage) {
-      const url = URL.createObjectURL(selectedImage);
-      setPreviewUrl(url);
-      return () => URL.revokeObjectURL(url);
+      const reader = new FileReader();
+      reader.onload = () => setPreviewUrl(reader.result as string);
+      reader.readAsDataURL(selectedImage);
     } else {
       setPreviewUrl(null);
     }
