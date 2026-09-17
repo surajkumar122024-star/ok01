@@ -1,8 +1,9 @@
 import PasswordGeneratorClient from './PasswordGeneratorClient'
 
 export const metadata = {
-  title: 'Password Generator — OpticShift Pro',
-  description: 'Generate strong, secure passwords instantly. Free, private, nothing stored.',
+  title: 'Strong Password Generator Online — Free & Secure | OpticShift Pro',
+  description: 'Generate a strong, random password online for free. Customize length and characters. Nothing is stored, 100% private.',
+  keywords: 'strong password generator online, random password generator free, secure password generator no sign up, generate password online free',
 }
 
 export default function PasswordGeneratorPage() {
