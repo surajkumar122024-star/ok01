@@ -34,21 +34,15 @@ export const ImageToolLayout = ({ title, description, children, content }: Image
           <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-9 space-y-6">
-            <Card className="glass border-2 border-primary/10 shadow-2xl shadow-primary/5 overflow-hidden p-6 relative">
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
-              {children}
-            </Card>
-            
-            <AdPlaceholder className="mt-8" />
+        <div className="max-w-3xl mx-auto space-y-6">
+          <Card className="glass border-2 border-primary/10 shadow-2xl shadow-primary/5 overflow-hidden p-6 relative">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-primary" />
+            {children}
+          </Card>
 
-            {content}
-          </div>
-          
-          <div className="hidden lg:block lg:col-span-3">
-            <AdPlaceholder variant="vertical" className="sticky top-24" />
-          </div>
+          <AdPlaceholder className="mt-8" />
+
+          {content}
         </div>
       </div>
     </div>
