@@ -376,6 +376,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Rotate & Flip", slug: "image-rotate" },
       { name: "Image Compressor", slug: "compressor" },
       { name: "YouTube Thumbnail Converter", slug: "youtube-thumbnail-converter" },
+      { name: "Image to Text (OCR)", slug: "image-to-text" },
     ],
   },
 
@@ -517,6 +518,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "PDF Merge", slug: "pdf-merge" },
       { name: "PDF Split", slug: "pdf-split" },
       { name: "Image Compressor", slug: "compressor" },
+      { name: "Image to Text (OCR)", slug: "image-to-text" },
     ],
   },
 
@@ -801,6 +803,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Case Converter", slug: "case-converter" },
       { name: "Slug Generator", slug: "slug-generator" },
       { name: "Text Repeater", slug: "text-repeater" },
+      { name: "AI Content Detector", slug: "ai-content-detector" },
     ],
   },
 
@@ -1651,6 +1654,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Case Converter", slug: "case-converter" },
       { name: "Text Repeater", slug: "text-repeater" },
       { name: "Slug Generator", slug: "slug-generator" },
+      { name: "AI Content Detector", slug: "ai-content-detector" },
     ],
   },
 
