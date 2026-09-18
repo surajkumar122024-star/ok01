@@ -5,6 +5,7 @@ import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { CookieConsent } from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ok01.vercel.app'),
@@ -36,6 +37,26 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        {/*
+          Google Consent Mode v2 default state — must run before the
+          AdSense/Analytics scripts so ad and analytics storage start
+          denied until the visitor accepts via the CookieConsent banner.
+          Required for Google's EU User Consent Policy (EEA/UK/Swiss
+          visitors); applied to everyone here for simplicity.
+        */}
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
         <Script
          async
          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6461565201811259"
@@ -48,6 +69,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster />
+        <CookieConsent />
         <GoogleAnalytics gaId="G-BTR44CPL1C" />
       </body>
     </html>

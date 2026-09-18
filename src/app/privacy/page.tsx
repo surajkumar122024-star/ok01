@@ -1,3 +1,5 @@
+import { CookiePreferencesButton } from "@/components/CookiePreferencesButton";
+
 export default function PrivacyPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16 text-muted-foreground">
@@ -72,10 +74,11 @@ export default function PrivacyPage() {
           for core functionality. However, third-party services we use — such as Google AdSense and
           analytics tools — may place cookies on your device.
         </p>
-        <p className="leading-relaxed">
+        <p className="leading-relaxed mb-4">
           You can control or disable cookies through your browser settings. Please note that disabling
           cookies may affect the functionality of certain features.
         </p>
+        <CookiePreferencesButton />
       </section>
 
       <section className="mb-8">
