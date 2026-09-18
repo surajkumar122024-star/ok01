@@ -25,6 +25,7 @@ import {
   Star,
   BookOpen,
 } from 'lucide-react';
+import { HeroParticlesLoader } from '@/components/HeroParticlesLoader';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 import { FaqSection } from '@/components/FaqSection';
 
@@ -174,6 +175,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-primary/10 to-transparent -z-10 blur-3xl opacity-50" />
+        <HeroParticlesLoader />
         <div className="max-w-7xl mx-auto text-center space-y-8">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
