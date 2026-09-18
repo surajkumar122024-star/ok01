@@ -41,8 +41,8 @@ export const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
-      scrolled ? "glass shadow-sm py-2" : "bg-transparent py-4"
+      "fixed top-0 w-full z-50 transition-all duration-300 glass",
+      scrolled ? "shadow-sm py-2" : "py-4"
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
