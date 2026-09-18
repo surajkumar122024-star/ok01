@@ -175,34 +175,34 @@ export default function Home() {
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-primary/10 to-transparent -z-10 blur-3xl opacity-50" />
         <div className="max-w-7xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
             <span>45+ free, fast, online browser-based tools, zero uploads</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
+          <h1 className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Before the Page Even Loads.
             </span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             OpticShift Pro is a free suite of image, PDF, and text tools that process everything
             locally on your device. No server upload, no account, no waiting — just open a tool
             and get your result.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-xl shadow-xl shadow-primary/25" asChild>
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 fill-mode-both flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-xl shadow-xl shadow-primary/25 transition-transform duration-300 hover:scale-105" asChild>
               <Link href="/tools">
                 Browse All Tools <ArrowRight className="ml-2" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-xl glass" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-xl glass border-2 hover:border-primary transition-all duration-300 hover:scale-105" asChild>
               <Link href="/about">How it works</Link>
             </Button>
           </div>
 
           {/* Signature: live conversion strip — a small honest demo of what actually happens */}
-          <div className="pt-10 flex justify-center" aria-hidden="true">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 fill-mode-both pt-10 flex justify-center" aria-hidden="true">
             <div className="glass border rounded-2xl px-6 py-5 inline-flex items-center gap-4 sm:gap-6">
               <div className="convert-cycle flex items-center gap-4 sm:gap-6 min-w-[260px] sm:min-w-[320px]">
                 {[
@@ -235,8 +235,12 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="px-4 pb-12">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {stats.map((stat) => (
-            <div key={stat.label} className="glass border rounded-2xl p-6 text-center">
+          {stats.map((stat, i) => (
+            <div
+              key={stat.label}
+              className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both glass border-2 border-transparent rounded-2xl p-6 text-center transition-all duration-300 hover:border-primary/40 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10"
+              style={{ animationDuration: '700ms', animationDelay: `${800 + i * 100}ms` }}
+            >
               <div className="text-3xl font-extrabold text-primary">{stat.value}</div>
               <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
             </div>
@@ -262,12 +266,13 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((cat) => (
+            {categories.map((cat, i) => (
               <Link key={cat.name} href={cat.href}>
                 <div
-                  className={`shine-card group h-full p-6 bg-gradient-to-br ${cat.gradient} text-white`}
+                  className={`shine-card group h-full p-6 bg-gradient-to-br ${cat.gradient} text-white border-2 border-white/10 transition-all duration-300 hover:border-white/60 hover:scale-[1.03] hover:shadow-2xl`}
+                  style={{ animationDelay: `${i * 80}ms` }}
                 >
-                  <div className="w-12 h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                  <div className="w-12 h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
                     <cat.icon size={22} />
                   </div>
                   <h3 className="text-lg font-bold mb-2">{cat.name}</h3>
@@ -294,7 +299,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tools.map((tool) => (
               <Link key={tool.slug} href={`/tools/${tool.slug}`}>
-                <div className="group h-full p-6 glass rounded-2xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-1">
+                <div className="group h-full p-6 glass rounded-2xl border-2 border-transparent transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1.5">
                   <div
                     className={`w-12 h-12 ${tool.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}
                   >
@@ -381,7 +386,7 @@ export default function Home() {
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group relative p-8 rounded-3xl border bg-card/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30"
+                className="group relative p-8 rounded-3xl border-2 border-transparent bg-card/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/50"
               >
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative">

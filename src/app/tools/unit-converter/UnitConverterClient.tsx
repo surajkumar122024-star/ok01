@@ -344,14 +344,20 @@ export default function UnitConverterClient() {
         <div className="glass rounded-xl p-6 md:p-8 space-y-4">
           <h2 className="text-lg font-semibold">Related tools</h2>
           <div className="flex flex-wrap gap-3">
-            <Link href="/tools/image-size-checker" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
-              Image Size Checker <ArrowRight size={14} />
+            <Link href="/tools/image-size-checker" className="group relative inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 text-foreground overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25">
+              <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative group-hover:text-primary-foreground transition-colors duration-300">Image Size Checker</span>
+              <ArrowRight size={14} className="relative transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary-foreground" />
             </Link>
-            <Link href="/tools/compressor" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
-              Image Compressor <ArrowRight size={14} />
+            <Link href="/tools/compressor" className="group relative inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 text-foreground overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25">
+              <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative group-hover:text-primary-foreground transition-colors duration-300">Image Compressor</span>
+              <ArrowRight size={14} className="relative transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary-foreground" />
             </Link>
-            <Link href="/tools/word-counter" className="inline-flex items-center gap-1 text-sm font-medium bg-muted/50 hover:bg-muted px-4 py-2 rounded-full transition-colors">
-              Word Counter <ArrowRight size={14} />
+            <Link href="/tools/word-counter" className="group relative inline-flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full border-2 border-primary/30 bg-gradient-to-r from-primary/10 to-secondary/10 text-foreground overflow-hidden transition-all duration-300 hover:border-primary hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary/25">
+              <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <span className="relative group-hover:text-primary-foreground transition-colors duration-300">Word Counter</span>
+              <ArrowRight size={14} className="relative transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary-foreground" />
             </Link>
           </div>
         </div>
