@@ -141,7 +141,7 @@ export default function InvoiceGeneratorClient() {
   const inputClass = "w-full px-3 py-2 rounded-lg bg-muted/30 border outline-none focus:border-primary text-sm"
 
   return (
-    <div className="force-light min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
+    <div className="min-h-screen bg-background text-foreground pt-32 pb-20 px-4">
       <ToolPageGlow />
       <div className="max-w-3xl mx-auto space-y-8">
 
