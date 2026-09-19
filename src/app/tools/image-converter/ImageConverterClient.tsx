@@ -51,6 +51,80 @@ async function convertToFormat(canvas: HTMLCanvasElement, format: TargetFormat):
   }
 }
 
+async function drawToCanvas(source: CanvasImageSource, width: number, height: number): Promise<HTMLCanvasElement> {
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Canvas isn't supported on this device.");
+  ctx.drawImage(source, 0, 0, width, height);
+  return canvas;
+}
+
+/**
+ * Load a File into a canvas, trying several methods in order so that one
+ * method failing (which happens intermittently on some mobile browsers —
+ * Data Saver modes, certain Android WebViews, memory pressure) doesn't
+ * break the whole tool:
+ *   1. createImageBitmap(file) — the modern, direct way to decode an
+ *      image file without FileReader or object URLs at all.
+ *   2. FileReader → data URL → <img> — works almost everywhere.
+ *   3. URL.createObjectURL(file) → <img> — last resort.
+ */
+async function loadCanvasFromFile(file: File): Promise<HTMLCanvasElement> {
+  const errors: string[] = [];
+
+  if (typeof createImageBitmap === "function") {
+    try {
+      const bitmap = await createImageBitmap(file);
+      const canvas = await drawToCanvas(bitmap, bitmap.width, bitmap.height);
+      bitmap.close();
+      return canvas;
+    } catch (e) {
+      errors.push(e instanceof Error ? e.message : "createImageBitmap failed");
+    }
+  }
+
+  try {
+    const dataUrl: string = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = () => reject(new Error("FileReader failed"));
+      reader.readAsDataURL(file);
+    });
+    const img = new Image();
+    await new Promise<void>((resolve, reject) => {
+      img.onload = () => resolve();
+      img.onerror = () => reject(new Error("Image failed to load from data URL"));
+      img.src = dataUrl;
+    });
+    return await drawToCanvas(img, img.naturalWidth || img.width, img.naturalHeight || img.height);
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "FileReader path failed");
+  }
+
+  try {
+    const objectUrl = URL.createObjectURL(file);
+    try {
+      const img = new Image();
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error("Image failed to load from object URL"));
+        img.src = objectUrl;
+      });
+      return await drawToCanvas(img, img.naturalWidth || img.width, img.naturalHeight || img.height);
+    } finally {
+      URL.revokeObjectURL(objectUrl);
+    }
+  } catch (e) {
+    errors.push(e instanceof Error ? e.message : "Object URL path failed");
+  }
+
+  throw new Error(
+    `Couldn't read this image on your device. Please try a different photo or browser. (${errors.join("; ")})`
+  );
+}
+
 export default function ImageConverterClient() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [targetFormat, setTargetFormat] = useState<TargetFormat>("png");
@@ -64,30 +138,7 @@ export default function ImageConverterClient() {
     setProcessedBlob(null);
 
     try {
-      // FileReader (data URL) rather than URL.createObjectURL — blob: URLs
-      // don't load reliably on some mobile browsers (Data Saver / certain
-      // Android WebViews), which silently breaks image loading.
-      const dataUrl: string = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onload = () => resolve(reader.result as string);
-        reader.onerror = () => reject(new Error("Failed to read the selected file."));
-        reader.readAsDataURL(selectedFile);
-      });
-
-      const img = new Image();
-      await new Promise<void>((resolve, reject) => {
-        img.onload = () => resolve();
-        img.onerror = () => reject(new Error("Failed to load the selected image. The file may be corrupted or in an unsupported format."));
-        img.src = dataUrl;
-      });
-
-      const canvas = document.createElement("canvas");
-      canvas.width = img.naturalWidth || img.width;
-      canvas.height = img.naturalHeight || img.height;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) throw new Error("Canvas isn't supported on this device.");
-      ctx.drawImage(img, 0, 0);
-
+      const canvas = await loadCanvasFromFile(selectedFile);
       const blob = await convertToFormat(canvas, targetFormat);
       setProcessedBlob(blob);
       toast({ title: "Converted!", description: `Your image is ready as ${targetFormat.toUpperCase()}.` });
