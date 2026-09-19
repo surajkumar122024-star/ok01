@@ -47,6 +47,7 @@ export const toolCategories: ToolCategory[] = [
       { name: "WebP Converter", href: "/tools/webp-converter", icon: RefreshCw },
       { name: "HEIC to JPG", href: "/tools/heic-to-jpg", icon: RefreshCw },
       { name: "SVG to PNG", href: "/tools/svg-to-png", icon: RefreshCw },
+      { name: "Image Format Converter", href: "/tools/image-converter", icon: ArrowLeftRight },
     ],
   },
   {

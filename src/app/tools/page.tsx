@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { 
   ArrowRight, 
+  ArrowLeftRight,
   RotateCcw, 
   Maximize, 
   Image as ImageIcon,
@@ -112,6 +113,14 @@ const tools = [
   description: "Convert SVG files to high-quality PNG instantly.",
   icon: FileImage,
   color: "bg-blue-400"
+},
+  {
+  name: "Image Format Converter",
+  slug: "image-converter",
+  category: "format-converters",
+  description: "Convert between JPG, PNG, WebP, GIF, BMP, and ICO — all in one tool.",
+  icon: ArrowLeftRight,
+  color: "bg-violet-500"
 },
   {
   name: "Image Rotate & Flip",

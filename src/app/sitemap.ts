@@ -9,6 +9,7 @@ const tools = [
   'png-to-jpg',
   'image-to-pdf',
   'webp-converter',
+  'image-converter',
   'pdf-to-image',
   'image-cropper',
   'image-to-text',

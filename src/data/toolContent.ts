@@ -138,6 +138,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Compressor", slug: "compressor" },
       { name: "WebP Converter", slug: "webp-converter" },
       { name: "SVG to PNG", slug: "svg-to-png" },
+      { name: "Image Format Converter", slug: "image-converter" },
     ],
   },
 
@@ -185,6 +186,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Compressor", slug: "compressor" },
       { name: "WebP Converter", slug: "webp-converter" },
       { name: "Image Size Checker", slug: "image-size-checker" },
+      { name: "Image Format Converter", slug: "image-converter" },
     ],
   },
 
@@ -279,6 +281,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "JPG to PNG", slug: "jpg-to-png" },
       { name: "PNG to JPG", slug: "png-to-jpg" },
       { name: "SVG to PNG", slug: "svg-to-png" },
+      { name: "Image Format Converter", slug: "image-converter" },
     ],
   },
 
@@ -328,6 +331,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Compressor", slug: "compressor" },
       { name: "Image Resizer", slug: "resizer" },
       { name: "WebP Converter", slug: "webp-converter" },
+      { name: "Image Format Converter", slug: "image-converter" },
     ],
   },
 
@@ -566,6 +570,7 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image Compressor", slug: "compressor" },
       { name: "Color Picker", slug: "color-picker" },
       { name: "JPG to PNG", slug: "jpg-to-png" },
+      { name: "Image Format Converter", slug: "image-converter" },
     ],
   },
 
