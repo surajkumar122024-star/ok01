@@ -11,58 +11,6 @@ import {
   LayoutGrid
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
-import Image from 'next/image';
-
-// Demo: custom illustrated logos, keyed by tool slug. Only tools with an
-// entry here get the new illustrated treatment; everything else falls
-// back to the existing icon-in-colored-box style below.
-const customLogos: Record<string, string> = {
-  "pdf-merge": "/tool-logos/pdf-merge.png",
-  "invoice-generator": "/tool-logos/invoice-generator.png",
-  "qr-code-generator": "/tool-logos/qr-code-generator.png",
-  "barcode-generator": "/tool-logos/barcode-generator.png",
-  "text-repeater": "/tool-logos/text-repeater.png",
-  "character-counter": "/tool-logos/character-counter.png",
-  "base64": "/tool-logos/base64.png",
-  "unit-converter": "/tool-logos/unit-converter.png",
-  "json-formatter": "/tool-logos/json-formatter.png",
-  "url-encoder": "/tool-logos/url-encoder.png",
-  "compressor": "/tool-logos/compressor.png",
-  "resizer": "/tool-logos/resizer.png",
-  "jpg-to-png": "/tool-logos/jpg-to-png.png",
-  "png-to-jpg": "/tool-logos/png-to-jpg.png",
-  "image-to-pdf": "/tool-logos/image-to-pdf.png",
-  "webp-converter": "/tool-logos/webp-converter.png",
-  "pdf-to-image": "/tool-logos/pdf-to-image.png",
-  "image-cropper": "/tool-logos/image-cropper.png",
-  "image-to-text": "/tool-logos/image-to-text.png",
-  "image-watermark": "/tool-logos/image-watermark.png",
-  "svg-to-png": "/tool-logos/svg-to-png.png",
-  "image-rotate": "/tool-logos/image-rotate.png",
-  "heic-to-jpg": "/tool-logos/heic-to-jpg.png",
-  "color-picker": "/tool-logos/color-picker.png",
-  "youtube-thumbnail-converter": "/tool-logos/youtube-thumbnail-converter.png",
-  "word-counter": "/tool-logos/word-counter.png",
-  "case-converter": "/tool-logos/case-converter.png",
-  "slug-generator": "/tool-logos/slug-generator.png",
-  "password-generator": "/tool-logos/password-generator.png",
-  "percentage-calculator": "/tool-logos/percentage-calculator.png",
-  "ai-content-detector": "/tool-logos/ai-content-detector.png",
-  "age-calculator": "/tool-logos/age-calculator.png",
-  "date-difference-calculator": "/tool-logos/date-difference-calculator.png",
-  "emi-calculator": "/tool-logos/emi-calculator.png",
-  "gst-calculator": "/tool-logos/gst-calculator.png",
-  "interest-calculator": "/tool-logos/interest-calculator.png",
-  "pdf-split": "/tool-logos/pdf-split.png",
-  "image-size-checker": "/tool-logos/image-size-checker.png",
-  "passport-photo": "/tool-logos/passport-photo.png",
-  "visa-photo": "/tool-logos/visa-photo.png",
-  "aadhaar-photo": "/tool-logos/aadhaar-photo.png",
-  "pan-photo": "/tool-logos/pan-photo.png",
-  "exam-photo": "/tool-logos/exam-photo.png",
-  "signature-resizer": "/tool-logos/signature-resizer.png",
-  "image-collage": "/tool-logos/image-collage.png",
-};
 
 export const metadata: Metadata = {
   title: 'All Tools — 45 Free Image, PDF, Text & Document Tools',
@@ -482,16 +430,10 @@ export default function ToolsPage() {
               {group.tools.map((tool) => (
                 <Link key={tool.slug} href={`/tools/${tool.slug}`}>
                   <div className="group glass p-4 sm:p-8 rounded-2xl sm:rounded-3xl border transition-all duration-300 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2 flex flex-col h-full">
-                    {customLogos[tool.slug] ? (
-                      <div className="icon-shine rounded-xl sm:rounded-2xl w-10 h-10 sm:w-14 sm:h-14 mb-3 sm:mb-8 relative group-hover:scale-105 transition-transform">
-                        <Image src={customLogos[tool.slug]} alt="" fill className="object-contain drop-shadow-md" sizes="56px" />
-                      </div>
-                    ) : (
-                      <div className={`icon-shine w-10 h-10 sm:w-14 sm:h-14 ${tool.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-3 sm:mb-8 group-hover:rotate-12 transition-transform`}>
-                        <tool.icon size={20} className="sm:hidden" />
-                        <tool.icon size={28} className="hidden sm:block" />
-                      </div>
-                    )}
+                    <div className={`icon-shine w-10 h-10 sm:w-14 sm:h-14 ${tool.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-3 sm:mb-8 group-hover:rotate-12 transition-transform`}>
+                      <tool.icon size={20} className="sm:hidden" />
+                      <tool.icon size={28} className="hidden sm:block" />
+                    </div>
                     <h3 className="text-base sm:text-2xl font-bold mb-1.5 sm:mb-4">{tool.name}</h3>
                     <p className="text-xs sm:text-base text-muted-foreground leading-snug sm:leading-relaxed flex-grow mb-3 sm:mb-8 line-clamp-3 sm:line-clamp-none">{tool.description}</p>
                     <div className="inline-flex items-center justify-center h-9 sm:h-12 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-primary text-primary-foreground font-semibold text-xs sm:text-base group-hover:scale-105 transition-all">
