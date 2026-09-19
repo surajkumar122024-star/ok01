@@ -13,5 +13,28 @@ export const metadata: Metadata = {
 };
 
 export default function ExamPhotoPage() {
-  return <ExamPhotoClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: metadata.title,
+            description: metadata.description,
+            url: 'https://ok01.vercel.app/tools/exam-photo',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+          }),
+        }}
+      />
+      <ExamPhotoClient />
+    </>
+  );
 }

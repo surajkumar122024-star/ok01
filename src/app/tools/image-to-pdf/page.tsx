@@ -13,5 +13,28 @@ export const metadata: Metadata = {
 };
 
 export default function ImageToPdfPage() {
-  return <ImageToPdfClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: metadata.title,
+            description: metadata.description,
+            url: 'https://ok01.vercel.app/tools/image-to-pdf',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+          }),
+        }}
+      />
+      <ImageToPdfClient />
+    </>
+  );
 }

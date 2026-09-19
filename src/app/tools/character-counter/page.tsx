@@ -7,5 +7,28 @@ export const metadata = {
 }
 
 export default function CharacterCounterPage() {
-  return <CharacterCounterClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: metadata.title,
+            description: metadata.description,
+            url: 'https://ok01.vercel.app/tools/character-counter',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+          }),
+        }}
+      />
+      <CharacterCounterClient />
+    </>
+  );
 }

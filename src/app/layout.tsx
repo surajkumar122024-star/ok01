@@ -37,6 +37,31 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        {/* Site-wide Organization + WebSite structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  '@id': 'https://ok01.vercel.app/#organization',
+                  name: 'OpticShift Pro',
+                  url: 'https://ok01.vercel.app',
+                  logo: 'https://ok01.vercel.app/favicon.ico',
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://ok01.vercel.app/#website',
+                  name: 'OpticShift Pro',
+                  url: 'https://ok01.vercel.app',
+                  publisher: { '@id': 'https://ok01.vercel.app/#organization' },
+                },
+              ],
+            }),
+          }}
+        />
         {/*
           Google Consent Mode v2 default state — must run before the
           AdSense/Analytics scripts so ad and analytics storage start

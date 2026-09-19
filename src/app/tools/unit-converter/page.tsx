@@ -7,5 +7,28 @@ export const metadata = {
 }
 
 export default function UnitConverterPage() {
-  return <UnitConverterClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: metadata.title,
+            description: metadata.description,
+            url: 'https://ok01.vercel.app/tools/unit-converter',
+            applicationCategory: 'UtilitiesApplication',
+            operatingSystem: 'Any',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'USD',
+            },
+          }),
+        }}
+      />
+      <UnitConverterClient />
+    </>
+  );
 }
