@@ -239,6 +239,12 @@ const blogs = [
     date: 'August 22, 2026',
   },
   {
+    slug: 'image-format-converter-guide',
+    title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online',
+    description: 'Convert images between JPG, PNG, WebP, GIF, BMP, and ICO in one free online tool — a complete guide to when to use each format.',
+    date: 'September 19, 2026',
+  },
+  {
     slug: 'qr-code-generator-guide',
     title: 'How to Make a Free QR Code Online — No Sign-Up, No Expiry',
     description: 'Create a QR code for a link, Wi-Fi network, or contact card in seconds — and understand what error correction actually means.',

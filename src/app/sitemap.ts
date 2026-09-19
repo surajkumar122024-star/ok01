@@ -93,6 +93,7 @@ const blogPosts = [
   'signature-resizer-guide',
   'image-collage-maker-guide',
   'document-photo-size-guide-india',
+  'image-format-converter-guide',
   'qr-code-generator-guide',
   'barcode-generator-guide',
   'how-to-convert-heic-to-pdf',
