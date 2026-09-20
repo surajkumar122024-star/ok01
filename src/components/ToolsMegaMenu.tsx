@@ -11,6 +11,7 @@ import {
   Percent, Cake, CalendarRange, Landmark, Receipt, TrendingUp, FileSpreadsheet, ArrowLeftRight,
   ScanSearch,
   ScanText,
+  Video,
 } from "lucide-react";
 
 interface ToolItem {
@@ -109,6 +110,12 @@ export const toolCategories: ToolCategory[] = [
       { name: "PAN Photo", href: "/tools/pan-photo", icon: Fingerprint },
       { name: "Exam Photo", href: "/tools/exam-photo", icon: Fingerprint },
       { name: "Signature Resizer", href: "/tools/signature-resizer", icon: Fingerprint },
+    ],
+  },
+  {
+    title: "Video Tools",
+    items: [
+      { name: "Video Compressor", href: "/tools/video-compressor", icon: Video },
     ],
   },
 ];

@@ -9,16 +9,17 @@ import {
   Zap,
   FileImage,
   Ruler,
-  LayoutGrid
+  LayoutGrid,
+  Video
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 45 Free Image, PDF, Text & Document Tools',
-  description: 'Browse all 45 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 46 Free Image, Video, PDF, Text & Document Tools',
+  description: 'Browse all 46 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 45 free browser-based tools for images, PDFs, text, and documents.',
+    description: 'Browse all 46 free browser-based tools for images, videos, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -393,6 +394,14 @@ const tools = [
     description: "Combine multiple photos into one grid collage. Bulk upload, custom layout. Free & private.",
     icon: LayoutGrid,
     color: "bg-fuchsia-600"
+  },
+  {
+    name: "Video Compressor",
+    slug: "video-compressor",
+  category: "video-tools",
+    description: "Shrink MP4, MOV, WebM and MKV files right in your browser. No upload, no waiting room.",
+    icon: Video,
+    color: "bg-rose-600"
   },
 ];
 

@@ -50,6 +50,7 @@ const tools = [
   'signature-resizer',
   'unit-converter',
   'image-collage',
+  'video-compressor',
 ]
 
 const blogPosts = [

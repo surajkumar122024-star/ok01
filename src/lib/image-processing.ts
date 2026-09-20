@@ -121,3 +121,57 @@ export const formatBytes = (bytes: number, decimals = 2) => {
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
 };
+
+/**
+ * Loads a File into an HTMLImageElement via FileReader (data: URL) rather
+ * than URL.createObjectURL (blob: URL). Some mobile browsers/network
+ * configurations (Data Saver / Lite mode, certain Android WebViews, some
+ * iOS Safari versions) fail to reliably load blob: URLs into <img>, which
+ * silently breaks image loading. data: URLs are more universally supported.
+ *
+ * Use this instead of `new Image(); img.src = URL.createObjectURL(file)`
+ * in any tool that draws an uploaded image onto a canvas.
+ */
+export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    const img = new Image();
+
+    reader.onload = () => {
+      img.src = reader.result as string;
+    };
+    reader.onerror = () => {
+      reject(new Error('Failed to read the selected image file.'));
+    };
+    img.onload = () => resolve(img);
+    img.onerror = () => {
+      reject(new Error('Failed to load the selected image. The file may be corrupted or in an unsupported format.'));
+    };
+    reader.readAsDataURL(file);
+  });
+};
+
+/**
+ * canvas.toBlob(), with a fallback to canvas.toDataURL() for browsers
+ * (mostly older Android WebViews) that return null from toBlob() instead
+ * of throwing. Use this instead of calling canvas.toBlob() directly in
+ * any tool that exports a canvas as a downloadable file.
+ */
+export const canvasToBlob = (canvas: HTMLCanvasElement, type: string, quality?: number): Promise<Blob> => {
+  return new Promise((resolve, reject) => {
+    const fallbackToDataURL = () => {
+      try {
+        resolve(dataURLToBlob(canvas.toDataURL(type, quality)));
+      } catch (err: unknown) {
+        const message = err instanceof Error ? err.message : 'unknown error';
+        reject(new Error(`Could not export the image on this device (${message}).`));
+      }
+    };
+
+    if (typeof canvas.toBlob === 'function') {
+      canvas.toBlob((blob) => (blob ? resolve(blob) : fallbackToDataURL()), type, quality);
+    } else {
+      fallbackToDataURL();
+    }
+  });
+};

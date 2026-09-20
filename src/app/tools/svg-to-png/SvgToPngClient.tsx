@@ -49,8 +49,9 @@ export default function SvgToPngClient() {
       }
       setSvgSize({ w: w || 300, h: h || 300 });
 
-      const blob = new Blob([text], { type: "image/svg+xml" });
-      setPreview(URL.createObjectURL(blob));
+      // data: URL instead of a blob: object URL — more reliably loads
+      // into <img> across mobile browsers.
+      setPreview(`data:image/svg+xml;charset=utf-8,${encodeURIComponent(text)}`);
     };
     reader.readAsText(file);
   };
@@ -70,12 +71,10 @@ export default function SvgToPngClient() {
       ctx.fillRect(0, 0, outW, outH);
     }
 
-    const blob = new Blob([svgSrc], { type: "image/svg+xml" });
-    const url = URL.createObjectURL(blob);
+    const url = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svgSrc)}`;
     const img = new window.Image();
     img.onload = () => {
       ctx.drawImage(img, 0, 0, outW, outH);
-      URL.revokeObjectURL(url);
       setResultUrl(canvas.toDataURL("image/png"));
     };
     img.onerror = () => { setError("SVG could not be rendered. Try a simpler SVG."); };

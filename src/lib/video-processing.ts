@@ -1,0 +1,133 @@
+import { FFmpeg } from '@ffmpeg/ffmpeg';
+import { fetchFile, toBlobURL } from '@ffmpeg/util';
+
+// Single-threaded ffmpeg.wasm core, self-hosted under /public/ffmpeg/core/.
+// We deliberately use the single-threaded core (not core-mt) because the
+// multi-threaded build requires SharedArrayBuffer, which only works when the
+// whole site is served with Cross-Origin-Opener-Policy: same-origin and
+// Cross-Origin-Embedder-Policy: require-corp. Those headers would very
+// likely break the Google/AdSense iframes this site depends on for revenue
+// (ad networks generally don't send the CORP headers COEP:require-corp
+// demands), so we trade some speed for zero risk to ads and existing
+// embeds. Self-hosting (instead of pulling from a CDN) keeps everything
+// same-origin, so no changes to the existing CSP connect-src are needed.
+const CORE_BASE_URL = '/ffmpeg/core';
+
+let ffmpegInstance: FFmpeg | null = null;
+let loadPromise: Promise<FFmpeg> | null = null;
+
+export type ProgressCallback = (ratio: number) => void;
+
+/**
+ * Loads (once) and returns the shared FFmpeg instance. Subsequent calls
+ * reuse the same instance instead of re-downloading the ~30MB wasm core.
+ */
+async function getFFmpeg(): Promise<FFmpeg> {
+  if (ffmpegInstance) return ffmpegInstance;
+  if (loadPromise) return loadPromise;
+
+  loadPromise = (async () => {
+    const ffmpeg = new FFmpeg();
+
+    ffmpeg.on('log', ({ message }) => {
+      // Useful for local debugging; safe to leave in since it's console-only.
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('[ffmpeg]', message);
+      }
+    });
+
+    await ffmpeg.load({
+      coreURL: await toBlobURL(`${CORE_BASE_URL}/ffmpeg-core.js`, 'text/javascript'),
+      wasmURL: await toBlobURL(`${CORE_BASE_URL}/ffmpeg-core.wasm`, 'application/wasm'),
+    });
+
+    ffmpegInstance = ffmpeg;
+    return ffmpeg;
+  })();
+
+  return loadPromise;
+}
+
+export class VideoProcessingError extends Error {}
+
+function guessExtension(fileName: string): string {
+  const parts = fileName.split('.');
+  return parts.length > 1 ? parts[parts.length - 1].toLowerCase() : 'mp4';
+}
+
+export type CompressVideoOptions = {
+  /** CRF (Constant Rate Factor): lower = higher quality/bigger file. 18-28 is a sane range. */
+  crf?: number;
+  onProgress?: ProgressCallback;
+};
+
+/**
+ * Compresses a video using H.264 (libx264). Runs entirely in-browser.
+ * Large files (roughly >250MB) can be slow or hit memory limits on mobile
+ * devices, since the whole file is held in the wasm virtual filesystem —
+ * callers should warn users before processing very large files.
+ */
+export const compressVideo = async (file: File, options: CompressVideoOptions = {}): Promise<Blob> => {
+  const { crf = 28, onProgress } = options;
+  const ffmpeg = await getFFmpeg();
+
+  const inputExt = guessExtension(file.name);
+  const inputName = `input.${inputExt}`;
+  const outputName = 'output.mp4';
+
+  const progressHandler = ({ progress }: { progress: number }) => {
+    // ffmpeg.wasm reports progress as a 0-1 ratio, occasionally slightly
+    // over 1 near the end of encoding — clamp for a sane UI value.
+    onProgress?.(Math.min(1, Math.max(0, progress)));
+  };
+
+  try {
+    if (onProgress) ffmpeg.on('progress', progressHandler);
+
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
+
+    await ffmpeg.exec([
+      '-i', inputName,
+      '-c:v', 'libx264',
+      '-crf', String(crf),
+      '-preset', 'veryfast',
+      '-c:a', 'aac',
+      '-b:a', '128k',
+      '-movflags', '+faststart',
+      outputName,
+    ]);
+
+    const data = await ffmpeg.readFile(outputName);
+    return new Blob([data], { type: 'video/mp4' });
+  } catch (err: unknown) {
+    throw new VideoProcessingError(
+      err instanceof Error ? err.message : 'Failed to process video. The file may be corrupted or in an unsupported format.'
+    );
+  } finally {
+    if (onProgress) ffmpeg.off('progress', progressHandler);
+    // Clean up the wasm virtual filesystem so memory doesn't grow across
+    // multiple conversions in the same session.
+    try {
+      await ffmpeg.deleteFile(inputName);
+      await ffmpeg.deleteFile(outputName);
+    } catch {
+      // Files may not exist if an earlier step failed — safe to ignore.
+    }
+  }
+};
+
+/** Rough client-side heuristic to warn before processing very large files on mobile. */
+export const isLikelyTooLargeForMobile = (file: File): boolean => {
+  const isMobile = typeof navigator !== 'undefined' && /iphone|ipad|android/i.test(navigator.userAgent);
+  const MOBILE_WARNING_BYTES = 250 * 1024 * 1024; // 250MB
+  return isMobile && file.size > MOBILE_WARNING_BYTES;
+};
+
+export const formatBytes = (bytes: number): string => {
+  if (bytes === 0) return '0 Bytes';
+  const k = 1024;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(2))} ${sizes[i]}`;
+};

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ImageToolLayout } from '@/components/ImageToolLayout';
 import { ImageDropzone } from '@/components/ImageDropzone';
-import { processImage } from '@/lib/image-processing';
+import { processImage, loadImageFromFile } from '@/lib/image-processing';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Download, Loader2, Link as LinkIcon, Unlink } from 'lucide-react';
@@ -23,20 +23,24 @@ export default function ResizerClient() {
 
   useEffect(() => {
     if (selectedFile) {
-      const url = URL.createObjectURL(selectedFile);
-      const img = new Image();
-      img.onload = () => {
-        setWidth(img.width);
-        setHeight(img.height);
-        setAspectRatio(img.width / img.height);
-        URL.revokeObjectURL(url);
-      };
-      img.onerror = () => URL.revokeObjectURL(url);
-      img.src = url;
+      let cancelled = false;
+      loadImageFromFile(selectedFile)
+        .then((img) => {
+          if (cancelled) return;
+          setWidth(img.naturalWidth || img.width);
+          setHeight(img.naturalHeight || img.height);
+          setAspectRatio((img.naturalWidth || img.width) / (img.naturalHeight || img.height));
+        })
+        .catch(() => {
+          if (!cancelled) {
+            toast({ title: "Error", description: "Couldn't read this image's dimensions on your device.", variant: "destructive" });
+          }
+        });
+      return () => { cancelled = true; };
     } else {
       setProcessedBlob(null);
     }
-  }, [selectedFile]);
+  }, [selectedFile, toast]);
 
   const handleWidthChange = (val: string) => {
     const newWidth = parseInt(val) || 0;

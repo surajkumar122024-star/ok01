@@ -8,6 +8,7 @@ import { Download, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
+import { loadImageFromFile, canvasToBlob } from '@/lib/image-processing';
 
 export default function JpgToPngClient() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -19,27 +20,18 @@ export default function JpgToPngClient() {
     if (!selectedFile) return;
     setIsProcessing(true);
     try {
-      const url = URL.createObjectURL(selectedFile);
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d')!;
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob((blob) => {
-          if (blob) {
-            setProcessedBlob(blob);
-            toast({ title: "Success", description: "Image converted to PNG!" });
-          }
-          setIsProcessing(false);
-          URL.revokeObjectURL(url);
-        }, 'image/png');
-      };
-      img.onerror = () => { setIsProcessing(false); URL.revokeObjectURL(url); };
-      img.src = url;
-    } catch {
-      toast({ title: "Error", description: "Failed to convert image.", variant: "destructive" });
+      const img = await loadImageFromFile(selectedFile);
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth || img.width;
+      canvas.height = img.naturalHeight || img.height;
+      const ctx = canvas.getContext('2d')!;
+      ctx.drawImage(img, 0, 0);
+      const blob = await canvasToBlob(canvas, 'image/png');
+      setProcessedBlob(blob);
+      toast({ title: "Success", description: "Image converted to PNG!" });
+    } catch (err: unknown) {
+      toast({ title: "Error", description: err instanceof Error ? err.message : "Failed to convert image.", variant: "destructive" });
+    } finally {
       setIsProcessing(false);
     }
   };

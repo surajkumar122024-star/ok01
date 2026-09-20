@@ -55,6 +55,9 @@ export default function ImageToTextClient() {
     try {
       const { createWorker } = await import("tesseract.js");
       const worker = await createWorker(language, 1, {
+        workerPath: "/tesseract/worker.min.js",
+        corePath: "/tesseract/core",
+        langPath: "/tesseract/lang-data",
         logger: (m: { status: string; progress: number }) => {
           if (m.status === "recognizing text") {
             setProgressLabel("Recognizing text...");

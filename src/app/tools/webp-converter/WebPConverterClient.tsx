@@ -8,6 +8,7 @@ import { Download, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
+import { loadImageFromFile, canvasToBlob } from '@/lib/image-processing';
 
 export default function WebPConverterClient() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -19,27 +20,25 @@ export default function WebPConverterClient() {
     if (!selectedFile) return;
     setIsProcessing(true);
     try {
-      const url = URL.createObjectURL(selectedFile);
-      const img = new Image();
-      img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d')!;
-        ctx.drawImage(img, 0, 0);
-        canvas.toBlob((blob) => {
-          if (blob) {
-            setProcessedBlob(blob);
-            toast({ title: "Success", description: "Image converted to WebP!" });
-          }
-          setIsProcessing(false);
-          URL.revokeObjectURL(url);
-        }, 'image/webp', 0.9);
-      };
-      img.onerror = () => { setIsProcessing(false); URL.revokeObjectURL(url); };
-      img.src = url;
-    } catch {
-      toast({ title: "Error", description: "Failed to convert image.", variant: "destructive" });
+      const img = await loadImageFromFile(selectedFile);
+      const canvas = document.createElement('canvas');
+      canvas.width = img.naturalWidth || img.width;
+      canvas.height = img.naturalHeight || img.height;
+      const ctx = canvas.getContext('2d')!;
+      ctx.drawImage(img, 0, 0);
+      const blob = await canvasToBlob(canvas, 'image/webp', 0.9);
+      if (blob.type !== 'image/webp') {
+        // Older Safari versions (pre-iOS 14) silently ignore the
+        // requested type and hand back a PNG instead of throwing —
+        // let the user know instead of pretending it's WebP.
+        toast({ title: "WebP not supported on this browser", description: "Your browser doesn't support exporting WebP — a PNG was created instead. Try a recent Chrome, Edge, or Safari 14+." });
+      } else {
+        toast({ title: "Success", description: "Image converted to WebP!" });
+      }
+      setProcessedBlob(blob);
+    } catch (err: unknown) {
+      toast({ title: "Error", description: err instanceof Error ? err.message : "Failed to convert image.", variant: "destructive" });
+    } finally {
       setIsProcessing(false);
     }
   };

@@ -29,20 +29,26 @@ export default function ImageSizeCheckerClient() {
   const processFiles = (files: FileList) => {
     Array.from(files).forEach(file => {
       if (!file.type.startsWith('image/')) return
-      const url = URL.createObjectURL(file)
-      const img = new Image()
-      img.onload = () => {
-        setImages(prev => [...prev, {
-          name: file.name,
-          size: file.size,
-          type: file.type,
-          width: img.naturalWidth,
-          height: img.naturalHeight,
-          aspectRatio: getAspectRatio(img.naturalWidth, img.naturalHeight),
-          url,
-        }])
+      // FileReader (data: URL) instead of URL.createObjectURL (blob: URL) —
+      // some mobile browsers fail to reliably load blob: URLs into <img>.
+      const reader = new FileReader()
+      reader.onload = () => {
+        const dataUrl = reader.result as string
+        const img = new Image()
+        img.onload = () => {
+          setImages(prev => [...prev, {
+            name: file.name,
+            size: file.size,
+            type: file.type,
+            width: img.naturalWidth,
+            height: img.naturalHeight,
+            aspectRatio: getAspectRatio(img.naturalWidth, img.naturalHeight),
+            url: dataUrl,
+          }])
+        }
+        img.src = dataUrl
       }
-      img.src = url
+      reader.readAsDataURL(file)
     })
   }
 

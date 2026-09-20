@@ -1,6 +1,41 @@
 import { ToolContentData } from "@/components/ToolContentSection";
 
 export const toolContent: Record<string, ToolContentData> = {
+  "video-compressor": {
+    overview: [
+      "A video straight off a modern phone can easily be several hundred MB to a few GB, which makes it slow to upload, share over WhatsApp or email, or attach to a website. The Video Compressor shrinks MP4, MOV, WebM and MKV files by re-encoding them at a lower bitrate, cutting file size significantly while keeping the video watchable at normal resolutions.",
+      "Unlike the online compressors most sites offer, nothing here is uploaded to a server. Compression runs entirely inside your browser using a WebAssembly build of FFmpeg — the same open-source engine that powers most professional video tools — so a multi-GB file never has to travel over the internet just to get smaller.",
+      "Because everything happens on your device's CPU rather than a remote server, larger files take real time to process, especially on older phones or laptops. There's no queue and no daily limit, but expect a multi-minute wait for long or high-resolution videos.",
+    ],
+    steps: [
+      { title: "Upload your video", description: "Click the upload area or drag an MP4, MOV, WebM or MKV file directly onto it." },
+      { title: "Wait for processing", description: "The video is compressed locally in your browser — a progress bar shows how far along the encode is." },
+      { title: "Preview and download", description: "Once finished, play the result inline to check quality, then download it as an MP4." },
+    ],
+    useCases: [
+      { title: "WhatsApp and messaging limits", description: "Most messaging apps compress or reject large videos automatically — shrinking a clip first keeps you in control of the quality trade-off." },
+      { title: "Faster uploads", description: "A smaller file uploads faster to social media, cloud storage, or a website — useful on slow or limited mobile data." },
+      { title: "Email attachments", description: "Email providers typically cap attachments around 20-25MB; compressing a short clip first can get it under that limit." },
+      { title: "Saving device storage", description: "Compressing old recordings before archiving them frees up phone or laptop storage without deleting the footage." },
+    ],
+    tips: [
+      "If the result is still too large, the video's original resolution is usually the biggest factor — very high-resolution source footage (4K) will still produce a bigger file than 1080p footage at the same quality setting.",
+      "Processing time scales with video length and resolution, not just file size — a short 4K clip can take longer to compress than a long but low-resolution one.",
+      "Keep your original file until you've confirmed the compressed version looks acceptable, since compression is lossy and can't be reversed.",
+    ],
+    faqs: [
+      { q: "Does this tool upload my video anywhere?", a: "No — compression runs entirely in your browser using WebAssembly; the video file never leaves your device." },
+      { q: "Why is compression taking a long time?", a: "Video encoding is CPU-intensive and runs on your device's processor instead of a server, so longer or higher-resolution videos take longer, especially on older phones." },
+      { q: "What formats can I upload?", a: "MP4, MOV, WebM and MKV are supported as input; the compressed output is always delivered as MP4 for broad compatibility." },
+      { q: "Will compressing reduce the resolution too?", a: "This tool reduces bitrate (quality per frame) rather than resolution, so the frame size stays the same while file size drops." },
+      { q: "Is there a file size limit?", a: "There's no hard limit, but very large files (roughly 250MB+) can be slow or run into memory limits on mobile devices — a desktop browser handles large files more reliably." },
+    ],
+    relatedTools: [
+      { name: "Image Compressor", slug: "compressor" },
+      { name: "Image Converter", slug: "image-converter" },
+    ],
+  },
+
   compressor: {
     overview: [
       "Large photo files are one of the most common reasons a webpage loads slowly, an email bounces back, or a form upload fails silently. A single photo straight off a modern phone camera can easily be 4-8MB, while most websites and forms expect something closer to 100-500KB. The Image Compressor shrinks JPG and PNG files by adjusting the compression quality, cutting file size by up to 90% while keeping the photo sharp enough for everyday use.",
