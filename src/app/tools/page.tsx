@@ -426,13 +426,14 @@ const tools = [
 const categoryInfo: Record<string, { title: string; description: string }> = {
   'image-tools': { title: 'Image Tools', description: 'Compress, resize, crop, rotate, watermark, and pick colors from any photo.' },
   'format-converters': { title: 'Format Converters', description: 'Move between JPG, PNG, WebP, HEIC, and SVG without losing quality.' },
+  'video-tools': { title: 'Video Tools', description: 'Compress, convert, and turn videos into GIFs — right in your browser.' },
   'pdf-utilities': { title: 'PDF Utilities', description: 'Merge, split, and convert PDFs to and from images, all in your browser.' },
   'document-photos': { title: 'Document Photos', description: 'Aadhaar, PAN, Passport, Visa, and exam photos sized to official specs.' },
   'text-dev-tools': { title: 'Text & Developer Tools', description: 'Word counter, case converter, JSON formatter, Base64, and more.' },
   'unit-converter': { title: 'Unit Converter', description: 'Length, weight, temperature, area, volume, speed, data, and time.' },
 };
 
-const categoryOrder = ['image-tools', 'format-converters', 'pdf-utilities', 'document-photos', 'text-dev-tools', 'unit-converter'];
+const categoryOrder = ['image-tools', 'format-converters', 'video-tools', 'pdf-utilities', 'document-photos', 'text-dev-tools', 'unit-converter'];
 
 export default function ToolsPage() {
   const grouped = categoryOrder.map((catSlug) => ({
