@@ -1,6 +1,70 @@
 import { ToolContentData } from "@/components/ToolContentSection";
 
 export const toolContent: Record<string, ToolContentData> = {
+  "mov-to-mp4": {
+    overview: [
+      "MOV is the video format QuickTime and iPhones record in by default. It plays fine on Apple devices but often refuses to open, upload, or preview correctly on Windows PCs, Android phones, and many websites and apps that only expect MP4.",
+      "This tool re-encodes a MOV file into standard MP4 (H.264 video, AAC audio) — the most universally compatible video format, playable on virtually every device, browser, and platform. Conversion runs entirely in your browser via a WebAssembly build of FFmpeg; the file never leaves your device.",
+      "Because it's a full re-encode rather than a simple file rename, this also fixes MOV files that show up sideways or won't play at all in some non-Apple software — a common annoyance with iPhone video.",
+    ],
+    steps: [
+      { title: "Upload your MOV file", description: "Click the upload area or drag a .mov file (from an iPhone, iPad, or Mac) directly onto it." },
+      { title: "Wait for conversion", description: "The video is converted locally in your browser — a progress bar shows how far along it is." },
+      { title: "Preview and download", description: "Once finished, play the result inline to check it, then download it as an .mp4 file." },
+    ],
+    useCases: [
+      { title: "Sharing iPhone videos with Android/Windows users", description: "MP4 opens reliably everywhere MOV sometimes doesn't." },
+      { title: "Uploading to websites and apps", description: "Many upload forms and video editors only accept MP4, not MOV." },
+      { title: "Fixing playback issues", description: "Some MOV files won't play at all in non-Apple media players — converting to MP4 usually resolves this." },
+    ],
+    tips: [
+      "If the video also needs to be smaller in file size (not just a different format), run it through the Video Compressor afterward.",
+      "Very long or high-resolution MOV files take longer to convert since everything runs on your device's own processor.",
+    ],
+    faqs: [
+      { q: "Does this tool upload my video anywhere?", a: "No — conversion runs entirely in your browser using WebAssembly; the video file never leaves your device." },
+      { q: "Will I lose quality?", a: "The conversion uses a high-quality setting (CRF 20), so quality loss is minimal and not noticeable in normal viewing." },
+      { q: "Does audio carry over?", a: "Yes, audio is converted to AAC and included in the output MP4." },
+      { q: "Is there a file size limit?", a: "No hard limit, but very large files (250MB+) can be slow on mobile devices — a desktop browser handles large files more reliably." },
+    ],
+    relatedTools: [
+      { name: "Video Compressor", slug: "video-compressor" },
+      { name: "Video to GIF", slug: "video-to-gif" },
+    ],
+  },
+
+  "video-to-gif": {
+    overview: [
+      "Animated GIFs are the easiest way to share a short clip that plays automatically everywhere — chats, forums, README files, social posts — without anyone needing to press play. This tool trims a clip from your video and converts it into a high-quality animated GIF.",
+      "It uses FFmpeg's two-pass palette workflow (generating an optimal color palette for your specific clip, then encoding against it) instead of a naive single-pass conversion, which noticeably reduces the banding and color muddiness that cheap GIF converters produce.",
+      "Everything runs in your browser via WebAssembly — the video is never uploaded anywhere.",
+    ],
+    steps: [
+      { title: "Upload your video", description: "Click the upload area or drag a video file onto it." },
+      { title: "Trim the clip", description: "Use the start time and clip length sliders to pick which part of the video becomes the GIF (up to 15 seconds)." },
+      { title: "Pick a quality preset", description: "Small, Medium, or Large — higher quality means a bigger file." },
+      { title: "Create and download", description: "Click 'Create GIF', preview the result, then download it." },
+    ],
+    useCases: [
+      { title: "Reaction GIFs and highlights", description: "Turn a funny or interesting moment from a video into a shareable GIF." },
+      { title: "Product demos in docs", description: "A short looping GIF in a README or help doc often communicates a UI flow better than static screenshots." },
+      { title: "Social media clips", description: "Some platforms and message apps handle autoplaying GIFs more smoothly than video attachments." },
+    ],
+    tips: [
+      "Keep clips short (2-5 seconds) for the best file size to quality tradeoff — GIF files grow quickly with length and resolution.",
+      "The 'Small' preset is usually enough for chat/forum use; use 'Large' only when the GIF is the main content on a page.",
+    ],
+    faqs: [
+      { q: "Does this tool upload my video anywhere?", a: "No — the clip is trimmed and converted entirely in your browser; nothing is uploaded." },
+      { q: "Why is there a 15-second limit?", a: "GIF file size grows very quickly with clip length and resolution — longer clips would produce huge, slow-loading files. For longer content, consider sharing the video itself." },
+      { q: "Why do my GIFs look better than ones from other converters?", a: "This tool generates a custom color palette for your specific clip (a two-pass process) instead of using a generic fixed palette, which significantly improves color accuracy." },
+    ],
+    relatedTools: [
+      { name: "Video Compressor", slug: "video-compressor" },
+      { name: "MOV to MP4", slug: "mov-to-mp4" },
+    ],
+  },
+
   "video-compressor": {
     overview: [
       "A video straight off a modern phone can easily be several hundred MB to a few GB, which makes it slow to upload, share over WhatsApp or email, or attach to a website. The Video Compressor shrinks MP4, MOV, WebM and MKV files by re-encoding them at a lower bitrate, cutting file size significantly while keeping the video watchable at normal resolutions.",
@@ -31,8 +95,9 @@ export const toolContent: Record<string, ToolContentData> = {
       { q: "Is there a file size limit?", a: "There's no hard limit, but very large files (roughly 250MB+) can be slow or run into memory limits on mobile devices — a desktop browser handles large files more reliably." },
     ],
     relatedTools: [
+      { name: "MOV to MP4", slug: "mov-to-mp4" },
+      { name: "Video to GIF", slug: "video-to-gif" },
       { name: "Image Compressor", slug: "compressor" },
-      { name: "Image Converter", slug: "image-converter" },
     ],
   },
 

@@ -51,6 +51,8 @@ const tools = [
   'unit-converter',
   'image-collage',
   'video-compressor',
+  'mov-to-mp4',
+  'video-to-gif',
 ]
 
 const blogPosts = [

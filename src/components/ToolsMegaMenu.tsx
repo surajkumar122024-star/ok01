@@ -12,6 +12,8 @@ import {
   ScanSearch,
   ScanText,
   Video,
+  FileVideo,
+  Film,
 } from "lucide-react";
 
 interface ToolItem {
@@ -116,6 +118,8 @@ export const toolCategories: ToolCategory[] = [
     title: "Video Tools",
     items: [
       { name: "Video Compressor", href: "/tools/video-compressor", icon: Video },
+      { name: "MOV to MP4", href: "/tools/mov-to-mp4", icon: FileVideo },
+      { name: "Video to GIF", href: "/tools/video-to-gif", icon: Film },
     ],
   },
 ];

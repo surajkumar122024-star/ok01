@@ -10,16 +10,18 @@ import {
   FileImage,
   Ruler,
   LayoutGrid,
-  Video
+  Video,
+  FileVideo,
+  Film
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 46 Free Image, Video, PDF, Text & Document Tools',
-  description: 'Browse all 46 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 48 Free Image, Video, PDF, Text & Document Tools',
+  description: 'Browse all 48 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 46 free browser-based tools for images, videos, PDFs, text, and documents.',
+    description: 'Browse all 48 free browser-based tools for images, videos, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -402,6 +404,22 @@ const tools = [
     description: "Shrink MP4, MOV, WebM and MKV files right in your browser. No upload, no waiting room.",
     icon: Video,
     color: "bg-rose-600"
+  },
+  {
+    name: "MOV to MP4 Converter",
+    slug: "mov-to-mp4",
+  category: "video-tools",
+    description: "Convert iPhone/QuickTime MOV videos to universally-playable MP4. Free & private.",
+    icon: FileVideo,
+    color: "bg-pink-600"
+  },
+  {
+    name: "Video to GIF Converter",
+    slug: "video-to-gif",
+  category: "video-tools",
+    description: "Trim a clip and turn it into a high-quality animated GIF. Free & private.",
+    icon: Film,
+    color: "bg-violet-600"
   },
 ];
 
