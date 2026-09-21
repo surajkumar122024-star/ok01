@@ -1,6 +1,177 @@
 import { ToolContentData } from "@/components/ToolContentSection";
 
 export const toolContent: Record<string, ToolContentData> = {
+  "uuid-generator": {
+    overview: [
+      "A UUID (Universally Unique Identifier) is a 128-bit random value used almost everywhere in software to identify things — database records, API keys, session tokens, file names — without needing a central authority to guarantee uniqueness. This tool generates UUID version 4 (random) values, the most commonly used variant.",
+      "Generation happens entirely in your browser using the Web Crypto API's cryptographically secure random number generator — the same source browsers use for security-sensitive operations — so the values are suitable for real use, not just testing.",
+    ],
+    steps: [
+      { title: "Choose how many", description: "Set the count (1-50) and toggle hyphens or uppercase formatting if needed." },
+      { title: "Generate", description: "UUIDs appear instantly — click 'Regenerate' anytime for a fresh batch." },
+      { title: "Copy", description: "Click any single UUID to copy it, or use 'Copy all' to grab the whole list at once." },
+    ],
+    useCases: [
+      { title: "Database primary keys", description: "UUIDs avoid collision issues that auto-incrementing IDs can have across distributed systems." },
+      { title: "API testing", description: "Generate realistic-looking unique IDs for test requests and mock data." },
+      { title: "File and session naming", description: "Guarantee unique file names or session tokens without checking against existing ones." },
+    ],
+    tips: [
+      "UUID v4 values are randomly generated and not meant to be sequential or sortable — if you need time-ordered IDs, look into ULID or UUID v7 instead.",
+    ],
+    faqs: [
+      { q: "Are these UUIDs actually unique?", a: "The odds of two random UUID v4 values colliding are astronomically low (about 1 in 2^122) — safe for virtually any real-world use." },
+      { q: "Does this tool store or send my UUIDs anywhere?", a: "No — generation happens entirely in your browser using the Web Crypto API; nothing is sent to a server." },
+      { q: "What's the difference between UUID and GUID?", a: "They're effectively the same thing — GUID is Microsoft's term for the same UUID standard." },
+    ],
+    relatedTools: [
+      { name: "Hash Generator", slug: "hash-generator" },
+      { name: "Password Generator", slug: "password-generator" },
+    ],
+  },
+
+  "timestamp-converter": {
+    overview: [
+      "A Unix timestamp counts the number of seconds (or milliseconds) since January 1, 1970 UTC — the standard way computers, databases, and APIs represent a moment in time internally. This tool converts between that raw number and a human-readable date, in both directions.",
+      "Everything happens locally using your browser's own date engine — no data is sent anywhere.",
+    ],
+    steps: [
+      { title: "Pick a unit", description: "Choose whether you're working with seconds or milliseconds — APIs and databases vary." },
+      { title: "Convert timestamp → date", description: "Paste a timestamp to see the equivalent readable date and time." },
+      { title: "Convert date → timestamp", description: "Pick a date and time to get its Unix timestamp." },
+    ],
+    useCases: [
+      { title: "Debugging APIs and logs", description: "Quickly see what date a timestamp in a log file or API response actually refers to." },
+      { title: "Database queries", description: "Convert a human date into the timestamp format your database expects, or vice versa." },
+      { title: "Scheduling and expiry checks", description: "Verify token expiry times, cron schedules, or cache TTLs expressed as timestamps." },
+    ],
+    tips: [
+      "A classic gotcha: JavaScript's Date.now() and many APIs use milliseconds, while Unix/Linux and many backend systems use seconds — check which one your data actually uses before converting.",
+    ],
+    faqs: [
+      { q: "What timezone does this use?", a: "Dates are shown in your browser's local timezone; the timestamp itself is always timezone-independent (UTC-based)." },
+      { q: "Does this tool send my data anywhere?", a: "No — all conversion happens locally in your browser using standard JavaScript date functions." },
+    ],
+    relatedTools: [
+      { name: "Date Difference Calculator", slug: "date-difference-calculator" },
+      { name: "UUID Generator", slug: "uuid-generator" },
+    ],
+  },
+
+  "hash-generator": {
+    overview: [
+      "A hash function takes any input — text or a file — and produces a fixed-length string (the 'hash' or 'digest') that acts like a fingerprint: the same input always produces the same hash, and even a tiny change to the input produces a completely different one. This tool generates SHA-1, SHA-256, SHA-384, and SHA-512 hashes.",
+      "Hashing runs entirely in your browser using the Web Crypto API — the same cryptographic engine browsers use for HTTPS and other security features. Files are read and hashed locally; nothing is uploaded.",
+    ],
+    steps: [
+      { title: "Choose text or file", description: "Switch between hashing typed text or an uploaded file." },
+      { title: "Enter or upload", description: "Type text, or click to choose a file — hashes are calculated instantly." },
+      { title: "Copy the hash you need", description: "All four algorithms are shown at once; copy whichever your use case requires." },
+    ],
+    useCases: [
+      { title: "Verifying file integrity", description: "Compare a downloaded file's hash against the one published by its source to confirm it wasn't corrupted or tampered with." },
+      { title: "Checking for duplicate content", description: "Two files or texts with identical hashes are (almost certainly) identical content." },
+      { title: "Generating checksums for records", description: "Store a hash alongside data to later verify it hasn't changed." },
+    ],
+    tips: [
+      "Hashes are one-way — you can't recover the original text or file from a hash. To 'check' a password against a stored hash, hash the input again and compare the results.",
+    ],
+    faqs: [
+      { q: "Why isn't MD5 offered?", a: "MD5 is cryptographically broken (collisions can be deliberately created) and isn't available in the browser's Web Crypto API — SHA-256 or SHA-512 are safer, equally fast alternatives for virtually every use case." },
+      { q: "Does this tool upload my file?", a: "No — files are read and hashed entirely in your browser using the Web Crypto API; nothing is sent to a server." },
+      { q: "Which algorithm should I use?", a: "SHA-256 is the most common default for general-purpose use; SHA-1 is weaker and mainly relevant for compatibility with older systems, not new security-sensitive work." },
+    ],
+    relatedTools: [
+      { name: "UUID Generator", slug: "uuid-generator" },
+      { name: "Base64 Encoder/Decoder", slug: "base64" },
+    ],
+  },
+
+  "lorem-ipsum-generator": {
+    overview: [
+      "Lorem Ipsum is scrambled, meaningless Latin-derived text that designers and developers have used as placeholder content since the 1500s (originally from a Cicero text) — it looks like real prose at a glance without distracting from the layout it's filling. This tool generates it by words, sentences, or paragraphs.",
+      "Generation is instant and entirely local — no server round-trip needed for something this simple.",
+    ],
+    steps: [
+      { title: "Choose a unit", description: "Words, sentences, or paragraphs — whichever fits what you're filling." },
+      { title: "Set the count", description: "Pick how many of that unit you need." },
+      { title: "Copy", description: "Copy the generated text directly into your design tool, CMS, or code." },
+    ],
+    useCases: [
+      { title: "Website and app mockups", description: "Fill text areas with realistic-looking content before real copy is ready." },
+      { title: "Testing text overflow and wrapping", description: "See how a layout handles varying amounts of text." },
+      { title: "CMS and template placeholders", description: "Quickly populate a new template with sample content." },
+    ],
+    tips: [
+      "Sentence and paragraph lengths vary randomly each time you generate, closer to how real prose reads than a fixed-length block of filler text.",
+    ],
+    faqs: [
+      { q: "Does Lorem Ipsum mean anything?", a: "Not really — it's derived from a Latin philosophy text, but scrambled to the point of being nonsensical. That's intentional: meaningless text doesn't distract from evaluating a layout." },
+      { q: "Can I get the classic Lorem Ipsum text exactly?", a: "Check 'Start with Lorem ipsum...' — the output will open with the traditional opening line before continuing with generated filler." },
+    ],
+    relatedTools: [
+      { name: "Word Counter", slug: "word-counter" },
+      { name: "Text Repeater", slug: "text-repeater" },
+    ],
+  },
+
+  "text-to-speech": {
+    overview: [
+      "This tool reads any text aloud using your browser's built-in speech synthesis engine — the same technology behind screen readers and voice assistants. Choose from whichever voices your browser and operating system provide, and adjust speed and pitch to taste.",
+      "Everything happens locally on your device via the Web Speech API; the text is never sent to a server.",
+    ],
+    steps: [
+      { title: "Type or paste text", description: "Enter whatever you want read aloud." },
+      { title: "Pick a voice and adjust settings", description: "Choose from available voices, and tune speed/pitch if you like." },
+      { title: "Press Speak", description: "Playback starts immediately; pause, resume, or stop anytime." },
+    ],
+    useCases: [
+      { title: "Proofreading by ear", description: "Hearing your writing read aloud often catches awkward phrasing or errors your eyes skip over." },
+      { title: "Accessibility", description: "Have long text content read aloud instead of read on-screen." },
+      { title: "Language and pronunciation practice", description: "Hear how words and sentences sound in different available voices/languages." },
+    ],
+    tips: [
+      "If a voice sounds robotic or wrong for the language, try a different one from the dropdown — quality and language coverage vary a lot between the voices your OS/browser installs.",
+    ],
+    faqs: [
+      { q: "Can I download the audio?", a: "Not currently — browsers don't provide a way to export Speech Synthesis output as an audio file; this tool plays audio live only." },
+      { q: "Why do the available voices differ from another device?", a: "Voices come from your operating system and browser, not from this tool — different devices ship with different voice sets installed." },
+      { q: "Does this tool send my text anywhere?", a: "No — speech is generated entirely on your device using the browser's built-in Speech Synthesis API." },
+    ],
+    relatedTools: [
+      { name: "Word Counter", slug: "word-counter" },
+      { name: "Lorem Ipsum Generator", slug: "lorem-ipsum-generator" },
+    ],
+  },
+
+  "image-to-base64": {
+    overview: [
+      "Base64 encoding turns binary data (like an image) into plain text, which can then be embedded directly inside HTML or CSS instead of linking to a separate image file — useful for small icons, avoiding extra network requests, or embedding images in places that only accept text (like some JSON APIs or email templates).",
+      "This tool converts an image to its Base64 representation (and back again) entirely in your browser — the image is never uploaded anywhere.",
+    ],
+    steps: [
+      { title: "Choose a mode", description: "Image → Base64 to encode, or Base64 → Image to decode." },
+      { title: "Upload or paste", description: "Choose an image file, or paste a Base64 string to decode." },
+      { title: "Copy or download", description: "Copy the Base64 string (or a ready-to-use CSS snippet), or download the decoded image." },
+    ],
+    useCases: [
+      { title: "Embedding small icons in CSS", description: "Avoid an extra HTTP request for tiny, frequently-used images by inlining them as a data URI." },
+      { title: "Embedding images in JSON/APIs", description: "Some APIs and data formats only accept text — Base64 lets you include image data within them." },
+      { title: "Email template images", description: "Some email clients handle inline Base64 images more reliably than linked ones." },
+    ],
+    tips: [
+      "Base64 encoding increases file size by roughly 33% — it's best suited for small images (icons, small logos), not large photos.",
+    ],
+    faqs: [
+      { q: "Does this tool upload my image?", a: "No — encoding and decoding both happen entirely in your browser; nothing is sent to a server." },
+      { q: "What's a 'data URI'?", a: "It's the full string (starting with data:image/png;base64,...) that browsers can use directly as an image source — this tool's Base64 output is already in that format, ready to paste into src or CSS." },
+    ],
+    relatedTools: [
+      { name: "Base64 Encoder/Decoder", slug: "base64" },
+      { name: "Image Compressor", slug: "compressor" },
+    ],
+  },
+
   "mov-to-mp4": {
     overview: [
       "MOV is the video format QuickTime and iPhones record in by default. It plays fine on Apple devices but often refuses to open, upload, or preview correctly on Windows PCs, Android phones, and many websites and apps that only expect MP4.",

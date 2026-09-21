@@ -14,6 +14,11 @@ import {
   Video,
   FileVideo,
   Film,
+  Clock,
+  ShieldCheck,
+  AlignLeft,
+  Volume2,
+  FileCode2,
 } from "lucide-react";
 
 interface ToolItem {
@@ -70,6 +75,8 @@ export const toolCategories: ToolCategory[] = [
       { name: "Case Converter", href: "/tools/case-converter", icon: ArrowUpDown },
       { name: "Text Repeater", href: "/tools/text-repeater", icon: Repeat },
       { name: "Slug Generator", href: "/tools/slug-generator", icon: Link2 },
+      { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator", icon: AlignLeft },
+      { name: "Text to Speech", href: "/tools/text-to-speech", icon: Volume2 },
     ],
   },
   {
@@ -78,6 +85,10 @@ export const toolCategories: ToolCategory[] = [
       { name: "Base64 Encoder", href: "/tools/base64", icon: Binary },
       { name: "JSON Formatter", href: "/tools/json-formatter", icon: Braces },
       { name: "URL Encoder", href: "/tools/url-encoder", icon: LinkIcon },
+      { name: "UUID Generator", href: "/tools/uuid-generator", icon: Fingerprint },
+      { name: "Hash Generator", href: "/tools/hash-generator", icon: ShieldCheck },
+      { name: "Timestamp Converter", href: "/tools/timestamp-converter", icon: Clock },
+      { name: "Image to Base64", href: "/tools/image-to-base64", icon: FileCode2 },
     ],
   },
   {

@@ -12,16 +12,22 @@ import {
   LayoutGrid,
   Video,
   FileVideo,
-  Film
+  Film,
+  Fingerprint,
+  Clock,
+  Hash,
+  Type,
+  Volume2,
+  Code2
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 48 Free Image, Video, PDF, Text & Document Tools',
-  description: 'Browse all 48 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 54 Free Image, Video, PDF, Text & Document Tools',
+  description: 'Browse all 54 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 48 free browser-based tools for images, videos, PDFs, text, and documents.',
+    description: 'Browse all 54 free browser-based tools for images, videos, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -421,18 +427,67 @@ const tools = [
     icon: Film,
     color: "bg-violet-600"
   },
+  {
+    name: "UUID Generator",
+    slug: "uuid-generator",
+  category: "text-dev-tools",
+    description: "Generate random UUID v4 values, bulk up to 50 at once. Free & private.",
+    icon: Fingerprint,
+    color: "bg-sky-600"
+  },
+  {
+    name: "Timestamp Converter",
+    slug: "timestamp-converter",
+  category: "text-dev-tools",
+    description: "Convert Unix timestamps to dates and back, instantly. Free & private.",
+    icon: Clock,
+    color: "bg-amber-600"
+  },
+  {
+    name: "Hash Generator",
+    slug: "hash-generator",
+  category: "text-dev-tools",
+    description: "Generate SHA-1, SHA-256, SHA-384 & SHA-512 hashes from text or files.",
+    icon: Hash,
+    color: "bg-emerald-600"
+  },
+  {
+    name: "Lorem Ipsum Generator",
+    slug: "lorem-ipsum-generator",
+  category: "text-dev-tools",
+    description: "Generate placeholder text by words, sentences, or paragraphs.",
+    icon: Type,
+    color: "bg-indigo-600"
+  },
+  {
+    name: "Text to Speech",
+    slug: "text-to-speech",
+  category: "text-dev-tools",
+    description: "Read any text aloud using your browser's built-in voices. Free & private.",
+    icon: Volume2,
+    color: "bg-rose-600"
+  },
+  {
+    name: "Image to Base64",
+    slug: "image-to-base64",
+  category: "text-dev-tools",
+    description: "Convert images to Base64 for CSS/HTML, or decode back to an image.",
+    icon: Code2,
+    color: "bg-teal-600"
+  },
 ];
 
 const categoryInfo: Record<string, { title: string; description: string }> = {
   'image-tools': { title: 'Image Tools', description: 'Compress, resize, crop, rotate, watermark, and pick colors from any photo.' },
   'format-converters': { title: 'Format Converters', description: 'Move between JPG, PNG, WebP, HEIC, and SVG without losing quality.' },
+  'video-tools': { title: 'Video Tools', description: 'Compress, convert, and turn videos into GIFs — right in your browser.' },
   'pdf-utilities': { title: 'PDF Utilities', description: 'Merge, split, and convert PDFs to and from images, all in your browser.' },
   'document-photos': { title: 'Document Photos', description: 'Aadhaar, PAN, Passport, Visa, and exam photos sized to official specs.' },
   'text-dev-tools': { title: 'Text & Developer Tools', description: 'Word counter, case converter, JSON formatter, Base64, and more.' },
   'unit-converter': { title: 'Unit Converter', description: 'Length, weight, temperature, area, volume, speed, data, and time.' },
 };
 
-const categoryOrder = ['image-tools', 'format-converters', 'pdf-utilities', 'document-photos', 'text-dev-tools', 'unit-converter'];
+const categoryOrder = ['image-tools', 'format-converters', 'video-tools', 'pdf-utilities', 'document-photos', 'text-dev-tools', 'unit-converter'];
 
 export default function ToolsPage() {
   const grouped = categoryOrder.map((catSlug) => ({

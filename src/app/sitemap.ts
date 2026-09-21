@@ -53,6 +53,12 @@ const tools = [
   'video-compressor',
   'mov-to-mp4',
   'video-to-gif',
+  'uuid-generator',
+  'timestamp-converter',
+  'hash-generator',
+  'lorem-ipsum-generator',
+  'text-to-speech',
+  'image-to-base64',
 ]
 
 const blogPosts = [
