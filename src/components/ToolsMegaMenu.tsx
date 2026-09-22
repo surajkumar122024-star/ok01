@@ -19,6 +19,8 @@ import {
   AlignLeft,
   Volume2,
   FileCode2,
+  FileArchive,
+  FileType2,
 } from "lucide-react";
 
 interface ToolItem {
@@ -65,6 +67,8 @@ export const toolCategories: ToolCategory[] = [
       { name: "PDF to Image", href: "/tools/pdf-to-image", icon: FileImage },
       { name: "Merge PDF", href: "/tools/pdf-merge", icon: Layers },
       { name: "Split PDF", href: "/tools/pdf-split", icon: Scissors },
+      { name: "PDF Compressor", href: "/tools/pdf-compressor", icon: FileArchive },
+      { name: "PDF to Word", href: "/tools/pdf-to-word", icon: FileType2 },
     ],
   },
   {

@@ -89,6 +89,17 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        // Same reasoning as /ffmpeg and /tesseract above — the self-hosted
+        // pdf.js worker is static and versioned by our own deploys.
+        source: '/pdfjs/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
 };

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Loader2, RefreshCw, FileImage } from "lucide-react";
 import { ToolContentSection } from "@/components/ToolContentSection";
 import { toolContent } from "@/data/toolContent";
+import { getPdfjs, renderPdfPageToCanvas } from "@/lib/pdf-processing";
 
 export default function PdfToImageClient() {
   const [images, setImages] = useState<string[]>([]);
@@ -25,19 +26,13 @@ export default function PdfToImageClient() {
     setFileName(file.name);
     setLoading(true);
     try {
-      const pdfjsLib = await import("pdfjs-dist");
-      pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+      const pdfjsLib = await getPdfjs();
       const arrayBuffer = await file.arrayBuffer();
       const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
       const generatedImages: string[] = [];
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
-        const viewport = page.getViewport({ scale: 2 });
-        const canvas = document.createElement("canvas");
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        const ctx = canvas.getContext("2d")!;
-        await page.render({ canvasContext: ctx, viewport }).promise;
+        const canvas = await renderPdfPageToCanvas(page, 2);
         generatedImages.push(canvas.toDataURL("image/png"));
       }
       setImages(generatedImages);

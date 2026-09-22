@@ -59,6 +59,8 @@ const tools = [
   'lorem-ipsum-generator',
   'text-to-speech',
   'image-to-base64',
+  'pdf-compressor',
+  'pdf-to-word',
 ]
 
 const blogPosts = [

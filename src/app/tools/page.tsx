@@ -18,16 +18,18 @@ import {
   Hash,
   Type,
   Volume2,
-  Code2
+  Code2,
+  FileArchive,
+  FileType2
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 54 Free Image, Video, PDF, Text & Document Tools',
-  description: 'Browse all 54 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 56 Free Image, Video, PDF, Text & Document Tools',
+  description: 'Browse all 56 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 54 free browser-based tools for images, videos, PDFs, text, and documents.',
+    description: 'Browse all 56 free browser-based tools for images, videos, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -474,6 +476,22 @@ const tools = [
     description: "Convert images to Base64 for CSS/HTML, or decode back to an image.",
     icon: Code2,
     color: "bg-teal-600"
+  },
+  {
+    name: "PDF Compressor",
+    slug: "pdf-compressor",
+  category: "pdf-utilities",
+    description: "Shrink PDF file size right in your browser. Best for scanned/image-heavy PDFs.",
+    icon: FileArchive,
+    color: "bg-orange-600"
+  },
+  {
+    name: "PDF to Word",
+    slug: "pdf-to-word",
+  category: "pdf-utilities",
+    description: "Extract text from a PDF into an editable Word (.docx) document.",
+    icon: FileType2,
+    color: "bg-blue-700"
   },
 ];
 

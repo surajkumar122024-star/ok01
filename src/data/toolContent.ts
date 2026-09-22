@@ -1,6 +1,69 @@
 import { ToolContentData } from "@/components/ToolContentSection";
 
 export const toolContent: Record<string, ToolContentData> = {
+  "pdf-compressor": {
+    overview: [
+      "Large PDFs — especially scanned documents or ones packed with photos — can be slow to email, upload, or share. This tool shrinks a PDF's file size by re-rendering each page as a re-compressed image and rebuilding the PDF from those images, entirely in your browser.",
+      "This approach works especially well on image-heavy or scanned PDFs, where most of the file size comes from embedded photos rather than text. It's a genuine trade-off, not a free lunch: the output PDF no longer has selectable, searchable, or copyable text, since every page becomes a picture of itself.",
+      "Nothing is uploaded — the whole process (rendering, compressing, rebuilding) happens on your device using WebAssembly-based PDF libraries.",
+    ],
+    steps: [
+      { title: "Upload your PDF", description: "Click the upload area or drag a PDF file onto it." },
+      { title: "Pick a compression level", description: "Smallest size for maximum shrinkage, Best quality to keep more detail." },
+      { title: "Compress and download", description: "Compare the before/after size, then download the result." },
+    ],
+    useCases: [
+      { title: "Scanned documents", description: "Photos or scans of paper documents compress especially well with this approach." },
+      { title: "Email attachment limits", description: "Shrink a PDF enough to fit under a provider's attachment size cap." },
+      { title: "Faster uploads and sharing", description: "A smaller file moves faster over slow connections." },
+    ],
+    tips: [
+      "If your PDF is mostly text (like a Word export) rather than images or scans, this tool won't shrink it much — the size is already efficient as real text, not image data.",
+      "Try 'Balanced' first — it's usually the best size-to-readability tradeoff. Only drop to 'Smallest size' if you need the file as small as possible and don't mind visible quality loss.",
+    ],
+    faqs: [
+      { q: "Will the text still be selectable after compressing?", a: "No — every page becomes a re-compressed image, so text can no longer be selected, searched, or copied in the output PDF." },
+      { q: "Does this tool upload my PDF anywhere?", a: "No — rendering and compression both happen in your browser; the file never leaves your device." },
+      { q: "Why didn't my file get much smaller?", a: "If the original PDF is mostly text with few or no images, there isn't much to compress — text-based PDFs are already compact." },
+    ],
+    relatedTools: [
+      { name: "PDF to Word", slug: "pdf-to-word" },
+      { name: "Merge PDF", slug: "pdf-merge" },
+      { name: "Image Compressor", slug: "compressor" },
+    ],
+  },
+
+  "pdf-to-word": {
+    overview: [
+      "This tool extracts the plain text from a PDF and places it into a downloadable Word (.docx) document, so you can edit content that started out locked inside a PDF. It works entirely in your browser using PDF.js for text extraction — nothing is uploaded.",
+      "It's important to understand what this tool doesn't do: it extracts text only. Fonts, exact spacing, images, tables, columns, and page layout are not recreated — the output is a plain, editable text version of the PDF's content, not a pixel-perfect Word replica.",
+    ],
+    steps: [
+      { title: "Upload your PDF", description: "Click the upload area or drag a PDF file onto it." },
+      { title: "Convert", description: "Text is extracted page by page, entirely in your browser." },
+      { title: "Download the .docx", description: "Open it in Word, Google Docs, or any compatible editor to clean up formatting as needed." },
+    ],
+    useCases: [
+      { title: "Editing PDF content", description: "Get a starting point for editing text that was only available as a PDF." },
+      { title: "Reusing text from reports or letters", description: "Pull text out of a simple document without retyping it." },
+      { title: "Quick content extraction", description: "Grab the words from a PDF for pasting elsewhere, without formatting baggage." },
+    ],
+    tips: [
+      "For anything with a complex layout (tables, multiple columns, forms), expect to do manual cleanup afterward — this tool prioritizes getting the text out over recreating the original design.",
+      "Scanned PDFs (photos of pages) have no real text layer to extract — this tool can't read those; you'd need OCR (like this site's Image to Text tool) first.",
+    ],
+    faqs: [
+      { q: "Will my PDF's formatting be preserved?", a: "No — this extracts plain text only. Fonts, exact layout, images, and tables are not recreated in the Word document." },
+      { q: "Why does it say no text was found?", a: "The PDF is likely a scanned image rather than real text — there's nothing for a text extractor to read. Try the Image to Text (OCR) tool instead for scanned documents." },
+      { q: "Does this tool upload my PDF anywhere?", a: "No — text extraction happens entirely in your browser; the file never leaves your device." },
+    ],
+    relatedTools: [
+      { name: "Image to Text (OCR)", slug: "image-to-text" },
+      { name: "PDF Compressor", slug: "pdf-compressor" },
+      { name: "Merge PDF", slug: "pdf-merge" },
+    ],
+  },
+
   "uuid-generator": {
     overview: [
       "A UUID (Universally Unique Identifier) is a 128-bit random value used almost everywhere in software to identify things — database records, API keys, session tokens, file names — without needing a central authority to guarantee uniqueness. This tool generates UUID version 4 (random) values, the most commonly used variant.",
