@@ -16,6 +16,17 @@ export default function TextToSpeechClient() {
   const [supported, setSupported] = useState(true)
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
 
+  // Recording (tab-audio capture) state
+  const recordingSupportedRef = useRef(false)
+  const [recordingSupported, setRecordingSupported] = useState(false)
+  const [recording, setRecording] = useState(false)
+  const [recordingError, setRecordingError] = useState('')
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null)
+  const [downloadExt, setDownloadExt] = useState('webm')
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null)
+  const captureStreamRef = useRef<MediaStream | null>(null)
+  const chunksRef = useRef<Blob[]>([])
+
   useEffect(() => {
     if (typeof window === 'undefined' || !window.speechSynthesis) {
       setSupported(false)
@@ -27,16 +38,28 @@ export default function TextToSpeechClient() {
     }
     loadVoices()
     window.speechSynthesis.onvoiceschanged = loadVoices
+
+    const canCapture = typeof navigator !== 'undefined' &&
+      !!navigator.mediaDevices?.getDisplayMedia &&
+      typeof window.MediaRecorder !== 'undefined'
+    recordingSupportedRef.current = canCapture
+    setRecordingSupported(canCapture)
+
     return () => { window.speechSynthesis.onvoiceschanged = null }
   }, [])
 
-  const speak = () => {
-    if (!supported || !text.trim()) return
-    window.speechSynthesis.cancel()
+  const buildUtterance = () => {
     const utterance = new SpeechSynthesisUtterance(text)
     if (voices[voiceIndex]) utterance.voice = voices[voiceIndex]
     utterance.rate = rate
     utterance.pitch = pitch
+    return utterance
+  }
+
+  const speak = () => {
+    if (!supported || !text.trim()) return
+    window.speechSynthesis.cancel()
+    const utterance = buildUtterance()
     utterance.onstart = () => { setSpeaking(true); setPaused(false) }
     utterance.onend = () => { setSpeaking(false); setPaused(false) }
     utterance.onerror = () => { setSpeaking(false); setPaused(false) }
@@ -59,6 +82,101 @@ export default function TextToSpeechClient() {
     window.speechSynthesis.cancel()
     setSpeaking(false)
     setPaused(false)
+  }
+
+  const cleanupCapture = () => {
+    captureStreamRef.current?.getTracks().forEach((t) => t.stop())
+    captureStreamRef.current = null
+    mediaRecorderRef.current = null
+  }
+
+  const recordAndDownload = async () => {
+    if (!recordingSupportedRef.current || !text.trim()) return
+    setRecordingError('')
+    setDownloadUrl(null)
+    chunksRef.current = []
+
+    let displayStream: MediaStream
+    try {
+      // video: true is required by the browser to open the share picker at
+      // all — we discard the video track immediately and keep only audio.
+      displayStream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true })
+    } catch {
+      setRecordingError('Permission was cancelled — recording needs you to share this tab with audio.')
+      return
+    }
+
+    const audioTracks = displayStream.getAudioTracks()
+    if (audioTracks.length === 0) {
+      displayStream.getTracks().forEach((t) => t.stop())
+      setRecordingError('No audio was shared. When the picker opens, choose "This Tab" and make sure "Share tab audio" is checked.')
+      return
+    }
+    // Stop the video track right away — we only need audio, and this
+    // avoids capturing/holding a video feed unnecessarily.
+    displayStream.getVideoTracks().forEach((t) => t.stop())
+
+    const audioOnlyStream = new MediaStream(audioTracks)
+    captureStreamRef.current = displayStream
+
+    const mimeCandidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus']
+    const mimeType = mimeCandidates.find((m) => MediaRecorder.isTypeSupported(m)) || ''
+    const recorder = mimeType ? new MediaRecorder(audioOnlyStream, { mimeType }) : new MediaRecorder(audioOnlyStream)
+    setDownloadExt(mimeType.includes('ogg') ? 'ogg' : 'webm')
+
+    recorder.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data) }
+    recorder.onstop = () => {
+      const blob = new Blob(chunksRef.current, { type: mimeType || 'audio/webm' })
+      setDownloadUrl(URL.createObjectURL(blob))
+      setRecording(false)
+      cleanupCapture()
+    }
+
+    // If the user stops sharing from the browser's own "Stop sharing" bar
+    // mid-recording, wind everything down gracefully.
+    audioTracks[0].addEventListener('ended', () => {
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+        window.speechSynthesis.cancel()
+        setSpeaking(false)
+        setPaused(false)
+        mediaRecorderRef.current.stop()
+      }
+    })
+
+    mediaRecorderRef.current = recorder
+    recorder.start()
+    setRecording(true)
+
+    window.speechSynthesis.cancel()
+    const utterance = buildUtterance()
+    utterance.onstart = () => { setSpeaking(true); setPaused(false) }
+    utterance.onend = () => {
+      setSpeaking(false)
+      setPaused(false)
+      // Small tail delay so the last word isn't clipped in the recording.
+      setTimeout(() => {
+        if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+          mediaRecorderRef.current.stop()
+        }
+      }, 300)
+    }
+    utterance.onerror = () => {
+      setSpeaking(false)
+      setPaused(false)
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+        mediaRecorderRef.current.stop()
+      }
+    }
+    utteranceRef.current = utterance
+    window.speechSynthesis.speak(utterance)
+  }
+
+  const downloadRecording = () => {
+    if (!downloadUrl) return
+    const a = document.createElement('a')
+    a.href = downloadUrl
+    a.download = `speech.${downloadExt}`
+    a.click()
   }
 
   return (
@@ -122,12 +240,12 @@ export default function TextToSpeechClient() {
 
             <div className="flex gap-3">
               {!speaking ? (
-                <button onClick={speak} className="flex-1 h-12 bg-primary text-primary-foreground rounded-xl text-lg font-semibold hover:opacity-90 transition">
+                <button onClick={speak} disabled={recording} className="flex-1 h-12 bg-primary text-primary-foreground rounded-xl text-lg font-semibold hover:opacity-90 transition disabled:opacity-50">
                   ▶ Speak
                 </button>
               ) : (
                 <>
-                  <button onClick={pauseResume} className="flex-1 h-12 bg-muted/40 hover:bg-muted rounded-xl text-lg font-semibold transition">
+                  <button onClick={pauseResume} disabled={recording} className="flex-1 h-12 bg-muted/40 hover:bg-muted rounded-xl text-lg font-semibold transition disabled:opacity-50">
                     {paused ? '▶ Resume' : '⏸ Pause'}
                   </button>
                   <button onClick={stop} className="flex-1 h-12 bg-destructive text-destructive-foreground rounded-xl text-lg font-semibold hover:opacity-90 transition">
@@ -136,6 +254,43 @@ export default function TextToSpeechClient() {
                 </>
               )}
             </div>
+
+            {recordingSupported && (
+              <div className="glass rounded-3xl border p-6 space-y-3">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-sm font-semibold">Download as audio file</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      You&apos;ll be asked to share this tab — pick &quot;This Tab&quot; and make sure &quot;Share tab audio&quot; is checked.
+                    </p>
+                  </div>
+                </div>
+
+                {!downloadUrl ? (
+                  <button
+                    onClick={recordAndDownload}
+                    disabled={recording || speaking || !text.trim()}
+                    className="w-full h-11 bg-muted/40 hover:bg-muted rounded-xl text-sm font-semibold transition disabled:opacity-50"
+                  >
+                    {recording ? '🔴 Recording…' : '⏺ Record & Prepare Download'}
+                  </button>
+                ) : (
+                  <div className="flex gap-3">
+                    <button onClick={downloadRecording} className="flex-1 h-11 bg-primary text-primary-foreground rounded-xl text-sm font-semibold hover:opacity-90 transition">
+                      ⬇ Download Audio
+                    </button>
+                    <button
+                      onClick={() => { setDownloadUrl(null); setRecordingError('') }}
+                      className="px-4 h-11 bg-muted/40 hover:bg-muted rounded-xl text-sm font-semibold transition"
+                    >
+                      Record again
+                    </button>
+                  </div>
+                )}
+
+                {recordingError && <p className="text-xs text-red-500">{recordingError}</p>}
+              </div>
+            )}
           </>
         )}
 
@@ -145,3 +300,4 @@ export default function TextToSpeechClient() {
     </div>
   )
 }
+

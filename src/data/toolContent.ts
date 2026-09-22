@@ -134,7 +134,7 @@ export const toolContent: Record<string, ToolContentData> = {
       "If a voice sounds robotic or wrong for the language, try a different one from the dropdown — quality and language coverage vary a lot between the voices your OS/browser installs.",
     ],
     faqs: [
-      { q: "Can I download the audio?", a: "Not currently — browsers don't provide a way to export Speech Synthesis output as an audio file; this tool plays audio live only." },
+      { q: "Can I download the audio?", a: "Yes — use 'Record & Prepare Download' below the player. It records the tab's own audio while the text plays, so it needs a one-time permission where you share this tab with 'Share tab audio' checked. This only works in Chrome/Edge on desktop, since Firefox and Safari don't support tab-audio capture yet." },
       { q: "Why do the available voices differ from another device?", a: "Voices come from your operating system and browser, not from this tool — different devices ship with different voice sets installed." },
       { q: "Does this tool send my text anywhere?", a: "No — speech is generated entirely on your device using the browser's built-in Speech Synthesis API." },
     ],
