@@ -286,6 +286,86 @@ const blogs = [
     description: 'Most freelance work doesn\'t need dedicated invoicing software — here\'s how to send a professional invoice in a few minutes, free.',
     date: 'August 31, 2026',
   },
+
+  // ── New tool guides ──
+  {
+    slug: 'ai-content-detector-guide',
+    title: 'AI Content Detector Guide: Check If Text Was Written by AI',
+    description: 'What the detector actually checks, how to read the score, and why no AI detector should be treated as proof.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'hash-generator-guide',
+    title: 'Hash Generator Guide: SHA-1, SHA-256 & SHA-512 Online',
+    description: 'Generate cryptographic hashes from text or files instantly, and understand what each algorithm is actually good for.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'image-to-base64-guide',
+    title: 'Image to Base64 Converter Guide: Embed Images in CSS & HTML',
+    description: 'Convert an image to a Base64 data URI (or decode one back to an image), and know when embedding actually helps.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'image-to-text-ocr-guide',
+    title: 'Image to Text (OCR) Guide: Extract Text From Any Image Free',
+    description: 'Pull editable text out of a photo, screenshot, or scanned document in seconds — no typing required.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'lorem-ipsum-generator-guide',
+    title: 'Lorem Ipsum Generator Guide: Free Placeholder Text',
+    description: 'Generate as many words, sentences, or paragraphs of placeholder text as your mockup needs.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'how-to-convert-mov-to-mp4',
+    title: 'How to Convert MOV to MP4 Online — Free, No Upload',
+    description: 'Turn an iPhone or QuickTime .mov file into a universally-playable .mp4, free and private.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'how-to-compress-pdf-files',
+    title: 'How to Compress a PDF Online — Free, No Upload',
+    description: 'Shrink a bloated PDF down to email- or upload-friendly size, especially scanned and image-heavy files.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'how-to-convert-pdf-to-word',
+    title: 'How to Convert PDF to Word Online — Free Text Extraction',
+    description: 'Turn a locked-down PDF into an editable Word document — and know which PDFs convert cleanly.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'text-to-speech-guide',
+    title: 'Text to Speech Guide: Free Online Voice Reader',
+    description: 'Turn any text into spoken audio using your browser\'s built-in voices — adjust speed, pitch, and language.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'unix-timestamp-converter-guide',
+    title: 'Unix Timestamp Converter Guide: Epoch to Date & Back',
+    description: 'Convert Unix epoch time to a readable date, or a date back to a timestamp — instantly, with live current time.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'uuid-generator-guide',
+    title: 'UUID Generator Guide: Free Online UUID v4 Generator',
+    description: 'Generate random, collision-safe UUID v4 identifiers instantly, one at a time or in bulk.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'how-to-compress-video-files',
+    title: 'How to Compress a Video Online — Free, No Upload',
+    description: 'Shrink a video file down to a shareable size without a big quality hit, right in your browser.',
+    date: 'September 22, 2026',
+  },
+  {
+    slug: 'how-to-convert-video-to-gif',
+    title: 'How to Convert Video to GIF Online — Free, No Upload',
+    description: 'Trim a video clip and turn it into a looping animated GIF, ready to share anywhere.',
+    date: 'September 22, 2026',
+  },
 ];
 
 export default function BlogPage() {
