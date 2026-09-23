@@ -523,7 +523,7 @@ export default function ToolsPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">All Tools</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            45+ free, browser-based tools for images, PDFs, documents, and text — zero uploads, zero latency, absolute privacy.
+            57+ free, browser-based tools for images, PDFs, documents, and text — zero uploads, zero latency, absolute privacy.
           </p>
         </div>
 
