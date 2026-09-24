@@ -46,6 +46,27 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
         let targetWidth = options.width || naturalWidth;
         let targetHeight = options.height || naturalHeight;
 
+        // Mobile browsers can fail when a canvas is too large, even when the
+        // original file itself is only a few MB. Keep the working canvas within
+        // a conservative size while preserving the image aspect ratio.
+        const MAX_DIMENSION = 4096;
+        const MAX_PIXELS = 12_000_000;
+        const requestedPixels = targetWidth * targetHeight;
+        const dimensionScale = Math.min(
+          1,
+          MAX_DIMENSION / Math.max(targetWidth, targetHeight)
+        );
+        const pixelScale = Math.min(
+          1,
+          Math.sqrt(MAX_PIXELS / Math.max(1, requestedPixels))
+        );
+        const safeScale = Math.min(dimensionScale, pixelScale);
+
+        if (safeScale < 1) {
+          targetWidth *= safeScale;
+          targetHeight *= safeScale;
+        }
+
         // Maintain aspect ratio if only one dimension is provided
         if (options.width && !options.height) {
           targetHeight = (naturalHeight / naturalWidth) * options.width;
