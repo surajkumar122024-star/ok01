@@ -59,11 +59,11 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">4. Google AdSense and Advertising</h2>
         <p className="leading-relaxed mb-3">
-          This website uses <strong>Google AdSense</strong> to display advertisements. Google, as a
-          third-party vendor, uses cookies and similar technologies to serve ads based on your prior
-          visits to this and other websites. Google&apos;s use of advertising cookies enables it and its
-          partners to serve personalized ads based on your visit to this
-          site and/or other sites on the internet.
+          We may use <strong>Google AdSense</strong> to display advertisements on this website in the future.
+          If advertising is enabled, Google and its advertising partners may use cookies and similar
+          technologies to serve and measure advertisements in accordance with applicable policies.
+          The availability and personalization of advertising may depend on your consent and applicable
+          regional requirements.
         </p>
        
           <p className="leading-relaxed">
@@ -78,8 +78,9 @@ export default function PrivacyPage() {
         <h2 className="text-2xl font-semibold mb-3 text-foreground">5. Cookies</h2>
         <p className="leading-relaxed mb-3">
           Cookies are small text files stored on your device. Our website itself does not use cookies
-          for core functionality. However, third-party services we use — such as Google AdSense and
-          analytics tools — may place cookies on your device.
+          for core functionality. If advertising or analytics services are enabled, third-party services
+          such as Google AdSense or analytics providers may place cookies or similar technologies on
+          your device.
         </p>
         <p className="leading-relaxed mb-4">
           You can control or disable cookies through your browser settings. Please note that disabling
