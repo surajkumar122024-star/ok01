@@ -94,6 +94,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center sm:text-left pt-1">
               <p className="font-semibold text-foreground text-lg">Suraj Kumar</p>
+              <p className="text-sm font-medium text-primary mt-1">Founder &amp; Developer</p>
               <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                 I build and maintain OpticShift Pro end-to-end — from the tools themselves to the privacy-first architecture behind them. My focus is on keeping every tool genuinely useful, fast, and free, without asking anyone to give up their privacy to use it.
               </p>
