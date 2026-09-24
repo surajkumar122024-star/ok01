@@ -264,9 +264,9 @@ export default function TermsPage() {
           <section id="third-party-services" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">11. Third-Party Services</h2>
             <p className="leading-relaxed text-muted-foreground">
-              This website uses Google AdSense to display advertisements. Google, as a third-party
-              vendor, may use cookies and similar technologies to serve ads based on your prior
-              visits to this and other websites, as described in more detail in our{' '}
+              This website may use Google AdSense or other advertising services in the future. If
+              advertising is enabled, third-party vendors may use cookies and similar technologies to
+              serve or measure advertisements, as described in more detail in our{' '}
               <Link href="/privacy" className="text-primary underline underline-offset-2">
                 Privacy Policy
               </Link>
