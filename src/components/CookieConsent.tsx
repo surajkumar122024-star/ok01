@@ -67,7 +67,9 @@ export function CookieConsent() {
           <Cookie size={20} />
         </div>
         <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-          We use cookies for basic site functionality and to show relevant ads via Google AdSense. You can accept or decline non-essential cookies at any time — see our{" "}
+          We use cookies for basic site functionality. If advertising or analytics services are enabled,
+          they may use non-essential cookies or similar technologies. You can accept or decline non-essential
+          cookies at any time — see our{" "}
           <Link href="/privacy" className="text-primary underline underline-offset-2">
             Privacy Policy
           </Link>{" "}
