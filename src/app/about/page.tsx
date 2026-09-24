@@ -84,14 +84,17 @@ export default function AboutPage() {
           <p className="text-muted-foreground leading-relaxed">
             OpticShift Pro is built and maintained independently by a single developer. It&apos;s not backed by outside investors or a larger company — just one person building tools they wanted to exist, and improving them based on how people actually use them.
           </p>
-          <div className="flex items-start gap-4 p-5 border border-border rounded-xl bg-card/50 backdrop-blur-sm">
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center text-white font-bold text-lg">
-              SK
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 border border-border rounded-2xl bg-card/50 backdrop-blur-sm">
+            <div className="shrink-0 w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 border border-border shadow-sm overflow-hidden">
+              <img
+                src="/signature.png"
+                alt="Suraj Kumar signature"
+                className="w-full h-full object-contain"
+              />
             </div>
-            <div>
-              <p className="font-semibold text-foreground">Suraj Kumar</p>
-              <p className="text-sm text-primary mb-2">Founder &amp; Developer</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+            <div className="text-center sm:text-left pt-1">
+              <p className="font-semibold text-foreground text-lg">Suraj Kumar</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mt-2">
                 I build and maintain OpticShift Pro end-to-end — from the tools themselves to the privacy-first architecture behind them. My focus is on keeping every tool genuinely useful, fast, and free, without asking anyone to give up their privacy to use it.
               </p>
             </div>
