@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Create the Perfect YouTube Thumbnail Size (1280×720) — OpticShift Pro',
   description: 'Turn any photo or graphic into a correctly sized 1280×720 YouTube thumbnail. Learn the exact spec, why cropping matters, and how to avoid YouTube auto-cropping out your best content.',
   keywords: 'YouTube thumbnail size, YouTube thumbnail maker, 1280x720 thumbnail, YouTube thumbnail converter, resize image for YouTube',
+  alternates: { canonical: '/blog/youtube-thumbnail-downloader-guide' },
 }
 
 export default function YoutubeThumbnailArticle() {

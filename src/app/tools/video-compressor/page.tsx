@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import VideoCompressorClient from './VideoCompressorClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Video Compressor — Reduce Video File Size Free | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Compress videos smaller without a big quality hit. Free, private, browser-based — no upload required.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/video-compressor' },
 };
 
 export default function VideoCompressorPage() {
@@ -35,6 +38,7 @@ export default function VideoCompressorPage() {
         }}
       />
       <VideoCompressorClient />
+      <RelatedTools tools={getRelatedTools('video-compressor')} />
     </>
   );
 }

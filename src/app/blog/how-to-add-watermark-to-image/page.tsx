@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     url: "https://ok01.vercel.app/blog/how-to-add-watermark-to-image",
     type: "article",
   },
+  alternates: { canonical: '/blog/how-to-add-watermark-to-image' },
 };
 
 export default function BlogPostWatermark() {

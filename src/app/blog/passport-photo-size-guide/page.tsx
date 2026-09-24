@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Passport Photo Size Guide (35×45mm) — Free Online Tool (2026) — OpticShift Pro',
   description: 'The exact Passport Seva photo specification, face-framing requirements, and how to crop your own photo to the correct 35×45mm size for free.',
   keywords: 'passport photo size, passport seva photo specification, 35x45mm photo, indian passport photo online',
+  alternates: { canonical: '/blog/passport-photo-size-guide' },
 }
 
 export default function PassportPhotoArticle() {

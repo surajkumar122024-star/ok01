@@ -1,5 +1,7 @@
 import WordCounterClient from "./WordCounterClient";
 import type { Metadata } from "next";
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: "Word Counter Online Free — Count Words, Characters & Sentences | OpticShift Pro",
@@ -7,6 +9,7 @@ export const metadata: Metadata = {
     "Count words, characters, sentences, paragraphs and estimate reading time online for free, instantly.",
   keywords:
     "word counter online free, count words in text online, essay word counter tool, character and word count checker",
+  alternates: { canonical: '/tools/word-counter' },
 };
 
 export default function WordCounterPage() {
@@ -32,6 +35,7 @@ export default function WordCounterPage() {
         }}
       />
       <WordCounterClient />
+      <RelatedTools tools={getRelatedTools('word-counter')} />
     </>
   );
 }

@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import PdfToWordClient from './PdfToWordClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'PDF to Word Converter — Free Text Extraction | OpticShift Pro',
   description: 'Extract text from a PDF into an editable Word (.docx) document, free. Best for simple, text-based PDFs. No upload — processed in your browser.',
   keywords: 'pdf to word, pdf to docx, convert pdf to word online, pdf text extractor, free pdf to word converter',
+  alternates: { canonical: '/tools/pdf-to-word' },
 };
 
 export default function PdfToWordPage() {
@@ -26,6 +29,7 @@ export default function PdfToWordPage() {
         }}
       />
       <PdfToWordClient />
+      <RelatedTools tools={getRelatedTools('pdf-to-word')} />
     </>
   );
 }

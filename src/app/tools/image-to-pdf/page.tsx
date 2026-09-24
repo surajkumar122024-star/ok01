@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ImageToPdfClient from './ImageToPdfClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image to PDF Converter — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert images to PDF instantly in your browser. No upload, 100% private.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-to-pdf' },
 };
 
 export default function ImageToPdfPage() {
@@ -35,6 +38,7 @@ export default function ImageToPdfPage() {
         }}
       />
       <ImageToPdfClient />
+      <RelatedTools tools={getRelatedTools('image-to-pdf')} />
     </>
   );
 }

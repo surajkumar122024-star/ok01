@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import UuidGeneratorClient from './UuidGeneratorClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'UUID Generator — Free Online UUID v4 Generator | OpticShift Pro',
   description: 'Generate random UUID v4 (GUID) values instantly. Bulk generate up to 50 at once, one-click copy. 100% browser-based, free & private.',
   keywords: 'uuid generator, guid generator, uuid v4, random uuid online, generate uuid',
+  alternates: { canonical: '/tools/uuid-generator' },
 };
 
 export default function UuidGeneratorPage() {
@@ -26,6 +29,7 @@ export default function UuidGeneratorPage() {
         }}
       />
       <UuidGeneratorClient />
+      <RelatedTools tools={getRelatedTools('uuid-generator')} />
     </>
   );
 }

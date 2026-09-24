@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Make a Photo Collage Online for Free (2026 Guide) — OpticShift Pro',
   description: 'Combine multiple photos into one grid collage online, free and instantly in your browser. No uploads, no software, no watermark — step by step.',
   keywords: 'photo collage maker, image collage online, combine photos into one image, free collage maker, grid collage online',
+  alternates: { canonical: '/blog/image-collage-maker-guide' },
 }
 
 export default function ImageCollageArticle() {

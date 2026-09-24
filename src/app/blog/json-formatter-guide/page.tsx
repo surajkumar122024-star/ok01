@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'JSON Formatter Guide: Beautify, Validate & Debug JSON Online (2026) — OpticShift Pro',
   description: 'Learn how to format, validate, and beautify JSON online for free. Step-by-step guide for developers to debug JSON data quickly and accurately.',
   keywords: 'JSON formatter, free online tool, JSON formatter guide',
+  alternates: { canonical: '/blog/json-formatter-guide' },
 }
 
 export default function JsonFormatterGuideArticle() {

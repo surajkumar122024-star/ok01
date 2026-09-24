@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Image Cropper Complete Guide: Crop Photos Online in Seconds (2026) — OpticShift Pro',
   description: 'Learn how to crop images online for free with our step-by-step Image Cropper guide. Perfect for social media, profile photos, and design projects.',
   keywords: 'image cropper, free online tool, image cropper guide',
+  alternates: { canonical: '/blog/image-cropper-complete-guide' },
 }
 
 export default function ImageCropperCompleteGuideArticle() {

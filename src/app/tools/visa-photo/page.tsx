@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import VisaPhotoClient from './VisaPhotoClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Visa Photo Maker (2x2 inch) — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Create a visa photo online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/visa-photo' },
 };
 
 export default function VisaPhotoPage() {
@@ -35,6 +38,7 @@ export default function VisaPhotoPage() {
         }}
       />
       <VisaPhotoClient />
+      <RelatedTools tools={getRelatedTools('visa-photo')} />
     </>
   );
 }

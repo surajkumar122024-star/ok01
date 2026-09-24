@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Color Picker Guide for Designers: Find, Copy & Use Any Color (2026) — OpticShift Pro',
   description: 'Learn how to use an online color picker to find HEX, RGB, and HSL codes for any color. A complete guide for designers, developers, and content creators.',
   keywords: 'color picker, free online tool, color picker guide',
+  alternates: { canonical: '/blog/color-picker-guide-for-designers' },
 }
 
 export default function ColorPickerGuideForDesignersArticle() {

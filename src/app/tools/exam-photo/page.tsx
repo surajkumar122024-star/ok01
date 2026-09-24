@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ExamPhotoClient from './ExamPhotoClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Exam Photo Resizer (200x230px) — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Resize your photo for exam application forms online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/exam-photo' },
 };
 
 export default function ExamPhotoPage() {
@@ -35,6 +38,7 @@ export default function ExamPhotoPage() {
         }}
       />
       <ExamPhotoClient />
+      <RelatedTools tools={getRelatedTools('exam-photo')} />
     </>
   );
 }

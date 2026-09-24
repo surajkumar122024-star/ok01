@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import HeicToJpgClient from './HeicToJpgClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free HEIC to JPG Converter – Convert iPhone Photos Online | OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/heic-to-jpg' },
 };
 
 export default function HeicToJpgPage() {
@@ -37,6 +40,7 @@ export default function HeicToJpgPage() {
         }}
       />
       <HeicToJpgClient />
+      <RelatedTools tools={getRelatedTools('heic-to-jpg')} />
     </>
   );
 }

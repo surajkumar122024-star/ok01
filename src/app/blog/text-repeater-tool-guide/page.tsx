@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Text Repeater Tool Guide: Repeat Any Text Instantly (2026) — OpticShift Pro',
   description: 'Learn how to use an online text repeater to duplicate words, phrases, or sentences multiple times instantly. Free guide for testing, design, and fun.',
   keywords: 'text repeater, free online tool, text repeater guide',
+  alternates: { canonical: '/blog/text-repeater-tool-guide' },
 }
 
 export default function TextRepeaterToolGuideArticle() {

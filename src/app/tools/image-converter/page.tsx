@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ImageConverterClient from './ImageConverterClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image Format Converter — JPG, PNG, WebP, GIF, BMP, ICO | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert between six image formats in one browser-based tool. Free, private, instant.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-converter' },
 };
 
 export default function ImageConverterPage() {
@@ -35,6 +38,7 @@ export default function ImageConverterPage() {
         }}
       />
       <ImageConverterClient />
+      <RelatedTools tools={getRelatedTools('image-converter')} />
     </>
   );
 }

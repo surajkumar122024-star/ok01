@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Word Counter for Writers: Track Word Count & Writing Goals (2026) — OpticShift Pro',
   description: 'Learn how to use an online word counter to track word count, character count, sentences, paragraphs, and writing goals. Free guide for writers, students, and content creators.',
   keywords: 'word counter, free online tool, word counter guide',
+  alternates: { canonical: '/blog/word-counter-for-writers' },
 }
 
 export default function WordCounterForWritersArticle() {

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import SignatureResizerClient from './SignatureResizerClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Signature Resizer (140x60px) — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Resize your signature for exam or application forms online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/signature-resizer' },
 };
 
 export default function SignatureResizerPage() {
@@ -35,6 +38,7 @@ export default function SignatureResizerPage() {
         }}
       />
       <SignatureResizerClient />
+      <RelatedTools tools={getRelatedTools('signature-resizer')} />
     </>
   );
 }

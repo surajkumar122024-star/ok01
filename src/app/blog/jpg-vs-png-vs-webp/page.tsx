@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'JPG vs PNG vs WebP — Which Format Should You Use? (2026 Guide) — OpticShift Pro',
   description: 'A practical comparison of JPG, PNG, and WebP — what each format actually does differently, real file size examples, and a simple decision framework for choosing the right one.',
   keywords: 'JPG vs PNG vs WebP, image format comparison, which image format to use, best image format for web',
+  alternates: { canonical: '/blog/jpg-vs-png-vs-webp' },
 }
 
 export default function JpgVsPngVsWebpArticle() {

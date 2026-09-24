@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Convert Images to PDF Online — Free & Private (2026 Guide) — OpticShift Pro',
   description: 'Combine JPG, PNG, or WebP images into a single PDF for free, right in your browser. Step-by-step guide, format tips, and answers to common questions about image-to-PDF conversion.',
   keywords: 'convert image to pdf, jpg to pdf, png to pdf, combine images into pdf, free image to pdf converter',
+  alternates: { canonical: '/blog/how-to-convert-image-to-pdf' },
 }
 
 export default function ImageToPdfArticle() {

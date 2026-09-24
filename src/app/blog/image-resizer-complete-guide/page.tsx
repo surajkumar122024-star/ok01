@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Image Resizer Complete Guide: Resize Photos Online Without Losing Quality (2026) — OpticShift Pro',
   description: 'Learn how to resize images online for free without losing quality. Complete guide for social media, websites, and print with exact dimension control.',
   keywords: 'image resizer, free online tool, image resizer guide',
+  alternates: { canonical: '/blog/image-resizer-complete-guide' },
 }
 
 export default function ImageResizerCompleteGuideArticle() {

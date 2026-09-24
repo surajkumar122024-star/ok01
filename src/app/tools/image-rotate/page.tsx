@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ImageRotateClient from './ImageRotateClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free Image Rotate & Flip Tool – Rotate Images Online | OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-rotate' },
 };
 
 export default function ImageRotatePage() {
@@ -37,6 +40,7 @@ export default function ImageRotatePage() {
         }}
       />
       <ImageRotateClient />
+      <RelatedTools tools={getRelatedTools('image-rotate')} />
     </>
   );
 }

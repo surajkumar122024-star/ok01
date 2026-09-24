@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Convert SVG to PNG: Complete 2026 Guide — OpticShift Pro',
   description: 'Learn how to convert SVG files to PNG online for free. Step-by-step guide for designers and developers to convert vector graphics to raster images.',
   keywords: 'convert SVG to PNG, free online tool, convert SVG to PNG guide',
+  alternates: { canonical: '/blog/how-to-convert-svg-to-png' },
 }
 
 export default function HowToConvertSvgToPngArticle() {

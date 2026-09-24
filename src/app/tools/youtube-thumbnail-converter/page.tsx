@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import YoutubeThumbnailClient from './YoutubeThumbnailClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'YouTube Thumbnail Converter (16:9) — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert any image to the perfect YouTube thumbnail ratio instantly. No upload, 100% private.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/youtube-thumbnail-converter' },
 };
 
 export default function YoutubeThumbnailPage() {
@@ -35,6 +38,7 @@ export default function YoutubeThumbnailPage() {
         }}
       />
       <YoutubeThumbnailClient />
+      <RelatedTools tools={getRelatedTools('youtube-thumbnail-converter')} />
     </>
   );
 }

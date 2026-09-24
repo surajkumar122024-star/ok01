@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import CompressorClient from './CompressorClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image Compressor — Reduce File Size Free | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Compress images up to 90% smaller without quality loss. Free, private, browser-based.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/compressor' },
 };
 
 export default function CompressorPage() {
@@ -35,6 +38,7 @@ export default function CompressorPage() {
         }}
       />
       <CompressorClient />
+      <RelatedTools tools={getRelatedTools('compressor')} />
     </>
   );
 }

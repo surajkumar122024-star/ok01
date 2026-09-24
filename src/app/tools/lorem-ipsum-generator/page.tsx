@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import LoremIpsumClient from './LoremIpsumClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Lorem Ipsum Generator — Free Placeholder Text | OpticShift Pro',
   description: 'Generate Lorem Ipsum placeholder text — words, sentences, or paragraphs. Instant, free, and customizable for design and development mockups.',
   keywords: 'lorem ipsum generator, placeholder text generator, dummy text generator, filler text',
+  alternates: { canonical: '/tools/lorem-ipsum-generator' },
 };
 
 export default function LoremIpsumPage() {
@@ -26,6 +29,7 @@ export default function LoremIpsumPage() {
         }}
       />
       <LoremIpsumClient />
+      <RelatedTools tools={getRelatedTools('lorem-ipsum-generator')} />
     </>
   );
 }

@@ -1,9 +1,12 @@
 import JsonFormatterClient from './JsonFormatterClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'JSON Formatter & Validator Online — Free | OpticShift Pro',
   description: 'Format, validate, and minify JSON online for free. Instant JSON beautifier and pretty print, right in your browser.',
   keywords: 'json formatter online, json beautifier free, validate json online, minify json online, json pretty print tool',
+  alternates: { canonical: '/tools/json-formatter' },
 }
 
 export default function JsonFormatterPage() {
@@ -29,6 +32,7 @@ export default function JsonFormatterPage() {
         }}
       />
       <JsonFormatterClient />
+      <RelatedTools tools={getRelatedTools('json-formatter')} />
     </>
   );
 }

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Compress Images Without Losing Quality (2026 Guide) — OpticShift Pro',
   description: 'A practical, in-depth guide to compressing JPG and PNG images online for free — how compression actually works, real before/after examples, common mistakes, and answers to the questions people actually ask.',
   keywords: 'image compressor, compress image online, reduce image size, free image compressor, jpg compressor, png compressor, lossy vs lossless compression',
+  alternates: { canonical: '/blog/how-to-compress-images' },
 }
 
 export default function ImageCompressorArticle() {

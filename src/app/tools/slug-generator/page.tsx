@@ -1,9 +1,12 @@
 import SlugGeneratorClient from './SlugGeneratorClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'URL Slug Generator Online — SEO Friendly | OpticShift Pro',
   description: 'Convert any text or title into a clean, SEO-friendly URL slug instantly. Free and private.',
   keywords: 'url slug generator online, convert text to slug, seo friendly url generator, generate slug from title free',
+  alternates: { canonical: '/tools/slug-generator' },
 }
 
 export default function SlugGeneratorPage() {
@@ -29,6 +32,7 @@ export default function SlugGeneratorPage() {
         }}
       />
       <SlugGeneratorClient />
+      <RelatedTools tools={getRelatedTools('slug-generator')} />
     </>
   );
 }

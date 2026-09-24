@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Case Converter Guide: Convert Text to Upper, Lower, Title & Sentence Case (2026) — OpticShift Pro',
   description: 'Complete guide to using an online case converter tool. Instantly change text to uppercase, lowercase, title case, sentence case, and more — free and fast.',
   keywords: 'case converter, free online tool, case converter guide',
+  alternates: { canonical: '/blog/case-converter-guide' },
 }
 
 export default function CaseConverterGuideArticle() {

@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import ImageToBase64Client from './ImageToBase64Client';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image to Base64 Converter — Free, No Upload | OpticShift Pro',
   description: 'Convert images to Base64 strings for CSS/HTML embedding, and decode Base64 back to images. 100% browser-based — nothing is uploaded.',
   keywords: 'image to base64, base64 to image, base64 image converter, encode image base64, css data uri generator',
+  alternates: { canonical: '/tools/image-to-base64' },
 };
 
 export default function ImageToBase64Page() {
@@ -26,6 +29,7 @@ export default function ImageToBase64Page() {
         }}
       />
       <ImageToBase64Client />
+      <RelatedTools tools={getRelatedTools('image-to-base64')} />
     </>
   );
 }

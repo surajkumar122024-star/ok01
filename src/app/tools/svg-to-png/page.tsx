@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import SvgToPngClient from './SvgToPngClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free SVG to PNG Converter – Convert SVG Online | OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/svg-to-png' },
 };
 
 export default function SvgToPngPage() {
@@ -37,6 +40,7 @@ export default function SvgToPngPage() {
         }}
       />
       <SvgToPngClient />
+      <RelatedTools tools={getRelatedTools('svg-to-png')} />
     </>
   );
 }

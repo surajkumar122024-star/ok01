@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Perfect Image Sizes for Every Social Media Platform (2026 Guide) — OpticShift Pro',
   description: 'The complete, up-to-date cheat sheet for Instagram, Facebook, X/Twitter, LinkedIn, YouTube, TikTok, and Pinterest image dimensions — plus how to resize for free in your browser.',
   keywords: 'social media image sizes, instagram image size, facebook image size, twitter image size, linkedin image size, youtube thumbnail size',
+  alternates: { canonical: '/blog/resize-images-for-social-media' },
 }
 
 export default function ResizeForSocialMediaArticle() {

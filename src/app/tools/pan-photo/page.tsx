@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PanPhotoClient from './PanPhotoClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'PAN Card Photo Maker — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Create a PAN card size photo online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/pan-photo' },
 };
 
 export default function PanPhotoPage() {
@@ -35,6 +38,7 @@ export default function PanPhotoPage() {
         }}
       />
       <PanPhotoClient />
+      <RelatedTools tools={getRelatedTools('pan-photo')} />
     </>
   );
 }

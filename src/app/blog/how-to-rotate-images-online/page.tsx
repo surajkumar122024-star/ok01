@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Rotate Images Online: Complete 2026 Guide — OpticShift Pro',
   description: 'Learn how to rotate and straighten images online for free. Step-by-step guide to fixing sideways or upside-down photos in seconds, no software needed.',
   keywords: 'rotate images online, free online tool, rotate images online guide',
+  alternates: { canonical: '/blog/how-to-rotate-images-online' },
 }
 
 export default function HowToRotateImagesOnlineArticle() {

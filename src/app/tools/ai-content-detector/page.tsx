@@ -1,9 +1,12 @@
 import AiContentDetectorClient from './AiContentDetectorClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Free AI Content Detector Online — OpticShift Pro',
   description: 'Check text for common signs of AI-generated writing — sentence uniformity, repetitive phrasing, and typical AI transition words. Free, instant, no sign-up.',
   keywords: 'ai content detector, ai text detector, detect ai writing, chatgpt detector, ai generated text checker',
+  alternates: { canonical: '/tools/ai-content-detector' },
 }
 
 export default function AiContentDetectorPage() {
@@ -29,6 +32,7 @@ export default function AiContentDetectorPage() {
         }}
       />
       <AiContentDetectorClient />
+      <RelatedTools tools={getRelatedTools('ai-content-detector')} />
     </>
   );
 }

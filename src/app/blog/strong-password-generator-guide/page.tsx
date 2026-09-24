@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Strong Password Generator Guide: Create Secure Passwords Instantly (2026) — OpticShift Pro',
   description: 'Learn how to generate strong, secure passwords online for free. Complete guide covering password strength, best practices, and account security tips.',
   keywords: 'strong password generator, free online tool, strong password generator guide',
+  alternates: { canonical: '/blog/strong-password-generator-guide' },
 }
 
 export default function StrongPasswordGeneratorGuideArticle() {

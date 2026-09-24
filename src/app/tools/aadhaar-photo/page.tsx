@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import AadhaarPhotoClient from './AadhaarPhotoClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Aadhaar Card Photo Maker — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Create an Aadhaar card size photo online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/aadhaar-photo' },
 };
 
 export default function AadhaarPhotoPage() {
@@ -35,6 +38,7 @@ export default function AadhaarPhotoPage() {
         }}
       />
       <AadhaarPhotoClient />
+      <RelatedTools tools={getRelatedTools('aadhaar-photo')} />
     </>
   );
 }

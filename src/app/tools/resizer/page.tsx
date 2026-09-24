@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ResizerClient from './ResizerClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image Resizer — Change Image Dimensions Free | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Resize images to any dimension instantly in your browser. Free, private, no upload.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/resizer' },
 };
 
 export default function ResizerPage() {
@@ -35,6 +38,7 @@ export default function ResizerPage() {
         }}
       />
       <ResizerClient />
+      <RelatedTools tools={getRelatedTools('resizer')} />
     </>
   );
 }

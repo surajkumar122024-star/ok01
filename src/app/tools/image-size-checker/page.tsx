@@ -1,9 +1,12 @@
 import ImageSizeCheckerClient from './ImageSizeCheckerClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Image Size Checker Online — Dimensions & File Size | OpticShift Pro',
   description: 'Check an image\'s dimensions, file size, aspect ratio and social media compatibility online for free, instantly.',
   keywords: 'check image dimensions online, image file size checker free, image resolution checker online, check image aspect ratio online',
+  alternates: { canonical: '/tools/image-size-checker' },
 }
 
 export default function ImageSizeCheckerPage() {
@@ -29,6 +32,7 @@ export default function ImageSizeCheckerPage() {
         }}
       />
       <ImageSizeCheckerClient />
+      <RelatedTools tools={getRelatedTools('image-size-checker')} />
     </>
   );
 }

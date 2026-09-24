@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PdfToImageClient from './PdfToImageClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'PDF to Image Converter — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Extract every PDF page as a PNG image instantly in your browser. No upload, no login.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/pdf-to-image' },
 };
 
 export default function PdfToImagePage() {
@@ -35,6 +38,7 @@ export default function PdfToImagePage() {
         }}
       />
       <PdfToImageClient />
+      <RelatedTools tools={getRelatedTools('pdf-to-image')} />
     </>
   );
 }

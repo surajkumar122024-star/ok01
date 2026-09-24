@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Compress a Video Online — Free, No Upload (2026) — OpticShift Pro',
   description: 'Compress MP4, MOV, WebM and other video files online for free, right in your browser. How video compression works and how to keep quality while shrinking size.',
   keywords: 'video compressor, compress video online, reduce video size, mp4 compressor, free video compressor, compress video without losing quality',
+  alternates: { canonical: '/blog/how-to-compress-video-files' },
 }
 
 export default function VideoCompressorGuideArticle() {

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ImageCollageClient from './ImageCollageClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image Collage Maker — Combine Photos Free Online | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Bulk-upload photos and arrange them into a grid collage instantly. Free, private, browser-based.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-collage' },
 };
 
 export default function ImageCollagePage() {
@@ -35,6 +38,7 @@ export default function ImageCollagePage() {
         }}
       />
       <ImageCollageClient />
+      <RelatedTools tools={getRelatedTools('image-collage')} />
     </>
   );
 }

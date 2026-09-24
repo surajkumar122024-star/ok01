@@ -1,4 +1,11 @@
+import { Metadata } from "next";
 import { CookiePreferencesButton } from "@/components/CookiePreferencesButton";
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy — OpticShift Pro',
+  description: 'How OpticShift Pro handles your data. Every tool runs in your browser — files are never uploaded to a server.',
+  alternates: { canonical: '/privacy' },
+};
 
 export default function PrivacyPage() {
   return (

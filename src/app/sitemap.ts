@@ -112,6 +112,20 @@ const blogPosts = [
   'money-calculators-emi-gst-interest',
   'age-and-date-calculators',
   'free-invoice-for-freelancers',
+  // New tool guides (Sept 2026)
+  'ai-content-detector-guide',
+  'hash-generator-guide',
+  'image-to-base64-guide',
+  'image-to-text-ocr-guide',
+  'lorem-ipsum-generator-guide',
+  'how-to-convert-mov-to-mp4',
+  'how-to-compress-pdf-files',
+  'how-to-convert-pdf-to-word',
+  'text-to-speech-guide',
+  'unix-timestamp-converter-guide',
+  'uuid-generator-guide',
+  'how-to-compress-video-files',
+  'how-to-convert-video-to-gif',
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

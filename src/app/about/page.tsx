@@ -6,6 +6,7 @@ import { AdPlaceholder } from '@/components/AdPlaceholder';
 export const metadata: Metadata = {
   title: 'About OpticShift Pro – Privacy-First Browser-Based Tools',
   description: 'OpticShift Pro is an independently built suite of 57+ free image, PDF, and text tools that run entirely in your browser.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {

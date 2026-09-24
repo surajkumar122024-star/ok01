@@ -1,9 +1,12 @@
 import PasswordGeneratorClient from './PasswordGeneratorClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Strong Password Generator Online — Free & Secure | OpticShift Pro',
   description: 'Generate a strong, random password online for free. Customize length and characters. Nothing is stored, 100% private.',
   keywords: 'strong password generator online, random password generator free, secure password generator no sign up, generate password online free',
+  alternates: { canonical: '/tools/password-generator' },
 }
 
 export default function PasswordGeneratorPage() {
@@ -29,6 +32,7 @@ export default function PasswordGeneratorPage() {
         }}
       />
       <PasswordGeneratorClient />
+      <RelatedTools tools={getRelatedTools('password-generator')} />
     </>
   );
 }

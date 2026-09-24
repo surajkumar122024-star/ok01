@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ImageToTextClient from './ImageToTextClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free Image to Text Converter (OCR) Online — OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-to-text' },
 };
 
 export default function ImageToTextPage() {
@@ -37,6 +40,7 @@ export default function ImageToTextPage() {
         }}
       />
       <ImageToTextClient />
+      <RelatedTools tools={getRelatedTools('image-to-text')} />
     </>
   );
 }

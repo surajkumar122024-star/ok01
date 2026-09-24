@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import MovToMp4Client from './MovToMp4Client';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'MOV to MP4 Converter — Free Online, No Upload | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert MOV videos to universally-playable MP4. Free, private, browser-based.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/mov-to-mp4' },
 };
 
 export default function MovToMp4Page() {
@@ -31,6 +34,7 @@ export default function MovToMp4Page() {
         }}
       />
       <MovToMp4Client />
+      <RelatedTools tools={getRelatedTools('mov-to-mp4')} />
     </>
   );
 }

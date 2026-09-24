@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Image Size Checker Guide: Check Dimensions & File Size Instantly (2026) — OpticShift Pro',
   description: 'Learn how to check image dimensions, resolution, and file size online for free. Complete guide for web optimization, uploads, and design accuracy.',
   keywords: 'image size checker, free online tool, image size checker guide',
+  alternates: { canonical: '/blog/image-size-checker-guide' },
 }
 
 export default function ImageSizeCheckerGuideArticle() {

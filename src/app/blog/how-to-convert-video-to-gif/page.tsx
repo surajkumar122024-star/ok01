@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Convert Video to GIF Online — Free, No Upload (2026) — OpticShift Pro',
   description: 'Turn any video clip into an animated GIF for free. Trim the clip, pick quality, and export — 100% in your browser, nothing uploaded.',
   keywords: 'video to gif, convert video to gif, mp4 to gif, make a gif online free, gif maker from video',
+  alternates: { canonical: '/blog/how-to-convert-video-to-gif' },
 }
 
 export default function VideoToGifGuideArticle() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Lorem Ipsum Generator Guide: Free Placeholder Text (2026) — OpticShift Pro',
   description: 'Generate Lorem Ipsum placeholder text by words, sentences, or paragraphs. Where the text comes from, and why designers still use it in mockups.',
   keywords: 'lorem ipsum generator, placeholder text generator, dummy text generator, filler text',
+  alternates: { canonical: '/blog/lorem-ipsum-generator-guide' },
 }
 
 export default function LoremIpsumGuideArticle() {

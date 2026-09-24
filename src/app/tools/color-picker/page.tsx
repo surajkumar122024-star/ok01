@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ColorPickerClient from './ColorPickerClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free Image Color Picker – Pick Colors from Any Image | OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/color-picker' },
 };
 
 export default function ColorPickerPage() {
@@ -37,6 +40,7 @@ export default function ColorPickerPage() {
         }}
       />
       <ColorPickerClient />
+      <RelatedTools tools={getRelatedTools('color-picker')} />
     </>
   );
 }

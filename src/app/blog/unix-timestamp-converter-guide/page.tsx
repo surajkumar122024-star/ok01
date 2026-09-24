@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Unix Timestamp Converter Guide: Epoch to Date & Back (2026) — OpticShift Pro',
   description: 'Convert Unix timestamps to human-readable dates and back, instantly, with the current timestamp shown live. What epoch time is and why it matters for developers.',
   keywords: 'unix timestamp converter, epoch converter, timestamp to date, date to timestamp, current unix time',
+  alternates: { canonical: '/blog/unix-timestamp-converter-guide' },
 }
 
 export default function TimestampConverterGuideArticle() {

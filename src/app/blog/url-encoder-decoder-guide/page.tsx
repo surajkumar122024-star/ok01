@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'URL Encoder Decoder Guide: Encode & Decode URLs Instantly (2026) — OpticShift Pro',
   description: 'Learn how to encode and decode URLs online for free. Complete guide to percent-encoding, special characters, and safe URL formatting for developers.',
   keywords: 'URL encoder decoder, free online tool, URL encoder decoder guide',
+  alternates: { canonical: '/blog/url-encoder-decoder-guide' },
 }
 
 export default function UrlEncoderDecoderGuideArticle() {

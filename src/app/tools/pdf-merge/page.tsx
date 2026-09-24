@@ -1,9 +1,12 @@
 import PdfMergeClient from './PdfMergeClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Merge PDF Files Online Free — No Sign-Up | OpticShift Pro',
   description: 'Combine multiple PDF files into one document online for free. No sign-up, no watermark, 100% private and browser-based.',
   keywords: 'merge pdf files online free, combine pdf files online, pdf merger no sign up, join multiple pdf into one online',
+  alternates: { canonical: '/tools/pdf-merge' },
 }
 
 export default function PdfMergePage() {
@@ -29,6 +32,7 @@ export default function PdfMergePage() {
         }}
       />
       <PdfMergeClient />
+      <RelatedTools tools={getRelatedTools('pdf-merge')} />
     </>
   );
 }

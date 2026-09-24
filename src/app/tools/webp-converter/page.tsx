@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import WebPConverterClient from './WebPConverterClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'WebP Converter — Convert JPG & PNG to WebP Free | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert JPG & PNG to WebP instantly in your browser. Free, private, no upload.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/webp-converter' },
 };
 
 export default function WebPConverterPage() {
@@ -35,6 +38,7 @@ export default function WebPConverterPage() {
         }}
       />
       <WebPConverterClient />
+      <RelatedTools tools={getRelatedTools('webp-converter')} />
     </>
   );
 }

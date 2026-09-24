@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Convert PNG to JPG Online — Free & Instant | OpticShift Pro',
   description: 'Convert PNG images to JPG format online for free. Reduce file size by up to 80% instantly in your browser with zero uploads and full privacy.',
   keywords: 'png to jpg, convert png to jpg, png to jpeg online, free png converter, png to jpg no upload',
+  alternates: { canonical: '/blog/how-to-convert-png-to-jpg' },
 }
 
 export default function PngToJpgArticle() {

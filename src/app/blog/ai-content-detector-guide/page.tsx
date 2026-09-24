@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026) — OpticShift Pro',
   description: 'Free AI content detector that checks for sentence uniformity, repetitive phrasing, and typical AI transition words. Learn how it works and its real limits.',
   keywords: 'ai content detector, ai text detector, detect ai writing, chatgpt detector, ai generated text checker',
+  alternates: { canonical: '/blog/ai-content-detector-guide' },
 }
 
 export default function AiContentDetectorGuideArticle() {

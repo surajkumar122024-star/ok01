@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PassportPhotoClient from './PassportPhotoClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Passport Size Photo Maker — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Create a passport-size photo online for free, instantly in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/passport-photo' },
 };
 
 export default function PassportPhotoPage() {
@@ -35,6 +38,7 @@ export default function PassportPhotoPage() {
         }}
       />
       <PassportPhotoClient />
+      <RelatedTools tools={getRelatedTools('passport-photo')} />
     </>
   );
 }

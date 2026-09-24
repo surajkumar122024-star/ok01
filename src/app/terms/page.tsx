@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms of Service — OpticShift Pro',
   description: 'The terms and conditions governing your use of OpticShift Pro\'s free, browser-based image, PDF, and text tools.',
+  alternates: { canonical: '/terms' },
 };
 
 const sections = [

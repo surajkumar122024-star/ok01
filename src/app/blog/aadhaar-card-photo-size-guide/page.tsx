@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Aadhaar Card Photo Size Guide (3.5×4.5cm) — Free Online Tool (2026) — OpticShift Pro',
   description: 'The exact Aadhaar enrollment and update photo specification, common rejection reasons, and how to crop your own photo to the correct 3.5×4.5cm size for free.',
   keywords: 'aadhaar photo size, aadhaar card photo online, aadhaar photo specification, aadhaar enrollment photo',
+  alternates: { canonical: '/blog/aadhaar-card-photo-size-guide' },
 }
 
 export default function AadhaarPhotoArticle() {

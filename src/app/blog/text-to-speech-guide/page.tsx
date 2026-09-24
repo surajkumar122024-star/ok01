@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Text to Speech Guide: Free Online Voice Reader (2026) — OpticShift Pro',
   description: 'Convert text to speech instantly using your browser\'s built-in voices. Adjust speed and pitch, choose languages — free, private, and no sign-up.',
   keywords: 'text to speech, tts online, text to voice, read text aloud, free text to speech',
+  alternates: { canonical: '/blog/text-to-speech-guide' },
 }
 
 export default function TextToSpeechGuideArticle() {

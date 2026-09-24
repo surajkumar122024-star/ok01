@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Character Counter for Writing and SEO: The Complete 2026 Guide — OpticShift Pro',
   description: 'Learn how to use an online character counter to track text length for SEO meta tags, social media posts, and writing limits. Free, instant, and accurate.',
   keywords: 'character counter, free online tool, character counter guide',
+  alternates: { canonical: '/blog/character-counter-for-writing-and-seo' },
 }
 
 export default function CharacterCounterForWritingAndSeoArticle() {

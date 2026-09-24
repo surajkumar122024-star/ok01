@@ -1,9 +1,12 @@
 import PercentageCalculatorClient from './PercentageCalculatorClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Free Percentage Calculator Online — OpticShift Pro',
   description: 'Calculate percentages, percentage increase/decrease, and what percent one number is of another — free, instant, no sign-up.',
   keywords: 'percentage calculator, percent calculator, percentage increase calculator, percentage decrease calculator, discount calculator, what percent of',
+  alternates: { canonical: '/tools/percentage-calculator' },
 }
 
 export default function PercentageCalculatorPage() {
@@ -29,6 +32,7 @@ export default function PercentageCalculatorPage() {
         }}
       />
       <PercentageCalculatorClient />
+      <RelatedTools tools={getRelatedTools('percentage-calculator')} />
     </>
   );
 }

@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import VideoToGifClient from './VideoToGifClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Video to GIF Converter — Free Online, No Upload | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Turn a video clip into a high-quality animated GIF, right in your browser.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/video-to-gif' },
 };
 
 export default function VideoToGifPage() {
@@ -31,6 +34,7 @@ export default function VideoToGifPage() {
         }}
       />
       <VideoToGifClient />
+      <RelatedTools tools={getRelatedTools('video-to-gif')} />
     </>
   );
 }

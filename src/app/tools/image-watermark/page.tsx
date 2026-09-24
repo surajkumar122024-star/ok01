@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import ImageWatermarkClient from './ImageWatermarkClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Free Online Image Watermark Tool – Add Text & Logo | OpticShift Pro',
@@ -12,6 +14,7 @@ export const metadata: Metadata = {
     siteName: 'OpticShift Pro',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-watermark' },
 };
 
 export default function ImageWatermarkPage() {
@@ -37,6 +40,7 @@ export default function ImageWatermarkPage() {
         }}
       />
       <ImageWatermarkClient />
+      <RelatedTools tools={getRelatedTools('image-watermark')} />
     </>
   );
 }

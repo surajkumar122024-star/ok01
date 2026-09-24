@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'PAN Card Photo Size Guide (2.5×3.5cm) — Free Online Tool (2026) — OpticShift Pro',
   description: 'The exact PAN application photo specification for Form 49A/49AA, common mistakes to avoid, and how to crop your own photo to the correct size for free.',
   keywords: 'pan card photo size, pan application photo, form 49a photo size, nsdl pan photo',
+  alternates: { canonical: '/blog/pan-card-photo-size-guide' },
 }
 
 export default function PanPhotoArticle() {

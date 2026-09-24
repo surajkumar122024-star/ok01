@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import PngToJpgClient from './PngToJpgClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'PNG to JPG Converter — Free & Instant | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Convert PNG to JPG instantly in your browser. Free, private, no upload.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/png-to-jpg' },
 };
 
 export default function PngToJpgPage() {
@@ -35,6 +38,7 @@ export default function PngToJpgPage() {
         }}
       />
       <PngToJpgClient />
+      <RelatedTools tools={getRelatedTools('png-to-jpg')} />
     </>
   );
 }

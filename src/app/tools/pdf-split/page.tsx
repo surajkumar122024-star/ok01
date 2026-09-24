@@ -1,9 +1,12 @@
 import PdfSplitClient from './PdfSplitClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Split PDF Pages Online Free — Extract Pages | OpticShift Pro',
   description: 'Extract or separate specific pages from a PDF online for free. No sign-up, 100% private and browser-based.',
   keywords: 'split pdf pages online free, extract pages from pdf online, pdf splitter no sign up, separate pdf pages online',
+  alternates: { canonical: '/tools/pdf-split' },
 }
 
 export default function PdfSplitPage() {
@@ -29,6 +32,7 @@ export default function PdfSplitPage() {
         }}
       />
       <PdfSplitClient />
+      <RelatedTools tools={getRelatedTools('pdf-split')} />
     </>
   );
 }

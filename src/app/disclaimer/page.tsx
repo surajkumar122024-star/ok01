@@ -4,6 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Disclaimer — OpticShift Pro',
   description: 'Important information about the accuracy, limitations, and intended use of OpticShift Pro\'s free browser-based tools.',
+  alternates: { canonical: '/disclaimer' },
 };
 
 const sections = [

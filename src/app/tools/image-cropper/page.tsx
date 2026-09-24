@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import ImageCropperClient from './ImageCropperClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Image Cropper — Free & Private | OpticShift Pro',
@@ -10,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Crop images instantly in your browser. No upload, 100% private.',
     type: 'website',
   },
+  alternates: { canonical: '/tools/image-cropper' },
 };
 
 export default function ImageCropperPage() {
@@ -35,6 +38,7 @@ export default function ImageCropperPage() {
         }}
       />
       <ImageCropperClient />
+      <RelatedTools tools={getRelatedTools('image-cropper')} />
     </>
   );
 }

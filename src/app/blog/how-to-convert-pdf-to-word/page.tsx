@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'How to Convert PDF to Word Online — Free Text Extraction (2026) — OpticShift Pro',
   description: 'Extract text from a PDF into an editable Word (.docx) document, free and right in your browser. Best for simple, text-based PDFs — how it works and its limits.',
   keywords: 'pdf to word, pdf to docx, convert pdf to word online, pdf text extractor, free pdf to word converter',
+  alternates: { canonical: '/blog/how-to-convert-pdf-to-word' },
 }
 
 export default function PdfToWordGuideArticle() {

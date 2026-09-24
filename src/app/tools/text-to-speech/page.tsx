@@ -1,10 +1,13 @@
 import { Metadata } from 'next';
 import TextToSpeechClient from './TextToSpeechClient';
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
   title: 'Text to Speech — Free Online Voice Reader | OpticShift Pro',
   description: 'Convert text to speech instantly using your browser\'s built-in voices. Adjust speed and pitch, choose from available languages. Free & private.',
   keywords: 'text to speech, tts online, text to voice, read text aloud, free text to speech',
+  alternates: { canonical: '/tools/text-to-speech' },
 };
 
 export default function TextToSpeechPage() {
@@ -26,6 +29,7 @@ export default function TextToSpeechPage() {
         }}
       />
       <TextToSpeechClient />
+      <RelatedTools tools={getRelatedTools('text-to-speech')} />
     </>
   );
 }

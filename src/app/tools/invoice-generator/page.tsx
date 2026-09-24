@@ -1,9 +1,12 @@
 import InvoiceGeneratorClient from './InvoiceGeneratorClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'Free Invoice Generator Online — Download as PDF — OpticShift Pro',
   description: 'Create a professional invoice with your business details, line items, and tax, and download it as a PDF. Free, no sign-up, no watermark.',
   keywords: 'invoice generator, free invoice generator, create invoice online, invoice maker, invoice template free, download invoice pdf',
+  alternates: { canonical: '/tools/invoice-generator' },
 }
 
 export default function InvoiceGeneratorPage() {
@@ -29,6 +32,7 @@ export default function InvoiceGeneratorPage() {
         }}
       />
       <InvoiceGeneratorClient />
+      <RelatedTools tools={getRelatedTools('invoice-generator')} />
     </>
   );
 }

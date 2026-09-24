@@ -1,9 +1,12 @@
 import UrlEncoderClient from './UrlEncoderClient'
+import { RelatedTools } from '@/components/RelatedTools';
+import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
   title: 'URL Encoder/Decoder Online — Free & Instant | OpticShift Pro',
   description: 'Encode or decode a URL online for free, instantly in your browser. Percent-encoding made simple and private.',
   keywords: 'url encoder decoder online, encode url online free, percent encoding tool online, convert url to encoded string',
+  alternates: { canonical: '/tools/url-encoder' },
 }
 
 export default function UrlEncoderPage() {
@@ -29,6 +32,7 @@ export default function UrlEncoderPage() {
         }}
       />
       <UrlEncoderClient />
+      <RelatedTools tools={getRelatedTools('url-encoder')} />
     </>
   );
 }
