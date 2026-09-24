@@ -24,10 +24,12 @@ export default function CompressorClient() {
     try {
       const blob = await processImage(selectedFile, { quality: quality / 100 });
       setProcessedBlob(blob);
-    } catch {
+    } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to compress image.",
+        title: "Compression failed",
+        description: error instanceof Error
+          ? error.message
+          : "The image could not be compressed on this device. Try a smaller image.",
         variant: "destructive"
       });
     } finally {
