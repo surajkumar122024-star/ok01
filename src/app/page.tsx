@@ -283,19 +283,20 @@ export default function Home() {
               Eight categories covering everything from quick image edits to developer utilities.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {categories.map((cat, i) => (
               <Link key={cat.name} href={cat.href}>
                 <div
-                  className={`shine-card group h-full p-6 bg-gradient-to-br ${cat.gradient} text-white border-2 border-white/10 transition-all duration-300 hover:border-white/60 hover:scale-[1.03] hover:shadow-2xl`}
+                  className={`shine-card group h-full p-4 sm:p-6 bg-gradient-to-br ${cat.gradient} text-white border-2 border-white/10 transition-all duration-300 hover:border-white/60 hover:scale-[1.03] hover:shadow-2xl`}
                   style={{ animationDelay: `${i * 80}ms` }}
                 >
-                  <div className="w-12 h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
-                    <cat.icon size={22} />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/15 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                    <cat.icon size={18} className="sm:hidden" />
+                    <cat.icon size={22} className="hidden sm:block" />
                   </div>
-                  <h3 className="text-lg font-bold mb-2">{cat.name}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed mb-4">{cat.description}</p>
-                  <span className="inline-flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all">
+                  <h3 className="text-base sm:text-lg font-bold mb-1.5 sm:mb-2">{cat.name}</h3>
+                  <p className="text-white/80 text-xs sm:text-sm leading-snug sm:leading-relaxed mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-none">{cat.description}</p>
+                  <span className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold group-hover:gap-2 transition-all">
                     Explore <ArrowRight size={14} />
                   </span>
                 </div>
@@ -314,18 +315,19 @@ export default function Home() {
               A quick shortcut to the tools people reach for most often.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {tools.map((tool) => (
               <Link key={tool.slug} href={`/tools/${tool.slug}`}>
-                <div className="group h-full p-6 glass rounded-2xl border-2 border-transparent transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1.5">
+                <div className="group h-full p-4 sm:p-6 glass rounded-2xl border-2 border-transparent transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1.5">
                   <div
-                    className={`w-12 h-12 ${tool.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform`}
+                    className={`w-10 h-10 sm:w-12 sm:h-12 ${tool.color} rounded-xl flex items-center justify-center text-white mb-3 sm:mb-6 group-hover:scale-110 transition-transform`}
                   >
-                    <tool.icon size={24} />
+                    <tool.icon size={20} className="sm:hidden" />
+                    <tool.icon size={24} className="hidden sm:block" />
                   </div>
-                  <h3 className="text-xl font-bold mb-2">{tool.name}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">{tool.description}</p>
-                  <div className="text-primary text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <h3 className="text-base sm:text-xl font-bold mb-1.5 sm:mb-2">{tool.name}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-snug sm:leading-relaxed mb-3 sm:mb-6 line-clamp-3 sm:line-clamp-none">{tool.description}</p>
+                  <div className="text-primary text-xs sm:text-sm font-semibold inline-flex items-center gap-1 group-hover:gap-2 transition-all">
                     Launch Tool <ArrowRight size={14} />
                   </div>
                 </div>
@@ -489,21 +491,22 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {featuredPosts.map((post) => (
               <div
                 key={post.slug}
                 className="group h-full flex flex-col rounded-3xl border bg-card/50 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30"
               >
-                <div className="p-7 flex flex-col flex-1">
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-5">
-                    <BookOpen size={18} />
+                <div className="p-4 sm:p-7 flex flex-col flex-1">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-3 sm:mb-5">
+                    <BookOpen size={16} className="sm:hidden" />
+                    <BookOpen size={18} className="hidden sm:block" />
                   </div>
-                  <h3 className="font-bold mb-2 leading-snug flex-shrink-0">{post.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed flex-1 mb-6">{post.excerpt}</p>
+                  <h3 className="text-sm sm:text-base font-bold mb-1.5 sm:mb-2 leading-snug flex-shrink-0 line-clamp-2 sm:line-clamp-none">{post.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-snug sm:leading-relaxed flex-1 mb-3 sm:mb-6 line-clamp-2 sm:line-clamp-none">{post.excerpt}</p>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-primary group-hover:gap-2 transition-all"
+                    className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-primary group-hover:gap-2 transition-all"
                   >
                     Read More <ArrowRight size={14} />
                   </Link>
