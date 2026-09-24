@@ -91,7 +91,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased premium-dark-bg text-foreground selection:bg-primary/20 selection:text-primary">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-24">{children}</main>
         <Footer />
         <Toaster />
         <CookieConsent />
