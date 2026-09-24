@@ -81,6 +81,7 @@ export const toolCategories: ToolCategory[] = [
       { name: "Slug Generator", href: "/tools/slug-generator", icon: Link2 },
       { name: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator", icon: AlignLeft },
       { name: "Text to Speech", href: "/tools/text-to-speech", icon: Volume2 },
+      { name: "AI Content Detector", href: "/tools/ai-content-detector", icon: ScanSearch },
     ],
   },
   {
@@ -109,7 +110,6 @@ export const toolCategories: ToolCategory[] = [
     items: [
       { name: "Unit Converter", href: "/tools/unit-converter", icon: ArrowLeftRight },
       { name: "Percentage Calculator", href: "/tools/percentage-calculator", icon: Percent },
-      { name: "AI Content Detector", href: "/tools/ai-content-detector", icon: ScanSearch },
       { name: "Age Calculator", href: "/tools/age-calculator", icon: Cake },
       { name: "Date Difference", href: "/tools/date-difference-calculator", icon: CalendarRange },
       { name: "EMI Calculator", href: "/tools/emi-calculator", icon: Landmark },

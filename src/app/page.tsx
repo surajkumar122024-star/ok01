@@ -24,6 +24,8 @@ import {
   Gauge,
   Star,
   BookOpen,
+  Film,
+  Braces,
 } from 'lucide-react';
 import { HeroParticlesLoader } from '@/components/HeroParticlesLoader';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
@@ -58,8 +60,15 @@ const categories = [
     gradient: 'from-sky-500 to-cyan-600',
   },
   {
+    name: 'Video Tools',
+    description: 'Compress, convert, and turn videos into GIFs — right in your browser.',
+    icon: Film,
+    href: '/tools#video-tools',
+    gradient: 'from-purple-600 to-indigo-700',
+  },
+  {
     name: 'PDF Utilities',
-    description: 'Merge, split, and convert PDFs to and from images, all in your browser.',
+    description: 'Merge, split, compress, and convert PDFs to and from images, all in your browser.',
     icon: FileText,
     href: '/tools#pdf-utilities',
     gradient: 'from-cyan-600 to-teal-700',
@@ -72,17 +81,24 @@ const categories = [
     gradient: 'from-indigo-600 to-blue-700',
   },
   {
-    name: 'Text & Developer Tools',
-    description: 'Word counter, case converter, JSON formatter, Base64, and more.',
+    name: 'Text Tools',
+    description: 'Word counter, case converter, text repeater, text to speech, and more.',
     icon: Code2,
-    href: '/tools#text-dev-tools',
+    href: '/tools#text-tools',
     gradient: 'from-blue-500 to-indigo-600',
   },
   {
-    name: 'Unit Converter',
-    description: 'Length, weight, temperature, area, volume, speed, data, and time.',
+    name: 'Developer Tools',
+    description: 'Base64, JSON formatter, hash generator, UUID, QR codes, and more.',
+    icon: Braces,
+    href: '/tools#developer-tools',
+    gradient: 'from-slate-600 to-slate-800',
+  },
+  {
+    name: 'Calculators',
+    description: 'Age, EMI, GST, percentage, interest, date, and unit conversions.',
     icon: Maximize,
-    href: '/tools/unit-converter',
+    href: '/tools#calculators',
     gradient: 'from-teal-500 to-blue-600',
   },
 ];
@@ -264,10 +280,10 @@ export default function Home() {
             </span>
             <h2 className="text-3xl md:text-4xl font-bold">Browse by Category</h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              Six categories covering everything from quick image edits to developer utilities.
+              Eight categories covering everything from quick image edits to developer utilities.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {categories.map((cat, i) => (
               <Link key={cat.name} href={cat.href}>
                 <div

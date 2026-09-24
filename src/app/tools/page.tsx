@@ -169,7 +169,7 @@ const tools = [
  {
   name: "Word Counter",
   slug: "word-counter",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Count words, characters, sentences & reading time instantly. Free & private.",
   icon: FileImage,
   color: "bg-slate-500"
@@ -177,7 +177,7 @@ const tools = [
   {
   name: "Case Converter",
   slug: "case-converter",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Convert text to UPPER, lower, Title, camelCase, snake_case & more.",
   icon: FileImage,
   color: "bg-indigo-500"
@@ -185,7 +185,7 @@ const tools = [
   {
   name: "Slug Generator",
   slug: "slug-generator",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Convert any text into a clean URL-friendly slug instantly.",
   icon: FileImage,
   color: "bg-green-600"
@@ -193,7 +193,7 @@ const tools = [
 {
   name: "Password Generator",
   slug: "password-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Generate strong, secure passwords instantly. Nothing stored.",
   icon: FileImage,
   color: "bg-purple-600"
@@ -201,7 +201,7 @@ const tools = [
 {
   name: "Percentage Calculator",
   slug: "percentage-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Calculate percentages, increases, decreases, and discounts instantly.",
   icon: FileImage,
   color: "bg-emerald-600"
@@ -209,7 +209,7 @@ const tools = [
 {
   name: "AI Content Detector",
   slug: "ai-content-detector",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Check text for common signs of AI-generated writing. Free, instant.",
   icon: FileImage,
   color: "bg-violet-600"
@@ -217,7 +217,7 @@ const tools = [
 {
   name: "Age Calculator",
   slug: "age-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Calculate exact age in years, months, and days from a date of birth.",
   icon: FileImage,
   color: "bg-rose-600"
@@ -225,7 +225,7 @@ const tools = [
 {
   name: "Date Difference Calculator",
   slug: "date-difference-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Find the exact number of days, weeks, months, and years between two dates.",
   icon: FileImage,
   color: "bg-pink-600"
@@ -233,7 +233,7 @@ const tools = [
 {
   name: "EMI Calculator",
   slug: "emi-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Calculate monthly EMI for a home, car, or personal loan instantly.",
   icon: FileImage,
   color: "bg-amber-700"
@@ -241,7 +241,7 @@ const tools = [
 {
   name: "GST Calculator",
   slug: "gst-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Add or remove GST from any amount, with CGST/SGST breakdown.",
   icon: FileImage,
   color: "bg-lime-700"
@@ -249,7 +249,7 @@ const tools = [
 {
   name: "Interest Calculator",
   slug: "interest-calculator",
-  category: "text-dev-tools",
+  category: "calculators",
   description: "Calculate simple or compound interest on savings or a loan.",
   icon: FileImage,
   color: "bg-yellow-700"
@@ -257,7 +257,7 @@ const tools = [
 {
   name: "Invoice Generator",
   slug: "invoice-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Create a professional invoice with line items and tax, download as PDF.",
   icon: FileImage,
   color: "bg-violet-700"
@@ -265,7 +265,7 @@ const tools = [
 {
   name: "QR Code Generator",
   slug: "qr-code-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Create a QR code for a URL, text, Wi-Fi, or contact card. Free, instant.",
   icon: FileImage,
   color: "bg-indigo-600"
@@ -273,7 +273,7 @@ const tools = [
 {
   name: "Barcode Generator",
   slug: "barcode-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Generate a scannable barcode — CODE128, EAN-13, UPC, and more. Free, instant.",
   icon: FileImage,
   color: "bg-slate-600"
@@ -281,7 +281,7 @@ const tools = [
   {
   name: "Text Repeater",
   slug: "text-repeater",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Repeat any text any number of times with custom separators.",
   icon: FileImage,
   color: "bg-teal-600"
@@ -289,7 +289,7 @@ const tools = [
   {
   name: "Character Counter",
   slug: "character-counter",
-  category: "text-dev-tools",
+  category: "text-tools",
   description: "Count characters, words & check Twitter, Instagram, LinkedIn limits.",
   icon: FileImage,
   color: "bg-blue-600"
@@ -297,7 +297,7 @@ const tools = [
 {
   name: "Base64 Encoder/Decoder",
   slug: "base64",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Encode or decode Base64 strings instantly. Free & private.",
   icon: FileImage,
   color: "bg-amber-600"
@@ -305,7 +305,7 @@ const tools = [
 {
   name: "URL Encoder/Decoder",
   slug: "url-encoder",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Encode or decode URLs instantly. Free & private.",
   icon: FileImage,
   color: "bg-cyan-600"
@@ -313,7 +313,7 @@ const tools = [
  {
   name: "JSON Formatter",
   slug: "json-formatter",
-  category: "text-dev-tools",
+  category: "developer-tools",
   description: "Format, validate & minify JSON instantly. Free & private.",
   icon: FileImage,
   color: "bg-yellow-500"
@@ -393,7 +393,7 @@ const tools = [
   {
     name: "Unit Converter",
     slug: "unit-converter",
-  category: "unit-converter",
+  category: "calculators",
     description: "Convert length, weight, temperature, area, volume, speed and more instantly. Free & private.",
     icon: Ruler,
     color: "bg-cyan-600"
@@ -433,7 +433,7 @@ const tools = [
   {
     name: "UUID Generator",
     slug: "uuid-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
     description: "Generate random UUID v4 values, bulk up to 50 at once. Free & private.",
     icon: Fingerprint,
     color: "bg-sky-600"
@@ -441,7 +441,7 @@ const tools = [
   {
     name: "Timestamp Converter",
     slug: "timestamp-converter",
-  category: "text-dev-tools",
+  category: "developer-tools",
     description: "Convert Unix timestamps to dates and back, instantly. Free & private.",
     icon: Clock,
     color: "bg-amber-600"
@@ -449,7 +449,7 @@ const tools = [
   {
     name: "Hash Generator",
     slug: "hash-generator",
-  category: "text-dev-tools",
+  category: "developer-tools",
     description: "Generate SHA-1, SHA-256, SHA-384 & SHA-512 hashes from text or files.",
     icon: Hash,
     color: "bg-emerald-600"
@@ -457,7 +457,7 @@ const tools = [
   {
     name: "Lorem Ipsum Generator",
     slug: "lorem-ipsum-generator",
-  category: "text-dev-tools",
+  category: "text-tools",
     description: "Generate placeholder text by words, sentences, or paragraphs.",
     icon: Type,
     color: "bg-indigo-600"
@@ -465,7 +465,7 @@ const tools = [
   {
     name: "Text to Speech",
     slug: "text-to-speech",
-  category: "text-dev-tools",
+  category: "text-tools",
     description: "Read any text aloud using your browser's built-in voices. Free & private.",
     icon: Volume2,
     color: "bg-rose-600"
@@ -473,7 +473,7 @@ const tools = [
   {
     name: "Image to Base64",
     slug: "image-to-base64",
-  category: "text-dev-tools",
+  category: "developer-tools",
     description: "Convert images to Base64 for CSS/HTML, or decode back to an image.",
     icon: Code2,
     color: "bg-teal-600"
@@ -502,11 +502,12 @@ const categoryInfo: Record<string, { title: string; description: string }> = {
   'video-tools': { title: 'Video Tools', description: 'Compress, convert, and turn videos into GIFs — right in your browser.' },
   'pdf-utilities': { title: 'PDF Utilities', description: 'Merge, split, and convert PDFs to and from images, all in your browser.' },
   'document-photos': { title: 'Document Photos', description: 'Aadhaar, PAN, Passport, Visa, and exam photos sized to official specs.' },
-  'text-dev-tools': { title: 'Text & Developer Tools', description: 'Word counter, case converter, JSON formatter, Base64, and more.' },
-  'unit-converter': { title: 'Unit Converter', description: 'Length, weight, temperature, area, volume, speed, data, and time.' },
+  'text-tools': { title: 'Text Tools', description: 'Word counter, case converter, text repeater, text to speech, and more.' },
+  'developer-tools': { title: 'Developer Tools', description: 'Base64, JSON formatter, hash generator, UUID, QR codes, and more.' },
+  'calculators': { title: 'Calculators', description: 'Age, EMI, GST, percentage, interest, date, and unit conversions.' },
 };
 
-const categoryOrder = ['image-tools', 'format-converters', 'video-tools', 'pdf-utilities', 'document-photos', 'text-dev-tools', 'unit-converter'];
+const categoryOrder = ['image-tools', 'format-converters', 'video-tools', 'pdf-utilities', 'document-photos', 'text-tools', 'developer-tools', 'calculators'];
 
 export default function ToolsPage() {
   const grouped = categoryOrder.map((catSlug) => ({
