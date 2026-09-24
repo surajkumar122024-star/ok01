@@ -85,11 +85,11 @@ export default function AboutPage() {
             OpticShift Pro is built and maintained independently by a single developer. It&apos;s not backed by outside investors or a larger company — just one person building tools they wanted to exist, and improving them based on how people actually use them.
           </p>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 border border-border rounded-2xl bg-card/50 backdrop-blur-sm">
-            <div className="shrink-0 w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 border border-border shadow-sm overflow-hidden">
+            <div className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 border border-border shadow-sm overflow-hidden">
               <img
-                src="/signature.png"
+                src="/signature.webp"
                 alt="Suraj Kumar signature"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
             <div className="text-center sm:text-left pt-1">
