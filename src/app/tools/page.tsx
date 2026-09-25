@@ -25,12 +25,12 @@ import {
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'All Tools — 57 Free Image, Video, PDF, Text & Document Tools',
-  description: 'Browse all 57 free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
+  title: 'All Tools — 57+ Free Image, Video, PDF, Text & Document Tools',
+  description: 'Browse all 57+ free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.',
   alternates: { canonical: '/tools' },
   openGraph: {
     title: 'All Tools — OpticShift Pro',
-    description: 'Browse all 57 free browser-based tools for images, videos, PDFs, text, and documents.',
+    description: 'Browse all 57+ free browser-based tools for images, videos, PDFs, text, and documents.',
     type: 'website',
     url: 'https://ok01.vercel.app/tools',
   },
@@ -525,7 +525,7 @@ export default function ToolsPage() {
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">All Tools</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            57 free, browser-based tools for images, PDFs, documents, and text — zero uploads, zero latency, absolute privacy.
+            57+ free, browser-based tools for images, PDFs, documents, and text — zero uploads, zero latency, absolute privacy.
           </p>
         </div>
 
