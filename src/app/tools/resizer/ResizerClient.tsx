@@ -19,6 +19,8 @@ export default function ResizerClient() {
   const [lockAspectRatio, setLockAspectRatio] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
   const [processedBlob, setProcessedBlob] = useState<Blob | null>(null);
+  const [outputWidth, setOutputWidth] = useState(0);
+  const [outputHeight, setOutputHeight] = useState(0);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -70,6 +72,8 @@ export default function ResizerClient() {
     try {
       const blob = await processImage(selectedFile, { width, height });
       setProcessedBlob(blob);
+      setOutputWidth(width);
+      setOutputHeight(height);
       toast({ title: "Success", description: "Image resized successfully." });
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : "Failed to resize image.";
@@ -84,7 +88,9 @@ export default function ResizerClient() {
     const url = URL.createObjectURL(processedBlob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `resized_${selectedFile?.name || 'image'}`;
+    const originalName = selectedFile?.name || 'image';
+    const baseName = originalName.replace(/\.[^.]+$/, '');
+    a.download = `resized_${baseName}.jpg`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -124,7 +130,7 @@ export default function ResizerClient() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="outline" className="flex-1" onClick={handleResize} disabled={isProcessing}>
-                {isProcessing ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Preview Resize"}
+                {isProcessing ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : "Resize Image"}
               </Button>
               <Button className="flex-1 shadow-lg shadow-primary/20" onClick={handleDownload} disabled={!processedBlob || isProcessing}>
                 <Download className="mr-2 h-4 w-4" />
@@ -134,7 +140,7 @@ export default function ResizerClient() {
             {processedBlob && (
               <div className="p-4 bg-green-50 dark:bg-green-900/10 border border-green-200 dark:border-green-800 rounded-lg text-center">
                 <p className="text-sm text-green-700 dark:text-green-400 font-medium">
-                  Image ready at {width}x{height} pixels.
+                  Image ready at {outputWidth || width}×{outputHeight || height} pixels. Click Download Resized Image to save it.
                 </p>
               </div>
             )}
