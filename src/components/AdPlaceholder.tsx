@@ -7,16 +7,15 @@ interface AdPlaceholderProps {
   variant?: 'horizontal' | 'vertical' | 'square';
 }
 
-// Fixed (not min-) heights + overflow-hidden so an unfilled/unapproved ad slot
-// can never blow up the container into a large empty block on mobile.
-const heightMap = {
-  horizontal: 'h-[100px] max-h-[100px]',
-  vertical: 'h-[600px] max-h-[600px]',
-  square: 'h-[250px] max-h-[250px]',
-};
+// Flip this to true once AdSense approval comes through. Until then, the ad
+// slot is skipped entirely — Google's script sometimes reserves unpredictable
+// extra height for an unapproved/unfilled slot, which was causing a large
+// empty gap on the page. Rendering nothing guarantees zero layout impact.
+const ADS_ENABLED = false;
 
 export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlaceholderProps) => {
   useEffect(() => {
+    if (!ADS_ENABLED) return;
     try {
       const w = window as typeof window & { adsbygoogle?: unknown[] };
       (w.adsbygoogle = w.adsbygoogle || []).push({});
@@ -24,6 +23,14 @@ export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlacehold
       // AdSense script may not be loaded yet (e.g. blocked by an ad blocker); safe to ignore.
     }
   }, []);
+
+  if (!ADS_ENABLED) return null;
+
+  const heightMap = {
+    horizontal: 'h-[100px] max-h-[100px]',
+    vertical: 'h-[600px] max-h-[600px]',
+    square: 'h-[250px] max-h-[250px]',
+  };
 
   return (
     <div className={`${className ?? ''} ${heightMap[variant]} w-full flex items-center justify-center overflow-hidden`}>
