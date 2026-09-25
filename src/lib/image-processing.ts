@@ -53,18 +53,30 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
       targetWidth = (naturalWidth / naturalHeight) * options.height;
     }
 
-    // Keep the working canvas safe for mobile devices.
-    const MAX_DIMENSION = 3200;
-    const MAX_PIXELS = 9_000_000;
+    // Do not silently change the user's requested dimensions. Mobile
+    // browsers can fail when a canvas becomes extremely large, so fail
+    // clearly instead of returning an image with unexpected dimensions.
+    const MAX_DIMENSION = 8000;
+    const MAX_PIXELS = 25_000_000;
     const requestedPixels = targetWidth * targetHeight;
-    const safeScale = Math.min(
-      1,
-      MAX_DIMENSION / Math.max(targetWidth, targetHeight),
-      Math.sqrt(MAX_PIXELS / Math.max(1, requestedPixels))
-    );
 
-    targetWidth = Math.max(1, Math.round(targetWidth * safeScale));
-    targetHeight = Math.max(1, Math.round(targetHeight * safeScale));
+    if (
+      !Number.isFinite(targetWidth) ||
+      !Number.isFinite(targetHeight) ||
+      targetWidth < 1 ||
+      targetHeight < 1
+    ) {
+      throw new Error('Width and height must be positive numbers.');
+    }
+
+    if (Math.max(targetWidth, targetHeight) > MAX_DIMENSION || requestedPixels > MAX_PIXELS) {
+      throw new Error(
+        `The requested size is too large for reliable browser processing. Maximum is ${MAX_DIMENSION}px on one side and ${MAX_PIXELS.toLocaleString()} pixels total.`
+      );
+    }
+
+    targetWidth = Math.round(targetWidth);
+    targetHeight = Math.round(targetHeight);
 
     const canvas = document.createElement('canvas');
     canvas.width = targetWidth;
