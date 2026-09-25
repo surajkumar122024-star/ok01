@@ -61,6 +61,7 @@ export default function ImageToTextClient() {
         // actual .wasm.js core file.
         corePath: "/tesseract/core/tesseract-core-lstm.wasm.js",
         langPath: "/tesseract/lang-data",
+        workerBlobURL: false,
         logger: (m: { status: string; progress: number }) => {
           if (m.status === "recognizing text") {
             setProgressLabel("Recognizing text...");
@@ -77,6 +78,10 @@ export default function ImageToTextClient() {
       await worker.terminate();
       workerRef.current = null;
     } catch (e: unknown) {
+      if (workerRef.current) {
+        try { await workerRef.current.terminate(); } catch {}
+        workerRef.current = null;
+      }
       const message = e instanceof Error ? e.message : "Could not extract text from this image.";
       setError(message);
     } finally {
