@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What kind of tools does OpticShift Pro offer?",
     answer:
-      "We offer a growing suite of 57+ tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, compress, image-to-PDF, PDF-to-Word), video tools (MOV to MP4, video compressor, video to GIF), document photos (Aadhaar, PAN, Passport, Visa, exam), calculators (EMI, GST, percentage, age, interest), text and writing tools (word counter, case converter, slug generator, text to speech, AI content detector, Lorem Ipsum generator), and developer utilities (Base64, JSON formatter, URL encoder, QR code, barcode, hash generator, UUID generator, timestamp converter).",
+      "We offer a growing suite of 57 tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, compress, image-to-PDF, PDF-to-Word), video tools (MOV to MP4, video compressor, video to GIF), document photos (Aadhaar, PAN, Passport, Visa, exam), calculators (EMI, GST, percentage, age, interest), text and writing tools (word counter, case converter, slug generator, text to speech, AI content detector, Lorem Ipsum generator), and developer utilities (Base64, JSON formatter, URL encoder, QR code, barcode, hash generator, UUID generator, timestamp converter).",
   },
   {
     question: "Do I need to install any software or create an account?",
