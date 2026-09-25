@@ -49,8 +49,8 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
         // Mobile browsers can fail when a canvas is too large, even when the
         // original file itself is only a few MB. Keep the working canvas within
         // a conservative size while preserving the image aspect ratio.
-        const MAX_DIMENSION = 4096;
-        const MAX_PIXELS = 12_000_000;
+        const MAX_DIMENSION = 3200;
+        const MAX_PIXELS = 9_000_000;
         const requestedPixels = targetWidth * targetHeight;
         const dimensionScale = Math.min(
           1,
@@ -89,6 +89,8 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
           return;
         }
 
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'high';
         ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
 
         const format = options.format || 'image/jpeg';
