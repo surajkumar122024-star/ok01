@@ -157,20 +157,60 @@ export const formatBytes = (bytes: number, decimals = 2) => {
  */
 export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
     const img = new Image();
+    let objectUrl: string | null = null;
+    let settled = false;
 
-    reader.onload = () => {
-      img.src = reader.result as string;
+    const cleanup = () => {
+      if (objectUrl) {
+        URL.revokeObjectURL(objectUrl);
+        objectUrl = null;
+      }
     };
-    reader.onerror = () => {
-      reject(new Error('Failed to read the selected image file.'));
+
+    const fail = (message: string) => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      reject(new Error(message));
     };
-    img.onload = () => resolve(img);
+
+    img.onload = () => {
+      if (settled) return;
+      settled = true;
+      cleanup();
+      resolve(img);
+    };
+
     img.onerror = () => {
-      reject(new Error('Failed to load the selected image. The file may be corrupted or in an unsupported format.'));
+      if (objectUrl) {
+        cleanup();
+        const reader = new FileReader();
+        reader.onload = () => {
+          img.onload = () => {
+            if (settled) return;
+            settled = true;
+            resolve(img);
+          };
+          img.onerror = () => fail('Failed to load the selected image. The file may be corrupted or in an unsupported format.');
+          img.src = reader.result as string;
+        };
+        reader.onerror = () => fail('Failed to read the selected image file.');
+        reader.readAsDataURL(file);
+      } else {
+        fail('Failed to load the selected image. The file may be corrupted or in an unsupported format.');
+      }
     };
-    reader.readAsDataURL(file);
+
+    try {
+      objectUrl = URL.createObjectURL(file);
+      img.src = objectUrl;
+    } catch {
+      const reader = new FileReader();
+      reader.onload = () => { img.src = reader.result as string; };
+      reader.onerror = () => fail('Failed to read the selected image file.');
+      reader.readAsDataURL(file);
+    }
   });
 };
 
