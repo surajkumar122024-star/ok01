@@ -7,10 +7,12 @@ interface AdPlaceholderProps {
   variant?: 'horizontal' | 'vertical' | 'square';
 }
 
-const minHeightMap = {
-  horizontal: 'min-h-[100px]',
-  vertical: 'min-h-[600px]',
-  square: 'min-h-[250px]',
+// Fixed (not min-) heights + overflow-hidden so an unfilled/unapproved ad slot
+// can never blow up the container into a large empty block on mobile.
+const heightMap = {
+  horizontal: 'h-[100px] max-h-[100px]',
+  vertical: 'h-[600px] max-h-[600px]',
+  square: 'h-[250px] max-h-[250px]',
 };
 
 export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlaceholderProps) => {
@@ -24,10 +26,10 @@ export const AdPlaceholder = ({ className, variant = 'horizontal' }: AdPlacehold
   }, []);
 
   return (
-    <div className={`${className ?? ''} ${minHeightMap[variant]} w-full flex items-center justify-center overflow-hidden`}>
+    <div className={`${className ?? ''} ${heightMap[variant]} w-full flex items-center justify-center overflow-hidden`}>
       <ins
         className="adsbygoogle"
-        style={{ display: 'block', width: '100%', height: '100%' }}
+        style={{ display: 'block', width: '100%', height: '100%', overflow: 'hidden' }}
         data-ad-client="ca-pub-6461565201811259"
         data-ad-slot="4220072297"
         data-ad-format="auto"
