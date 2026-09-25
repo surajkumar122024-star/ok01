@@ -21,119 +21,84 @@ function dataURLToBlob(dataUrl: string): Blob {
 }
 
 export const processImage = async (file: File, options: ImageProcessingOptions): Promise<Blob> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    const reader = new FileReader();
+  if (!file || file.size === 0) {
+    throw new Error('The selected image file is empty or unavailable.');
+  }
 
-    // We load the source file via FileReader (data: URL) instead of
-    // URL.createObjectURL (blob: URL). Some mobile browsers/network
-    // configurations (e.g. Data Saver / Lite mode, certain Android
-    // WebViews) fail to reliably load blob: URLs, which silently
-    // breaks image loading. data: URLs are more universally supported.
-    reader.onload = () => {
-      img.src = reader.result as string;
-    };
-    reader.onerror = () => {
-      reject(new Error('Failed to read the selected image file.'));
-    };
-    reader.readAsDataURL(file);
+  if (!file.type.startsWith('image/')) {
+    throw new Error('Please select a valid image file.');
+  }
 
-    img.onload = () => {
-      try {
-        const naturalWidth = img.naturalWidth || img.width;
-        const naturalHeight = img.naturalHeight || img.height;
+  let source: CanvasImageSource;
+  let bitmap: ImageBitmap | null = null;
 
-        let targetWidth = options.width || naturalWidth;
-        let targetHeight = options.height || naturalHeight;
+  try {
+    // Prefer createImageBitmap on modern mobile browsers. It reads the File
+    // directly and avoids fragile FileReader/blob-URL image loading paths.
+    if (typeof createImageBitmap === 'function') {
+      bitmap = await createImageBitmap(file);
+      source = bitmap;
+    } else {
+      source = await loadImageFromFile(file);
+    }
 
-        // Mobile browsers can fail when a canvas is too large, even when the
-        // original file itself is only a few MB. Keep the working canvas within
-        // a conservative size while preserving the image aspect ratio.
-        const MAX_DIMENSION = 3200;
-        const MAX_PIXELS = 9_000_000;
-        const requestedPixels = targetWidth * targetHeight;
-        const dimensionScale = Math.min(
-          1,
-          MAX_DIMENSION / Math.max(targetWidth, targetHeight)
-        );
-        const pixelScale = Math.min(
-          1,
-          Math.sqrt(MAX_PIXELS / Math.max(1, requestedPixels))
-        );
-        const safeScale = Math.min(dimensionScale, pixelScale);
+    const naturalWidth = bitmap?.width || (source as HTMLImageElement).naturalWidth || (source as HTMLImageElement).width;
+    const naturalHeight = bitmap?.height || (source as HTMLImageElement).naturalHeight || (source as HTMLImageElement).height;
 
-        if (safeScale < 1) {
-          targetWidth *= safeScale;
-          targetHeight *= safeScale;
-        }
+    if (!naturalWidth || !naturalHeight) {
+      throw new Error('Could not determine the image dimensions on this device.');
+    }
 
-        // Maintain aspect ratio if only one dimension is provided
-        if (options.width && !options.height) {
-          targetHeight = (naturalHeight / naturalWidth) * options.width;
-        } else if (!options.width && options.height) {
-          targetWidth = (naturalWidth / naturalHeight) * options.height;
-        }
+    let targetWidth = options.width || naturalWidth;
+    let targetHeight = options.height || naturalHeight;
 
-        // Guard against zero, negative, or NaN dimensions which would
-        // otherwise silently produce a broken 0x0 canvas.
-        targetWidth = Math.max(1, Math.round(targetWidth) || naturalWidth);
-        targetHeight = Math.max(1, Math.round(targetHeight) || naturalHeight);
+    if (options.width && !options.height) {
+      targetHeight = (naturalHeight / naturalWidth) * options.width;
+    } else if (!options.width && options.height) {
+      targetWidth = (naturalWidth / naturalHeight) * options.height;
+    }
 
-        const canvas = document.createElement('canvas');
-        canvas.width = targetWidth;
-        canvas.height = targetHeight;
-        const ctx = canvas.getContext('2d');
+    // Keep the working canvas safe for mobile devices.
+    const MAX_DIMENSION = 3200;
+    const MAX_PIXELS = 9_000_000;
+    const requestedPixels = targetWidth * targetHeight;
+    const safeScale = Math.min(
+      1,
+      MAX_DIMENSION / Math.max(targetWidth, targetHeight),
+      Math.sqrt(MAX_PIXELS / Math.max(1, requestedPixels))
+    );
 
-        if (!ctx) {
-          reject(new Error('Failed to get canvas context. Your browser may not support this feature.'));
-          return;
-        }
+    targetWidth = Math.max(1, Math.round(targetWidth * safeScale));
+    targetHeight = Math.max(1, Math.round(targetHeight * safeScale));
 
-        ctx.imageSmoothingEnabled = true;
-        ctx.imageSmoothingQuality = 'high';
-        ctx.drawImage(img, 0, 0, targetWidth, targetHeight);
+    const canvas = document.createElement('canvas');
+    canvas.width = targetWidth;
+    canvas.height = targetHeight;
 
-        const format = options.format || 'image/jpeg';
-        const quality = options.quality !== undefined ? options.quality : 0.8;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) {
+      throw new Error('Your browser could not create an image canvas.');
+    }
 
-        const fallbackToDataURL = () => {
-          try {
-            const dataUrl = canvas.toDataURL(format, quality);
-            resolve(dataURLToBlob(dataUrl));
-          } catch (fallbackErr: unknown) {
-            const message = fallbackErr instanceof Error ? fallbackErr.message : 'unknown error';
-            reject(new Error(`Could not export the resized image on this device (${message}).`));
-          }
-        };
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(source, 0, 0, targetWidth, targetHeight);
 
-        if (typeof canvas.toBlob === 'function') {
-          canvas.toBlob(
-            (blob) => {
-              if (blob) {
-                resolve(blob);
-              } else {
-                // Some mobile browsers return null here instead of throwing.
-                // Fall back to the more universally supported toDataURL path.
-                fallbackToDataURL();
-              }
-            },
-            format,
-            quality
-          );
-        } else {
-          // Very old browsers without toBlob support at all
-          fallbackToDataURL();
-        }
-      } catch (err: unknown) {
-        const message = err instanceof Error ? err.message : 'unknown error';
-        reject(new Error(`Image processing failed: ${message}`));
-      }
-    };
+    const format = options.format || 'image/jpeg';
+    const quality = options.quality !== undefined ? options.quality : 0.8;
 
-    img.onerror = () => {
-      reject(new Error('Failed to load the selected image. The file may be corrupted or in an unsupported format.'));
-    };
-  });
+    const blob = await canvasToBlob(canvas, format, quality);
+    if (!blob || blob.size === 0) {
+      throw new Error('The browser could not create the compressed image.');
+    }
+
+    return blob;
+  } catch (err: unknown) {
+    const message = err instanceof Error ? err.message : 'unknown error';
+    throw new Error(`Image processing failed: ${message}`);
+  } finally {
+    bitmap?.close();
+  }
 };
 
 export const formatBytes = (bytes: number, decimals = 2) => {
