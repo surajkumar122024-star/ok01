@@ -27,7 +27,7 @@ import { AdPlaceholder } from '@/components/AdPlaceholder';
 import { MobileToolSearch } from '@/components/MobileToolSearch';
 
 export const metadata: Metadata = {
-  title: 'All Tools — ${TOOL_COUNT_LABEL} Free Image, Video, PDF, Text & Document Tools',
+  title: `All Tools — ${TOOL_COUNT_LABEL} Free Image, Video, PDF, Text & Document Tools`,
   description: `Browse all ${TOOL_COUNT_LABEL} free tools on OpticShift Pro — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.`,
   alternates: { canonical: '/tools' },
   openGraph: {
