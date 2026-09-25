@@ -23,6 +23,7 @@ import {
   FileType2
 } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
+import { MobileToolSearch } from '@/components/MobileToolSearch';
 
 export const metadata: Metadata = {
   title: 'All Tools — 57+ Free Image, Video, PDF, Text & Document Tools',
@@ -531,6 +532,11 @@ export default function ToolsPage() {
 
         <AdPlaceholder />
 
+        <MobileToolSearch
+          tools={tools.map(({ name, slug, category }) => ({ name, slug, category }))}
+          categories={categoryOrder.map((slug) => ({ slug, title: categoryInfo[slug].title }))}
+        />
+
         {grouped.map((group, i) => (
           <section key={group.slug} id={group.slug} className="scroll-mt-28 space-y-8">
             <div className="space-y-2">
@@ -547,7 +553,7 @@ export default function ToolsPage() {
                     </div>
                     <h3 className="text-base sm:text-2xl font-bold mb-1.5 sm:mb-4">{tool.name}</h3>
                     <p className="text-xs sm:text-base text-muted-foreground leading-snug sm:leading-relaxed flex-grow mb-3 sm:mb-8 line-clamp-3 sm:line-clamp-none">{tool.description}</p>
-                    <div className="inline-flex items-center justify-center h-9 sm:h-12 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-primary text-primary-foreground font-semibold text-xs sm:text-base group-hover:scale-105 transition-all">
+                    <div className="inline-flex items-center justify-center h-11 sm:h-12 px-3 sm:px-6 rounded-lg sm:rounded-xl bg-primary text-primary-foreground font-semibold text-xs sm:text-base group-hover:scale-105 transition-all">
                       Launch Tool <ArrowRight size={16} className="ml-1.5 sm:ml-2" />
                     </div>
                   </div>
