@@ -38,7 +38,7 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
     source = await loadImageFromFile(file);
 
     const naturalWidth = (source as HTMLImageElement).naturalWidth || (source as HTMLImageElement).width;
-    const naturalHeight = bitmap?.height || (source as HTMLImageElement).naturalHeight || (source as HTMLImageElement).height;
+    const naturalHeight = (source as HTMLImageElement).naturalHeight || (source as HTMLImageElement).height;
 
     if (!naturalWidth || !naturalHeight) {
       throw new Error('Could not determine the image dimensions on this device.');
