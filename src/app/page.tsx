@@ -189,10 +189,10 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-20 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-primary/10 to-transparent -z-10 blur-3xl opacity-50" />
         <HeroParticlesLoader />
-        <div className="max-w-7xl mx-auto text-center space-y-8">
+        <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
             <span>57+ free, fast, online browser-based tools, zero uploads</span>
@@ -220,7 +220,7 @@ export default function Home() {
           </div>
 
           {/* Signature: live conversion strip — a small honest demo of what actually happens */}
-          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 fill-mode-both pt-10 flex justify-center" aria-hidden="true">
+          <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-700 fill-mode-both pt-6 md:pt-10 flex justify-center" aria-hidden="true">
             <div className="glass border rounded-2xl px-6 py-5 inline-flex items-center gap-4 sm:gap-6">
               <div className="convert-cycle flex items-center gap-4 sm:gap-6 min-w-[260px] sm:min-w-[320px]">
                 {[
@@ -251,8 +251,24 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <section className="px-4 pb-12">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="pb-8 md:pb-12">
+        {/* Mobile: continuously sliding ticker */}
+        <div className="md:hidden overflow-hidden">
+          <div className="stats-marquee flex items-stretch gap-4 w-max px-4">
+            {[...stats, ...stats].map((stat, i) => (
+              <div
+                key={`${stat.label}-${i}`}
+                className="glass border-2 border-transparent rounded-2xl px-6 py-4 text-center shrink-0 min-w-[150px]"
+              >
+                <div className="text-2xl font-extrabold text-primary">{stat.value}</div>
+                <div className="text-xs text-muted-foreground mt-1 whitespace-nowrap">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: static grid */}
+        <div className="hidden md:grid max-w-5xl mx-auto grid-cols-4 gap-4 px-4">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
@@ -264,6 +280,19 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <style>{`
+          @keyframes stats-marquee-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+          }
+          .stats-marquee {
+            animation: stats-marquee-scroll 16s linear infinite;
+          }
+          .stats-marquee:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Ad Space */}
