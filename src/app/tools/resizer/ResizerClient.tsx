@@ -26,6 +26,9 @@ export default function ResizerClient() {
   useEffect(() => {
     if (selectedFile) {
       let cancelled = false;
+      setProcessedBlob(null);
+      setOutputWidth(0);
+      setOutputHeight(0);
       loadImageFromFile(selectedFile)
         .then((img) => {
           if (cancelled) return;
@@ -70,7 +73,8 @@ export default function ResizerClient() {
     }
     setIsProcessing(true);
     try {
-      const blob = await processImage(selectedFile, { width, height });
+      const format = selectedFile.type === 'image/png' ? 'image/png' : 'image/jpeg';
+      const blob = await processImage(selectedFile, { width, height, format, quality: 0.92 });
       setProcessedBlob(blob);
       setOutputWidth(width);
       setOutputHeight(height);
@@ -90,7 +94,8 @@ export default function ResizerClient() {
     a.href = url;
     const originalName = selectedFile?.name || 'image';
     const baseName = originalName.replace(/\.[^.]+$/, '');
-    a.download = `resized_${baseName}.jpg`;
+    const extension = processedBlob.type === 'image/png' ? 'png' : 'jpg';
+    a.download = `resized_${baseName}.${extension}`;
     a.click();
     URL.revokeObjectURL(url);
   };
