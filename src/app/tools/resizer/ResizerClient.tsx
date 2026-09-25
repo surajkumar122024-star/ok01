@@ -31,9 +31,15 @@ export default function ResizerClient() {
           setHeight(img.naturalHeight || img.height);
           setAspectRatio((img.naturalWidth || img.width) / (img.naturalHeight || img.height));
         })
-        .catch(() => {
+        .catch((err: unknown) => {
           if (!cancelled) {
-            toast({ title: "Error", description: "Couldn't read this image's dimensions on your device.", variant: "destructive" });
+            toast({
+              title: "Error",
+              description: err instanceof Error
+                ? err.message
+                : "Couldn't read this image's dimensions on your device.",
+              variant: "destructive"
+            });
           }
         });
       return () => { cancelled = true; };
