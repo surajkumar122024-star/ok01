@@ -1,5 +1,6 @@
 "use client";
 
+import { TOOL_COUNT_LABEL } from '@/lib/tool-count';
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -7,7 +8,7 @@ const faqs = [
   {
     question: "Is OpticShift Pro really free to use?",
     answer:
-      "Yes. All 57+ tools on OpticShift Pro are completely free with no hidden charges, no subscriptions, and no sign-up required. You can use every tool as many times as you need.",
+      "Yes. All ${TOOL_COUNT_LABEL} tools on OpticShift Pro are completely free with no hidden charges, no subscriptions, and no sign-up required. You can use every tool as many times as you need.",
   },
   {
     question: "Do you upload or store my images and files?",
@@ -17,7 +18,7 @@ const faqs = [
   {
     question: "What kind of tools does OpticShift Pro offer?",
     answer:
-      "We offer a growing suite of 57+ tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, compress, image-to-PDF, PDF-to-Word), video tools (MOV to MP4, video compressor, video to GIF), document photos (Aadhaar, PAN, Passport, Visa, exam), calculators (EMI, GST, percentage, age, interest), text and writing tools (word counter, case converter, slug generator, text to speech, AI content detector, Lorem Ipsum generator), and developer utilities (Base64, JSON formatter, URL encoder, QR code, barcode, hash generator, UUID generator, timestamp converter).",
+      "We offer a growing suite of ${TOOL_COUNT_LABEL} tools across several categories — image tools (compress, resize, crop, rotate, watermark), format converters (JPG, PNG, WebP, HEIC, SVG), PDF tools (merge, split, compress, image-to-PDF, PDF-to-Word), video tools (MOV to MP4, video compressor, video to GIF), document photos (Aadhaar, PAN, Passport, Visa, exam), calculators (EMI, GST, percentage, age, interest), text and writing tools (word counter, case converter, slug generator, text to speech, AI content detector, Lorem Ipsum generator), and developer utilities (Base64, JSON formatter, URL encoder, QR code, barcode, hash generator, UUID generator, timestamp converter).",
   },
   {
     question: "Do I need to install any software or create an account?",
