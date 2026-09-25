@@ -30,25 +30,14 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
   }
 
   let source: CanvasImageSource;
-  let bitmap: ImageBitmap | null = null;
 
   try {
-    // Some Android/Chromium builds expose createImageBitmap but still fail
-    // to decode certain camera/gallery images. Treat it as an optional fast
-    // path and ALWAYS fall back to the data-URL <img> loader if it fails.
-    if (typeof createImageBitmap === 'function') {
-      try {
-        bitmap = await createImageBitmap(file);
-        source = bitmap;
-      } catch {
-        bitmap = null;
-        source = await loadImageFromFile(file);
-      }
-    } else {
-      source = await loadImageFromFile(file);
-    }
+    // Use the same FileReader/data-URL HTMLImageElement path that the
+    // preview uses. This is more reliable on mobile for images that can be
+    // previewed by the browser but cannot be decoded by createImageBitmap.
+    source = await loadImageFromFile(file);
 
-    const naturalWidth = bitmap?.width || (source as HTMLImageElement).naturalWidth || (source as HTMLImageElement).width;
+    const naturalWidth = (source as HTMLImageElement).naturalWidth || (source as HTMLImageElement).width;
     const naturalHeight = bitmap?.height || (source as HTMLImageElement).naturalHeight || (source as HTMLImageElement).height;
 
     if (!naturalWidth || !naturalHeight) {
@@ -102,8 +91,6 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : 'unknown error';
     throw new Error(`Image processing failed: ${message}`);
-  } finally {
-    bitmap?.close();
   }
 };
 
