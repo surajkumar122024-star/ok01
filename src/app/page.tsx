@@ -189,7 +189,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-10 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
+      <section className="relative pt-20 md:pt-32 pb-12 md:pb-20 px-4 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-to-b from-primary/10 to-transparent -z-10 blur-3xl opacity-50" />
         <HeroParticlesLoader />
         <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
@@ -197,14 +197,16 @@ export default function Home() {
             <Zap size={16} fill="currentColor" />
             <span>57+ free, fast, online browser-based tools, zero uploads</span>
           </div>
-          <h1 className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-[28px] sm:text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.2] md:leading-[1.1]">
+          <h1 className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
               Before the Page Even Loads.
             </span>
           </h1>
-          <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-base md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Free image, PDF &amp; text tools — 100% in your browser, nothing ever uploaded.
+          <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            OpticShift Pro is a free suite of image, PDF, and text tools that process everything
+            locally on your device. No server upload, no account, no waiting — just open a tool
+            and get your result.
           </p>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 fill-mode-both flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button size="lg" className="h-14 px-8 text-lg rounded-xl shadow-xl shadow-primary/25 transition-transform duration-300 hover:scale-105" asChild>
