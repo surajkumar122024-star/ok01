@@ -111,7 +111,7 @@ export const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground p-2 focus:outline-none"
+              className="text-foreground w-11 h-11 flex items-center justify-center rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -127,7 +127,7 @@ export const Navbar = () => {
               href="/"
               onClick={() => setIsOpen(false)}
               className={cn(
-                "block px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-muted",
+                "block px-3 py-3 rounded-md text-base font-medium transition-colors hover:bg-muted",
                 pathname === "/" ? "text-primary" : "text-muted-foreground"
               )}
             >
@@ -139,7 +139,7 @@ export const Navbar = () => {
               <button
                 onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
                 className={cn(
-                  "w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium transition-colors hover:bg-muted",
+                  "w-full flex items-center justify-between px-3 py-3 rounded-md text-base font-medium transition-colors hover:bg-muted",
                   pathname.startsWith("/tools") ? "text-primary" : "text-muted-foreground"
                 )}
               >
@@ -160,7 +160,7 @@ export const Navbar = () => {
                             key={tool.href}
                             href={tool.href}
                             onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
-                            className="flex items-center gap-2.5 px-2 py-2 rounded-md text-sm text-foreground hover:bg-muted transition-colors"
+                            className="flex items-center gap-2.5 px-2 py-2.5 rounded-md text-sm text-foreground hover:bg-muted transition-colors min-h-11"
                           >
                             <Icon size={15} className="flex-shrink-0 text-primary" />
                             {tool.name}
@@ -172,7 +172,7 @@ export const Navbar = () => {
                   <Link
                     href="/tools"
                     onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
-                    className="block px-2 py-2 text-sm font-semibold text-primary"
+                    className="block px-2 py-3 text-sm font-semibold text-primary"
                   >
                     View All Tools →
                   </Link>
