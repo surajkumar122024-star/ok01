@@ -21,6 +21,7 @@ export default function CompressorClient() {
   const handleProcess = async () => {
     if (!selectedFile) return;
     setIsProcessing(true);
+    setProcessedBlob(null);
     try {
       const blob = await processImage(selectedFile, { quality: quality / 100 });
       setProcessedBlob(blob);
