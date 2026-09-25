@@ -1,3 +1,4 @@
+import { TOOL_COUNT_LABEL } from '@/lib/tool-count';
 import Link from 'next/link';
 import { Zap, Image as ImageIcon, FileText, Code2, FileImage } from 'lucide-react';
 
@@ -42,7 +43,7 @@ export const Footer = () => {
               <span className="text-lg font-bold">OpticShift Pro</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              57+ free, browser-based image, PDF, and text tools. Every file is processed locally
+              ${TOOL_COUNT_LABEL} free, browser-based image, PDF, and text tools. Every file is processed locally
               on your device — nothing is ever uploaded to a server.
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground pt-1">
