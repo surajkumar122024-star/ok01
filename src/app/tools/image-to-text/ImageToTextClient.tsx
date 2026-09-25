@@ -56,11 +56,11 @@ export default function ImageToTextClient() {
       const { createWorker } = await import("tesseract.js");
       const worker = await createWorker(language, 1, {
         workerPath: "/tesseract/worker.min.js",
-        // Point directly to the local Tesseract core loader. Passing the
-        // directory here can fail on mobile because Tesseract expects the
-        // actual .wasm.js core file.
-        corePath: "/tesseract/core/tesseract-core-lstm.wasm.js",
-        langPath: "/tesseract/lang-data",
+        // Keep the worker local, but use Tesseract's official jsDelivr
+        // core/language-data distribution. This supports every language in
+        // the selector instead of silently failing for languages whose
+        // traineddata files are not bundled in the app.
+        corePath: "https://cdn.jsdelivr.net/npm/tesseract.js-core@7.0.0",
         workerBlobURL: false,
         logger: (m: { status: string; progress: number }) => {
           if (m.status === "recognizing text") {
