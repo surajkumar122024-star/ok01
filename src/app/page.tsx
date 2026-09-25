@@ -399,7 +399,7 @@ export default function Home() {
           <div className="text-center">
             <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
               <Link href="/tools">
-                View All ${TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
+                View All {TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>
@@ -820,7 +820,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button size="lg" className="h-14 px-10 rounded-xl text-lg shadow-xl shadow-primary/25" asChild>
                 <Link href="/tools">
-                  Explore All ${TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
+                  Explore All {TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="h-14 px-10 rounded-xl text-lg glass" asChild>
