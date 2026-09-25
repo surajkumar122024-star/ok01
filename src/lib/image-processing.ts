@@ -33,11 +33,17 @@ export const processImage = async (file: File, options: ImageProcessingOptions):
   let bitmap: ImageBitmap | null = null;
 
   try {
-    // Prefer createImageBitmap on modern mobile browsers. It reads the File
-    // directly and avoids fragile FileReader/blob-URL image loading paths.
+    // Some Android/Chromium builds expose createImageBitmap but still fail
+    // to decode certain camera/gallery images. Treat it as an optional fast
+    // path and ALWAYS fall back to the data-URL <img> loader if it fails.
     if (typeof createImageBitmap === 'function') {
-      bitmap = await createImageBitmap(file);
-      source = bitmap;
+      try {
+        bitmap = await createImageBitmap(file);
+        source = bitmap;
+      } catch {
+        bitmap = null;
+        source = await loadImageFromFile(file);
+      }
     } else {
       source = await loadImageFromFile(file);
     }
@@ -113,12 +119,8 @@ export const formatBytes = (bytes: number, decimals = 2) => {
 /**
  * Loads a File into an HTMLImageElement via FileReader (data: URL) rather
  * than URL.createObjectURL (blob: URL). Some mobile browsers/network
- * configurations (Data Saver / Lite mode, certain Android WebViews, some
- * iOS Safari versions) fail to reliably load blob: URLs into <img>, which
- * silently breaks image loading. data: URLs are more universally supported.
- *
- * Use this instead of `new Image(); img.src = URL.createObjectURL(file)`
- * in any tool that draws an uploaded image onto a canvas.
+ * configurations fail to reliably load blob: URLs into <img>. The
+ * data-URL path is also the fallback for createImageBitmap failures.
  */
 export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
   return new Promise((resolve, reject) => {
@@ -182,8 +184,7 @@ export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
 /**
  * canvas.toBlob(), with a fallback to canvas.toDataURL() for browsers
  * (mostly older Android WebViews) that return null from toBlob() instead
- * of throwing. Use this instead of calling canvas.toBlob() directly in
- * any tool that exports a canvas as a downloadable file.
+ * of throwing.
  */
 export const canvasToBlob = (canvas: HTMLCanvasElement, type: string, quality?: number): Promise<Blob> => {
   return new Promise((resolve, reject) => {
