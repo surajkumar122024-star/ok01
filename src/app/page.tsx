@@ -290,35 +290,37 @@ export default function Home() {
                 title: 'Image Compressor',
                 desc: 'Drag, compress, download — all in-browser, no upload to any server.',
                 badge: '100% Client-Side',
+                image: '/preview-compressor.png',
+                href: '/tools/compressor',
               },
               {
                 title: 'Image Format Converter',
                 desc: 'Convert between JPG, PNG, WebP, GIF, BMP and ICO from one screen.',
                 badge: '6 Formats',
+                image: '/preview-converter.png',
+                href: '/tools/image-converter',
               },
               {
                 title: 'PDF Compressor',
                 desc: 'Shrink PDF file size while keeping text and image quality intact.',
                 badge: 'Free · No Signup',
+                image: '/preview-pdf-compressor.png',
+                href: '/tools/pdf-compressor',
               },
             ].map((card, i) => (
-              <div
+              <Link
                 key={card.title}
-                className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both glass border-2 border-transparent rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-primary/10"
+                href={card.href}
+                className="animate-in fade-in slide-in-from-bottom-4 fill-mode-both glass border-2 border-transparent rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/40 hover:-translate-y-1.5 hover:shadow-lg hover:shadow-primary/10 block"
                 style={{ animationDuration: '700ms', animationDelay: `${i * 100}ms` }}
               >
-                <div className="aspect-video bg-muted/40 border-b flex flex-col">
-                  <div className="flex items-center gap-1.5 px-3 py-2 bg-black/10 border-b">
-                    <span className="w-2 h-2 rounded-full bg-muted-foreground/30" />
-                    <span className="w-2 h-2 rounded-full bg-muted-foreground/30" />
-                    <span className="w-2 h-2 rounded-full bg-muted-foreground/30" />
-                  </div>
-                  <div className="flex-1 p-4 flex flex-col gap-2">
-                    <div className="h-2.5 w-2/5 rounded bg-primary/70" />
-                    <div className="flex-1 mt-2 rounded-lg border-2 border-dashed border-muted-foreground/20 flex items-center justify-center text-muted-foreground text-xs">
-                      Preview
-                    </div>
-                  </div>
+                <div className="aspect-video bg-muted/40 border-b overflow-hidden relative">
+                  <img
+                    src={card.image}
+                    alt={`${card.title} tool interface preview`}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-5 text-left">
                   <h3 className="font-semibold text-lg mb-1.5">{card.title}</h3>
@@ -327,7 +329,7 @@ export default function Home() {
                     {card.badge}
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
