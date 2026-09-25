@@ -1,3 +1,4 @@
+import { TOOL_COUNT_LABEL } from '@/lib/tool-count';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { Button } from '@/components/ui/button';
@@ -33,12 +34,11 @@ import { FaqSection } from '@/components/FaqSection';
 
 export const metadata: Metadata = {
   title: 'OpticShift Pro — Free Browser-Based Image, PDF & Text Tools',
-  description:
-    'OpticShift Pro offers 57+ free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.',
+  description: `OpticShift Pro offers ${TOOL_COUNT_LABEL} free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.`,
 };
 
 const stats = [
-  { label: 'Free tools', value: '57+' },
+  { label: 'Free tools', value: TOOL_COUNT_LABEL },
   { label: 'Files uploaded to servers', value: '0' },
   { label: 'Sign-up required', value: 'None' },
   { label: 'Cost to use', value: '$0' },
@@ -195,7 +195,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
-            <span>57+ free, fast, online browser-based tools, zero uploads</span>
+            <span>{TOOL_COUNT_LABEL} free, fast, online browser-based tools, zero uploads</span>
           </div>
           <h1 className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
@@ -399,7 +399,7 @@ export default function Home() {
           <div className="text-center">
             <Button size="lg" variant="outline" className="rounded-xl glass" asChild>
               <Link href="/tools">
-                View All 57+ Tools <ArrowRight className="ml-2" size={18} />
+                View All ${TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
               </Link>
             </Button>
           </div>
@@ -504,7 +504,7 @@ export default function Home() {
                 icon: MousePointerClick,
                 step: '01',
                 title: 'Choose a Tool',
-                description: 'Pick from 57+ tools organized by category — image, PDF, or text.',
+                description: `Pick from ${TOOL_COUNT_LABEL} tools organized by category — image, PDF, or text.`,
               },
               {
                 icon: Zap,
@@ -820,7 +820,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button size="lg" className="h-14 px-10 rounded-xl text-lg shadow-xl shadow-primary/25" asChild>
                 <Link href="/tools">
-                  Explore All 57+ Tools <ArrowRight className="ml-2" size={18} />
+                  Explore All ${TOOL_COUNT_LABEL} Tools <ArrowRight className="ml-2" size={18} />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="h-14 px-10 rounded-xl text-lg glass" asChild>
