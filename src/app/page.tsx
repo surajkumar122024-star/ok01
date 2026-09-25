@@ -251,24 +251,8 @@ export default function Home() {
       </section>
 
       {/* Stats Bar */}
-      <section className="pb-8 md:pb-12">
-        {/* Mobile: continuously sliding ticker */}
-        <div className="md:hidden overflow-hidden">
-          <div className="stats-marquee flex items-stretch gap-4 w-max px-4">
-            {[...stats, ...stats].map((stat, i) => (
-              <div
-                key={`${stat.label}-${i}`}
-                className="glass border-2 border-transparent rounded-2xl px-6 py-4 text-center shrink-0 min-w-[150px]"
-              >
-                <div className="text-2xl font-extrabold text-primary">{stat.value}</div>
-                <div className="text-xs text-muted-foreground mt-1 whitespace-nowrap">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Desktop: static grid */}
-        <div className="hidden md:grid max-w-5xl mx-auto grid-cols-4 gap-4 px-4">
+      <section className="px-4 pb-8 md:pb-12">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
@@ -280,19 +264,6 @@ export default function Home() {
             </div>
           ))}
         </div>
-
-        <style>{`
-          @keyframes stats-marquee-scroll {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-          }
-          .stats-marquee {
-            animation: stats-marquee-scroll 16s linear infinite;
-          }
-          .stats-marquee:hover {
-            animation-play-state: paused;
-          }
-        `}</style>
       </section>
 
       {/* Ad Space */}
