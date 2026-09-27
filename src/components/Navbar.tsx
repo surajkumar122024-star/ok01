@@ -57,7 +57,7 @@ export const Navbar = () => {
               priority
               className="w-10 h-10 rounded-xl object-cover shadow-lg group-hover:scale-105 transition-transform"
             />
-            <span className="text-xl font-bold tracking-tight text-foreground">OLD TOOLS <span className="text-primary">Pro</span></span>
+            <span className="text-xl font-bold tracking-tight text-foreground">OLD TOOLS</span>
           </Link>
 
           {/* Desktop Nav */}
