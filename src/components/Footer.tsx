@@ -1,6 +1,7 @@
 import { TOOL_COUNT_LABEL } from '@/lib/tool-count';
 import Link from 'next/link';
-import { Zap, Image as ImageIcon, FileText, Code2, FileImage } from 'lucide-react';
+import { Image as ImageIcon, FileText, Code2, FileImage } from 'lucide-react';
+import Image from 'next/image';
 
 // ✅ Sirf yahan add karo naya tool — footer automatically update ho jayega
 const popularTools = [
@@ -37,10 +38,15 @@ export const Footer = () => {
           {/* Brand + description — spans 2 columns */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <div className="w-9 h-9 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
-                <Zap size={18} fill="currentColor" />
-              </div>
-              <span className="text-lg font-bold">OpticShift Pro</span>
+              <Image
+                src="/old-tools-logo.svg"
+                alt="OLD TOOLS"
+                width={36}
+                height={36}
+                unoptimized
+                className="w-9 h-9 rounded-2xl object-cover shadow-lg shadow-primary/20 ring-1 ring-black/10"
+              />
+              <span className="text-lg font-bold">OLD TOOLS</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               {TOOL_COUNT_LABEL} free, browser-based image, PDF, and text tools. Every file is processed locally
@@ -130,7 +136,7 @@ export const Footer = () => {
         {/* Bottom bar */}
         <div className="py-6 border-t flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-muted-foreground text-center sm:text-left">
-            &copy; {new Date().getFullYear()} OpticShift Pro. All rights reserved.
+            &copy; {new Date().getFullYear()} OLD TOOLS. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground text-center sm:text-right">
             Built for people who&apos;d rather their files stay on their own device.

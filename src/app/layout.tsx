@@ -8,10 +8,10 @@ import { Toaster } from '@/components/ui/toaster';
 import { CookieConsent } from '@/components/CookieConsent';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ok01.vercel.app'),
+  metadataBase: new URL('https://oldtools.online'),
   title: {
-    default: 'OpticShift Pro — Free Online Image Tools',
-    template: '%s | OpticShift Pro',
+    default: 'OLD TOOLS — Free Online Image Tools',
+    template: '%s | OLD TOOLS',
   },
   description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
   keywords: 'image compressor, image resizer, jpg to png, png to jpg, pdf to image, webp converter, free image tools',
@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     google: 'GGvF0UPj84iXp1cP1DJ_wHErlNISZjBJvqL34DwgOOY',
   },
   openGraph: {
-    title: 'OpticShift Pro — Free Online Image Tools',
+    title: 'OLD TOOLS — Free Online Image Tools',
     description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
     type: 'website',
-    url: 'https://ok01.vercel.app',
+    url: 'https://oldtools.online',
   },
 };
 
@@ -46,17 +46,17 @@ export default function RootLayout({
               '@graph': [
                 {
                   '@type': 'Organization',
-                  '@id': 'https://ok01.vercel.app/#organization',
-                  name: 'OpticShift Pro',
-                  url: 'https://ok01.vercel.app',
-                  logo: 'https://ok01.vercel.app/favicon.ico',
+                  '@id': 'https://oldtools.online/#organization',
+                  name: 'OLD TOOLS',
+                  url: 'https://oldtools.online',
+                  logo: 'https://oldtools.online/old-tools-logo.svg',
                 },
                 {
                   '@type': 'WebSite',
-                  '@id': 'https://ok01.vercel.app/#website',
-                  name: 'OpticShift Pro',
-                  url: 'https://ok01.vercel.app',
-                  publisher: { '@id': 'https://ok01.vercel.app/#organization' },
+                  '@id': 'https://oldtools.online/#website',
+                  name: 'OLD TOOLS',
+                  url: 'https://oldtools.online',
+                  publisher: { '@id': 'https://oldtools.online/#organization' },
                 },
               ],
             }),

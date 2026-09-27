@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Zap, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -51,7 +52,7 @@ export const Navbar = () => {
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
               <Zap size={24} fill="currentColor" />
             </div>
-            <span className="text-xl font-bold tracking-tight text-foreground">OpticShift <span className="text-primary">Pro</span></span>
+            <span className="text-xl font-bold tracking-tight text-foreground">OLD TOOLS <span className="text-primary">Pro</span></span>
           </Link>
 
           {/* Desktop Nav */}

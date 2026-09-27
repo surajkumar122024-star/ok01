@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-const BASE_URL = 'https://ok01.vercel.app'
+const BASE_URL = 'https://oldtools.online'
 
 const tools = [
   'compressor',
