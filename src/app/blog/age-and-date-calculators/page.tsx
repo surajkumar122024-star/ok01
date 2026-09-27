@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How Old Am I Exactly? Age & Date Calculators Explained — OpticShift Pro',
+  title: 'How Old Am I Exactly? Age & Date Calculators Explained — OLD TOOLS',
   description: 'How to calculate exact age in years, months, and days, and how to count days between two dates correctly — including the one detail most people get wrong.',
   keywords: 'age calculator, how old am i, date difference calculator, days between dates, calculate age from date of birth',
   alternates: { canonical: '/blog/age-and-date-calculators' },

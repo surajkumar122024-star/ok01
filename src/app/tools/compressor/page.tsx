@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image Compressor — Reduce File Size Free | OpticShift Pro',
+  title: 'Image Compressor — Reduce File Size Free | OLD TOOLS',
   description: 'Compress JPG and PNG images online for free. Reduce file size up to 90% without losing quality. 100% browser-based, no upload needed.',
   keywords: 'image compressor, compress image online, reduce image size, jpg compressor, png compressor, free image compressor',
   openGraph: {
@@ -26,7 +26,7 @@ export default function CompressorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/compressor',
+            url: 'https://oldtools.online/tools/compressor',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

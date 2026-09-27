@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service — OpticShift Pro',
-  description: 'The terms and conditions governing your use of OpticShift Pro\'s free, browser-based image, PDF, and text tools.',
+  title: 'Terms of Service — OLD TOOLS',
+  description: 'The terms and conditions governing your use of OLD TOOLS\'s free, browser-based image, PDF, and text tools.',
   alternates: { canonical: '/terms' },
 };
 
@@ -37,7 +37,7 @@ export default function TermsPage() {
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Terms of Service</h1>
           <p className="text-muted-foreground">
-            The rules and conditions for using OpticShift Pro, written to be as clear and
+            The rules and conditions for using OLD TOOLS, written to be as clear and
             readable as a legal document can be.
           </p>
           <p className="text-sm text-muted-foreground italic">Last Updated: July 2026</p>
@@ -65,9 +65,9 @@ export default function TermsPage() {
           <section id="introduction" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">1. Introduction</h2>
             <p className="leading-relaxed text-muted-foreground">
-              Welcome to OpticShift Pro (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), a free
+              Welcome to OLD TOOLS (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), a free
               suite of browser-based image, PDF, and text tools available at{' '}
-              <strong className="text-foreground">ok01.vercel.app</strong>. These Terms of Service
+              <strong className="text-foreground">oldtools.online</strong>. These Terms of Service
               (&quot;Terms&quot;) govern your access to and use of our website and tools. They exist
               to set clear, fair expectations for both you and us, and to explain what you can do
               here, what you can&apos;t, and what happens if something goes wrong.
@@ -83,7 +83,7 @@ export default function TermsPage() {
           <section id="acceptance" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">2. Acceptance of Terms</h2>
             <p className="leading-relaxed text-muted-foreground">
-              By accessing or using OpticShift Pro in any way — browsing the site, using a tool,
+              By accessing or using OLD TOOLS in any way — browsing the site, using a tool,
               reading the blog — you agree to be bound by these Terms and by our{' '}
               <Link href="/privacy" className="text-primary underline underline-offset-2">
                 Privacy Policy
@@ -102,7 +102,7 @@ export default function TermsPage() {
           <section id="eligibility" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">3. Eligibility</h2>
             <p className="leading-relaxed text-muted-foreground">
-              OpticShift Pro is intended for general audiences and does not knowingly collect
+              OLD TOOLS is intended for general audiences and does not knowingly collect
               personal information from anyone, including children, since our tools do not require
               account creation and process files locally in your browser rather than on a server.
               There is no age-verification step because there is no account system to verify
@@ -120,7 +120,7 @@ export default function TermsPage() {
             <h2 className="text-2xl font-bold">4. Permitted Use</h2>
             <p className="leading-relaxed text-muted-foreground">
               We grant you a limited, non-exclusive, non-transferable license to access and use
-              OpticShift Pro&apos;s tools for personal or commercial purposes, subject to these
+              OLD TOOLS&apos;s tools for personal or commercial purposes, subject to these
               Terms. This is a license to use the service, not a transfer of ownership of the
               underlying website, code, or content.
             </p>
@@ -143,7 +143,7 @@ export default function TermsPage() {
           <section id="prohibited-activities" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-4">
             <h2 className="text-2xl font-bold">5. Prohibited Activities</h2>
             <p className="leading-relaxed text-muted-foreground">
-              While using OpticShift Pro, you agree not to:
+              While using OLD TOOLS, you agree not to:
             </p>
             <div className="space-y-3">
               <h3 className="text-base font-semibold text-foreground">Legal &amp; Security</h3>
@@ -172,8 +172,8 @@ export default function TermsPage() {
           <section id="intellectual-property" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">6. Intellectual Property</h2>
             <p className="leading-relaxed text-muted-foreground">
-              The OpticShift Pro name, logo, website design, blog content, and underlying source
-              code are the property of OpticShift Pro and are protected by applicable copyright and
+              The OLD TOOLS name, logo, website design, blog content, and underlying source
+              code are the property of OLD TOOLS and are protected by applicable copyright and
               trademark laws. Nothing in these Terms grants you any right to use our branding,
               trademarks, blog articles, or proprietary code outside of normal use of the website
               as intended — for example, you may not republish our blog articles elsewhere without
@@ -205,7 +205,7 @@ export default function TermsPage() {
           <section id="browser-processing" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">8. Browser-Based Processing</h2>
             <p className="leading-relaxed text-muted-foreground">
-              A core part of how OpticShift Pro works — and an important term for you to understand
+              A core part of how OLD TOOLS works — and an important term for you to understand
               — is that all file processing (compressing, resizing, converting, cropping, and so
               on) happens entirely within your own web browser using JavaScript and the Canvas API.
               Your files are never uploaded to, stored on, or transmitted through our servers.
@@ -224,7 +224,7 @@ export default function TermsPage() {
             <div className="space-y-3">
               <h3 className="text-base font-semibold text-foreground">General Disclaimer</h3>
               <p className="leading-relaxed text-muted-foreground">
-                OpticShift Pro and its tools are provided on an &quot;as is&quot; and &quot;as
+                OLD TOOLS and its tools are provided on an &quot;as is&quot; and &quot;as
                 available&quot; basis, without warranties of any kind, whether express or implied,
                 including but not limited to implied warranties of merchantability, fitness for a
                 particular purpose, or non-infringement. We do not guarantee that the site will be
@@ -246,7 +246,7 @@ export default function TermsPage() {
           <section id="limitation-of-liability" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">10. Limitation of Liability</h2>
             <p className="leading-relaxed text-muted-foreground">
-              To the fullest extent permitted by applicable law, OpticShift Pro and its operator
+              To the fullest extent permitted by applicable law, OLD TOOLS and its operator
               shall not be liable for any indirect, incidental, special, consequential, or punitive
               damages, including but not limited to loss of data, loss of profits, or business
               interruption, arising out of or related to your use of, or inability to use, this
@@ -297,7 +297,7 @@ export default function TermsPage() {
           <section id="termination" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">13. Termination</h2>
             <p className="leading-relaxed text-muted-foreground">
-              Since OpticShift Pro does not require accounts, there is generally nothing for us to
+              Since OLD TOOLS does not require accounts, there is generally nothing for us to
               &quot;terminate&quot; on an individual basis. However, we reserve the right to block
               or restrict access to the website, in whole or in part, for any user or network found
               to be engaging in prohibited activities as described in Section 5, at our discretion

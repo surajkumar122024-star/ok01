@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Slug Generator for SEO: Create Perfect URL Slugs Instantly (2026) — OpticShift Pro',
+  title: 'Slug Generator for SEO: Create Perfect URL Slugs Instantly (2026) — OLD TOOLS',
   description: 'Learn how to generate clean, SEO-friendly URL slugs online for free. Complete guide to writing better URLs for blogs, products, and web pages.',
   keywords: 'slug generator, free online tool, slug generator guide',
   alternates: { canonical: '/blog/slug-generator-for-seo' },

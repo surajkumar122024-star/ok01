@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image Format Converter — JPG, PNG, WebP, GIF, BMP, ICO | OpticShift Pro',
+  title: 'Image Format Converter — JPG, PNG, WebP, GIF, BMP, ICO | OLD TOOLS',
   description: 'Convert images between JPG, PNG, WebP, GIF, BMP, and ICO online for free, in your browser. No upload, 100% private and instant.',
   keywords: 'image format converter online, convert jpg to ico, convert png to gif online, convert image to bmp free, universal image converter',
   openGraph: {
@@ -26,7 +26,7 @@ export default function ImageConverterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-converter',
+            url: 'https://oldtools.online/tools/image-converter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

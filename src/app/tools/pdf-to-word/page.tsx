@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'PDF to Word Converter — Free Text Extraction | OpticShift Pro',
+  title: 'PDF to Word Converter — Free Text Extraction | OLD TOOLS',
   description: 'Extract text from a PDF into an editable Word (.docx) document, free. Best for simple, text-based PDFs. No upload — processed in your browser.',
   keywords: 'pdf to word, pdf to docx, convert pdf to word online, pdf text extractor, free pdf to word converter',
   alternates: { canonical: '/tools/pdf-to-word' },
@@ -21,7 +21,7 @@ export default function PdfToWordPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/pdf-to-word',
+            url: 'https://oldtools.online/tools/pdf-to-word',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

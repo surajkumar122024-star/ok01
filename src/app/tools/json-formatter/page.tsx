@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'JSON Formatter & Validator Online — Free | OpticShift Pro',
+  title: 'JSON Formatter & Validator Online — Free | OLD TOOLS',
   description: 'Format, validate, and minify JSON online for free. Instant JSON beautifier and pretty print, right in your browser.',
   keywords: 'json formatter online, json beautifier free, validate json online, minify json online, json pretty print tool',
   alternates: { canonical: '/tools/json-formatter' },
@@ -20,7 +20,7 @@ export default function JsonFormatterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/json-formatter',
+            url: 'https://oldtools.online/tools/json-formatter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

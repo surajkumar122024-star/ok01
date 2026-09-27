@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { CookiePreferencesButton } from "@/components/CookiePreferencesButton";
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — OpticShift Pro',
-  description: 'How OpticShift Pro handles your data. Every tool runs in your browser — files are never uploaded to a server.',
+  title: 'Privacy Policy — OLD TOOLS',
+  description: 'How OLD TOOLS handles your data. Every tool runs in your browser — files are never uploaded to a server.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -16,9 +16,9 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">1. Introduction</h2>
         <p className="leading-relaxed">
-          Welcome to <strong>OpticShift Pro</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting
+          Welcome to <strong>OLD TOOLS</strong> (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;). We are committed to protecting
           your privacy. This Privacy Policy explains how we collect, use, and safeguard information
-          when you visit our website at <strong>ok01.vercel.app</strong> and use our image processing tools.
+          when you visit our website at <strong>oldtools.online</strong> and use our image processing tools.
           Please read this policy carefully. By using our site, you agree to the practices described here.
         </p>
       </section>
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">2. Information We DO NOT Collect</h2>
         <p className="leading-relaxed mb-3">
-          OpticShift Pro is built on a privacy-first architecture. All image processing happens
+          OLD TOOLS is built on a privacy-first architecture. All image processing happens
           entirely within your web browser using HTML5 Canvas and JavaScript APIs.
           <strong> Your images are never uploaded to our servers.</strong> We do not collect, store,
           or transmit any image data you process using our tools.
@@ -160,9 +160,9 @@ export default function PrivacyPage() {
           If you have any questions about this Privacy Policy or our privacy practices, please contact us:
         </p>
         <div className="mt-3 p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border">
-          <p className="font-medium text-foreground">OpticShift Pro</p>
+          <p className="font-medium text-foreground">OLD TOOLS</p>
           <p>Email: <a href="mailto:rrok86383@gmail.com" className="text-primary underline hover:text-primary/80">rrok86383@gmail.com</a></p>
-          <p>Website: <a href="https://ok01.vercel.app" className="text-primary underline hover:text-primary/80">ok01.vercel.app</a></p>
+          <p>Website: <a href="https://oldtools.online" className="text-primary underline hover:text-primary/80">oldtools.online</a></p>
         </div>
       </section>
     </main>

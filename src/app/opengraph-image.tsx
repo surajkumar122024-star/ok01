@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'OpticShift Pro — Free Online Image, PDF & Text Tools'
+export const alt = 'OLD TOOLS — Free Online Image, PDF & Text Tools'
 export const size = {
   width: 1200,
   height: 630,
@@ -49,7 +49,7 @@ export default async function Image() {
             </svg>
           </div>
           <div style={{ display: 'flex', fontSize: 64, fontWeight: 700, color: '#0f172a' }}>
-            OpticShift <span style={{ color: '#2563eb', marginLeft: 16 }}>Pro</span>
+            OLD TOOLS <span style={{ color: '#2563eb', marginLeft: 16 }}>Pro</span>
           </div>
         </div>
         <div

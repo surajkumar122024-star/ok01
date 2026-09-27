@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert PNG to JPG Online — Free & Instant | OpticShift Pro',
+  title: 'How to Convert PNG to JPG Online — Free & Instant | OLD TOOLS',
   description: 'Convert PNG images to JPG format online for free. Reduce file size by up to 80% instantly in your browser with zero uploads and full privacy.',
   keywords: 'png to jpg, convert png to jpg, png to jpeg online, free png converter, png to jpg no upload',
   alternates: { canonical: '/blog/how-to-convert-png-to-jpg' },
@@ -76,10 +76,10 @@ export default function PngToJpgArticle() {
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">How to Convert PNG to JPG Online for Free</h2>
           <p>
-            OpticShift Pro makes PNG to JPG conversion incredibly simple. Here is how to do it:
+            OLD TOOLS makes PNG to JPG conversion incredibly simple. Here is how to do it:
           </p>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>Open the <strong>PNG to JPG</strong> converter tool on OpticShift Pro.</li>
+            <li>Open the <strong>PNG to JPG</strong> converter tool on OLD TOOLS.</li>
             <li>Upload your PNG image by clicking the upload area or dragging and dropping the file.</li>
             <li>The tool automatically converts your PNG to a JPG at 92% quality — a level chosen because it&apos;s high enough that compression artifacts are rarely visible, while still delivering a meaningfully smaller file.</li>
             <li>Click Download to save your converted JPG file.</li>
@@ -117,7 +117,7 @@ export default function PngToJpgArticle() {
 
           <h2 id="quality-ref" className="text-2xl font-bold mt-8">JPG Quality Reference by Use Case</h2>
           <p>
-            OpticShift Pro&apos;s PNG to JPG converter uses a fixed 92% quality by default — a level that
+            OLD TOOLS&apos;s PNG to JPG converter uses a fixed 92% quality by default — a level that
             works well for nearly every situation without requiring a decision. If you specifically
             need a different quality level for a particular use case, here&apos;s a reference for what to
             target using the{' '}
@@ -156,7 +156,7 @@ export default function PngToJpgArticle() {
 
           <h2 id="privacy" className="text-2xl font-bold mt-8">Is PNG to JPG Conversion Safe Online?</h2>
           <p>
-            Privacy is a valid concern when using online converters. Many tools upload your files to remote servers where they may be stored or processed by third parties. OpticShift Pro is different — all conversion happens entirely inside your browser using JavaScript. Your images never leave your device, which means your personal and professional images remain 100% private.
+            Privacy is a valid concern when using online converters. Many tools upload your files to remote servers where they may be stored or processed by third parties. OLD TOOLS is different — all conversion happens entirely inside your browser using JavaScript. Your images never leave your device, which means your personal and professional images remain 100% private.
           </p>
 
           <h2 id="mistakes" className="text-2xl font-bold mt-8">Common PNG to JPG Conversion Mistakes</h2>
@@ -182,12 +182,12 @@ export default function PngToJpgArticle() {
 
           <h3 className="font-semibold mt-6">Can I convert multiple PNG files at once?</h3>
           <p>
-            OpticShift Pro currently supports single-file conversion. For batch conversion, you can process files one at a time — each conversion takes only a few seconds.
+            OLD TOOLS currently supports single-file conversion. For batch conversion, you can process files one at a time — each conversion takes only a few seconds.
           </p>
 
           <h3 className="font-semibold mt-6">Is the converter free to use?</h3>
           <p>
-            Yes, the PNG to JPG converter on OpticShift Pro is completely free with no file size limits and no account required.
+            Yes, the PNG to JPG converter on OLD TOOLS is completely free with no file size limits and no account required.
           </p>
 
           <h3 className="font-semibold mt-6">Can I get a different quality level than 92%?</h3>
@@ -204,7 +204,7 @@ export default function PngToJpgArticle() {
           <div className="mt-10 p-6 border rounded-xl">
             <h2 className="text-2xl font-bold mb-3">About the Author</h2>
             <p>
-              <strong>OpticShift Pro Editorial Team</strong> creates practical guides on image
+              <strong>OLD TOOLS Editorial Team</strong> creates practical guides on image
               optimization, PDF tools, and file conversion to help users work faster while
               protecting their privacy.
             </p>

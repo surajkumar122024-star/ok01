@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Hash Generator Guide: SHA-1, SHA-256 & SHA-512 Online (2026) — OpticShift Pro',
+  title: 'Hash Generator Guide: SHA-1, SHA-256 & SHA-512 Online (2026) — OLD TOOLS',
   description: 'Generate SHA-1, SHA-256, and SHA-512 hashes from text or files using the Web Crypto API. Learn what each algorithm is for and when to use it.',
   keywords: 'hash generator, sha256 online, sha1 generator, sha512 checksum, file hash calculator',
   alternates: { canonical: '/blog/hash-generator-guide' },

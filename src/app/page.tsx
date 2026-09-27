@@ -33,8 +33,8 @@ import { AdPlaceholder } from '@/components/AdPlaceholder';
 import { FaqSection } from '@/components/FaqSection';
 
 export const metadata: Metadata = {
-  title: 'OpticShift Pro — Free Browser-Based Image, PDF & Text Tools',
-  description: `OpticShift Pro offers ${TOOL_COUNT_LABEL} free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.`,
+  title: 'OLD TOOLS — Free Browser-Based Image, PDF & Text Tools',
+  description: `OLD TOOLS offers ${TOOL_COUNT_LABEL} free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.`,
 };
 
 const stats = [
@@ -204,7 +204,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            OpticShift Pro is a free suite of image, PDF, and text tools that process everything
+            OLD TOOLS is a free suite of image, PDF, and text tools that process everything
             locally on your device. No server upload, no account, no waiting — just open a tool
             and get your result.
           </p>
@@ -412,13 +412,13 @@ export default function Home() {
       {/* BOTTOM SECTION — REDESIGNED (Why Choose → Final CTA)          */}
       {/* ============================================================ */}
 
-      {/* 1. Why Choose OpticShift Pro — 6 premium feature cards */}
+      {/* 1. Why Choose OLD TOOLS — 6 premium feature cards */}
       <section className="py-24 px-4 relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl -z-10" />
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-4 max-w-2xl mx-auto">
             <span className="inline-block text-xs font-semibold tracking-widest text-primary uppercase">
-              Why OpticShift Pro
+              Why OLD TOOLS
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               Built Differently From Other Tool Sites
@@ -671,7 +671,7 @@ export default function Home() {
             <div className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
               <h3 className="text-xl font-bold">Browser-Based Processing and File Security</h3>
               <p className="text-muted-foreground leading-relaxed">
-                The core design decision behind OpticShift Pro is that processing happens entirely
+                The core design decision behind OLD TOOLS is that processing happens entirely
                 client-side — inside your browser, using your device&apos;s own processing power.
                 Traditional online tools upload your file to a remote server, process it there,
                 and send back the result; during that round trip, your file exists on infrastructure
@@ -816,7 +816,7 @@ export default function Home() {
               Ready to Optimize <br className="hidden sm:block" /> Your Workflow?
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Fast, free, and forever private — OpticShift Pro keeps your files on your device
+              Fast, free, and forever private — OLD TOOLS keeps your files on your device
               while delivering professional results, every time.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">

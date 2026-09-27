@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Calculate Percentages (Discounts, Increases & More) — OpticShift Pro',
+  title: 'How to Calculate Percentages (Discounts, Increases & More) — OLD TOOLS',
   description: 'A quick reference for the percentage formulas people actually search for — discounts, percentage increase/decrease, and "X is what percent of Y" — with a free calculator.',
   keywords: 'percentage calculator, how to calculate percentage, percentage increase formula, percentage decrease formula, discount calculator, what percent of',
   alternates: { canonical: '/blog/percentage-calculator-guide' },

@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free Simple & Compound Interest Calculator — OpticShift Pro',
+  title: 'Free Simple & Compound Interest Calculator — OLD TOOLS',
   description: 'Calculate simple or compound interest on savings or a loan. See total interest and final amount instantly. Free, no sign-up.',
   keywords: 'interest calculator, simple interest calculator, compound interest calculator, savings interest calculator, interest rate calculator',
   alternates: { canonical: '/tools/interest-calculator' },
@@ -20,7 +20,7 @@ export default function InterestCalculatorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/interest-calculator',
+            url: 'https://oldtools.online/tools/interest-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

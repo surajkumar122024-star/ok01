@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert PDF Pages to Images (PNG) — Free & Private (2026 Guide) — OpticShift Pro',
+  title: 'How to Convert PDF Pages to Images (PNG) — Free & Private (2026 Guide) — OLD TOOLS',
   description: 'Convert every page of a PDF into a high-quality PNG image, free and entirely in your browser. Step-by-step guide, resolution tips, and answers to common questions.',
   keywords: 'convert pdf to image, pdf to png, pdf to jpg, extract pdf pages as images, free pdf converter',
   alternates: { canonical: '/blog/how-to-convert-pdf-to-image' },
@@ -72,7 +72,7 @@ export default function PdfToImageArticle() {
 
           <h2 id="why-png" className="text-2xl font-bold mt-8">Why This Tool Outputs PNG</h2>
           <p>
-            OpticShift Pro&apos;s PDF to Image tool exports every page as a <strong>PNG</strong>, and that&apos;s
+            OLD TOOLS&apos;s PDF to Image tool exports every page as a <strong>PNG</strong>, and that&apos;s
             a deliberate choice rather than a limitation. PDF pages frequently contain sharp text, thin
             lines, and clean vector graphics — exactly the kind of content that PNG&apos;s lossless
             compression preserves perfectly, while JPG&apos;s lossy compression can introduce visible

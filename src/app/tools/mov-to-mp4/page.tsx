@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'MOV to MP4 Converter — Free Online, No Upload | OpticShift Pro',
+  title: 'MOV to MP4 Converter — Free Online, No Upload | OLD TOOLS',
   description: 'Convert MOV (QuickTime/iPhone) videos to MP4 for free. Works on any device, plays everywhere. 100% browser-based — your video never leaves your device.',
   keywords: 'mov to mp4, convert mov to mp4, quicktime to mp4, iphone video to mp4, free mov converter online',
   openGraph: {
@@ -26,7 +26,7 @@ export default function MovToMp4Page() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/mov-to-mp4',
+            url: 'https://oldtools.online/tools/mov-to-mp4',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online (2026) — OpticShift Pro',
+  title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online (2026) — OLD TOOLS',
   description: 'Convert images between JPG, PNG, WebP, GIF, BMP, and ICO in one free online tool. Complete guide to when to use each format and how the converter works.',
   keywords: 'image format converter, convert image online, jpg to ico converter, png to gif online, convert image to bmp, universal image converter guide',
   alternates: { canonical: '/blog/image-format-converter-guide' },
@@ -58,7 +58,7 @@ export default function ImageFormatConverterGuideArticle() {
           <h2 id="what-is" className="text-2xl font-bold mt-8">What Is the Image Format Converter?</h2>
 
           <p>It&apos;s a single tool that converts an image between JPG, PNG, WebP, GIF, BMP, and ICO — any format in, any format out. Instead of bookmarking a separate page for &quot;JPG to PNG&quot; and another for &quot;PNG to ICO,&quot; you upload once and just choose where you want to end up.</p>
-          <p>Like every tool on OpticShift Pro, conversion happens entirely in your browser using the Canvas API. Your image is never uploaded to a server, which means it&apos;s both faster and completely private.</p>
+          <p>Like every tool on OLD TOOLS, conversion happens entirely in your browser using the Canvas API. Your image is never uploaded to a server, which means it&apos;s both faster and completely private.</p>
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 

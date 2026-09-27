@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert Images to PDF Online — Free & Private (2026 Guide) — OpticShift Pro',
+  title: 'How to Convert Images to PDF Online — Free & Private (2026 Guide) — OLD TOOLS',
   description: 'Combine JPG, PNG, or WebP images into a single PDF for free, right in your browser. Step-by-step guide, format tips, and answers to common questions about image-to-PDF conversion.',
   keywords: 'convert image to pdf, jpg to pdf, png to pdf, combine images into pdf, free image to pdf converter',
   alternates: { canonical: '/blog/how-to-convert-image-to-pdf' },
@@ -120,7 +120,7 @@ export default function ImageToPdfArticle() {
           <h2 id="privacy" className="text-2xl font-bold mt-8">Is It Safe to Convert Images to PDF Online?</h2>
           <p>
             With most online tools, your images are uploaded to a remote server for processing — which
-            means your private photos exist, even briefly, on infrastructure you can&apos;t see. OpticShift
+            means your private photos exist, even briefly, on infrastructure you can&apos;t see. OLD TOOLS
             Pro works differently: the entire PDF is assembled locally using a JavaScript library
             running in your browser. Your images never leave your device at any point, which matters
             if you&apos;re converting anything from a scanned ID to a confidential business document.

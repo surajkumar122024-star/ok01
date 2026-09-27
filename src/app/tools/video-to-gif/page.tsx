@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Video to GIF Converter — Free Online, No Upload | OpticShift Pro',
+  title: 'Video to GIF Converter — Free Online, No Upload | OLD TOOLS',
   description: 'Turn any video clip into an animated GIF for free. Trim the clip, pick quality, and export — 100% in your browser, nothing uploaded.',
   keywords: 'video to gif, convert video to gif, mp4 to gif, make a gif online free, gif maker from video',
   openGraph: {
@@ -26,7 +26,7 @@ export default function VideoToGifPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/video-to-gif',
+            url: 'https://oldtools.online/tools/video-to-gif',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

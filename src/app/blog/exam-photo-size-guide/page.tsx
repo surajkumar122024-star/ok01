@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Exam Application Photo Size Guide (200×230px) — Free Tool (2026) — OpticShift Pro',
+  title: 'Exam Application Photo Size Guide (200×230px) — Free Tool (2026) — OLD TOOLS',
   description: 'The common photo and file size specification for SSC, IBPS, Railways, and other competitive exam applications, plus how to prepare a compliant photo for free.',
   keywords: 'exam photo size, ssc photo size, ibps photo size, railway exam photo, competitive exam photo specification',
   alternates: { canonical: '/blog/exam-photo-size-guide' },

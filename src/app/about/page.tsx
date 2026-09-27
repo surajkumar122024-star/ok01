@@ -5,8 +5,8 @@ import { Shield, Zap, Globe, Lock } from 'lucide-react';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
 
 export const metadata: Metadata = {
-  title: 'About OpticShift Pro – Privacy-First Browser-Based Tools',
-  description: `OpticShift Pro is an independently built suite of ${TOOL_COUNT_LABEL} free image, PDF, and text tools that run entirely in your browser.`,
+  title: 'About OLD TOOLS – Privacy-First Browser-Based Tools',
+  description: `OLD TOOLS is an independently built suite of ${TOOL_COUNT_LABEL} free image, PDF, and text tools that run entirely in your browser.`,
   alternates: { canonical: '/about' },
 };
 
@@ -16,13 +16,13 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About OpticShift Pro</h1>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About OLD TOOLS</h1>
           <p className="text-xl text-muted-foreground">The future of private, fast image processing.</p>
         </div>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
           <p className="text-lg leading-relaxed text-muted-foreground">
-            OpticShift Pro was born from a simple observation: most &quot;online&quot; image tools are slow, full of intrusive ads, and require you to upload your files to an unknown server just to get a simple result back.
+            OLD TOOLS was born from a simple observation: most &quot;online&quot; image tools are slow, full of intrusive ads, and require you to upload your files to an unknown server just to get a simple result back.
           </p>
         </div>
 
@@ -57,15 +57,15 @@ export default function AboutPage() {
 
         {/* Story */}
         <section className="space-y-4">
-          <h2 className="text-2xl font-bold">Why I Built OpticShift Pro</h2>
+          <h2 className="text-2xl font-bold">Why I Built OLD TOOLS</h2>
           <p className="text-muted-foreground leading-relaxed">
-            I&apos;m Suraj Kumar, the founder and developer of OpticShift Pro. Like a lot of people, I regularly needed to compress a photo, convert a file format, or resize an image for a form — small, everyday tasks. What frustrated me was that almost every free tool online required uploading the file to an unknown server first, just to get a simple result back.
+            I&apos;m Suraj Kumar, the founder and developer of OLD TOOLS. Like a lot of people, I regularly needed to compress a photo, convert a file format, or resize an image for a form — small, everyday tasks. What frustrated me was that almost every free tool online required uploading the file to an unknown server first, just to get a simple result back.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             For a quick screenshot that&apos;s a minor inconvenience. For a scanned ID document, a signed form, or a private photo, it&apos;s a real privacy concern — and it shouldn&apos;t be the trade-off you have to accept just to resize an image.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            So I built OpticShift Pro around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of ${TOOL_COUNT_LABEL} free tools covering images, PDFs, and text utilities.
+            So I built OLD TOOLS around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of ${TOOL_COUNT_LABEL} free tools covering images, PDFs, and text utilities.
           </p>
         </section>
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
         <section className="space-y-4">
           <h2 className="text-2xl font-bold">Who We Are</h2>
           <p className="text-muted-foreground leading-relaxed">
-            OpticShift Pro is built and maintained independently by a single developer. It&apos;s not backed by outside investors or a larger company — just one person building tools they wanted to exist, and improving them based on how people actually use them.
+            OLD TOOLS is built and maintained independently by a single developer. It&apos;s not backed by outside investors or a larger company — just one person building tools they wanted to exist, and improving them based on how people actually use them.
           </p>
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 p-6 border border-border rounded-2xl bg-card/50 backdrop-blur-sm">
             <div className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white p-1.5 border border-border shadow-sm overflow-hidden">
@@ -97,7 +97,7 @@ export default function AboutPage() {
               <p className="font-semibold text-foreground text-lg">Suraj Kumar</p>
               <p className="text-sm font-medium text-primary mt-1">Founder &amp; Developer</p>
               <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                I build and maintain OpticShift Pro end-to-end — from the tools themselves to the privacy-first architecture behind them. My focus is on keeping every tool genuinely useful, fast, and free, without asking anyone to give up their privacy to use it.
+                I build and maintain OLD TOOLS end-to-end — from the tools themselves to the privacy-first architecture behind them. My focus is on keeping every tool genuinely useful, fast, and free, without asking anyone to give up their privacy to use it.
               </p>
             </div>
           </div>

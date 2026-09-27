@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image to Base64 Converter Guide: Embed Images in CSS & HTML (2026) — OpticShift Pro',
+  title: 'Image to Base64 Converter Guide: Embed Images in CSS & HTML (2026) — OLD TOOLS',
   description: 'Convert images to Base64 strings for CSS/HTML embedding, and decode Base64 back to images. Learn when a data URI actually helps and when it hurts.',
   keywords: 'image to base64, base64 to image, base64 image converter, encode image base64, css data uri generator',
   alternates: { canonical: '/blog/image-to-base64-guide' },

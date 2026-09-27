@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'US Visa Photo Size Guide (2×2 inch) — Free Online Tool (2026) — OpticShift Pro',
+  title: 'US Visa Photo Size Guide (2×2 inch) — Free Online Tool (2026) — OLD TOOLS',
   description: 'The exact US visa and passport photo specification, why the 2x2 inch square format is stricter than other ID photos, and how to crop your own photo correctly.',
   keywords: 'us visa photo size, 2x2 photo, visa photo requirements, us passport photo online',
   alternates: { canonical: '/blog/visa-photo-size-guide' },

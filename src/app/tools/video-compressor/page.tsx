@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Video Compressor — Reduce Video File Size Free | OpticShift Pro',
+  title: 'Video Compressor — Reduce Video File Size Free | OLD TOOLS',
   description: 'Compress MP4, MOV, WebM and other video files online for free. Reduce file size while keeping good quality. 100% browser-based, no upload — your video never leaves your device.',
   keywords: 'video compressor, compress video online, reduce video size, mp4 compressor, free video compressor, compress video without losing quality',
   openGraph: {
@@ -26,7 +26,7 @@ export default function VideoCompressorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/video-compressor',
+            url: 'https://oldtools.online/tools/video-compressor',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

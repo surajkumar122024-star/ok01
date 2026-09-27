@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Add a Watermark to an Image Online (2026 Guide) — OpticShift Pro",
+  title: "How to Add a Watermark to an Image Online (2026 Guide) — OLD TOOLS",
   description:
-    "Learn how to add a text or logo watermark to any image online for free. No uploads, no software — works instantly in your browser with OpticShift Pro.",
+    "Learn how to add a text or logo watermark to any image online for free. No uploads, no software — works instantly in your browser with OLD TOOLS.",
   keywords: [
     "add watermark to image",
     "image watermark online",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "How to Add a Watermark to an Image Online — Free & Instant",
     description:
       "Add text or logo watermarks to your images instantly in your browser. No uploads, no software required.",
-    url: "https://ok01.vercel.app/blog/how-to-add-watermark-to-image",
+    url: "https://oldtools.online/blog/how-to-add-watermark-to-image",
     type: "article",
   },
   alternates: { canonical: '/blog/how-to-add-watermark-to-image' },
@@ -187,12 +187,12 @@ export default function BlogPostWatermark() {
       <section id="how-to" className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Add a Watermark Online (Step-by-Step)</h2>
         <p className="leading-relaxed text-gray-700 mb-6">
-          With <strong>OpticShift Pro&apos;s free Image Watermark tool</strong>, you can add a watermark
+          With <strong>OLD TOOLS&apos;s free Image Watermark tool</strong>, you can add a watermark
           in seconds — no account, no software, no uploads to any server.
         </p>
         <div className="space-y-4">
           {[
-            { step: "1", title: "Open the Watermark Tool", desc: "Go to OpticShift Pro and click on \"Image Watermark\" from the tools page." },
+            { step: "1", title: "Open the Watermark Tool", desc: "Go to OLD TOOLS and click on \"Image Watermark\" from the tools page." },
             { step: "2", title: "Upload Your Image", desc: "Click \"Choose File\" and select the image you want to watermark. Supports JPG, PNG, and WebP formats." },
             { step: "3", title: "Choose Watermark Type", desc: "Select \"Text\" to type your watermark, or \"Logo\" to upload a PNG image as your watermark." },
             { step: "4", title: "Customize the Watermark", desc: "Adjust the font size, opacity, position (corner, center, tiled), and color to match your style." },
@@ -245,7 +245,7 @@ export default function BlogPostWatermark() {
         <div className="space-y-4">
           {[
             {
-              q: "Is the OpticShift Pro watermark tool really free?",
+              q: "Is the OLD TOOLS watermark tool really free?",
               a: "Yes, completely free. No account required and no hidden charges. You can watermark unlimited images at no cost.",
             },
             {
@@ -298,7 +298,7 @@ export default function BlogPostWatermark() {
           content stolen and shared without credit.
         </p>
         <p className="leading-relaxed text-gray-700">
-          OpticShift Pro makes it completely free, private, and instant — no uploads, no accounts,
+          OLD TOOLS makes it completely free, private, and instant — no uploads, no accounts,
           no hassle. Try it today and start protecting your images.
         </p>
       </section>

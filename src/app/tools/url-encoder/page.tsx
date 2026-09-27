@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'URL Encoder/Decoder Online — Free & Instant | OpticShift Pro',
+  title: 'URL Encoder/Decoder Online — Free & Instant | OLD TOOLS',
   description: 'Encode or decode a URL online for free, instantly in your browser. Percent-encoding made simple and private.',
   keywords: 'url encoder decoder online, encode url online free, percent encoding tool online, convert url to encoded string',
   alternates: { canonical: '/tools/url-encoder' },
@@ -20,7 +20,7 @@ export default function UrlEncoderPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/url-encoder',
+            url: 'https://oldtools.online/tools/url-encoder',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

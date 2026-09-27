@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer — OpticShift Pro',
-  description: 'Important information about the accuracy, limitations, and intended use of OpticShift Pro\'s free browser-based tools.',
+  title: 'Disclaimer — OLD TOOLS',
+  description: 'Important information about the accuracy, limitations, and intended use of OLD TOOLS\'s free browser-based tools.',
   alternates: { canonical: '/disclaimer' },
 };
 
@@ -33,7 +33,7 @@ export default function DisclaimerPage() {
           </span>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">Disclaimer</h1>
           <p className="text-muted-foreground">
-            Important context on what OpticShift Pro&apos;s tools do, what they don&apos;t guarantee, and
+            Important context on what OLD TOOLS&apos;s tools do, what they don&apos;t guarantee, and
             what you&apos;re responsible for checking yourself.
           </p>
           <p className="text-sm text-muted-foreground italic">Last Updated: July 2026</p>
@@ -61,9 +61,9 @@ export default function DisclaimerPage() {
           <section id="introduction" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">1. Introduction</h2>
             <p className="leading-relaxed text-muted-foreground">
-              This Disclaimer explains the limitations and intended use of OpticShift Pro
+              This Disclaimer explains the limitations and intended use of OLD TOOLS
               (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) and the tools available at{' '}
-              <strong className="text-foreground">ok01.vercel.app</strong>. It is meant to be read
+              <strong className="text-foreground">oldtools.online</strong>. It is meant to be read
               alongside our{' '}
               <Link href="/terms" className="text-primary underline underline-offset-2">
                 Terms of Service
@@ -86,7 +86,7 @@ export default function DisclaimerPage() {
           <section id="general-information" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">2. General Information</h2>
             <p className="leading-relaxed text-muted-foreground">
-              The information and tools provided on OpticShift Pro are for general informational
+              The information and tools provided on OLD TOOLS are for general informational
               and utility purposes only. While we aim to keep every tool accurate, functional, and
               genuinely useful, we make no representation or warranty of any kind, express or
               implied, regarding the completeness, reliability, or suitability of the site or its
@@ -100,7 +100,7 @@ export default function DisclaimerPage() {
               unchanged, or fault-free indefinitely.
             </p>
             <p className="leading-relaxed text-muted-foreground">
-              This Disclaimer applies to every page and tool on OpticShift Pro, including our blog
+              This Disclaimer applies to every page and tool on OLD TOOLS, including our blog
               content, document photo makers, PDF utilities, and text/developer tools, unless a
               more specific notice states otherwise.
             </p>
@@ -109,7 +109,7 @@ export default function DisclaimerPage() {
           <section id="browser-processing" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">3. Browser-Based Processing Disclaimer</h2>
             <p className="leading-relaxed text-muted-foreground">
-              All tools on OpticShift Pro process your files entirely within your own web browser,
+              All tools on OLD TOOLS process your files entirely within your own web browser,
               using JavaScript and the Canvas API running locally on your device.{' '}
               <strong className="text-foreground">
                 No files are uploaded to our servers at any point during tool usage
@@ -227,8 +227,8 @@ export default function DisclaimerPage() {
           <section id="copyright-trademarks" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">8. Copyright &amp; Trademarks</h2>
             <p className="leading-relaxed text-muted-foreground">
-              The OpticShift Pro name, logo, website design, and original blog content are the
-              property of OpticShift Pro and are protected by applicable copyright and trademark
+              The OLD TOOLS name, logo, website design, and original blog content are the
+              property of OLD TOOLS and are protected by applicable copyright and trademark
               law. Any references on this site to third-party names, document types, government
               programs (such as Aadhaar, PAN, or Passport Seva), or file formats are used solely to
               describe compatibility or context, and do not imply any affiliation, sponsorship, or
@@ -245,7 +245,7 @@ export default function DisclaimerPage() {
           <section id="limitation-of-liability" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">9. Limitation of Liability</h2>
             <p className="leading-relaxed text-muted-foreground">
-              To the fullest extent permitted by law, OpticShift Pro and its operator will not be
+              To the fullest extent permitted by law, OLD TOOLS and its operator will not be
               liable for any loss or damage of any kind arising from your use of, or reliance on,
               this website or its tools — including but not limited to a rejected document
               application, a lost file due to a browser crash, a business decision made based on

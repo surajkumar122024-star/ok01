@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free Age Calculator Online — OpticShift Pro',
+  title: 'Free Age Calculator Online — OLD TOOLS',
   description: 'Calculate your exact age in years, months, and days from your date of birth. Free, instant, no sign-up.',
   keywords: 'age calculator, date of birth calculator, calculate age online, how old am i, age in years months days',
   alternates: { canonical: '/tools/age-calculator' },
@@ -20,7 +20,7 @@ export default function AgeCalculatorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/age-calculator',
+            url: 'https://oldtools.online/tools/age-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

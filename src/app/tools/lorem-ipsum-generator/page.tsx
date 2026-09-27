@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Lorem Ipsum Generator — Free Placeholder Text | OpticShift Pro',
+  title: 'Lorem Ipsum Generator — Free Placeholder Text | OLD TOOLS',
   description: 'Generate Lorem Ipsum placeholder text — words, sentences, or paragraphs. Instant, free, and customizable for design and development mockups.',
   keywords: 'lorem ipsum generator, placeholder text generator, dummy text generator, filler text',
   alternates: { canonical: '/tools/lorem-ipsum-generator' },
@@ -21,7 +21,7 @@ export default function LoremIpsumPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/lorem-ipsum-generator',
+            url: 'https://oldtools.online/tools/lorem-ipsum-generator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

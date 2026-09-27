@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free Date Difference Calculator Online — OpticShift Pro',
+  title: 'Free Date Difference Calculator Online — OLD TOOLS',
   description: 'Calculate the exact number of days, weeks, months, and years between two dates. Free, instant, no sign-up.',
   keywords: 'date difference calculator, days between dates, date calculator, how many days between two dates, time between dates',
   alternates: { canonical: '/tools/date-difference-calculator' },
@@ -20,7 +20,7 @@ export default function DateDifferenceCalculatorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/date-difference-calculator',
+            url: 'https://oldtools.online/tools/date-difference-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image Collage Maker — Combine Photos Free Online | OpticShift Pro',
+  title: 'Image Collage Maker — Combine Photos Free Online | OLD TOOLS',
   description: 'Create a photo collage from multiple images online for free. Bulk upload, adjust grid layout, spacing and background. 100% browser-based, no upload needed.',
   keywords: 'image collage maker, photo collage online, bulk image collage, free collage maker, combine photos grid',
   openGraph: {
@@ -26,7 +26,7 @@ export default function ImageCollagePage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-collage',
+            url: 'https://oldtools.online/tools/image-collage',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

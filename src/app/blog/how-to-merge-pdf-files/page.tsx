@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Merge PDF Files: Complete 2026 Guide — OpticShift Pro',
+  title: 'How to Merge PDF Files: Complete 2026 Guide — OLD TOOLS',
   description: 'Learn how to merge multiple PDF files into one document online for free. Simple step-by-step guide for combining reports, forms, and documents.',
   keywords: 'merge PDF files, free online tool, merge PDF files guide',
   alternates: { canonical: '/blog/how-to-merge-pdf-files' },

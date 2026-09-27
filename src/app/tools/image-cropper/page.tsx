@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image Cropper — Free & Private | OpticShift Pro',
+  title: 'Image Cropper — Free & Private | OLD TOOLS',
   description: 'Crop images instantly in your browser with precision. Free aspect ratio presets, no upload required, 100% private.',
   keywords: 'image cropper, crop image online, free image cropper, crop photo, aspect ratio cropper',
   openGraph: {
@@ -26,7 +26,7 @@ export default function ImageCropperPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-cropper',
+            url: 'https://oldtools.online/tools/image-cropper',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

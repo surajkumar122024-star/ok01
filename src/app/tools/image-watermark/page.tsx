@@ -4,14 +4,14 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Free Online Image Watermark Tool – Add Text & Logo | OpticShift Pro',
+  title: 'Free Online Image Watermark Tool – Add Text & Logo | OLD TOOLS',
   description: 'Add text or image watermarks to your photos online for free. No upload required, 100% private & browser-based. Supports JPG, PNG, WebP.',
   keywords: ['image watermark', 'add watermark online', 'free watermark tool', 'watermark photo online', 'text watermark', 'logo watermark', 'watermark image no upload'],
   openGraph: {
-    title: 'Free Online Image Watermark Tool | OpticShift Pro',
+    title: 'Free Online Image Watermark Tool | OLD TOOLS',
     description: 'Add text or logo watermarks to images instantly in your browser. No upload, 100% private.',
-    url: 'https://ok01.vercel.app/tools/image-watermark',
-    siteName: 'OpticShift Pro',
+    url: 'https://oldtools.online/tools/image-watermark',
+    siteName: 'OLD TOOLS',
     type: 'website',
   },
   alternates: { canonical: '/tools/image-watermark' },
@@ -28,7 +28,7 @@ export default function ImageWatermarkPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-watermark',
+            url: 'https://oldtools.online/tools/image-watermark',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

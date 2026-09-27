@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image to Base64 Converter — Free, No Upload | OpticShift Pro',
+  title: 'Image to Base64 Converter — Free, No Upload | OLD TOOLS',
   description: 'Convert images to Base64 strings for CSS/HTML embedding, and decode Base64 back to images. 100% browser-based — nothing is uploaded.',
   keywords: 'image to base64, base64 to image, base64 image converter, encode image base64, css data uri generator',
   alternates: { canonical: '/tools/image-to-base64' },
@@ -21,7 +21,7 @@ export default function ImageToBase64Page() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-to-base64',
+            url: 'https://oldtools.online/tools/image-to-base64',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

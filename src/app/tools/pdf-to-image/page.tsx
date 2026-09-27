@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'PDF to Image Converter — Free & Private | OpticShift Pro',
+  title: 'PDF to Image Converter — Free & Private | OLD TOOLS',
   description: 'Convert each PDF page to high-quality PNG images instantly. 100% free, no upload, works entirely in your browser.',
   keywords: 'pdf to image, pdf to png, convert pdf to image online, free pdf to image converter, pdf page to png',
   openGraph: {
@@ -26,7 +26,7 @@ export default function PdfToImagePage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/pdf-to-image',
+            url: 'https://oldtools.online/tools/pdf-to-image',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

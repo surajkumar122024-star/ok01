@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Case Converter Online — UPPERCASE, lowercase, Title Case | OpticShift Pro',
+  title: 'Case Converter Online — UPPERCASE, lowercase, Title Case | OLD TOOLS',
   description: 'Convert text between UPPERCASE, lowercase, Title Case, camelCase, snake_case and more, instantly and free.',
   keywords: 'case converter online, text case converter, convert text to title case online, camelcase to snake_case converter, uppercase to lowercase converter free',
   alternates: { canonical: '/tools/case-converter' },
@@ -20,7 +20,7 @@ export default function CaseConverterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/case-converter',
+            url: 'https://oldtools.online/tools/case-converter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

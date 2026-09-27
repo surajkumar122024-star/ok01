@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Base64 Encoder/Decoder Online — Free & Instant | OpticShift Pro',
+  title: 'Base64 Encoder/Decoder Online — Free & Instant | OLD TOOLS',
   description: 'Convert text to Base64 or decode Base64 back to text instantly in your browser. Free, private, no sign-up.',
   keywords: 'base64 encoder decoder online, convert text to base64 online, base64 to text converter free, encode string to base64 online',
   alternates: { canonical: '/tools/base64' },
@@ -20,7 +20,7 @@ export default function Base64Page() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/base64',
+            url: 'https://oldtools.online/tools/base64',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

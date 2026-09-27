@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free Percentage Calculator Online — OpticShift Pro',
+  title: 'Free Percentage Calculator Online — OLD TOOLS',
   description: 'Calculate percentages, percentage increase/decrease, and what percent one number is of another — free, instant, no sign-up.',
   keywords: 'percentage calculator, percent calculator, percentage increase calculator, percentage decrease calculator, discount calculator, what percent of',
   alternates: { canonical: '/tools/percentage-calculator' },
@@ -20,7 +20,7 @@ export default function PercentageCalculatorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/percentage-calculator',
+            url: 'https://oldtools.online/tools/percentage-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Character Counter Online — Twitter & Instagram Limits | OpticShift Pro',
+  title: 'Character Counter Online — Twitter & Instagram Limits | OLD TOOLS',
   description: 'Count characters, words, sentences and reading time instantly. Check Twitter, Instagram bio and SMS character limits free.',
   keywords: 'character counter online, character count with limit, twitter character counter, instagram bio character counter, free character count checker',
   alternates: { canonical: '/tools/character-counter' },
@@ -20,7 +20,7 @@ export default function CharacterCounterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/character-counter',
+            url: 'https://oldtools.online/tools/character-counter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

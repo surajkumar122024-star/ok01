@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Make a Free QR Code Online (2026 Guide) — OpticShift Pro',
+  title: 'How to Make a Free QR Code Online (2026 Guide) — OLD TOOLS',
   description: 'Create a QR code for a link, Wi-Fi network, or contact card in seconds, free, with no sign-up or watermark. Learn what error correction means and how to choose it.',
   keywords: 'qr code generator, free qr code, wifi qr code, how to make a qr code, qr code maker online',
   alternates: { canonical: '/blog/qr-code-generator-guide' },

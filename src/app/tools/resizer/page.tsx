@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Image Resizer — Change Image Dimensions Free | OpticShift Pro',
+  title: 'Image Resizer — Change Image Dimensions Free | OLD TOOLS',
   description: 'Resize images online for free. Change width and height with pixel-perfect accuracy. Maintain aspect ratio. 100% browser-based, no upload.',
   keywords: 'image resizer, resize image online, change image size, resize jpg, resize png, free image resizer',
   openGraph: {
@@ -26,7 +26,7 @@ export default function ResizerPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/resizer',
+            url: 'https://oldtools.online/tools/resizer',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

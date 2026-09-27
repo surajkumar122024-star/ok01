@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'PAN Card Photo Maker — Free & Private | OpticShift Pro',
+  title: 'PAN Card Photo Maker — Free & Private | OLD TOOLS',
   description: 'Create a PAN card size photo online for free. Crop and resize to the standard 2.5cm × 3.5cm size instantly in your browser. No upload, 100% private.',
   keywords: 'pan card photo size, pan card photo maker, pan photo online, pan application photo, 2.5x3.5 photo size',
   openGraph: {
@@ -26,7 +26,7 @@ export default function PanPhotoPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/pan-photo',
+            url: 'https://oldtools.online/tools/pan-photo',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

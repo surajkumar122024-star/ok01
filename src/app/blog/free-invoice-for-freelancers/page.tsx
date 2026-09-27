@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How Freelancers Can Send a Professional Invoice Without Buying Software — OpticShift Pro',
+  title: 'How Freelancers Can Send a Professional Invoice Without Buying Software — OLD TOOLS',
   description: 'You finished the work — now you need to get paid. Here is how to put together a proper invoice in a few minutes, free, without signing up for invoicing software.',
   keywords: 'free invoice generator, freelance invoice, invoice for freelancers, create invoice online free, invoice template no sign up',
   alternates: { canonical: '/blog/free-invoice-for-freelancers' },

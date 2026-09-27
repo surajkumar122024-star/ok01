@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'WebP Converter — Convert JPG & PNG to WebP Free | OpticShift Pro',
+  title: 'WebP Converter — Convert JPG & PNG to WebP Free | OLD TOOLS',
   description: 'Convert JPG and PNG images to WebP format online for free. Smaller file sizes with better quality. 100% browser-based, no upload needed.',
   keywords: 'webp converter, webp conversion, jpg to webp, png to webp, convert to webp online, free webp converter',
   openGraph: {
@@ -26,7 +26,7 @@ export default function WebPConverterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/webp-converter',
+            url: 'https://oldtools.online/tools/webp-converter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

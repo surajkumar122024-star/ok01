@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free AI Content Detector Online — OpticShift Pro',
+  title: 'Free AI Content Detector Online — OLD TOOLS',
   description: 'Check text for common signs of AI-generated writing — sentence uniformity, repetitive phrasing, and typical AI transition words. Free, instant, no sign-up.',
   keywords: 'ai content detector, ai text detector, detect ai writing, chatgpt detector, ai generated text checker',
   alternates: { canonical: '/tools/ai-content-detector' },
@@ -20,7 +20,7 @@ export default function AiContentDetectorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/ai-content-detector',
+            url: 'https://oldtools.online/tools/ai-content-detector',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

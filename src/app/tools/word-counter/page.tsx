@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: "Word Counter Online Free — Count Words, Characters & Sentences | OpticShift Pro",
+  title: "Word Counter Online Free — Count Words, Characters & Sentences | OLD TOOLS",
   description:
     "Count words, characters, sentences, paragraphs and estimate reading time online for free, instantly.",
   keywords:
@@ -23,7 +23,7 @@ export default function WordCounterPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/word-counter',
+            url: 'https://oldtools.online/tools/word-counter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

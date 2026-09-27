@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Merge PDF Files Online Free — No Sign-Up | OpticShift Pro',
+  title: 'Merge PDF Files Online Free — No Sign-Up | OLD TOOLS',
   description: 'Combine multiple PDF files into one document online for free. No sign-up, no watermark, 100% private and browser-based.',
   keywords: 'merge pdf files online free, combine pdf files online, pdf merger no sign up, join multiple pdf into one online',
   alternates: { canonical: '/tools/pdf-merge' },
@@ -20,7 +20,7 @@ export default function PdfMergePage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/pdf-merge',
+            url: 'https://oldtools.online/tools/pdf-merge',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

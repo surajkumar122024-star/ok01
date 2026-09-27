@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Exam Photo Resizer (200x230px) — Free & Private | OpticShift Pro',
+  title: 'Exam Photo Resizer (200x230px) — Free & Private | OLD TOOLS',
   description: 'Resize your photo for exam application forms online for free. Crop and resize to the common 200×230 pixel standard instantly in your browser. No upload, 100% private.',
   keywords: 'exam photo resizer, exam application photo size, 200x230 photo, ssc photo size, competitive exam photo online',
   openGraph: {
@@ -26,7 +26,7 @@ export default function ExamPhotoPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/exam-photo',
+            url: 'https://oldtools.online/tools/exam-photo',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

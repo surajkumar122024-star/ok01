@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free EMI Calculator Online — Home, Car & Personal Loan — OpticShift Pro',
+  title: 'Free EMI Calculator Online — Home, Car & Personal Loan — OLD TOOLS',
   description: 'Calculate your monthly EMI, total interest, and total payment for a home, car, or personal loan. Free, instant, no sign-up.',
   keywords: 'emi calculator, loan emi calculator, home loan emi calculator, car loan emi calculator, personal loan emi, monthly installment calculator',
   alternates: { canonical: '/tools/emi-calculator' },
@@ -20,7 +20,7 @@ export default function EmiCalculatorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/emi-calculator',
+            url: 'https://oldtools.online/tools/emi-calculator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

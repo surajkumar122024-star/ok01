@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Make a Free Barcode Online (CODE128, EAN-13, UPC) — OpticShift Pro',
+  title: 'How to Make a Free Barcode Online (CODE128, EAN-13, UPC) — OLD TOOLS',
   description: 'Generate a scannable barcode in the right format for your use case — retail, inventory, or shipping — free, with no sign-up. Learn which format to pick and why.',
   keywords: 'barcode generator, free barcode generator, code128 barcode, ean13 barcode generator, upc barcode maker, how to make a barcode',
   alternates: { canonical: '/blog/barcode-generator-guide' },

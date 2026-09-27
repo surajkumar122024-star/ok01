@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'JPG to PNG Converter — Free & Instant | OpticShift Pro',
+  title: 'JPG to PNG Converter — Free & Instant | OLD TOOLS',
   description: 'Convert JPG images to PNG format online for free. Lossless quality, supports transparency. 100% browser-based, no upload needed.',
   keywords: 'jpg to png, jpeg to png, convert jpg to png online, free jpg to png converter',
   openGraph: {
@@ -26,7 +26,7 @@ export default function JpgToPngPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/jpg-to-png',
+            url: 'https://oldtools.online/tools/jpg-to-png',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

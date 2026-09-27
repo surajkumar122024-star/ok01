@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free Invoice Generator Online — Download as PDF — OpticShift Pro',
+  title: 'Free Invoice Generator Online — Download as PDF — OLD TOOLS',
   description: 'Create a professional invoice with your business details, line items, and tax, and download it as a PDF. Free, no sign-up, no watermark.',
   keywords: 'invoice generator, free invoice generator, create invoice online, invoice maker, invoice template free, download invoice pdf',
   alternates: { canonical: '/tools/invoice-generator' },
@@ -20,7 +20,7 @@ export default function InvoiceGeneratorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/invoice-generator',
+            url: 'https://oldtools.online/tools/invoice-generator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

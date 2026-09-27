@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026) — OpticShift Pro',
+  title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026) — OLD TOOLS',
   description: 'Free AI content detector that checks for sentence uniformity, repetitive phrasing, and typical AI transition words. Learn how it works and its real limits.',
   keywords: 'ai content detector, ai text detector, detect ai writing, chatgpt detector, ai generated text checker',
   alternates: { canonical: '/blog/ai-content-detector-guide' },
@@ -58,7 +58,7 @@ export default function AiContentDetectorGuideArticle() {
           <h2 id="what-is" className="text-2xl font-bold mt-8">What Is the AI Content Detector?</h2>
 
           <p>It&apos;s a free browser-based tool that analyzes pasted text for stylistic patterns associated with AI-generated writing — things like unusually uniform sentence lengths, a cluster of overused AI transition words (&quot;furthermore,&quot; &quot;moreover,&quot; &quot;in conclusion&quot;), and low variation in sentence structure. It returns a likelihood score and highlights the specific signals it found, so you can see <em>why</em> it flagged something rather than just trusting a black-box number.</p>
-          <p>Like every tool on OpticShift Pro, the analysis runs entirely in your browser. Your text is never uploaded to a server or stored anywhere — it&apos;s processed locally and discarded when you close the tab.</p>
+          <p>Like every tool on OLD TOOLS, the analysis runs entirely in your browser. Your text is never uploaded to a server or stored anywhere — it&apos;s processed locally and discarded when you close the tab.</p>
 
           <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
 

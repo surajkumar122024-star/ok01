@@ -3,7 +3,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free QR Code Generator Online — No Sign-Up — OpticShift Pro',
+  title: 'Free QR Code Generator Online — No Sign-Up — OLD TOOLS',
   description: 'Create a free QR code for a URL, text, Wi-Fi, or contact info instantly in your browser. No sign-up, no watermark, no expiry — download as PNG or SVG.',
   keywords: 'qr code generator, free qr code generator, qr code maker, generate qr code online, wifi qr code generator, url qr code',
   alternates: { canonical: '/tools/qr-code-generator' },
@@ -20,7 +20,7 @@ export default function QrCodeGeneratorPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/qr-code-generator',
+            url: 'https://oldtools.online/tools/qr-code-generator',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

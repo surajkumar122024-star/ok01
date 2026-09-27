@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Signature Resizer Guide: Prepare a Scanned Signature (140×60px) — OpticShift Pro',
+  title: 'Signature Resizer Guide: Prepare a Scanned Signature (140×60px) — OLD TOOLS',
   description: 'How to scan, crop, and resize your signature for bank KYC, exam applications, and government forms — the common 140×60px, under-20KB specification explained.',
   keywords: 'signature resize online, signature scan for forms, bank kyc signature size, exam form signature size',
   alternates: { canonical: '/blog/signature-resizer-guide' },

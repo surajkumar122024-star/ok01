@@ -4,14 +4,14 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'Free Image Rotate & Flip Tool – Rotate Images Online | OpticShift Pro',
+  title: 'Free Image Rotate & Flip Tool – Rotate Images Online | OLD TOOLS',
   description: 'Rotate and flip images online for free. No upload required, 100% private & browser-based. Supports JPG, PNG, WebP. Rotate 90°, 180°, 270° or flip horizontally/vertically.',
   keywords: ['image rotate', 'rotate image online', 'flip image online', 'free image rotate', 'rotate jpg online', 'flip photo online', 'image rotate no upload'],
   openGraph: {
-    title: 'Free Image Rotate & Flip Tool | OpticShift Pro',
+    title: 'Free Image Rotate & Flip Tool | OLD TOOLS',
     description: 'Rotate and flip images instantly in your browser. No upload, 100% private.',
-    url: 'https://ok01.vercel.app/tools/image-rotate',
-    siteName: 'OpticShift Pro',
+    url: 'https://oldtools.online/tools/image-rotate',
+    siteName: 'OLD TOOLS',
     type: 'website',
   },
   alternates: { canonical: '/tools/image-rotate' },
@@ -28,7 +28,7 @@ export default function ImageRotatePage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/image-rotate',
+            url: 'https://oldtools.online/tools/image-rotate',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {

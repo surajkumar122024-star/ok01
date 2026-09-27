@@ -4,7 +4,7 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata: Metadata = {
-  title: 'YouTube Thumbnail Converter (16:9) — Free & Private | OpticShift Pro',
+  title: 'YouTube Thumbnail Converter (16:9) — Free & Private | OLD TOOLS',
   description: 'Convert any image to the perfect 1280×720 YouTube thumbnail ratio instantly in your browser. No upload required, 100% private, completely free.',
   keywords: 'youtube thumbnail converter, youtube thumbnail size, 16:9 image converter, youtube thumbnail maker, resize image for youtube',
   openGraph: {
@@ -26,7 +26,7 @@ export default function YoutubeThumbnailPage() {
             '@type': 'SoftwareApplication',
             name: metadata.title,
             description: metadata.description,
-            url: 'https://ok01.vercel.app/tools/youtube-thumbnail-converter',
+            url: 'https://oldtools.online/tools/youtube-thumbnail-converter',
             applicationCategory: 'UtilitiesApplication',
             operatingSystem: 'Any',
             offers: {
