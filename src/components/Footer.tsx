@@ -39,7 +39,7 @@ export const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Image
-                src="/old-tools-logo.svg"
+                src="/old-tools-logo.png"
                 alt="OLD TOOLS"
                 width={36}
                 height={36}

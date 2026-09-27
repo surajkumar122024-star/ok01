@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronDown, Zap } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
@@ -49,9 +49,14 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
-              <Zap size={24} fill="currentColor" />
-            </div>
+            <Image
+              src="/old-tools-logo.png"
+              alt="OLD TOOLS"
+              width={40}
+              height={40}
+              priority
+              className="w-10 h-10 rounded-xl object-cover shadow-lg group-hover:scale-105 transition-transform"
+            />
             <span className="text-xl font-bold tracking-tight text-foreground">OLD TOOLS <span className="text-primary">Pro</span></span>
           </Link>
 

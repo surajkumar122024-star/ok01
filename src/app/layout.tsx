@@ -49,7 +49,7 @@ export default function RootLayout({
                   '@id': 'https://oldtools.online/#organization',
                   name: 'OLD TOOLS',
                   url: 'https://oldtools.online',
-                  logo: 'https://oldtools.online/old-tools-logo.svg',
+                  logo: 'https://oldtools.online/old-tools-logo.png',
                 },
                 {
                   '@type': 'WebSite',
