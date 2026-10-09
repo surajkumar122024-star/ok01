@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "How to Add a Watermark to an Image Online (2026 Guide) — OLD TOOLS",
+  title: "How to Add a Watermark to an Image Online (2026 Guide)",
   description:
     "Learn how to add a text or logo watermark to any image online for free. No uploads, no software — works instantly in your browser with OLD TOOLS.",
   keywords: [
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "watermark photo free",
   ],
   openGraph: {
-    title: "How to Add a Watermark to an Image Online — Free & Instant",
+    title: "How to Add a Watermark to an Image Online (2026 Guide)",
     description:
       "Add text or logo watermarks to your images instantly in your browser. No uploads, no software required.",
     url: "https://oldtools.online/blog/how-to-add-watermark-to-image",

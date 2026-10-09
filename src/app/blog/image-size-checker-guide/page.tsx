@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image Size Checker Guide: Check Dimensions & File Size Instantly (2026) — OpticShift Pro',
+  title: 'Image Size Checker Guide: Check Dimensions & File Size Instantly (2026)',
   description: 'Learn how to check image dimensions, resolution, and file size online for free. Complete guide for web optimization, uploads, and design accuracy.',
   keywords: 'image size checker, free online tool, image size checker guide',
+  openGraph: {
+    title: 'Image Size Checker Guide: Check Dimensions & File Size Instantly (2026)',
+    description: 'Learn how to check image dimensions, resolution, and file size online for free. Complete guide for web optimization, uploads, and design accuracy.',
+    url: '/blog/image-size-checker-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/image-size-checker-guide' },
 }
 

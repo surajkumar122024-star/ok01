@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert PDF to Word Online — Free Text Extraction (2026) — OpticShift Pro',
+  title: 'How to Convert PDF to Word Online — Free Text Extraction (2026)',
   description: 'Extract text from a PDF into an editable Word (.docx) document, free and right in your browser. Best for simple, text-based PDFs — how it works and its limits.',
   keywords: 'pdf to word, pdf to docx, convert pdf to word online, pdf text extractor, free pdf to word converter',
+  openGraph: {
+    title: 'How to Convert PDF to Word Online — Free Text Extraction (2026)',
+    description: 'Extract text from a PDF into an editable Word (.docx) document, free and right in your browser. Best for simple, text-based PDFs — how it works and its limits.',
+    url: '/blog/how-to-convert-pdf-to-word',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-pdf-to-word' },
 }
 

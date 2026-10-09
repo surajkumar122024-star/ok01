@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert HEIC to PDF Online (2026 Guide) — OLD TOOLS',
+  title: 'How to Convert HEIC to PDF Online (2026 Guide)',
   description: 'Combine multiple iPhone HEIC photos into a single PDF for free, right in your browser. Step-by-step guide — no software, no upload, no sign-up.',
   keywords: 'heic to pdf, convert heic to pdf, iphone photos to pdf, combine heic photos pdf, heic to pdf converter free',
+  openGraph: {
+    title: 'How to Convert HEIC to PDF Online (2026 Guide)',
+    description: 'Combine multiple iPhone HEIC photos into a single PDF for free, right in your browser. Step-by-step guide — no software, no upload, no sign-up.',
+    url: '/blog/how-to-convert-heic-to-pdf',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-heic-to-pdf' },
 }
 

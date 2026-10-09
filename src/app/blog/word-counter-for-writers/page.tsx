@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Word Counter for Writers: Track Word Count & Writing Goals (2026) — OpticShift Pro',
+  title: 'Word Counter for Writers: Track Word Count & Writing Goals (2026)',
   description: 'Learn how to use an online word counter to track word count, character count, sentences, paragraphs, and writing goals. Free guide for writers, students, and content creators.',
   keywords: 'word counter, free online tool, word counter guide',
+  openGraph: {
+    title: 'Word Counter for Writers: Track Word Count & Writing Goals (2026)',
+    description: 'Learn how to use an online word counter to track word count, character count, sentences, paragraphs, and writing goals. Free guide for writers, students, and content creators.',
+    url: '/blog/word-counter-for-writers',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/word-counter-for-writers' },
 }
 

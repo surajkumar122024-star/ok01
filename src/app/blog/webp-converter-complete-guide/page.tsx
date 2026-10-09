@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'WebP Converter Complete Guide: Convert Images for Faster Websites (2026) — OpticShift Pro',
+  title: 'WebP Converter Complete Guide: Convert Images for Faster Websites (2026)',
   description: 'Learn how to convert images to WebP format online for free. Complete guide to smaller file sizes, faster websites, and better SEO performance.',
   keywords: 'WebP converter, webp conversion, convert to WebP online, JPG to WebP, PNG to WebP, WebP converter guide',
+  openGraph: {
+    title: 'WebP Converter Complete Guide: Convert Images for Faster Websites (2026)',
+    description: 'Learn how to convert images to WebP format online for free. Complete guide to smaller file sizes, faster websites, and better SEO performance.',
+    url: '/blog/webp-converter-complete-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/webp-converter-complete-guide' },
 }
 

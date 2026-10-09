@@ -6,7 +6,7 @@ import { toolContent } from "@/data/toolContent"
 import { ToolPageGlow } from "@/components/ToolPageGlow"
 
 export default function TextToSpeechClient() {
-  const [text, setText] = useState('Welcome to OpticShift Pro. This tool reads your text aloud, right in your browser.')
+  const [text, setText] = useState('Welcome to OLD TOOLS. This tool reads your text aloud, right in your browser.')
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([])
   const [voiceIndex, setVoiceIndex] = useState(0)
   const [rate, setRate] = useState(1)

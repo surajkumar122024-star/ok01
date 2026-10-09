@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Character Counter for Writing and SEO: The Complete 2026 Guide — OpticShift Pro',
+  title: 'Character Counter for Writing and SEO: The Complete 2026 Guide',
   description: 'Learn how to use an online character counter to track text length for SEO meta tags, social media posts, and writing limits. Free, instant, and accurate.',
   keywords: 'character counter, free online tool, character counter guide',
+  openGraph: {
+    title: 'Character Counter for Writing and SEO: The Complete 2026 Guide',
+    description: 'Learn how to use an online character counter to track text length for SEO meta tags, social media posts, and writing limits. Free, instant, and accurate.',
+    url: '/blog/character-counter-for-writing-and-seo',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/character-counter-for-writing-and-seo' },
 }
 

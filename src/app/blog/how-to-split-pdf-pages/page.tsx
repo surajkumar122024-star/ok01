@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Split PDF Pages: Complete 2026 Guide — OLD TOOLS',
+  title: 'How to Split PDF Pages: Complete 2026 Guide',
   description: 'Learn how to split a PDF into separate pages or files online for free. Step-by-step guide to extracting or dividing PDF documents in seconds.',
   keywords: 'split PDF pages, free online tool, split PDF pages guide',
+  openGraph: {
+    title: 'How to Split PDF Pages: Complete 2026 Guide',
+    description: 'Learn how to split a PDF into separate pages or files online for free. Step-by-step guide to extracting or dividing PDF documents in seconds.',
+    url: '/blog/how-to-split-pdf-pages',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-split-pdf-pages' },
 }
 

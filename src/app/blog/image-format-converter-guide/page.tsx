@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online (2026) — OLD TOOLS',
+  title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online (2026)',
   description: 'Convert images between JPG, PNG, WebP, GIF, BMP, and ICO in one free online tool. Complete guide to when to use each format and how the converter works.',
   keywords: 'image format converter, convert image online, jpg to ico converter, png to gif online, convert image to bmp, universal image converter guide',
+  openGraph: {
+    title: 'Image Format Converter Guide: Convert JPG, PNG, WebP, GIF, BMP & ICO Online (2026)',
+    description: 'Convert images between JPG, PNG, WebP, GIF, BMP, and ICO in one free online tool. Complete guide to when to use each format and how the converter works.',
+    url: '/blog/image-format-converter-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/image-format-converter-guide' },
 }
 

@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Strong Password Generator Guide: Create Secure Passwords Instantly (2026) — OpticShift Pro',
+  title: 'Strong Password Generator Guide: Create Secure Passwords Instantly (2026)',
   description: 'Learn how to generate strong, secure passwords online for free. Complete guide covering password strength, best practices, and account security tips.',
   keywords: 'strong password generator, free online tool, strong password generator guide',
+  openGraph: {
+    title: 'Strong Password Generator Guide: Create Secure Passwords Instantly (2026)',
+    description: 'Learn how to generate strong, secure passwords online for free. Complete guide covering password strength, best practices, and account security tips.',
+    url: '/blog/strong-password-generator-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/strong-password-generator-guide' },
 }
 

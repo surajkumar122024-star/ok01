@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image Resizer Complete Guide: Resize Photos Online Without Losing Quality (2026) — OpticShift Pro',
+  title: 'Image Resizer Complete Guide: Resize Photos Online Without Losing Quality (2026)',
   description: 'Learn how to resize images online for free without losing quality. Complete guide for social media, websites, and print with exact dimension control.',
   keywords: 'image resizer, free online tool, image resizer guide',
+  openGraph: {
+    title: 'Image Resizer Complete Guide: Resize Photos Online Without Losing Quality (2026)',
+    description: 'Learn how to resize images online for free without losing quality. Complete guide for social media, websites, and print with exact dimension control.',
+    url: '/blog/image-resizer-complete-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/image-resizer-complete-guide' },
 }
 

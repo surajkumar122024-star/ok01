@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Make a Free Barcode Online (CODE128, EAN-13, UPC) — OLD TOOLS',
+  title: 'How to Make a Free Barcode Online (CODE128, EAN-13, UPC)',
   description: 'Generate a scannable barcode in the right format for your use case — retail, inventory, or shipping — free, with no sign-up. Learn which format to pick and why.',
   keywords: 'barcode generator, free barcode generator, code128 barcode, ean13 barcode generator, upc barcode maker, how to make a barcode',
+  openGraph: {
+    title: 'How to Make a Free Barcode Online (CODE128, EAN-13, UPC)',
+    description: 'Generate a scannable barcode in the right format for your use case — retail, inventory, or shipping — free, with no sign-up. Learn which format to pick and why.',
+    url: '/blog/barcode-generator-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/barcode-generator-guide' },
 }
 

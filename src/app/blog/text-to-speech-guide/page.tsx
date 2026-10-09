@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Text to Speech Guide: Free Online Voice Reader (2026) — OLD TOOLS',
+  title: 'Text to Speech Guide: Free Online Voice Reader (2026)',
   description: 'Convert text to speech instantly using your browser\'s built-in voices. Adjust speed and pitch, choose languages — free, private, and no sign-up.',
   keywords: 'text to speech, tts online, text to voice, read text aloud, free text to speech',
+  openGraph: {
+    title: 'Text to Speech Guide: Free Online Voice Reader (2026)',
+    description: 'Convert text to speech instantly using your browser\'s built-in voices. Adjust speed and pitch, choose languages — free, private, and no sign-up.',
+    url: '/blog/text-to-speech-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/text-to-speech-guide' },
 }
 

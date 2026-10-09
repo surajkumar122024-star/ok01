@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert JPG to PNG Online — Free & Instant (2026 Guide) — OpticShift Pro',
+  title: 'How to Convert JPG to PNG Online — Free & Instant (2026 Guide)',
   description: 'Convert JPG images to lossless PNG format in your browser — free, instant, no uploads. Learn when PNG actually matters, and what conversion does (and does not) change about your image.',
   keywords: 'convert jpg to png, jpg to png converter, free image converter, lossless image format',
+  openGraph: {
+    title: 'How to Convert JPG to PNG Online — Free & Instant (2026 Guide)',
+    description: 'Convert JPG images to lossless PNG format in your browser — free, instant, no uploads. Learn when PNG actually matters, and what conversion does (and does not) change about your image.',
+    url: '/blog/how-to-convert-jpg-to-png',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-jpg-to-png' },
 }
 

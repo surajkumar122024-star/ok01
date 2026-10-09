@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'UUID Generator Guide: Free Online UUID v4 Generator (2026) — OLD TOOLS',
+  title: 'UUID Generator Guide: Free Online UUID v4 Generator (2026)',
   description: 'Generate random UUID v4 (GUID) values instantly, in bulk. What a UUID actually is, why v4 is the default choice, and where to use one.',
   keywords: 'uuid generator, guid generator, uuid v4, random uuid online, generate uuid',
+  openGraph: {
+    title: 'UUID Generator Guide: Free Online UUID v4 Generator (2026)',
+    description: 'Generate random UUID v4 (GUID) values instantly, in bulk. What a UUID actually is, why v4 is the default choice, and where to use one.',
+    url: '/blog/uuid-generator-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/uuid-generator-guide' },
 }
 

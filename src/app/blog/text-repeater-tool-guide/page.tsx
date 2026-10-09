@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Text Repeater Tool Guide: Repeat Any Text Instantly (2026) — OpticShift Pro',
+  title: 'Text Repeater Tool Guide: Repeat Any Text Instantly (2026)',
   description: 'Learn how to use an online text repeater to duplicate words, phrases, or sentences multiple times instantly. Free guide for testing, design, and fun.',
   keywords: 'text repeater, free online tool, text repeater guide',
+  openGraph: {
+    title: 'Text Repeater Tool Guide: Repeat Any Text Instantly (2026)',
+    description: 'Learn how to use an online text repeater to duplicate words, phrases, or sentences multiple times instantly. Free guide for testing, design, and fun.',
+    url: '/blog/text-repeater-tool-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/text-repeater-tool-guide' },
 }
 

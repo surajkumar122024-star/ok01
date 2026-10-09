@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Rotate Images Online: Complete 2026 Guide — OpticShift Pro',
+  title: 'How to Rotate Images Online: Complete 2026 Guide',
   description: 'Learn how to rotate and straighten images online for free. Step-by-step guide to fixing sideways or upside-down photos in seconds, no software needed.',
   keywords: 'rotate images online, free online tool, rotate images online guide',
+  openGraph: {
+    title: 'How to Rotate Images Online: Complete 2026 Guide',
+    description: 'Learn how to rotate and straighten images online for free. Step-by-step guide to fixing sideways or upside-down photos in seconds, no software needed.',
+    url: '/blog/how-to-rotate-images-online',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-rotate-images-online' },
 }
 

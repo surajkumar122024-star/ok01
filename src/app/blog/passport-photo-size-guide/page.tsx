@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Passport Photo Size Guide (35×45mm) — Free Online Tool (2026) — OpticShift Pro',
+  title: 'Passport Photo Size Guide (35×45mm) — Free Online Tool (2026)',
   description: 'The exact Passport Seva photo specification, face-framing requirements, and how to crop your own photo to the correct 35×45mm size for free.',
   keywords: 'passport photo size, passport seva photo specification, 35x45mm photo, indian passport photo online',
+  openGraph: {
+    title: 'Passport Photo Size Guide (35×45mm) — Free Online Tool (2026)',
+    description: 'The exact Passport Seva photo specification, face-framing requirements, and how to crop your own photo to the correct 35×45mm size for free.',
+    url: '/blog/passport-photo-size-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/passport-photo-size-guide' },
 }
 

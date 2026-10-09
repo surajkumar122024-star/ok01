@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'JPG vs PNG vs WebP — Which Format Should You Use? (2026 Guide) — OLD TOOLS',
+  title: 'JPG vs PNG vs WebP — Which Format Should You Use? (2026 Guide)',
   description: 'A practical comparison of JPG, PNG, and WebP — what each format actually does differently, real file size examples, and a simple decision framework for choosing the right one.',
   keywords: 'JPG vs PNG vs WebP, image format comparison, which image format to use, best image format for web',
+  openGraph: {
+    title: 'JPG vs PNG vs WebP — Which Format Should You Use? (2026 Guide)',
+    description: 'A practical comparison of JPG, PNG, and WebP — what each format actually does differently, real file size examples, and a simple decision framework for choosing the right one.',
+    url: '/blog/jpg-vs-png-vs-webp',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/jpg-vs-png-vs-webp' },
 }
 

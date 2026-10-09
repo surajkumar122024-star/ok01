@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Use Base64 Encoder Decoder: The Complete 2026 Guide — OpticShift Pro',
+  title: 'How to Use Base64 Encoder Decoder: The Complete 2026 Guide',
   description: 'Learn how to use a Base64 encoder decoder online — encode text, files, and images to Base64 or decode Base64 back to original data. Free, fast, and secure.',
   keywords: 'Base64 encoder decoder, free online tool, Base64 encoder decoder guide',
+  openGraph: {
+    title: 'How to Use Base64 Encoder Decoder: The Complete 2026 Guide',
+    description: 'Learn how to use a Base64 encoder decoder online — encode text, files, and images to Base64 or decode Base64 back to original data. Free, fast, and secure.',
+    url: '/blog/how-to-use-base64-encoder-decoder',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-use-base64-encoder-decoder' },
 }
 

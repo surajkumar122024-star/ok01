@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'JSON Formatter Guide: Beautify, Validate & Debug JSON Online (2026) — OLD TOOLS',
+  title: 'JSON Formatter Guide: Beautify, Validate & Debug JSON Online (2026)',
   description: 'Learn how to format, validate, and beautify JSON online for free. Step-by-step guide for developers to debug JSON data quickly and accurately.',
   keywords: 'JSON formatter, free online tool, JSON formatter guide',
+  openGraph: {
+    title: 'JSON Formatter Guide: Beautify, Validate & Debug JSON Online (2026)',
+    description: 'Learn how to format, validate, and beautify JSON online for free. Step-by-step guide for developers to debug JSON data quickly and accurately.',
+    url: '/blog/json-formatter-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/json-formatter-guide' },
 }
 

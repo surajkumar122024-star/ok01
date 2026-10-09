@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Document Photo Size Guide India: Aadhaar, PAN, Passport, Visa & Exam (2026) — OpticShift Pro',
+  title: 'Document Photo Size Guide India: Aadhaar, PAN, Passport, Visa & Exam (2026)',
   description: 'One reference table for every common Indian document photo spec — Aadhaar, PAN, Passport, Visa, exam applications, and signature scans — plus how to prepare each one free online.',
   keywords: 'aadhaar photo size, pan card photo size, passport photo size india, exam photo size, document photo size chart india',
+  openGraph: {
+    title: 'Document Photo Size Guide India: Aadhaar, PAN, Passport, Visa & Exam (2026)',
+    description: 'One reference table for every common Indian document photo spec — Aadhaar, PAN, Passport, Visa, exam applications, and signature scans — plus how to prepare each one free online.',
+    url: '/blog/document-photo-size-guide-india',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/document-photo-size-guide-india' },
 }
 

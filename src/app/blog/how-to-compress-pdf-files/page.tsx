@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Compress a PDF Online — Free, No Upload (2026) — OLD TOOLS',
+  title: 'How to Compress a PDF Online — Free, No Upload (2026)',
   description: 'Reduce PDF file size for free, right in your browser. Best for image-heavy and scanned PDFs — what actually makes a PDF large and how compression fixes it.',
   keywords: 'pdf compressor, compress pdf online, reduce pdf size, shrink pdf file size, free pdf compressor',
+  openGraph: {
+    title: 'How to Compress a PDF Online — Free, No Upload (2026)',
+    description: 'Reduce PDF file size for free, right in your browser. Best for image-heavy and scanned PDFs — what actually makes a PDF large and how compression fixes it.',
+    url: '/blog/how-to-compress-pdf-files',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-compress-pdf-files' },
 }
 

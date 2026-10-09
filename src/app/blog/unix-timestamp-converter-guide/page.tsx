@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Unix Timestamp Converter Guide: Epoch to Date & Back (2026) — OpticShift Pro',
+  title: 'Unix Timestamp Converter Guide: Epoch to Date & Back (2026)',
   description: 'Convert Unix timestamps to human-readable dates and back, instantly, with the current timestamp shown live. What epoch time is and why it matters for developers.',
   keywords: 'unix timestamp converter, epoch converter, timestamp to date, date to timestamp, current unix time',
+  openGraph: {
+    title: 'Unix Timestamp Converter Guide: Epoch to Date & Back (2026)',
+    description: 'Convert Unix timestamps to human-readable dates and back, instantly, with the current timestamp shown live. What epoch time is and why it matters for developers.',
+    url: '/blog/unix-timestamp-converter-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/unix-timestamp-converter-guide' },
 }
 

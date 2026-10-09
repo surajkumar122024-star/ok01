@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert SVG to PNG: Complete 2026 Guide — OpticShift Pro',
+  title: 'How to Convert SVG to PNG: Complete 2026 Guide',
   description: 'Learn how to convert SVG files to PNG online for free. Step-by-step guide for designers and developers to convert vector graphics to raster images.',
   keywords: 'convert SVG to PNG, free online tool, convert SVG to PNG guide',
+  openGraph: {
+    title: 'How to Convert SVG to PNG: Complete 2026 Guide',
+    description: 'Learn how to convert SVG files to PNG online for free. Step-by-step guide for designers and developers to convert vector graphics to raster images.',
+    url: '/blog/how-to-convert-svg-to-png',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-svg-to-png' },
 }
 

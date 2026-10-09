@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'URL Encoder Decoder Guide: Encode & Decode URLs Instantly (2026) — OpticShift Pro',
+  title: 'URL Encoder Decoder Guide: Encode & Decode URLs Instantly (2026)',
   description: 'Learn how to encode and decode URLs online for free. Complete guide to percent-encoding, special characters, and safe URL formatting for developers.',
   keywords: 'URL encoder decoder, free online tool, URL encoder decoder guide',
+  openGraph: {
+    title: 'URL Encoder Decoder Guide: Encode & Decode URLs Instantly (2026)',
+    description: 'Learn how to encode and decode URLs online for free. Complete guide to percent-encoding, special characters, and safe URL formatting for developers.',
+    url: '/blog/url-encoder-decoder-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/url-encoder-decoder-guide' },
 }
 

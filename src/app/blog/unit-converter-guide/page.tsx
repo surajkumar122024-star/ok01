@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Unit Converter Guide: Convert Length, Weight, Temperature & More (2026) — OLD TOOLS',
+  title: 'Unit Converter Guide: Convert Length, Weight, Temperature & More (2026)',
   description: 'A complete guide to converting length, weight, temperature, area, volume, speed, data storage, and time online — free, instant, and accurate to international standards.',
   keywords: 'unit converter, metric to imperial converter, convert miles to km, convert kg to lbs, temperature converter',
+  openGraph: {
+    title: 'Unit Converter Guide: Convert Length, Weight, Temperature & More (2026)',
+    description: 'A complete guide to converting length, weight, temperature, area, volume, speed, data storage, and time online — free, instant, and accurate to international standards.',
+    url: '/blog/unit-converter-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/unit-converter-guide' },
 }
 

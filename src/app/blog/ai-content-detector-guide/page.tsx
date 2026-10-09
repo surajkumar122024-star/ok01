@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026) — OLD TOOLS',
+  title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026)',
   description: 'Free AI content detector that checks for sentence uniformity, repetitive phrasing, and typical AI transition words. Learn how it works and its real limits.',
   keywords: 'ai content detector, ai text detector, detect ai writing, chatgpt detector, ai generated text checker',
+  openGraph: {
+    title: 'AI Content Detector Guide: Check If Text Was Written by AI (2026)',
+    description: 'Free AI content detector that checks for sentence uniformity, repetitive phrasing, and typical AI transition words. Learn how it works and its real limits.',
+    url: '/blog/ai-content-detector-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/ai-content-detector-guide' },
 }
 

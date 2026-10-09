@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Perfect Image Sizes for Every Social Media Platform (2026 Guide) — OpticShift Pro',
+  title: 'Perfect Image Sizes for Every Social Media Platform (2026 Guide)',
   description: 'The complete, up-to-date cheat sheet for Instagram, Facebook, X/Twitter, LinkedIn, YouTube, TikTok, and Pinterest image dimensions — plus how to resize for free in your browser.',
   keywords: 'social media image sizes, instagram image size, facebook image size, twitter image size, linkedin image size, youtube thumbnail size',
+  openGraph: {
+    title: 'Perfect Image Sizes for Every Social Media Platform (2026 Guide)',
+    description: 'The complete, up-to-date cheat sheet for Instagram, Facebook, X/Twitter, LinkedIn, YouTube, TikTok, and Pinterest image dimensions — plus how to resize for free in your browser.',
+    url: '/blog/resize-images-for-social-media',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/resize-images-for-social-media' },
 }
 
@@ -180,7 +186,7 @@ export default function ResizeForSocialMediaArticle() {
             </div>
             <div>
               <p className="font-semibold">Is it safe to resize personal photos online?</p>
-              <p className="text-muted-foreground">With OpticShift Pro specifically, yes — resizing happens entirely in your browser using the Canvas API, so your photo is never uploaded to a server.</p>
+              <p className="text-muted-foreground">With OLD TOOLS specifically, yes — resizing happens entirely in your browser using the Canvas API, so your photo is never uploaded to a server.</p>
             </div>
             <div>
               <p className="font-semibold">Can I use the same image across multiple platforms?</p>

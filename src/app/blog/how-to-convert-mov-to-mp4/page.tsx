@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert MOV to MP4 Online — Free, No Upload (2026) — OLD TOOLS',
+  title: 'How to Convert MOV to MP4 Online — Free, No Upload (2026)',
   description: 'Convert MOV (QuickTime/iPhone) videos to universally-playable MP4, free and right in your browser. Why MOV files cause playback problems and how to fix it.',
   keywords: 'mov to mp4, convert mov to mp4, quicktime to mp4, iphone video to mp4, free mov converter online',
+  openGraph: {
+    title: 'How to Convert MOV to MP4 Online — Free, No Upload (2026)',
+    description: 'Convert MOV (QuickTime/iPhone) videos to universally-playable MP4, free and right in your browser. Why MOV files cause playback problems and how to fix it.',
+    url: '/blog/how-to-convert-mov-to-mp4',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-mov-to-mp4' },
 }
 

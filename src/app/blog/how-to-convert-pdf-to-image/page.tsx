@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Convert PDF Pages to Images (PNG) — Free & Private (2026 Guide) — OLD TOOLS',
+  title: 'How to Convert PDF Pages to Images (PNG) — Free & Private (2026 Guide)',
   description: 'Convert every page of a PDF into a high-quality PNG image, free and entirely in your browser. Step-by-step guide, resolution tips, and answers to common questions.',
   keywords: 'convert pdf to image, pdf to png, pdf to jpg, extract pdf pages as images, free pdf converter',
+  openGraph: {
+    title: 'How to Convert PDF Pages to Images (PNG) — Free & Private (2026 Guide)',
+    description: 'Convert every page of a PDF into a high-quality PNG image, free and entirely in your browser. Step-by-step guide, resolution tips, and answers to common questions.',
+    url: '/blog/how-to-convert-pdf-to-image',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/how-to-convert-pdf-to-image' },
 }
 

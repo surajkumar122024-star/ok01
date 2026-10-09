@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Image to Text (OCR) Guide: Extract Text From Any Image Free (2026) — OLD TOOLS',
+  title: 'Image to Text (OCR) Guide: Extract Text From Any Image Free (2026)',
   description: 'Extract text from photos, screenshots, and scanned documents online for free. How the OCR works, what improves accuracy, and common use cases.',
   keywords: 'image to text, ocr online, extract text from image, photo to text, jpg to text, png to text, screenshot to text, free ocr tool',
+  openGraph: {
+    title: 'Image to Text (OCR) Guide: Extract Text From Any Image Free (2026)',
+    description: 'Extract text from photos, screenshots, and scanned documents online for free. How the OCR works, what improves accuracy, and common use cases.',
+    url: '/blog/image-to-text-ocr-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/image-to-text-ocr-guide' },
 }
 

@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Lorem Ipsum Generator Guide: Free Placeholder Text (2026) — OpticShift Pro',
+  title: 'Lorem Ipsum Generator Guide: Free Placeholder Text (2026)',
   description: 'Generate Lorem Ipsum placeholder text by words, sentences, or paragraphs. Where the text comes from, and why designers still use it in mockups.',
   keywords: 'lorem ipsum generator, placeholder text generator, dummy text generator, filler text',
+  openGraph: {
+    title: 'Lorem Ipsum Generator Guide: Free Placeholder Text (2026)',
+    description: 'Generate Lorem Ipsum placeholder text by words, sentences, or paragraphs. Where the text comes from, and why designers still use it in mockups.',
+    url: '/blog/lorem-ipsum-generator-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/lorem-ipsum-generator-guide' },
 }
 

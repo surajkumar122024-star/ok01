@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '3 Money Calculators Everyone Should Bookmark (EMI, GST, Interest) — OpticShift Pro',
+  title: '3 Money Calculators Everyone Should Bookmark (EMI, GST, Interest)',
   description: 'Three everyday money questions — what will my loan EMI be, how much GST is really in this price, what will my savings grow to — answered with free calculators and real worked numbers.',
   keywords: 'emi calculator, gst calculator, interest calculator, loan calculator, money calculator, financial calculator free',
+  openGraph: {
+    title: '3 Money Calculators Everyone Should Bookmark (EMI, GST, Interest)',
+    description: 'Three everyday money questions — what will my loan EMI be, how much GST is really in this price, what will my savings grow to — answered with free calculators and real worked numbers.',
+    url: '/blog/money-calculators-emi-gst-interest',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/money-calculators-emi-gst-interest' },
 }
 

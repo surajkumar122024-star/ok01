@@ -183,6 +183,26 @@ const featuredPosts = [
     slug: 'resize-images-for-social-media',
     excerpt: 'Exact pixel dimensions for Instagram, Facebook, LinkedIn, and more.',
   },
+  {
+    title: 'How to Convert Images to PDF Online',
+    slug: 'how-to-convert-image-to-pdf',
+    excerpt: 'Combine photos and scans into one properly ordered PDF, right in your browser.',
+  },
+  {
+    title: 'How to Convert PNG to JPG Online',
+    slug: 'how-to-convert-png-to-jpg',
+    excerpt: 'Shrink PNG files by switching to JPG, with no upload and no quality surprises.',
+  },
+  {
+    title: 'How to Convert PDF to Image Online',
+    slug: 'how-to-convert-pdf-to-image',
+    excerpt: 'Turn every PDF page into a high-quality PNG, instantly and privately.',
+  },
+  {
+    title: 'How to Merge PDF Files',
+    slug: 'how-to-merge-pdf-files',
+    excerpt: 'Combine several PDFs into a single document in a few clicks.',
+  },
 ];
 
 export default function Home() {

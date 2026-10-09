@@ -2,9 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Case Converter Guide: Convert Text to Upper, Lower, Title & Sentence Case (2026) — OLD TOOLS',
+  title: 'Case Converter Guide: Convert Text to Upper, Lower, Title & Sentence Case (2026)',
   description: 'Complete guide to using an online case converter tool. Instantly change text to uppercase, lowercase, title case, sentence case, and more — free and fast.',
   keywords: 'case converter, free online tool, case converter guide',
+  openGraph: {
+    title: 'Case Converter Guide: Convert Text to Upper, Lower, Title & Sentence Case (2026)',
+    description: 'Complete guide to using an online case converter tool. Instantly change text to uppercase, lowercase, title case, sentence case, and more — free and fast.',
+    url: '/blog/case-converter-guide',
+    type: 'article',
+  },
   alternates: { canonical: '/blog/case-converter-guide' },
 }
 
