@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { ImageToolLayout } from "@/components/ImageToolLayout";
 import { ImageDropzone } from "@/components/ImageDropzone";
+import { ToolContentSection } from "@/components/ToolContentSection";
+import { toolContent } from "@/data/toolContent";
 import { Button } from "@/components/ui/button";
 import { Download, Loader2, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -168,6 +170,7 @@ export default function ImageConverterClient() {
     <ImageToolLayout
       title="Image Format Converter"
       description="Convert between JPG, PNG, WebP, GIF, BMP, and ICO — all in your browser, no upload."
+      content={<ToolContentSection data={toolContent["image-converter"]} />}
     >
       <div className="space-y-8">
         <ImageDropzone

@@ -1,6 +1,7 @@
 import { ToolContentData } from "@/components/ToolContentSection";
+import { extraToolContent } from "@/data/toolContentExtra";
 
-export const toolContent: Record<string, ToolContentData> = {
+const baseToolContent: Record<string, ToolContentData> = {
   "pdf-compressor": {
     overview: [
       "Large PDFs — especially scanned documents or ones packed with photos — can be slow to email, upload, or share. This tool shrinks a PDF's file size by re-rendering each page as a re-compressed image and rebuilding the PDF from those images, entirely in your browser.",
@@ -2320,4 +2321,10 @@ export const toolContent: Record<string, ToolContentData> = {
       { name: "Image to PDF", slug: "image-to-pdf" },
     ],
   },
+};
+
+// Extra entries override/extend the base ones (expanded, tool-specific content).
+export const toolContent: Record<string, ToolContentData> = {
+  ...baseToolContent,
+  ...extraToolContent,
 };
