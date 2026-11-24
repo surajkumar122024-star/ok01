@@ -63,18 +63,6 @@ export default function FormUploadCheckerClient() {
     setReq(kind, { ...current, [key]: safeValue });
   }
 
-  function applyPreset(kind: ImageKind, value: string) {
-    if (kind === "photo") {
-      setPhotoReq(value === "custom" ? photoDefaults : {
-        width: 200, height: 230, maxKB: 50, format: "image/jpeg",
-      });
-    } else {
-      setSignatureReq(value === "custom" ? signatureDefaults : {
-        width: 140, height: 60, maxKB: 20, format: "image/jpeg",
-      });
-    }
-  }
-
   async function pick(file: File, kind: ImageKind) {
     if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
       setNotice("Please select a JPG, PNG or WebP image.");
@@ -132,24 +120,21 @@ export default function FormUploadCheckerClient() {
 
     ctx.fillStyle = "#fff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    const scale = Math.max(req.width / img.naturalWidth, req.height / img.naturalHeight);
-    const sourceWidth = req.width / scale;
-    const sourceHeight = req.height / scale;
+    // Fit the entire source image inside the requested canvas so edges/signature strokes are not silently cropped.
+    const scale = Math.min(req.width / img.naturalWidth, req.height / img.naturalHeight);
+    const drawWidth = img.naturalWidth * scale;
+    const drawHeight = img.naturalHeight * scale;
     ctx.drawImage(
       img,
-      (img.naturalWidth - sourceWidth) / 2,
-      (img.naturalHeight - sourceHeight) / 2,
-      sourceWidth,
-      sourceHeight,
-      0,
-      0,
-      req.width,
-      req.height,
+      (req.width - drawWidth) / 2,
+      (req.height - drawHeight) / 2,
+      drawWidth,
+      drawHeight,
     );
 
     let quality = 0.92;
     let blob: Blob | null = await new Promise(resolve => canvas.toBlob(resolve, req.format, quality));
-    while (blob && blob.size > req.maxKB * 1024 && quality > 0.25) {
+    while (req.format === "image/jpeg" && blob && blob.size > req.maxKB * 1024 && quality > 0.25) {
       quality = Math.max(0.25, quality - 0.07);
       blob = await new Promise(resolve => canvas.toBlob(resolve, req.format, quality));
     }
@@ -167,7 +152,8 @@ export default function FormUploadCheckerClient() {
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
-    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+    // Keep the object URL alive long enough for mobile browsers to start the download.
+    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 60000);
     setNotice(`${kind === "photo" ? "Photo" : "Signature"} prepared. Please check the downloaded file before uploading it.`);
   }
 
@@ -181,11 +167,7 @@ export default function FormUploadCheckerClient() {
           <p className="text-xs text-muted-foreground">Set these values independently from the other file.</p>
         </div>
         <label className="block text-sm font-medium">
-          Starting preset
-          <select className={field} defaultValue="default" onChange={event => applyPreset(kind, event.target.value)}>
-            <option value="default">{kind === "photo" ? "Common photo example (200 × 230px, 50KB)" : "Common signature example (140 × 60px, 20KB)"}</option>
-            <option value="custom">Reset to editable custom values</option>
-          </select>
+          Example values only — enter the exact requirements from your application.
         </label>
         <div className="grid grid-cols-2 gap-3">
           <label className="text-sm">Width (px)<input className={field} type="number" min="1" max="6000" value={req.width} onChange={e => updateReq(kind, "width", e.target.value)} /></label>
@@ -264,7 +246,7 @@ export default function FormUploadCheckerClient() {
           {uploadCard("signature")}
         </div>
       </div>
-      <p className="text-xs text-muted-foreground">The checker validates pixel dimensions, actual file size and image format. It cannot verify face placement, background, signature authenticity, DPI metadata or portal-specific rules. The output uses a centered crop; check the preview and downloaded file before submitting.</p>
+      <p className="text-xs text-muted-foreground">The checker validates pixel dimensions, actual file size and image format. It cannot verify face placement, background, signature authenticity, DPI metadata or portal-specific rules. The output fits the complete source image inside a white canvas, which may leave blank margins. Check the downloaded file and adjust the source/canvas requirements before submitting.</p>
       {notice && <p role="status" className="rounded-lg bg-muted p-3 text-sm">{notice}</p>}
     </div>
   );
