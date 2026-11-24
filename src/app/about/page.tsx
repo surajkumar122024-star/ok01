@@ -17,7 +17,7 @@ export default function AboutPage() {
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">About OLD TOOLS</h1>
-          <p className="text-xl text-muted-foreground">The future of private, fast image processing.</p>
+          <p className="text-xl text-muted-foreground">Free, fast file tools that run privately in your browser.</p>
         </div>
 
         <div className="prose prose-lg dark:prose-invert max-w-none">
@@ -32,7 +32,7 @@ export default function AboutPage() {
             { icon: Shield, title: "Privacy First", text: "Your data stays on your device. Period." },
             { icon: Zap, title: "Performance", text: "Optimized browser code for instant execution." },
             { icon: Globe, title: "Accessible", text: "Free tools for everyone, anywhere in the world." },
-            { icon: Lock, title: "Secure", text: "No accounts, no cookies, no tracking scripts." }
+            { icon: Lock, title: "Secure", text: "No accounts and no file uploads. Your files never touch our servers." }
           ].map((item, idx) => (
             <div key={idx} className="p-6 glass rounded-2xl border">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
@@ -65,7 +65,7 @@ export default function AboutPage() {
             For a quick screenshot that&apos;s a minor inconvenience. For a scanned ID document, a signed form, or a private photo, it&apos;s a real privacy concern — and it shouldn&apos;t be the trade-off you have to accept just to resize an image.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            So I built OLD TOOLS around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of ${TOOL_COUNT_LABEL} free tools covering images, PDFs, and text utilities.
+            So I built OLD TOOLS around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of {TOOL_COUNT_LABEL} free tools covering images, PDFs, video, text, developer utilities, and calculators.
           </p>
         </section>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="text-center py-10 px-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border">
           <h2 className="text-2xl font-bold mb-3">Ready to get started?</h2>
-          <p className="text-muted-foreground mb-6">Try any of our ${TOOL_COUNT_LABEL} free tools — no account needed, no files uploaded.</p>
+          <p className="text-muted-foreground mb-6">Try any of our {TOOL_COUNT_LABEL} free tools — no account needed, no files uploaded.</p>
           <Link
             href="/tools"
             className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-colors"

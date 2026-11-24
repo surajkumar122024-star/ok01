@@ -266,4 +266,154 @@ export const extraToolContent: Record<string, ToolContentData> = {
       { name: "Password Generator", slug: "password-generator" },
     ],
   },
+
+  "pdf-to-word": {
+    overview: [
+      "A PDF is built to look the same everywhere, which is exactly why it is awkward to edit. This tool pulls the text out of a PDF page by page and places it in a downloadable Word (.docx) document, so you have editable content to start from instead of retyping a letter, a report or a set of notes.",
+      "It is important to be clear about what this does and does not do. It extracts the text only. Fonts, exact spacing, images, tables, multiple columns and the original page design are not recreated, so the result is a plain, editable version of the words, not a pixel-perfect Word copy of the layout.",
+      "Extraction is done in your browser with PDF.js. Your document is read on your own device and is never uploaded, which is useful for contracts, application forms and other files you would rather not hand to a third-party server.",
+    ],
+    steps: [
+      { title: "Add your PDF", description: "Click the upload area or drag a PDF file onto it. Use a PDF that contains real, selectable text." },
+      { title: "Convert", description: "The text is read from each page in turn. Longer documents take a little longer." },
+      { title: "Download the .docx", description: "Save the Word file and open it in Word, Google Docs or any compatible editor." },
+      { title: "Tidy up", description: "Fix headings, spacing and lists as needed. Tables and columns usually need manual rebuilding." },
+    ],
+    useCases: [
+      { title: "Editing text that only exists as a PDF", description: "Get a starting draft of a letter, a report or a policy when the original file is lost." },
+      { title: "Reusing quotes and paragraphs", description: "Pull wording out of a document for notes or a summary without copying page by page." },
+      { title: "Preparing text for translation or proofreading", description: "Hand editors or translators a text file they can mark up easily." },
+      { title: "Searching and analysing content", description: "Move text into a tool that can count words, search, or compare versions." },
+    ],
+    tips: [
+      "Check that you can select text in your PDF first. If you cannot highlight words with your cursor, the file is a scan and has no text for this tool to extract.",
+      "For scanned pages, run the pages through an OCR tool such as Image to Text first, and then paste the result into a document.",
+      "Documents with tables, columns or forms need the most cleanup. Expect to rebuild those parts by hand.",
+      "Keep the original PDF. The Word file is a working copy, not a faithful replacement.",
+    ],
+    faqs: [
+      { q: "Will the formatting of my PDF be kept?", a: "No. Only plain text is extracted. Fonts, layout, images and tables are not recreated in the Word file." },
+      { q: "Why does the tool say no text was found?", a: "The PDF is probably a scanned image of pages, so there is no real text to read. Use the Image to Text (OCR) tool for scanned documents." },
+      { q: "Is my PDF uploaded anywhere?", a: "No. Text extraction happens in your browser and the file stays on your device." },
+      { q: "Can it convert password protected PDFs?", a: "No. Remove the password protection in the program that created the file, then try again." },
+    ],
+    relatedTools: [
+      { name: "Image to Text (OCR)", slug: "image-to-text" },
+      { name: "PDF Compressor", slug: "pdf-compressor" },
+      { name: "Merge PDF", slug: "pdf-merge" },
+      { name: "Word Counter", slug: "word-counter" },
+    ],
+  },
+
+  "pdf-compressor": {
+    overview: [
+      "PDFs that contain scans or lots of photographs can grow to many megabytes, which causes trouble with email attachment limits, upload forms and slow connections. This tool reduces the size of such a PDF by drawing each page as an image, compressing that image, and building a new PDF from the compressed pages.",
+      "That approach works best on image-heavy and scanned documents, where most of the weight is pictures. It is a real trade-off and not a free lunch: because every page becomes a picture of itself, the text in the output PDF can no longer be selected, searched or copied.",
+      "All of the work, from drawing the pages to rebuilding the file, runs in your browser with WebAssembly-based PDF libraries. Nothing is uploaded to a server, so documents such as ID scans, certificates and signed forms stay on your device.",
+    ],
+    steps: [
+      { title: "Add your PDF", description: "Click the upload area or drag a PDF file onto it." },
+      { title: "Choose a compression level", description: "Smallest size shrinks the most, Best quality keeps more detail, and Balanced sits between them." },
+      { title: "Compress", description: "Each page is rendered and re-compressed. Large files may take a while on a phone." },
+      { title: "Compare and download", description: "Check the before and after sizes, then download the result. If it is too blurry, try a higher quality level." },
+    ],
+    useCases: [
+      { title: "Scanned documents", description: "Photos or scans of paper pages usually shrink a lot with this method." },
+      { title: "Email attachment limits", description: "Reduce a PDF enough to fit under the size cap of an email provider or a portal." },
+      { title: "Application and exam portals", description: "Many government and job portals set strict maximum file sizes for uploads." },
+      { title: "Faster sharing", description: "A smaller file uploads and downloads faster on slow mobile connections." },
+    ],
+    tips: [
+      "Start with Balanced. Only use Smallest size if you need the tiniest file and can accept visible softening of text and images.",
+      "If your PDF was exported from Word or a similar program and is mostly text, it is already small, so this tool will not reduce it much.",
+      "Keep your original. The compressed copy has no selectable text, so you will want the original for searching or editing.",
+      "Check the result at normal zoom before sending it. Small print and signatures are the first things to suffer from heavy compression.",
+    ],
+    faqs: [
+      { q: "Will I still be able to select the text afterwards?", a: "No. Every page becomes a compressed image, so text can no longer be selected, searched or copied in the output." },
+      { q: "Is my PDF uploaded to a server?", a: "No. Rendering and compression both take place in your browser." },
+      { q: "Why did my file barely get smaller?", a: "If the PDF is mostly real text with few images, there is little to compress, because text based PDFs are already compact." },
+      { q: "Which level should I choose?", a: "Balanced is the best starting point. Move to Smallest size for strict limits, or Best quality when detail matters." },
+    ],
+    relatedTools: [
+      { name: "PDF to Word", slug: "pdf-to-word" },
+      { name: "Merge PDF", slug: "pdf-merge" },
+      { name: "Split PDF", slug: "pdf-split" },
+      { name: "Image Compressor", slug: "compressor" },
+    ],
+  },
+
+  "video-to-gif": {
+    overview: [
+      "An animated GIF plays automatically and loops in almost any chat, forum, document or web page without anyone pressing play, which makes it a handy way to share a short moment from a video. This tool trims a section of your video and turns it into an animated GIF.",
+      "Instead of a quick single-pass conversion, it uses FFmpeg's two-pass palette method. First it analyses your clip and builds a colour palette tailored to it, then it encodes the GIF against that palette. GIFs are limited to 256 colours, so a palette chosen for your clip gives noticeably cleaner colours and less banding than a generic one.",
+      "Everything runs in your browser through WebAssembly. The video is not uploaded anywhere, so clips from private recordings stay on your device. Clips are limited to 15 seconds because GIF file sizes grow very quickly with length.",
+    ],
+    steps: [
+      { title: "Add your video", description: "Click the upload area or drag a video file onto it." },
+      { title: "Pick the moment", description: "Use the start time and length controls to choose the part you want, up to 15 seconds." },
+      { title: "Choose a quality preset", description: "Small, Medium or Large. Higher quality gives a sharper GIF and a bigger file." },
+      { title: "Create and download", description: "Press Create GIF, preview the result and download it." },
+    ],
+    useCases: [
+      { title: "Reaction and highlight GIFs", description: "Turn a funny or memorable moment into something you can drop into a chat." },
+      { title: "Product and UI demos", description: "A short looping clip in a README or help article often explains a flow better than a static screenshot." },
+      { title: "Tutorials and how-tos", description: "Show one step of a process, such as where to click, in a few seconds of motion." },
+      { title: "Social and messaging", description: "Some apps display autoplaying GIFs more smoothly than video attachments." },
+    ],
+    tips: [
+      "Shorter is better. A 2 to 5 second clip gives the best balance of size and quality.",
+      "Small is usually enough for chats and forums. Use Large only when the GIF is the main content on a page.",
+      "Clips with big flat areas of colour compress better than footage with lots of fine detail and noise.",
+      "If you need sound or a longer clip, share the video itself, since GIFs have no audio.",
+    ],
+    faqs: [
+      { q: "Is my video uploaded anywhere?", a: "No. The clip is trimmed and converted inside your browser." },
+      { q: "Why is there a 15 second limit?", a: "GIF files grow very large very fast as clips get longer. The limit keeps results usable and quick to load." },
+      { q: "Why do these GIFs look better than ones from other converters?", a: "A custom colour palette is generated for your clip with a two pass process instead of using a generic fixed palette." },
+      { q: "Does the GIF include sound?", a: "No. The GIF format does not support audio." },
+    ],
+    relatedTools: [
+      { name: "Video Compressor", slug: "video-compressor" },
+      { name: "MOV to MP4", slug: "mov-to-mp4" },
+      { name: "Image Compressor", slug: "compressor" },
+    ],
+  },
+
+  "mov-to-mp4": {
+    overview: [
+      "MOV is the container that iPhones, iPads and QuickTime record in by default. It plays well on Apple devices, but Windows programs, Android phones and many websites and editors either refuse it or handle it poorly, and they usually expect MP4 instead.",
+      "This tool converts a MOV file to a standard MP4 with H.264 video and AAC audio, which is the most widely supported combination across devices, browsers and platforms. The conversion runs in your browser through a WebAssembly build of FFmpeg, so the video is never uploaded.",
+      "Because it is a genuine re-encode and not just a renamed file, it can also solve problems such as videos that appear sideways or will not play in some non-Apple players.",
+    ],
+    steps: [
+      { title: "Add your MOV file", description: "Click the upload area or drag a .mov file from your iPhone, iPad or Mac onto it." },
+      { title: "Wait for the conversion", description: "A progress bar shows how far along the job is. It runs on your own device." },
+      { title: "Preview", description: "When it finishes, play the result in the page to check picture and sound." },
+      { title: "Download the MP4", description: "Save the file and use it anywhere MP4 is accepted." },
+    ],
+    useCases: [
+      { title: "Sharing iPhone videos", description: "Send clips to friends on Android or Windows that open without codec errors." },
+      { title: "Uploading to websites", description: "Many upload forms, LMS platforms and editors accept MP4 but reject MOV." },
+      { title: "Video editing on Windows", description: "Some editing programs import MP4 more reliably than MOV." },
+      { title: "Fixing playback problems", description: "Convert a MOV that will not open in a non-Apple player." },
+    ],
+    tips: [
+      "If you also need a smaller file, run the MP4 through the Video Compressor afterwards.",
+      "Long or high resolution videos take longer because your own device does the work. A desktop browser is faster than a phone.",
+      "Keep the original MOV until you have checked that the MP4 plays correctly.",
+      "Close other heavy tabs and apps when converting large files to avoid slowdowns.",
+    ],
+    faqs: [
+      { q: "Is my video uploaded to a server?", a: "No. Conversion runs in your browser with WebAssembly and the file stays on your device." },
+      { q: "Will I lose quality?", a: "The conversion uses a high quality setting (CRF 20), so any loss is small and usually not noticeable in normal viewing." },
+      { q: "Is the audio kept?", a: "Yes. Audio is converted to AAC and included in the MP4." },
+      { q: "Is there a file size limit?", a: "There is no fixed limit, but very large files, roughly 250 MB and above, can be slow on phones. Use a desktop browser for those." },
+    ],
+    relatedTools: [
+      { name: "Video Compressor", slug: "video-compressor" },
+      { name: "Video to GIF", slug: "video-to-gif" },
+      { name: "Image Converter", slug: "image-converter" },
+    ],
+  },
 };
