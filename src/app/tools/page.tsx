@@ -384,6 +384,14 @@ const tools = [
   icon: FileImage,
   color: "bg-indigo-600"
 },
+{
+  name: "Indian Form Upload Checker",
+  slug: "form-upload-checker",
+  category: "document-photos",
+  description: "Check and prepare application photo and signature by dimensions, file size and format.",
+  icon: FileImage,
+  color: "bg-violet-600"
+},
   {
   name: "Signature Resizer",
   slug: "signature-resizer",

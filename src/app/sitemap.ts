@@ -47,6 +47,7 @@ const tools = [
   'aadhaar-photo',
   'pan-photo',
   'exam-photo',
+  'form-upload-checker',
   'signature-resizer',
   'unit-converter',
   'image-collage',
