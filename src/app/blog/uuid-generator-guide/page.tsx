@@ -61,7 +61,7 @@ export default function UuidGeneratorGuideArticle() {
           <p>A UUID (Universally Unique Identifier), also called a GUID (Globally Unique Identifier), is a 128-bit value typically displayed as 32 hexadecimal characters split into five groups, like <code>f47ac10b-58cc-4372-a567-0e02b2c3d479</code>. There are several UUID versions, but version 4 is by far the most common — it&apos;s generated using random or pseudo-random numbers rather than being derived from a timestamp or hardware address, which makes it simple to generate anywhere with no coordination needed.</p>
           <p>The number of possible UUID v4 values is so large (over 5 undecillion) that generating duplicates by chance is not a practical concern, even across billions of IDs.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the UUID Generator, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the UUID Generator</h3>
           <p>Go to the tool page — a UUID is generated automatically as soon as you land.</p>
@@ -70,7 +70,7 @@ export default function UuidGeneratorGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 3: Copy</h3>
           <p>Click the copy icon next to any UUID, or use <strong>Copy All</strong> when generating in bulk.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the UUID Generator</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Standards-compliant UUID v4</strong> generation.</li>
@@ -78,7 +78,6 @@ export default function UuidGeneratorGuideArticle() {
           <li><strong>One-click copy</strong> for a single UUID or the entire batch.</li>
           <li><strong>100% browser-based</strong> — uses cryptographically secure randomness, generated locally.</li>
           <li><strong>Free with no sign-up</strong> or usage limits.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

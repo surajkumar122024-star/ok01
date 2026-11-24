@@ -62,7 +62,7 @@ export default function TimestampConverterGuideArticle() {
           <p>A Unix timestamp (also called epoch time) is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC — a fixed reference point known as &quot;the Unix epoch.&quot; Instead of storing a year, month, day, hour, minute, and second separately, systems store this single number, which makes date math, comparisons, and storage far simpler for computers, even though it&apos;s meaningless to read at a glance.</p>
           <p>Most modern systems use seconds since the epoch, though some — notably JavaScript&apos;s <code>Date.now()</code> — use milliseconds instead, which is a common source of confusion (and off-by-1000 bugs) when converting between systems.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Timestamp Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Timestamp Converter</h3>
           <p>Go to the tool page, where you&apos;ll see the current Unix timestamp updating live, plus conversion inputs.</p>
@@ -73,7 +73,7 @@ export default function TimestampConverterGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 4: Copy the Result</h3>
           <p>Click to copy whichever value you need — timestamp or formatted date — straight into your code, query, or notes.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Timestamp Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Live current timestamp</strong> updating in real time, useful for quick reference while debugging.</li>
@@ -81,7 +81,6 @@ export default function TimestampConverterGuideArticle() {
           <li><strong>100% browser-based</strong> — no server round-trip for a simple date calculation.</li>
           <li><strong>One-click copy</strong> for both timestamp and formatted date values.</li>
           <li><strong>Free with no sign-up</strong> or usage limits.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

@@ -80,7 +80,7 @@ export default function HowToMergePdfFilesArticle() {
             documents where it&apos;s easy to lose track of the intended sequence partway through.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the PDF Merge Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Merge Tool</h3>
           <p>Go to the PDF Merge tool page, where you&apos;ll see an upload area ready to accept multiple files.</p>
@@ -95,17 +95,15 @@ export default function HowToMergePdfFilesArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Download Your Merged PDF</h3>
           <p>Click the <strong>Download</strong> button to save your newly combined document, ready to share, print, or upload anywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the PDF Merge Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Multi-file upload support</strong>, letting you combine several PDFs at once.</li>
           <li><strong>Drag-and-drop reordering</strong>, giving you full control over the final page sequence.</li>
           <li><strong>Fast processing</strong>, even for larger documents with many pages.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Maintains original formatting and quality</strong> across all merged pages.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added to your document.</li>
           <li><strong>Secure processing</strong> designed to protect your document&apos;s privacy.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online PDF Merge Tool</h2>

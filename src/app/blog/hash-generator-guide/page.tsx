@@ -66,7 +66,7 @@ export default function HashGeneratorGuideArticle() {
           <p>It&apos;s a tool that computes SHA-1, SHA-256, and SHA-512 cryptographic hashes from either typed text or an uploaded file. Paste text or drop a file in, and you instantly get all three hash values, ready to copy.</p>
           <p>The hashing runs using the browser&apos;s native Web Crypto API — the same cryptographic engine built into every modern browser — which means it&apos;s fast, accurate, and never sends your text or file to a server. Everything happens locally on your device.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Hash Generator, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Hash Generator</h3>
           <p>Go to the Hash Generator tool page, where you&apos;ll see options to enter text or upload a file.</p>
@@ -83,7 +83,7 @@ export default function HashGeneratorGuideArticle() {
           <p><strong>SHA-256</strong> — Produces a 256-bit hash and is the current standard for most security-sensitive use cases — password hashing (with proper salting), digital signatures, blockchain, and file integrity verification. It&apos;s the safest general-purpose default.</p>
           <p><strong>SHA-512</strong> — Produces a 512-bit hash using the same family of algorithms as SHA-256 but with a larger output and different internal word size. It&apos;s marginally slower on 32-bit systems but faster on modern 64-bit hardware, and offers a larger security margin for applications that want extra headroom.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Hash Generator</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Three algorithms at once</strong> — SHA-1, SHA-256, and SHA-512 generated together, no need to pick beforehand.</li>
@@ -91,7 +91,6 @@ export default function HashGeneratorGuideArticle() {
           <li><strong>Uses the native Web Crypto API</strong> — the same trusted implementation browsers use for HTTPS.</li>
           <li><strong>100% browser-based processing</strong> — nothing is ever uploaded to a server.</li>
           <li><strong>Free with no sign-up</strong> or usage limits.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

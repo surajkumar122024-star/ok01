@@ -62,7 +62,7 @@ export default function VideoCompressorGuideArticle() {
           <p>Video compression reduces file size mainly by lowering the bitrate — the amount of data used per second of video. Lower bitrate means smaller files, but push it too far and you&apos;ll start to see visible artifacts: blocky patches, blurring during motion, and loss of fine detail. Good compression finds the smallest file size that still looks acceptable for how the video will actually be viewed.</p>
           <p>Resolution also plays a role — a 4K video compressed to a smaller resolution (like 1080p) can look just as good on most screens while cutting file size dramatically, since there&apos;s simply less pixel data to encode.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Video Compressor, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Video Compressor</h3>
           <p>Go to the tool page, where you&apos;ll see an upload area.</p>
@@ -73,15 +73,12 @@ export default function VideoCompressorGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 4: Compare and Download</h3>
           <p>Check the new file size against the original, then click <strong>Download</strong> to save your compressed video.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Video Compressor</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Balances quality and file size</strong> automatically, aiming for the smallest file that still looks good.</li>
           <li><strong>Works with common formats</strong>, including MP4, MOV, and WebM.</li>
           <li><strong>100% browser-based processing</strong> — your video never leaves your device.</li>
-          <li><strong>No software installation</strong> required.</li>
-          <li><strong>Free with no watermarks</strong> added to your compressed video.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

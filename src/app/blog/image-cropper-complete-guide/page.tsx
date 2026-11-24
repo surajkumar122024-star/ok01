@@ -84,7 +84,7 @@ export default function ImageCropperCompleteGuideArticle() {
             way into the frame — rather than automatically centering everything.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image Cropper Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Cropper Tool</h3>
           <p>Go to the Image Cropper tool page, where you&apos;ll find an upload area ready for your photo.</p>
@@ -99,14 +99,13 @@ export default function ImageCropperCompleteGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Download Your Cropped Image</h3>
           <p>Click the <strong>Download</strong> button to save your newly cropped photo to your device, ready to use anywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image Cropper Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Freeform and preset aspect ratio cropping</strong> for flexibility across different platforms.</li>
           <li><strong>Drag-and-resize crop box</strong> for precise, visual control.</li>
           <li><strong>Real-time preview</strong> so you can see exactly how your final image will look.</li>
           <li><strong>High-quality output</strong> that preserves resolution within the cropped area.</li>
-          <li><strong>No software installation required</strong> — works directly in your browser.</li>
           <li><strong>Fast processing</strong>, even for high-resolution images.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added.</li>
           <li><strong>Mobile-friendly interface</strong> for cropping images on the go.</li>

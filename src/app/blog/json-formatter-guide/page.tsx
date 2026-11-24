@@ -90,7 +90,7 @@ export default function JsonFormatterGuideArticle() {
             — a small trade-off in flexibility for reliability across every system that reads it.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the JSON Formatter Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the JSON Formatter Tool</h3>
           <p>Navigate to the JSON Formatter tool page, where you&apos;ll see a text input area ready for your JSON data.</p>
@@ -105,7 +105,7 @@ export default function JsonFormatterGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy the Formatted Output</h3>
           <p>Once your JSON is clean and error-free, use the <strong>Copy to Clipboard</strong> button to grab the formatted result for use in your project.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the JSON Formatter Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant beautification</strong> with proper indentation and line breaks.</li>
@@ -114,8 +114,6 @@ export default function JsonFormatterGuideArticle() {
           <li><strong>Minify option</strong>, letting you compress JSON back into a single line when needed.</li>
           <li><strong>Adjustable indentation</strong> — choose between 2, 4, or 8 spaces to match your project&apos;s style guide.</li>
           <li><strong>Copy-to-clipboard functionality</strong> for quick integration into your workflow.</li>
-          <li><strong>No installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up needed.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online JSON Formatter</h2>

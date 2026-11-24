@@ -87,7 +87,7 @@ export default function HowToConvertSvgToPngArticle() {
             <p><strong>Print materials:</strong> export significantly larger than the on-screen size to preserve sharpness</p>
           </div>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the SVG to PNG Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the SVG to PNG Converter</h3>
           <p>Go to the SVG to PNG Converter tool page, where you&apos;ll see an upload area ready for your file.</p>
@@ -102,17 +102,14 @@ export default function HowToConvertSvgToPngArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Download Your PNG File</h3>
           <p>Click the <strong>Download</strong> button to save your newly converted PNG, ready to use anywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the SVG to PNG Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Fast, one-click conversion</strong> from SVG to PNG format.</li>
           <li><strong>Customizable output dimensions</strong>, letting you choose the exact pixel size for your PNG.</li>
           <li><strong>Transparent background support</strong>, preserving transparency from the original SVG where applicable.</li>
           <li><strong>High-quality rendering</strong>, ensuring sharp, clean results at your chosen resolution.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free with no watermarks</strong> added to your converted images.</li>
           <li><strong>Scale up to 8x</strong> the original SVG dimensions, with full control over custom width and height.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Converting SVG to PNG</h2>

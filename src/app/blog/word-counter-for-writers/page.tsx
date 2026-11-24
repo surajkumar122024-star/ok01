@@ -66,7 +66,7 @@ export default function WordCounterForWritersArticle() {
           <p>A word counter is a writing tool that instantly counts the number of words in a piece of text, often alongside additional metrics like character count, sentence count, and paragraph count. Instead of manually counting or relying on rough estimates, this tool gives you an accurate, real-time count as you write or paste your content.</p>
           <p>This is essential for any writing task with specific length requirements — academic essays, blog posts, professional documents, or even personal writing goals like National Novel Writing Month challenges.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Word Counter Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Word Counter Tool</h3>
           <p>Go to the Word Counter tool page, where you&apos;ll find a large text input box ready for your content.</p>
@@ -81,13 +81,12 @@ export default function WordCounterForWritersArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy Your Finalized Text</h3>
           <p>Once you&apos;re satisfied with your word count, use the <strong>Copy to Clipboard</strong> button to grab your finalized content.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Word Counter Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Real-time word counting</strong> as you type, with no need to click a separate &quot;count&quot; button.</li>
           <li><strong>Character count</strong> included alongside word totals, both with and without spaces.</li>
           <li><strong>Sentence and paragraph counts</strong> for a more complete picture of your text&apos;s structure.</li>
-          <li><strong>No sign-up or installation required</strong> — completely free to use instantly.</li>
           <li><strong>Clean, distraction-free design</strong> that keeps your focus on writing.</li>
           <li><strong>Works across devices</strong>, including mobile phones and tablets.</li>
           <li><strong>Fast performance</strong> even with longer documents or articles.</li>

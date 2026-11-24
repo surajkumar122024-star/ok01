@@ -71,7 +71,7 @@ export default function HowToSplitPdfPagesArticle() {
           <p>Splitting a PDF means extracting the specific pages you actually need into a new, smaller document — instead of carrying along an entire multi-page file when only a portion of it is relevant. You select exactly which pages to keep, and the tool builds a single new PDF containing just those pages, in order.</p>
           <p>This is particularly useful for large reports, scanned document batches, contracts with multiple sections, or any file where only a portion is relevant to a specific task or recipient.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the PDF Split Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Split Tool</h3>
           <p>Navigate to the PDF Split tool page, where you&apos;ll see an upload area ready for your document.</p>
@@ -84,17 +84,15 @@ export default function HowToSplitPdfPagesArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 5: Extract and Download</h3>
           <p>Click <strong>Extract Page(s)</strong>, and the tool generates a single new PDF containing exactly the pages you selected, in their original order, ready to download.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the PDF Split Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Visual page selection</strong> — thumbnail previews of every page make it easy to pick exactly what you need.</li>
           <li><strong>Non-consecutive page selection</strong>, letting you pick any combination of pages, not just a continuous range.</li>
           <li><strong>Fast processing</strong>, even for larger, multi-page documents.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Maintains original formatting and quality</strong> across all split pages.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added.</li>
           <li><strong>Secure processing</strong> designed to protect your document&apos;s privacy.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online PDF Split Tool</h2>

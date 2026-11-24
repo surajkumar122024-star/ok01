@@ -62,7 +62,7 @@ export default function PdfToWordGuideArticle() {
           <p>It reads the text layer of your PDF — the actual character data, not a picture of characters — and reconstructs it as an editable Word document, preserving paragraph breaks as closely as the source structure allows. Because it&apos;s a browser-based text extraction rather than a server-side reconstruction engine, it works best on simple, text-based PDFs rather than heavily designed documents.</p>
           <p>Everything runs locally in your browser, so a PDF with sensitive content — a contract, an ID, financial details — never gets uploaded anywhere during the conversion.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the PDF to Word Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF to Word Converter</h3>
           <p>Go to the tool page, where you&apos;ll see an upload area.</p>
@@ -79,15 +79,12 @@ export default function PdfToWordGuideArticle() {
           <p><strong>Converts less cleanly</strong> — Multi-column layouts, PDFs with heavy design elements (tables, text boxes, overlapping graphics), and scanned PDFs where the &quot;text&quot; is actually a picture of text rather than real character data. Scanned documents need OCR (optical character recognition) first, not plain text extraction, since there&apos;s no underlying text layer to pull from.</p>
           <p>For a scanned PDF or a PDF that&apos;s really a photo of a document, run it through an OCR tool first to extract the text before expecting a clean Word conversion.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the PDF to Word Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Produces a real .docx file</strong>, openable in Word, Google Docs, and LibreOffice.</li>
           <li><strong>Preserves paragraph structure</strong> as closely as the source PDF allows.</li>
           <li><strong>100% browser-based processing</strong> — your file never leaves your device.</li>
-          <li><strong>No software installation</strong> required.</li>
-          <li><strong>Free with no watermarks</strong> added to the output.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: { canonical: '/blog/percentage-calculator-guide' },
+  robots: { index: false, follow: true },
 }
 
 export default function PercentageCalculatorGuideArticle() {

@@ -65,7 +65,7 @@ export default function ImageToBase64GuideArticle() {
           <p>Base64 is an encoding scheme that represents binary data — like an image file — using only 64 printable text characters (A–Z, a–z, 0–9, +, /). Because it&apos;s plain text, a Base64-encoded image can be embedded directly inside HTML, CSS, or JSON, wrapped in a <code>data:</code> URI like <code>data:image/png;base64,iVBORw0KG...</code>.</p>
           <p>The trade-off is size: Base64 encoding increases file size by roughly 33% compared to the original binary image, since it&apos;s packing binary data into a text-safe format. That&apos;s the core reason it&apos;s used selectively, not for every image on a page.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image to Base64 Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image to Base64 Converter</h3>
           <p>Go to the tool page, where you&apos;ll see options to either upload an image or paste a Base64 string.</p>
@@ -81,7 +81,7 @@ export default function ImageToBase64GuideArticle() {
           <p><strong>Good use cases</strong> — Small icons or logos that appear on every page (avoiding a separate request), inlining a background image directly in a CSS file, embedding a tiny placeholder image in JSON or an email template, or avoiding broken image links when you can&apos;t host a separate file.</p>
           <p><strong>Avoid it for</strong> — Large photos or hero images (the 33% size increase and lack of browser caching hurt more than they help), any image used across multiple pages (a normal file gets cached once; an inlined Base64 string gets re-downloaded with every page that embeds it), and anything where lazy-loading or responsive <code>srcset</code> images matter, since neither works cleanly with data URIs.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image to Base64 Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Two-way conversion</strong> — encode an image to Base64, or decode a Base64 string back to a downloadable image.</li>
@@ -89,7 +89,6 @@ export default function ImageToBase64GuideArticle() {
           <li><strong>Instant preview</strong> when decoding, so you can confirm the string is correct before downloading.</li>
           <li><strong>100% browser-based processing</strong> — your image never leaves your device.</li>
           <li><strong>Free with no sign-up</strong> or file limits.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

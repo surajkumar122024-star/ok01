@@ -62,7 +62,7 @@ export default function MovToMp4GuideArticle() {
           <p>MOV is Apple&apos;s QuickTime container format — the default format for videos recorded on iPhone and Mac. It&apos;s not a bad format technically, but it&apos;s far less universally supported than MP4, which has become the de facto standard for web video, social platforms, and cross-platform playback.</p>
           <p>The practical symptoms: a MOV file that won&apos;t upload to a website with strict format requirements, won&apos;t play in an older media player or on a Windows machine without an extra codec, or gets rejected by a video editor or a platform&apos;s upload form entirely. Converting to MP4 sidesteps all of this, since virtually everything plays MP4 natively.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the MOV to MP4 Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the MOV to MP4 Converter</h3>
           <p>Go to the tool page, where you&apos;ll see an upload area.</p>
@@ -73,15 +73,12 @@ export default function MovToMp4GuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 4: Download</h3>
           <p>Click <strong>Download</strong> to save your new .mp4 file, ready to upload, share, or edit anywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the MOV to MP4 Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Preserves video quality</strong> — no unnecessary re-compression beyond what the format change requires.</li>
           <li><strong>Works directly from iPhone recordings</strong>, including videos shared via AirDrop or iCloud.</li>
           <li><strong>100% browser-based processing</strong> — your video never leaves your device.</li>
-          <li><strong>No software installation</strong> required on any platform.</li>
-          <li><strong>Free with no watermarks</strong> added to your converted video.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

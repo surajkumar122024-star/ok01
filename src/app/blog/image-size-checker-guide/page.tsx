@@ -82,7 +82,7 @@ export default function ImageSizeCheckerGuideArticle() {
             a blurry upload.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image Size Checker Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Size Checker Tool</h3>
           <p>Go to the Image Size Checker tool page, where you&apos;ll find an upload area ready for your image.</p>
@@ -97,7 +97,7 @@ export default function ImageSizeCheckerGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Re-Check Your Adjusted Image</h3>
           <p>After resizing or compressing, run the image back through the size checker to confirm it now meets your target specifications.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image Size Checker Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant dimension display</strong> showing exact width and height in pixels.</li>
@@ -106,11 +106,8 @@ export default function ImageSizeCheckerGuideArticle() {
           <li><strong>Automatic aspect ratio calculation</strong>, showing the simplified ratio (like 16:9) alongside raw pixel dimensions.</li>
           <li><strong>Social media platform fit checker</strong>, automatically flagging whether your image meets the minimum size for Facebook/LinkedIn, YouTube thumbnails, Instagram Square/Story, and Twitter headers.</li>
           <li><strong>Multiple image support</strong>, letting you upload and check several images in a single batch.</li>
-          <li><strong>No installation required</strong> — works directly in your browser.</li>
           <li><strong>Fast processing</strong>, even for high-resolution images.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up required.</li>
           <li><strong>Clean, simple interface</strong> focused purely on accurate reporting.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Image Size Checker</h2>

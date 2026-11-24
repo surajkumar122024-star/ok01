@@ -82,7 +82,7 @@ export default function TextRepeaterToolGuideArticle() {
             line five separate times.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Text Repeater Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Text Repeater Tool</h3>
           <p>Go to the Text Repeater tool page, where you&apos;ll see a text input box and a field for specifying repetition count.</p>
@@ -97,7 +97,7 @@ export default function TextRepeaterToolGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy Your Result</h3>
           <p>Use the <strong>Copy to Clipboard</strong> button to grab the generated text, ready to paste wherever you need it.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Text Repeater Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Custom repetition count</strong>, letting you specify exactly how many times your text repeats.</li>
@@ -105,9 +105,6 @@ export default function TextRepeaterToolGuideArticle() {
           <li><strong>Instant generation</strong>, producing results in real time with no delay.</li>
           <li><strong>Handles both short and long text</strong>, from single words to full sentences or paragraphs.</li>
           <li><strong>One-click copy</strong> for quick, seamless use in other applications.</li>
-          <li><strong>No installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up needed.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Text Repeater</h2>

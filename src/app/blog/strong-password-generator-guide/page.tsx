@@ -78,7 +78,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
             shifted toward &quot;longer is better&quot; rather than &quot;more symbol types is better&quot; in recent years.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Password Generator Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Password Generator Tool</h3>
           <p>Go to the Password Generator tool page, where you&apos;ll see customizable options for creating your password.</p>
@@ -93,7 +93,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy and Save Your Password</h3>
           <p>Use the <strong>Copy to Clipboard</strong> button to grab your new password, then save it securely in a password manager rather than writing it down or reusing it elsewhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Password Generator Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Customizable password length</strong>, typically ranging from 8 to 64 characters or more.</li>
@@ -102,8 +102,6 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <li><strong>Instant regeneration</strong> — create a new random password with a single click if you want alternatives.</li>
           <li><strong>One-click copy</strong> for quick, seamless use across your accounts.</li>
           <li><strong>No storage or tracking</strong> of generated passwords for your privacy and security.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up required.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Password Generator</h2>

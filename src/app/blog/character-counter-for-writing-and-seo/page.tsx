@@ -104,7 +104,7 @@ export default function CharacterCounterForWritingAndSeoArticle() {
             clipped.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Character Counter Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Character Counter Tool</h3>
           <p>Go to the Character Counter page, where you&apos;ll see a clean text input box ready for your content.</p>
@@ -119,14 +119,13 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Copy Your Finalized Text</h3>
           <p>Once you&apos;re happy with the length, use the <strong>Copy to Clipboard</strong> button to grab your finalized text for use elsewhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Character Counter Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Real-time character counting</strong> as you type, with no need to click a separate &quot;count&quot; button.</li>
           <li><strong>Word, sentence, and paragraph counts</strong> included alongside character totals.</li>
           <li><strong>Character count with and without spaces</strong>, useful for different platform requirements.</li>
           <li><strong>Visual limit indicators</strong> that show when you&apos;re approaching or exceeding common limits like meta descriptions or tweets.</li>
-          <li><strong>No sign-up or installation required</strong> — completely free to use instantly.</li>
           <li><strong>Clean, distraction-free design</strong> that keeps your focus on your writing.</li>
           <li><strong>Works across devices</strong>, including mobile phones and tablets.</li>
           <li><strong>Fast performance</strong> even with longer blocks of text.</li>

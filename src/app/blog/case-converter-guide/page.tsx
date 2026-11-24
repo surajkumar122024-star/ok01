@@ -94,7 +94,7 @@ export default function CaseConverterGuideArticle() {
             meaning, unlike manual retyping.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Case Converter Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Case Converter Tool</h3>
           <p>Navigate to the Case Converter page. You&apos;ll find a large text box ready for input, along with buttons for each case type.</p>
@@ -117,16 +117,14 @@ export default function CaseConverterGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Repeat as Needed</h3>
           <p>Since the tool doesn&apos;t limit how many times you can convert text, feel free to switch between different case styles until you find the one that fits your content best.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Case Converter Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Multiple case styles</strong> in one place — no need to bounce between different tools.</li>
           <li><strong>Real-time preview</strong> so you can see your converted text instantly.</li>
           <li><strong>Handles large blocks of text</strong> including entire paragraphs or documents.</li>
-          <li><strong>No sign-up required</strong> — completely free and ready to use immediately.</li>
           <li><strong>Clean, simple interface</strong> designed for speed and clarity.</li>
           <li><strong>Copy-to-clipboard functionality</strong> for quick, seamless workflow integration.</li>
-          <li><strong>Works on all devices</strong> including desktops, tablets, and smartphones.</li>
           <li><strong>Preserves punctuation and spacing</strong> so only the letter casing changes.</li>
           </ul>
 

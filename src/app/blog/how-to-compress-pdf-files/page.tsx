@@ -62,7 +62,7 @@ export default function PdfCompressorGuideArticle() {
           <p>Most oversized PDFs aren&apos;t large because of text — text compresses extremely well and rarely accounts for significant file size. The real culprit is almost always embedded images: a scanned document where every page is stored as a full-resolution photo, or a report with high-resolution images pasted in at print quality when screen quality would look identical on-screen.</p>
           <p>Compression works by re-encoding those embedded images at a smaller size and lower (but still readable) resolution, which is why image-heavy and scanned PDFs shrink dramatically, while text-only PDFs may see comparatively little size reduction — there&apos;s simply less to compress.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the PDF Compressor, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the PDF Compressor</h3>
           <p>Go to the tool page, where you&apos;ll see an upload area.</p>
@@ -73,15 +73,12 @@ export default function PdfCompressorGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 4: Compare and Download</h3>
           <p>Check the new file size against the original, then click <strong>Download</strong> to save the compressed PDF.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the PDF Compressor</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Best results on image-heavy PDFs</strong>, including scanned documents.</li>
           <li><strong>Keeps text sharp and selectable</strong> — compression targets embedded images, not the underlying text layer.</li>
           <li><strong>100% browser-based processing</strong> — your file never leaves your device.</li>
-          <li><strong>No software installation</strong> required.</li>
-          <li><strong>Free with no watermarks</strong> added to your compressed PDF.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

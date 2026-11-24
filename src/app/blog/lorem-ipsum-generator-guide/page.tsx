@@ -62,7 +62,7 @@ export default function LoremIpsumGuideArticle() {
           <p>Lorem Ipsum is scrambled, altered Latin text derived from a passage in Cicero&apos;s <em>De Finibus Bonorum et Malorum</em>, written in 45 BC. It&apos;s been used as filler text in printing and typesetting since the 1500s, and it became the default placeholder text in desktop publishing after it was popularized in the 1960s with Letraset sheets, and later by early page-layout software.</p>
           <p>Because it&apos;s pseudo-Latin rather than real Latin (and definitely not English), it has a natural distribution of letter frequency and word length that looks like normal reading text at a glance — without any recognizable words pulling a reviewer&apos;s attention to the content instead of the layout.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Lorem Ipsum Generator, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Lorem Ipsum Generator</h3>
           <p>Go to the tool page, where you&apos;ll see options for output type and amount.</p>
@@ -78,7 +78,7 @@ export default function LoremIpsumGuideArticle() {
           <p>Real content usually isn&apos;t ready when a layout is being designed — copywriting, translations, and final product details often come later in a project. Placeholder text lets a designer show how a layout handles real paragraph lengths, headline wrapping, and text density, without waiting on final copy or getting distracted by reading it.</p>
           <p>It&apos;s also useful for developers testing how a UI component behaves with varying amounts of text — a card that looks fine with one line of placeholder text might break with three, and Lorem Ipsum makes that easy to test before real content exists.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Lorem Ipsum Generator</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Three output modes</strong> — words, sentences, or paragraphs, for whatever granularity you need.</li>
@@ -86,7 +86,6 @@ export default function LoremIpsumGuideArticle() {
           <li><strong>One-click copy</strong> to paste directly into your design or code editor.</li>
           <li><strong>Instant generation</strong> with no page reload or waiting.</li>
           <li><strong>Free with no sign-up</strong> or limits.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

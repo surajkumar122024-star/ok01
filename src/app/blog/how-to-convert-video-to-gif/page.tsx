@@ -62,7 +62,7 @@ export default function VideoToGifGuideArticle() {
           <p>It takes a video file, lets you select the exact start and end point of the clip you want, and renders that segment as an animated GIF — choosing frame rate and quality to balance smoothness against file size. Because GIFs are much larger per second than compressed video for the same visual quality, keeping the clip short is the biggest factor in getting a reasonably sized file.</p>
           <p>Processing happens entirely in your browser, so your source video is never uploaded anywhere during conversion.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Video to GIF Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Video to GIF Converter</h3>
           <p>Go to the tool page, where you&apos;ll see an upload area.</p>
@@ -75,15 +75,12 @@ export default function VideoToGifGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 5: Convert and Download</h3>
           <p>Click <strong>Convert</strong>, then <strong>Download</strong> to save your finished GIF.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Video to GIF Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Precise clip trimming</strong> so you export exactly the moment you want.</li>
           <li><strong>Adjustable frame rate and quality</strong> to balance smoothness against file size.</li>
           <li><strong>100% browser-based processing</strong> — your video never leaves your device.</li>
-          <li><strong>No software installation</strong> required.</li>
-          <li><strong>Free with no watermarks</strong> added to your GIF.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

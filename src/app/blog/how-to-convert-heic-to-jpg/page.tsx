@@ -88,7 +88,7 @@ export default function HowToConvertHeicToJpgArticle() {
             printing — that actually need them.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the HEIC to JPG Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the HEIC to JPG Converter</h3>
           <p>Go to the HEIC to JPG Converter tool page, where you&apos;ll see an upload area ready to accept your files.</p>
@@ -103,15 +103,13 @@ export default function HowToConvertHeicToJpgArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Share or Use Your Photo</h3>
           <p>Your JPG file is now ready to upload, email, print, or share anywhere — no compatibility issues.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the HEIC to JPG Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Fast, one-click conversion</strong> from HEIC to JPG format.</li>
           <li><strong>Batch conversion support</strong> for converting multiple photos at once.</li>
           <li><strong>High-quality output</strong> that preserves image clarity and detail.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Cross-platform compatibility</strong> — use it on Windows, Mac, Android, or iOS.</li>
-          <li><strong>Free with no watermarks</strong> added to your converted images.</li>
           <li><strong>Privacy-conscious processing</strong> so your photos aren&apos;t stored longer than necessary.</li>
           <li><strong>Simple drag-and-drop interface</strong> designed for ease of use.</li>
           </ul>

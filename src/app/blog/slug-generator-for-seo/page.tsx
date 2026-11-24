@@ -80,7 +80,7 @@ export default function SlugGeneratorForSeoArticle() {
             more scannable final slug.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Slug Generator Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Slug Generator Tool</h3>
           <p>Go to the Slug Generator tool page, where you&apos;ll find a text input box ready for your title or phrase.</p>
@@ -95,7 +95,7 @@ export default function SlugGeneratorForSeoArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Use It in Your CMS or Website</h3>
           <p>Paste the slug into your content management system&apos;s URL field, whether you&apos;re using WordPress, Shopify, a custom Next.js site, or any other platform.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Slug Generator Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant slug generation</strong> from any title, phrase, or heading.</li>
@@ -103,9 +103,6 @@ export default function SlugGeneratorForSeoArticle() {
           <li><strong>Special character removal</strong>, stripping out symbols that don&apos;t belong in clean URLs.</li>
           <li><strong>Real-time preview</strong> so you can see your slug as you type.</li>
           <li><strong>One-click copy</strong> for quick integration into your website or CMS.</li>
-          <li><strong>No installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up needed.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online Slug Generator</h2>

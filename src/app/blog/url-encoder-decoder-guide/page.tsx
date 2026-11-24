@@ -84,7 +84,7 @@ export default function UrlEncoderDecoderGuideArticle() {
             structural marker.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the URL Encoder Decoder Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the URL Encoder Decoder Tool</h3>
           <p>Go to the URL Encoder Decoder tool page, where you&apos;ll see two clearly labeled modes: <strong>Encode</strong> and <strong>Decode</strong>.</p>
@@ -99,7 +99,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Use It in Your Project</h3>
           <p>Paste the result into your browser, application code, API request, or wherever the properly formatted URL is needed.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the URL Encoder Decoder Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant encoding and decoding</strong> with real-time results.</li>
@@ -107,9 +107,6 @@ export default function UrlEncoderDecoderGuideArticle() {
           <li><strong>Handles complete URLs or individual query parameters</strong> depending on your needs.</li>
           <li><strong>Clean, simple interface</strong> designed for speed and clarity.</li>
           <li><strong>One-click copy</strong> for quick integration into your workflow.</li>
-          <li><strong>No installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free and unlimited use</strong> with no sign-up needed.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="benefits" className="text-2xl font-bold mt-8">Benefits of Using an Online URL Encoder Decoder</h2>

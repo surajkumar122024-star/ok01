@@ -66,7 +66,7 @@ export default function AiContentDetectorGuideArticle() {
           <p>It&apos;s a free browser-based tool that analyzes pasted text for stylistic patterns associated with AI-generated writing — things like unusually uniform sentence lengths, a cluster of overused AI transition words (&quot;furthermore,&quot; &quot;moreover,&quot; &quot;in conclusion&quot;), and low variation in sentence structure. It returns a likelihood score and highlights the specific signals it found, so you can see <em>why</em> it flagged something rather than just trusting a black-box number.</p>
           <p>Like every tool on OLD TOOLS, the analysis runs entirely in your browser. Your text is never uploaded to a server or stored anywhere — it&apos;s processed locally and discarded when you close the tab.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the AI Content Detector, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the AI Content Detector</h3>
           <p>Go to the AI Content Detector tool page, where you&apos;ll find a text input box.</p>
@@ -84,15 +84,12 @@ export default function AiContentDetectorGuideArticle() {
           <p><strong>Repetitive phrasing and structure</strong> — Paragraphs that repeat the same sentence template (subject–verb–object, over and over) or reuse the same connecting phrases are a common AI tell, since the underlying model tends to fall back on familiar patterns.</p>
           <p>None of these signals are proof on their own — they&apos;re correlations, not fingerprints, and the tool combines them into a single score rather than making a binary call.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the AI Content Detector</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant analysis</strong> — no waiting, no queue, results in seconds.</li>
           <li><strong>Transparent scoring</strong> that shows exactly which signals contributed, not just a single number.</li>
           <li><strong>100% browser-based processing</strong> — your text never leaves your device.</li>
-          <li><strong>No sign-up or word limits</strong> that gate the tool behind a paywall.</li>
-          <li><strong>Free with no watermarks</strong> or usage caps.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="limits" className="text-2xl font-bold mt-8">What It Can&apos;t Tell You</h2>

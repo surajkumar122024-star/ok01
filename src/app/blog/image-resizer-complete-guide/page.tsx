@@ -86,7 +86,7 @@ export default function ImageResizerCompleteGuideArticle() {
             limitation, not a quality issue specific to any one tool.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image Resizer Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Resizer Tool</h3>
           <p>Go to the Image Resizer tool page, where you&apos;ll find an upload area ready for your photo.</p>
@@ -101,16 +101,14 @@ export default function ImageResizerCompleteGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Download Your Resized Image</h3>
           <p>Click the <strong>Download</strong> button to save your newly resized photo, ready to use on your target platform.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image Resizer Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Precise pixel dimension input</strong> for exact size control.</li>
           <li><strong>Aspect ratio lock</strong> to prevent image distortion.</li>
           <li><strong>Automatic dimension detection</strong>, showing your image&apos;s original width and height the moment you upload it.</li>
           <li><strong>High-quality resizing algorithm</strong> that minimizes quality loss.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks added.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Image Resizer</h2>

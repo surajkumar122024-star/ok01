@@ -89,7 +89,7 @@ export default function HowToRotateImagesOnlineArticle() {
             so the image displays correctly everywhere, permanently.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image Rotate Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Rotate Tool</h3>
           <p>Navigate to the Image Rotate tool page, where you&apos;ll see an upload area ready for your photo.</p>
@@ -102,16 +102,14 @@ export default function HowToRotateImagesOnlineArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 5: Download the Rotated Image</h3>
           <p>Click the <strong>Download</strong> button to save your corrected image, ready to use or share anywhere.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image Rotate Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>One-click 90-degree rotation</strong> in either direction for quick fixes.</li>
           <li><strong>180-degree flip option</strong> for upside-down images.</li>
           <li><strong>Real-time preview</strong> so you can confirm the correct orientation before downloading.</li>
-          <li><strong>No software installation required</strong> — works directly in your browser.</li>
           <li><strong>Preserves image quality</strong> with no unwanted compression during rotation.</li>
           <li><strong>Free and unlimited use</strong> with no watermarks.</li>
-          <li><strong>Works on all devices</strong>, including smartphones and tablets.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Image Rotate Tool</h2>

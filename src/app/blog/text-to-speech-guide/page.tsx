@@ -62,7 +62,7 @@ export default function TextToSpeechGuideArticle() {
           <p>It&apos;s a free tool that reads your text aloud using the Web Speech API — the same speech synthesis technology built into modern browsers. You can adjust the speaking speed and pitch, and choose from the different voices and languages your browser and device already have installed.</p>
           <p>Because it uses your browser&apos;s native speech engine rather than a server-side voice service, there&apos;s no upload, no processing delay, and no limit on how much text you can convert.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Text to Speech Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Text to Speech Tool</h3>
           <p>Go to the tool page, where you&apos;ll see a text input box.</p>
@@ -73,15 +73,13 @@ export default function TextToSpeechGuideArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 4: Play</h3>
           <p>Click <strong>Play</strong> to hear your text spoken aloud, with pause and stop controls available while it reads.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Text to Speech Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Adjustable speed and pitch</strong> to match your listening preference.</li>
           <li><strong>Multiple voices and languages</strong>, based on what&apos;s available on your device.</li>
           <li><strong>No text length limit</strong> — read a sentence or an entire article.</li>
           <li><strong>100% browser-based</strong> — no upload, no account, no processing delay.</li>
-          <li><strong>Free with no watermarks</strong> or usage caps.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

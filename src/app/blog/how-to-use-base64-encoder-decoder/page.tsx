@@ -82,7 +82,7 @@ export default function HowToUseBase64EncoderDecoderArticle() {
             directly in HTML or CSS use standard Base64 to represent that binary data as text.
           </p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Base64 Encoder/Decoder, Step by Step</h2>
 
           <p>Using our Base64 Encoder Decoder is simple, whether you want to encode or decode.</p>
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Tool</h3>
@@ -101,7 +101,7 @@ export default function HowToUseBase64EncoderDecoderArticle() {
           <h3 className="text-xl font-semibold mt-6">Step 6: Verify the Output</h3>
           <p>If you encoded something, you can paste the result back into the Decode box to confirm it matches your original input. This is a great habit for making sure nothing was altered during conversion.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Base64 Encoder/Decoder</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Instant conversion</strong> — encoding and decoding happen in real time as you type or paste.</li>
@@ -111,7 +111,6 @@ export default function HowToUseBase64EncoderDecoderArticle() {
           <li><strong>Clean, distraction-free interface</strong> — no unnecessary steps or confusing settings.</li>
           <li><strong>One-click copy</strong> — grab your converted result instantly without manual selection.</li>
           <li><strong>Mobile-friendly design</strong> — works seamlessly on phones and tablets, not just desktops.</li>
-          <li><strong>Completely free</strong> — no sign-up, no subscription, no hidden limits.</li>
           </ul>
 
           <h2 className="text-2xl font-bold mt-8">Benefits of Using an Online Base64 Tool</h2>

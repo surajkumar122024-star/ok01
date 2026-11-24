@@ -66,7 +66,7 @@ export default function ImageToTextGuideArticle() {
           <p>It&apos;s a free OCR (Optical Character Recognition) tool that extracts text from any image — photos, screenshots, scanned documents, or pictures of printed pages — and returns it as plain, editable text. It supports over 100 languages, so it isn&apos;t limited to English-only documents.</p>
           <p>Processing happens entirely in your browser using an in-browser OCR engine, so your image is never uploaded to a server. That matters for anything remotely sensitive, like scanned IDs, contracts, or handwritten notes.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image to Text Tool, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image to Text Tool</h3>
           <p>Go to the Image to Text tool page, where you&apos;ll see an upload area.</p>
@@ -86,7 +86,7 @@ export default function ImageToTextGuideArticle() {
           <p><strong>Font and handwriting</strong> — Standard printed fonts are recognized reliably. Stylized fonts, handwriting, and unusual typefaces are harder and produce more errors.</p>
           <p><strong>Image angle</strong> — Straight-on, unskewed photos work best. A photo taken at an angle or with perspective distortion reduces accuracy.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image to Text Tool</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>100+ language support</strong>, not just English.</li>
@@ -94,7 +94,6 @@ export default function ImageToTextGuideArticle() {
           <li><strong>Editable output</strong> so you can fix recognition errors before copying.</li>
           <li><strong>100% browser-based processing</strong> — your image never leaves your device.</li>
           <li><strong>No sign-up required</strong> and no limit on how many images you process.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>

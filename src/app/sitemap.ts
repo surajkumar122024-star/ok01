@@ -108,10 +108,7 @@ const blogPosts = [
   'qr-code-generator-guide',
   'barcode-generator-guide',
   'how-to-convert-heic-to-pdf',
-  'percentage-calculator-guide',
   'money-calculators-emi-gst-interest',
-  'age-and-date-calculators',
-  'free-invoice-for-freelancers',
   // New tool guides (Sept 2026)
   'ai-content-detector-guide',
   'hash-generator-guide',

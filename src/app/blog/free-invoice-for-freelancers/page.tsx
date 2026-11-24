@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: { canonical: '/blog/free-invoice-for-freelancers' },
+  robots: { index: false, follow: true },
 }
 
 export default function InvoiceForFreelancersArticle() {

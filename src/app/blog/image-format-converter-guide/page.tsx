@@ -66,7 +66,7 @@ export default function ImageFormatConverterGuideArticle() {
           <p>It&apos;s a single tool that converts an image between JPG, PNG, WebP, GIF, BMP, and ICO — any format in, any format out. Instead of bookmarking a separate page for &quot;JPG to PNG&quot; and another for &quot;PNG to ICO,&quot; you upload once and just choose where you want to end up.</p>
           <p>Like every tool on OLD TOOLS, conversion happens entirely in your browser using the Canvas API. Your image is never uploaded to a server, which means it&apos;s both faster and completely private.</p>
 
-          <h2 id="how-to" className="text-2xl font-bold mt-8">Complete Step-by-Step Guide to Using the Tool</h2>
+          <h2 id="how-to" className="text-2xl font-bold mt-8">How to Use the Image Format Converter, Step by Step</h2>
 
           <h3 className="text-xl font-semibold mt-6">Step 1: Open the Image Format Converter</h3>
           <p>Go to the Image Format Converter tool page, where you&apos;ll see an upload area.</p>
@@ -88,15 +88,12 @@ export default function ImageFormatConverterGuideArticle() {
           <p><strong>BMP</strong> — An uncompressed format that produces large files but with zero quality loss and maximum compatibility with older Windows software.</p>
           <p><strong>ICO</strong> — The format browsers and operating systems expect for favicons and application icons. Converting an image to ICO is the standard way to prepare a custom favicon for a website.</p>
 
-          <h2 className="text-2xl font-bold mt-8">Features of Your Tool</h2>
+          <h2 className="text-2xl font-bold mt-8">Key Features of the Image Format Converter</h2>
 
           <ul className="list-disc pl-6 space-y-2">
           <li><strong>Six formats in one tool</strong> — JPG, PNG, WebP, GIF, BMP, and ICO, any format to any other.</li>
           <li><strong>Automatic input detection</strong> shows you the source format before you convert.</li>
           <li><strong>100% browser-based processing</strong> — your image never leaves your device.</li>
-          <li><strong>No software installation required</strong> — works entirely in your browser.</li>
-          <li><strong>Free with no watermarks</strong> added to your converted images.</li>
-          <li><strong>Works on all devices</strong>, including desktops, tablets, and smartphones.</li>
           </ul>
 
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
