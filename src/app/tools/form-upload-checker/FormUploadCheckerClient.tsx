@@ -1,114 +1,271 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-type Req = { width: number; height: number; maxKB: number; format: "image/jpeg" | "image/png" };
+type Req = {
+  width: number;
+  height: number;
+  maxKB: number;
+  format: "image/jpeg" | "image/png";
+};
 type Picked = { file: File; url: string; width: number; height: number };
+type ImageKind = "photo" | "signature";
 
-const initial: Req = { width: 200, height: 230, maxKB: 50, format: "image/jpeg" };
+const photoDefaults: Req = { width: 200, height: 230, maxKB: 50, format: "image/jpeg" };
+const signatureDefaults: Req = { width: 140, height: 60, maxKB: 20, format: "image/jpeg" };
+const field = "mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 text-sm";
 
 export default function FormUploadCheckerClient() {
-  const [req, setReq] = useState<Req>(initial);
-  const [preset, setPreset] = useState("photo");
+  const [photoReq, setPhotoReq] = useState<Req>(photoDefaults);
+  const [signatureReq, setSignatureReq] = useState<Req>(signatureDefaults);
   const [photo, setPhoto] = useState<Picked | null>(null);
   const [signature, setSignature] = useState<Picked | null>(null);
   const [notice, setNotice] = useState("");
 
-  async function pick(file: File, type: "photo" | "signature") {
-    if (!file.type.startsWith("image/")) return setNotice("Please select an image file.");
-    if (file.size > 15 * 1024 * 1024) return setNotice("Choose an image smaller than 15 MB.");
+  useEffect(() => () => {
+    if (photo) URL.revokeObjectURL(photo.url);
+    if (signature) URL.revokeObjectURL(signature.url);
+  }, [photo, signature]);
+
+  function getItem(kind: ImageKind) {
+    return kind === "photo" ? photo : signature;
+  }
+
+  function setItem(kind: ImageKind, item: Picked | null) {
+    if (kind === "photo") setPhoto(item);
+    else setSignature(item);
+  }
+
+  function getReq(kind: ImageKind) {
+    return kind === "photo" ? photoReq : signatureReq;
+  }
+
+  function setReq(kind: ImageKind, next: Req) {
+    if (kind === "photo") setPhotoReq(next);
+    else setSignatureReq(next);
+  }
+
+  function updateReq(kind: ImageKind, key: keyof Req, value: string) {
+    const current = getReq(kind);
+    if (key === "format") {
+      setReq(kind, { ...current, format: value as Req["format"] });
+      return;
+    }
+    const number = Number(value);
+    const limits: Record<"width" | "height" | "maxKB", number> = {
+      width: 6000,
+      height: 6000,
+      maxKB: 10000,
+    };
+    const safeValue = Number.isFinite(number)
+      ? Math.min(limits[key as "width" | "height" | "maxKB"], Math.max(1, Math.round(number)))
+      : 1;
+    setReq(kind, { ...current, [key]: safeValue });
+  }
+
+  function applyPreset(kind: ImageKind, value: string) {
+    if (kind === "photo") {
+      setPhotoReq(value === "custom" ? photoDefaults : {
+        width: 200, height: 230, maxKB: 50, format: "image/jpeg",
+      });
+    } else {
+      setSignatureReq(value === "custom" ? signatureDefaults : {
+        width: 140, height: 60, maxKB: 20, format: "image/jpeg",
+      });
+    }
+  }
+
+  async function pick(file: File, kind: ImageKind) {
+    if (!["image/jpeg", "image/png", "image/webp"].includes(file.type)) {
+      setNotice("Please select a JPG, PNG or WebP image.");
+      return;
+    }
+    if (file.size > 15 * 1024 * 1024) {
+      setNotice("Choose an image smaller than 15 MB.");
+      return;
+    }
+
     const url = URL.createObjectURL(file);
     const img = new Image();
     img.onload = () => {
-      const item = { file, url, width: img.naturalWidth, height: img.naturalHeight };
-      if (type === "photo") setPhoto(item); else setSignature(item);
+      const previous = getItem(kind);
+      if (previous) URL.revokeObjectURL(previous.url);
+      setItem(kind, { file, url, width: img.naturalWidth, height: img.naturalHeight });
       setNotice("");
     };
-    img.onerror = () => { URL.revokeObjectURL(url); setNotice("Could not read this image."); };
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      setNotice("Could not read this image. Please try another file.");
+    };
     img.src = url;
   }
 
-  function choosePreset(value: string) {
-    setPreset(value);
-    if (value === "photo") setReq({ width: 200, height: 230, maxKB: 50, format: "image/jpeg" });
-    if (value === "signature") setReq({ width: 140, height: 60, maxKB: 20, format: "image/jpeg" });
-    if (value === "custom") setReq({ width: 200, height: 230, maxKB: 50, format: "image/jpeg" });
-  }
+  const photoResult = useMemo(() => photo ? ({
+    dimensions: photo.width === photoReq.width && photo.height === photoReq.height,
+    size: photo.file.size <= photoReq.maxKB * 1024,
+    format: photo.file.type === photoReq.format,
+  }) : null, [photo, photoReq]);
 
-  const results = useMemo(() => [photo, signature].map(item => item ? ({
-    dimensions: item.width === req.width && item.height === req.height,
-    size: item.file.size <= req.maxKB * 1024,
-    format: item.file.type === req.format
-  }) : null), [photo, signature, req]);
+  const signatureResult = useMemo(() => signature ? ({
+    dimensions: signature.width === signatureReq.width && signature.height === signatureReq.height,
+    size: signature.file.size <= signatureReq.maxKB * 1024,
+    format: signature.file.type === signatureReq.format,
+  }) : null, [signature, signatureReq]);
 
-  async function exportFile(item: Picked, name: string) {
-    const img = new Image(); img.src = item.url;
-    await new Promise<void>((resolve, reject) => { img.onload = () => resolve(); img.onerror = () => reject(new Error("Image could not be loaded.")); });
-    const canvas = document.createElement("canvas"); canvas.width = req.width; canvas.height = req.height;
-    const ctx = canvas.getContext("2d"); if (!ctx) throw new Error("Canvas is unavailable.");
-    ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, canvas.width, canvas.height);
+  async function exportFile(kind: ImageKind) {
+    const item = getItem(kind);
+    const req = getReq(kind);
+    if (!item) return;
+
+    const img = new Image();
+    img.src = item.url;
+    await new Promise<void>((resolve, reject) => {
+      img.onload = () => resolve();
+      img.onerror = () => reject(new Error("Image could not be loaded."));
+    });
+
+    const canvas = document.createElement("canvas");
+    canvas.width = req.width;
+    canvas.height = req.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Canvas is unavailable.");
+
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     const scale = Math.max(req.width / img.naturalWidth, req.height / img.naturalHeight);
-    const sw = req.width / scale, sh = req.height / scale;
-    ctx.drawImage(img, (img.naturalWidth - sw) / 2, (img.naturalHeight - sh) / 2, sw, sh, 0, 0, req.width, req.height);
+    const sourceWidth = req.width / scale;
+    const sourceHeight = req.height / scale;
+    ctx.drawImage(
+      img,
+      (img.naturalWidth - sourceWidth) / 2,
+      (img.naturalHeight - sourceHeight) / 2,
+      sourceWidth,
+      sourceHeight,
+      0,
+      0,
+      req.width,
+      req.height,
+    );
+
     let quality = 0.92;
     let blob: Blob | null = await new Promise(resolve => canvas.toBlob(resolve, req.format, quality));
     while (blob && blob.size > req.maxKB * 1024 && quality > 0.25) {
-      quality -= 0.07;
+      quality = Math.max(0.25, quality - 0.07);
       blob = await new Promise(resolve => canvas.toBlob(resolve, req.format, quality));
     }
-    if (!blob) throw new Error("Could not create output image.");
+
+    if (!blob) throw new Error("Could not create the output image.");
     if (blob.size > req.maxKB * 1024) {
-      setNotice(`${name}: output is still above ${req.maxKB} KB. Try a higher size limit or smaller dimensions.`);
+      setNotice(`${kind === "photo" ? "Photo" : "Signature"} is still above ${req.maxKB} KB. Increase the KB limit or reduce the dimensions.`);
       return;
     }
-    const url = URL.createObjectURL(blob); const a = document.createElement("a");
-    a.href = url; a.download = `${name}_${req.width}x${req.height}.${req.format === "image/png" ? "png" : "jpg"}`;
-    a.click(); URL.revokeObjectURL(url); setNotice(`${name} is ready. Check the downloaded file before uploading it.`);
+
+    const downloadUrl = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = downloadUrl;
+    anchor.download = `${kind}_${req.width}x${req.height}.${req.format === "image/png" ? "png" : "jpg"}`;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+    setNotice(`${kind === "photo" ? "Photo" : "Signature"} prepared. Please check the downloaded file before uploading it.`);
   }
 
-  const field = "mt-1 w-full rounded-lg border border-border bg-background px-3 py-2 text-sm";
-  function uploadCard(title: string, item: Picked | null, type: "photo" | "signature", index: number) {
-    const result = results[index];
-    return <section className="space-y-3 rounded-xl border border-border bg-card p-4">
-      <h3 className="font-semibold">{title}</h3>
-      <label className="block cursor-pointer rounded-lg border-2 border-dashed border-border p-4 text-center text-sm hover:border-primary">
-        Select {title.toLowerCase()}
-        <input className="sr-only" type="file" accept="image/jpeg,image/png,image/webp" onChange={e => { const f = e.target.files?.[0]; if (f) void pick(f, type); }} />
-      </label>
-      {item && <div className="flex items-center gap-3">
-        <img src={item.url} alt={title + " preview"} className="h-20 max-w-28 rounded border bg-white object-contain" />
-        <div className="min-w-0 text-xs text-muted-foreground"><p className="truncate font-medium text-foreground">{item.file.name}</p><p>{item.width} × {item.height}px</p><p>{(item.file.size / 1024).toFixed(1)} KB · {item.file.type}</p>
-        <button className="mt-1 text-primary underline" onClick={() => type === "photo" ? setPhoto(null) : setSignature(null)}>Remove</button></div>
-      </div>}
-      {result && <div className="space-y-1 text-xs text-muted-foreground">
-        <p>Dimensions: {result.dimensions ? "Pass" : "Needs resize"}</p><p>File size: {result.size ? "Pass" : "Too large"}</p><p>Format: {result.format ? "Pass" : "Needs conversion"}</p>
-      </div>}
-    </section>;
+  function settingsPanel(kind: ImageKind) {
+    const req = getReq(kind);
+    const title = kind === "photo" ? "Photo" : "Signature";
+    return (
+      <section className="space-y-3 rounded-xl border border-border bg-card p-4 sm:p-5">
+        <div>
+          <h3 className="font-semibold">{title} requirements</h3>
+          <p className="text-xs text-muted-foreground">Set these values independently from the other file.</p>
+        </div>
+        <label className="block text-sm font-medium">
+          Starting preset
+          <select className={field} defaultValue="default" onChange={event => applyPreset(kind, event.target.value)}>
+            <option value="default">{kind === "photo" ? "Common photo example (200 × 230px, 50KB)" : "Common signature example (140 × 60px, 20KB)"}</option>
+            <option value="custom">Reset to editable custom values</option>
+          </select>
+        </label>
+        <div className="grid grid-cols-2 gap-3">
+          <label className="text-sm">Width (px)<input className={field} type="number" min="1" max="6000" value={req.width} onChange={e => updateReq(kind, "width", e.target.value)} /></label>
+          <label className="text-sm">Height (px)<input className={field} type="number" min="1" max="6000" value={req.height} onChange={e => updateReq(kind, "height", e.target.value)} /></label>
+          <label className="text-sm">Maximum size (KB)<input className={field} type="number" min="1" max="10000" value={req.maxKB} onChange={e => updateReq(kind, "maxKB", e.target.value)} /></label>
+          <label className="text-sm">Output format<select className={field} value={req.format} onChange={e => updateReq(kind, "format", e.target.value)}><option value="image/jpeg">JPG</option><option value="image/png">PNG</option></select></label>
+        </div>
+      </section>
+    );
   }
 
-  return <div className="mx-auto max-w-4xl space-y-6">
-    <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm"><strong>Privacy:</strong> Images are processed locally in your browser and are not uploaded to OLD TOOLS.</div>
-    <section className="space-y-4 rounded-xl border border-border bg-card p-4 sm:p-6">
-      <div><h2 className="text-lg font-semibold">1. Set your form requirements</h2><p className="text-sm text-muted-foreground">Choose a starting preset or enter the exact values from your current application notification.</p></div>
-      <label className="block text-sm font-medium">Preset<select className={field} value={preset} onChange={e => choosePreset(e.target.value)}><option value="photo">Common photo starting point (200 × 230px, max 50KB)</option><option value="signature">Common signature starting point (140 × 60px, max 20KB)</option><option value="custom">Custom</option></select></label>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-        <label className="text-sm">Width px<input className={field} type="number" min="1" max="6000" value={req.width} onChange={e => {setPreset("custom"); setReq({...req,width:Math.max(1,Number(e.target.value))});}} /></label>
-        <label className="text-sm">Height px<input className={field} type="number" min="1" max="6000" value={req.height} onChange={e => {setPreset("custom"); setReq({...req,height:Math.max(1,Number(e.target.value))});}} /></label>
-        <label className="text-sm">Maximum KB<input className={field} type="number" min="1" max="10000" value={req.maxKB} onChange={e => {setPreset("custom"); setReq({...req,maxKB:Math.max(1,Number(e.target.value))});}} /></label>
-        <label className="text-sm">Format<select className={field} value={req.format} onChange={e => {setPreset("custom"); setReq({...req,format:e.target.value as Req["format"]});}}><option value="image/jpeg">JPG</option><option value="image/png">PNG</option></select></label>
+  function uploadCard(kind: ImageKind) {
+    const item = getItem(kind);
+    const result = kind === "photo" ? photoResult : signatureResult;
+    const title = kind === "photo" ? "Photo" : "Signature";
+    const req = getReq(kind);
+    return (
+      <section className="space-y-3 rounded-xl border border-border bg-card p-4">
+        <h3 className="font-semibold">{title}</h3>
+        <label className="block cursor-pointer rounded-lg border-2 border-dashed border-border p-4 text-center text-sm hover:border-primary">
+          Select {title.toLowerCase()}
+          <input className="sr-only" type="file" accept="image/jpeg,image/png,image/webp" onChange={e => {
+            const file = e.target.files?.[0];
+            if (file) void pick(file, kind);
+            e.currentTarget.value = "";
+          }} />
+        </label>
+        {item && (
+          <div className="flex items-center gap-3">
+            <img src={item.url} alt={title + " preview"} className="h-20 max-w-28 rounded border bg-white object-contain" />
+            <div className="min-w-0 text-xs text-muted-foreground">
+              <p className="truncate font-medium text-foreground">{item.file.name}</p>
+              <p>{item.width} × {item.height}px</p>
+              <p>{(item.file.size / 1024).toFixed(1)} KB · {item.file.type}</p>
+              <button type="button" className="mt-1 text-primary underline" onClick={() => {
+                URL.revokeObjectURL(item.url);
+                setItem(kind, null);
+              }}>Remove</button>
+            </div>
+          </div>
+        )}
+        {result && (
+          <div className="space-y-1 text-xs text-muted-foreground" aria-live="polite">
+            <p>Dimensions: {result.dimensions ? "Pass" : `Needs resize to ${req.width} × ${req.height}px`}</p>
+            <p>File size: {result.size ? "Pass" : `Above ${req.maxKB} KB`}</p>
+            <p>Format: {result.format ? "Pass" : `Needs ${req.format === "image/jpeg" ? "JPG" : "PNG"} conversion`}</p>
+          </div>
+        )}
+        <button type="button" disabled={!item} onClick={() => void exportFile(kind).catch(error => setNotice(error instanceof Error ? error.message : "Could not prepare this image."))} className="w-full rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-40">
+          Prepare {title.toLowerCase()}
+        </button>
+      </section>
+    );
+  }
+
+  return (
+    <div className="mx-auto max-w-4xl space-y-6">
+      <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm">
+        <strong>Privacy:</strong> Images are processed locally in your browser and are not uploaded to OLD TOOLS.
       </div>
-      <p className="text-xs text-amber-700 dark:text-amber-400">These are editable example values, not verified official rules for every exam. Check the latest official notification. Some portals require live photo capture rather than an uploaded photo.</p>
-    </section>
-    <div className="grid gap-4 sm:grid-cols-2">{uploadCard("Photo",photo,"photo",0)}{uploadCard("Signature",signature,"signature",1)}</div>
-    <section className="space-y-3 rounded-xl border border-border bg-card p-4 sm:p-6">
-      <h2 className="text-lg font-semibold">2. Prepare and download</h2>
-      <p className="text-sm text-muted-foreground">The tool center-crops to the selected ratio, resizes, and attempts to meet the maximum file size.</p>
-      <div className="flex flex-wrap gap-3">
-        <button disabled={!photo} onClick={() => photo && void exportFile(photo,"photo").catch(e => setNotice(e.message))} className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-40">Prepare photo</button>
-        <button disabled={!signature} onClick={() => signature && void exportFile(signature,"signature").catch(e => setNotice(e.message))} className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-40">Prepare signature</button>
+      <div>
+        <h2 className="text-lg font-semibold">1. Set your requirements separately</h2>
+        <p className="text-sm text-muted-foreground">Photo and signature have independent dimensions, file-size limits and output formats. Enter the exact values shown in your current application instructions.</p>
       </div>
-      <p className="text-xs text-muted-foreground">The checker validates dimensions, actual file size and format only. It cannot verify face placement, background, signature authenticity or portal-specific rules.</p>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {settingsPanel("photo")}
+        {settingsPanel("signature")}
+      </div>
+      <p className="rounded-lg bg-amber-50 p-3 text-xs text-amber-800 dark:bg-amber-950/30 dark:text-amber-300">
+        The displayed values are editable examples, not verified official rules for every exam. Always check the latest official notification. Some portals require live photo capture instead of an uploaded photo.
+      </p>
+      <div>
+        <h2 className="mb-3 text-lg font-semibold">2. Upload and check your files</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {uploadCard("photo")}
+          {uploadCard("signature")}
+        </div>
+      </div>
+      <p className="text-xs text-muted-foreground">The checker validates pixel dimensions, actual file size and image format. It cannot verify face placement, background, signature authenticity, DPI metadata or portal-specific rules. The output uses a centered crop; check the preview and downloaded file before submitting.</p>
       {notice && <p role="status" className="rounded-lg bg-muted p-3 text-sm">{notice}</p>}
-    </section>
-  </div>;
+    </div>
+  );
 }
