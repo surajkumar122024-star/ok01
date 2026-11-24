@@ -3,9 +3,9 @@ import { RelatedTools } from '@/components/RelatedTools';
 import { getRelatedTools } from '@/lib/related-tools';
 
 export const metadata = {
-  title: 'Free GST Calculator Online — Add or Remove GST — OLD TOOLS',
-  description: 'Calculate GST amount, add GST to a price, or remove GST from a price — with CGST/SGST split. Free, instant, no sign-up.',
-  keywords: 'gst calculator, gst calculator online, add gst, remove gst, cgst sgst calculator, gst amount calculator, reverse gst calculator',
+  title: 'GST Calculator – Add or Remove GST Online | OLD TOOLS',
+  description: 'Free GST calculator for India. Add GST to a price or remove GST from a GST-inclusive amount. Calculate the total GST and CGST/SGST split instantly.',
+  keywords: 'gst calculator, gst calculator online, add gst calculator, remove gst calculator, gst inclusive calculator, reverse gst calculator, cgst sgst calculator',
   alternates: { canonical: '/tools/gst-calculator' },
 }
 
