@@ -9,12 +9,22 @@ import { useToast } from '@/hooks/use-toast';
 export default function ContactPage() {
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const subject = String(formData.get("subject") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    const mailto = `mailto:rrok86383@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     toast({
-      title: "Message Sent",
-      description: "We'll get back to you as soon as possible.",
+      title: "Opening your email app",
+      description: "Your message will be sent from your email app. Nothing is submitted or stored on this website.",
     });
+    window.location.href = mailto;
   };
 
   return (
@@ -92,20 +102,20 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Name</label>
-                <Input placeholder="Your Name" required />
+                <Input name="name" placeholder="Your Name" required />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-medium">Email</label>
-                <Input type="email" placeholder="you@example.com" required />
+                <Input name="email" type="email" placeholder="you@example.com" required />
               </div>
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium">Subject</label>
-              <Input placeholder="How can we help?" required />
+              <Input name="subject" placeholder="How can we help?" required />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium">Message</label>
-              <Textarea placeholder="Write your message here..." className="min-h-[150px]" required />
+              <Textarea name="message" placeholder="Write your message here..." className="min-h-[150px]" required />
             </div>
             <Button type="submit" className="w-full h-12 text-lg shadow-lg shadow-primary/20">
               Send Message <Send className="ml-2 h-4 w-4" />
