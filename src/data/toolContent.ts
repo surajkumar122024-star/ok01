@@ -1482,6 +1482,8 @@ const baseToolContent: Record<string, ToolContentData> = {
       "GST (Goods and Services Tax) calculations come up constantly for anyone running a business, freelancing, or just double-checking a bill — whether that's adding GST to a price before invoicing a client, or working backward from a GST-inclusive price to find the base amount and tax paid.",
       "This calculator handles both directions: 'Add GST' takes a base amount and shows the GST amount plus the final price, while 'Remove GST' takes a GST-inclusive amount and works backward to show the base price and the tax portion — useful when a receipt only shows the final total.",
       "For intra-state transactions, GST is typically split equally between CGST (Central GST) and SGST (State GST), which this tool shows automatically. For inter-state transactions, the full amount is instead charged as IGST — a quick note on the results reminds you which applies.",
+      "Example: if the price before GST is ₹10,000 and you select 18%, GST is ₹1,800 and the total is ₹11,800. If ₹11,800 is already GST-inclusive, choose Remove GST at 18% to calculate the ₹10,000 base price and ₹1,800 tax. These are arithmetic examples; confirm the rate that applies to your particular goods or service.",
+
     ],
     steps: [
       { title: "Choose Add GST or Remove GST", description: "Add GST if you have a base price and want the tax-inclusive total. Remove GST if you have a final price and want to find the base amount." },
@@ -1503,6 +1505,8 @@ const baseToolContent: Record<string, ToolContentData> = {
     faqs: [
       { q: "What's the difference between CGST, SGST, and IGST?", a: "CGST and SGST apply to transactions within the same state and are split equally, each collected by the central and state government respectively. IGST applies to inter-state transactions and is collected as a single combined tax." },
       { q: "How do I calculate GST backward from a final price?", a: "Use 'Remove GST' mode — enter the GST-inclusive final amount, and the tool calculates the original base price and the GST portion using the formula: base = final × 100 ÷ (100 + rate)." },
+      { q: "How do I calculate an amount inclusive of 18% GST?", a: "Multiply the pre-tax amount by 1.18. For example, ₹10,000 × 1.18 = ₹11,800, including ₹1,800 GST. Select Add GST and enter 18% to calculate it with this tool." },
+      { q: "How do I find the GST included in a total amount?", a: "Divide the GST-inclusive total by (100 + the GST rate), then multiply by 100 to get the base amount. Subtract the base amount from the total to get GST. For example, at 18%, ₹11,800 ÷ 118 × 100 = ₹10,000 before tax, so the GST is ₹1,800." },
       { q: "Why isn't the base amount just the final price minus the GST percentage?", a: "Because the GST percentage in 'Remove' mode applies to the base amount, not the final amount — dividing by (100 + rate) correctly reverses the calculation, while simply subtracting the percentage from the final price would give a slightly wrong answer." },
       { q: "Is my data stored anywhere?", a: "No — every calculation happens in your browser. Nothing you enter is sent to a server or saved." },
       { q: "Does this tool file GST returns or connect to the GST portal?", a: "No — this is a standalone calculator for quick math only. It doesn't file returns or connect to any government system." },
