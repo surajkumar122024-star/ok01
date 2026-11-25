@@ -254,3 +254,85 @@
     animation: none;
   }
 }
+
+
+/* Blog article presentation variants. These styles change presentation only;
+   article text, headings, links, metadata and structured data remain untouched. */
+.blog-article-shell article { isolation: isolate; }
+.blog-article-shell article h1 { text-wrap: balance; }
+.blog-article-shell article h2 { scroll-margin-top: 6rem; }
+.blog-article-shell article nav a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+.blog-article-shell--editorial article {
+  max-width: 58rem;
+}
+.blog-article-shell--editorial article > div:first-child,
+.blog-article-shell--editorial article > header:first-of-type {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1.5rem;
+}
+.blog-article-shell--editorial article h1 {
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+.blog-article-shell--editorial article h2 {
+  padding-bottom: .65rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.blog-article-shell--field-guide article {
+  max-width: 52rem;
+}
+.blog-article-shell--field-guide article nav,
+.blog-article-shell--field-guide article .glass {
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, .07);
+}
+.blog-article-shell--field-guide article h2 {
+  border-left: 3px solid hsl(var(--secondary));
+  padding-left: .85rem;
+}
+
+.blog-article-shell--cards article {
+  max-width: 64rem;
+}
+.blog-article-shell--cards article .prose > p:first-child,
+.blog-article-shell--cards article .prose > ul:first-child,
+.blog-article-shell--cards article .prose > ol:first-child {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+  background: hsl(var(--card));
+}
+.blog-article-shell--cards article h2 {
+  margin-top: 2.75rem;
+}
+.blog-article-shell--cards article li {
+  padding-left: .2rem;
+  margin-bottom: .35rem;
+}
+
+.blog-article-shell--minimal article {
+  max-width: 48rem;
+}
+.blog-article-shell--minimal article nav {
+  border-bottom: 1px solid hsl(var(--border));
+  padding-bottom: 1rem;
+}
+.blog-article-shell--minimal article h1 {
+  font-size: clamp(2rem, 5vw, 3.35rem);
+  letter-spacing: -.035em;
+}
+.blog-article-shell--minimal article h2 {
+  margin-top: 3rem;
+  font-size: 1.55rem;
+}
+.blog-article-shell--minimal article hr {
+  opacity: .45;
+}
+
+@media (max-width: 640px) {
+  .blog-article-shell article { padding-left: 1rem; padding-right: 1rem; }
+  .blog-article-shell--editorial article > div:first-child,
+  .blog-article-shell--editorial article > header:first-of-type { padding-left: .85rem; }
+}
