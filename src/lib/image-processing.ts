@@ -116,68 +116,45 @@ export const formatBytes = (bytes: number, decimals = 2) => {
 };
 
 /**
- * Loads a File into an HTMLImageElement via FileReader (data: URL) rather
- * than URL.createObjectURL (blob: URL). Some mobile browsers/network
- * configurations fail to reliably load blob: URLs into <img>. The
- * data-URL path is also the fallback for createImageBitmap failures.
+ * Loads a File into an HTMLImageElement.
+ * Mobile-safe: reads via FileReader (data: URL) FIRST, because blob: URLs can
+ * hang forever on some mobile browsers (no onload, no onerror -> UI stuck on
+ * "Processing..."). Falls back to a blob: URL, and every path has a timeout so
+ * the promise can never hang.
  */
 export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    let objectUrl: string | null = null;
-    let settled = false;
+  const decode = (src: string, timeoutMs = 20000) =>
+    new Promise<HTMLImageElement>((resolve, reject) => {
+      const img = new Image();
+      const timer = setTimeout(() => reject(new Error('timeout')), timeoutMs);
+      img.onload = () => { clearTimeout(timer); resolve(img); };
+      img.onerror = () => { clearTimeout(timer); reject(new Error('decode failed')); };
+      img.src = src;
+    });
 
-    const cleanup = () => {
-      if (objectUrl) {
-        URL.revokeObjectURL(objectUrl);
-        objectUrl = null;
-      }
-    };
-
-    const fail = (message: string) => {
-      if (settled) return;
-      settled = true;
-      cleanup();
-      reject(new Error(message));
-    };
-
-    img.onload = () => {
-      if (settled) return;
-      settled = true;
-      cleanup();
-      resolve(img);
-    };
-
-    img.onerror = () => {
-      if (objectUrl) {
-        cleanup();
-        const reader = new FileReader();
-        reader.onload = () => {
-          img.onload = () => {
-            if (settled) return;
-            settled = true;
-            resolve(img);
-          };
-          img.onerror = () => fail('Failed to load the selected image. The file may be corrupted or in an unsupported format.');
-          img.src = reader.result as string;
-        };
-        reader.onerror = () => fail('Failed to read the selected image file.');
-        reader.readAsDataURL(file);
-      } else {
-        fail('Failed to load the selected image. The file may be corrupted or in an unsupported format.');
-      }
-    };
-
-    try {
-      objectUrl = URL.createObjectURL(file);
-      img.src = objectUrl;
-    } catch {
+  const readAsDataURL = () =>
+    new Promise<string>((resolve, reject) => {
       const reader = new FileReader();
-      reader.onload = () => { img.src = reader.result as string; };
-      reader.onerror = () => fail('Failed to read the selected image file.');
+      reader.onload = () => resolve(reader.result as string);
+      reader.onerror = () => reject(new Error('read failed'));
       reader.readAsDataURL(file);
+    });
+
+  return (async () => {
+    try {
+      return await decode(await readAsDataURL());
+    } catch {
+      let url: string | null = null;
+      try {
+        url = URL.createObjectURL(file);
+        return await decode(url);
+      } catch {
+        throw new Error('Failed to load the selected image. The file may be corrupted or in an unsupported format.');
+      } finally {
+        if (url) URL.revokeObjectURL(url);
+      }
     }
-  });
+  })();
 };
 
 /**

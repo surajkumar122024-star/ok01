@@ -18,17 +18,17 @@ export interface ToolContentData {
 
 export function ToolContentSection({ data }: { data: ToolContentData }) {
   return (
-    <div className="space-y-8">
-      <div className="glass rounded-xl p-8 space-y-4">
+    <div className="space-y-4 sm:space-y-8">
+      <div className="glass rounded-xl p-4 sm:p-8 space-y-3 sm:space-y-4">
         {data.overview.map((para, i) => (
-          <p key={i} className="text-muted-foreground leading-relaxed">
+          <p key={i} className="text-muted-foreground text-sm sm:text-base leading-relaxed">
             {para}
           </p>
         ))}
       </div>
 
-      <div className="glass rounded-xl p-8 space-y-5">
-        <h2 className="text-xl font-semibold">Step-by-step instructions</h2>
+      <div className="glass rounded-xl p-4 sm:p-8 space-y-4 sm:space-y-5">
+        <h2 className="text-lg sm:text-xl font-semibold">Step-by-step instructions</h2>
         <ol className="space-y-4">
           {data.steps.map((step, i) => (
             <li key={i} className="flex gap-4">
@@ -44,8 +44,8 @@ export function ToolContentSection({ data }: { data: ToolContentData }) {
         </ol>
       </div>
 
-      <div className="glass rounded-xl p-8 space-y-5">
-        <h2 className="text-xl font-semibold">Common use cases</h2>
+      <div className="glass rounded-xl p-4 sm:p-8 space-y-4 sm:space-y-5">
+        <h2 className="text-lg sm:text-xl font-semibold">Common use cases</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {data.useCases.map((uc, i) => (
             <div key={i} className="bg-muted/40 rounded-lg p-4">
@@ -56,8 +56,8 @@ export function ToolContentSection({ data }: { data: ToolContentData }) {
         </div>
       </div>
 
-      <div className="glass rounded-xl p-8 space-y-4">
-        <h2 className="text-xl font-semibold flex items-center gap-2">
+      <div className="glass rounded-xl p-4 sm:p-8 space-y-3 sm:space-y-4">
+        <h2 className="text-lg sm:text-xl font-semibold flex items-center gap-2">
           <Lightbulb size={20} className="text-primary" />
           Tips for best results
         </h2>
@@ -71,21 +71,21 @@ export function ToolContentSection({ data }: { data: ToolContentData }) {
         </ul>
       </div>
 
-      <div className="glass rounded-xl p-8 space-y-4">
-        <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+      <div className="glass rounded-xl p-4 sm:p-8 space-y-3 sm:space-y-4">
+        <h2 className="text-lg sm:text-xl font-semibold">Frequently asked questions</h2>
         <div className="space-y-4">
           {data.faqs.map((f, i) => (
             <div key={i}>
-              <p className="font-medium">{f.q}</p>
-              <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+              <p className="font-medium text-sm sm:text-base">{f.q}</p>
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">{f.a}</p>
             </div>
           ))}
         </div>
       </div>
 
       {data.relatedTools.length > 0 && (
-        <div className="glass rounded-xl p-8 space-y-4">
-          <h2 className="text-xl font-semibold">Related tools</h2>
+        <div className="glass rounded-xl p-4 sm:p-8 space-y-3 sm:space-y-4">
+          <h2 className="text-lg sm:text-xl font-semibold">Related tools</h2>
           <div className="flex flex-wrap gap-3">
             {data.relatedTools.map((rt) => (
               <Link
