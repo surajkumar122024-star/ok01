@@ -27,6 +27,9 @@ import {
   BookOpen,
   Film,
   Braces,
+  FileArchive,
+  ScanText,
+  QrCode,
 } from 'lucide-react';
 import { HeroParticlesLoader } from '@/components/HeroParticlesLoader';
 import { AdPlaceholder } from '@/components/AdPlaceholder';
@@ -112,25 +115,18 @@ const tools = [
     color: 'bg-blue-500',
   },
   {
-    name: 'Image Resizer',
-    slug: 'resizer',
-    description: 'Change dimensions with pixel-perfect accuracy.',
-    icon: Maximize,
-    color: 'bg-cyan-500',
+    name: 'PDF Compressor',
+    slug: 'pdf-compressor',
+    description: 'Shrink PDF file size right in your browser.',
+    icon: FileArchive,
+    color: 'bg-orange-600',
   },
   {
-    name: 'JPG to PNG',
-    slug: 'jpg-to-png',
-    description: 'Convert JPEGs to lossless PNG format.',
-    icon: ImageIcon,
-    color: 'bg-indigo-500',
-  },
-  {
-    name: 'PNG to JPG',
-    slug: 'png-to-jpg',
-    description: 'Fast conversion from PNG to high-quality JPG.',
-    icon: ImageIcon,
-    color: 'bg-sky-500',
+    name: 'Exam Photo Resizer',
+    slug: 'exam-photo',
+    description: 'Resize your photo for exam and job application forms.',
+    icon: GraduationCap,
+    color: 'bg-indigo-600',
   },
   {
     name: 'Image to PDF',
@@ -140,11 +136,18 @@ const tools = [
     color: 'bg-red-500',
   },
   {
-    name: 'WebP Converter',
-    slug: 'webp-converter',
-    description: 'Convert JPG & PNG to WebP for faster web performance.',
-    icon: FileImage,
-    color: 'bg-emerald-500',
+    name: 'Image Resizer',
+    slug: 'resizer',
+    description: 'Change dimensions with pixel-perfect accuracy.',
+    icon: Maximize,
+    color: 'bg-cyan-500',
+  },
+  {
+    name: 'Image to Text (OCR)',
+    slug: 'image-to-text',
+    description: 'Extract text from any image or screenshot instantly.',
+    icon: ScanText,
+    color: 'bg-cyan-700',
   },
   {
     name: 'PDF Merge',
@@ -154,10 +157,10 @@ const tools = [
     color: 'bg-orange-500',
   },
   {
-    name: 'Word Counter',
-    slug: 'word-counter',
-    description: 'Count words, characters, and paragraphs instantly.',
-    icon: Code2,
+    name: 'QR Code Generator',
+    slug: 'qr-code-generator',
+    description: 'Create a QR code for a URL, text, Wi-Fi, or contact card.',
+    icon: QrCode,
     color: 'bg-violet-500',
   },
 ];
@@ -314,18 +317,18 @@ export default function Home() {
                 href: '/tools/compressor',
               },
               {
-                title: 'Image Format Converter',
-                desc: 'Convert between JPG, PNG, WebP, GIF, BMP and ICO from one screen.',
-                badge: '6 Formats',
-                image: '/preview-converter.png',
-                href: '/tools/image-converter',
-              },
-              {
                 title: 'PDF Compressor',
                 desc: 'Shrink PDF file size while keeping text and image quality intact.',
                 badge: 'Free · No Signup',
                 image: '/preview-pdf-compressor.png',
                 href: '/tools/pdf-compressor',
+              },
+              {
+                title: 'Exam Photo Resizer',
+                desc: 'Resize your photo to the exact size exam and job application forms ask for.',
+                badge: 'Made for Indian Forms',
+                image: '/preview-exam-photo.png',
+                href: '/tools/exam-photo',
               },
             ].map((card, i) => (
               <Link
