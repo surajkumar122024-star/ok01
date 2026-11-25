@@ -95,6 +95,9 @@ const blogPosts = [
   'word-counter-for-writers',
   'youtube-thumbnail-downloader-guide',
   // Newly added guides
+  'age-and-date-calculators',
+  'free-invoice-for-freelancers',
+  'percentage-calculator-guide',
   'unit-converter-guide',
   'aadhaar-card-photo-size-guide',
   'pan-card-photo-size-guide',
