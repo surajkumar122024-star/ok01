@@ -40,7 +40,7 @@ export default function TermsPage() {
             The rules and conditions for using OLD TOOLS, written to be as clear and
             readable as a legal document can be.
           </p>
-          <p className="text-sm text-muted-foreground italic">Last Updated: July 2026</p>
+          <p className="text-sm text-muted-foreground italic">Last Updated: November 26, 2026</p>
         </div>
 
         {/* Table of Contents */}
@@ -208,7 +208,7 @@ export default function TermsPage() {
               A core part of how OLD TOOLS works — and an important term for you to understand
               — is that all file processing (compressing, resizing, converting, cropping, and so
               on) happens entirely within your own web browser using JavaScript and the Canvas API.
-              Your files are never uploaded to, stored on, or transmitted through our servers.
+              Files used with supported browser-based processing tools are processed locally on your device and are not uploaded to our servers for processing. Features may differ by tool.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               Because of this architecture, the speed, quality, and reliability of any tool depends
