@@ -372,7 +372,7 @@ export default function BlogPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold mb-4">Blog</h1>
-      <p className="text-muted-foreground mb-12">Tips, guides and tutorials about image editing.</p>
+      <p className="text-muted-foreground mb-12">Practical guides, tutorials and explainers for image, PDF, video, text, developer and everyday productivity tools.</p>
       <div className="space-y-8">
         {blogs.map((blog) => (
           <Link href={`/blog/${blog.slug}`} key={blog.slug}>
