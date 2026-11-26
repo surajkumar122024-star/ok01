@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blog — Free Guides for Image, PDF & Text Tools',
-  description: 'Practical tutorials, comparisons, and explainers for image, PDF, video, text, document, and developer tools.',
+  title: 'Practical Guides & Tutorials for Free Online Tools',
+  description: 'Original how-to guides, worked examples, format comparisons, and practical tips for using OLD TOOLS image, PDF, video, text, document, and calculator tools.',
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog — OLD TOOLS',
-    description: 'Step-by-step guides and tutorials for image, PDF, text, and developer tools — all free and browser-based.',
+    description: 'Original tutorials, worked examples, and practical guides for image, PDF, video, text, document, and everyday tools.',
     type: 'website',
     url: 'https://oldtools.online/blog',
   },
@@ -265,26 +265,26 @@ const blogs = [
   },
   {
     slug: 'percentage-calculator-guide',
-    title: 'How to Calculate Percentages — Without Mixing Up the Formula',
-    description: 'Four common percentage questions, the formula behind each one, and a free calculator so you never have to remember which number goes where.',
+    title: 'Percentage Calculator Guide: Discounts, Reverse Percentages and Change',
+    description: 'Work through percentage formulas for discounts, reverse pricing, successive reductions, percentage points, and percentage change.',
     date: 'August 27, 2026',
   },
   {
     slug: 'money-calculators-emi-gst-interest',
-    title: 'Three Money Questions Everyone Runs Into — Answered',
-    description: 'What will my loan EMI be, how much GST is in this price, what will my savings grow to — answered with real worked numbers and free calculators.',
+    title: 'EMI, GST and Interest Calculations: Three Worked Examples',
+    description: 'Understand a reducing-balance loan EMI, reverse GST calculation, and simple versus compound interest with worked rupee examples.',
     date: 'August 31, 2026',
   },
   {
     slug: 'age-and-date-calculators',
-    title: '"How Old Am I, Exactly?" — And Other Date Math',
-    description: 'How to calculate exact age, and how to count days between two dates correctly — including the one detail most people get wrong.',
+    title: 'How to Calculate Your Exact Age and the Days Between Dates',
+    description: 'Learn why birthdays, leap years, inclusive date ranges, and time zones matter when calculating age or the number of days between dates.',
     date: 'August 31, 2026',
   },
   {
     slug: 'free-invoice-for-freelancers',
-    title: 'You Finished the Project. Now You Need an Invoice.',
-    description: 'Most freelance work doesn\'t need dedicated invoicing software — here\'s how to send a professional invoice in a few minutes, free.',
+    title: 'Freelance Invoice Guide: What to Include Before You Send It',
+    description: 'See an itemized invoice example, the details clients need, and simple checks that can help prevent payment delays.',
     date: 'August 31, 2026',
   },
 
@@ -351,8 +351,8 @@ const blogs = [
   },
   {
     slug: 'uuid-generator-guide',
-    title: 'UUID Generator Guide: Free Online UUID v4 Generator',
-    description: 'Generate random, collision-safe UUID v4 identifiers instantly, one at a time or in bulk.',
+    title: 'UUID v4 Generator Guide: Format, Database Uses and Security Limits',
+    description: 'Understand UUID v4 structure, collision probability, database trade-offs, and why an identifier should not be used as a secret token.',
     date: 'September 22, 2026',
   },
   {
