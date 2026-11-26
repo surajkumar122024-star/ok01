@@ -3,7 +3,7 @@ import { CookiePreferencesButton } from "@/components/CookiePreferencesButton";
 
 export const metadata: Metadata = {
   title: 'Privacy Policy — OLD TOOLS',
-  description: 'How OLD TOOLS handles your data. Every tool runs in your browser — files are never uploaded to a server.',
+  description: 'How OLD TOOLS handles website data, browser-based file processing, cookies, analytics, and advertising.',
   alternates: { canonical: '/privacy' },
 };
 
