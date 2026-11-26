@@ -24,7 +24,7 @@ export default function PercentageCalculatorGuideArticle() {
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/blog" className="hover:text-foreground">Blog</Link>
             <span>→</span>
-            <span>Developer Tools</span>
+            <span>Everyday Math</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             How to Calculate Percentages — Without Mixing Up the Formula
@@ -37,7 +37,7 @@ export default function PercentageCalculatorGuideArticle() {
             <span>•</span>
             <span>⏱ 5 min read</span>
             <span>•</span>
-            <span>🏷 Developer Tools</span>
+            <span>🏷 Everyday Math</span>
           </div>
         </div>
 
