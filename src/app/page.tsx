@@ -37,7 +37,8 @@ import { FaqSection } from '@/components/FaqSection';
 
 export const metadata: Metadata = {
   title: 'OLD TOOLS — Free Browser-Based Image, PDF & Text Tools',
-  description: `OLD TOOLS offers ${TOOL_COUNT_LABEL} free online tools for image compression, format conversion, PDF editing, and text utilities — all processed instantly and privately in your browser. No uploads, no sign-up, no cost.`,
+  description: `OLD TOOLS offers ${TOOL_COUNT_LABEL} free online tools for image compression, format conversion, PDF utilities, video, text, documents, and everyday tasks. Explore practical browser-based tools and clear usage guides. No sign-up required.`,
+  alternates: { canonical: '/' },
 };
 
 const stats = [
