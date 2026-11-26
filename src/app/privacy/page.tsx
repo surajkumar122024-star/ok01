@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-16 text-muted-foreground">
       <h1 className="text-4xl font-bold mb-2 text-foreground">Privacy Policy</h1>
-      <p className="text-sm text-muted-foreground mb-10">Last Updated: June 27, 2026</p>
+      <p className="text-sm text-muted-foreground mb-10">Last Updated: November 26, 2026</p>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">1. Introduction</h2>
@@ -26,14 +26,16 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">2. Information We DO NOT Collect</h2>
         <p className="leading-relaxed mb-3">
-          OLD TOOLS is built on a privacy-first architecture. All image processing happens
-          entirely within your web browser using HTML5 Canvas and JavaScript APIs.
-          <strong> Your images are never uploaded to our servers.</strong> We do not collect, store,
-          or transmit any image data you process using our tools.
+          Supported file-processing tools are designed to process files locally in your browser
+          using browser APIs such as JavaScript and Canvas. For those tools, files are processed on
+          your device and are not sent to OLD TOOLS servers for processing. Individual tools may have
+          different format, size, or browser requirements, so please read the instructions shown on
+          each tool page before using it.
         </p>
         <p className="leading-relaxed">
-          We do not require you to create an account, and we do not collect personally identifiable
-          information such as your name, email address, or phone number through our tools.
+          We do not require an account to use the website. If you choose to contact us, the contact
+          form prepares a message in your own email application; the website does not submit or store
+          that message through a server-side contact database.
         </p>
       </section>
 
