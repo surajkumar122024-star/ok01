@@ -10,10 +10,10 @@ import { CookieConsent } from '@/components/CookieConsent';
 export const metadata: Metadata = {
   metadataBase: new URL('https://oldtools.online'),
   title: {
-    default: 'OLD TOOLS — Free Online Image Tools',
+    default: 'OLD TOOLS — Free Online Image, PDF, Video & Text Tools',
     template: '%s | OLD TOOLS',
   },
-  description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
+  description: 'Free browser-based tools for images, PDFs, videos, text and documents. Process supported files locally in your browser with no account required.',
   keywords: 'image compressor, image resizer, jpg to png, png to jpg, pdf to image, webp converter, free image tools',
   verification: {
     google: 'GGvF0UPj84iXp1cP1DJ_wHErlNISZjBJvqL34DwgOOY',
