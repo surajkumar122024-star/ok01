@@ -81,6 +81,49 @@ export default function AgeAndDateCalculatorsArticle() {
             inclusive booking ranges).
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">A worked example: age is a calendar calculation</h2>
+          <p>
+            Imagine someone was born on 15 November 2000 and checks their age on 1 August 2026.
+            Subtracting the years alone gives 26, but the November birthday has not arrived yet.
+            The completed age is therefore 25 years, with the remaining months and days counted
+            from the last birthday. This is why an age calculator needs the full birth date and
+            the date on which the age is being checked, not just two year numbers.
+          </p>
+          <p>
+            The same rule matters when comparing two people or checking an age requirement:
+            decide which date is the reference date first. An age on the day an application is
+            submitted may differ from the age on the application deadline or event date.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Date ranges: choose the counting rule before you calculate</h2>
+          <p>
+            For a simple gap, subtract the start date from the end date. For a range where every
+            calendar date is included, add one to that gap. For example, 1 August through 5 August
+            covers five calendar dates, while the elapsed time from the start of 1 August to the
+            start of 5 August is four days. Neither result is a calculator error: they answer
+            different questions.
+          </p>
+          <p>
+            For travel, check-in and check-out dates are often counted as nights rather than
+            occupied calendar dates. For a school or work attendance record, the counting rule
+            may instead depend on the institution. Confirm the rule before using a date total
+            for an official form or deadline.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Leap years, birthdays, and time zones</h2>
+          <p>
+            A leap year adds 29 February, so a day-count calculation across February can differ
+            from a non-leap year. People born on 29 February should also check the rule used by
+            the relevant institution when an age threshold matters; legal and administrative
+            rules can define the birthday treatment for their own purpose.
+          </p>
+          <p>
+            Date-only calculations are different from measuring elapsed hours. If you are
+            comparing timestamps across locations, time zones and daylight-saving changes can
+            affect the number of hours between two local clock readings. Use the correct
+            location and time zone when the exact hour matters.
+          </p>
+
           <h2 className="text-2xl font-bold mt-8">Q: Why does a date-difference tool show months differently than I&apos;d expect?</h2>
           <p>
             Because months aren&apos;t a fixed number of days — going from 31 January to 28 February is
