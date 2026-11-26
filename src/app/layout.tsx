@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'OLD TOOLS — Free Online Image Tools',
-    description: 'Free browser-based image tools — compress, resize, convert JPG, PNG, WebP and PDF. No upload, 100% private and instant.',
+    description: 'Explore free online tools for images, PDFs, video, text, documents and everyday file tasks. Clear guides help you choose and use each tool.',
     type: 'website',
     url: 'https://oldtools.online',
   },
