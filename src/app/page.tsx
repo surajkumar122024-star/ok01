@@ -228,9 +228,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 fill-mode-both text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            OLD TOOLS is a free suite of image, PDF, and text tools that process everything
-            locally on your device. No server upload, no account, no waiting — just open a tool
-            and get your result.
+            OLD TOOLS is a free suite of browser-based tools for images, PDFs, video, text, documents, and everyday tasks. Supported file-processing tools work locally in your browser, so your files do not need to be sent to our servers. No account is required.
           </p>
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 fill-mode-both flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button size="lg" className="h-14 px-8 text-lg rounded-xl shadow-xl shadow-primary/25 transition-transform duration-300 hover:scale-105" asChild>
@@ -459,7 +457,7 @@ export default function Home() {
                 icon: ShieldCheck,
                 title: 'Privacy by Design',
                 description:
-                  'Every file is processed locally in your browser using the Canvas and File APIs. Nothing is uploaded, so there is nothing to intercept or leak.',
+                  'Supported file-processing tools run in your browser using web APIs. Check each tool’s instructions for its supported formats and processing requirements.',
               },
               {
                 icon: Zap,
@@ -519,7 +517,7 @@ export default function Home() {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">How It Works</h2>
             <p className="text-muted-foreground text-lg">
-              Three steps, no exceptions — every tool on the site follows the same flow.
+              Most tools follow a simple browser-based workflow. Individual steps vary by tool and file type.
             </p>
           </div>
 
@@ -807,7 +805,7 @@ export default function Home() {
             {[
               { icon: ServerOff, label: 'No File Uploads' },
               { icon: Lock, label: 'Browser-Based Processing' },
-              { icon: ShieldCheck, label: 'No Tracking Cookies for Tools' },
+              { icon: ShieldCheck, label: 'No Account Required' },
               { icon: CheckCircle2, label: 'No Account Required' },
             ].map((item, idx) => (
               <div
