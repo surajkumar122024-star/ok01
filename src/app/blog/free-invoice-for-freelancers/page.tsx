@@ -93,6 +93,46 @@ export default function InvoiceForFreelancersArticle() {
             </p>
           </div>
 
+          <h2 className="text-2xl font-bold mt-8">A small example: what an itemized invoice looks like</h2>
+          <p>
+            Suppose a designer completes a small project for a client. Instead of writing
+            “design work — ₹6,000”, the invoice can make the work easier to verify by listing
+            the deliverables separately:
+          </p>
+          <div className="overflow-x-auto rounded-xl border">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-muted/50">
+                <tr><th className="p-3">Description</th><th className="p-3">Quantity</th><th className="p-3">Rate</th><th className="p-3">Amount</th></tr>
+              </thead>
+              <tbody>
+                <tr className="border-t"><td className="p-3">Social media banner designs</td><td className="p-3">3</td><td className="p-3">₹1,000</td><td className="p-3">₹3,000</td></tr>
+                <tr className="border-t"><td className="p-3">Profile graphics</td><td className="p-3">2</td><td className="p-3">₹750</td><td className="p-3">₹1,500</td></tr>
+                <tr className="border-t"><td className="p-3">One revision round</td><td className="p-3">1</td><td className="p-3">₹500</td><td className="p-3">₹500</td></tr>
+              </tbody>
+              <tfoot><tr className="border-t font-semibold"><td className="p-3" colSpan={3}>Example subtotal before any applicable tax</td><td className="p-3">₹5,000</td></tr></tfoot>
+            </table>
+          </div>
+          <p>
+            This is only an illustrative service breakdown, not a tax invoice template for every
+            business. If tax applies, show the relevant tax details separately and check the
+            requirements that apply to your registration and type of work.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Details that prevent payment delays</h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Payment due date:</strong> write a clear date or agreed payment period rather than “pay soon”.</li>
+            <li><strong>Payment method:</strong> include the bank, UPI, or other details the client has agreed to use. Share sensitive account information only through an appropriate channel.</li>
+            <li><strong>Project reference:</strong> include the project name, purchase-order number, or contact person if the client uses one.</li>
+            <li><strong>Revision or delivery note:</strong> briefly state what was delivered so the invoice can be matched to the agreed work.</li>
+            <li><strong>Record keeping:</strong> save a copy of the final invoice and note when it was sent and paid.</li>
+          </ul>
+          <p>
+            Before sending, compare the invoice with the original quote or written agreement.
+            Check the client name, amounts, currency, tax treatment, and due date. For recurring
+            work, agree on whether billing happens at milestones, at the end of each month, or
+            after final delivery.
+          </p>
+
           <h2 className="text-2xl font-bold mt-8">A Few Things Worth Getting Right</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Keep a consistent numbering pattern</strong> — even something simple like INV-001, INV-002 makes it easy for you and the client to reference a specific invoice later.</li>
