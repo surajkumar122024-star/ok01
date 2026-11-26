@@ -36,7 +36,7 @@ export default function DisclaimerPage() {
             Important context on what OLD TOOLS&apos;s tools do, what they don&apos;t guarantee, and
             what you&apos;re responsible for checking yourself.
           </p>
-          <p className="text-sm text-muted-foreground italic">Last Updated: July 2026</p>
+          <p className="text-sm text-muted-foreground italic">Last Updated: November 26, 2026</p>
         </div>
 
         {/* Table of Contents */}
@@ -109,14 +109,11 @@ export default function DisclaimerPage() {
           <section id="browser-processing" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">3. Browser-Based Processing Disclaimer</h2>
             <p className="leading-relaxed text-muted-foreground">
-              All tools on OLD TOOLS process your files entirely within your own web browser,
-              using JavaScript and the Canvas API running locally on your device.{' '}
-              <strong className="text-foreground">
-                No files are uploaded to our servers at any point during tool usage
-              </strong>
-              . Your images, PDFs, and text never leave your device — they are read into your
-              browser&apos;s memory, transformed, and offered back to you as a download, without ever
-              being transmitted anywhere.
+              Supported file-processing tools are designed to process files locally in your
+              browser using JavaScript, Canvas, and other browser APIs. For those tools, files are
+              processed on your device and are not uploaded to OLD TOOLS servers for processing.
+              Available formats, file-size limits, and browser requirements vary by tool; check each
+              tool page for its specific instructions and limitations.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               Because processing depends entirely on your own device, the speed, reliability, and
@@ -236,7 +233,7 @@ export default function DisclaimerPage() {
             </p>
             <p className="leading-relaxed text-muted-foreground">
               You retain full ownership of any file, image, or text you process using our tools,
-              since that content is never uploaded to or stored on our servers. If you believe
+              where supported file-processing tools operate locally in the browser; other features may handle data differently as described on their respective pages. If you believe
               content on this site infringes on your copyright or trademark rights, please contact
               us with the details and we will review the matter promptly.
             </p>
