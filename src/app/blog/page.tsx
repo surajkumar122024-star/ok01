@@ -3,7 +3,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Blog — Free Guides for Image, PDF & Text Tools',
-  description: 'Step-by-step guides and tutorials for compressing, converting, and editing images and PDFs, plus tips on text and developer tools — all free and browser-based.',
+  description: 'Practical tutorials, comparisons, and explainers for image, PDF, video, text, document, and developer tools.',
+  alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog — OLD TOOLS',
     description: 'Step-by-step guides and tutorials for image, PDF, text, and developer tools — all free and browser-based.',
