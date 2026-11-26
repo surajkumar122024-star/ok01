@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 const stats = [
   { label: 'Free tools', value: TOOL_COUNT_LABEL },
-  { label: 'Files uploaded to servers', value: '0' },
+  { label: 'Browser-based tools', value: 'Available' }, 
   { label: 'Sign-up required', value: 'None' },
   { label: 'Cost to use', value: '$0' },
 ];
@@ -219,7 +219,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
           <div className="animate-in fade-in slide-in-from-bottom-4 duration-700 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
             <Zap size={16} fill="currentColor" />
-            <span>{TOOL_COUNT_LABEL} free, fast, online browser-based tools, zero uploads</span>
+            <span>{TOOL_COUNT_LABEL} free online tools for everyday tasks</span>
           </div>
           <h1 className="animate-in fade-in slide-in-from-bottom-4 duration-700 delay-150 fill-mode-both text-5xl md:text-7xl font-extrabold tracking-tight text-foreground max-w-4xl mx-auto leading-[1.1]">
             Your File, Fixed <br />
@@ -324,9 +324,9 @@ export default function Home() {
               },
               {
                 title: 'Exam Photo Resizer',
-                desc: 'Resize your photo to the exact size exam and job application forms ask for.',
+                desc: 'Resize your photo to common exam-form dimensions; always check the official notification.',
                 badge: 'Made for Indian Forms',
-                image: '/preview-exam-photo.png',
+                image: '/preview-exam-photo.jpg',
                 href: '/tools/exam-photo',
               },
             ].map((card, i) => (
