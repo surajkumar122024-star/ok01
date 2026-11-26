@@ -59,11 +59,11 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">4. Google AdSense and Advertising</h2>
         <p className="leading-relaxed mb-3">
-          We may use <strong>Google AdSense</strong> to display advertisements on this website in the future.
-          If advertising is enabled, Google and its advertising partners may use cookies and similar
-          technologies to serve and measure advertisements in accordance with applicable policies.
-          The availability and personalization of advertising may depend on your consent and applicable
-          regional requirements.
+          OLD TOOLS has integrated the <strong>Google AdSense</strong> advertising script. Whether advertisements
+          are displayed depends on Google's site review, approval, and our ad configuration. If ads are
+          served, Google and its advertising partners may use cookies, device identifiers, or similar
+          technologies to deliver, measure, and personalize advertising where permitted. Ad personalization
+          and data use are subject to your consent choices and applicable regional requirements.
         </p>
        
           <p className="leading-relaxed">
@@ -77,14 +77,16 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">5. Cookies</h2>
         <p className="leading-relaxed mb-3">
-          Cookies are small text files stored on your device. Our website itself does not use cookies
-          for core functionality. If advertising or analytics services are enabled, third-party services
-          such as Google AdSense or analytics providers may place cookies or similar technologies on
-          your device.
+          Cookies and similar technologies may be used by third-party services on this site. OLD TOOLS also
+          stores your cookie-consent choice in your browser's local storage so the consent banner can
+          remember whether you accepted or declined non-essential storage. Google AdSense and Google
+          Analytics may use cookies or similar technologies according to your consent choice and the
+          settings available in your region.
         </p>
         <p className="leading-relaxed mb-4">
-          You can control or disable cookies through your browser settings. Please note that disabling
-          cookies may affect the functionality of certain features.
+          You can change your choice using the cookie preferences control below or manage cookies and
+          site data through your browser settings. Blocking storage may affect consent preferences and
+          some site features.
         </p>
         <CookiePreferencesButton />
       </section>
@@ -92,10 +94,11 @@ export default function PrivacyPage() {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-3 text-foreground">6. Analytics</h2>
         <p className="leading-relaxed mb-3">
-          We may use privacy-respecting analytics services (such as Google Analytics) to understand
-          how visitors use our website. These services collect anonymized data about page views,
-          session durations, and traffic sources. No personally identifiable information is shared
-          with these services in connection with your use of our image tools.
+          We use <strong>Google Analytics 4</strong> to understand website usage, including page views,
+          interactions, browser and device information, and general traffic sources. Analytics storage
+          is initially set to denied through Google Consent Mode and is updated when a visitor makes
+          a choice in the consent banner. Google may process data under its own privacy terms. We do
+          not send the files processed by our browser-based tools to Google Analytics.
         </p>
       </section>
 
