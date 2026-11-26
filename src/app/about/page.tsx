@@ -29,10 +29,10 @@ export default function AboutPage() {
         {/* Feature grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12 not-prose">
           {[
-            { icon: Shield, title: "Privacy First", text: "Your data stays on your device. Period." },
+            { icon: Shield, title: "Privacy First", text: "Files processed by our browser-based tools stay on your device." },
             { icon: Zap, title: "Performance", text: "Optimized browser code for instant execution." },
             { icon: Globe, title: "Accessible", text: "Free tools for everyone, anywhere in the world." },
-            { icon: Lock, title: "Secure", text: "No accounts and no file uploads. Your files never touch our servers." }
+            { icon: Lock, title: "Private File Processing", text: "No account is needed. Supported files are processed locally in your browser and are not uploaded to our servers." }
           ].map((item, idx) => (
             <div key={idx} className="p-6 glass rounded-2xl border">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4">
