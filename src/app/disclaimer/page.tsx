@@ -207,11 +207,11 @@ export default function DisclaimerPage() {
           <section id="third-party-services" className="rounded-3xl border bg-card/50 backdrop-blur-sm p-8 space-y-3">
             <h2 className="text-2xl font-bold">7. Third-Party Services</h2>
             <p className="leading-relaxed text-muted-foreground">
-              This website uses Google AdSense to display advertisements. Ads are served by Google
-              and its partners, and their content is not selected or controlled by us. We are not
-              responsible for the products, services, or claims made in any third-party
-              advertisement shown on this site, and clicking an ad takes you to a page governed by
-              that advertiser&apos;s own terms, not ours.
+              The Google AdSense script is integrated into this website for site verification and advertising setup.
+              Advertisements are not currently enabled in our page layouts and will only be displayed if
+              Google approves the site and advertising is activated. If ads are served in the future, they
+              will be provided by Google and its partners. Their content is not selected or controlled by us,
+              and any advertiser's offer is governed by that advertiser's own terms.
             </p>
             <p className="leading-relaxed text-muted-foreground">
               Further detail on how advertising cookies are used is available in our{' '}
