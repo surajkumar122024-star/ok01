@@ -28,11 +28,11 @@ import { MobileToolSearch } from '@/components/MobileToolSearch';
 
 export const metadata: Metadata = {
   title: `All Tools — ${TOOL_COUNT_LABEL} Free Image, Video, PDF, Text & Document Tools`,
-  description: `Browse all ${TOOL_COUNT_LABEL} free tools on OLD TOOLS — image compression, resizing, format conversion, PDF tools, text utilities, and document photo makers. No upload, 100% private.`,
+  description: `Browse all ${TOOL_COUNT_LABEL} free tools on OLD TOOLS — image compression, resizing, format conversion, PDF tools, text utilities, calculators, and document photo makers. See each tool page for supported formats and file-handling details.`,
   alternates: { canonical: '/tools' },
   openGraph: {
     title: 'All Tools — OLD TOOLS',
-    description: `Browse all ${TOOL_COUNT_LABEL} free browser-based tools for images, videos, PDFs, text, and documents.`,
+    description: `Browse free browser-based tools for images, videos, PDFs, text, documents, calculators, and everyday tasks.`,
     type: 'website',
     url: 'https://oldtools.online/tools',
   },
