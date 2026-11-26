@@ -129,8 +129,6 @@ const blogPosts = [
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1 },
     { url: `${BASE_URL}/tools`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
@@ -144,14 +142,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const toolPages: MetadataRoute.Sitemap = tools.map((slug) => ({
     url: `${BASE_URL}/tools/${slug}`,
-    lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.9,
   }))
 
   const blogPages: MetadataRoute.Sitemap = blogPosts.map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
