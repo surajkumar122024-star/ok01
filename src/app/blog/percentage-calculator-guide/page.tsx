@@ -116,6 +116,38 @@ export default function PercentageCalculatorGuideArticle() {
             For a ₹500 item with a 20% discount: 500 − (500 × 20 ÷ 100) = ₹400.
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">Reverse discounts: find the original price</h2>
+          <p>
+            Sometimes you know the sale price and discount, but need to work backward. If a
+            product costs ₹800 after a 20% discount, the ₹800 represents 80% of the original
+            price. Divide by 0.80: ₹800 ÷ 0.80 = ₹1,000. Adding 20% to ₹800 would be the wrong
+            reverse calculation because the discount was taken from the original price.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Successive discounts are not simply added</h2>
+          <p>
+            A 20% discount followed by another 10% discount does not equal a 30% discount.
+            On a ₹1,000 item, the first reduction leaves ₹800; the second reduction is 10% of
+            ₹800, leaving ₹720. The total reduction is ₹280, or 28% of the original price.
+            Each percentage is applied to the amount that remains at that step.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Percentage points vs. percent change</h2>
+          <p>
+            These phrases describe different things. If an interest rate moves from 5% to 7%,
+            it has increased by 2 percentage points. Relative to the original 5% rate, the
+            increase is 40%: (7 − 5) ÷ 5 × 100. State which measure you mean when comparing
+            rates, survey results, or performance figures.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">A useful limitation: the starting value cannot be zero</h2>
+          <p>
+            Percentage change divides by the original value. If that starting value is zero,
+            the usual percentage-change formula is undefined because division by zero is not
+            possible. In that situation, report the absolute difference or explain the change
+            in another suitable way instead of forcing a percentage.
+          </p>
+
           <div className="mt-10 p-6 bg-primary/10 rounded-2xl text-center space-y-3">
             <p className="font-bold text-lg">Skip the manual math</p>
             <Link
