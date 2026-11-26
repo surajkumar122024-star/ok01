@@ -65,7 +65,7 @@ export default function AboutPage() {
             For a quick screenshot that&apos;s a minor inconvenience. For a scanned ID document, a signed form, or a private photo, it&apos;s a real privacy concern — and it shouldn&apos;t be the trade-off you have to accept just to resize an image.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            So I built OLD TOOLS around a different approach: every tool runs directly in your browser using standard web APIs, so your file is processed on your own device and never uploaded anywhere. What started as a handful of image tools has grown into a suite of {TOOL_COUNT_LABEL} free tools covering images, PDFs, video, text, developer utilities, and calculators.
+            So I built OLD TOOLS around a different approach: supported file-processing tools use browser APIs to process files locally on your device, without needing to upload them to our servers. Other tools provide text, calculation, and developer utilities directly in the browser. What started as a handful of image tools has grown into a suite of {TOOL_COUNT_LABEL} free tools covering images, PDFs, video, text, developer utilities, and calculators.
           </p>
         </section>
 
