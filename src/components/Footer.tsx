@@ -49,8 +49,8 @@ export const Footer = () => {
               <span className="text-lg font-bold">OLD TOOLS</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              {TOOL_COUNT_LABEL} free, browser-based image, PDF, and text tools. Every file is processed locally
-              on your device — nothing is ever uploaded to a server.
+              {TOOL_COUNT_LABEL} free browser-based tools for images, PDFs, video, text, documents, and everyday tasks.
+              Processing methods vary by tool; check each tool page for details about file handling.
             </p>
             <div className="flex items-center gap-2 text-xs text-muted-foreground pt-1">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
