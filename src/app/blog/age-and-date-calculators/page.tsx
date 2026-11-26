@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     type: 'article',
   },
   alternates: { canonical: '/blog/age-and-date-calculators' },
-  robots: { index: false, follow: true },
 }
 
 export default function AgeAndDateCalculatorsArticle() {
