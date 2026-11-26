@@ -80,6 +80,40 @@ export default function UuidGeneratorGuideArticle() {
           <li><strong>Free with no sign-up</strong> or usage limits.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">How to read the UUID v4 format</h2>
+          <p>
+            A UUID is commonly displayed in five groups separated by hyphens:
+            8-4-4-4-12 hexadecimal characters. The groups are a readable representation of
+            a 128-bit value; the hyphens are formatting separators, not extra data. In a
+            version 4 UUID, designated bits identify the version as 4 and mark the variant,
+            while the remaining random bits provide the large space of possible identifiers.
+          </p>
+          <p>
+            This structure is useful when checking data copied from an API response or database.
+            A value that merely has the right number of characters is not automatically a valid
+            UUID v4: its hexadecimal characters, hyphen positions, version field, and variant
+            field should also be in the expected form.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">UUIDs in databases: useful, but not free of trade-offs</h2>
+          <p>
+            UUIDs are convenient when records are created by different services or devices
+            without asking one central system for the next number. They can also make identifiers
+            easier to generate before data is synchronized. The trade-off is that a UUID is
+            longer than a small sequential integer, and random key order can affect index and
+            storage behavior in some database systems. Choose an identifier strategy that fits
+            the database and application rather than assuming UUIDs are always faster.
+          </p>
+
+          <h2 className="text-2xl font-bold mt-8">Do not use a public identifier as a secret</h2>
+          <p>
+            A UUID can identify a record, but an identifier alone should not be treated as
+            authorization. A private file, account, or action must still be protected by
+            access checks and appropriate authentication. If an application needs a reset link,
+            session credential, or other security-sensitive token, use a purpose-built token
+            design with suitable expiration, storage, and validation rules.
+          </p>
+
           <h2 id="use-cases" className="text-2xl font-bold mt-8">Common Use Cases</h2>
 
           <ul className="list-disc pl-6 space-y-2">
