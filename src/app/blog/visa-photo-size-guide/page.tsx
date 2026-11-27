@@ -112,6 +112,7 @@ export default function VisaPhotoArticle() {
             <li><strong>Low resolution or blurry source photo</strong> — a phone photo works fine as long as lighting is even and the image isn&apos;t blurry once cropped to the square frame.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Start with the destination country's checklist</h2><p>Visa photo rules are not universal. The required dimensions, background, face position, digital file size, and whether a printed photo is needed can vary by country, visa category, and application centre. A photo accepted for one destination may be rejected for another.</p><p>Before cropping, identify the exact country and visa route, then use the current embassy, consulate, or authorised application-centre instructions. Keep an untouched original and avoid retouching facial features. Treat any online crop preview as preparation help, not official approval.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
