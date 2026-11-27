@@ -143,6 +143,7 @@ export default function HowToConvertSvgToPngArticle() {
           <li>Use PNG (not JPG) when transparency is important, since JPG doesn&apos;t support transparent backgrounds.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Choose the output dimensions deliberately</h2><p>SVG artwork is resolution-independent, but PNG is a pixel-based image. When exporting, choose pixel dimensions that match the largest size at which the image will be displayed. Exporting too small can make edges look soft when enlarged; exporting excessively large creates heavier files without visible benefit in a small interface.</p><p>Transparent SVG backgrounds can remain transparent in PNG when the export settings support it. Preview the result on both light and dark backgrounds, especially for white logos or thin strokes, and keep the original SVG as the editable master.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What&apos;s the main difference between SVG and PNG?</h3>
           <p>SVG is a vector format that scales infinitely without losing quality, while PNG is a raster format with a fixed resolution, offering broader compatibility across platforms.</p>
