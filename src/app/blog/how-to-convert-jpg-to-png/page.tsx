@@ -142,6 +142,25 @@ export default function JpgToPngArticle() {
             <li>Archiving a lossless master copy of an important photo alongside the original JPG.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">What changes — and what does not — during conversion?</h2>
+          <p>
+            Converting a JPG file to PNG changes the file format, not the information captured by
+            the camera. The original JPG has already discarded some image data through lossy
+            compression. Saving that image as PNG can prevent further lossy compression on later
+            saves, but it cannot bring back details that were lost in the original JPG.
+          </p>
+          <p>
+            For example, if you need to place a photo inside a presentation and want to avoid another
+            lossy save, PNG may be useful. If your goal is to make the photo much smaller, PNG may
+            actually create a larger file. Compare the output size before choosing it for email or
+            an upload form.
+          </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Choose PNG when you need a lossless container for later edits or crisp graphic overlays.</li>
+            <li>Do not expect a JPG-to-PNG conversion to create a transparent background automatically.</li>
+            <li>Keep the source JPG so you can compare the result and return to the original if needed.</li>
+          </ul>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
