@@ -125,6 +125,25 @@ export default function HeicToPdfArticle() {
             </p>
           </div>
 
+          <h2 className="text-2xl font-bold mt-8">Prepare a photo set like a document</h2>
+          <p>
+            A multi-page PDF is most useful when the pages follow a clear reading order. Before
+            converting, sort the photos in sequence and check that each page is upright. For a
+            photographed form, make sure all four corners are visible and that shadows do not cover
+            printed fields.
+          </p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Arrange the images in the order the recipient should read them.</li>
+            <li>Rotate sideways photos and retake any image that is blurred or partly cut off.</li>
+            <li>Convert the set, then open the PDF and confirm the page count matches the number of photos.</li>
+            <li>Zoom in on small text, stamps, and signatures before sharing the file.</li>
+          </ol>
+          <p>
+            Keep the original HEIC files until the recipient confirms the PDF is accepted. A PDF
+            combines the pages into one convenient document, but it does not improve a poorly
+            focused or badly lit source photo.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
