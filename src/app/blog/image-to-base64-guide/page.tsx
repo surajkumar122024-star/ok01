@@ -101,6 +101,7 @@ export default function ImageToBase64GuideArticle() {
           <li><strong>Embedding a favicon or logo</strong> directly in a single-file HTML document with no external assets.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">When embedding an image as Base64 makes sense</h2><p>Embedding a tiny icon in a stylesheet or a small self-contained HTML example can be convenient because it avoids a separate file request. For large photographs, however, Base64 adds overhead and can make HTML, CSS, or JSON payloads much heavier and harder to cache independently.</p><p>Before embedding, compare the encoded text size with the original file and consider whether a normal image URL or static asset is easier to maintain. Never paste private or sensitive images into a public code sample, and remember that Base64 is encoding, not encryption.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Does Base64 encoding increase file size?</h3>
           <p>Yes, by roughly 33% compared to the original binary file. It&apos;s a text-safe encoding trade-off, not a compression method.</p>
