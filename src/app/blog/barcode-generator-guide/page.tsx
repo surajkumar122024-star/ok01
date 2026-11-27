@@ -120,6 +120,7 @@ export default function BarcodeGuideArticle() {
             <li><strong>Assuming any format works for retail</strong> — retail point-of-sale systems expect EAN-13 or UPC-A specifically, not CODE128 or CODE39.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Test the printed barcode, not only the preview</h2><p>A barcode that looks clear on a screen may fail after printing if it is too small, stretched, low contrast, or placed on a textured background. Print a sample at the intended physical size and scan it with the type of scanner or phone app your audience is likely to use.</p><ul className="list-disc pl-6 space-y-1"><li>Keep a clear quiet zone around the bars or modules.</li><li>Use strong contrast and avoid glossy reflections where possible.</li><li>Do not stretch the image non-proportionally.</li><li>Verify that the encoded value is correct before distributing labels.</li></ul>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
