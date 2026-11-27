@@ -136,6 +136,7 @@ export default function SlugGeneratorForSeoArticle() {
           <li>Avoid including dates, numbers, or category names in your slug unless they&apos;re essential to the content, since it makes future updates and evergreen content management easier.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Keep a URL slug stable after publishing</h2><p>A short, descriptive slug helps people understand a page address, but changing a published slug can break bookmarks and external links. If a change is necessary, set up a permanent redirect from the old address and update internal links, canonical references, and sitemap entries.</p><p>Use words that describe the page rather than adding repeated keywords. Keep the slug readable, use hyphens between words, and avoid dates unless the page is genuinely tied to a date or edition.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a URL slug?</h3>
           <p>A URL slug is the readable part of a web address that identifies a specific page, typically formatted in lowercase with hyphens separating words.</p>
