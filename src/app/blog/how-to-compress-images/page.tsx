@@ -194,6 +194,21 @@ export default function ImageCompressorArticle() {
             for anything from a personal photo to a confidential business document scan.
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">A practical way to compare compression results</h2>
+          <p>
+            Do not judge compression only by the percentage saved. Compare the original and output
+            at the size people will actually see. For a website thumbnail, inspect edges and text
+            at its displayed dimensions. For a photograph that may be enlarged, inspect fine
+            textures and gradients at a larger zoom level.
+          </p>
+          <p>
+            Record three things during a test: original dimensions, output dimensions, and file
+            size. If the dimensions changed, the smaller file may be due to resizing as well as
+            compression. Make one adjustment at a time so you can tell whether a quality change
+            came from the format, dimensions, or compression level. Keep the original as your
+            fallback copy.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
