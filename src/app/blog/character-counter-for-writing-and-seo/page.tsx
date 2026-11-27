@@ -162,6 +162,7 @@ export default function CharacterCounterForWritingAndSeoArticle() {
           <li>Revise your text in small passes, checking the live count after each edit, rather than writing the entire piece and counting at the end.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Why two counters may show different totals</h2><p>Character totals can differ depending on whether spaces, line breaks, tabs, and emoji are counted. Some systems count a visible emoji as one character while others count multiple Unicode code units or code points. A title limit on a publishing platform may also be measured differently from a plain-text counter.</p><p>When preparing a form, ad, or social post, paste the final text into the destination field and check its own counter before publishing. Leave a small margin below the stated limit because formatting or special characters may be treated differently.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a character counter used for?</h3>
           <p>A character counter measures the total number of characters in a piece of text, helping you stay within limits for SEO, social media, forms, and other platforms.</p>
