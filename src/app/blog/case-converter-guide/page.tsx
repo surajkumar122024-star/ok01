@@ -178,6 +178,7 @@ export default function CaseConverterGuideArticle() {
           <li>Combine this tool with a word counter to check text length after cleaning up formatting for platforms with character limits.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check names, acronyms, and programming identifiers</h2><p>Automatic case conversion is convenient for ordinary sentences, but it cannot always know which words are proper nouns or acronyms. After converting a heading, review brand names, abbreviations such as HTML or URL, and names whose spelling is case-sensitive.</p><p>For code, distinguish display text from identifiers. Some programming languages treat <code>userName</code> and <code>username</code> as different variables. Convert prose freely, but do not bulk-change identifiers in a project without checking every reference and the language's naming conventions.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a case converter used for?</h3>
           <p>A case converter changes the capitalization style of text — such as converting it to uppercase, lowercase, or title case — without altering the actual words.</p>
