@@ -120,6 +120,20 @@ export default function MovToMp4GuideArticle() {
             container alone will not make the footage sharper.
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">Container and codec are not the same thing</h2>
+          <p>
+            MOV and MP4 describe file containers. A container can hold video, audio, subtitles,
+            and metadata, while codecs describe how the audio and video streams are encoded. Changing
+            the container does not always mean the video is re-encoded, and simply changing a file
+            extension does not convert its contents.
+          </p>
+          <p>
+            After conversion, check that the MP4 plays in the app or device where you plan to use
+            it. Confirm both picture and sound, and review the beginning and end of the clip. If a
+            receiving service specifies a codec, resolution, or frame-rate limit, follow those
+            requirements rather than relying on the .mp4 extension alone.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Does converting MOV to MP4 reduce video quality?</h3>
           <p>The conversion aims to preserve quality as closely as possible — it&apos;s a container/codec change, not a quality downgrade by design.</p>
