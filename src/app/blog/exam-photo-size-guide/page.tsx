@@ -117,6 +117,7 @@ export default function ExamPhotoArticle() {
             <li><strong>Waiting until the deadline to discover the requirement</strong> — check the spec early so there&apos;s time to prepare, rather than scrambling right before registration closes.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Use the exam notification as the final authority</h2><p>Competitive exams and school or university portals can set different photo dimensions, file-size limits, background rules, and naming conventions. Requirements can also change between exam cycles. Always use the latest official information bulletin for the exact exam and year.</p><p>Prepare the photo only after checking whether the portal wants a recent colour photograph, a live capture, or a scanned printed photo. Save the final file in the requested format and size, then reopen it to confirm that it is not corrupted and that the face remains clearly visible.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
