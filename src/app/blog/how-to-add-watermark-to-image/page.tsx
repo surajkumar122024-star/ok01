@@ -241,7 +241,22 @@ export default function BlogPostWatermark() {
 
       {/* FAQ */}
       <section id="faq" className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Make a watermark consistent across a collection</h2>
+          <p>
+            A watermark works best when it is part of a repeatable publishing process. Choose one
+            logo or text treatment, a consistent margin, and a placement that does not cover the
+            subject. Apply the same visual rules to the whole collection so the watermark looks
+            intentional rather than randomly placed on each picture.
+          </p>
+          <p>
+            Before exporting a batch, test the watermark on both a light and a dark image. A colour
+            that is visible on one background may disappear on another. Keep a clean, unwatermarked
+            master file separately: a watermark can discourage casual reuse, but it is not a
+            substitute for keeping source files, recording ownership, or understanding the
+            platform's reporting process.
+          </p>
+
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {[
             {
