@@ -142,6 +142,20 @@ export default function ImageCropperCompleteGuideArticle() {
           <li>Combine cropping with resizing (using a dedicated resize tool) to ensure your final image meets both the aspect ratio and file size requirements of your target platform.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Crop for the final placement</h2>
+          <p>
+            A crop that works for a square profile picture may not work for a wide website banner.
+            Decide the destination shape first, then position the subject inside the area that will
+            remain visible. Leave a little breathing room around faces, products, or text so that
+            platform previews and responsive layouts do not make the image feel cramped.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>For a profile image, keep the main subject near the centre because circular previews may trim the corners.</li>
+            <li>For a product photo, retain enough surrounding space to show the full item and its proportions.</li>
+            <li>For a banner, check both desktop and mobile crops if the same image will be used responsively.</li>
+            <li>Save a copy of the uncropped original in case you need a different aspect ratio later.</li>
+          </ul>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image cropper used for?</h3>
           <p>An image cropper allows you to remove unwanted parts of a photo, keeping only the selected portion, to improve composition or fit specific size requirements.</p>
