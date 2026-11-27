@@ -131,6 +131,46 @@ export default function MoneyCalculatorsArticle() {
 
           <hr className="border-border" />
 
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">The formulas behind these examples</h2>
+            <p>
+              Knowing what a calculator is doing makes it easier to spot an input mistake. For a
+              standard reducing-balance loan, the EMI formula is
+              <strong> P × r × (1 + r)^n ÷ ((1 + r)^n − 1)</strong>, where P is the principal,
+              r is the monthly interest rate written as a decimal, and n is the total number of
+              monthly instalments. For an annual rate of 8.5%, use 0.085 ÷ 12 for r — not 8.5.
+            </p>
+            <p>
+              For a price that already includes GST, the taxable base is
+              <strong> inclusive price ÷ (1 + GST rate)</strong>. At 18%, divide by 1.18.
+              The GST portion is the inclusive price minus that base. For an amount before GST,
+              multiply the base by 1 + the rate to get the inclusive total.
+            </p>
+            <p>
+              Simple interest is <strong>principal × annual rate × time</strong>. For compound
+              interest, the usual formula is <strong>P × (1 + r ÷ m)^(m × t)</strong>, where m is
+              the number of compounding periods per year and t is the number of years. Always check
+              whether a bank quotes a nominal rate, an effective annual rate, or a product-specific
+              compounding method before comparing offers.
+            </p>
+            <div className="rounded-xl border p-4 space-y-2">
+              <h3 className="font-semibold">Before trusting a result</h3>
+              <ul className="list-disc pl-6 space-y-1">
+                <li>Enter the annual interest rate as a percentage and confirm the calculator converts it to a monthly or periodic rate correctly.</li>
+                <li>Check whether fees, insurance, taxes, prepayments, or changing rates are included; a basic calculator may exclude them.</li>
+                <li>For GST, confirm the correct rate and whether the transaction is intra-state or inter-state; tax treatment can differ by transaction.</li>
+                <li>For savings, check compounding frequency, deposit duration, and any premature-withdrawal conditions in the product terms.</li>
+              </ul>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              These examples explain standard mathematical estimates; they are not a recommendation
+              to borrow, invest, or choose a financial product. Confirm actual terms with the lender,
+              bank, or a qualified tax professional.
+            </p>
+          </section>
+
+          <hr className="border-border" />
+
           <section className="space-y-3">
             <h2 className="text-xl font-bold">A quick note</h2>
             <p className="text-muted-foreground text-sm">
