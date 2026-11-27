@@ -116,6 +116,7 @@ export default function ImageToTextGuideArticle() {
           <li>Always proofread the extracted text — even good OCR occasionally confuses similar-looking characters (like &quot;0&quot; and &quot;O&quot;, or &quot;1&quot; and &quot;l&quot;).</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Improve OCR by preparing the source image</h2><p>OCR works best when the page is sharp, evenly lit, and aligned. If a photo has perspective distortion, shadows, or a busy background, the recognition engine may confuse similar characters such as O and 0 or I and 1.</p><ol className="list-decimal pl-6 space-y-1"><li>Crop to the document edges without cutting off any text.</li><li>Straighten tilted lines and rotate the page to normal reading orientation.</li><li>Use even lighting and avoid glare across printed areas.</li><li>Review names, dates, account numbers, and totals manually after extraction.</li></ol><p>OCR output is a draft of recognised text, not a verified transcription. Proofread it against the original before using it in an application or record.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Does this tool support handwritten text?</h3>
           <p>It works best on printed text. Handwriting recognition is possible but significantly less accurate, especially for cursive or stylized handwriting.</p>
