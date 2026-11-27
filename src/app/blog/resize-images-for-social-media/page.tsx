@@ -170,6 +170,20 @@ export default function ResizeForSocialMediaArticle() {
             <li><strong>Not checking file size limits</strong> — some platforms reject images above a certain size even if the pixel dimensions are correct; compress first if needed.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Design inside the safe area</h2>
+          <p>
+            Social platforms may crop previews differently across feeds, profiles, search results,
+            and mobile screens. Keep important text, logos, and faces away from the extreme edges.
+            A design that looks correct in the full-size upload can lose its message when shown as a
+            square thumbnail or a narrow preview.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Make a separate export for each placement instead of stretching one image into every shape.</li>
+            <li>Preview the design at phone-screen size to make sure text is still readable.</li>
+            <li>Check the platform's current upload guidance before preparing a campaign; specifications can change.</li>
+            <li>Keep an editable master so you can update the design without rebuilding it from a flattened image.</li>
+          </ul>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
