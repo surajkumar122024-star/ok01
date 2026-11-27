@@ -154,6 +154,7 @@ export default function HowToRotateImagesOnlineArticle() {
           <li>Keep a backup of your original image file in case you need to make additional adjustments later.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Rotation, flipping, and photo orientation</h2><p>Rotation turns an image by an angle, while flipping mirrors it horizontally or vertically. These actions are not interchangeable: mirrored text, logos, or directional symbols may become incorrect even if the picture looks balanced.</p><p>For document photos, make sure text reads normally and page edges remain visible. For portraits, check that the final orientation matches the intended display and that the saved file opens correctly in another app. Keep the original in case you need to undo a crop or orientation change later.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Why does my photo appear sideways after uploading it online?</h3>
           <p>This typically happens because of a mismatch in how orientation metadata (EXIF data) is interpreted by different devices and platforms, even though the photo looked correct on your original device.</p>
