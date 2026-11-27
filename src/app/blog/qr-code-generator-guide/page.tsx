@@ -117,6 +117,7 @@ export default function QrCodeGuideArticle() {
             <li><strong>Quick text transfer between devices</strong> — encode a short message or code to move it by scanning instead of retyping.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Test the QR code at its real display size</h2><p>A QR code should be tested in the place where people will scan it. A code on a printed flyer may need to be larger than one displayed on a high-resolution screen. Keep enough blank margin around the code, avoid placing it over a busy photograph, and do not stretch it out of proportion.</p><p>Scan the final exported image from more than one device before publishing. Confirm that the destination is correct, secure, and still available. If the QR code points to a changing campaign or event page, use a destination you can maintain rather than printing a temporary link permanently.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
