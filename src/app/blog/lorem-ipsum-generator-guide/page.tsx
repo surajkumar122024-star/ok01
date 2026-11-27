@@ -98,6 +98,7 @@ export default function LoremIpsumGuideArticle() {
           <li><strong>Testing text wrapping and overflow</strong> in a responsive layout.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Use placeholder copy without confusing reviewers</h2><p>Placeholder text is useful for checking line length, spacing, and page flow before final copy is ready. It should be clearly labelled in design files and removed before a page, document, or product is published. Otherwise, sample text can accidentally appear in customer-facing content.</p><p>For layout testing, choose a realistic mix of short headings, long paragraphs, lists, and labels. Repeating the same paragraph many times can hide problems that appear with varied text lengths, such as awkward wrapping, overflow, and uneven card heights.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Is Lorem Ipsum actual Latin?</h3>
           <p>It&apos;s derived from real Latin text but scrambled and altered, so it doesn&apos;t translate into coherent sentences — it&apos;s meant to look like text, not be read as text.</p>
