@@ -166,6 +166,7 @@ export default function ColorPickerGuideForDesignersArticle() {
           <li>Save your frequently used brand colors in a separate document or style guide so you don&apos;t have to re-extract them every time.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check contrast before choosing a palette</h2><p>A colour can look attractive on its own but become difficult to read when used for small text on a similar background. Test foreground and background combinations at the actual text size, including buttons, links, disabled states, and focus indicators.</p><p>Do not communicate meaning through colour alone. Pair status colours with labels or icons, and check the palette in grayscale or with a contrast-checking tool. This makes charts and interfaces easier to understand for more people.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a color picker used for?</h3>
           <p>A color picker allows you to select or extract colors and instantly retrieve their codes in formats like HEX, RGB, and HSL for use in design and development projects.</p>
