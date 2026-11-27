@@ -103,6 +103,28 @@ export default function HeicToPdfArticle() {
             <li>If you only need one photo converted, JPG or PNG output is simpler — PDF is most useful once you&apos;re combining two or more.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Plan the PDF before you convert</h2>
+          <p>
+            A multi-page PDF is easiest to use when every page has a clear purpose and a predictable
+            order. Before selecting files, rename or sort the photos in the sequence you want to
+            submit. If the images are pages of one document, check that page one is first and that no
+            page is missing or duplicated.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Check orientation:</strong> rotate sideways photos before combining them so the reader does not have to turn the document on every page.</li>
+            <li><strong>Check legibility:</strong> zoom in on small printed text and make sure the original photo is sharp and evenly lit. A PDF cannot restore details that were not captured.</li>
+            <li><strong>Consider page size:</strong> phone photos are often taller or wider than standard paper. Preview the PDF to ensure important content is not unexpectedly reduced or cut off.</li>
+            <li><strong>Keep a copy of originals:</strong> retain the original HEIC photos until the recipient confirms the PDF is readable and accepted.</li>
+          </ul>
+          <div className="rounded-xl border p-4 space-y-2">
+            <h3 className="font-semibold">A practical example</h3>
+            <p>
+              For a five-page paper form photographed with an iPhone, select the five images in
+              reading order, rotate any sideways page, convert them into one PDF, then open the
+              downloaded file and check that all five pages are present and readable before sending.
+            </p>
+          </div>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
