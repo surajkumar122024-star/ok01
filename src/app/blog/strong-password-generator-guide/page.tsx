@@ -135,6 +135,7 @@ export default function StrongPasswordGeneratorGuideArticle() {
           <li>Avoid using easily guessable personal information (birthdays, names, addresses) even when creating your master password for a password manager.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Use a password manager and unique passwords</h2><p>A long, unique password for every account reduces the damage if one service is compromised. A reputable password manager can create and store different passwords so you do not have to reuse a memorable phrase across sites.</p><p>Do not share generated passwords in screenshots, chat messages, or public documents. Turn on multi-factor authentication where available, and use a recovery method you can access. A password generator does not protect an account if the password is later exposed or reused.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What makes a password &quot;strong&quot;?</h3>
           <p>A strong password is typically long (12+ characters), includes a mix of uppercase and lowercase letters, numbers, and symbols, and has no predictable pattern or personal information.</p>
