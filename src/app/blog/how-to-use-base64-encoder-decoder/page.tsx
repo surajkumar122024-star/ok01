@@ -144,6 +144,7 @@ export default function HowToUseBase64EncoderDecoderArticle() {
           <li>Test your decoded output right after encoding to confirm accuracy, especially before using the data in production systems.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Base64 in data URLs and APIs</h2><p>Base64 is often used to represent binary data as text when a format expects a text field. In a data URL, the encoded content is preceded by a media type and a marker that identifies Base64 data. The prefix is part of the data URL format; it is not itself part of the encoded bytes.</p><p>When working with an API, check whether the field expects raw Base64, a complete data URL, or a file upload. Supplying the wrong form can cause parsing errors or unexpected extra characters. Base64 also increases the size of binary data, so it is usually not a replacement for a proper file-transfer mechanism.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is Base64 encoding used for?</h3>
           <p>Base64 encoding is used to convert binary data into text so it can be safely transmitted or stored in systems that only support text, such as JSON, XML, email, and URLs.</p>
