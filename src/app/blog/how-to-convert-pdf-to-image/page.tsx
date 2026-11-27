@@ -145,6 +145,22 @@ export default function PdfToImageArticle() {
             <li>Quickly previewing PDF content on a device without a PDF reader app installed.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Resolution, sharpness, and page size</h2>
+          <p>
+            Export resolution controls how much detail is represented in each page image. A low
+            resolution can make small text difficult to read when zoomed in, while an unnecessarily
+            high resolution creates larger files that take longer to share. Choose a setting based
+            on the final use: quick screen previews need less detail than images intended for close
+            inspection or printing.
+          </p>
+          <p>
+            Check a page that contains the smallest text, not just the cover page. Also inspect
+            diagrams, signatures, and thin table borders. If the exported image looks soft, try a
+            higher resolution and compare the file size before converting the entire document again.
+            Keep the original PDF because image exports are not a substitute for searchable,
+            selectable document text.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
