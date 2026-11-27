@@ -123,6 +123,7 @@ export default function WordCounterForWritersArticle() {
           <li>Combine the word counter with a character counter when writing content for platforms with both word and character-based limits.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Word count rules depend on the destination</h2><p>Different writing platforms may treat hyphenated words, contractions, headings, footnotes, and references differently. A general word counter gives a useful estimate, but a school assignment, application form, or publishing system may apply its own rules.</p><p>For a strict limit, check the instructions first and leave a small margin below the maximum. Paste the final version into the destination system when possible, because its counter is the one that determines whether the submission is accepted.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a word counter used for?</h3>
           <p>A word counter measures the total number of words in a piece of text, helping you meet specific writing requirements for essays, articles, or other content.</p>
