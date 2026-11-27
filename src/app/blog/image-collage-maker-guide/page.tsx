@@ -116,6 +116,7 @@ export default function ImageCollageArticle() {
             <li><strong>Reorder before generating</strong> — changing photo order after generating means running the layout again.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Plan visual rhythm before placing photos</h2><p>A collage feels more organised when images have a clear visual hierarchy. Pick one main photo, then use supporting images to add context rather than giving every tile equal visual weight. Keep gutters consistent and avoid mixing too many unrelated aspect ratios in a single layout.</p><p>For a product collage, use similar lighting and backgrounds so the items feel like one collection. For an event recap, arrange photos in time order or group them by activity. Preview the finished collage at the size where it will be shared because small captions and thin borders may disappear on a phone screen.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
