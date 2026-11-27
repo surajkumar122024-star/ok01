@@ -102,6 +102,26 @@ export default function VideoToGifGuideArticle() {
           <li>For simple graphics or screen recordings rather than photographic footage, GIF quality holds up especially well since it works best with fewer colors.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Make a GIF loop feel intentional</h2>
+          <p>
+            A useful GIF usually communicates one small action, reaction, or visual idea. Find the
+            moment where the action begins, then trim close to the point where it finishes. If the
+            clip has a long pause before or after the action, remove that unused time so the loop
+            does not feel sluggish.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Keep the subject in frame:</strong> avoid trimming so tightly that hands, faces, or important objects are cut off.</li>
+            <li><strong>Check the loop point:</strong> a movement that returns near its starting position often loops more smoothly.</li>
+            <li><strong>Reduce unnecessary detail:</strong> busy backgrounds and tiny fast-moving details can make a GIF harder to follow.</li>
+            <li><strong>Preview at actual size:</strong> a GIF that looks clear in a large editor preview may be difficult to understand when displayed small.</li>
+            <li><strong>Use video when duration matters:</strong> GIF is convenient for short looping moments, but video is usually better for long clips or sound.</li>
+          </ul>
+          <p>
+            Before posting, check the final dimensions and file size against the platform's upload
+            limits. Keep a copy of the source video so you can create a different crop or shorter
+            loop without losing the original.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Does the GIF include audio?</h3>
           <p>No — GIF is a silent, image-only format by design. If audio matters, keep the clip as a video file instead.</p>
