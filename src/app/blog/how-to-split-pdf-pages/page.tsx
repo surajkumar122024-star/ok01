@@ -137,6 +137,29 @@ export default function HowToSplitPdfPagesArticle() {
           <li>If you need to both split and reorganize pages, consider merging the specific split files back together afterward using a PDF merge tool.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Choose the right page range</h2>
+          <p>
+            Splitting is useful when a recipient needs only part of a long document, but page
+            numbers can be easy to misread. The page number shown by a PDF viewer is usually the
+            physical position in the file; a printed page label inside the document may use a
+            different numbering system, especially when the file contains a cover or contents page.
+          </p>
+          <div className="rounded-xl border p-4 space-y-2">
+            <h3 className="font-semibold">Example: extracting an attachment</h3>
+            <p>
+              If the PDF has 18 pages and the required appendix occupies viewer pages 13 to 16,
+              select that exact range, export the new file, and open it to confirm it contains
+              four pages in the intended order. Do not rely only on the filename or the split
+              tool&apos;s success message.
+            </p>
+          </div>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Use separate ranges when the pages you need are not consecutive.</li>
+            <li>Keep the original PDF unchanged in case you need to extract another section later.</li>
+            <li>Check whether the recipient accepts multiple files or requires one combined attachment.</li>
+            <li>Remember that splitting does not redact information; hidden or visible personal details may still be present on the pages you share.</li>
+          </ul>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What does it mean to split a PDF?</h3>
           <p>Splitting a PDF means selecting specific pages from a larger document and extracting them into a new, smaller PDF, rather than sharing or storing the entire original file.</p>
