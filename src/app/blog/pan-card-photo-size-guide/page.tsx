@@ -118,6 +118,7 @@ export default function PanPhotoArticle() {
             <li>Business or minor PAN applications, which follow the same core photo specification.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Confirm the application route before preparing the image</h2><p>PAN applications may be submitted through different authorised service routes, and their upload fields or instructions can differ. Read the current checklist on the portal you are actually using rather than relying on an old screenshot or a size quoted in an unrelated guide.</p><p>Check whether the form requests a scanned photograph, a signature image, or a live capture. These are different requirements. Preview the uploaded image in the application and make sure the face or signature is not cropped, blurred, or rotated.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
