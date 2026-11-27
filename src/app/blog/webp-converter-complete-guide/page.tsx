@@ -120,6 +120,7 @@ export default function WebpConverterCompleteGuideArticle() {
           <li>For images with fine details or text, compare the converted WebP file closely against the original to ensure quality remains sharp at your chosen compression level.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check transparency and animation before converting</h2><p>WebP can support transparency and animation, but not every destination handles every feature in the same way. If the source is an animated image, make sure the conversion workflow preserves animation when that is required; a still-image export may keep only one frame.</p><p>For logos, preview transparent edges against both light and dark backgrounds. For photographs, compare visual quality and file size at the actual display dimensions. Keep the source file so you can produce a different format if a recipient or older application does not support WebP.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is WebP and why should I use it?</h3>
           <p>WebP is a modern image format that offers significantly smaller file sizes than JPG or PNG while maintaining similar visual quality, making it ideal for improving website performance.</p>
