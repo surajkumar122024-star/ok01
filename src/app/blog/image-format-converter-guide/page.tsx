@@ -116,6 +116,7 @@ export default function ImageFormatConverterGuideArticle() {
           <li>If you specifically need one of the five long-standing conversions — JPG↔PNG, WebP, HEIC to JPG, or SVG to PNG — those also have their own dedicated tools with extra format-specific options.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Choose a format by transparency, detail, and destination</h2><p>There is no single best image format for every job. A logo with transparent areas may need PNG or SVG, a photograph may suit JPG or WebP, and a modern browser workflow may support AVIF. The right choice depends on whether you need transparency, crisp edges, broad compatibility, or a smaller download.</p><p>After converting, inspect fine text, gradients, transparent edges, and the file size. Keep an editable or highest-quality source so you can create another export without repeatedly recompressing an already compressed image.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Which formats can I convert between?</h3>
           <p>JPG, PNG, WebP, GIF, BMP, and ICO — any of these as input, converted to any of the other five (or the same format, if you just want to re-encode it).</p>
