@@ -100,6 +100,26 @@ export default function MovToMp4GuideArticle() {
           <li>Keep your original MOV file until you&apos;ve confirmed the converted MP4 plays correctly.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check the result before deleting the MOV original</h2>
+          <p>
+            MP4 is a container format, not a guarantee that every video will look or sound exactly
+            the same on every device. Playback depends on the video codec, audio codec, resolution,
+            frame rate, and the player being used. After conversion, test the MP4 on the device or
+            app where you actually plan to use it.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Play the beginning, middle, and end to check that the full clip converted.</li>
+            <li>Listen for missing audio, unexpected volume changes, or audio that drifts out of sync.</li>
+            <li>Compare the resolution and frame rate if the converted file looks softer or less smooth.</li>
+            <li>Check file size and available storage before converting several large clips.</li>
+            <li>Keep the original MOV until the MP4 has played correctly in the intended destination app.</li>
+          </ul>
+          <p>
+            A conversion can change compatibility, but it cannot restore detail that was absent
+            from the source recording. If the original is already blurry or noisy, changing the
+            container alone will not make the footage sharper.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Does converting MOV to MP4 reduce video quality?</h3>
           <p>The conversion aims to preserve quality as closely as possible — it&apos;s a container/codec change, not a quality downgrade by design.</p>
