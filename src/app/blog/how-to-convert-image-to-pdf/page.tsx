@@ -158,6 +158,26 @@ export default function ImageToPdfArticle() {
             <li>Compiling meeting handouts or whiteboard photos into a shareable document.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Build a readable photo document</h2>
+          <p>
+            Image-to-PDF conversion is often used to make a document from phone photographs. The
+            conversion step places each selected image on a PDF page, but the quality of the result
+            still depends on how the photo was captured. Use even lighting, keep the camera parallel
+            to the page where possible, and avoid covering any corners with fingers or shadows.
+          </p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Clean the camera lens and place the paper on a flat, contrasting surface.</li>
+            <li>Capture the entire page, leaving a small margin around its edges.</li>
+            <li>Check that small print is in focus before adding the photo to the PDF.</li>
+            <li>Arrange pages in reading order and rotate any sideways image.</li>
+            <li>Open the finished PDF and inspect every page before submitting or printing it.</li>
+          </ol>
+          <p>
+            If the recipient needs searchable text, remember that a PDF made from photos may contain
+            only images. Use OCR to create a text layer when search or text selection is required,
+            and proofread the recognised text because OCR can misread names, numbers, and symbols.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
