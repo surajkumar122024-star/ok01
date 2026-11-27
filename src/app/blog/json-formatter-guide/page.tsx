@@ -147,6 +147,7 @@ export default function JsonFormatterGuideArticle() {
           <li>Use consistent formatting practices across your team to make JSON files easier to read and review during collaborative development.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Formatting is not the same as validating an API contract</h2><p>A formatter can make JSON easier to read and can often identify syntax errors such as a missing comma, unmatched brace, or unquoted property name. Valid JSON does not automatically mean the data matches what an application expects.</p><p>For example, an API may require a field named <code>userId</code> to be a string, even though the JSON parser accepts a number in that position. After formatting, check required fields, value types, allowed values, and nested object structure against the API documentation or schema.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a JSON formatter used for?</h3>
           <p>A JSON formatter takes raw or minified JSON data and restructures it with proper indentation and line breaks, making it easier to read, debug, and validate.</p>
