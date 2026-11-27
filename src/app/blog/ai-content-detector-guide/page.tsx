@@ -106,6 +106,7 @@ export default function AiContentDetectorGuideArticle() {
           <li><strong>Teachers</strong> using the score as one of several inputs, alongside writing history and in-person context, not as sole proof.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">How to interpret a detector result responsibly</h2><p>AI-detection scores are estimates, not proof of who wrote a passage. Short samples, heavily edited drafts, formulaic writing, and non-native language patterns can affect results. Do not use a single score to accuse a student, reject an application, or make another high-impact decision.</p><p>If you are reviewing your own writing, use the result as a prompt to check source notes, drafts, citations, and factual accuracy. Preserve version history and explain your writing process when a reviewer needs context. A detector cannot reliably reconstruct authorship or replace a fair human review.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Is this detector 100% accurate?</h3>
           <p>No — no AI detector is, including well-funded commercial ones. It flags statistical patterns common in AI writing, but both false positives (flagging human text) and false negatives (missing AI text) happen. Use it as one signal, not a final verdict.</p>
