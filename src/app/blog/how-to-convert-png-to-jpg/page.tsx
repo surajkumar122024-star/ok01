@@ -174,6 +174,23 @@ export default function PngToJpgArticle() {
             <li>Forgetting to keep the original PNG as a backup before converting.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">A practical PNG-to-JPG decision</h2>
+          <p>
+            Imagine a transparent product logo on a website. Saving it as JPG will replace the
+            transparent area with a solid background, so the result may look different from the
+            original. For a landscape photo that will be emailed or uploaded to a form, JPG is often
+            a more convenient choice because it can reduce file size substantially.
+          </p>
+          <div className="rounded-xl border p-4 space-y-2">
+            <h3 className="font-semibold">Choose based on the image, not just the extension</h3>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Use JPG for photographs with smooth colour changes when a smaller file is important.</li>
+              <li>Keep PNG for transparent logos, icons, screenshots with crisp text, and diagrams.</li>
+              <li>If the image contains transparency, place it on the intended background before converting.</li>
+              <li>Keep the original PNG if you may need to edit or export it again later.</li>
+            </ul>
+          </div>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
 
           <h3 className="font-semibold mt-6">Does converting PNG to JPG reduce quality?</h3>
