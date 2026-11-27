@@ -160,6 +160,30 @@ export default function HowToSplitPdfPagesArticle() {
             <li>Remember that splitting does not redact information; hidden or visible personal details may still be present on the pages you share.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Choose a split method for the job</h2>
+          <p>
+            The right split depends on what you need to send. A range is useful when the required
+            pages are together, while individual-page extraction is better when separate chapters
+            or receipts must become separate files. If a form asks for one attachment per category,
+            create a separate output for each category and label the files clearly.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead><tr><th className="border p-2 text-left">Need</th><th className="border p-2 text-left">Useful approach</th><th className="border p-2 text-left">Check afterwards</th></tr></thead>
+              <tbody>
+                <tr><td className="border p-2">Pages 4–8 only</td><td className="border p-2">Extract a continuous page range</td><td className="border p-2">First and last page are correct</td></tr>
+                <tr><td className="border p-2">Separate receipts</td><td className="border p-2">Extract each receipt's page or range</td><td className="border p-2">No receipt is missing or duplicated</td></tr>
+                <tr><td className="border p-2">One file per chapter</td><td className="border p-2">Create a separate range for each chapter</td><td className="border p-2">Chapter headings stay with the right pages</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Page numbers shown by a PDF reader may differ from printed page labels inside the
+            document. For example, a cover page may be counted as page 1 by the reader even when
+            the printed numbering begins at 1 on the next page. Preview the selected pages before
+            sharing the extracted files.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What does it mean to split a PDF?</h3>
           <p>Splitting a PDF means selecting specific pages from a larger document and extracting them into a new, smaller PDF, rather than sharing or storing the entire original file.</p>
