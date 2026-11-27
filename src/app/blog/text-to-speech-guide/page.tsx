@@ -101,6 +101,7 @@ export default function TextToSpeechGuideArticle() {
           <li>For very long text, break it into shorter sections if you want to jump to specific parts more easily.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Prepare text for natural speech</h2><p>Text that reads well on screen may sound awkward when spoken aloud. Expand uncommon abbreviations, add punctuation where a speaker should pause, and write numbers in the way you want them pronounced. For names or specialist terms, test a short sample before generating the full narration.</p><p>Listen to the exported audio from beginning to end. Check pronunciation, pacing, and whether headings or symbols are read aloud unexpectedly. Use only text and voices you have permission to use, especially when publishing audio commercially.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Is my text sent to a server?</h3>
           <p>No. The tool uses your browser&apos;s built-in Web Speech API — your text never leaves your device.</p>
