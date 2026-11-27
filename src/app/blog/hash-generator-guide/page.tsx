@@ -113,6 +113,7 @@ export default function HashGeneratorGuideArticle() {
           <li>For large files, hashing happens in your browser&apos;s memory, so very large files may take a moment longer to process.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">A hash is a fingerprint, not encryption</h2><p>A cryptographic hash produces a fixed-length digest from input data. It is useful for checking whether a file has changed when you compare its digest with a trusted reference. It does not hide the original content in a reversible way, and a matching digest should be checked against a trusted source.</p><p>Do not use a plain fast hash as password storage. Passwords need a dedicated password-hashing scheme with a salt and appropriate work factor. Also, never treat a hash shown publicly as a secret access token.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Which hash algorithm should I use?</h3>
           <p>SHA-256 for most purposes. Use SHA-1 only for legacy compatibility with non-security checksums, and SHA-512 when you want a larger hash for extra security margin.</p>
