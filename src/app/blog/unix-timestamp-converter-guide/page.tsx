@@ -101,6 +101,7 @@ export default function TimestampConverterGuideArticle() {
           <li>The Unix timestamp for &quot;now&quot; keeps increasing every second — if you&apos;re hardcoding a value for testing, grab a fixed number rather than referencing &quot;current time.&quot;</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Seconds, milliseconds, and time zones</h2><p>Unix timestamps are commonly represented in seconds or milliseconds. A value with three extra digits may be a millisecond timestamp rather than a date far in the future. Check the expected unit before converting or sending the value to an API.</p><p>The timestamp represents a point in time, while the displayed clock time depends on the chosen time zone. When debugging schedules, store or compare the underlying timestamp and clearly label the time zone used for display. Daylight-saving changes can make local clock times ambiguous or skipped in some regions.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Why is my timestamp off by exactly 1000x?</h3>
           <p>You&apos;re likely mixing seconds and milliseconds — JavaScript typically uses milliseconds since the epoch, while most other systems use seconds.</p>
