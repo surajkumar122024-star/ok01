@@ -100,6 +100,31 @@ export default function PdfCompressorGuideArticle() {
           <li>If your PDF needs merging or splitting too, do those steps before or after compressing depending on your workflow — compress last if you want the smallest possible combined file.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">A quick quality check after compression</h2>
+          <p>
+            A smaller file is only useful if the recipient can still read it. Compare the original
+            and compressed versions at the same zoom level, especially around small text, signatures,
+            stamps, diagrams, and fine lines in tables. Check more than the first page: a PDF may
+            contain a mixture of clear pages and pages that were photographed in poor light.
+          </p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Note the original file size and the compressed file size.</li>
+            <li>Open the compressed PDF and inspect a text-heavy page and an image-heavy page.</li>
+            <li>Search for a word or select a sentence if the document is expected to contain selectable text.</li>
+            <li>Confirm that every page is present and that forms, signatures, and stamps remain legible.</li>
+            <li>Keep the original until the compressed copy has been accepted by the email recipient or upload portal.</li>
+          </ol>
+          <div className="rounded-xl border p-4 space-y-2">
+            <h3 className="font-semibold">When compression is not the right fix</h3>
+            <p>
+              If a PDF is already small, mostly text, or contains a low-resolution scan, compression
+              may make little difference or reduce readability. If a portal has a strict size cap,
+              first check its accepted file types and maximum size. You may need to create a clearer
+              scan at a sensible resolution, remove genuinely unnecessary pages, or split a document
+              only when the portal allows multiple attachments.
+            </p>
+          </div>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Will compressing my PDF reduce text quality?</h3>
           <p>No — compression targets embedded images. The text layer stays sharp and selectable.</p>
