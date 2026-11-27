@@ -142,6 +142,22 @@ export default function ImageResizerCompleteGuideArticle() {
           <li>Keep your original, unresized image as a backup in case you need different dimensions for another platform later.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Pixels, print size, and aspect ratio</h2>
+          <p>
+            An image's pixel dimensions describe its digital detail, while print size depends on
+            both those pixels and the print resolution selected by the printer or layout software.
+            For example, changing a file from 3000 pixels wide to 1500 pixels wide reduces the
+            available horizontal pixel detail; changing only the displayed width in a document
+            does not necessarily change the underlying image file.
+          </p>
+          <p>
+            Before resizing, decide whether the image must keep its original proportions. If a
+            portrait is forced into a wide banner shape, people and objects can look stretched.
+            Use proportional resizing when the whole image must remain visible, or crop deliberately
+            when the destination requires a fixed shape. Keep the original file so you can create
+            other sizes later.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image resizer used for?</h3>
           <p>An image resizer changes an image&apos;s width and height to specific dimensions or a percentage scale, helping it meet the requirements of different platforms and use cases.</p>
