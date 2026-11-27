@@ -159,6 +159,25 @@ export default function HowToMergePdfFilesArticle() {
             in the combined document.
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">A sensible order for a combined PDF</h2>
+          <p>
+            When combining files for a submission, arrange them in the order a reviewer expects to
+            read them. A useful sequence for a project pack might be a cover page, contents page,
+            main report, supporting evidence, and appendices. For an application, follow the
+            receiving organisation's instructions rather than assuming that alphabetical order is
+            correct.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Give files clear names before selecting them, such as 01-cover, 02-form, and 03-evidence.</li>
+            <li>Check page orientation so landscape charts do not interrupt portrait pages unexpectedly.</li>
+            <li>Open the merged PDF and confirm the first and last page of every source file is present.</li>
+            <li>Look for duplicate cover pages or blank pages that may have been included accidentally.</li>
+          </ul>
+          <p>
+            Merging does not verify whether the documents are accurate or complete. Keep the source
+            PDFs unchanged so you can rebuild the pack if the recipient asks for a different order.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What does it mean to merge PDF files?</h3>
           <p>Merging PDF files means combining two or more separate PDF documents into a single, unified file while preserving the original formatting and content of each page.</p>
