@@ -97,6 +97,24 @@ export default function PdfToWordGuideArticle() {
           <li><strong>Making an inaccessible PDF editable</strong> for someone who needs to modify its content.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">A cleanup workflow for the converted DOCX</h2>
+          <p>
+            Treat the converted Word file as an editable draft, not as a guaranteed pixel-perfect
+            copy of the PDF. Start by checking the document structure before changing its wording:
+            compare the page count, headings, tables, page breaks, and any repeated header or footer.
+          </p>
+          <ol className="list-decimal pl-6 space-y-2">
+            <li>Open the DOCX in a word processor and confirm that the text is selectable and editable.</li>
+            <li>Compare names, dates, totals, and other critical details against the original PDF.</li>
+            <li>Inspect tables and multi-column pages; reading order can change during conversion.</li>
+            <li>Check page breaks, headers, footers, and page numbering before sharing the document.</li>
+            <li>Save a fresh copy after corrections and keep the original PDF as the reference version.</li>
+          </ol>
+          <p>
+            If the PDF is a scan, OCR may be needed before editable text can be produced. Handwriting,
+            unusual fonts, low-resolution scans, and complex forms often need manual correction.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">Will the converted document keep the exact same formatting?</h3>
           <p>Text content and basic paragraph structure carry over, but complex layouts (multi-column text, tables, precise design elements) may need manual cleanup afterward.</p>
