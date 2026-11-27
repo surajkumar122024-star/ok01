@@ -140,6 +140,7 @@ export default function UnitConverterArticle() {
             <li>Working out property or land size in acres versus hectares or square meters.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Units must match the quantity being converted</h2><p>Some units share similar names but measure different things. Millilitres measure volume, while milligrams measure mass; converting between them requires knowing the substance's density. Likewise, temperature conversions use an offset as well as a scale factor, so multiplying by a simple ratio is not enough.</p><p>Before trusting a result, confirm the source unit, target unit, and physical quantity. For cooking, engineering, or health-related measurements, check the precision and rounding rules required by the task.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
