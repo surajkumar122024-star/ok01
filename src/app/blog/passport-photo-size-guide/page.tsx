@@ -120,6 +120,7 @@ export default function PassportPhotoArticle() {
             copies. Preparing a correctly cropped digital file in advance means you&apos;re ready either way.
           </p>
 
+          <h2 className="text-2xl font-bold mt-8">Printed photo and online application image are different tasks</h2><p>A printed photograph for an appointment may have different handling requirements from a digital image uploaded to an online application. Check the instructions for the specific Passport Seva service and appointment location, including whether a photograph is captured at the centre.</p><p>Do not rely only on a familiar 35×45 mm print size. Verify the current portal or appointment checklist, and avoid editing the face or using filters that change appearance. A crop tool can adjust framing and dimensions but cannot certify that a passport photograph meets official rules.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
