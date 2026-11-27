@@ -130,6 +130,7 @@ export default function AadhaarPhotoArticle() {
             <li>Re-print requests if your existing Aadhaar card is lost or damaged.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check whether the process asks for a photo upload</h2><p>Do not assume every Aadhaar-related service asks the applicant to upload a separate passport-style photograph. The photo capture or update process can depend on the service, enrolment centre, and current UIDAI instructions. Follow the exact checklist shown for the transaction you are completing.</p><p>If a portal or authorised centre requests an image, confirm its current dimensions, file-size limit, background, and format from the official instructions before preparing it. A photo cropper can change dimensions, but it cannot guarantee acceptance by UIDAI.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
