@@ -140,6 +140,7 @@ export default function UrlEncoderDecoderGuideArticle() {
           <li>Use this tool alongside a JSON formatter when working with APIs that combine URL parameters and JSON request bodies.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Encode URL components, not the entire address blindly</h2><p>URL encoding is often used for individual query values that contain spaces, ampersands, or other reserved characters. Encoding an entire URL without understanding its structure can also encode separators such as the question mark and ampersands, changing how the browser interprets the address.</p><p>Build the URL from its parts: keep the scheme, host, path, and query separators in their proper places, then encode each user-supplied query value. After decoding, treat the result as untrusted input and do not open unknown destinations automatically.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is URL encoding used for?</h3>
           <p>URL encoding converts special characters, spaces, and symbols into a safe format that can be transmitted correctly across the internet as part of a URL.</p>
