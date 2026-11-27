@@ -155,6 +155,25 @@ export default function DocumentPhotoGuideIndia() {
             <li><strong>Wrong background color</strong> — most of these specs call for a plain, light background; a busy or dark background is a common rejection reason.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Build one checklist for each document portal</h2>
+          <p>
+            A single photo file should not be assumed to work for every Indian application. A
+            recruitment form, school admission portal, identity-document service, and examination
+            portal can ask for different image dimensions, file limits, signatures, or live captures.
+            Make a separate checklist for each application instead of reusing an old crop without
+            checking it.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Record the exact portal and application year.</li>
+            <li>Note the required pixel dimensions, file type, maximum size, and background.</li>
+            <li>Check whether the form asks for a photograph, signature, or both as separate files.</li>
+            <li>Preview the uploaded image and save a copy of the final accepted file.</li>
+          </ul>
+          <p>
+            Use the official notification or portal instructions as the final authority. A general
+            photo-resizing tool can prepare an image but cannot guarantee that an application will
+            accept it.
+          </p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <div className="space-y-4">
             <div>
