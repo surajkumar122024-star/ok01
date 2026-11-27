@@ -137,6 +137,28 @@ export default function HowToMergePdfFilesArticle() {
           <li>Keep your original individual PDF files as backups in case you need to make adjustments or re-merge with different files later.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">A reliable order for combining documents</h2>
+          <p>
+            Before merging, decide whether the final file should follow a reading sequence, a
+            date sequence, or a submission checklist. For example, a simple application pack might
+            place the cover letter first, the completed form second, supporting certificates next,
+            and optional attachments last. The best order is the one the recipient expects, not
+            necessarily the order in which files happen to be stored on your device.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Open each source PDF separately and confirm it is the correct version.</li>
+            <li>Remove duplicate or blank pages before combining files.</li>
+            <li>Check page orientation so landscape statements do not appear unexpectedly between portrait pages.</li>
+            <li>After merging, scroll through the entire output and confirm the page count and sequence.</li>
+            <li>Use a clear filename that identifies the document set and date without exposing unnecessary personal information.</li>
+          </ul>
+          <p>
+            Merging only joins pages into one file; it does not automatically correct spelling,
+            update outdated information, or make scanned pages searchable. If the source PDFs
+            contain different page sizes or scan quality, those differences may remain visible
+            in the combined document.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What does it mean to merge PDF files?</h3>
           <p>Merging PDF files means combining two or more separate PDF documents into a single, unified file while preserving the original formatting and content of each page.</p>
