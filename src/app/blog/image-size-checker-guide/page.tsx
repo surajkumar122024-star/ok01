@@ -141,6 +141,7 @@ export default function ImageSizeCheckerGuideArticle() {
           <li>Pair this tool with an image resizer or compressor to quickly fix any images that don&apos;t meet your target specifications.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">File size and image dimensions measure different things</h2><p>Pixel dimensions describe the width and height of an image, while file size describes how much storage the encoded file uses. Two images with identical dimensions can have very different file sizes because of format, compression level, colour depth, and image content.</p><p>For a website, check both measurements: dimensions should suit the displayed layout, and file size should be reasonable for loading. For print, also consider the effective resolution at the final physical size. Resizing pixels and compressing a file solve different problems.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is an image size checker used for?</h3>
           <p>An image size checker instantly shows you an image&apos;s pixel dimensions, file size, and format, helping you confirm it meets specific platform or project requirements.</p>
