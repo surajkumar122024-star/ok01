@@ -100,6 +100,30 @@ export default function VideoCompressorGuideArticle() {
           <li>Videos with lots of motion (sports, action) compress less efficiently than static or slow-moving footage — expect somewhat larger output for high-motion clips at the same quality setting.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Choose settings for the destination</h2>
+          <p>
+            The best compressed video is not necessarily the smallest one. Decide where it will be
+            watched first: a phone message, a website, a presentation, or a large-screen display.
+            A smaller frame size can be sensible for a small preview, while a clip intended for a
+            large screen needs enough detail to avoid looking soft.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm border-collapse">
+              <thead><tr><th className="border p-2 text-left">Destination</th><th className="border p-2 text-left">What to prioritize</th><th className="border p-2 text-left">Check before sharing</th></tr></thead>
+              <tbody>
+                <tr><td className="border p-2">Messaging</td><td className="border p-2">Manageable file size and quick playback</td><td className="border p-2">Audio remains clear on a phone</td></tr>
+                <tr><td className="border p-2">Website</td><td className="border p-2">Balanced resolution and loading time</td><td className="border p-2">Playback works in the target browser</td></tr>
+                <tr><td className="border p-2">Presentation</td><td className="border p-2">Readable text and stable playback</td><td className="border p-2">Test on the computer used for presenting</td></tr>
+                <tr><td className="border p-2">Archive</td><td className="border p-2">Preserve the best available original quality</td><td className="border p-2">Keep the uncompressed source file</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Always watch the exported file from beginning to end. Look for audio drift, missing
+            frames, unexpected cropping, and text that becomes hard to read. A short test export can
+            help you choose settings before processing a long recording.
+          </p>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">How much can I shrink a video without noticeable quality loss?</h3>
           <p>It depends heavily on the source video, but a moderate compression pass commonly reduces file size by 50% or more while remaining visually similar, especially for videos originally recorded at very high bitrates.</p>
