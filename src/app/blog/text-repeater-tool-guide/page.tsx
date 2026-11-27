@@ -138,6 +138,7 @@ export default function TextRepeaterToolGuideArticle() {
           <li>Always proofread your original text before repeating it, since any typo will be duplicated across every repetition.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">Check the output before copying a large repeat</h2><p>Repeating a short phrase many times can create a very large result. Before generating thousands of repetitions, test with a small count and confirm whether the tool adds spaces, line breaks, or separators between copies.</p><p>Large repeated text can slow a browser tab or exceed a form's character limit. If the output is intended for code or data, check the exact separator and whether a trailing newline is required. Generate only the amount needed for the task.</p>
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a text repeater used for?</h3>
           <p>A text repeater duplicates any word, phrase, or sentence a specified number of times, saving you from manually copying and pasting text repeatedly.</p>
