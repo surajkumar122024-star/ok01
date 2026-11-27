@@ -145,6 +145,20 @@ export default function HowToConvertHeicToJpgArticle() {
           <li>Keep a backup of original HEIC files when possible, since they retain slightly more image data due to Apple&apos;s efficient compression method.</li>
           </ul>
 
+          <h2 className="text-2xl font-bold mt-8">What to check when sharing iPhone photos</h2>
+          <p>
+            HEIC can preserve modern phone-photo features that may not transfer in exactly the same
+            way to JPG. Before sharing a converted picture, compare the colour, orientation, and
+            framing with the original. If the image is a Live Photo, a conversion to a still JPG
+            represents a single image rather than the full motion experience.
+          </p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Choose the correct frame if the original came from a Live Photo or burst sequence.</li>
+            <li>Check portrait orientation and whether the photo's rotation appears correctly in the destination app.</li>
+            <li>Keep the original HEIC if you may want its original quality or editing information later.</li>
+            <li>For documents, zoom in on small text and check that edges and fine details remain readable.</li>
+          </ul>
+
           <h2 id="faq" className="text-2xl font-bold mt-8">Frequently Asked Questions</h2>
           <h3 className="text-lg font-semibold mt-4">What is a HEIC file?</h3>
           <p>HEIC is Apple&apos;s default photo format used on iPhones since iOS 11, designed to store high-quality images in a smaller file size compared to JPG.</p>
